@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EV Match — Electric Vehicle Recommendation Platform
+
+EV Match is a smart electric vehicle recommendation platform designed to help users discover the best EV based on budget, lifestyle, charging habits, range needs, and preferences.
+
+## Features
+
+- EV recommendation engine
+- Budget-based filtering
+- Range and charging comparison
+- Vehicle detail pages
+- Responsive modern UI
+- Dynamic recommendation scoring
+- Next.js frontend architecture
+- Scalable JSON vehicle database
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Vercel
+- JSON Data Architecture
+
+## Project Structure
+
+```bash
+src/
+ ├── app/
+ ├── components/
+ ├── data/
+ ├── logic/
+ ├── types/
+ └── utils/
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Future Improvements
 
-## Learn More
+- Live EV market pricing
+- AI-powered recommendations
+- User accounts & saved vehicles
+- EV charging cost calculator
+- Vehicle comparison tool
+- Real-time used EV valuation
+- European incentives integration
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is optimized for deployment with:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Vercel
+- Netlify
+- Railway
 
-## Deploy on Vercel
+## Vision
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The goal of EV Match is to simplify the electric vehicle buying journey through intelligent recommendations, transparent comparisons, and data-driven insights.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Built by Daniela Revez
