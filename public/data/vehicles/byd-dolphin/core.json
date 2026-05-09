@@ -1,0 +1,34 @@
+{
+  "id": "byd-dolphin",
+  "brand": "BYD",
+  "model": "Dolphin",
+  "variant": "Standard",
+
+  "modelYear": 2026,
+
+  "segment": "C-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/byd-dolphin.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "BYD Dolphin",
+      "searchAliases": [
+        "byd dolphin",
+        "dolphin ev",
+        "dolphin eletrico"
+      ]
+    },
+    "es": {
+      "displayName": "BYD Dolphin",
+      "searchAliases": [
+        "byd dolphin"
+      ]
+    }
+  }
+}

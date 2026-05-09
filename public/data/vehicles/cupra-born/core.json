@@ -1,0 +1,32 @@
+{
+  "id": "cupra-born",
+  "brand": "Cupra",
+  "model": "Born",
+  "variant": "Standard",
+
+  "modelYear": 2026,
+
+  "segment": "C-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/cupra-born.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Cupra Born",
+      "searchAliases": [
+        "cupra born"
+      ]
+    },
+    "es": {
+      "displayName": "Cupra Born",
+      "searchAliases": [
+        "cupra born"
+      ]
+    }
+  }
+}

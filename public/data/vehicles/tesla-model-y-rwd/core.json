@@ -1,0 +1,37 @@
+{
+  "id": "tesla-model-y-rwd",
+  "brand": "Tesla",
+  "model": "Model Y",
+  "variant": "RWD",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/tesla-model-y-rwd.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Tesla Model Y RWD",
+      "searchAliases": [
+        "model y",
+        "tesla model y",
+        "model y rwd",
+        "tesla y",
+        "rwd"
+      ]
+    },
+    "es": {
+      "displayName": "Tesla Model Y RWD",
+      "searchAliases": [
+        "model y",
+        "tesla model y"
+      ]
+    }
+  }
+}

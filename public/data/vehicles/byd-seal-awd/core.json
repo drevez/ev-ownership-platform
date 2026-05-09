@@ -1,0 +1,35 @@
+{
+  "id": "byd-seal-awd",
+  "brand": "BYD",
+  "model": "Seal",
+  "variant": "AWD",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "AWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/byd-seal-awd.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "BYD Seal AWD",
+      "searchAliases": [
+        "byd seal",
+        "byd seal awd",
+        "seal awd",
+        "byd seal performance"
+      ]
+    },
+    "es": {
+      "displayName": "BYD Seal AWD",
+      "searchAliases": [
+        "byd seal awd"
+      ]
+    }
+  }
+}

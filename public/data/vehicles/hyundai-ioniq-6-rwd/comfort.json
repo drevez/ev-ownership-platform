@@ -1,0 +1,13 @@
+{
+  "heatPumpAvailable": true,
+
+  "vehicleToLoad": true,
+  "vehicleToGrid": false,
+
+  "panoramicRoof": true,
+
+  "softwareExperienceLevel": 4,
+
+  "maintenanceLevel": 1,
+  "insuranceLevel": 3
+}

@@ -1,0 +1,34 @@
+{
+  "id": "hyundai-ioniq-6-rwd",
+  "brand": "Hyundai",
+  "model": "Ioniq 6",
+  "variant": "RWD",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "RWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/hyundai-ioniq-6-rwd.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Hyundai Ioniq 6 RWD",
+      "searchAliases": [
+        "ioniq 6 rwd",
+        "hyundai ioniq 6"
+      ]
+    },
+    "es": {
+      "displayName": "Hyundai Ioniq 6 RWD",
+      "searchAliases": [
+        "ioniq 6 rwd",
+        "hyundai ioniq 6 rwd"
+      ]
+    }
+  }
+}

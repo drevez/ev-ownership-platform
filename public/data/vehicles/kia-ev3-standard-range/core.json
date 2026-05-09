@@ -1,0 +1,35 @@
+{
+  "id": "kia-ev3-standard-range",
+  "brand": "Kia",
+  "model": "EV3",
+  "variant": "Standard Range",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/kia-ev3-standard-range.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Kia EV3 Standard Range",
+      "searchAliases": [
+        "kia ev3",
+        "ev3",
+        "ev3 standard",
+        "ev3 standard range"
+]
+    },
+    "es": {
+      "displayName": "Kia EV3 Standard Range",
+      "searchAliases": [
+        "kia ev3"
+      ]
+    }
+  }
+}

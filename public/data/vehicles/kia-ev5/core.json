@@ -1,0 +1,34 @@
+{
+  "id": "kia-ev5",
+  "brand": "Kia",
+  "model": "EV5",
+  "variant": "Standard",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/kia-ev5.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Kia EV5",
+      "searchAliases": [
+        "kia ev5",
+        "ev5",
+        "kia suv ev5"
+      ]
+    },
+    "es": {
+      "displayName": "Kia EV5",
+      "searchAliases": [
+        "kia ev5"
+      ]
+    }
+  }
+}

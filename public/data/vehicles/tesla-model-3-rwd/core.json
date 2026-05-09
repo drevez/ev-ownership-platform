@@ -1,0 +1,37 @@
+{
+  "id": "tesla-model-3-rwd",
+  "brand": "Tesla",
+  "model": "Model 3",
+  "variant": "RWD",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "RWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/tesla-model-3-rwd.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Tesla Model 3 RWD",
+      "searchAliases": [
+        "model 3",
+        "tesla model 3",
+        "model 3 rwd",
+        "tesla 3",
+        "rwd"
+      ]
+    },
+    "es": {
+      "displayName": "Tesla Model 3 RWD",
+      "searchAliases": [
+        "model 3",
+        "tesla model 3"
+      ]
+    }
+  }
+}

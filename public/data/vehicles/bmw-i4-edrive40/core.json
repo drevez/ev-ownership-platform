@@ -1,0 +1,34 @@
+{
+  "id": "bmw-i4-edrive40",
+  "brand": "BMW",
+  "model": "i4",
+  "variant": "eDrive40",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Liftback",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/bmw-i4-edrive40.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "BMW i4 eDrive40",
+      "searchAliases": [
+        "i4 edrive40",
+        "bmw i4 edrive40"
+      ]
+    },
+    "es": {
+      "displayName": "BMW i4 eDrive40",
+      "searchAliases": [
+        "i4 edrive40",
+        "bmw i4 edrive40"
+      ]
+    }
+  }
+}

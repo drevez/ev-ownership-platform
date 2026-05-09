@@ -1,0 +1,34 @@
+{
+  "id": "kia-ev6-rwd",
+  "brand": "Kia",
+  "model": "EV6",
+  "variant": "RWD",
+
+  "modelYear": 2026,
+
+  "segment": "D-Crossover",
+  "bodyType": "Crossover",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/kia-ev6-rwd.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Kia EV6 RWD",
+      "searchAliases": [
+        "kia ev6",
+        "ev6 rwd",
+        "kia ev6 rwd"
+      ]
+    },
+    "es": {
+      "displayName": "Kia EV6 RWD",
+      "searchAliases": [
+        "kia ev6"
+      ]
+    }
+  }
+}

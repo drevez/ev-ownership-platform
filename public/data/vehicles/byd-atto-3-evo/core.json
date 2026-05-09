@@ -1,0 +1,33 @@
+{
+  "id": "byd-atto-3-evo",
+  "brand": "BYD",
+  "model": "Atto 3 Evo",
+  "variant": "Standard",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/byd-atto-3-evo.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "BYD Atto 3 Evo",
+      "searchAliases": [
+        "atto 3 evo",
+        "byd atto 3 evo"
+      ]
+    },
+    "es": {
+      "displayName": "BYD Atto 3 Evo",
+      "searchAliases": [
+        "atto 3 evo"
+      ]
+    }
+  }
+}

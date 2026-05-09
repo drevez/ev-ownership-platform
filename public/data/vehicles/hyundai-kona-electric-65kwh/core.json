@@ -1,0 +1,36 @@
+{
+  "id": "hyundai-kona-electric-65kwh",
+  "brand": "Hyundai",
+  "model": "Kona Electric",
+  "variant": "65 kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/hyundai-kona-electric-65kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Hyundai Kauai Electric 65 kWh",
+      "searchAliases": [
+        "kauai eletrico 65kwh",
+        "hyundai kauai 65kwh",
+        "kauai 65kwh",
+        "kona electric 65kwh"
+      ]
+    },
+    "es": {
+      "displayName": "Hyundai Kona Eléctrico 65 kWh",
+      "searchAliases": [
+        "kona electrico 65kwh",
+        "hyundai kona 65kwh"
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "mercedes-eqb-awd",
+  "brand": "Mercedes-Benz",
+  "model": "EQB",
+  "variant": "AWD",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "AWD",
+
+  "doors": 5,
+  "seats": 7,
+
+  "image": "/cars/mercedes-eqb-awd.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Mercedes-Benz EQB AWD",
+      "searchAliases": [
+        "mercedes eqb",
+        "eqb",
+        "eqb awd",
+        "mercedes eqb 350"
+      ]
+    },
+    "es": {
+      "displayName": "Mercedes-Benz EQB AWD",
+      "searchAliases": [
+        "mercedes eqb"
+      ]
+    }
+  }
+}

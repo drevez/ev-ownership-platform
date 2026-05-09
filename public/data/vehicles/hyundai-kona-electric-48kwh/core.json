@@ -1,0 +1,36 @@
+{
+  "id": "hyundai-kona-electric-48kwh",
+  "brand": "Hyundai",
+  "model": "Kona Electric",
+  "variant": "48 kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/hyundai-kona-electric-48kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Hyundai Kauai Electric 48 kWh",
+      "searchAliases": [
+        "kauai eletrico 48kwh",
+        "hyundai kauai 48kwh",
+        "kauai 48kwh",
+        "kauai ev 48kwh"
+      ]
+    },
+    "es": {
+      "displayName": "Hyundai Kona Eléctrico 48 kWh",
+      "searchAliases": [
+        "kona electrico 48kwh",
+        "hyundai kona 48kwh"
+      ]
+    }
+  }
+}
