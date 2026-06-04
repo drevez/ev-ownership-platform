@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 165,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 24,
+  "chargePer10MinKm": 105,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "skoda-elroq-60-59kwh"
+}

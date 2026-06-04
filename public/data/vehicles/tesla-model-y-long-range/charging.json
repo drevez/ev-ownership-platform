@@ -1,1 +1,12 @@
-{}
+{
+  "dcMaxChargeKW": 250,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 25,
+  "chargePer10MinKm": 150,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": true,
+
+  "chargingCurveId": "tesla-model-y-long-range"
+}

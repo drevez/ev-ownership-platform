@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 200,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 26,
+  "chargePer10MinKm": 190,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "vw-id7-pro-s"
+}

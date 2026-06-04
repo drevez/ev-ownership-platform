@@ -1,0 +1,38 @@
+{
+  "id": "kia-ev6-63kwh",
+
+  "brand": "Kia",
+  "model": "EV6",
+  "variant": "63kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-Crossover",
+  "bodyType": "Crossover",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/kia-ev6-63kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Kia EV6 63kWh",
+      "searchAliases": [
+        "kia ev6",
+        "ev6",
+        "ev6 63kwh",
+        "kia ev6 63"
+      ]
+    },
+
+    "es": {
+      "displayName": "Kia EV6 63kWh",
+      "searchAliases": [
+        "kia ev6 63kwh",
+        "ev6 63"
+      ]
+    }
+  }
+}

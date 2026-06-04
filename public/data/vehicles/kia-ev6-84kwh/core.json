@@ -1,0 +1,39 @@
+{
+  "id": "kia-ev6-84kwh",
+
+  "brand": "Kia",
+  "model": "EV6",
+  "variant": "84kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-Crossover",
+  "bodyType": "Crossover",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/kia-ev6-84kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Kia EV6 84kWh",
+      "searchAliases": [
+        "kia ev6",
+        "ev6",
+        "ev6 84kwh",
+        "kia ev6 84",
+        "ev6 long range"
+      ]
+    },
+
+    "es": {
+      "displayName": "Kia EV6 84kWh",
+      "searchAliases": [
+        "kia ev6 84kwh",
+        "ev6 84"
+      ]
+    }
+  }
+}

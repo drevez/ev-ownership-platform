@@ -1,0 +1,40 @@
+{
+  "id": "leapmotor-c10-design-pro-max",
+
+  "brand": "Leapmotor",
+  "model": "C10",
+  "variant": "Design Pro Max",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/leapmotor-c10-design-pro-max.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Leapmotor C10 Design Pro Max",
+      "searchAliases": [
+        "leapmotor c10",
+        "c10 81,9 kwh",
+        "c10 design pro max",
+        "leapmotor c10 design pro max"
+      ]
+    },
+
+    "es": {
+      "displayName": "Leapmotor C10 Design Pro Max",
+      "searchAliases": [
+        "leapmotor c10 design pro max",
+        "c10 pro max",
+        "c10 81,9 kwh",
+        "c10 design pro max"
+      ]
+    }
+  }
+}

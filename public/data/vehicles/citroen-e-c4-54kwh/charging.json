@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 107,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 28,
+  "chargePer10MinKm": 80,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "citroen-e-c4-54kwh"
+}

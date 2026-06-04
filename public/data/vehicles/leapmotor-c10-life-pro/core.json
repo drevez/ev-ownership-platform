@@ -1,0 +1,39 @@
+{
+  "id": "leapmotor-c10-life-pro",
+
+  "brand": "Leapmotor",
+  "model": "C10",
+  "variant": "Life Pro",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/leapmotor-c10-life-pro.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Leapmotor C10 Life Pro",
+      "searchAliases": [
+        "leapmotor c10",
+        "c10 69,9 kwh",
+        "c10 life pro",
+        "leapmotor c10 life pro"
+      ]
+    },
+
+    "es": {
+      "displayName": "Leapmotor C10 Life Pro",
+      "searchAliases": [
+        "leapmotor c10 life pro",
+        "c10 69,9 kwh",
+        "c10 life pro"
+      ]
+    }
+  }
+}

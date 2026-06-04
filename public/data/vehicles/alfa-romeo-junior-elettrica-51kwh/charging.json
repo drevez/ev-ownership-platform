@@ -1,0 +1,9 @@
+{
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+  "dcMaxChargeKW": 100,
+  "acMaxChargeKW": 11,
+  "charge10to80Min": 27,
+  "chargePer10MinKm": 80,
+  "chargingCurveId": "alfa-romeo-junior-elettrica-51kwh"
+}

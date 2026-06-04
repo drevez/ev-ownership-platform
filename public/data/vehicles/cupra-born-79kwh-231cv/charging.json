@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 185,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 26,
+  "chargePer10MinKm": 170,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "cupra-born-79kwh-231cv"
+}

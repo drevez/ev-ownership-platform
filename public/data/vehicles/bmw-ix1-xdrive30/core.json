@@ -1,0 +1,38 @@
+{
+  "id": "bmw-ix1-xdrive30",
+
+  "brand": "BMW",
+  "model": "iX1",
+  "variant": "xDrive30",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "AWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/bmw-ix1-xdrive30.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "BMW iX1 xDrive30",
+      "searchAliases": [
+        "bmw ix1",
+        "ix1",
+        "ix1 xdrive30",
+        "bmw ix1 xdrive30"
+      ]
+    },
+
+    "es": {
+      "displayName": "BMW iX1 xDrive30",
+      "searchAliases": [
+        "bmw ix1 xdrive30",
+        "ix1 xdrive30"
+      ]
+    }
+  }
+}

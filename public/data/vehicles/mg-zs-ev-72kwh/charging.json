@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 94,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 42,
+  "chargePer10MinKm": 105,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "mg-zs-72kwh"
+}

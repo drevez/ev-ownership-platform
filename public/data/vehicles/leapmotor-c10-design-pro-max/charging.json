@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 180,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 22,
+  "chargePer10MinKm": 85,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "leapmotor-c10-design-pro-max"
+}

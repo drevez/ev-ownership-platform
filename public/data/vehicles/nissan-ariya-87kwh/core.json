@@ -1,0 +1,39 @@
+{
+  "id": "nissan-ariya-87kwh",
+
+  "brand": "Nissan",
+  "model": "Ariya",
+  "variant": "87kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/nissan-ariya-87kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Nissan Ariya 87kWh",
+      "searchAliases": [
+        "nissan ariya",
+        "ariya 87",
+        "nissan ariya 87kwh",
+        "ariya advance",
+        "ariya evolve"
+      ]
+    },
+
+    "es": {
+      "displayName": "Nissan Ariya 87kWh",
+      "searchAliases": [
+        "nissan ariya",
+        "ariya 87kwh"
+      ]
+    }
+  }
+}

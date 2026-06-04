@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 87,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 30,
+  "chargePer10MinKm": 80,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "mg4-urban-54kwh-comfort"
+}

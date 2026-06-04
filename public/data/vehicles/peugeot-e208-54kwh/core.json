@@ -1,0 +1,40 @@
+{
+  "id": "peugeot-e208-54kwh",
+
+  "brand": "Peugeot",
+  "model": "e-208",
+  "variant": "54kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/peugeot-e208-54kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Peugeot e-208 54kWh",
+      "searchAliases": [
+        "peugeot e208",
+        "peugeot e-208",
+        "e208",
+        "e-208",
+        "peugeot e-208 54kwh",
+        "e208 156cv"
+      ]
+    },
+
+    "es": {
+      "displayName": "Peugeot e-208 54kWh",
+      "searchAliases": [
+        "peugeot e-208 54kwh",
+        "e208 electrico"
+      ]
+    }
+  }
+}

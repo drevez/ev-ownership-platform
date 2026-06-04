@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 183,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 29,
+  "chargePer10MinKm": 140,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "ford-explorer-79kwh"
+}

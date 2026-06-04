@@ -1,0 +1,41 @@
+{
+  "id": "peugeot-e3008-98kwh",
+
+  "brand": "Peugeot",
+  "model": "E-3008",
+  "variant": "98kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV Coupe",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/peugeot-e3008-98kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Peugeot E-3008 98kWh",
+      "searchAliases": [
+        "peugeot e3008",
+        "peugeot e-3008",
+        "e3008",
+        "e-3008",
+        "peugeot e3008 long range",
+        "peugeot e3008 98kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "Peugeot E-3008 98kWh",
+      "searchAliases": [
+        "peugeot e-3008",
+        "e3008 long range",
+        "e3008 98kwh"
+      ]
+    }
+  }
+}

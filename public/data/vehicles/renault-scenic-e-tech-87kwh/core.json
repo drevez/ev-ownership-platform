@@ -1,0 +1,39 @@
+{
+  "id": "renault-scenic-e-tech-87kwh",
+
+  "brand": "Renault",
+  "model": "Scenic E-Tech",
+  "variant": "87kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/renault-scenic-e-tech-87kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Renault Scenic E-Tech 87kWh",
+      "searchAliases": [
+        "renault scenic eletrico",
+        "scenic e-tech",
+        "renault scenic e-tech",
+        "scenic 87kwh",
+        "scenic autonomia conforto"
+      ]
+    },
+
+    "es": {
+      "displayName": "Renault Scenic E-Tech 87kWh",
+      "searchAliases": [
+        "scenic electrico",
+        "scenic e-tech 87kwh"
+      ]
+    }
+  }
+}

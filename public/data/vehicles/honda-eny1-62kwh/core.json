@@ -1,0 +1,39 @@
+{
+  "id": "honda-eny1-62kwh",
+
+  "brand": "Honda",
+  "model": "e:Ny1",
+  "variant": "62kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/honda-eny1-62kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Honda e:Ny1 62kWh",
+      "searchAliases": [
+        "honda eny1",
+        "honda e ny1",
+        "eny1",
+        "honda eletrico",
+        "honda suv eletrico"
+      ]
+    },
+
+    "es": {
+      "displayName": "Honda e:Ny1 62kWh",
+      "searchAliases": [
+        "honda eny1",
+        "honda e ny1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 78,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 45,
+  "chargePer10MinKm": 90,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "honda-eny1-62kwh"
+}

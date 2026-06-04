@@ -1,0 +1,39 @@
+{
+  "id": "mercedes-eqb-70kwh",
+
+  "brand": "Mercedes-Benz",
+  "model": "EQB",
+  "variant": "70kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 7,
+
+  "image": "/cars/mercedes-eqb-70kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Mercedes-Benz EQB 70kWh",
+      "searchAliases": [
+        "mercedes eqb",
+        "eqb",
+        "eqb 250+",
+        "eqb 70kwh",
+        "mercedes eqb 250 plus"
+      ]
+    },
+
+    "es": {
+      "displayName": "Mercedes-Benz EQB 70kWh",
+      "searchAliases": [
+        "mercedes eqb 70kwh",
+        "eqb 250 plus"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 150,
+  "acMaxChargeKW": 22,
+
+  "charge10to80Min": 37,
+  "chargePer10MinKm": 130,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "renault-scenic-e-tech-87kwh"
+}

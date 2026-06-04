@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 170,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 25,
+  "chargePer10MinKm": 145,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": true,
+
+  "chargingCurveId": "tesla-model-3-rwd-62kwh"
+}

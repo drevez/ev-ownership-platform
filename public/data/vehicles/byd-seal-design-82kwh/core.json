@@ -1,0 +1,39 @@
+{
+  "id": "byd-seal-design-82kwh",
+
+  "brand": "BYD",
+  "model": "Seal",
+  "variant": "Design 82 kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "RWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/byd-seal-design-82kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "BYD Seal Design 82 kWh",
+      "searchAliases": [
+        "byd seal",
+        "seal",
+        "seal design",
+        "byd seal design",
+        "seal 82kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "BYD Seal Design 82 kWh",
+      "searchAliases": [
+        "byd seal design",
+        "seal design 82kwh"
+      ]
+    }
+  }
+}

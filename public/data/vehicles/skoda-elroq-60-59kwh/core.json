@@ -1,0 +1,30 @@
+{
+  "id": "skoda-elroq-60-59kwh",
+
+  "brand": "Skoda",
+  "model": "Elroq",
+  "variant": "60 - 59kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/skoda-elroq-60-59kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Skoda Elroq 60 59kWh",
+      "searchAliases": [
+        "skoda elroq 60",
+        "elroq 60",
+        "elroq 59kwh",
+        "skoda elroq"
+      ]
+    }
+  }
+}

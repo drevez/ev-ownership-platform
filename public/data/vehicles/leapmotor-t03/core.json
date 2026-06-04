@@ -1,1 +1,38 @@
-{}
+{
+  "id": "leapmotor-t03",
+
+  "brand": "Leapmotor",
+  "model": "T03",
+  "variant": "37.3 kWh",
+
+  "modelYear": 2026,
+
+  "segment": "A-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 4,
+
+  "image": "/cars/leapmotor-t03.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Leapmotor T03",
+      "searchAliases": [
+        "leapmotor t03",
+        "t03",
+        "t03 37kwh",
+        "leapmotor city car"
+      ]
+    },
+
+    "es": {
+      "displayName": "Leapmotor T03",
+      "searchAliases": [
+        "leapmotor t03",
+        "t03"
+      ]
+    }
+  }
+}

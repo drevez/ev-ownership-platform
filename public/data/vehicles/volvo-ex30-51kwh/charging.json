@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 134,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 26,
+  "chargePer10MinKm": 105,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "volvo-ex30-51kwh"
+}

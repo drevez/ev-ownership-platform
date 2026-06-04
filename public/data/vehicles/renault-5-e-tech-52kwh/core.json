@@ -1,0 +1,41 @@
+{
+  "id": "renault-5-e-tech-52kwh",
+
+  "brand": "Renault",
+  "model": "5 E-Tech",
+  "variant": "52kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/renault-5-e-tech-52kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Renault 5 E-Tech 52kWh",
+      "searchAliases": [
+        "renault 5",
+        "renault 5 etech",
+        "r5",
+        "renault 5 eletrico",
+        "renault 5 52kwh",
+        "r5 e-tech"
+      ]
+    },
+
+    "es": {
+      "displayName": "Renault 5 E-Tech 52kWh",
+      "searchAliases": [
+        "renault 5 electrico",
+        "renault 5 etech",
+        "r5 etech"
+      ]
+    }
+  }
+}

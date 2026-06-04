@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 175,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 28,
+  "chargePer10MinKm": 145,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "vw-id4-pro"
+}

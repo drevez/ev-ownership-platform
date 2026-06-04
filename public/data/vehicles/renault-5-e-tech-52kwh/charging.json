@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 100,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 30,
+  "chargePer10MinKm": 115,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "renault-5-e-tech-52kwh"
+}

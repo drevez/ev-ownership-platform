@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 180,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 25,
+  "chargePer10MinKm": 150,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "nio-et5-touring-100kwh"
+}

@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 205,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 28,
+  "chargePer10MinKm": 165,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "polestar-2-82kwh"
+}

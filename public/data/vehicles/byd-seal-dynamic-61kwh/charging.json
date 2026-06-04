@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 110,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 37,
+  "chargePer10MinKm": 85,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "byd-seal-dynamic-61kwh"
+}

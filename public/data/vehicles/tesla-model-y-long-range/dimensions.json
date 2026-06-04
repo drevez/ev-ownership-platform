@@ -1,1 +1,13 @@
-{}
+{
+  "cargoLitersSeatsUp": 822,
+  "cargoLitersSeatsDown": 2022,
+
+  "frunkLiters": 116,
+
+  "rearLegroomMM": 1029,
+  "wheelbaseMM": 2890,
+
+  "lengthMM": 4790,
+  "widthMM": 1920,
+  "heightMM": 1624
+}

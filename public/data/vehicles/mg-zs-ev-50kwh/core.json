@@ -1,0 +1,38 @@
+{
+  "id": "mg-zs-ev-50kwh",
+
+  "brand": "MG",
+  "model": "ZS EV",
+  "variant": "50kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/mg-zs-ev-50kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "MG ZS EV 50kWh",
+      "searchAliases": [
+        "mg zs ev",
+        "zs ev",
+        "mg zs 50kwh",
+        "zs ev standard range"
+      ]
+    },
+
+    "es": {
+      "displayName": "MG ZS EV 50kWh",
+      "searchAliases": [
+        "mg zs ev 50kwh",
+        "zs ev 50"
+      ]
+    }
+  }
+}

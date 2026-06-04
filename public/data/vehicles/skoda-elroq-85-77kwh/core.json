@@ -1,0 +1,39 @@
+{
+  "id": "skoda-elroq-85-77kwh",
+
+  "brand": "Skoda",
+  "model": "Elroq",
+  "variant": "85 - 77kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/skoda-elroq-85-77kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Skoda Elroq 85 77kWh",
+      "searchAliases": [
+        "skoda elroq",
+        "elroq 85",
+        "skoda elroq 85",
+        "skoda elroq 77kwh",
+        "elroq 286cv"
+      ]
+    },
+
+    "es": {
+      "displayName": "Skoda Elroq 85 77kWh",
+      "searchAliases": [
+        "skoda elroq 85",
+        "elroq 77kwh"
+      ]
+    }
+  }
+}

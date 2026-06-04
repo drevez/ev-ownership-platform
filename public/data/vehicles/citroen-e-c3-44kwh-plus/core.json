@@ -1,0 +1,43 @@
+{
+  "id": "citroen-e-c3-44kwh-plus",
+
+  "brand": "Citroen",
+  "model": "e-C3",
+  "variant": "44 kWh Plus",
+
+  "modelYear": 2026,
+
+  "segment": "B-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/citroen-e-c3-44kwh-plus.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Citroen e-C3 Comfort Plus",
+      "searchAliases": [
+        "citroen ec3",
+        "ec3 comfort plus",
+        "e-c3 comfort plus",
+        "ë-c3 comfort plus",
+        "ec3 comfort plus",
+        "ec3 44kwh plus",
+        "e-c3 44kwh plus",
+        "ë-c3 44kwh plus",
+        "ec3 44kwh plus"
+      ]
+    },
+
+    "es": {
+      "displayName": "Citroen e-C3 Comfort Plus",
+      "searchAliases": [
+        "citroen ec3 comfort plus",
+        "ec3 44kwh plus"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "alfa-romeo-junior-elettrica-51kwh",
+  "brand": "Alfa Romeo",
+  "model": "Junior Elettrica",
+  "variant": "51kWh",
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+  "image": "/cars/alfa-romeo-junior-elettrica-51kwh.webp",
+  "localized": {
+    "pt": {
+      "displayName": "Alfa Romeo Junior Elettrica 51kWh",
+      "searchAliases": [
+        "alfa junior",
+        "junior elettrica",
+        "alfa romeo junior",
+        "junior 156cv",
+        "alfa junior eletrico"
+      ]
+    },
+    "en": {
+      "displayName": "Alfa Romeo Junior Elettrica 51kWh",
+      "searchAliases": [
+        "alfa junior",
+        "junior electtrica",
+        "alfa romeo junior",
+        "junior 156hp",
+        "alfa junior electtrica"
+      ]
+    },
+    "es": {
+      "displayName": "Alfa Romeo Junior Elettrica 51kWh",
+      "searchAliases": [
+        "alfa romeo junior",
+        "junior electtrica"
+      ]
+    }
+  },
+  "modelYear": 2026,
+  "doors": 5,
+  "seats": 5
+}

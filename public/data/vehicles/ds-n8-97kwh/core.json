@@ -1,0 +1,39 @@
+{
+  "id": "ds-n8-97kwh",
+
+  "brand": "DS Automobiles",
+  "model": "N°8",
+  "variant": "97kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV Coupe",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/ds-n8-97kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "DS N°8 97kWh",
+      "searchAliases": [
+        "ds n8",
+        "ds no8",
+        "ds numero 8",
+        "ds n8 long range",
+        "ds n8 750 km"
+      ]
+    },
+
+    "es": {
+      "displayName": "DS N°8 97kWh",
+      "searchAliases": [
+        "ds no8",
+        "ds n8 long range"
+      ]
+    }
+  }
+}

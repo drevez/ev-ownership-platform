@@ -1,0 +1,40 @@
+{
+  "id": "nissan-leaf-75kwh",
+
+  "brand": "Nissan",
+  "model": "Leaf",
+  "variant": "75kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-Crossover",
+  "bodyType": "Crossover",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/nissan-leaf-75kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Nissan Leaf 75kWh",
+      "searchAliases": [
+        "nissan leaf",
+        "leaf 75",
+        "leaf 75kwh",
+        "novo nissan leaf",
+        "leaf advance",
+        "leaf evolve"
+      ]
+    },
+
+    "es": {
+      "displayName": "Nissan Leaf 75kWh",
+      "searchAliases": [
+        "nissan leaf",
+        "leaf 75kwh"
+      ]
+    }
+  }
+}

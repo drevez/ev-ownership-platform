@@ -1,0 +1,39 @@
+{
+  "id": "mini-countryman-e-65kwh",
+
+  "brand": "MINI",
+  "model": "Countryman",
+  "variant": "E 65kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/mini-countryman-e-65kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "MINI Countryman E 65kWh",
+      "searchAliases": [
+        "mini countryman electric",
+        "mini countryman e",
+        "countryman ev",
+        "countryman 65kwh",
+        "mini countryman 65"
+      ]
+    },
+
+    "es": {
+      "displayName": "MINI Countryman E 65kWh",
+      "searchAliases": [
+        "mini countryman e 65kwh",
+        "countryman ev"
+      ]
+    }
+  }
+}

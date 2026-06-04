@@ -1,0 +1,39 @@
+{
+  "id": "hyundai-kauai-ev-48kwh",
+
+  "brand": "Hyundai",
+  "model": "Kauai EV",
+  "variant": "48kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/hyundai-kauai-ev-48kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Hyundai Kauai EV 48kWh",
+      "searchAliases": [
+        "kauai ev",
+        "hyundai kauai eletrico",
+        "hyundai kona electric",
+        "kauai 48kwh",
+        "kona 48kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "Hyundai Kauai EV 48kWh",
+      "searchAliases": [
+        "kona electric 48kwh",
+        "kauai 48kwh"
+      ]
+    }
+  }
+}

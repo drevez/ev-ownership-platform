@@ -1,0 +1,39 @@
+{
+  "id": "nio-et5-touring-100kwh",
+
+  "brand": "NIO",
+  "model": "ET5 Touring",
+  "variant": "100kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-Wagon",
+  "bodyType": "Estate",
+  "drivetrain": "AWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/nio-et5-touring-100kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "NIO ET5 Touring 100kWh",
+      "searchAliases": [
+        "nio et5 touring",
+        "et5 touring",
+        "nio et5t",
+        "nio touring",
+        "nio et5 touring 100kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "NIO ET5 Touring 100kWh",
+      "searchAliases": [
+        "nio et5 touring",
+        "et5 touring 100kwh"
+      ]
+    }
+  }
+}

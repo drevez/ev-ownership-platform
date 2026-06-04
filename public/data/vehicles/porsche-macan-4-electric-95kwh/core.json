@@ -1,0 +1,39 @@
+{
+  "id": "porsche-macan-4-electric-95kwh",
+
+  "brand": "Porsche",
+  "model": "Macan 4 Electric",
+  "variant": "95kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "AWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/porsche-macan-4-electric-95kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Porsche Macan 4 Electric 95kWh",
+      "searchAliases": [
+        "porsche macan 4 electric",
+        "macan 4",
+        "macan awd",
+        "porsche macan 4 ev",
+        "macan 95kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "Porsche Macan 4 Electric 95kWh",
+      "searchAliases": [
+        "porsche macan 4 electrico",
+        "macan 4 electric"
+      ]
+    }
+  }
+}

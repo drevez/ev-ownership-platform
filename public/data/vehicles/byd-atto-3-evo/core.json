@@ -8,7 +8,7 @@
 
   "segment": "C-SUV",
   "bodyType": "SUV",
-  "drivetrain": "FWD",
+  "drivetrain": "RWD",
 
   "doors": 5,
   "seats": 5,

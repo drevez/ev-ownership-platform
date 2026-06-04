@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 102,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 29,
+  "chargePer10MinKm": 110,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "kia-ev3-58kwh"
+}

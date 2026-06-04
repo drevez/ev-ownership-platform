@@ -1,0 +1,39 @@
+{
+  "id": "skoda-enyaq-85-77kwh",
+
+  "brand": "Skoda",
+  "model": "Enyaq",
+  "variant": "85 - 77kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/skoda-enyaq-85-77kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Skoda Enyaq 85 77kWh",
+      "searchAliases": [
+        "skoda enyaq",
+        "enyaq 85",
+        "skoda enyaq 85",
+        "skoda enyaq 77kwh",
+        "enyaq 286cv"
+      ]
+    },
+
+    "es": {
+      "displayName": "Skoda Enyaq 85 77kWh",
+      "searchAliases": [
+        "skoda enyaq 85",
+        "enyaq 77kwh"
+      ]
+    }
+  }
+}

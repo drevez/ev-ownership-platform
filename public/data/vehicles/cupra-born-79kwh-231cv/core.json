@@ -1,0 +1,39 @@
+{
+  "id": "cupra-born-79kwh-231cv",
+
+  "brand": "Cupra",
+  "model": "Born",
+  "variant": "79 kWh 231cv",
+
+  "modelYear": 2026,
+
+  "segment": "C-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/cupra-born-79kwh-231cv.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Cupra Born 79kWh 231cv",
+      "searchAliases": [
+        "cupra born",
+        "born",
+        "born 79kwh",
+        "cupra born 79",
+        "born 231cv"
+      ]
+    },
+
+    "es": {
+      "displayName": "Cupra Born 79kWh 231cv",
+      "searchAliases": [
+        "cupra born 79kwh",
+        "born 231cv"
+      ]
+    }
+  }
+}

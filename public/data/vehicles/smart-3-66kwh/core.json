@@ -1,0 +1,39 @@
+{
+  "id": "smart-3-66kwh",
+
+  "brand": "smart",
+  "model": "#3",
+  "variant": "66kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV Coupe",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/smart-3-66kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "smart #3 66kWh",
+      "searchAliases": [
+        "smart #3",
+        "smart 3",
+        "smart hashtag 3",
+        "smart #3 66kwh",
+        "smart three"
+      ]
+    },
+
+    "es": {
+      "displayName": "smart #3 66kWh",
+      "searchAliases": [
+        "smart #3 66kwh",
+        "smart three"
+      ]
+    }
+  }
+}

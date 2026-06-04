@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 270,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 21,
+  "chargePer10MinKm": 250,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "porsche-macan-electric-95kwh"
+}

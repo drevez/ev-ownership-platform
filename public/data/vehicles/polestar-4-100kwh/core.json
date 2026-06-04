@@ -1,0 +1,39 @@
+{
+  "id": "polestar-4-100kwh",
+
+  "brand": "Polestar",
+  "model": "4",
+  "variant": "100kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV Coupe",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/polestar-4-100kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Polestar 4 100kWh",
+      "searchAliases": [
+        "polestar 4",
+        "polestar4",
+        "polestar 4 long range",
+        "polestar 4 single motor",
+        "polestar 4 100kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "Polestar 4 100kWh",
+      "searchAliases": [
+        "polestar 4 long range",
+        "polestar 4 100kwh"
+      ]
+    }
+  }
+}

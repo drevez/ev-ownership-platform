@@ -1,0 +1,39 @@
+{
+  "id": "citroen-e-c3-aircross-54kwh",
+
+  "brand": "Citroen",
+  "model": "e-C3 Aircross",
+  "variant": "54kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/citroen-e-c3-aircross-54kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Citroën ë-C3 Aircross 54kWh",
+      "searchAliases": [
+        "citroen ec3 aircross",
+        "e-c3 aircross",
+        "citroen eletrico",
+        "ec3 aircross 54kwh",
+        "citroen aircross eletrico"
+      ]
+    },
+
+    "es": {
+      "displayName": "Citroën ë-C3 Aircross 54kWh",
+      "searchAliases": [
+        "citroen ec3 aircross",
+        "ec3 aircross electrico"
+      ]
+    }
+  }
+}

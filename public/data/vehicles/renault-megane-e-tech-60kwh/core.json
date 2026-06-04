@@ -1,0 +1,40 @@
+{
+  "id": "renault-megane-e-tech-60kwh",
+
+  "brand": "Renault",
+  "model": "Megane E-Tech",
+  "variant": "60kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-Crossover",
+  "bodyType": "Crossover",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/renault-megane-e-tech-60kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Renault Megane E-Tech 60kWh",
+      "searchAliases": [
+        "renault megane e-tech",
+        "megane eletrico",
+        "megane etech",
+        "megane 60kwh",
+        "megane 220cv"
+      ]
+    },
+
+    "es": {
+      "displayName": "Renault Megane E-Tech 60kWh",
+      "searchAliases": [
+        "megane electrico",
+        "megane etech",
+        "megane 60kwh"
+      ]
+    }
+  }
+}

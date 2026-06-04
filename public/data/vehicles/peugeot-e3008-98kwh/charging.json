@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 160,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 27,
+  "chargePer10MinKm": 150,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "peugeot-e3008-98kwh"
+}

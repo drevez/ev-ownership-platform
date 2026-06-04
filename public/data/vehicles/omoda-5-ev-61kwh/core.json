@@ -1,0 +1,38 @@
+{
+  "id": "omoda-5-ev-61kwh",
+
+  "brand": "Omoda",
+  "model": "5 EV",
+  "variant": "61kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/omoda-5-ev-61kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Omoda 5 EV 61kWh",
+      "searchAliases": [
+        "omoda 5 ev",
+        "omoda eletrico",
+        "omoda 5 ev 61kwh",
+        "omoda ev"
+      ]
+    },
+
+    "es": {
+      "displayName": "Omoda 5 EV 61kWh",
+      "searchAliases": [
+        "omoda 5 ev",
+        "omoda 5 electrico"
+      ]
+    }
+  }
+}

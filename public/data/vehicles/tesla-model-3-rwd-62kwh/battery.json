@@ -1,0 +1,7 @@
+{
+  "batteryChemistry": "LFP",
+  "batteryGrossKWh": 62.5,
+  "batteryUsableKWh": 60.0,
+
+  "voltageArchitecture": 400
+}

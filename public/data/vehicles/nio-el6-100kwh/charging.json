@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 180,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 25,
+  "chargePer10MinKm": 142,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "nio-el6-100kwh"
+}

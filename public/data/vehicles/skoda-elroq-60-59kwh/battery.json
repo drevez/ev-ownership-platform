@@ -1,0 +1,7 @@
+{
+  "batteryChemistry": "NMC811",
+  "batteryGrossKWh": 63.0,
+  "batteryUsableKWh": 59.0,
+
+  "voltageArchitecture": 400
+}

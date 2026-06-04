@@ -1,0 +1,39 @@
+{
+  "id": "vw-id3-pro",
+
+  "brand": "Volkswagen",
+  "model": "ID.3",
+  "variant": "Pro",
+
+  "modelYear": 2026,
+
+  "segment": "C-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/vw-id3-pro.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Volkswagen ID.3 Pro",
+      "searchAliases": [
+        "vw id3",
+        "volkswagen id3",
+        "id3",
+        "id3 pro",
+        "vw id3 pro"
+      ]
+    },
+
+    "es": {
+      "displayName": "Volkswagen ID.3 Pro",
+      "searchAliases": [
+        "volkswagen id3 pro",
+        "id3 pro"
+      ]
+    }
+  }
+}

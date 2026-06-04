@@ -6,9 +6,9 @@ interface VehicleHeroProps {
   displayName: string
   vehicleId?: string
   image: string
-  segment: string
-  bodyType: string
-  drivetrain: string
+  segment?: string
+  bodyType?: string
+  drivetrain?: string
 }
 
 export function VehicleHero({
@@ -58,10 +58,10 @@ export function VehicleHero({
   )
 }
 
-function Badge({ label }: { label: string }) {
+function Badge({ label }: { label?: string }) {
   return (
     <span className="inline-block bg-white/15 hover:bg-white/25 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors border border-white/20">
-      {label}
+      {label || 'TBD'}
     </span>
   )
 }

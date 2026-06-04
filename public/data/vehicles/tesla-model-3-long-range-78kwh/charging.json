@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 250,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 27,
+  "chargePer10MinKm": 215,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": true,
+
+  "chargingCurveId": "tesla-model-3-long-range-78kwh"
+}

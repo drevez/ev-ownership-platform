@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 100,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 33,
+  "chargePer10MinKm": 80,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "alpine-a290-52kwh"
+}

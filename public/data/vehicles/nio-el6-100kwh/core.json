@@ -1,0 +1,38 @@
+{
+  "id": "nio-el6-100kwh",
+
+  "brand": "NIO",
+  "model": "EL6",
+  "variant": "100kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "AWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/nio-el6-100kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "NIO EL6 100kWh",
+      "searchAliases": [
+        "nio el6",
+        "el6",
+        "nio el6 100kwh",
+        "nio el6 long range"
+      ]
+    },
+
+    "es": {
+      "displayName": "NIO EL6 100kWh",
+      "searchAliases": [
+        "nio el6 100kwh",
+        "el6 long range"
+      ]
+    }
+  }
+}

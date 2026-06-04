@@ -1,16 +1,22 @@
+'use client'
+
+import type { VehicleDimensions } from '@/lib/loadVehicle'
+import {
+  getVehicleHeightMm,
+  getVehicleLengthMm,
+  getVehicleWheelbaseMm,
+  getVehicleWidthMm,
+} from '@/lib/normalizeVehicle'
+import { useTranslations } from '@/hooks/useTranslations'
+
 interface SpecsGridProps {
   brand: string
   model: string
-  variant: string
-  modelYear: number
+  variant?: string
+  modelYear?: number
   doors?: number
   seats?: number
-  dimensions?: {
-    lengthMm?: number
-    widthMm?: number
-    heightMm?: number
-    wheelbaseMm?: number
-  }
+  dimensions?: VehicleDimensions
 }
 
 export function SpecsGrid({
@@ -22,73 +28,116 @@ export function SpecsGrid({
   seats,
   dimensions = {}
 }: SpecsGridProps) {
+
+  const t = useTranslations()
+  const lengthMm = getVehicleLengthMm(dimensions)
+  const widthMm = getVehicleWidthMm(dimensions)
+  const heightMm = getVehicleHeightMm(dimensions)
+  const wheelbaseMm = getVehicleWheelbaseMm(dimensions)
+
   const specs = [
     {
-      label: 'Brand',
+      label: t.specsGrid.brand,
       value: brand,
       icon: '🏢'
     },
     {
-      label: 'Model',
+      label: t.specsGrid.model,
       value: model,
       icon: '🚗'
     },
     {
-      label: 'Variant',
-      value: variant,
+      label: t.specsGrid.variant,
+      value: variant || t.common.notAvailable,
       icon: '⭐'
     },
     {
-      label: 'Model Year',
-      value: modelYear,
+      label: t.specsGrid.modelYear,
+      value: modelYear || t.common.notAvailable,
       icon: '📅'
     },
-    ...(doors ? [{
-      label: 'Doors',
-      value: doors,
-      icon: '🚪'
-    }] : []),
-    ...(seats ? [{
-      label: 'Seats',
-      value: seats,
-      icon: '💺'
-    }] : []),
-    ...(dimensions.lengthMm ? [{
-      label: 'Length',
-      value: `${dimensions.lengthMm} mm`,
-      icon: '📏'
-    }] : []),
-    ...(dimensions.widthMm ? [{
-      label: 'Width',
-      value: `${dimensions.widthMm} mm`,
-      icon: '↔️'
-    }] : []),
-    ...(dimensions.heightMm ? [{
-      label: 'Height',
-      value: `${dimensions.heightMm} mm`,
-      icon: '📐'
-    }] : []),
-    ...(dimensions.wheelbaseMm ? [{
-      label: 'Wheelbase',
-      value: `${dimensions.wheelbaseMm} mm`,
-      icon: '🛞'
-    }] : [])
+
+    ...(doors
+      ? [{
+          label: t.specsGrid.doors,
+          value: doors,
+          icon: '🚪'
+        }]
+      : []),
+
+    ...(seats
+      ? [{
+          label: t.specsGrid.seats,
+          value: seats,
+          icon: '💺'
+        }]
+      : []),
+
+    ...(lengthMm
+      ? [{
+          label: t.specsGrid.length,
+          value: `${lengthMm} mm`,
+          icon: '📏'
+        }]
+      : []),
+
+    ...(widthMm
+      ? [{
+          label: t.specsGrid.width,
+          value: `${widthMm} mm`,
+          icon: '↔️'
+        }]
+      : []),
+
+    ...(heightMm
+      ? [{
+          label: t.specsGrid.height,
+          value: `${heightMm} mm`,
+          icon: '📐'
+        }]
+      : []),
+
+    ...(wheelbaseMm
+      ? [{
+          label: t.specsGrid.wheelbase,
+          value: `${wheelbaseMm} mm`,
+          icon: '🛞'
+        }]
+      : [])
   ]
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-bold text-slate-900 mb-6">Specifications</h2>
+
+      <h2 className="text-2xl font-bold text-slate-900 mb-6">
+        {t.specsGrid.title}
+      </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
         {specs.map((spec) => (
-          <div key={spec.label} className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+          <div
+            key={spec.label}
+            className="bg-slate-50 rounded-lg p-4 border border-slate-200"
+          >
+
             <div className="flex items-center gap-2 mb-2">
               <span className="text-2xl">{spec.icon}</span>
-              <p className="text-sm font-medium text-slate-600">{spec.label}</p>
+
+              <p className="text-sm font-medium text-slate-600">
+                {spec.label}
+              </p>
             </div>
-            <p className="text-lg font-bold text-slate-900">{spec.value}</p>
+
+            <p className="text-lg font-bold text-slate-900">
+              {spec.value}
+            </p>
+
           </div>
         ))}
+
       </div>
+
     </div>
   )
 }

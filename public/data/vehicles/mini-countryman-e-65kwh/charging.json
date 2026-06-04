@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 130,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 29,
+  "chargePer10MinKm": 120,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "mini-countryman-e-65kwh"
+}

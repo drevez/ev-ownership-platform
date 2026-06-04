@@ -1,0 +1,41 @@
+{
+  "market": "pt",
+  "currency": "EUR",
+  "lastReviewedAt": "2026-06",
+  "offers": [
+    {
+      "condition": "new",
+      "status": "available",
+      "marketScope": "official_pt",
+      "includesVat": true,
+      "sourceType": "official_brand",
+      "confidence": "high",
+      "priceFrom": 38500,
+      "priceTo": 47500,
+      "priceDate": "2026-05",
+      "modelYear": 2026,
+      "yearFrom": 2024,
+      "sourceLabel": "Alfa Romeo Portugal",
+      "sourceUrl": null,
+      "displayPriority": 1,
+      "notes": null
+    },
+    {
+      "condition": "used",
+      "status": "available",
+      "marketScope": "used_pt",
+      "includesVat": true,
+      "sourceType": "market_estimate",
+      "confidence": "high",
+      "priceFrom": 26499,
+      "priceTo": 38200,
+      "priceDate": "2026-05",
+      "modelYear": 2025,
+      "yearFrom": 2024,
+      "sourceLabel": "Mercado usado Portugal (autouncle)",
+      "sourceUrl": "https://www.autouncle.pt/pt/carros-usados/Alfa%20Romeo/Junior/f-electrico?s%5Border_by%5D=price_asc",
+      "displayPriority": 2,
+      "notes": null
+    }
+  ]
+}

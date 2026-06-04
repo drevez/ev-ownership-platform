@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 80,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 45,
+  "chargePer10MinKm": 70,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "omoda-5-ev-61kwh"
+}

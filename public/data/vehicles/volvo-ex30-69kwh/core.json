@@ -1,0 +1,39 @@
+{
+  "id": "volvo-ex30-69kwh",
+
+  "brand": "Volvo",
+  "model": "EX30",
+  "variant": "69kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/volvo-ex30-69kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Volvo EX30 69kWh",
+      "searchAliases": [
+        "volvo ex30",
+        "ex30",
+        "volvo ex30 extended range",
+        "volvo ex30 69kwh",
+        "ex30 single motor extended range"
+      ]
+    },
+
+    "es": {
+      "displayName": "Volvo EX30 69kWh",
+      "searchAliases": [
+        "volvo ex30 extended range",
+        "ex30 69kwh"
+      ]
+    }
+  }
+}

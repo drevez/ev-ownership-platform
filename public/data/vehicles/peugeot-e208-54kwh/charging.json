@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 100,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 27,
+  "chargePer10MinKm": 105,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "peugeot-e208-54kwh"
+}

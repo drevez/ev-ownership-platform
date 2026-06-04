@@ -1,0 +1,39 @@
+{
+  "id": "volvo-ex30-51kwh",
+
+  "brand": "Volvo",
+  "model": "EX30",
+  "variant": "51kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/volvo-ex30-51kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Volvo EX30 51kWh",
+      "searchAliases": [
+        "volvo ex30",
+        "ex30",
+        "volvo ex30 core",
+        "volvo ex30 51kwh",
+        "ex30 single motor"
+      ]
+    },
+
+    "es": {
+      "displayName": "Volvo EX30 51kWh",
+      "searchAliases": [
+        "volvo ex30",
+        "ex30 51kwh"
+      ]
+    }
+  }
+}

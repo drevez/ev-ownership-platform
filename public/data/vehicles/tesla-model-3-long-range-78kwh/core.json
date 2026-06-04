@@ -1,0 +1,38 @@
+{
+  "id": "tesla-model-3-long-range-78kwh",
+
+  "brand": "Tesla",
+  "model": "Model 3",
+  "variant": "Long Range 78kwh",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "AWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/tesla-model-3-long-range-78kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Tesla Model 3 Long Range",
+      "searchAliases": [
+        "tesla model 3",
+        "model 3",
+        "model 3 long range",
+        "tesla model 3 awd"
+      ]
+    },
+
+    "es": {
+      "displayName": "Tesla Model 3 Long Range",
+      "searchAliases": [
+        "tesla model 3 long range",
+        "model 3 awd"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 175,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 28,
+  "chargePer10MinKm": 140,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "audi-q4-sportback-etron-45"
+}

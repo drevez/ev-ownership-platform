@@ -1,0 +1,39 @@
+{
+  "id": "porsche-taycan-97kwh",
+
+  "brand": "Porsche",
+  "model": "Taycan",
+  "variant": "97kWh",
+
+  "modelYear": 2026,
+
+  "segment": "E-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "RWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/porsche-taycan-97kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Porsche Taycan 97kWh",
+      "searchAliases": [
+        "porsche taycan",
+        "taycan",
+        "taycan rwd",
+        "porsche taycan plus",
+        "taycan performance battery plus"
+      ]
+    },
+
+    "es": {
+      "displayName": "Porsche Taycan 97kWh",
+      "searchAliases": [
+        "porsche taycan",
+        "taycan 97kwh"
+      ]
+    }
+  }
+}

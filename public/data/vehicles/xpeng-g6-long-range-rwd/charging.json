@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 280,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 20,
+  "chargePer10MinKm": 180,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "xpeng-g6-long-range-rwd"
+}

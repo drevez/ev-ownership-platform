@@ -1,0 +1,7 @@
+{
+  "batteryChemistry": "NMC",
+  "batteryGrossKWh": 64.8,
+  "batteryUsableKWh": 64.7,
+
+  "voltageArchitecture": 400
+}

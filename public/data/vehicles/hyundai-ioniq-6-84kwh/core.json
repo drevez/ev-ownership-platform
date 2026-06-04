@@ -1,0 +1,39 @@
+{
+  "id": "hyundai-ioniq-6-84kwh",
+
+  "brand": "Hyundai",
+  "model": "Ioniq 6",
+  "variant": "84kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "RWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/hyundai-ioniq-6-84kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Hyundai Ioniq 6 84kWh",
+      "searchAliases": [
+        "ioniq 6",
+        "hyundai ioniq 6",
+        "ioniq6",
+        "ioniq 6 84kwh",
+        "ioniq 6 long range"
+      ]
+    },
+
+    "es": {
+      "displayName": "Hyundai Ioniq 6 84kWh",
+      "searchAliases": [
+        "ioniq 6 84kwh",
+        "ioniq 6 long range"
+      ]
+    }
+  }
+}

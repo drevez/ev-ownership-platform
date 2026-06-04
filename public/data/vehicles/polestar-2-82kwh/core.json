@@ -1,0 +1,39 @@
+{
+  "id": "polestar-2-82kwh",
+
+  "brand": "Polestar",
+  "model": "2",
+  "variant": "82kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-Liftback",
+  "bodyType": "Liftback",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/polestar-2-82kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Polestar 2 82kWh",
+      "searchAliases": [
+        "polestar 2",
+        "polestar2",
+        "polestar 2 long range",
+        "polestar 2 long range single motor",
+        "polestar 2 82kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "Polestar 2 82kWh",
+      "searchAliases": [
+        "polestar 2 long range",
+        "polestar 2 82kwh"
+      ]
+    }
+  }
+}

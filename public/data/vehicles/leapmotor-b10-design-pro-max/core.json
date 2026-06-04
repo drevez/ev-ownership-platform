@@ -1,0 +1,39 @@
+{
+  "id": "leapmotor-b10-design-pro-max",
+
+  "brand": "Leapmotor",
+  "model": "B10",
+  "variant": "Design Pro Max",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/leapmotor-b10-design-pro-max.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Leapmotor B10 Design Pro Max",
+      "searchAliases": [
+        "leapmotor b10",
+        "b10",
+        "b10 design",
+        "design pro max",
+        "leapmotor b10 design pro max"
+      ]
+    },
+
+    "es": {
+      "displayName": "Leapmotor B10 Design Pro Max",
+      "searchAliases": [
+        "leapmotor b10 design",
+        "b10 design pro max"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "nissan-ariya-63kwh",
+
+  "brand": "Nissan",
+  "model": "Ariya",
+  "variant": "63kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/nissan-ariya-63kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Nissan Ariya 63kWh",
+      "searchAliases": [
+        "nissan ariya",
+        "ariya",
+        "nissan ariya 63kwh",
+        "ariya 63",
+        "nissan ariya advance"
+      ]
+    },
+
+    "es": {
+      "displayName": "Nissan Ariya 63kWh",
+      "searchAliases": [
+        "nissan ariya",
+        "ariya 63kwh"
+      ]
+    }
+  }
+}

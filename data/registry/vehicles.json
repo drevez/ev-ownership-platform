@@ -1,233 +1,43 @@
 [
   {
-    "id": "tesla-model-y-rwd",
-    "brand": "Tesla",
-    "model": "Model Y",
-    "variant": "RWD",
-    "segment": "D-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "tesla-model-y-long-range",
-    "brand": "Tesla",
-    "model": "Model Y",
-    "variant": "Long Range",
-    "segment": "D-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "tesla-model-3-rwd",
-    "brand": "Tesla",
-    "model": "Model 3",
-    "variant": "RWD",
-    "segment": "D-Sedan",
-    "bodyType": "Sedan",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "tesla-model-3-long-range",
-    "brand": "Tesla",
-    "model": "Model 3",
-    "variant": "Long Range",
-    "segment": "D-Sedan",
-    "bodyType": "Sedan",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "byd-seal-rwd",
-    "brand": "BYD",
-    "model": "Seal",
-    "variant": "RWD",
-    "segment": "D-Sedan",
-    "bodyType": "Sedan",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "byd-seal-awd",
-    "brand": "BYD",
-    "model": "Seal",
-    "variant": "AWD",
-    "segment": "D-Sedan",
-    "bodyType": "Sedan",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "byd-atto-3",
-    "brand": "BYD",
-    "model": "Atto 3",
-    "variant": "Standard",
-    "segment": "C-SUV",
+    "id": "alfa-romeo-junior-elettrica-51kwh",
+    "brand": "Alfa Romeo",
+    "model": "Junior Elettrica",
+    "variant": "51kWh",
+    "segment": "B-SUV",
     "bodyType": "SUV",
     "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/alfa-romeo-junior-elettrica-51kwh.webp"
   },
   {
-    "id": "byd-atto-3-evo",
-    "brand": "BYD",
-    "model": "Atto 3 Evo",
-    "variant": "Standard",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "byd-dolphin",
-    "brand": "BYD",
-    "model": "Dolphin",
-    "variant": "Standard",
-    "segment": "C-Hatch",
+    "id": "alpine-a290-52kwh",
+    "brand": "Alpine",
+    "model": "A290",
+    "variant": "52kWh",
+    "segment": "B-Hatch",
     "bodyType": "Hatchback",
     "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/alpine-a290-52kwh.webp"
   },
   {
-    "id": "kia-ev3-standard-range",
-    "brand": "Kia",
-    "model": "EV3",
-    "variant": "Standard Range",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "kia-ev3-long-range",
-    "brand": "Kia",
-    "model": "EV3",
-    "variant": "Long Range",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "kia-ev5",
-    "brand": "Kia",
-    "model": "EV5",
-    "variant": "Standard",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "kia-ev6-rwd",
-    "brand": "Kia",
-    "model": "EV6",
-    "variant": "RWD",
-    "segment": "D-Crossover",
-    "bodyType": "Crossover",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "kia-ev6-awd",
-    "brand": "Kia",
-    "model": "EV6",
-    "variant": "AWD",
-    "segment": "D-Crossover",
-    "bodyType": "Crossover",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "hyundai-kona-electric-48kwh",
-    "brand": "Hyundai",
-    "model": "Kona Electric",
-    "variant": "48 kWh",
-    "segment": "B-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "FWD",
-    "heroImage": "https://evtest.eu/img/4133/or/hyundai-kona-electric-2023-evtest-eu-1.jpg?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "hyundai-kona-electric-65kwh",
-    "brand": "Hyundai",
-    "model": "Kona Electric",
-    "variant": "65 kWh",
-    "segment": "B-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "FWD",
-    "heroImage": "https://evtest.eu/img/4133/or/hyundai-kona-electric-2023-evtest-eu-1.jpg?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "hyundai-ioniq-5-rwd",
-    "brand": "Hyundai",
-    "model": "Ioniq 5",
-    "variant": "RWD",
-    "segment": "D-Crossover",
-    "bodyType": "Crossover",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1549399735-cef2e2c3f638?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "hyundai-ioniq-5-awd",
-    "brand": "Hyundai",
-    "model": "Ioniq 5",
-    "variant": "AWD",
-    "segment": "D-Crossover",
-    "bodyType": "Crossover",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1549399735-cef2e2c3f638?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "hyundai-ioniq-6-rwd",
-    "brand": "Hyundai",
-    "model": "Ioniq 6",
-    "variant": "RWD",
-    "segment": "D-Sedan",
-    "bodyType": "Sedan",
-    "drivetrain": "RWD",
-    "heroImage": "https://www.hyundai.pt/wp-content/uploads/2023/02/World-Car-Awards_3.png?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "hyundai-ioniq-6-awd",
-    "brand": "Hyundai",
-    "model": "Ioniq 6",
-    "variant": "AWD",
-    "segment": "D-Sedan",
-    "bodyType": "Sedan",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1549399735-cef2e2c3f638?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "volvo-ex30-single-motor",
-    "brand": "Volvo",
-    "model": "EX30",
-    "variant": "Single Motor",
-    "segment": "B-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "volvo-ex30-twin-motor",
-    "brand": "Volvo",
-    "model": "EX30",
-    "variant": "Twin Motor",
-    "segment": "B-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "volvo-ex40",
-    "brand": "Volvo",
-    "model": "EX40",
-    "variant": "Standard",
+    "id": "audi-q4-etron-45",
+    "brand": "Audi",
+    "model": "Q4 e-tron",
+    "variant": "45",
     "segment": "C-SUV",
     "bodyType": "SUV",
     "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/audi-q4-etron-45.webp"
+  },
+  {
+    "id": "audi-q4-sportback-etron-45",
+    "brand": "Audi",
+    "model": "Q4 Sportback e-tron",
+    "variant": "45",
+    "segment": "C-SUV",
+    "bodyType": "Coupe-SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/audi-q4-sportback-etron-45.webp"
   },
   {
     "id": "bmw-i4-edrive40",
@@ -237,7 +47,7 @@
     "segment": "D-Sedan",
     "bodyType": "Liftback",
     "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/bmw-i4-edrive40.webp"
   },
   {
     "id": "bmw-i4-m50",
@@ -247,356 +57,766 @@
     "segment": "D-Sedan",
     "bodyType": "Liftback",
     "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/bmw-i4-m50.webp"
   },
   {
-    "id": "bmw-ix1",
+    "id": "bmw-ix1-xdrive30",
     "brand": "BMW",
     "model": "iX1",
-    "variant": "Standard",
+    "variant": "xDrive30",
     "segment": "C-SUV",
     "bodyType": "SUV",
     "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/bmw-ix1-xdrive30.webp"
   },
   {
-    "id": "bmw-ix2",
+    "id": "bmw-ix2-edrive20",
     "brand": "BMW",
     "model": "iX2",
-    "variant": "Standard",
+    "variant": "eDrive20",
     "segment": "C-SUV",
     "bodyType": "SUV Coupe",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "drivetrain": "FWD",
+    "heroImage": "/cars/bmw-ix2-edrive20.webp"
   },
   {
-    "id": "audi-q4-etron-rwd",
-    "brand": "Audi",
-    "model": "Q4 e-tron",
-    "variant": "RWD",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "audi-q4-sportback-etron-awd",
-    "brand": "Audi",
-    "model": "Q4 Sportback e-tron",
-    "variant": "AWD",
-    "segment": "C-SUV",
-    "bodyType": "SUV Coupe",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "mercedes-eqa",
-    "brand": "Mercedes-Benz",
-    "model": "EQA",
+    "id": "byd-atto-3",
+    "brand": "BYD",
+    "model": "Atto 3",
     "variant": "Standard",
     "segment": "C-SUV",
     "bodyType": "SUV",
     "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/byd-atto-3.webp"
   },
   {
-    "id": "mercedes-eqb-awd",
-    "brand": "Mercedes-Benz",
-    "model": "EQB",
-    "variant": "AWD",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "cupra-born",
-    "brand": "Cupra",
-    "model": "Born",
-    "variant": "Standard",
-    "segment": "C-Hatch",
-    "bodyType": "Hatchback",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "cupra-tavascan",
-    "brand": "Cupra",
-    "model": "Tavascan",
-    "variant": "Standard",
-    "segment": "D-SUV",
-    "bodyType": "SUV Coupe",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "vw-id3",
-    "brand": "Volkswagen",
-    "model": "ID.3",
-    "variant": "Standard",
-    "segment": "C-Hatch",
-    "bodyType": "Hatchback",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "vw-id4",
-    "brand": "Volkswagen",
-    "model": "ID.4",
+    "id": "byd-atto-3-evo",
+    "brand": "BYD",
+    "model": "Atto 3 Evo",
     "variant": "Standard",
     "segment": "C-SUV",
     "bodyType": "SUV",
     "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/byd-atto-3-evo.webp"
   },
   {
-    "id": "vw-id7",
-    "brand": "Volkswagen",
-    "model": "ID.7",
-    "variant": "Standard",
-    "segment": "D-Sedan",
-    "bodyType": "Liftback",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "skoda-enyaq",
-    "brand": "Skoda",
-    "model": "Enyaq",
-    "variant": "Standard",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "skoda-elroq",
-    "brand": "Skoda",
-    "model": "Elroq",
-    "variant": "Standard",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "renault-megane-e-tech",
-    "brand": "Renault",
-    "model": "Megane E-Tech",
-    "variant": "Standard",
+    "id": "byd-dolphin-comfort-60kwh",
+    "brand": "BYD",
+    "model": "Dolphin",
+    "variant": "Comfort 60 kWh",
     "segment": "C-Hatch",
     "bodyType": "Hatchback",
     "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/byd-dolphin-comfort-60kwh.webp"
   },
   {
-    "id": "renault-scenic-e-tech",
-    "brand": "Renault",
-    "model": "Scenic E-Tech",
-    "variant": "Long Range",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "renault-5-e-tech",
-    "brand": "Renault",
-    "model": "5 E-Tech",
-    "variant": "Standard",
+    "id": "byd-dolphin-surf-boost-43kwh",
+    "brand": "BYD",
+    "model": "Dolphin Surf",
+    "variant": "Boost 43 kWh",
     "segment": "B-Hatch",
     "bodyType": "Hatchback",
     "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/byd-dolphin-surf-boost-43kwh.webp"
   },
   {
-    "id": "peugeot-e3008",
-    "brand": "Peugeot",
-    "model": "E-3008",
-    "variant": "Long Range",
-    "segment": "C-SUV",
-    "bodyType": "SUV Coupe",
-    "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "peugeot-e208",
-    "brand": "Peugeot",
-    "model": "E-208",
-    "variant": "Standard",
-    "segment": "B-Hatch",
-    "bodyType": "Hatchback",
-    "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "mini-countryman-e",
-    "brand": "MINI",
-    "model": "Countryman",
-    "variant": "E",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "mini-cooper-se",
-    "brand": "MINI",
-    "model": "Cooper",
-    "variant": "SE",
-    "segment": "B-Hatch",
-    "bodyType": "Hatchback",
-    "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "ford-explorer",
-    "brand": "Ford",
-    "model": "Explorer",
-    "variant": "Extended Range",
-    "segment": "C-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "ford-capri",
-    "brand": "Ford",
-    "model": "Capri",
-    "variant": "Extended Range",
-    "segment": "D-Crossover",
-    "bodyType": "SUV Coupe",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "xpeng-g6",
-    "brand": "XPENG",
-    "model": "G6",
-    "variant": "Long Range",
-    "segment": "D-SUV",
-    "bodyType": "SUV Coupe",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "xpeng-p7-awd",
-    "brand": "XPENG",
-    "model": "P7",
-    "variant": "AWD",
+    "id": "byd-seal-design-82kwh",
+    "brand": "BYD",
+    "model": "Seal",
+    "variant": "Design 82 kWh",
     "segment": "D-Sedan",
     "bodyType": "Sedan",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "drivetrain": "RWD",
+    "heroImage": "/cars/byd-seal-design-82kwh.webp"
   },
   {
-    "id": "nio-et5-touring",
-    "brand": "NIO",
-    "model": "ET5 Touring",
-    "variant": "Standard",
-    "segment": "D-Wagon",
-    "bodyType": "Estate",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "nio-el6",
-    "brand": "NIO",
-    "model": "EL6",
-    "variant": "Standard",
-    "segment": "D-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "polestar-2",
-    "brand": "Polestar",
-    "model": "2",
-    "variant": "Long Range",
+    "id": "byd-seal-dynamic-61kwh",
+    "brand": "BYD",
+    "model": "Seal",
+    "variant": "Dynamic 61 kWh",
     "segment": "D-Sedan",
-    "bodyType": "Liftback",
+    "bodyType": "Sedan",
     "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/byd-seal-dynamic-61kwh.webp"
   },
   {
-    "id": "polestar-4-awd",
-    "brand": "Polestar",
-    "model": "4",
-    "variant": "AWD",
-    "segment": "D-SUV",
-    "bodyType": "SUV Coupe",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "smart-1",
-    "brand": "smart",
-    "model": "#1",
-    "variant": "Standard",
-    "segment": "B-SUV",
-    "bodyType": "SUV",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "smart-3-awd",
-    "brand": "smart",
-    "model": "#3",
-    "variant": "AWD",
-    "segment": "C-SUV",
-    "bodyType": "SUV Coupe",
-    "drivetrain": "AWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
-  },
-  {
-    "id": "mg4-standard-range",
-    "brand": "MG",
-    "model": "MG4",
-    "variant": "Standard Range",
-    "segment": "C-Hatch",
+    "id": "citroen-e-c3-30kwh-you",
+    "brand": "Citroen",
+    "model": "e-C3",
+    "variant": "30 kWh You",
+    "segment": "B-Hatch",
     "bodyType": "Hatchback",
-    "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "drivetrain": "FWD",
+    "heroImage": "/cars/citroen-e-c3-30kwh-you.webp"
   },
   {
-    "id": "mg-zs-ev",
-    "brand": "MG",
-    "model": "ZS EV",
-    "variant": "Long Range",
+    "id": "citroen-e-c3-44kwh-plus",
+    "brand": "Citroen",
+    "model": "e-C3",
+    "variant": "44 kWh Plus",
+    "segment": "B-Hatch",
+    "bodyType": "Hatchback",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/citroen-e-c3-44kwh-plus.webp"
+  },
+  {
+    "id": "citroen-e-c3-aircross-54kwh",
+    "brand": "Citroen",
+    "model": "e-C3 Aircross",
+    "variant": "54kWh",
     "segment": "B-SUV",
     "bodyType": "SUV",
     "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/citroen-e-c3-aircross-54kwh.webp"
+  },
+  {
+    "id": "citroen-e-c4-54kwh",
+    "brand": "Citroen",
+    "model": "e-C4",
+    "variant": "54kWh",
+    "segment": "C-Hatch",
+    "bodyType": "Hatchback",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/citroen-e-c4-54kwh.webp"
+  },
+  {
+    "id": "cupra-born-79kwh-231cv",
+    "brand": "Cupra",
+    "model": "Born",
+    "variant": "79 kWh 231cv",
+    "segment": "C-Hatch",
+    "bodyType": "Hatchback",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/cupra-born-79kwh-231cv.webp"
+  },
+  {
+    "id": "cupra-tavascan-endurance-77kwh-286cv",
+    "brand": "Cupra",
+    "model": "Tavascan",
+    "variant": "Endurance 77kWh - 286cv",
+    "segment": "D-SUV",
+    "bodyType": "SUV Coupe",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/cupra-tavascan-endurance-77kwh-286cv.webp"
+  },
+  {
+    "id": "ds-n8-97kwh",
+    "brand": "DS Automobiles",
+    "model": "N°8",
+    "variant": "97kWh",
+    "segment": "D-SUV",
+    "bodyType": "SUV Coupe",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/ds-n8-97kwh.webp"
+  },
+  {
+    "id": "ford-capri-79kwh",
+    "brand": "Ford",
+    "model": "Capri",
+    "variant": "79kWh",
+    "segment": "D-SUV",
+    "bodyType": "SUV Coupe",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/ford-capri-79kwh.webp"
+  },
+  {
+    "id": "ford-explorer-79kwh",
+    "brand": "Ford",
+    "model": "Explorer",
+    "variant": "79kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/ford-explorer-79kwh.webp"
+  },
+  {
+    "id": "honda-eny1-62kwh",
+    "brand": "Honda",
+    "model": "e:Ny1",
+    "variant": "62kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/honda-eny1-62kwh.webp"
+  },
+  {
+    "id": "hyundai-ioniq-5-84kwh",
+    "brand": "Hyundai",
+    "model": "Ioniq 5",
+    "variant": "Long Range AWD 84 kWh",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "AWD",
+    "heroImage": "/cars/hyundai-ioniq-5-84kwh.webp"
+  },
+  {
+    "id": "hyundai-ioniq-5-63kwh",
+    "brand": "Hyundai",
+    "model": "Ioniq 5",
+    "variant": "Standard Range RWD 63 kWh",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/hyundai-ioniq-5-63kwh.webp"
+  },
+  {
+    "id": "hyundai-ioniq-6-63kwh",
+    "brand": "Hyundai",
+    "model": "Ioniq 6",
+    "variant": "63kWh",
+    "segment": "D-Sedan",
+    "bodyType": "Sedan",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/hyundai-ioniq-6-63kwh.webp"
+  },
+  {
+    "id": "hyundai-ioniq-6-84kwh",
+    "brand": "Hyundai",
+    "model": "Ioniq 6",
+    "variant": "84kWh",
+    "segment": "D-Sedan",
+    "bodyType": "Sedan",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/hyundai-ioniq-6-84kwh.webp"
+  },
+  {
+    "id": "hyundai-kauai-ev-48kwh",
+    "brand": "Hyundai",
+    "model": "Kauai EV",
+    "variant": "48kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/hyundai-kauai-ev-48kwh.webp"
+  },
+  {
+    "id": "hyundai-kauai-ev-65kwh",
+    "brand": "Hyundai",
+    "model": "Kauai EV",
+    "variant": "65 kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/hyundai-kauai-ev-65kwh.webp"
+  },
+  {
+    "id": "jaecoo-5-ev-59kwh",
+    "brand": "Jaecoo",
+    "model": "5 EV",
+    "variant": "59kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/jaecoo-5-ev-59kwh.webp"
+  },
+  {
+    "id": "kia-ev3-58kwh",
+    "brand": "Kia",
+    "model": "EV3",
+    "variant": "58kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/kia-ev3-58kwh.webp"
+  },
+  {
+    "id": "kia-ev3-81kwh",
+    "brand": "Kia",
+    "model": "EV3",
+    "variant": "81kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/kia-ev3-81kwh.webp"
+  },
+  {
+    "id": "kia-ev5-tech",
+    "brand": "Kia",
+    "model": "EV5",
+    "variant": "Tech",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/kia-ev5.webp"
+  },
+  {
+    "id": "kia-ev6-63kwh",
+    "brand": "Kia",
+    "model": "EV6",
+    "variant": "63kWh",
+    "segment": "D-Crossover",
+    "bodyType": "Crossover",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/kia-ev6-63kwh.webp"
+  },
+  {
+    "id": "kia-ev6-84kwh",
+    "brand": "Kia",
+    "model": "EV6",
+    "variant": "84kWh",
+    "segment": "D-Crossover",
+    "bodyType": "Crossover",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/kia-ev6-84kwh.webp"
+  },
+  {
+    "id": "leapmotor-b10-design-pro-max",
+    "brand": "Leapmotor",
+    "model": "B10",
+    "variant": "Design Pro Max",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/leapmotor-b10-design-pro-max.webp"
+  },
+  {
+    "id": "leapmotor-c10-design-pro-max",
+    "brand": "Leapmotor",
+    "model": "C10",
+    "variant": "Design Pro Max",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/leapmotor-c10-design-pro-max.webp"
+  },
+  {
+    "id": "leapmotor-c10-life-pro",
+    "brand": "Leapmotor",
+    "model": "C10",
+    "variant": "Life Pro",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/leapmotor-c10-life-pro.webp"
   },
   {
     "id": "leapmotor-t03",
     "brand": "Leapmotor",
     "model": "T03",
-    "variant": "Standard",
+    "variant": "37.3 kWh",
     "segment": "A-Hatch",
     "bodyType": "Hatchback",
     "drivetrain": "FWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/leapmotor-t03.webp"
   },
   {
-    "id": "leapmotor-c10",
-    "brand": "Leapmotor",
-    "model": "C10",
-    "variant": "Standard",
+    "id": "mercedes-eqa-70kwh",
+    "brand": "Mercedes-Benz",
+    "model": "EQA",
+    "variant": "70kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/mercedes-eqa-70kwh.webp"
+  },
+  {
+    "id": "mercedes-eqb-70kwh",
+    "brand": "Mercedes-Benz",
+    "model": "EQB",
+    "variant": "70kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/mercedes-eqb-70kwh.webp"
+  },
+  {
+    "id": "mg-mg4-urban-comfort-54kwh",
+    "brand": "MG",
+    "model": "MG4 Urban",
+    "variant": "54 kWh Comfort",
+    "segment": "C-Hatch",
+    "bodyType": "Hatchback",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/mg-mg4-urban-comfort-54kwh.webp"
+  },
+  {
+    "id": "mg-zs-ev-50kwh",
+    "brand": "MG",
+    "model": "ZS EV",
+    "variant": "50kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/mg-zs-ev-50kwh.webp"
+  },
+  {
+    "id": "mg-zs-ev-72kwh",
+    "brand": "MG",
+    "model": "ZS EV",
+    "variant": "72kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/mg-zs-ev-72kwh.webp"
+  },
+  {
+    "id": "mini-cooper-se-54kwh",
+    "brand": "MINI",
+    "model": "Cooper",
+    "variant": "SE 54kWh",
+    "segment": "B-Hatch",
+    "bodyType": "Hatchback",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/mini-cooper-se-54kwh.webp"
+  },
+  {
+    "id": "mini-countryman-e-65kwh",
+    "brand": "MINI",
+    "model": "Countryman",
+    "variant": "E 65kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/mini-countryman-e-65kwh.webp"
+  },
+  {
+    "id": "nio-el6-100kwh",
+    "brand": "NIO",
+    "model": "EL6",
+    "variant": "100kWh",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "AWD",
+    "heroImage": "/cars/nio-el6-100kwh.webp"
+  },
+  {
+    "id": "nio-et5-touring-100kwh",
+    "brand": "NIO",
+    "model": "ET5 Touring",
+    "variant": "100kWh",
+    "segment": "D-Wagon",
+    "bodyType": "Estate",
+    "drivetrain": "AWD",
+    "heroImage": "/cars/nio-et5-touring-100kwh.webp"
+  },
+  {
+    "id": "nissan-ariya-63kwh",
+    "brand": "Nissan",
+    "model": "Ariya",
+    "variant": "63kWh",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/nissan-ariya-63kwh.webp"
+  },
+  {
+    "id": "nissan-ariya-87kwh",
+    "brand": "Nissan",
+    "model": "Ariya",
+    "variant": "87kWh",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/nissan-ariya-87kwh.webp"
+  },
+  {
+    "id": "nissan-leaf-52kwh",
+    "brand": "Nissan",
+    "model": "Leaf",
+    "variant": "52kWh",
+    "segment": "C-Crossover",
+    "bodyType": "Crossover",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/nissan-leaf-52kwh.webp"
+  },
+  {
+    "id": "nissan-leaf-75kwh",
+    "brand": "Nissan",
+    "model": "Leaf",
+    "variant": "75kWh",
+    "segment": "C-Crossover",
+    "bodyType": "Crossover",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/nissan-leaf-75kwh.webp"
+  },
+  {
+    "id": "omoda-5-ev-61kwh",
+    "brand": "Omoda",
+    "model": "5 EV",
+    "variant": "61kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/omoda-5-ev-61kwh.webp"
+  },
+  {
+    "id": "peugeot-e208-54kwh",
+    "brand": "Peugeot",
+    "model": "e-208",
+    "variant": "54kWh",
+    "segment": "B-Hatch",
+    "bodyType": "Hatchback",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/peugeot-e208-54kwh.webp"
+  },
+  {
+    "id": "peugeot-e3008-98kwh",
+    "brand": "Peugeot",
+    "model": "E-3008",
+    "variant": "98kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV Coupe",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/peugeot-e3008-98kwh.webp"
+  },
+  {
+    "id": "polestar-2-82kwh",
+    "brand": "Polestar",
+    "model": "2",
+    "variant": "82kWh",
+    "segment": "D-Liftback",
+    "bodyType": "Liftback",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/polestar-2-82kwh.webp"
+  },
+  {
+    "id": "polestar-4-100kwh",
+    "brand": "Polestar",
+    "model": "4",
+    "variant": "100kWh",
+    "segment": "D-SUV",
+    "bodyType": "SUV Coupe",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/polestar-4-100kwh.webp"
+  },
+  {
+    "id": "porsche-macan-4-electric-95kwh",
+    "brand": "Porsche",
+    "model": "Macan 4 Electric",
+    "variant": "95kWh",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "AWD",
+    "heroImage": "/cars/porsche-macan-4-electric-95kwh.webp"
+  },
+  {
+    "id": "porsche-macan-electric-95kwh",
+    "brand": "Porsche",
+    "model": "Macan Electric",
+    "variant": "95kWh",
     "segment": "D-SUV",
     "bodyType": "SUV",
     "drivetrain": "RWD",
-    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/porsche-macan-electric-95kwh.webp"
   },
   {
-    "id": "leapmotor-b10",
-    "brand": "Leapmotor",
-    "model": "B10",
-    "variant": "Standard",
+    "id": "porsche-taycan-97kwh",
+    "brand": "Porsche",
+    "model": "Taycan",
+    "variant": "97kWh",
+    "segment": "E-Sedan",
+    "bodyType": "Sedan",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/porsche-taycan-97kwh.webp"
+  },
+  {
+    "id": "renault-5-e-tech-52kwh",
+    "brand": "Renault",
+    "model": "5 E-Tech",
+    "variant": "52kWh",
+    "segment": "B-Hatch",
+    "bodyType": "Hatchback",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/renault-5-e-tech-52kwh.webp"
+  },
+  {
+    "id": "renault-megane-e-tech-60kwh",
+    "brand": "Renault",
+    "model": "Megane E-Tech",
+    "variant": "60kWh",
+    "segment": "C-Crossover",
+    "bodyType": "Crossover",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/renault-megane-e-tech-60kwh.webp"
+  },
+  {
+    "id": "renault-scenic-e-tech-87kwh",
+    "brand": "Renault",
+    "model": "Scenic E-Tech",
+    "variant": "87kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "FWD",
+    "heroImage": "/cars/renault-scenic-e-tech-87kwh.webp"
+  },
+  {
+    "id": "skoda-elroq-60-59kwh",
+    "brand": "Skoda",
+    "model": "Elroq",
+    "variant": "60 - 59kWh",
     "segment": "C-SUV",
     "bodyType": "SUV",
     "drivetrain": "RWD",
-    "heroImage": "https://lpwebsite-prod-s3cdn.leapmotor-international.com/public/en-cms/1754657048435Photo1_desktop.png?w=400&h=300&fit=crop&crop=center"
+    "heroImage": "/cars/skoda-elroq-60-59kwh.webp"
+  },
+  {
+    "id": "skoda-elroq-85-77kwh",
+    "brand": "Skoda",
+    "model": "Elroq",
+    "variant": "85 - 77kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/skoda-elroq-85-77kwh.webp"
+  },
+  {
+    "id": "skoda-enyaq-60-59kwh",
+    "brand": "Skoda",
+    "model": "Enyaq",
+    "variant": "60 59kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/skoda-enyaq-60-59kwh.webp"
+  },
+  {
+    "id": "skoda-enyaq-85-77kwh",
+    "brand": "Skoda",
+    "model": "Enyaq",
+    "variant": "85 - 77kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/skoda-enyaq-85-77kwh.webp"
+  },
+  {
+    "id": "smart-1-66kwh",
+    "brand": "smart",
+    "model": "#1",
+    "variant": "66kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/smart-1-66kwh.webp"
+  },
+  {
+    "id": "smart-3-66kwh",
+    "brand": "smart",
+    "model": "#3",
+    "variant": "66kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV Coupe",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/smart-3-66kwh.webp"
+  },
+  {
+    "id": "tesla-model-3-long-range-78kwh",
+    "brand": "Tesla",
+    "model": "Model 3",
+    "variant": "Long Range 78kwh",
+    "segment": "D-Sedan",
+    "bodyType": "Sedan",
+    "drivetrain": "AWD",
+    "heroImage": "/cars/tesla-model-3-long-range-78kwh.webp"
+  },
+  {
+    "id": "tesla-model-3-rwd-62kwh",
+    "brand": "Tesla",
+    "model": "Model 3",
+    "variant": "RWD",
+    "segment": "D-Sedan",
+    "bodyType": "Sedan",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/tesla-model-3-rwd-62kwh.webp"
+  },
+  {
+    "id": "tesla-model-y-long-range",
+    "brand": "Tesla",
+    "model": "Model Y",
+    "variant": "Long Range",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "AWD",
+    "heroImage": "/cars/tesla-model-y-long-range.webp"
+  },
+  {
+    "id": "tesla-model-y-rwd",
+    "brand": "Tesla",
+    "model": "Model Y",
+    "variant": "RWD",
+    "segment": "D-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/tesla-model-y-rwd.webp"
+  },
+  {
+    "id": "vw-id3-pro",
+    "brand": "Volkswagen",
+    "model": "ID.3",
+    "variant": "Pro",
+    "segment": "C-Hatch",
+    "bodyType": "Hatchback",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/vw-id3-pro.webp"
+  },
+  {
+    "id": "vw-id4-pro",
+    "brand": "Volkswagen",
+    "model": "ID.4",
+    "variant": "Pro",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/vw-id4-pro.webp"
+  },
+  {
+    "id": "vw-id7-pro-s",
+    "brand": "Volkswagen",
+    "model": "ID.7",
+    "variant": "Pro S",
+    "segment": "E-Liftback",
+    "bodyType": "Liftback",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/vw-id7-pro-s.webp"
+  },
+  {
+    "id": "volvo-ex30-51kwh",
+    "brand": "Volvo",
+    "model": "EX30",
+    "variant": "51kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/volvo-ex30-51kwh.webp"
+  },
+  {
+    "id": "volvo-ex30-69kwh",
+    "brand": "Volvo",
+    "model": "EX30",
+    "variant": "69kWh",
+    "segment": "B-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/volvo-ex30-69kwh.webp"
+  },
+  {
+    "id": "volvo-ex40-82kwh",
+    "brand": "Volvo",
+    "model": "EX40",
+    "variant": "82kWh",
+    "segment": "C-SUV",
+    "bodyType": "SUV",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/volvo-ex40-82kwh.webp"
+  },
+  {
+    "id": "xpeng-g6-long-range-rwd",
+    "brand": "XPeng",
+    "model": "G6",
+    "variant": "Long Range RWD",
+    "segment": "D-SUV",
+    "bodyType": "SUV Coupe",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/xpeng-g6-long-range-rwd.webp"
+  },
+  {
+    "id": "xpeng-p7-long-range-rwd",
+    "brand": "XPeng",
+    "model": "P7",
+    "variant": "Long Range RWD",
+    "segment": "D-Sedan",
+    "bodyType": "Sedan",
+    "drivetrain": "RWD",
+    "heroImage": "/cars/xpeng-p7-long-range-rwd.webp"
   }
 ]

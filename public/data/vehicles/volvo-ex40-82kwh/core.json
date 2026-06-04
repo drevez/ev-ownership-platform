@@ -1,0 +1,39 @@
+{
+  "id": "volvo-ex40-82kwh",
+
+  "brand": "Volvo",
+  "model": "EX40",
+  "variant": "82kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/volvo-ex40-82kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Volvo EX40 82kWh",
+      "searchAliases": [
+        "volvo ex40",
+        "ex40",
+        "volvo ex40 extended range",
+        "volvo ex40 82kwh",
+        "ex40 single motor extended range"
+      ]
+    },
+
+    "es": {
+      "displayName": "Volvo EX40 82kWh",
+      "searchAliases": [
+        "volvo ex40 extended range",
+        "ex40 82kwh"
+      ]
+    }
+  }
+}

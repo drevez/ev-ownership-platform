@@ -1,1 +1,12 @@
-{}
+{
+  "dcMaxChargeKW": 48,
+  "acMaxChargeKW": 6.6,
+
+  "charge10to80Min": 36,
+  "chargePer10MinKm": 50,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "leapmotor-t03"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "jaecoo-5-ev-59kwh",
+
+  "brand": "Jaecoo",
+  "model": "5 EV",
+  "variant": "59kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/jaecoo-5-ev-59kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Jaecoo 5 EV 59kWh",
+      "searchAliases": [
+        "jaecoo 5",
+        "jaecoo j5",
+        "jaecoo 5 ev",
+        "jaecoo electric",
+        "jaecoo 59kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "Jaecoo 5 EV 59kWh",
+      "searchAliases": [
+        "jaecoo j5",
+        "jaecoo electrico"
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "mg-mg4-urban-comfort-54kwh",
+
+  "brand": "MG",
+  "model": "MG4 Urban",
+  "variant": "54 kWh Comfort",
+
+  "modelYear": 2026,
+
+  "segment": "C-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/mg-mg4-urban-comfort-54kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "MG4 Urban 54 kWh Comfort",
+      "searchAliases": [
+        "mg4 urban",
+        "mg4 54 comfort",
+        "mg4 54 kwh comfort",
+        "mg4 comfort"
+      ]
+    },
+
+    "es": {
+      "displayName": "MG4 Urban 54 kWh Comfort",
+      "searchAliases": [
+        "mg4 urban 54 kwh comfort",
+        "mg4 54 comfort"
+      ]
+    }
+  }
+}

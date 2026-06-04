@@ -1,0 +1,39 @@
+{
+  "id": "vw-id4-pro",
+
+  "brand": "Volkswagen",
+  "model": "ID.4",
+  "variant": "Pro",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/vw-id4-pro.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Volkswagen ID.4 Pro",
+      "searchAliases": [
+        "vw id4",
+        "volkswagen id4",
+        "id4",
+        "id4 pro",
+        "vw id4 pro"
+      ]
+    },
+
+    "es": {
+      "displayName": "Volkswagen ID.4 Pro",
+      "searchAliases": [
+        "volkswagen id4 pro",
+        "id4 pro"
+      ]
+    }
+  }
+}

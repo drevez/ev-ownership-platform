@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 70,
+  "acMaxChargeKW": 7.4,
+
+  "charge10to80Min": 32,
+  "chargePer10MinKm": 60,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "citroen-e-c3-30kwh-you"
+}

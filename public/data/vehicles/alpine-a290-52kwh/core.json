@@ -1,0 +1,39 @@
+{
+  "id": "alpine-a290-52kwh",
+
+  "brand": "Alpine",
+  "model": "A290",
+  "variant": "52kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/alpine-a290-52kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Alpine A290 52kWh",
+      "searchAliases": [
+        "alpine a290",
+        "a290",
+        "alpine eletrico",
+        "alpine a290 gt",
+        "a290 180cv"
+      ]
+    },
+
+    "es": {
+      "displayName": "Alpine A290 52kWh",
+      "searchAliases": [
+        "alpine a290",
+        "a290 electrico"
+      ]
+    }
+  }
+}

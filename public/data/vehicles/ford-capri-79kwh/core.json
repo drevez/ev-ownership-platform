@@ -1,0 +1,38 @@
+{
+  "id": "ford-capri-79kwh",
+
+  "brand": "Ford",
+  "model": "Capri",
+  "variant": "79kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV Coupe",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/ford-capri-79kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Ford Capri 79kWh",
+      "searchAliases": [
+        "ford capri",
+        "capri",
+        "capri 79kwh",
+        "ford capri 79"
+      ]
+    },
+
+    "es": {
+      "displayName": "Ford Capri 79kWh",
+      "searchAliases": [
+        "ford capri 79kwh",
+        "capri 79"
+      ]
+    }
+  }
+}

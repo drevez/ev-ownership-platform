@@ -1,0 +1,38 @@
+{
+  "id": "mg-zs-ev-72kwh",
+
+  "brand": "MG",
+  "model": "ZS EV",
+  "variant": "72kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/mg-zs-ev-72kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "MG ZS EV 72kWh",
+      "searchAliases": [
+        "mg zs ev",
+        "zs ev",
+        "mg zs 72kwh",
+        "zs ev long range"
+      ]
+    },
+
+    "es": {
+      "displayName": "MG ZS EV 72kWh",
+      "searchAliases": [
+        "mg zs ev 72kwh",
+        "zs ev long range"
+      ]
+    }
+  }
+}

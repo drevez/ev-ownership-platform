@@ -1,0 +1,8 @@
+{
+  "wltpRangeKm": 625,
+  "estimatedRealRangeKm": 510,
+  "motorwayRangeKm": 390,
+
+  "realWorldConsumptionWhKm": 171,
+  "realMotorwayConsumptionWhKm": 223
+}

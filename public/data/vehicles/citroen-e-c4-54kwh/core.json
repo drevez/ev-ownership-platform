@@ -1,0 +1,39 @@
+{
+  "id": "citroen-e-c4-54kwh",
+
+  "brand": "Citroen",
+  "model": "e-C4",
+  "variant": "54kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/citroen-e-c4-54kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Citroën ë-C4 54kWh",
+      "searchAliases": [
+        "citroen ec4",
+        "e-c4",
+        "ec4 54kwh",
+        "citroen eletrico",
+        "ec4 extended range"
+      ]
+    },
+
+    "es": {
+      "displayName": "Citroën ë-C4 54kWh",
+      "searchAliases": [
+        "citroen ec4",
+        "ec4 electrico"
+      ]
+    }
+  }
+}

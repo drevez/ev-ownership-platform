@@ -1,61 +1,66 @@
-interface ComfortData {
-  heatPumpAvailable?: boolean
-  vehicleToLoad?: boolean
-  vehicleToGrid?: boolean
-  panoramicRoof?: boolean
-  softwareExperienceLevel?: number
-  maintenanceLevel?: number
-  insuranceLevel?: number
-}
+'use client'
+
+import { useTranslations } from '@/hooks/useTranslations'
+import type { VehicleComfort } from '@/lib/loadVehicle'
 
 interface ComfortAndFeaturesProps {
-  comfort?: ComfortData
+  comfort?: VehicleComfort
 }
 
-export function ComfortAndFeaturesCard({ comfort = {} }: ComfortAndFeaturesProps) {
+export function ComfortAndFeaturesCard({
+  comfort = {},
+}: ComfortAndFeaturesProps) {
+
+  const t = useTranslations()
+
   const features = [
     {
-      label: 'Heat Pump',
+      label: t.comfortAndFeatures.heatPump,
       value: comfort.heatPumpAvailable,
-      icon: '🌡️'
+      icon: '🌡️',
     },
     {
-      label: 'Vehicle to Load',
+      label: t.comfortAndFeatures.vehicleToLoad,
       value: comfort.vehicleToLoad,
-      icon: '🔌'
+      icon: '🔌',
     },
     {
-      label: 'Vehicle to Grid',
+      label: t.comfortAndFeatures.vehicleToGrid,
       value: comfort.vehicleToGrid,
-      icon: '⚡'
+      icon: '⚡',
     },
     {
-      label: 'Panoramic Roof',
+      label: t.comfortAndFeatures.panoramicRoof,
       value: comfort.panoramicRoof,
-      icon: '🪟'
-    }
+      icon: '🪟',
+    },
   ]
 
   const ratings = [
     {
-      label: 'Software Experience',
+      label: t.comfortAndFeatures.softwareExperience,
       level: comfort.softwareExperienceLevel,
-      icon: '💻'
+      icon: '💻',
     },
     {
-      label: 'Maintenance',
+      label: t.comfortAndFeatures.maintenance,
       level: comfort.maintenanceLevel,
-      icon: '🔧'
+      icon: '🔧',
     },
     {
-      label: 'Insurance',
+      label: t.comfortAndFeatures.insurance,
       level: comfort.insuranceLevel,
-      icon: '📋'
-    }
+      icon: '📋',
+    },
   ]
 
-  const hasFeatures = features.some(f => f.value !== undefined)
-  const hasRatings = ratings.some(r => r.level !== undefined)
+  const hasFeatures = features.some(
+    (f) => f.value !== undefined
+  )
+
+  const hasRatings = ratings.some(
+    (r) => r.level !== undefined
+  )
 
   if (!hasFeatures && !hasRatings) {
     return null
@@ -63,14 +68,26 @@ export function ComfortAndFeaturesCard({ comfort = {} }: ComfortAndFeaturesProps
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-bold text-slate-900 mb-6">Comfort & Features</h2>
+
+      <h2 className="text-2xl font-bold text-slate-900 mb-6">
+        {t.comfortAndFeatures.title}
+      </h2>
 
       {hasFeatures && (
         <div>
-          <h3 className="font-semibold text-slate-900 mb-3">Features</h3>
+
+          <h3 className="font-semibold text-slate-900 mb-3">
+            {t.comfortAndFeatures.features}
+          </h3>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+
             {features.map((feature) => {
-              if (feature.value === undefined) return null
+
+              if (feature.value === undefined) {
+                return null
+              }
+
               return (
                 <div
                   key={feature.label}
@@ -80,17 +97,26 @@ export function ComfortAndFeaturesCard({ comfort = {} }: ComfortAndFeaturesProps
                       : 'bg-slate-50 border-slate-200'
                   }`}
                 >
-                  <span className="text-xl">{feature.icon}</span>
+
+                  <span className="text-xl">
+                    {feature.icon}
+                  </span>
+
                   <span
                     className={`font-medium ${
-                      feature.value ? 'text-green-900' : 'text-slate-600'
+                      feature.value
+                        ? 'text-green-900'
+                        : 'text-slate-600'
                     }`}
                   >
                     {feature.label}
                   </span>
+
                   <span
                     className={`ml-auto text-sm font-bold ${
-                      feature.value ? 'text-green-600' : 'text-slate-400'
+                      feature.value
+                        ? 'text-green-600'
+                        : 'text-slate-400'
                     }`}
                   >
                     {feature.value ? '✓' : '✗'}
@@ -104,27 +130,47 @@ export function ComfortAndFeaturesCard({ comfort = {} }: ComfortAndFeaturesProps
 
       {hasRatings && (
         <div>
-          <h3 className="font-semibold text-slate-900 mb-3">Ratings</h3>
+
+          <h3 className="font-semibold text-slate-900 mb-3">
+            {t.comfortAndFeatures.ratings}
+          </h3>
+
           <div className="space-y-3">
+
             {ratings.map((rating) => {
-              if (rating.level === undefined) return null
+
+              if (rating.level === undefined) {
+                return null
+              }
+
               return (
                 <div key={rating.label}>
+
                   <div className="flex items-center justify-between mb-1">
+
                     <div className="flex items-center gap-2">
-                      <span className="text-lg">{rating.icon}</span>
+
+                      <span className="text-lg">
+                        {rating.icon}
+                      </span>
+
                       <span className="font-medium text-slate-900">
                         {rating.label}
                       </span>
                     </div>
+
                     <span className="text-sm font-bold text-slate-600">
                       {rating.level}/5
                     </span>
                   </div>
+
                   <div className="w-full bg-slate-200 rounded-full h-2">
+
                     <div
                       className="bg-blue-500 h-2 rounded-full"
-                      style={{ width: `${(rating.level / 5) * 100}%` }}
+                      style={{
+                        width: `${(rating.level / 5) * 100}%`,
+                      }}
                     />
                   </div>
                 </div>

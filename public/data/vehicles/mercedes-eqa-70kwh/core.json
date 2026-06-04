@@ -1,0 +1,39 @@
+{
+  "id": "mercedes-eqa-70kwh",
+
+  "brand": "Mercedes-Benz",
+  "model": "EQA",
+  "variant": "70kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/mercedes-eqa-70kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Mercedes-Benz EQA 70kWh",
+      "searchAliases": [
+        "mercedes eqa",
+        "eqa",
+        "eqa 250+",
+        "eqa 70kwh",
+        "mercedes eqa 250 plus"
+      ]
+    },
+
+    "es": {
+      "displayName": "Mercedes-Benz EQA 70kWh",
+      "searchAliases": [
+        "mercedes eqa 70kwh",
+        "eqa 250 plus"
+      ]
+    }
+  }
+}

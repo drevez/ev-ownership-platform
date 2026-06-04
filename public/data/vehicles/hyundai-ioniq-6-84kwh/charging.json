@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 258,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 18,
+  "chargePer10MinKm": 210,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "hyundai-ioniq6-84kwh"
+}

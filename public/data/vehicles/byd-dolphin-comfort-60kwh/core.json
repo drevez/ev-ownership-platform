@@ -1,0 +1,39 @@
+{
+  "id": "byd-dolphin-comfort-60kwh",
+
+  "brand": "BYD",
+  "model": "Dolphin",
+  "variant": "Comfort 60 kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/byd-dolphin-comfort-60kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "BYD Dolphin Comfort 60 kWh",
+      "searchAliases": [
+        "byd dolphin",
+        "dolphin",
+        "dolphin comfort",
+        "byd dolphin comfort",
+        "dolphin 60kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "BYD Dolphin Comfort 60 kWh",
+      "searchAliases": [
+        "byd dolphin comfort",
+        "dolphin comfort 60kwh"
+      ]
+    }
+  }
+}

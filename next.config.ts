@@ -15,7 +15,19 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.hyundai.pt'
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'lpwebsite-prod-s3cdn.leapmotor-international.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'digitalassets.tesla.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.razaoautomovel.com',
+      },
     ]
   }
 };

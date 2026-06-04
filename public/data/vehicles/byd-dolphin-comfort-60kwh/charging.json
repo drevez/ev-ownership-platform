@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 88,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 41,
+  "chargePer10MinKm": 75,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "byd-dolphin-comfort-60kwh"
+}

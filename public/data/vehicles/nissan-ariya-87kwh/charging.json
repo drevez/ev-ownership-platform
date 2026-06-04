@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 130,
+  "acMaxChargeKW": 22,
+
+  "charge10to80Min": 35,
+  "chargePer10MinKm": 130,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "nissan-ariya-87kwh"
+}

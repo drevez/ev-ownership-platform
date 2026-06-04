@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 100,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 33,
+  "chargePer10MinKm": 120,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "citroen-e-c3-aircross-54kwh"
+}

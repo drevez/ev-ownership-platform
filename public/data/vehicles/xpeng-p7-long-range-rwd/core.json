@@ -1,0 +1,39 @@
+{
+  "id": "xpeng-p7-long-range-rwd",
+
+  "brand": "XPeng",
+  "model": "P7",
+  "variant": "Long Range RWD",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "RWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/xpeng-p7-long-range-rwd.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "XPeng P7 Long Range RWD",
+      "searchAliases": [
+        "xpeng p7",
+        "p7",
+        "p7 long range",
+        "xpeng p7 long range",
+        "xpeng p7 rwd"
+      ]
+    },
+
+    "es": {
+      "displayName": "XPeng P7 Long Range RWD",
+      "searchAliases": [
+        "xpeng p7 long range",
+        "p7 long range rwd"
+      ]
+    }
+  }
+}

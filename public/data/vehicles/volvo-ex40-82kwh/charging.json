@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 205,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 28,
+  "chargePer10MinKm": 150,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "volvo-ex40-82kwh"
+}

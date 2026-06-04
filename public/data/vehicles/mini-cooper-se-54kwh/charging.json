@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 95,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 30,
+  "chargePer10MinKm": 105,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "mini-cooper-se-54kwh"
+}

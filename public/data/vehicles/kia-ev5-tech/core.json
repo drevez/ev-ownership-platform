@@ -1,0 +1,34 @@
+{
+  "id": "kia-ev5-tech",
+  "brand": "Kia",
+  "model": "EV5",
+  "variant": "Tech",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/kia-ev5.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Kia EV5 Tech",
+      "searchAliases": [
+        "kia ev5 tech",
+        "ev5 tech",
+        "kia suv ev5 tech"
+      ]
+    },
+    "es": {
+      "displayName": "Kia EV5 Tech",
+      "searchAliases": [
+        "ev5 tech"
+      ]
+    }
+  }
+}

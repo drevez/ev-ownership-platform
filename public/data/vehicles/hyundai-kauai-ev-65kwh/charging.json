@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 102,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 43,
+  "chargePer10MinKm": 105,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": true,
+
+  "chargingCurveId": "hyundai-kauai-ev-65kwh"
+}

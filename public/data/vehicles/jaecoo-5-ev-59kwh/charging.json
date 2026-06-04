@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 130,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 33,
+  "chargePer10MinKm": 120,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "jaecoo-5-ev-59kwh"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "kia-ev3-81kwh",
+
+  "brand": "Kia",
+  "model": "EV3",
+  "variant": "81kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/kia-ev3-81kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Kia EV3 81kWh",
+      "searchAliases": [
+        "kia ev3",
+        "ev3",
+        "ev3 81kwh",
+        "kia ev3 81"
+      ]
+    },
+
+    "es": {
+      "displayName": "Kia EV3 81kWh",
+      "searchAliases": [
+        "kia ev3 81kwh",
+        "ev3 81"
+      ]
+    }
+  }
+}

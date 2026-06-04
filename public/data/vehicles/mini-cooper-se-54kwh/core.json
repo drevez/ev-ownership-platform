@@ -1,0 +1,39 @@
+{
+  "id": "mini-cooper-se-54kwh",
+
+  "brand": "MINI",
+  "model": "Cooper",
+  "variant": "SE 54kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 3,
+  "seats": 4,
+
+  "image": "/cars/mini-cooper-se-54kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "MINI Cooper SE 54kWh",
+      "searchAliases": [
+        "mini cooper se",
+        "mini electric",
+        "mini cooper electric",
+        "mini cooper se 54kwh",
+        "mini j01"
+      ]
+    },
+
+    "es": {
+      "displayName": "MINI Cooper SE 54kWh",
+      "searchAliases": [
+        "mini cooper se 54kwh",
+        "mini electric"
+      ]
+    }
+  }
+}

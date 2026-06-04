@@ -1,0 +1,39 @@
+{
+  "id": "vw-id7-pro-s",
+
+  "brand": "Volkswagen",
+  "model": "ID.7",
+  "variant": "Pro S",
+
+  "modelYear": 2026,
+
+  "segment": "E-Liftback",
+  "bodyType": "Liftback",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/vw-id7-pro-s.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Volkswagen ID.7 Pro S",
+      "searchAliases": [
+        "vw id7",
+        "volkswagen id7",
+        "id7",
+        "id7 pro s",
+        "vw id7 pro s"
+      ]
+    },
+
+    "es": {
+      "displayName": "Volkswagen ID.7 Pro S",
+      "searchAliases": [
+        "volkswagen id7 pro s",
+        "id7 pro s"
+      ]
+    }
+  }
+}

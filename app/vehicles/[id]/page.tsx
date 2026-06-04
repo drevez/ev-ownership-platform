@@ -1,6 +1,10 @@
 import { notFound } from 'next/navigation'
-import { loadVehicle, getVehicleParams } from '@/logic/loadVehicle'
+import { loadVehicle, getVehicleParams } from '@/lib/loadVehicle'
+import { loadModel, toModelSlug } from '@/lib/models'
 import { VehiclePage as VehicleDetailsPage } from '@/components/vehicle/VehiclePage'
+import { getTranslations } from '@/lib/getTranslations'
+import { getRequestLanguage } from '@/lib/serverLocale'
+import { getVehicleDisplayName } from '@/lib/normalizeVehicle'
 
 interface VehiclePageProps {
   params: Promise<{ id: string }>
@@ -14,29 +18,42 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: VehiclePageProps) {
   const resolvedParams = await params
   const vehicle = await loadVehicle(resolvedParams.id)
+  const locale = await getRequestLanguage()
+  const t = getTranslations(locale)
 
   if (!vehicle) {
     return {
-      title: 'Vehicle Not Found'
+      title: t.vehicle.notFoundTitle
     }
   }
 
   const displayName =
-    vehicle.localized?.pt?.displayName || vehicle.model || 'Vehicle'
+    getVehicleDisplayName(vehicle, locale) || vehicle.model || t.vehicle.fallbackName
 
   return {
-    title: `${displayName} | EV Platform`,
-    description: `Detailed specifications for the ${displayName}`
+    title: `${displayName} | ${t.vehicle.evPlatform}`,
+    description: t.vehicle.description.replace('{vehicle}', displayName)
   }
 }
 
 export default async function VehiclePage({ params }: VehiclePageProps) {
   const resolvedParams = await params
+  const locale = await getRequestLanguage()
   const vehicle = await loadVehicle(resolvedParams.id)
 
   if (!vehicle) {
     notFound()
   }
 
-  return <VehicleDetailsPage vehicle={vehicle} />
+  const modelSlug = toModelSlug(vehicle.brand, vehicle.model)
+  const model = await loadModel(modelSlug)
+
+  return (
+    <VehicleDetailsPage
+      vehicle={vehicle}
+      modelSlug={modelSlug}
+      variantCount={model?.variants.length ?? 1}
+      locale={locale}
+    />
+  )
 }

@@ -1,0 +1,22 @@
+{
+  "pt": {
+    "currency": "EUR",
+
+    "consumerPrice": {
+      "min": 36900,
+      "max": 42900
+    },
+
+    "businessPriceExVat": {
+      "min": 30000,
+      "max": 34878
+    },
+
+    "usedPrice": {
+      "min": 30000,
+      "max": 39000
+    },
+
+    "updatedAt": "2026-05"
+  }
+}

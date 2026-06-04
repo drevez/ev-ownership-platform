@@ -1,0 +1,37 @@
+{
+  "id": "hyundai-ioniq-6-63kwh",
+
+  "brand": "Hyundai",
+  "model": "Ioniq 6",
+  "variant": "63kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "RWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/hyundai-ioniq-6-63kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Hyundai Ioniq 6 63kWh",
+      "searchAliases": [
+        "ioniq 6",
+        "hyundai ioniq 6",
+        "ioniq6",
+        "ioniq 6 63kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "Hyundai Ioniq 6 63kWh",
+      "searchAliases": [
+        "ioniq 6 63kwh"
+      ]
+    }
+  }
+}

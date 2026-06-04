@@ -1,0 +1,34 @@
+{
+  "id": "audi-q4-etron-45",
+  "brand": "Audi",
+  "model": "Q4 e-tron",
+  "variant": "45",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/audi-q4-etron-45.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Audi Q4 e-tron",
+      "searchAliases": [
+        "q4 etron 45",
+        "audi q4 eletrico 45",
+        "q4 e tron 45"
+      ]
+    },
+    "es": {
+      "displayName": "Audi Q4 e-tron 45",
+      "searchAliases": [
+        "audi q4 etron 45"
+      ]
+    }
+  }
+}

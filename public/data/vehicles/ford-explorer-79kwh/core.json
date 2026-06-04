@@ -1,0 +1,38 @@
+{
+  "id": "ford-explorer-79kwh",
+
+  "brand": "Ford",
+  "model": "Explorer",
+  "variant": "79kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/ford-explorer-79kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Ford Explorer 79kWh",
+      "searchAliases": [
+        "ford explorer",
+        "explorer",
+        "explorer 79kwh",
+        "ford explorer 79"
+      ]
+    },
+
+    "es": {
+      "displayName": "Ford Explorer 79kWh",
+      "searchAliases": [
+        "ford explorer 79kwh",
+        "explorer 79"
+      ]
+    }
+  }
+}

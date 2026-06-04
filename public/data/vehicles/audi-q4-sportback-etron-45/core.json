@@ -1,0 +1,38 @@
+{
+  "id": "audi-q4-sportback-etron-45",
+
+  "brand": "Audi",
+  "model": "Q4 Sportback e-tron",
+  "variant": "45",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "Coupe-SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/audi-q4-sportback-etron-45.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Audi Q4 Sportback e-tron 45",
+      "searchAliases": [
+        "audi q4 sportback",
+        "q4 sportback",
+        "audi q4 sportback 45",
+        "sportback etron"
+      ]
+    },
+
+    "es": {
+      "displayName": "Audi Q4 Sportback e-tron 45",
+      "searchAliases": [
+        "audi q4 sportback",
+        "q4 sportback"
+      ]
+    }
+  }
+}

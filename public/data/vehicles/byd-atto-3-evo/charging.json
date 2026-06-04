@@ -1,1 +1,12 @@
-{}
+{
+  "dcMaxChargeKW": 220,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 25,
+  "chargePer10MinKm": 200,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "byd-atto-3-evo"
+}

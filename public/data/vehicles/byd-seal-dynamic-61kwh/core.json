@@ -1,0 +1,39 @@
+{
+  "id": "byd-seal-dynamic-61kwh",
+
+  "brand": "BYD",
+  "model": "Seal",
+  "variant": "Dynamic 61 kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-Sedan",
+  "bodyType": "Sedan",
+  "drivetrain": "RWD",
+
+  "doors": 4,
+  "seats": 5,
+
+  "image": "/cars/byd-seal-dynamic-61kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "BYD Seal Dynamic 61 kWh",
+      "searchAliases": [
+        "byd seal",
+        "seal",
+        "seal dynamic",
+        "byd seal dynamic",
+        "seal 61kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "BYD Seal Dynamic 61 kWh",
+      "searchAliases": [
+        "byd seal dynamic",
+        "seal dynamic 61kwh"
+      ]
+    }
+  }
+}

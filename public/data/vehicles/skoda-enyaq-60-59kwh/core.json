@@ -1,0 +1,39 @@
+{
+  "id": "skoda-enyaq-60-59kwh",
+
+  "brand": "Skoda",
+  "model": "Enyaq",
+  "variant": "60 59kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/skoda-enyaq-60-59kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Skoda Enyaq 60 - 59kWh",
+      "searchAliases": [
+        "skoda enyaq",
+        "enyaq 60",
+        "skoda enyaq 60",
+        "skoda enyaq 59kwh",
+        "enyaq 204cv"
+      ]
+    },
+
+    "es": {
+      "displayName": "Skoda Enyaq 60 - 59kWh",
+      "searchAliases": [
+        "skoda enyaq 60",
+        "enyaq 59kwh"
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "citroen-e-c3-30kwh-you",
+
+  "brand": "Citroen",
+  "model": "e-C3",
+  "variant": "30 kWh You",
+
+  "modelYear": 2026,
+
+  "segment": "B-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/citroen-e-c3-30kwh-you.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Citroen e-C3 Urban You",
+      "searchAliases": [
+        "citroen ec3",
+        "ec3",
+        "e-c3",
+        "ë-c3",
+        "ec3 you",
+        "ec3 30kwh",
+        "citroen ec3 base"
+      ]
+    },
+
+    "es": {
+      "displayName": "Citroen e-C3 Urban You",
+      "searchAliases": [
+        "citroen ec3 you",
+        "ec3 30kwh you"
+      ]
+    }
+  }
+}

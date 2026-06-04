@@ -1,0 +1,39 @@
+{
+  "id": "hyundai-ioniq-5-63kwh",
+
+  "brand": "Hyundai",
+  "model": "Ioniq 5",
+  "variant": "Standard Range RWD 63 kWh",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/hyundai-ioniq-5-63kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Hyundai Ioniq 5 63kWh",
+      "searchAliases": [
+        "ioniq 5",
+        "hyundai ioniq 5",
+        "ioniq5",
+        "ioniq 5 standard range",
+        "ioniq 5 rwd"
+      ]
+    },
+
+    "es": {
+      "displayName": "Hyundai Ioniq 5 Standard Range RWD",
+      "searchAliases": [
+        "ioniq 5 standard range",
+        "ioniq 5 rwd"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 150,
+  "acMaxChargeKW": 22,
+
+  "charge10to80Min": 30,
+  "chargePer10MinKm": 145,
+
+  "plugAndChargeSupport": false,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "smart-3-66kwh"
+}

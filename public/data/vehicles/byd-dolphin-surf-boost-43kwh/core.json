@@ -1,0 +1,39 @@
+{
+  "id": "byd-dolphin-surf-boost-43kwh",
+
+  "brand": "BYD",
+  "model": "Dolphin Surf",
+  "variant": "Boost 43 kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-Hatch",
+  "bodyType": "Hatchback",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/byd-dolphin-surf-boost-43kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "BYD Dolphin Surf Boost 43 kWh",
+      "searchAliases": [
+        "byd dolphin surf",
+        "dolphin surf",
+        "dolphin surf boost",
+        "byd surf",
+        "surf 43kwh"
+      ]
+    },
+
+    "es": {
+      "displayName": "BYD Dolphin Surf Boost 43 kWh",
+      "searchAliases": [
+        "byd dolphin surf boost",
+        "surf boost 43kwh"
+      ]
+    }
+  }
+}

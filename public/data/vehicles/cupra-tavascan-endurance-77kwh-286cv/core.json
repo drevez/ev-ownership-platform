@@ -1,0 +1,40 @@
+{
+  "id": "cupra-tavascan-endurance-77kwh-286cv",
+
+  "brand": "Cupra",
+  "model": "Tavascan",
+  "variant": "Endurance 77kWh - 286cv",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV Coupe",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/cupra-tavascan-endurance-77kwh-286cv.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Cupra Tavascan Endurance 77kWh - 286cv",
+      "searchAliases": [
+        "cupra tavascan",
+        "tavascan",
+        "tavascan endurance",
+        "tavascan 77kwh",
+        "tavascan 286cv"
+      ]
+    },
+
+    "es": {
+      "displayName": "Cupra Tavascan Endurance 77kWh - 286cv",
+      "searchAliases": [
+        "cupra tavascan endurance",
+        "tavascan 77kwh",
+        "tavascan 286cv"
+      ]
+    }
+  }
+}

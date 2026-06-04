@@ -1,0 +1,39 @@
+{
+  "id": "nissan-leaf-52kwh",
+
+  "brand": "Nissan",
+  "model": "Leaf",
+  "variant": "52kWh",
+
+  "modelYear": 2026,
+
+  "segment": "C-Crossover",
+  "bodyType": "Crossover",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/nissan-leaf-52kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Nissan Leaf 52kWh",
+      "searchAliases": [
+        "nissan leaf",
+        "leaf 52",
+        "leaf 52kwh",
+        "novo nissan leaf",
+        "leaf engage"
+      ]
+    },
+
+    "es": {
+      "displayName": "Nissan Leaf 52kWh",
+      "searchAliases": [
+        "nissan leaf",
+        "leaf 52kwh"
+      ]
+    }
+  }
+}

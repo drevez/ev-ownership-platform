@@ -1,0 +1,39 @@
+{
+  "id": "xpeng-g6-long-range-rwd",
+
+  "brand": "XPeng",
+  "model": "G6",
+  "variant": "Long Range RWD",
+
+  "modelYear": 2026,
+
+  "segment": "D-SUV",
+  "bodyType": "SUV Coupe",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/xpeng-g6-long-range-rwd.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "XPeng G6 Long Range RWD",
+      "searchAliases": [
+        "xpeng g6",
+        "g6",
+        "g6 long range",
+        "xpeng g6 rwd",
+        "xpeng suv"
+      ]
+    },
+
+    "es": {
+      "displayName": "XPeng G6 Long Range RWD",
+      "searchAliases": [
+        "xpeng g6 long range",
+        "g6 rwd"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dcMaxChargeKW": 130,
+  "acMaxChargeKW": 11,
+
+  "charge10to80Min": 29,
+  "chargePer10MinKm": 105,
+
+  "plugAndChargeSupport": true,
+  "teslaSuperchargerAccess": false,
+
+  "chargingCurveId": "bmw-ix1-xdrive30"
+}

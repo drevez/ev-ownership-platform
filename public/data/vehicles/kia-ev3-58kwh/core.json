@@ -1,0 +1,38 @@
+{
+  "id": "kia-ev3-58kwh",
+
+  "brand": "Kia",
+  "model": "EV3",
+  "variant": "58kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "FWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/kia-ev3-58kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "Kia EV3 58kWh",
+      "searchAliases": [
+        "kia ev3",
+        "ev3",
+        "ev3 58kwh",
+        "kia ev3 58"
+      ]
+    },
+
+    "es": {
+      "displayName": "Kia EV3 58kWh",
+      "searchAliases": [
+        "kia ev3 58kwh",
+        "ev3 58"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "smart-1-66kwh",
+
+  "brand": "smart",
+  "model": "#1",
+  "variant": "66kWh",
+
+  "modelYear": 2026,
+
+  "segment": "B-SUV",
+  "bodyType": "SUV",
+  "drivetrain": "RWD",
+
+  "doors": 5,
+  "seats": 5,
+
+  "image": "/cars/smart-1-66kwh.webp",
+
+  "localized": {
+    "pt": {
+      "displayName": "smart #1 66kWh",
+      "searchAliases": [
+        "smart #1",
+        "smart 1",
+        "smart hashtag 1",
+        "smart #1 66kwh",
+        "smart one"
+      ]
+    },
+
+    "es": {
+      "displayName": "smart #1 66kWh",
+      "searchAliases": [
+        "smart #1 66kwh",
+        "smart one"
+      ]
+    }
+  }
+}
