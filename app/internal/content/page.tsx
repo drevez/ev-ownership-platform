@@ -34,7 +34,7 @@ export default function InternalContentPage() {
               Vehicle data
             </Link>
             <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-              Internal route only. Not auth-protected yet.
+              Protected by server-side Basic Auth.
             </div>
           </div>
         </div>

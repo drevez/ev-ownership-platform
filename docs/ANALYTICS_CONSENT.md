@@ -1,0 +1,89 @@
+# Analytics And Consent
+
+MotorZero uses Google Tag Manager as its only tracking container and implements a lightweight first-party consent banner with Google Consent Mode v2.
+
+## Configuration
+
+Required environment variable:
+
+```env
+NEXT_PUBLIC_GTM_ID=GTM-MG49P4DS
+```
+
+Optional future server-side GTM endpoint:
+
+```env
+NEXT_PUBLIC_GTM_SCRIPT_URL=https://gtm.example.com/gtm.js
+```
+
+Set public environment variables in `.env.local` for development and in Vercel Project Settings for Preview and Production. Redeploy after changing `NEXT_PUBLIC_*` values.
+
+## Implementation
+
+```txt
+app/layout.tsx                         Consent defaults and saved-choice restoration
+components/GoogleTagManager.tsx       Central GTM loader
+components/CookieConsentBanner.tsx    Consent UI
+lib/cookieConsent.ts                  Storage, updates, expiry, and GA cookie removal
+components/SiteFooter.tsx             Cookie settings reopen button
+```
+
+The root layout sets these defaults before GTM loads:
+
+```txt
+analytics_storage = denied
+ad_storage = denied
+ad_user_data = denied
+ad_personalization = denied
+```
+
+This is Advanced Consent Mode: Google tags may send cookieless pings while consent is denied, but analytics or advertising cookies must not be written.
+
+## Consent Choices
+
+- Accept all grants analytics and marketing consent.
+- Reject all denies all four optional consent types.
+- Manage preferences lets analytics and marketing be controlled separately.
+- Every change pushes `event: "consent_update"` to `dataLayer`.
+- Choices are stored in `localStorage` under `motorzero_cookie_consent_v1`.
+- Choices expire after 180 days.
+- Incrementing `CONSENT_POLICY_VERSION` in `lib/cookieConsent.ts` requests consent again.
+- Withdrawing analytics consent attempts to remove first-party `_ga` and `_ga_*` cookies.
+
+## GTM And GA4
+
+Do not add a direct `gtag.js` or `GoogleAnalytics` component to the application. GA4 `G-050C1KBYPK` must be configured inside `GTM-MG49P4DS`.
+
+Use GTM Preview to verify:
+
+1. Consent Default
+2. Consent Initialization
+3. Initialization
+4. Container Loaded
+5. Consent Update after a visitor choice
+
+Also verify that the container contains only one Google tag/page-view configuration. Next.js client navigation must generate exactly one intended page view.
+
+## Local Testing
+
+1. Start the app with `npm run dev`.
+2. Open the displayed localhost port.
+3. Use a private window or clear `motorzero_cookie_consent_v1`.
+4. Confirm no `_ga` cookies exist before analytics consent.
+5. Accept analytics and confirm `_ga` cookies are created.
+6. Reopen Cookie settings, reject analytics, and confirm GA cookies are removed.
+7. Reload and confirm the saved choice persists.
+
+Tag Assistant can add attributes to the root HTML element. `suppressHydrationWarning` is limited to `<html>` so this external mutation does not create a development hydration overlay.
+
+## Legal Pages
+
+Localized public pages:
+
+```txt
+/pt/privacidade    /en/privacy    /es/privacidad
+/pt/cookies        /en/cookies    /es/cookies
+/pt/termos         /en/terms      /es/terminos
+```
+
+Legal copy currently lives directly in `locales/pt.ts`, `locales/en.ts`, and `locales/es.ts`. It is not yet exposed in `/internal/content`.

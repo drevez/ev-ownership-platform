@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from '@/hooks/useTranslations'
+import { useLocale } from '@/context/LocaleContext'
 import { VehicleDataForComparison } from '@/types/comparison'
 import { buildComparisonMetrics } from '@/lib/comparison'
 
@@ -13,8 +14,9 @@ export function ComparisonMetricsTable({
 }: ComparisonMetricsTableProps) {
 
   const t = useTranslations()
+  const { locale } = useLocale()
 
-  const metrics = buildComparisonMetrics(vehicles)
+  const metrics = buildComparisonMetrics(vehicles, locale)
 
   if (metrics.length === 0) {
     return null

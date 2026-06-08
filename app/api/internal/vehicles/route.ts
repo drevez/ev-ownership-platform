@@ -7,6 +7,10 @@ import {
   writeVehicleFiles,
   type VehicleFiles,
 } from '@/lib/internalVehicleFiles'
+import {
+  internalApiUnauthorizedResponse,
+  isInternalAuthorized,
+} from '@/lib/internalAuth'
 
 interface CreateVehicleBody {
   id?: string
@@ -14,6 +18,10 @@ interface CreateVehicleBody {
 }
 
 export async function POST(request: Request) {
+  if (!isInternalAuthorized(request)) {
+    return internalApiUnauthorizedResponse()
+  }
+
   try {
     const body = (await request.json()) as CreateVehicleBody
     const id = body.id

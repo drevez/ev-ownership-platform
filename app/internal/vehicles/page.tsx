@@ -234,7 +234,7 @@ export default async function InternalVehiclesPage({
           </div>
 
           <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-            This page is internal by route only. It is not auth-protected yet.
+            Protected by server-side Basic Auth. Keep the credentials private and configured in Vercel.
           </div>
         </div>
 

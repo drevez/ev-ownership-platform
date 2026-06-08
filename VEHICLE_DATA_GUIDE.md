@@ -28,10 +28,10 @@ The folder name, `core.id`, and registry `id` should match exactly.
 
 The vehicle files are being migrated toward a cleaner schema. Keep these two states separate:
 
-- **Current app support:** the app currently reads legacy `pricing.pt.consumerPrice`, plus the intermediate `pricing.pt.new`, `pricing.pt.used`, and `pricing.pt.importedUsed` shape used by normalization and the internal audit.
+- **Current app support:** the app reads the target `pricing.offers[]` structure, the intermediate `pricing.pt.new`, `pricing.pt.used`, and `pricing.pt.importedUsed` shape, and legacy `pricing.pt.consumerPrice` / `pricing.pt.usedPrice`.
 - **Target data format:** new or migrated pricing files should use the `pricing.offers[]` shape documented below.
 
-Before converting all vehicle files to `pricing.offers[]`, update these code paths so the app, validator, and internal dashboard all read the target schema:
+These code paths already understand the target schema and should stay in sync when pricing rules change:
 
 ```txt
 lib/loadVehicle.ts
@@ -41,7 +41,7 @@ scripts/validate-vehicles.mjs
 components/vehicle/PricingCard.tsx
 ```
 
-Until that migration is implemented, `pricing.offers[]` is the documented target format for future agents, not yet the only runtime format.
+Until all files are migrated, `pricing.offers[]` is the preferred format, not the only runtime format. The internal dashboard marks non-offers pricing as a migration task.
 
 ## Registry Entry
 
@@ -142,6 +142,18 @@ Rules:
 - Keep aliases lowercase unless the official name needs uppercase characters.
 - Do not invent localized variant names if the market uses the English trim name.
 
+## Internal Editing Workflow
+
+The app includes internal pages to reduce manual JSON editing:
+
+- `/internal/vehicles`: dataset health dashboard and vehicle JSON editor.
+- `/internal/vehicles/new`: create a vehicle folder in the modular structure.
+- `/internal/vehicles/{id}/edit`: edit the seven module files for an existing vehicle.
+
+These tools write directly to `public/data/vehicles/{vehicle-id}/` and update `data/registry/vehicles.json` from `core.json`. They do not replace source checking: after editing, run `npm run validate:vehicles`.
+
+Internal routes require the server-only Basic Auth credentials configured for the deployment.
+
 ## Module Field Reference
 
 ## General Data Rules
@@ -233,7 +245,7 @@ Use `null` when the value is intentionally unknown.
 
 Use the `offers` structure for new vehicle data. This keeps Portugal as the market context while allowing the app to distinguish current new prices, used prices, imported used prices, and historical new-reference prices.
 
-Note: older files may still use `pt.consumerPrice`, `pt.businessPriceExVat`, and `pt.usedPrice`. Treat those as legacy. New or migrated vehicle files should use the `offers` structure below.
+Note: older files may still use `pt.consumerPrice`, `pt.businessPriceExVat`, and `pt.usedPrice`. Intermediate files may use `pt.new`, `pt.used`, or `pt.importedUsed`. The app still reads those shapes, but new or migrated files should use the `offers` structure below.
 
 ```json
 {

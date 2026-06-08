@@ -11,6 +11,9 @@ context/CompareContext.tsx
 components/comparison/
 components/vehicle/VehicleComparisonSection.tsx
 app/compare/page.tsx
+app/compare/models/page.tsx
+app/compare/versions/page.tsx
+app/api/models/compare/route.ts
 app/api/vehicles/route.ts
 lib/comparison.ts
 lib/normalizeVehicle.ts
@@ -23,7 +26,7 @@ types/comparison.ts
 
 1. User selects vehicles from a detail page or selector.
 2. Selected IDs are stored in `CompareContext` and persisted to localStorage.
-3. `/compare?ids=...` loads the selected IDs.
+3. `/compare/versions?ids=...` loads exact variants; `/compare/models?models=...` compares model families.
 4. `/api/vehicles` loads each vehicle with `loadVehicle`.
 5. `normalizeVehicleForComparison` adapts canonical JSON to comparison fields.
 6. Comparison components calculate badges, winners, and summary values.
@@ -31,7 +34,7 @@ types/comparison.ts
 ## Normalized Fields Used By Comparison
 
 ```txt
-pricing.basePriceEur            from pricing.pt.consumerPrice.min
+pricing.basePriceEur            from pricing.offers[].priceFrom, with legacy fallback
 battery.capacityKwh             from battery.batteryUsableKWh
 charging.dcChargeSpeedKw        from charging.dcMaxChargeKW
 charging.chargeTime10To80Min    from charging.charge10to80Min
@@ -56,3 +59,4 @@ dimensions.lengthMm             from dimensions.lengthMM
 - Add new comparison metrics in `lib/comparison.ts`.
 - Run `npm run validate:vehicles` after adding or renaming vehicle folders.
 - Run `npm run build` before deploying.
+- Use localized href helpers rather than hardcoding public `/compare` URLs.

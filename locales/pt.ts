@@ -12,7 +12,7 @@ export const pt = {
     no: "Não"
   },
   metadata: {
-    title: "MotorZero | Comparador de Carros Elétricos Simplificado ✅",
+    title: "MotorZero | Comparador de Carros Elétricos Simplificado",
     titleTemplate: "%s | MotorZero",
     description: "Compara carros elétricos, autonomia, carregamento e preços. Recomendações personalizadas para escolher o carro que encaixa no dia-a-dia."
   },
@@ -347,6 +347,45 @@ export const pt = {
     title: "Contactos",
     description: "Fala connosco sobre parcerias, correções de dados, sugestões ou feedback sobre a plataforma."
   },
+  legalPages: {
+    privacy: {
+      metadataTitle: "Política de Privacidade",
+      metadataDescription: "Como a MotorZero trata dados pessoais e informação de utilização.",
+      title: "Política de Privacidade",
+      description: "Que dados tratamos, para que fins e quais são os teus direitos.",
+      updated: "Última atualização: 9 de junho de 2026",
+      sections: [
+        { title: "Responsável", paragraphs: ["A MotorZero é responsável pelo tratamento dos dados recolhidos através de motorzero.pt. Para questões de privacidade, utiliza a página de Contactos."] },
+        { title: "Dados e finalidades", paragraphs: ["Podemos tratar informação enviada voluntariamente e dados técnicos de utilização quando autorizas analítica.", "Usamos estes dados para responder a pedidos, manter a segurança, melhorar o serviço e produzir estatísticas agregadas. Não vendemos dados pessoais."] },
+        { title: "Conservação e direitos", paragraphs: ["Conservamos os dados apenas durante o período necessário para cada finalidade ou obrigação legal.", "Podes solicitar acesso, correção, apagamento, limitação, oposição e, quando aplicável, portabilidade. Também podes retirar o consentimento nas Definições de cookies."] }
+      ]
+    },
+    cookies: {
+      metadataTitle: "Política de Cookies",
+      metadataDescription: "Cookies utilizados pela MotorZero e como gerir o consentimento.",
+      title: "Política de Cookies",
+      description: "As categorias de cookies utilizadas e como podes alterar a tua escolha.",
+      updated: "Última atualização: 9 de junho de 2026",
+      sections: [
+        { title: "Necessários", paragraphs: ["Suportam funções essenciais, como guardar o idioma e a preferência de consentimento."] },
+        { title: "Analítica", paragraphs: ["Com autorização, o Google Analytics 4 pode criar cookies como _ga e _ga_* para medir visitas. Sem autorização, analytics_storage permanece denied."] },
+        { title: "Marketing", paragraphs: ["Controla ad_storage, ad_user_data e ad_personalization. Atualmente não usamos Google Ads, Meta Pixel ou Microsoft Clarity."] },
+        { title: "Alterar a escolha", paragraphs: ["Podes reabrir as Definições de cookies no rodapé. A escolha é guardada por 180 dias e será novamente pedida quando a política mudar ou esse período terminar."] }
+      ]
+    },
+    terms: {
+      metadataTitle: "Termos de Utilização",
+      metadataDescription: "Condições de utilização da plataforma MotorZero.",
+      title: "Termos de Utilização",
+      description: "Condições aplicáveis às informações e ferramentas da MotorZero.",
+      updated: "Última atualização: 9 de junho de 2026",
+      sections: [
+        { title: "Informação", paragraphs: ["A MotorZero fornece informação comparativa e educativa. Os dados podem estar incompletos, em validação ou sujeitos a alterações."] },
+        { title: "Preços e decisões", paragraphs: ["Preços, autonomia, consumo, carregamento e custos são referências, não propostas comerciais. Confirma sempre as condições finais junto da entidade relevante."] },
+        { title: "Utilização e responsabilidade", paragraphs: ["Não é permitida extração automatizada abusiva, interferência com o serviço ou reutilização comercial sem autorização.", "Procuramos manter a informação correta e o serviço disponível, mas não garantimos ausência de erros ou interrupções."] }
+      ]
+    }
+  },
   modelPage: {
     home: "Início",
     version: "versão",
@@ -419,19 +458,26 @@ export const pt = {
     advancedModeDescription: "Mostra destaques, resumo e tabela completa de especificações.",
     simpleDecisionTitle: "Leitura rápida da decisão",
     simpleDecisionDescription: "Para quem não quer mergulhar em specs: vê rapidamente qual ganha em preço, autonomia, carregamento e espaço.",
-    simpleWinner: "Ganha aqui",
-    simplePrice: "Melhor para gastar menos",
-    simplePriceHelp: "O mais barato pode ser a escolha racional se cumprir o teu uso diário.",
-    simpleRange: "Melhor para menos ansiedade",
+    simpleWinner: "Resultado",
+    simplePrice: "Preço mais baixo encontrado",
+    simplePriceHelp: "Compara o preço de referência disponível, distinguindo novo, usado ou importado quando os dados existem.",
+    simpleRange: "Melhor Autonomia",
     simpleRangeHelp: "Mais autonomia dá maior margem para dias longos e viagens sem tanta gestão.",
-    simpleCharging: "Melhor para viagens",
-    simpleChargingHelp: "Menos minutos de 10-80% significa paragens mais curtas em estrada.",
+    simpleCharging: "Paragem mais curta",
+    simpleChargingHelp: "Compara o tempo estimado de carregamento rápido de 10-80%, útil para viagens.",
     simpleSpace: "Melhor para família/carga",
     simpleSpaceHelp: "Mais bagageira ajuda com malas, compras, carrinhos e equipamento.",
     simpleStrongOption: "Boa aposta",
     simpleRangeLabel: "Uso sem stress",
     simpleChargingLabel: "Paragens em viagem",
     simpleCargoLabel: "Espaço no dia a dia",
+    simplePriceContextUnknown: "Preço de referência",
+    simpleWltpContext: "Autonomia WLTP",
+    simpleDcChargeContext: "Carregamento rápido 10-80%",
+    simpleCargoContext: "Bagageira com bancos em uso",
+    dcChargingPower: "Potência máxima DC",
+    acChargingPower: "Potência máxima AC",
+    chargingPlug: "Ficha",
     rangeFeelings: {
       unknown: "Ainda sem dado fiável",
       relaxed: "Muito confortável para rotina e viagens",
@@ -471,12 +517,15 @@ export const pt = {
   vehicleSelector: {
     loading: "A carregar modelos...",
     title: "Escolher veículos para comparar",
-    description: "Seleciona 2 ou 3 modelos na lista. A comparação só começa quando carregares em \"Comparar agora\".",
+    description: "Seleciona 2 ou 3 modelos, mesmo de marcas diferentes. Podes mudar para versões se quiseres comparar variantes específicas.",
+    modelMode: "Modelos",
+    versionMode: "Versões",
     selected: "Selecionado",
     maxVehicles: "Máximo 3 veículos",
     select: "Selecionar",
     noneSelected: "Nenhum veículo selecionado — escolhe pelo menos 2 modelos.",
-    selectedCount: "de 3 selecionados:",
+    selectedCount: "de 3 selecionados",
+    selectedCount2: "de 3 selecionados:",
     remove: "Remover",
     compareNow: "Comparar agora",
     selectOneMore: "Seleciona mais um veículo para comparar.",
@@ -487,7 +536,11 @@ export const pt = {
     bodyFilter: "Carroçaria",
     allBrands: "Todas as marcas",
     allBodies: "Todas as carroçarias",
-    resultsCount: "modelos encontrados"
+    resultsCount: "modelos encontrados",
+    modelResultsCount: "modelos encontrados",
+    versionResultsCount: "versões encontradas",
+    versionAvailable: "versão disponível",
+    versionsAvailable: "versões disponíveis"
   },
   batteryAndCharging: {
     title: "Bateria e carregamento",
@@ -653,7 +706,7 @@ export const pt = {
       efficiencyDescription: "Melhor consumo kWh/100km",
       fastest: "Mais rápido",
       acceleration: "Aceleração 0-100 km/h",
-      startingPrice: "Preço inicial",
+      startingPrice: "Preço desde",
       wltpRange: "Autonomia WLTP",
       batteryCapacity: "Capacidade da bateria",
       wltpConsumption: "Consumo WLTP",
@@ -694,7 +747,21 @@ export const pt = {
     language: "Idioma",
     privacy: "Privacidade",
     terms: "Termos",
-    cookies: "Cookies"
+    cookies: "Cookies",
+    cookieSettings: "Definições de cookies"
+  },
+  cookieConsent: {
+    title: "A tua privacidade",
+    description: "Usamos cookies opcionais para medir a utilização do MotorZero e melhorar a experiência. Podes aceitar, rejeitar ou escolher por categoria.",
+    preferencesDescription: "Escolhe as categorias opcionais que autorizas. Os cookies necessários estão sempre ativos para o funcionamento do site.",
+    analytics: "Analítica",
+    analyticsDescription: "Ajuda-nos a perceber como o site é utilizado.",
+    marketing: "Marketing",
+    marketingDescription: "Permite medição e personalização de publicidade. Ainda não usamos plataformas publicitárias.",
+    acceptAll: "Aceitar todos",
+    rejectAll: "Rejeitar todos",
+    managePreferences: "Gerir preferências",
+    savePreferences: "Guardar preferências"
   },
   models: {
     catalog: "Catálogo",

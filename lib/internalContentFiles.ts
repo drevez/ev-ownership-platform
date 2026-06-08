@@ -195,6 +195,102 @@ export const EDITABLE_CONTENT_SECTIONS: EditableContentSection[] = [
       },
       { id: 'comparisonPage.title', label: 'Título resultado', path: ['comparisonPage', 'title'] },
       {
+        id: 'comparisonPage.simpleDecisionTitle',
+        label: 'Leitura rápida título',
+        path: ['comparisonPage', 'simpleDecisionTitle'],
+      },
+      {
+        id: 'comparisonPage.simpleDecisionDescription',
+        label: 'Leitura rápida descrição',
+        path: ['comparisonPage', 'simpleDecisionDescription'],
+        multiline: true,
+      },
+      {
+        id: 'comparisonPage.simpleWinner',
+        label: 'Rótulo resultado',
+        path: ['comparisonPage', 'simpleWinner'],
+        hint: 'Reservado para microcopy de resultado; a UI atual evita repetir este rótulo em todos os cards.',
+      },
+      {
+        id: 'comparisonPage.simplePrice',
+        label: 'Card preço título',
+        path: ['comparisonPage', 'simplePrice'],
+      },
+      {
+        id: 'comparisonPage.simplePriceHelp',
+        label: 'Card preço ajuda',
+        path: ['comparisonPage', 'simplePriceHelp'],
+        multiline: true,
+      },
+      {
+        id: 'comparisonPage.simplePriceContextUnknown',
+        label: 'Preço contexto desconhecido',
+        path: ['comparisonPage', 'simplePriceContextUnknown'],
+      },
+      {
+        id: 'comparisonPage.simpleRange',
+        label: 'Card autonomia título',
+        path: ['comparisonPage', 'simpleRange'],
+      },
+      {
+        id: 'comparisonPage.simpleRangeHelp',
+        label: 'Card autonomia ajuda',
+        path: ['comparisonPage', 'simpleRangeHelp'],
+        multiline: true,
+      },
+      {
+        id: 'comparisonPage.simpleWltpContext',
+        label: 'Autonomia contexto',
+        path: ['comparisonPage', 'simpleWltpContext'],
+      },
+      {
+        id: 'comparisonPage.simpleCharging',
+        label: 'Card carregamento título',
+        path: ['comparisonPage', 'simpleCharging'],
+      },
+      {
+        id: 'comparisonPage.simpleChargingHelp',
+        label: 'Card carregamento ajuda',
+        path: ['comparisonPage', 'simpleChargingHelp'],
+        multiline: true,
+      },
+      {
+        id: 'comparisonPage.simpleDcChargeContext',
+        label: 'Carregamento contexto',
+        path: ['comparisonPage', 'simpleDcChargeContext'],
+      },
+      {
+        id: 'comparisonPage.simpleSpace',
+        label: 'Card espaço título',
+        path: ['comparisonPage', 'simpleSpace'],
+      },
+      {
+        id: 'comparisonPage.simpleSpaceHelp',
+        label: 'Card espaço ajuda',
+        path: ['comparisonPage', 'simpleSpaceHelp'],
+        multiline: true,
+      },
+      {
+        id: 'comparisonPage.simpleCargoContext',
+        label: 'Espaço contexto',
+        path: ['comparisonPage', 'simpleCargoContext'],
+      },
+      {
+        id: 'comparisonPage.dcChargingPower',
+        label: 'Avançado potência máxima DC',
+        path: ['comparisonPage', 'dcChargingPower'],
+      },
+      {
+        id: 'comparisonPage.acChargingPower',
+        label: 'Avançado potência máxima AC',
+        path: ['comparisonPage', 'acChargingPower'],
+      },
+      {
+        id: 'comparisonPage.chargingPlug',
+        label: 'Avançado ficha/conector',
+        path: ['comparisonPage', 'chargingPlug'],
+      },
+      {
         id: 'comparisonPage.simpleModeDescription',
         label: 'Descrição modo simples',
         path: ['comparisonPage', 'simpleModeDescription'],

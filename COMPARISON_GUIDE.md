@@ -2,14 +2,16 @@
 
 ## Overview
 
-This document explains the complete implementation of the premium EV comparison feature for the Next.js EV Ownership Platform.
+This document explains the EV comparison subsystem. The current application distinguishes model selection from exact variant comparison and localizes public URLs.
 
 ## File Structure
 
 ```
 /app
   /compare
-    page.tsx                 # Comparison page route
+    page.tsx                 # Comparison entry route
+    /models/page.tsx         # Compare model families
+    /versions/page.tsx       # Compare exact vehicle variants
   layout.tsx                # Root layout (updated with Provider & Bar)
 
 /components
@@ -68,9 +70,10 @@ import { CompareButton } from '@/components/comparison'
   - Responsive design
   - Smooth animations
 
-### 3. Comparison Page
+### 3. Comparison Pages
 
-- **Route**: `/compare`
+- **Internal routes**: `/compare`, `/compare/models`, `/compare/versions`
+- **Portuguese URLs**: `/pt/comparador`, `/pt/comparador/modelos`, `/pt/comparador/versoes`
 - **Features**:
   - Vehicle header cards with quick stats
   - Badges section (Best Range, Best Value, etc.)
@@ -132,7 +135,7 @@ The layout already includes:
 - ✅ `ComparisonBar` renders at bottom
 - ✅ `ComparisonBarPaddingManager` prevents content overlap
 - ✅ Vehicle detail pages have comparison section
-- ✅ `/compare` route is ready to use
+- ✅ model and version comparison routes are integrated
 
 ### Step 3: Add Compare Button to Recommendation Cards
 
@@ -195,7 +198,7 @@ All vehicle data needed for comparison. The system merges data from:
 - `efficiency.json` - WLTP range, consumption
 - `dimensions.json` - Size, trunk capacity
 - `pricing.json` - Price
-- `performance.json` - Acceleration, horsepower
+- normalized performance fields when available in the current data model
 
 ### localStorage
 

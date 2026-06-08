@@ -3,6 +3,7 @@ import { loadVehicle } from '@/lib/loadVehicle'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import {
   getVehicleBatteryCapacityKwh,
+  getVehicleChargeTime10To80Min,
   getVehicleDcChargeKw,
   getVehicleDisplayName,
   getVehicleImage,
@@ -10,6 +11,10 @@ import {
   getVehiclePriceSummaries,
   getVehicleTrunkCapacityL,
 } from '@/lib/normalizeVehicle'
+import type {
+  ComparisonVehicle,
+  VehicleDataForComparison,
+} from '@/types/comparison'
 import type {
   ModelExplorerItem,
   ModelExplorerVariant,
@@ -221,6 +226,7 @@ function mapExplorerVariant(
     wltpRangeKm: efficiency?.wltpRangeKm,
     motorwayRangeKm: efficiency?.motorwayRangeKm,
     dcChargeKw: getVehicleDcChargeKw(vehicle.charging),
+    chargeTime10To80Min: getVehicleChargeTime10To80Min(vehicle.charging),
     usableBatteryKwh: getVehicleBatteryCapacityKwh(vehicle.battery),
     consumptionWhKm: efficiency?.realWorldConsumptionWhKm,
     seats: vehicle.seats,
@@ -308,6 +314,7 @@ export async function getModelExplorerData(): Promise<ModelExplorerItem[]> {
         maxWltpRangeKm: maxNumber(variants.map((variant) => variant.wltpRangeKm)),
         maxMotorwayRangeKm: maxNumber(variants.map((variant) => variant.motorwayRangeKm)),
         maxDcChargeKw: maxNumber(variants.map((variant) => variant.dcChargeKw)),
+        minChargeTime10To80Min: minNumber(variants.map((variant) => variant.chargeTime10To80Min)),
         maxUsableBatteryKwh: maxNumber(variants.map((variant) => variant.usableBatteryKwh)),
         bestConsumptionWhKm: minNumber(variants.map((variant) => variant.consumptionWhKm)),
         maxSeats: maxNumber(variants.map((variant) => variant.seats)),
@@ -327,4 +334,94 @@ export async function getModelSlugForVehicleId(
   const entry = registry.find((v) => v.id === vehicleId)
   if (!entry) return null
   return toModelSlug(entry.brand, entry.model)
+}
+
+function modelPriceSummaryForKind(
+  model: ModelExplorerItem,
+  kind: 'new' | 'used' | 'importedUsed'
+) {
+  return model.priceSummaries
+    .filter((summary) => summary.kind === kind && summary.priceFrom != null)
+    .sort((a, b) => (a.priceFrom ?? Number.MAX_SAFE_INTEGER) - (b.priceFrom ?? Number.MAX_SAFE_INTEGER))[0]
+}
+
+export function mapModelExplorerItemToComparisonVehicle(
+  model: ModelExplorerItem
+): ComparisonVehicle {
+  const priceSummaries = [
+    modelPriceSummaryForKind(model, 'new'),
+    modelPriceSummaryForKind(model, 'used'),
+    modelPriceSummaryForKind(model, 'importedUsed'),
+  ].filter((summary): summary is NonNullable<typeof summary> => summary != null)
+  const primaryPrice = priceSummaries
+    .filter((summary) => summary.priceFrom != null)
+    .sort((a, b) => (a.priceFrom ?? Number.MAX_SAFE_INTEGER) - (b.priceFrom ?? Number.MAX_SAFE_INTEGER))[0] ??
+    priceSummaries[0] ??
+    model.primaryPrice
+  const basePriceEur = priceSummaries
+    .map((summary) => summary.priceFrom)
+    .filter((price): price is number => price != null)
+    .sort((a, b) => a - b)[0]
+
+  return {
+    id: `model:${model.slug}`,
+    brand: model.brand,
+    model: model.model,
+    variant: '',
+    displayName: model.displayName,
+    image: model.heroImage || VEHICLE_PLACEHOLDER_IMAGE,
+    segment: model.segment,
+    bodyType: model.bodyTypes[0] ?? '',
+    drivetrain: model.drivetrains.join(' / '),
+    seats: model.maxSeats,
+    modelYear: model.newestModelYear,
+    detailPath: `/models/${model.slug}`,
+    variantCount: model.variantCount,
+    battery: {
+      capacityKwh: model.maxUsableBatteryKwh,
+      usableKwh: model.maxUsableBatteryKwh,
+    },
+    charging: {
+      dcChargeSpeedKw: model.maxDcChargeKw,
+      maxPowerKw: model.maxDcChargeKw,
+      chargeTime10To80Min: model.minChargeTime10To80Min,
+    },
+    efficiency: {
+      wltpRangeKm: model.maxWltpRangeKm,
+      realWorldRangeKm: model.maxRealRangeKm,
+      realWorldConsumption: model.bestConsumptionWhKm,
+    },
+    dimensions: {
+      trunkCapacityL: model.maxTrunkLiters,
+    },
+    pricing: {
+      basePriceEur,
+      recommendedPriceEur: basePriceEur,
+      highestPriceEur: basePriceEur,
+      primaryPrice: primaryPrice
+        ? {
+            kind: primaryPrice.kind,
+            status: primaryPrice.status,
+            marketScope: primaryPrice.marketScope,
+            priceFrom: primaryPrice.priceFrom,
+            priceTo: primaryPrice.priceTo,
+            modelYear: primaryPrice.modelYear,
+            yearFrom: primaryPrice.yearFrom,
+            yearTo: primaryPrice.yearTo,
+            isLegacy: primaryPrice.isLegacy,
+          }
+        : undefined,
+      priceSummaries: priceSummaries.map((summary) => ({
+        kind: summary.kind,
+        status: summary.status,
+        marketScope: summary.marketScope,
+        priceFrom: summary.priceFrom,
+        priceTo: summary.priceTo,
+        modelYear: summary.modelYear,
+        yearFrom: summary.yearFrom,
+        yearTo: summary.yearTo,
+        isLegacy: summary.isLegacy,
+      })),
+    } satisfies VehicleDataForComparison['pricing'],
+  }
 }

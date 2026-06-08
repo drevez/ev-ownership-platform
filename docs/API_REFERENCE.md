@@ -173,3 +173,147 @@ Legacy GET endpoint fallback. Reads parameters from search parameters and return
 - `familySize` (number)
 - `dailyCommuteKm` (number)
 - `lang` (string, e.g. `pt`, `en`, `es`)
+
+---
+
+## 4. Internal Vehicle Create API
+
+### `POST /api/internal/vehicles`
+Creates a new modular vehicle folder and upserts a registry entry generated from `core.json`.
+
+This endpoint requires the same server-side Basic Auth credentials as `/internal/*`.
+
+#### Request Body
+- **Content-Type**: `application/json`
+- **Parameters**:
+  - `id` (string, required): Vehicle folder id. Must use lowercase letters, numbers, and hyphens.
+  - `files` (object, required): Object containing all vehicle module payloads.
+
+Expected `files` keys:
+
+```txt
+core
+battery
+charging
+comfort
+dimensions
+efficiency
+pricing
+```
+
+```json
+{
+  "id": "xpeng-p7-long-range-rwd",
+  "files": {
+    "core": {
+      "id": "xpeng-p7-long-range-rwd",
+      "brand": "XPeng",
+      "model": "P7",
+      "variant": "Long Range RWD"
+    },
+    "battery": {},
+    "charging": {},
+    "comfort": {},
+    "dimensions": {},
+    "efficiency": {},
+    "pricing": {}
+  }
+}
+```
+
+#### Response
+- `200 OK`: `{ "ok": true, "id": "xpeng-p7-long-range-rwd" }`
+- `400 Bad Request`: missing or invalid body
+- `409 Conflict`: vehicle already exists
+
+---
+
+## 5. Internal Vehicle Update API
+
+### `PUT /api/internal/vehicles/[id]`
+Updates an existing modular vehicle folder and upserts the corresponding registry entry from `core.json`.
+
+This endpoint requires the same server-side Basic Auth credentials as `/internal/*`.
+
+#### Request Body
+- **Content-Type**: `application/json`
+- **Parameters**:
+  - `files` (object, required): Full set of vehicle module payloads.
+
+#### Response
+- `200 OK`: `{ "ok": true, "id": "..." }`
+- `400 Bad Request`: missing or invalid body
+- `404 Not Found`: vehicle folder does not exist
+
+---
+
+## 6. Internal Content And SEO API
+
+### `POST /api/internal/content`
+Saves editable page copy, translations, and SEO metadata for Portuguese, English, and Spanish.
+
+This endpoint writes directly to locale source files and requires server-side Basic Auth.
+
+#### Request Body
+- **Content-Type**: `application/json`
+- **Parameters**:
+  - `values` (object, required): Language-keyed map of editable field ids to strings.
+
+Required top-level language keys:
+
+```txt
+pt
+en
+es
+```
+
+Example:
+
+```json
+{
+  "values": {
+    "pt": {
+      "metadata.title": "MotorZero | Elétricos em linguagem humana",
+      "metadata.description": "Compara modelos elétricos, autonomia, carregamento e preços."
+    },
+    "en": {
+      "metadata.title": "MotorZero | EVs in human language",
+      "metadata.description": "Compare electric vehicles, range, charging and prices."
+    },
+    "es": {
+      "metadata.title": "MotorZero | Vehículos eléctricos en lenguaje humano",
+      "metadata.description": "Compara vehículos eléctricos, autonomía, carga y precios."
+    }
+  }
+}
+```
+
+Editable field ids are defined in [lib/internalContentFiles.ts](/Users/danielarevez/ev-ownership-platform/lib/internalContentFiles.ts).
+
+#### Response
+- `200 OK`: `{ "ok": true }`
+- `400 Bad Request`: invalid content payload or write failure
+
+---
+
+## 7. Internal Route Summary
+
+These routes support the private working surfaces:
+
+```txt
+/internal/vehicles
+/internal/vehicles/new
+/internal/vehicles/{id}
+/internal/vehicles/{id}/edit
+/internal/content
+```
+
+They are protected by server-side Basic Auth in the Proxy. Internal write APIs also verify authorization inside their Route Handlers.
+
+---
+
+## 8. Analytics Note
+
+Analytics does not use an application API route. GTM is loaded centrally from `NEXT_PUBLIC_GTM_ID`, and consent state is handled in the browser.
+
+See [ANALYTICS_CONSENT.md](/Users/danielarevez/ev-ownership-platform/docs/ANALYTICS_CONSENT.md). Do not add GA4 directly to API routes, layouts, or page components.

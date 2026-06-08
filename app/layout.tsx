@@ -7,6 +7,8 @@ import { CompareProvider } from '@/context/CompareContext'
 import { LocaleProvider } from '@/context/LocaleContext'
 import { ComparisonBar } from '@/components/comparison/ComparisonBar'
 import { ComparisonBarPaddingManager } from '@/components/comparison/ComparisonBarPaddingManager'
+import { CookieConsentBanner } from '@/components/CookieConsentBanner'
+import { GoogleTagManager } from '@/components/GoogleTagManager'
 import { SiteHeader } from '@/components/SiteHeader'
 import { SiteFooter } from '@/components/SiteFooter'
 
@@ -94,8 +96,63 @@ export default async function RootLayout({
     <html
       lang={LANGUAGE_LOCALES[locale]}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        {/* Consent Mode defaults are set before GTM or any Google tag loads. */}
+        <script
+          id="google-consent-defaults"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = window.gtag || function(){dataLayer.push(arguments);};
+              window.gtag('consent', 'default', {
+                ad_storage: 'denied',
+                analytics_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                functionality_storage: 'granted',
+                security_storage: 'granted',
+                wait_for_update: 500
+              });
+
+              try {
+                var savedConsent = window.localStorage.getItem('motorzero_cookie_consent_v1');
+                if (savedConsent) {
+                  var consent = JSON.parse(savedConsent);
+                  if (
+                    typeof consent.analytics === 'boolean' &&
+                    typeof consent.marketing === 'boolean' &&
+                    consent.policyVersion === 1 &&
+                    typeof consent.expiresAt === 'string' &&
+                    Date.parse(consent.expiresAt) > Date.now()
+                  ) {
+                    window.gtag('consent', 'update', {
+                      analytics_storage: consent.analytics ? 'granted' : 'denied',
+                      ad_storage: consent.marketing ? 'granted' : 'denied',
+                      ad_user_data: consent.marketing ? 'granted' : 'denied',
+                      ad_personalization: consent.marketing ? 'granted' : 'denied'
+                    });
+                    window.dataLayer.push({
+                      event: 'consent_update',
+                      analytics_storage: consent.analytics ? 'granted' : 'denied',
+                      ad_storage: consent.marketing ? 'granted' : 'denied',
+                      ad_user_data: consent.marketing ? 'granted' : 'denied',
+                      ad_personalization: consent.marketing ? 'granted' : 'denied'
+                    });
+                  } else {
+                    window.localStorage.removeItem('motorzero_cookie_consent_v1');
+                  }
+                }
+              } catch (error) {
+                // Invalid or unavailable local storage leaves consent denied.
+              }
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
+        <GoogleTagManager />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -113,6 +170,7 @@ export default async function RootLayout({
             </main>
             <SiteFooter />
             <ComparisonBar />
+            <CookieConsentBanner />
           </CompareProvider>
         </LocaleProvider>
       </body>

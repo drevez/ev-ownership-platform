@@ -104,7 +104,7 @@ export function MatchCard({ recommendation, rank, knowledgeMode }: MatchCardProp
     keySpecs,
   } = recommendation
   const href = `/vehicles/${vehicle.id}`
-  const compareHref = `/compare?ids=${encodeURIComponent(vehicle.id)}`
+  const compareHref = `/compare/versions?ids=${encodeURIComponent(vehicle.id)}`
   const image = vehicle.image || VEHICLE_PLACEHOLDER_IMAGE
   const unavailable = t.recommendCard.unavailable
   const primarySpecs = [

@@ -82,7 +82,7 @@ export function ModelPage({ model }: ModelPageProps) {
   const localizedHref = useLocalizedHref()
   const compareHref =
     model.variants.length >= 2
-      ? `/compare?${model.variants.map((v) => `ids=${encodeURIComponent(v.id)}`).join('&')}`
+      ? `/compare/versions?${model.variants.map((v) => `ids=${encodeURIComponent(v.id)}`).join('&')}`
       : null
 
   return (

@@ -11,6 +11,10 @@ This project is now structured around a growing modular EV dataset and a normali
 - Comparison flow supports up to three vehicles.
 - Recommendation quiz scores vehicles from lifestyle inputs.
 - Placeholder vehicle images are used until real car images are uploaded.
+- Internal vehicle and content tools support dataset maintenance, translation editing, and SEO copy editing.
+- GTM is the only analytics container and loads after denied Consent Mode v2 defaults.
+- A translated first-party cookie banner supports accept, reject, and category preferences.
+- Localized privacy, cookie, and terms pages are included in the sitemap.
 
 ## Data Layer
 
@@ -37,6 +41,7 @@ It also normalizes missing local image files to `/images/vehicle-placeholder.svg
 ```txt
 batteryUsableKWh              -> battery.capacityKwh
 charge10to80Min               -> charging.chargeTime10To80Min
+pricing.offers[].priceFrom    -> pricing.basePriceEur
 pricing.pt.consumerPrice.min  -> pricing.basePriceEur
 lengthMM                      -> dimensions.lengthMm
 cargoLitersSeatsUp            -> dimensions.trunkCapacityL
@@ -68,13 +73,32 @@ It checks:
 ## Build Status
 
 - `npm run build` passes.
-- Full lint still has known follow-up issues in older components and recommendation typing.
-- Vehicle validation currently reports dataset cleanup work, which is expected while the catalog is being expanded.
+- `npm run lint` passes with warnings only: remaining `<img>` usage and one CompareContext hook dependency warning.
+- `npm run validate:vehicles` currently reports warnings only, mostly missing images and a few module-field placement issues, which is expected while the catalog is being expanded.
+- The current production build generates 171 routes/pages.
+
+## Analytics And Consent
+
+- GTM ID comes from `NEXT_PUBLIC_GTM_ID`.
+- GA4 must be configured inside GTM; there is no direct GA4 script in the codebase.
+- Consent defaults to denied before GTM.
+- Choices persist for 180 days and are invalidated by a policy-version change.
+- Withdrawing analytics consent removes accessible `_ga` and `_ga_*` cookies.
+- GTM Preview is still required to confirm one page view per initial load and client navigation.
+
+## Internal Tools
+
+- `/internal/vehicles` audits vehicle data, filters issues, and links to vehicle JSON editing flows.
+- `/internal/vehicles/new` creates a new modular vehicle folder and registry entry.
+- `/internal/vehicles/{id}/edit` edits existing vehicle JSON files.
+- `/internal/content` edits page copy, translations, and SEO metadata in `locales/pt.ts`, `locales/en.ts`, and `locales/es.ts`.
+
+These routes are protected by server-side Basic Auth in `proxy.ts`, with write APIs performing an additional authorization check.
 
 ## Main Follow-Ups
 
 1. Clean vehicle data reported by `npm run validate:vehicles`.
-2. Move search to real registry/core aliases.
-3. Generate the registry from `core.json`.
-4. Remove remaining `any` types in recommendation and generic rendering code.
+2. Upload real vehicle images or intentionally accept placeholder usage.
+3. Replace remaining `<img>` usage with optimized image handling where it affects LCP.
+4. Consider account-based authentication if the internal tooling gains multiple administrators.
 5. Add richer ownership tools such as charging cost, incentives, and used-price insights.

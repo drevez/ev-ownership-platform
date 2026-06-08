@@ -13,7 +13,18 @@ app/
 ├── models/page.tsx             Model catalog route
 ├── models/[slug]/page.tsx      Model variant route
 ├── vehicles/[id]/page.tsx      Vehicle detail route
+├── privacy/page.tsx             Privacy policy
+├── cookies/page.tsx             Cookie policy
+├── terms/page.tsx               Terms of use
+├── internal/content/page.tsx    Internal content and SEO editor
+├── internal/vehicles/page.tsx   Internal vehicle data health dashboard
+├── internal/vehicles/new/page.tsx
+├── internal/vehicles/[id]/page.tsx
+├── internal/vehicles/[id]/edit/page.tsx
 └── api/
+    ├── internal/content/route.ts
+    ├── internal/vehicles/route.ts
+    ├── internal/vehicles/[id]/route.ts
     ├── vehicles/route.ts       Normalized vehicle lookup by IDs
     ├── vehicles/all/route.ts   Registry lookup
     └── recommendations/route.ts
@@ -45,6 +56,10 @@ lib/normalizeVehicle.ts         Maps canonical JSON to app/comparison fields
 lib/vehicleImages.ts            Shared placeholder image constant
 lib/models.ts                   Groups variants into model pages
 lib/comparison.ts               Comparison metrics, badges, localStorage helpers
+lib/internalContentFiles.ts     Internal content/SEO field map and locale writer
+lib/internalVehicleFiles.ts     Internal vehicle JSON and registry writer
+lib/vehicleAudit.ts             Dataset health audit for internal dashboard
+lib/cookieConsent.ts            Consent storage, updates, expiry, cookie cleanup
 lib/recommendation/recommendEVs.ts
 ```
 
@@ -56,8 +71,12 @@ components/model/               Model detail page
 components/comparison/          Compare buttons, bar, page, metrics, badges
 components/recommendation/      Quiz and recommendation result cards
 components/search/              Search UI
+components/internal/            Internal content and vehicle data editors
 components/SiteHeader.tsx
 components/SiteFooter.tsx
+components/GoogleTagManager.tsx
+components/CookieConsentBanner.tsx
+components/legal/LegalPage.tsx
 ```
 
 ## Context And Types
@@ -75,12 +94,14 @@ types/model.ts
 
 ```txt
 scripts/validate-vehicles.mjs   Advisory vehicle JSON validator
+scripts/generate-registry.mjs   Rebuilds data/registry/vehicles.json from core.json files
 ```
 
 Run with:
 
 ```bash
 npm run validate:vehicles
+npm run generate:registry
 ```
 
 ## Documentation
@@ -90,6 +111,9 @@ README.md                       Project overview and development workflow
 VEHICLE_DATA_GUIDE.md           Canonical vehicle JSON schema
 IMPLEMENTATION_SUMMARY.md       Current architecture summary
 TESTING_CHECKLIST.md            Build, data, UI, and comparison checks
+docs/API_REFERENCE.md           Public and internal route API reference
+docs/LOCALIZATION.md            Localization, route translation, and content editing guide
+docs/ANALYTICS_CONSENT.md       GTM and Consent Mode v2 implementation guide
 FILE_MANIFEST.md                This file
 ```
 

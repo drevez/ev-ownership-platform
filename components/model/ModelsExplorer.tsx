@@ -566,7 +566,7 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
                 {t.modelsExplorer.card.viewVersions}
               </Link>
               <Link
-                href={localizedHref(`/compare?ids=${model.variants[0]?.id ?? ''}`)}
+                href={localizedHref(`/compare/models?models=${encodeURIComponent(model.slug)}`)}
                 className="inline-flex justify-center rounded-md border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-300"
               >
                 {t.modelsExplorer.card.compare}

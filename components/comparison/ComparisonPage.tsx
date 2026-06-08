@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { ComparisonVehicle } from '@/types/comparison'
 import { ComparisonMetricsTable } from './ComparisonMetricsTable'
 import { ComparisonSummary } from './ComparisonSummary'
@@ -18,6 +18,36 @@ type ComparisonMode = 'simple' | 'advanced'
 type RangeFeeling = 'unknown' | 'relaxed' | 'comfortable' | 'planning'
 type ChargingFeeling = 'unknown' | 'fast' | 'ok' | 'slow'
 type CargoFeeling = 'unknown' | 'large' | 'family' | 'compact'
+type ComparisonPriceSummary = NonNullable<NonNullable<ComparisonVehicle['pricing']>['priceSummaries']>[number]
+type RawComparisonPricing = NonNullable<ComparisonVehicle['pricing']> & {
+  offers?: {
+    condition?: 'new' | 'used'
+    status?: string
+    marketScope?: string
+    priceFrom?: number
+    priceTo?: number
+    modelYear?: number
+    yearFrom?: number
+    yearTo?: number
+  }[]
+  pt?: {
+    new?: RawPricingOffer
+    used?: RawPricingOffer
+    importedUsed?: RawPricingOffer
+    usedPrice?: {
+      min?: number
+      max?: number
+    }
+  }
+}
+type RawPricingOffer = {
+  available?: boolean
+  priceFrom?: number
+  priceTo?: number
+  modelYear?: number
+  yearFrom?: number
+  yearTo?: number
+}
 
 function comparisonGridClass(vehicleCount: number) {
   return vehicleCount === 2
@@ -33,6 +63,129 @@ function formatCurrency(value?: number) {
 function formatNumber(value: number | undefined, unit: string) {
   if (value == null) return 'N/D'
   return `${Math.round(value).toLocaleString()} ${unit}`
+}
+
+function priceContextLabelFromSummary(
+  price: ComparisonPriceSummary | undefined,
+  t: ReturnType<typeof useTranslations>
+) {
+  if (!price) return t.comparisonPage.simplePriceContextUnknown
+  if (price.status === 'not_sold_new') return t.modelsExplorer.price.kind.referenceNew
+  if (price.kind === 'importedUsed') return t.modelsExplorer.price.kind.importedUsed
+  if (price.kind === 'used') return t.modelsExplorer.price.kind.used
+  return t.modelsExplorer.price.kind.new
+}
+
+function priceContextLabel(
+  vehicle: ComparisonVehicle | undefined,
+  t: ReturnType<typeof useTranslations>
+) {
+  return priceContextLabelFromSummary(vehicle?.pricing?.primaryPrice, t)
+}
+
+function priceYearContextFromSummary(
+  price: ComparisonPriceSummary | undefined,
+  t: ReturnType<typeof useTranslations>
+) {
+  if (!price) return null
+  if (price.modelYear != null) {
+    return t.modelsExplorer.price.modelYear.replace('{year}', String(price.modelYear))
+  }
+  if (price.yearFrom != null || price.yearTo != null) {
+    return t.modelsExplorer.price.years.replace(
+      '{years}',
+      [price.yearFrom, price.yearTo].filter(Boolean).join('-')
+    )
+  }
+  return null
+}
+
+function priceYearContext(vehicle: ComparisonVehicle | undefined, t: ReturnType<typeof useTranslations>) {
+  return priceYearContextFromSummary(vehicle?.pricing?.primaryPrice, t)
+}
+
+function comparisonPriceValueFromSummary(
+  price: ComparisonPriceSummary | undefined,
+  t: ReturnType<typeof useTranslations>
+) {
+  const priceFrom = price?.priceFrom
+
+  if (priceFrom == null) return 'N/D'
+
+  const label = priceContextLabelFromSummary(price, t)
+  const formattedFrom = formatCurrency(priceFrom)
+  const yearContext = priceYearContextFromSummary(price, t)
+
+  return yearContext ? `${label} ${formattedFrom} · ${yearContext}` : `${label} ${formattedFrom}`
+}
+
+function comparisonPriceSummaries(vehicle: ComparisonVehicle): ComparisonPriceSummary[] {
+  const summaries = vehicle.pricing?.priceSummaries?.filter((summary) => summary.priceFrom != null) ?? []
+
+  if (summaries.length > 0) return summaries
+  const rawPricing = vehicle.pricing as RawComparisonPricing | undefined
+  const rawOffers = rawPricing?.offers
+    ?.map((offer) => ({
+      kind:
+        offer.marketScope === 'imported_to_pt'
+          ? 'importedUsed'
+          : offer.condition === 'used'
+            ? 'used'
+            : 'new',
+      status: offer.status,
+      marketScope: offer.marketScope,
+      priceFrom: offer.priceFrom,
+      priceTo: offer.priceTo,
+      modelYear: offer.modelYear,
+      yearFrom: offer.yearFrom,
+      yearTo: offer.yearTo,
+      isLegacy: false,
+    }) satisfies ComparisonPriceSummary)
+    .filter((summary) => summary.priceFrom != null) ?? []
+
+  if (rawOffers.length > 0) return rawOffers
+
+  const ptPricing = rawPricing?.pt
+  const marketOffers = [
+    mapRawMarketPrice('new', ptPricing?.new, 'official_pt'),
+    mapRawMarketPrice('used', ptPricing?.used, 'used_pt'),
+    mapRawMarketPrice('importedUsed', ptPricing?.importedUsed, 'imported_to_pt'),
+  ].filter((summary): summary is ComparisonPriceSummary => summary != null)
+
+  if (marketOffers.length > 0) return marketOffers
+
+  if (ptPricing?.usedPrice?.min != null) {
+    return [{
+      kind: 'used',
+      status: 'available',
+      marketScope: 'used_pt',
+      priceFrom: ptPricing.usedPrice.min,
+      priceTo: ptPricing.usedPrice.max,
+      isLegacy: true,
+    }]
+  }
+
+  return vehicle.pricing?.primaryPrice?.priceFrom != null ? [vehicle.pricing.primaryPrice] : []
+}
+
+function mapRawMarketPrice(
+  kind: NonNullable<ComparisonPriceSummary['kind']>,
+  offer: RawPricingOffer | undefined,
+  marketScope: string
+): ComparisonPriceSummary | null {
+  if (!offer || offer.priceFrom == null) return null
+
+  return {
+    kind,
+    status: offer.available === false ? 'unknown' : 'available',
+    marketScope,
+    priceFrom: offer.priceFrom,
+    priceTo: offer.priceTo,
+    modelYear: offer.modelYear,
+    yearFrom: offer.yearFrom,
+    yearTo: offer.yearTo,
+    isLegacy: false,
+  }
 }
 
 function bestByHighest(
@@ -82,7 +235,11 @@ export function ComparisonPage({
 
   const t = useTranslations()
   const localizedHref = useLocalizedHref()
-  const [mode, setMode] = useState<ComparisonMode>('simple')
+  const pathname = usePathname()
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const requestedMode = searchParams.get('mode')
+  const mode: ComparisonMode = requestedMode === 'advanced' ? 'advanced' : 'simple'
   const vehicleGridClass = comparisonGridClass(vehicles.length)
   const cheapest = bestByLowest(vehicles, (vehicle) => vehicle.pricing?.basePriceEur)
   const bestRange = bestByHighest(vehicles, (vehicle) => vehicle.efficiency?.wltpRangeKm)
@@ -94,6 +251,12 @@ export function ComparisonPage({
     fastestCharge?.vehicle.id,
     mostSpace?.vehicle.id,
   ].filter((id): id is string => Boolean(id)))
+
+  const updateComparisonMode = (nextMode: ComparisonMode) => {
+    const params = new URLSearchParams(searchParams.toString())
+    params.set('mode', nextMode)
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false })
+  }
 
   if (vehicles.length < 2) {
     return (
@@ -148,19 +311,13 @@ export function ComparisonPage({
                 <p className="text-sm font-semibold text-slate-100">
                   {t.comparisonPage.modeLabel}
                 </p>
-                <Link
-                  href={localizedHref('/compare')}
-                  className="shrink-0 rounded-md border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold text-slate-100 transition hover:border-emerald-300 hover:text-emerald-200"
-                >
-                  {t.comparePage.editSelection}
-                </Link>
               </div>
               <div className="mt-3 grid grid-cols-2 gap-1 rounded-lg border border-white/10 bg-slate-900 p-1">
                 {(['simple', 'advanced'] as ComparisonMode[]).map((comparisonMode) => (
                   <button
                     key={comparisonMode}
                     type="button"
-                    onClick={() => setMode(comparisonMode)}
+                    onClick={() => updateComparisonMode(comparisonMode)}
                     className={`rounded-md px-3 py-2 text-sm font-semibold transition ${
                       mode === comparisonMode
                         ? 'bg-emerald-400 text-slate-950 shadow-sm'
@@ -271,7 +428,7 @@ function SimpleVehicleCards({
             }`}
           >
             <Link
-              href={localizedHref(`/vehicles/${vehicle.id}`)}
+              href={localizedHref(vehicle.detailPath ?? `/vehicles/${vehicle.id}`)}
               className="group relative block aspect-[16/9] overflow-hidden bg-slate-100"
             >
               <img
@@ -364,7 +521,7 @@ function AdvancedVehicleCards({
       {vehicles.map((vehicle) => (
         <Link
           key={vehicle.id}
-          href={localizedHref(`/vehicles/${vehicle.id}`)}
+          href={localizedHref(vehicle.detailPath ?? `/vehicles/${vehicle.id}`)}
           className="group"
         >
           <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:border-emerald-300 hover:shadow-md">
@@ -397,8 +554,21 @@ function AdvancedVehicleCards({
                 {vehicle.efficiency?.wltpRangeKm && (
                   <TechStat label={t.comparisonPage.range} value={`${Math.round(vehicle.efficiency.wltpRangeKm)} km`} />
                 )}
-                {vehicle.pricing?.basePriceEur && (
-                  <TechStat label={t.comparisonPage.price} value={`€${Math.round(vehicle.pricing.basePriceEur / 1000)}k`} />
+                {comparisonPriceSummaries(vehicle).map((price) => (
+                  <TechStat
+                    key={`${price.kind}-${price.marketScope}-${price.modelYear ?? price.yearFrom ?? 'price'}`}
+                    label={t.comparisonPage.price}
+                    value={comparisonPriceValueFromSummary(price, t)}
+                  />
+                ))}
+                {vehicle.charging?.dcChargeSpeedKw && (
+                  <TechStat label={t.comparisonPage.dcChargingPower} value={`${Math.round(vehicle.charging.dcChargeSpeedKw)} kW`} />
+                )}
+                {vehicle.charging?.acChargeSpeedKw && (
+                  <TechStat label={t.comparisonPage.acChargingPower} value={`${Math.round(vehicle.charging.acChargeSpeedKw)} kW`} />
+                )}
+                {vehicle.charging?.standardCharger && (
+                  <TechStat label={t.comparisonPage.chargingPlug} value={vehicle.charging.standardCharger} />
                 )}
                 {vehicle.battery?.capacityKwh && (
                   <TechStat label={t.comparisonPage.battery} value={`${vehicle.battery.capacityKwh.toFixed(1)} kWh`} />
@@ -442,25 +612,31 @@ function SimpleComparisonDecision({
       label: t.comparisonPage.simplePrice,
       helper: t.comparisonPage.simplePriceHelp,
       winner: cheapest,
-      value: cheapest ? formatCurrency(cheapest.value) : 'N/D',
+      value: cheapest
+        ? `${priceContextLabel(cheapest.vehicle, t)} ${formatCurrency(cheapest.value)}`
+        : 'N/D',
+      context: priceYearContext(cheapest?.vehicle, t),
     },
     {
       label: t.comparisonPage.simpleRange,
       helper: t.comparisonPage.simpleRangeHelp,
       winner: bestRange,
       value: bestRange ? formatNumber(bestRange.value, 'km') : 'N/D',
+      context: t.comparisonPage.simpleWltpContext,
     },
     {
       label: t.comparisonPage.simpleCharging,
       helper: t.comparisonPage.simpleChargingHelp,
       winner: fastestCharge,
       value: fastestCharge ? formatNumber(fastestCharge.value, 'min') : 'N/D',
+      context: t.comparisonPage.simpleDcChargeContext,
     },
     {
       label: t.comparisonPage.simpleSpace,
       helper: t.comparisonPage.simpleSpaceHelp,
       winner: mostSpace,
       value: mostSpace ? formatNumber(mostSpace.value, 'L') : 'N/D',
+      context: t.comparisonPage.simpleCargoContext,
     },
   ]
 
@@ -488,15 +664,15 @@ function SimpleComparisonDecision({
               {item.helper}
             </p>
             <div className="mt-auto rounded-md bg-white p-3 shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
-                {t.comparisonPage.simpleWinner}
-              </p>
-              <p className="mt-1 font-bold text-slate-950">
+              <p className="font-bold text-slate-950">
                 {item.winner?.vehicle.displayName ?? 'N/D'}
               </p>
               <p className="mt-1 text-sm font-semibold text-emerald-700">
                 {item.value}
               </p>
+              {item.context && (
+                <p className="mt-1 text-xs font-semibold text-slate-500">{item.context}</p>
+              )}
             </div>
           </div>
         ))}

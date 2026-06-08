@@ -1,22 +1,46 @@
 {
-  "pt": {
-    "currency": "EUR",
-
-    "consumerPrice": {
-      "min": 38900,
-      "max": 43900
+  "market": "pt",
+  "currency": "EUR",
+  "lastReviewedAt": "2026-05",
+  "offers": [
+    {
+      "condition": "new",
+      "status": "available",
+      "marketScope": "official_pt",
+      "includesVat": true,
+      "sourceType": "official_brand",
+      "confidence": "high",
+      "priceFrom": 39000,
+      "priceTo": 43900,
+      "priceDate": "2026-05",
+      "modelYear": 2026,
+      "yearFrom": 2015,
+      "sourceLabel": "Alpine Cars Portugal",
+      "sourceUrl": "https://www.alpinecars.pt/modelos-eletricos/a290.html?CAMPAIGN=pt-pt-a-l-def-model-a290-electric-go-classic-a290&ORIGIN=paid_search&utm_source=google&utm_source_platform=SA360&utm_medium=cpc&utm_campaign=pt-pt-a-l-def-model-a290-electric-go-classic-a290&utm_id=23370362286&gclsrc=aw.ds&gad_source=1&gad_campaignid=23370362286&gbraid=0AAAAADeP3DqMgnRyfm00C1uuj-fFnibMY&gclid=Cj0KCQjwio_RBhDMARIsAJPveNMUuEUL_27Er2s64qxkvLMIaW7LxFt4wuLTO1sPcThcGR62wTCKocAaAhIeEALw_wcB",
+      "displayPriority": 1,
+      "notes": null
     },
-
-    "businessPriceExVat": {
-      "min": 31626,
-      "max": 35691
-    },
-
-    "usedPrice": {
-      "min": 0,
-      "max": 0
-    },
-
-    "updatedAt": "2026-05"
-  }
+    {
+      "condition": "new",
+      "status": "available",
+      "marketScope": "official_pt",
+      "includesVat": true,
+      "sourceType": "classifieds",
+      "confidence": "high",
+      "priceFrom": 35000,
+      "priceTo": 44500,
+      "priceDate": "2026-06",
+      "modelYear": 2025,
+      "yearFrom": 2025,
+      "yearTo": 2026,
+      "sourceLabel": "autoscout24",
+      "sourceUrl": "https://www.autoscout24.com/lst/alpine/a290?atype=C&cy=D%2CA%2CB%2CE%2CF%2CI%2CL%2CNL&damaged_listing=exclude&desc=0&kmfrom=6000&powertype=kw&search_id=1j7z3bsqbjp&sort=price&source=homepage_search-mask&ustate=N%2CU",
+      "displayPriority": 2,
+      "originMarkets": [
+        "NL"
+      ],
+      "estimatedPortugalCostsIncluded": false,
+      "notes": null
+    }
+  ]
 }

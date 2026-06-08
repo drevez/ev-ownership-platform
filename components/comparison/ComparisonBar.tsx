@@ -35,16 +35,16 @@ export function ComparisonBar() {
   if (!hasHydrated) {
      return null
   }
-  if (basePathname === '/compare' || state.vehicleIds.length === 0) {
+  if (basePathname.startsWith('/compare') || state.vehicleIds.length === 0) {
     return null
   }
 
   const compareHref =
     state.vehicleIds.length >= 2
-      ? `/compare?${state.vehicleIds
+      ? `/compare/versions?${state.vehicleIds
           .map((id) => `ids=${encodeURIComponent(id)}`)
           .join('&')}`
-      : '/compare'
+      : '/compare/versions'
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-slate-900 to-slate-800 text-white z-40 border-t border-slate-700 shadow-2xl">

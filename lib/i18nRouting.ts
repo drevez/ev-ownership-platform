@@ -21,6 +21,11 @@ const LOCALIZED_ROUTE_SEGMENTS: Record<string, Record<Language, string>> = {
     en: 'compare',
     es: 'comparador',
   },
+  versions: {
+    pt: 'versoes',
+    en: 'versions',
+    es: 'versiones',
+  },
   recommend: {
     pt: 'recomendador',
     en: 'recommender',
@@ -110,11 +115,9 @@ export function delocalizePathname(pathname: string): string {
 
   if (segments.length === 0) return '/'
 
-  const [firstSegment, ...rest] = segments
-  const internalSegment =
-    LOCALIZED_TO_INTERNAL_SEGMENT[firstSegment] ?? firstSegment
-
-  return `/${[internalSegment, ...rest].join('/')}`
+  return `/${segments
+    .map((segment) => LOCALIZED_TO_INTERNAL_SEGMENT[segment] ?? segment)
+    .join('/')}`
 }
 
 export function localizePathname(
@@ -125,11 +128,9 @@ export function localizePathname(
 
   if (segments.length === 0) return `/${language}`
 
-  const [firstSegment, ...rest] = segments
-  const localizedSegment =
-    LOCALIZED_ROUTE_SEGMENTS[firstSegment]?.[language] ?? firstSegment
-
-  return `/${language}/${[localizedSegment, ...rest].join('/')}`
+  return `/${language}/${segments
+    .map((segment) => LOCALIZED_ROUTE_SEGMENTS[segment]?.[language] ?? segment)
+    .join('/')}`
 }
 
 export function buildLocalizedHref(

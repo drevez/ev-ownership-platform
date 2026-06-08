@@ -120,7 +120,7 @@ export default function HomePage() {
           </div>
 
           <Link
-            href={localizedHref('/compare')}
+            href={localizedHref('/compare/models')}
             className="text-zinc-400 hover:text-white"
           >
             {t.home.featuredComparisons.viewAll}
@@ -134,7 +134,7 @@ export default function HomePage() {
             return (
               <Link
                 key={item.title}
-                href={localizedHref(`/compare?${query}`)}
+                href={localizedHref(`/compare/versions?${query}`)}
                 className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-zinc-900 transition hover:border-emerald-500/40"
                 aria-label={t.home.featuredComparisons.compareAriaLabel.replace('{title}',item.title)}
               >

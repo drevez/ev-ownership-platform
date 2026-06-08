@@ -10,9 +10,39 @@ import {
   LOCALE_QUERY_PARAM,
   stripLanguageFromPathname,
 } from '@/lib/i18nRouting'
+import { isInternalAuthorized } from '@/lib/internalAuth'
 
 const LOCALE_HEADER = 'x-motorzero-locale'
 const PATHNAME_HEADER = 'x-motorzero-pathname'
+
+function isInternalPath(pathname: string) {
+  return (
+    pathname === '/internal' ||
+    pathname.startsWith('/internal/') ||
+    pathname === '/api/internal' ||
+    pathname.startsWith('/api/internal/') ||
+    /^\/(?:pt|en|es)\/internal(?:\/|$)/.test(pathname)
+  )
+}
+
+function internalUnauthorizedResponse(pathname: string) {
+  const headers = {
+    'Cache-Control': 'no-store',
+    'WWW-Authenticate': 'Basic realm="MotorZero Internal", charset="UTF-8"',
+  }
+
+  if (pathname.startsWith('/api/')) {
+    return NextResponse.json(
+      { error: 'Authentication required.' },
+      { status: 401, headers }
+    )
+  }
+
+  return new NextResponse('Authentication required.', {
+    status: 401,
+    headers,
+  })
+}
 
 function withLocaleCookie(response: NextResponse, locale: string) {
   response.cookies.set('locale', locale, {
@@ -26,6 +56,15 @@ function withLocaleCookie(response: NextResponse, locale: string) {
 
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+
+  if (isInternalPath(pathname) && !isInternalAuthorized(request)) {
+    return internalUnauthorizedResponse(pathname)
+  }
+
+  if (pathname.startsWith('/api/')) {
+    return NextResponse.next()
+  }
+
   const pathLocale = getLanguageFromPathname(pathname)
   const queryLocale = request.nextUrl.searchParams.get(LOCALE_QUERY_PARAM)
   const cookieLocale = request.cookies.get('locale')?.value
@@ -70,5 +109,6 @@ export function proxy(request: NextRequest) {
 export const config = {
   matcher: [
     '/((?!api|_next|favicon.ico|.*\\..*).*)',
+    '/api/internal/:path*',
   ],
 }

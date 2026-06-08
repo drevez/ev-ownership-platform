@@ -6,6 +6,7 @@ import { useLocale } from '../context/LocaleContext'
 import { useTranslations } from '../hooks/useTranslations'
 import { useLocalizedHref } from '../hooks/useLocalizedHref'
 import { LANGUAGE_LABELS, SUPPORTED_LANGUAGES, type Language } from '@/config/i18n'
+import { OPEN_COOKIE_SETTINGS_EVENT } from '@/lib/cookieConsent'
 
 export function SiteFooter() {
   const { locale, setLocale } = useLocale()
@@ -165,6 +166,16 @@ export function SiteFooter() {
               >
                 {t.footer.cookies}
               </Link>
+
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(
+                  new Event(OPEN_COOKIE_SETTINGS_EVENT)
+                )}
+                className="text-sm text-zinc-600 transition-colors duration-300 hover:text-zinc-300"
+              >
+                {t.footer.cookieSettings}
+              </button>
 
             </div>
           </div>

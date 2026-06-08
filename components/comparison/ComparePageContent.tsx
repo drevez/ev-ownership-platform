@@ -11,6 +11,8 @@ import { useTranslations } from '@/hooks/useTranslations'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 import { getTranslations } from '@/lib/getTranslations'
 
+type CompareContentKind = 'auto' | 'models' | 'versions'
+
 export function CompareLoadingFallback() {
   const t = useTranslations()
   return (
@@ -23,21 +25,57 @@ export function CompareLoadingFallback() {
   )
 }
 
-export function ComparePageContent() {
+export function ComparePageContent({
+  kind = 'auto',
+}: {
+  kind?: CompareContentKind
+}) {
   const searchParams = useSearchParams()
   const compareIds = searchParams.getAll('ids')
+  const compareModels = searchParams.getAll('models')
+  const effectiveKind: Exclude<CompareContentKind, 'auto'> =
+    kind === 'auto'
+      ? compareIds.length >= 2 && compareModels.length < 2
+        ? 'versions'
+        : 'models'
+      : kind
 
-  if (compareIds.length < 2) {
-    return <VehicleSelector initialSelectedIds={compareIds} />
+  if (
+    (effectiveKind === 'models' && compareModels.length < 2) ||
+    (effectiveKind === 'versions' && compareIds.length < 2)
+  ) {
+    return (
+      <VehicleSelector
+        initialSelectedIds={compareIds}
+        initialSelectedModelSlugs={compareModels}
+        initialMode={effectiveKind}
+      />
+    )
   }
 
-  return <CompareResultsView compareIds={compareIds} />
+  return (
+    <CompareResultsView
+      compareIds={compareIds}
+      compareModels={compareModels}
+      kind={effectiveKind}
+    />
+  )
 }
 
-function CompareResultsView({ compareIds }: { compareIds: string[] }) {
+function CompareResultsView({
+  compareIds,
+  compareModels,
+  kind,
+}: {
+  compareIds: string[]
+  compareModels: string[]
+  kind: Exclude<CompareContentKind, 'auto'>
+}) {
   const [vehicles, setVehicles] = useState<ComparisonVehicle[]>([])
   const [isLoading, setIsLoading] = useState(true)
-  const compareIdsKey = compareIds.join(',')
+  const compareKey = kind === 'models'
+    ? `models:${compareModels.join(',')}`
+    : `ids:${compareIds.join(',')}`
   const t = useTranslations()
   const localizedHref = useLocalizedHref()
 
@@ -45,11 +83,17 @@ function CompareResultsView({ compareIds }: { compareIds: string[] }) {
     async function loadComparisonVehicles() {
       setIsLoading(true)
       try {
-        const ids = compareIdsKey.split(',').filter(Boolean)
+        const isModelComparison = kind === 'models'
+        const selected = compareKey
+          .replace(isModelComparison ? 'models:' : 'ids:', '')
+          .split(',')
+          .filter(Boolean)
         const params = new URLSearchParams()
-        ids.forEach((id) => params.append('ids', id))
+        selected.forEach((id) => params.append(isModelComparison ? 'models' : 'ids', id))
 
-        const response = await fetch(`/api/vehicles?${params.toString()}`)
+        const response = await fetch(
+          `${isModelComparison ? '/api/models/compare' : '/api/vehicles'}?${params.toString()}`
+        )
         const data = await response.json()
 
         const loadedVehicles = (data.vehicles ?? []) as ComparisonVehicle[]
@@ -70,7 +114,7 @@ function CompareResultsView({ compareIds }: { compareIds: string[] }) {
     }
 
     loadComparisonVehicles()
-  }, [compareIdsKey, t])
+  }, [compareKey, kind, t])
 
   if (isLoading) {
     return <CompareLoadingFallback />
@@ -84,14 +128,14 @@ function CompareResultsView({ compareIds }: { compareIds: string[] }) {
             {t.comparePage.home}
           </Link>
           <span>/</span>
-          <Link href={localizedHref('/compare')} className="hover:text-slate-900 transition">
+          <Link href={localizedHref('/compare/models')} className="hover:text-slate-900 transition">
             {t.comparePage.compare}
           </Link>
           <span>/</span>
           <span className="text-slate-900">{t.comparePage.result}</span>
           <span className="ml-auto">
             <Link
-              href={localizedHref('/compare')}
+              href={localizedHref(kind === 'models' ? '/compare/models' : '/compare/versions')}
               className="font-medium text-emerald-700 hover:text-emerald-900 transition"
             >
               {t.comparePage.editSelection}

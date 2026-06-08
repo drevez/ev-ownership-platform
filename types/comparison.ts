@@ -22,6 +22,8 @@ export interface VehicleDataForComparison {
   doors?: number
   seats?: number
   modelYear?: number
+  detailPath?: string
+  variantCount?: number
   
   // Core specs
   battery?: {
@@ -57,6 +59,28 @@ export interface VehicleDataForComparison {
     basePriceEur?: number
     recommendedPriceEur?: number
     highestPriceEur?: number
+    primaryPrice?: {
+      kind?: 'new' | 'used' | 'importedUsed'
+      status?: string
+      marketScope?: string
+      priceFrom?: number
+      priceTo?: number
+      modelYear?: number
+      yearFrom?: number
+      yearTo?: number
+      isLegacy?: boolean
+    }
+    priceSummaries?: {
+      kind?: 'new' | 'used' | 'importedUsed'
+      status?: string
+      marketScope?: string
+      priceFrom?: number
+      priceTo?: number
+      modelYear?: number
+      yearFrom?: number
+      yearTo?: number
+      isLegacy?: boolean
+    }[]
   }
   
   comfort?: {

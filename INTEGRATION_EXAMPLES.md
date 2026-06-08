@@ -1,5 +1,7 @@
 # Comparison Feature Integration Examples
 
+These snippets are illustrative. Prefer the existing components and localized routing helpers in the current codebase. The canonical comparison flows are `/compare/models` and `/compare/versions`, localized through `useLocalizedHref`.
+
 ## Example 1: Add Compare Button to Home Page Recommendation Cards
 
 If you have a recommendation card component on your home page:

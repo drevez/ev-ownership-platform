@@ -7,6 +7,10 @@ import {
   type ContentLanguage,
   type EditableContentValues,
 } from '@/lib/internalContentFiles'
+import {
+  internalApiUnauthorizedResponse,
+  isInternalAuthorized,
+} from '@/lib/internalAuth'
 
 interface SaveContentBody {
   values?: EditableContentValues
@@ -34,6 +38,10 @@ function validateValues(values: unknown): values is EditableContentValues {
 }
 
 export async function POST(request: Request) {
+  if (!isInternalAuthorized(request)) {
+    return internalApiUnauthorizedResponse()
+  }
+
   try {
     const body = (await request.json()) as SaveContentBody
 

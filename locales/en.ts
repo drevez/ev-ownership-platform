@@ -347,6 +347,45 @@ export const en = {
     title: "Contact",
     description: "Reach out about partnerships, data corrections, suggestions, or feedback about the platform."
   },
+  legalPages: {
+    privacy: {
+      metadataTitle: "Privacy Policy",
+      metadataDescription: "How MotorZero handles personal data and usage information.",
+      title: "Privacy Policy",
+      description: "What data we process, why we process it, and your rights.",
+      updated: "Last updated: June 9, 2026",
+      sections: [
+        { title: "Controller", paragraphs: ["MotorZero is responsible for data processed through motorzero.pt. For privacy questions, use the Contact page."] },
+        { title: "Data and purposes", paragraphs: ["We may process information submitted voluntarily and technical usage data when you allow analytics.", "We use it to answer requests, maintain security, improve the service, and produce aggregated statistics. We do not sell personal data."] },
+        { title: "Retention and rights", paragraphs: ["We retain data only for as long as required for its purpose or a legal obligation.", "You may request access, correction, deletion, restriction, objection, and, where applicable, portability. You can withdraw consent through Cookie settings."] }
+      ]
+    },
+    cookies: {
+      metadataTitle: "Cookie Policy",
+      metadataDescription: "Cookies used by MotorZero and how to manage consent.",
+      title: "Cookie Policy",
+      description: "The cookie categories we use and how you can change your choice.",
+      updated: "Last updated: June 9, 2026",
+      sections: [
+        { title: "Necessary", paragraphs: ["These support essential functions such as saving language and consent preferences."] },
+        { title: "Analytics", paragraphs: ["With permission, Google Analytics 4 may create cookies such as _ga and _ga_* to measure visits. Without permission, analytics_storage remains denied."] },
+        { title: "Marketing", paragraphs: ["This controls ad_storage, ad_user_data, and ad_personalization. We currently do not use Google Ads, Meta Pixel, or Microsoft Clarity."] },
+        { title: "Changing your choice", paragraphs: ["You can reopen Cookie settings from the footer. Your choice is retained for 180 days and requested again when the policy changes or that period expires."] }
+      ]
+    },
+    terms: {
+      metadataTitle: "Terms of Use",
+      metadataDescription: "Terms governing use of the MotorZero platform.",
+      title: "Terms of Use",
+      description: "Terms applying to MotorZero information and tools.",
+      updated: "Last updated: June 9, 2026",
+      sections: [
+        { title: "Information", paragraphs: ["MotorZero provides comparative and educational information. Data may be incomplete, under validation, or subject to change."] },
+        { title: "Prices and decisions", paragraphs: ["Prices, range, consumption, charging, and costs are references, not commercial offers. Always confirm final conditions with the relevant provider."] },
+        { title: "Use and liability", paragraphs: ["Abusive automated extraction, interference with the service, or commercial reuse without permission is prohibited.", "We aim to keep information accurate and the service available, but cannot guarantee the absence of errors or interruptions."] }
+      ]
+    }
+  },
   modelPage: {
     home: "Home",
     version: "version",
@@ -419,19 +458,26 @@ export const en = {
     advancedModeDescription: "Shows highlights, summary, and the full specifications table.",
     simpleDecisionTitle: "Quick decision view",
     simpleDecisionDescription: "For people who do not want to dig into specs: quickly see which car wins on price, range, charging, and space.",
-    simpleWinner: "Wins here",
-    simplePrice: "Best for spending less",
-    simplePriceHelp: "The cheapest can be the rational choice if it still fits your daily use.",
+    simpleWinner: "Result",
+    simplePrice: "Lowest price found",
+    simplePriceHelp: "Compares the available reference price, distinguishing new, used, or imported when the data exists.",
     simpleRange: "Best for less anxiety",
     simpleRangeHelp: "More range gives more margin for long days and trips with less planning.",
-    simpleCharging: "Best for trips",
-    simpleChargingHelp: "Fewer minutes from 10-80% means shorter stops on the road.",
+    simpleCharging: "Shortest charging stop",
+    simpleChargingHelp: "Compares the estimated 10-80% fast-charging time, useful for road trips.",
     simpleSpace: "Best for family/load",
     simpleSpaceHelp: "More boot space helps with luggage, shopping, child gear, and equipment.",
     simpleStrongOption: "Strong pick",
     simpleRangeLabel: "Stress-free use",
     simpleChargingLabel: "Trip stops",
     simpleCargoLabel: "Everyday space",
+    simplePriceContextUnknown: "Reference price",
+    simpleWltpContext: "WLTP range",
+    simpleDcChargeContext: "Fast charging 10-80%",
+    simpleCargoContext: "Boot space with seats up",
+    dcChargingPower: "Max DC power",
+    acChargingPower: "Max AC power",
+    chargingPlug: "Plug",
     rangeFeelings: {
       unknown: "No reliable data yet",
       relaxed: "Very comfortable for routine and trips",
@@ -471,12 +517,15 @@ export const en = {
   vehicleSelector: {
     loading: "Loading vehicles...",
     title: "Choose vehicles to compare",
-    description: "Select 2 or 3 vehicles from the list. Comparison only starts when you click \"Compare now\".",
+    description: "Select 2 or 3 models, even from different brands. Switch to versions when you want to compare specific variants.",
+    modelMode: "Models",
+    versionMode: "Versions",
     selected: "Selected",
     maxVehicles: "Maximum 3 vehicles",
     select: "Select",
     noneSelected: "No vehicles selected — choose at least 2 vehicles.",
-    selectedCount: "of 3 selected:",
+    selectedCount: "of 3 selected",
+    selectedCount2: "of 3 selected:",
     remove: "Remove",
     compareNow: "Compare now",
     selectOneMore: "Select one more vehicle to compare.",
@@ -487,7 +536,11 @@ export const en = {
     bodyFilter: "Body style",
     allBrands: "All brands",
     allBodies: "All body styles",
-    resultsCount: "models found"
+    resultsCount: "models found",
+    modelResultsCount: "models found",
+    versionResultsCount: "versions found",
+    versionAvailable: "version available",
+    versionsAvailable: "versions available"
   },
   batteryAndCharging: {
     title: "Battery & Charging",
@@ -653,7 +706,7 @@ export const en = {
       efficiencyDescription: "Best kWh/100km",
       fastest: "Fastest",
       acceleration: "0-100 km/h acceleration",
-      startingPrice: "Starting Price",
+      startingPrice: "Price from",
       wltpRange: "WLTP Range",
       batteryCapacity: "Battery Capacity",
       wltpConsumption: "WLTP Consumption",
@@ -694,7 +747,21 @@ export const en = {
     language: "Language",
     privacy: "Privacy",
     terms: "Terms",
-    cookies: "Cookies"
+    cookies: "Cookies",
+    cookieSettings: "Cookie settings"
+  },
+  cookieConsent: {
+    title: "Your privacy",
+    description: "We use optional cookies to measure how MotorZero is used and improve the experience. You can accept, reject, or choose by category.",
+    preferencesDescription: "Choose which optional categories you allow. Necessary cookies are always active so the website can work.",
+    analytics: "Analytics",
+    analyticsDescription: "Helps us understand how the website is used.",
+    marketing: "Marketing",
+    marketingDescription: "Allows advertising measurement and personalisation. We do not use advertising platforms yet.",
+    acceptAll: "Accept all",
+    rejectAll: "Reject all",
+    managePreferences: "Manage preferences",
+    savePreferences: "Save preferences"
   },
   models: {
     catalog: "Catalog",

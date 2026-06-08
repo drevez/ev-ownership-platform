@@ -7,6 +7,10 @@ import {
   writeVehicleFiles,
   type VehicleFiles,
 } from '@/lib/internalVehicleFiles'
+import {
+  internalApiUnauthorizedResponse,
+  isInternalAuthorized,
+} from '@/lib/internalAuth'
 
 interface UpdateVehicleBody {
   files?: VehicleFiles
@@ -17,6 +21,10 @@ interface VehicleRouteContext {
 }
 
 export async function PUT(request: Request, { params }: VehicleRouteContext) {
+  if (!isInternalAuthorized(request)) {
+    return internalApiUnauthorizedResponse()
+  }
+
   try {
     const { id } = await params
     const body = (await request.json()) as UpdateVehicleBody

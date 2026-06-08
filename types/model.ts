@@ -43,6 +43,7 @@ export interface ModelExplorerVariant {
   wltpRangeKm?: number
   motorwayRangeKm?: number
   dcChargeKw?: number
+  chargeTime10To80Min?: number
   usableBatteryKwh?: number
   consumptionWhKm?: number
   seats?: number
@@ -69,6 +70,7 @@ export interface ModelExplorerItem {
   maxWltpRangeKm?: number
   maxMotorwayRangeKm?: number
   maxDcChargeKw?: number
+  minChargeTime10To80Min?: number
   maxUsableBatteryKwh?: number
   bestConsumptionWhKm?: number
   maxSeats?: number

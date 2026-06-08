@@ -348,6 +348,8 @@ export function normalizeVehicleForComparison(
   const dcChargeKw = getVehicleDcChargeKw(vehicle.charging)
   const acChargeKw = getVehicleAcChargeKw(vehicle.charging)
   const chargeTime10To80Min = getVehicleChargeTime10To80Min(vehicle.charging)
+  const priceSummaries = getVehiclePriceSummaries(vehicle.pricing)
+  const primaryPriceSummary = getPrimaryVehiclePriceSummary(vehicle.pricing)
   const basePriceEur = getVehiclePriceFromEur(vehicle.pricing)
   const highestPriceEur = getVehicleHighestPriceEur(vehicle.pricing)
 
@@ -404,6 +406,30 @@ export function normalizeVehicleForComparison(
       basePriceEur,
       recommendedPriceEur: basePriceEur,
       highestPriceEur,
+      primaryPrice: primaryPriceSummary
+        ? {
+            kind: primaryPriceSummary.kind,
+            status: primaryPriceSummary.status,
+            marketScope: primaryPriceSummary.marketScope,
+            priceFrom: primaryPriceSummary.priceFrom,
+            priceTo: primaryPriceSummary.priceTo,
+            modelYear: primaryPriceSummary.modelYear,
+            yearFrom: primaryPriceSummary.yearFrom,
+            yearTo: primaryPriceSummary.yearTo,
+            isLegacy: primaryPriceSummary.isLegacy,
+          }
+        : undefined,
+      priceSummaries: priceSummaries.map((summary) => ({
+        kind: summary.kind,
+        status: summary.status,
+        marketScope: summary.marketScope,
+        priceFrom: summary.priceFrom,
+        priceTo: summary.priceTo,
+        modelYear: summary.modelYear,
+        yearFrom: summary.yearFrom,
+        yearTo: summary.yearTo,
+        isLegacy: summary.isLegacy,
+      })),
     },
     comfort: vehicle.comfort,
   }

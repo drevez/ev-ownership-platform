@@ -7,6 +7,7 @@ npm run dev
 npm run build
 npm run lint
 npm run validate:vehicles
+npm run generate:registry
 ```
 
 ## Important Files
@@ -18,6 +19,11 @@ scripts/validate-vehicles.mjs
 lib/loadVehicle.ts
 lib/normalizeVehicle.ts
 lib/comparison.ts
+lib/internalContentFiles.ts
+lib/internalVehicleFiles.ts
+lib/cookieConsent.ts
+components/CookieConsentBanner.tsx
+components/GoogleTagManager.tsx
 data/registry/vehicles.json
 public/data/vehicles/
 ```
@@ -61,7 +67,7 @@ cargoLitersSeatsUp            -> dimensions.trunkCapacityL
 
 New or migrated `pricing.json` files should use the `offers` array documented in `VEHICLE_DATA_GUIDE.md`.
 
-Important: `offers[]` is the target schema. The current app and validator still need a migration pass before it becomes the only supported runtime format.
+Important: the app, validator, pricing UI, and internal dashboard read `offers[]`, but legacy/intermediate pricing shapes are still tolerated while the dataset is being migrated.
 
 The UI translates labels from semantic pricing fields:
 
@@ -97,4 +103,27 @@ components/comparison/VehicleSelector.tsx
 
 - `npm run build` should pass.
 - `npm run validate:vehicles` reports data cleanup tasks without blocking.
-- `npm run lint` still includes known follow-up issues in older code.
+- `npm run lint` should pass with warnings only: remaining `<img>` usage and one CompareContext hook dependency warning.
+
+## Internal Tools
+
+```txt
+/internal/vehicles     Vehicle data health dashboard and JSON editor
+/internal/content      Page copy, translation, and SEO editor
+```
+
+Internal pages and write APIs require `INTERNAL_AUTH_USERNAME` and `INTERNAL_AUTH_PASSWORD`.
+
+## Analytics
+
+```env
+NEXT_PUBLIC_GTM_ID=GTM-MG49P4DS
+```
+
+GTM is the only tracking container. Do not add GA4 directly to the app. Consent is stored under `motorzero_cookie_consent_v1`, expires after 180 days, and can be reopened from the footer.
+
+Full guide:
+
+```txt
+docs/ANALYTICS_CONSENT.md
+```

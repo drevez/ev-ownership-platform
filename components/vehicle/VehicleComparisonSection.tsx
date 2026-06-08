@@ -37,10 +37,10 @@ export function VehicleComparisonSection({
 
   const compareHref =
     count >= 2
-      ? `/compare?${state.vehicleIds
+      ? `/compare/versions?${state.vehicleIds
           .map((id) => `ids=${encodeURIComponent(id)}`)
           .join('&')}`
-      : '/compare'
+      : '/compare/versions'
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-emerald-500">

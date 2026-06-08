@@ -13,6 +13,9 @@ const STATIC_PATHS = [
   '/recommend',
   '/about',
   '/contacts',
+  '/privacy',
+  '/cookies',
+  '/terms',
 ]
 
 function localizedUrl(pathname: string, language: Language) {
