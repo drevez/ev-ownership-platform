@@ -240,6 +240,12 @@ export default async function InternalVehiclesPage({
 
         <div className="mb-8 flex flex-wrap gap-3">
           <Link
+            href="/internal"
+            className="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-emerald-500 hover:text-emerald-800"
+          >
+            Internal home
+          </Link>
+          <Link
             href="/internal/vehicles/new"
             className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
           >

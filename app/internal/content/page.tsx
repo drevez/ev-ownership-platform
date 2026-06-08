@@ -28,6 +28,12 @@ export default function InternalContentPage() {
 
           <div className="flex flex-wrap gap-3">
             <Link
+              href="/internal"
+              className="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-emerald-500 hover:text-emerald-800"
+            >
+              Internal home
+            </Link>
+            <Link
               href="/internal/vehicles"
               className="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-emerald-500 hover:text-emerald-800"
             >
