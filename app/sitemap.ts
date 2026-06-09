@@ -1,6 +1,10 @@
 import type { MetadataRoute } from 'next'
 
-import { SUPPORTED_LANGUAGES, type Language } from '@/config/i18n'
+import {
+  LANGUAGE_LOCALES,
+  SUPPORTED_LANGUAGES,
+  type Language,
+} from '@/config/i18n'
 import { buildLocalizedHref } from '@/lib/i18nRouting'
 import { absoluteUrl } from '@/lib/siteUrl'
 import { getAllModelSlugs } from '@/lib/models'
@@ -10,6 +14,8 @@ const STATIC_PATHS = [
   '/',
   '/models',
   '/compare',
+  '/compare/models',
+  '/compare/versions',
   '/recommend',
   '/about',
   '/contacts',
@@ -23,13 +29,16 @@ function localizedUrl(pathname: string, language: Language) {
 }
 
 function languageAlternates(pathname: string): Record<string, string> {
-  return SUPPORTED_LANGUAGES.reduce<Record<string, string>>(
+  const languages = SUPPORTED_LANGUAGES.reduce<Record<string, string>>(
     (acc, language) => {
-      acc[language] = localizedUrl(pathname, language)
+      acc[LANGUAGE_LOCALES[language]] = localizedUrl(pathname, language)
       return acc
     },
     {}
   )
+
+  languages['x-default'] = localizedUrl(pathname, 'pt')
+  return languages
 }
 
 function sitemapEntry(

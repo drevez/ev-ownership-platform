@@ -4,7 +4,6 @@ import { VehicleImage } from './VehicleImage'
 
 interface VehicleHeroProps {
   displayName: string
-  vehicleId?: string
   image: string
   segment?: string
   bodyType?: string
@@ -13,7 +12,6 @@ interface VehicleHeroProps {
 
 export function VehicleHero({
   displayName,
-  vehicleId,
   image,
   segment,
   bodyType,
@@ -28,8 +26,6 @@ export function VehicleHero({
           <VehicleImage
             src={image}
             alt={displayName}
-            vehicleId={vehicleId}
-            displayName={displayName}
           />
           {/* Gradient overlay - from bottom to top */}
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />

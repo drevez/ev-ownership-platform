@@ -193,6 +193,32 @@ export const EDITABLE_CONTENT_SECTIONS: EditableContentSection[] = [
         multiline: true,
         seo: true,
       },
+      {
+        id: 'compare.modelsMetadataTitle',
+        label: 'SEO modelos título',
+        path: ['compare', 'modelsMetadataTitle'],
+        seo: true,
+      },
+      {
+        id: 'compare.modelsMetadataDescription',
+        label: 'SEO modelos descrição',
+        path: ['compare', 'modelsMetadataDescription'],
+        multiline: true,
+        seo: true,
+      },
+      {
+        id: 'compare.versionsMetadataTitle',
+        label: 'SEO versões título',
+        path: ['compare', 'versionsMetadataTitle'],
+        seo: true,
+      },
+      {
+        id: 'compare.versionsMetadataDescription',
+        label: 'SEO versões descrição',
+        path: ['compare', 'versionsMetadataDescription'],
+        multiline: true,
+        seo: true,
+      },
       { id: 'comparisonPage.title', label: 'Título resultado', path: ['comparisonPage', 'title'] },
       {
         id: 'comparisonPage.simpleDecisionTitle',

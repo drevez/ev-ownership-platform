@@ -8,6 +8,7 @@ import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import { useTranslations } from '@/hooks/useTranslations'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 import { stripLanguageFromPathname } from '@/lib/i18nRouting'
+import { SafeImage } from '@/components/SafeImage'
 
 function useHasHydrated() {
   return useSyncExternalStore(
@@ -84,14 +85,13 @@ export function ComparisonBar() {
                 >
                   <div className="flex items-center gap-3 p-3">
 
-                    <div className="w-16 h-16 bg-slate-700 rounded flex-shrink-0 overflow-hidden">
-                      <img
+                    <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded bg-slate-700">
+                      <SafeImage
                         src={vehicle.image || VEHICLE_PLACEHOLDER_IMAGE}
                         alt={vehicle.displayName}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        onError={(event) => {
-                          event.currentTarget.src = VEHICLE_PLACEHOLDER_IMAGE
-                        }}
+                        fill
+                        sizes="64px"
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
 

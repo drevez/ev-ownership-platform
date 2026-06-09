@@ -28,8 +28,12 @@ export async function generateMetadata({ searchParams }: SearchPageProps) {
   const t = getTranslations(locale)
 
   return {
-    title: `${t.home.hero.searchButton}: ${q} | MotorZero`,
+    title: `${t.home.hero.searchButton}: ${q}`,
     description: t.home.hero.searchPlaceholder,
+    robots: {
+      index: false,
+      follow: true,
+    },
   }
 }
 

@@ -1,14 +1,17 @@
 'use client'
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import dynamic from 'next/dynamic'
 import { ComparisonVehicle } from '@/types/comparison'
-import { ComparisonMetricsTable } from './ComparisonMetricsTable'
-import { ComparisonSummary } from './ComparisonSummary'
-import { ComparisonBadgesSection } from './ComparisonBadgesSection'
 import Link from 'next/link'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import { useTranslations } from '@/hooks/useTranslations'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
+import { SafeImage } from '@/components/SafeImage'
+
+const AdvancedComparisonContent = dynamic(() =>
+  import('./AdvancedComparisonContent').then((module) => module.AdvancedComparisonContent)
+)
 
 interface ComparisonPageProps {
   vehicles: ComparisonVehicle[]
@@ -358,9 +361,7 @@ export function ComparisonPage({
         ) : (
           <>
             <AdvancedVehicleCards vehicles={vehicles} localizedHref={localizedHref} gridClass={vehicleGridClass} />
-            <ComparisonBadgesSection vehicles={vehicles} gridClass={vehicleGridClass} />
-            <ComparisonSummary vehicles={vehicles} gridClass={vehicleGridClass} />
-            <ComparisonMetricsTable vehicles={vehicles} />
+            <AdvancedComparisonContent vehicles={vehicles} gridClass={vehicleGridClass} />
           </>
         )}
 
@@ -431,13 +432,12 @@ function SimpleVehicleCards({
               href={localizedHref(vehicle.detailPath ?? `/vehicles/${vehicle.id}`)}
               className="group relative block aspect-[16/9] overflow-hidden bg-slate-100"
             >
-              <img
+              <SafeImage
                 src={vehicle.image || VEHICLE_PLACEHOLDER_IMAGE}
                 alt={vehicle.displayName}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                onError={(event) => {
-                  event.currentTarget.src = VEHICLE_PLACEHOLDER_IMAGE
-                }}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/70 to-transparent p-4">
                 <div className="flex flex-wrap items-center gap-2">
@@ -526,13 +526,12 @@ function AdvancedVehicleCards({
         >
           <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:border-emerald-300 hover:shadow-md">
             <div className="h-56 bg-slate-100 overflow-hidden relative">
-              <img
+              <SafeImage
                 src={vehicle.image || VEHICLE_PLACEHOLDER_IMAGE}
                 alt={vehicle.displayName}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                onError={(event) => {
-                  event.currentTarget.src = VEHICLE_PLACEHOLDER_IMAGE
-                }}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 to-transparent" />
               {vehicle.bestFor && vehicle.bestFor[0] && (

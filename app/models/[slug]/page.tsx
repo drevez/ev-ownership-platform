@@ -23,7 +23,7 @@ export async function generateMetadata({params,}: ModelRouteProps) {
   }
 
   return {
-    title: `${model.displayName} | MotorZero`,
+    title: model.displayName,
     description: t.model.description
       .replace('{count}', String(model.variants.length))
       .replace('{model}', model.displayName),

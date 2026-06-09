@@ -16,9 +16,9 @@ import { getTranslations } from '@/lib/getTranslations'
 import { getRequestLanguage, getRequestPathname } from '@/lib/serverLocale'
 import { buildLocalizedHref, stripLanguageFromPathname } from '@/lib/i18nRouting'
 import {
+  DEFAULT_LANGUAGE,
   LANGUAGE_LOCALES,
   SUPPORTED_LANGUAGES,
-  type Language,
 } from '@/config/i18n'
 import { getSiteUrl } from '@/lib/siteUrl'
 
@@ -37,13 +37,14 @@ export async function generateMetadata(): Promise<Metadata> {
   const pathname = await getRequestPathname()
   const basePathname = stripLanguageFromPathname(pathname)
   const t = getTranslations(locale)
-  const languages = SUPPORTED_LANGUAGES.reduce<Record<Language, string>>(
+  const languages = SUPPORTED_LANGUAGES.reduce<Record<string, string>>(
     (acc, language) => {
-      acc[language] = buildLocalizedHref(basePathname, language)
+      acc[LANGUAGE_LOCALES[language]] = buildLocalizedHref(basePathname, language)
       return acc
     },
-    {} as Record<Language, string>
+    {}
   )
+  languages['x-default'] = buildLocalizedHref(basePathname, DEFAULT_LANGUAGE)
 
   return {
     metadataBase: new URL(getSiteUrl()),

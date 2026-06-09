@@ -5,57 +5,28 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useMemo, useState } from 'react'
 
-import type { ModelExplorerItem, ModelExplorerVariant } from '@/types/model'
+import type { ModelExplorerItem } from '@/types/model'
 import type { VehiclePriceSummary } from '@/lib/normalizeVehicle'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 import { useTranslations } from '@/hooks/useTranslations'
-
-type ExplorerMode = 'models' | 'variants'
-type IntentFilter =
-  | 'budget'
-  | 'family'
-  | 'city'
-  | 'longTrips'
-  | 'suv'
-  | 'fastCharging'
-  | 'firstEv'
-  | 'range'
-type SortKey =
-  | 'recommended'
-  | 'priceAsc'
-  | 'rangeDesc'
-  | 'chargingDesc'
-  | 'efficiencyAsc'
-  | 'newest'
-  | 'completeDesc'
-  | 'az'
+import {
+  flattenVariants,
+  intentFilters,
+  modelIncludesQuery,
+  modelMatchesIntent,
+  sortKeys,
+  sortModels,
+  sortVariants,
+  type ExplorerMode,
+  type FlattenedModelVariant,
+  type IntentFilter,
+  type SortKey,
+} from '@/lib/modelExplorer'
 
 interface ModelsExplorerProps {
   models: ModelExplorerItem[]
   initialBrand?: string
 }
-
-const intentFilters: IntentFilter[] = [
-  'budget',
-  'family',
-  'city',
-  'longTrips',
-  'suv',
-  'fastCharging',
-  'firstEv',
-  'range',
-]
-
-const sortKeys: SortKey[] = [
-  'recommended',
-  'priceAsc',
-  'rangeDesc',
-  'chargingDesc',
-  'efficiencyAsc',
-  'newest',
-  'completeDesc',
-  'az',
-]
 
 function formatCurrency(value?: number) {
   if (value == null || value <= 0) return null
@@ -114,80 +85,6 @@ function priceKindLabel(price: VehiclePriceSummary | undefined, t: ReturnType<ty
   return t.modelsExplorer.price.kind[price.kind]
 }
 
-function includesText(value: string, query: string) {
-  return value.toLowerCase().includes(query.toLowerCase())
-}
-
-function modelMatchesIntent(model: ModelExplorerItem, intent: IntentFilter) {
-  const body = model.bodyTypes.join(' ').toLowerCase()
-  const segment = model.segment.toLowerCase()
-  const price = model.priceFromEur ?? Number.MAX_SAFE_INTEGER
-  const range = model.maxRealRangeKm ?? model.maxWltpRangeKm ?? 0
-  const dc = model.maxDcChargeKw ?? 0
-  const seats = model.maxSeats ?? 0
-  const trunk = model.maxTrunkLiters ?? 0
-  const consumption = model.bestConsumptionWhKm ?? 999
-
-  if (intent === 'budget') return price <= 35000
-  if (intent === 'family') return seats >= 5 && (trunk >= 430 || body.includes('suv'))
-  if (intent === 'city') return segment.startsWith('a-') || segment.startsWith('b-') || body.includes('hatch')
-  if (intent === 'longTrips') return range >= 420 && dc >= 130
-  if (intent === 'suv') return body.includes('suv')
-  if (intent === 'fastCharging') return dc >= 170
-  if (intent === 'firstEv') return price <= 40000 && consumption <= 185
-  if (intent === 'range') return range >= 500
-  return true
-}
-
-function sortModels(models: ModelExplorerItem[], sortKey: SortKey) {
-  return [...models].sort((a, b) => {
-    if (sortKey === 'priceAsc') {
-      return (a.priceFromEur ?? Number.MAX_SAFE_INTEGER) - (b.priceFromEur ?? Number.MAX_SAFE_INTEGER)
-    }
-    if (sortKey === 'rangeDesc') {
-      return (b.maxRealRangeKm ?? b.maxWltpRangeKm ?? 0) - (a.maxRealRangeKm ?? a.maxWltpRangeKm ?? 0)
-    }
-    if (sortKey === 'chargingDesc') {
-      return (b.maxDcChargeKw ?? 0) - (a.maxDcChargeKw ?? 0)
-    }
-    if (sortKey === 'efficiencyAsc') {
-      return (a.bestConsumptionWhKm ?? Number.MAX_SAFE_INTEGER) - (b.bestConsumptionWhKm ?? Number.MAX_SAFE_INTEGER)
-    }
-    if (sortKey === 'newest') {
-      return (b.newestModelYear ?? 0) - (a.newestModelYear ?? 0)
-    }
-    if (sortKey === 'completeDesc') {
-      return b.dataCompleteness - a.dataCompleteness
-    }
-    if (sortKey === 'az') {
-      return a.displayName.localeCompare(b.displayName, 'pt-PT')
-    }
-
-    const scoreA =
-      a.dataCompleteness +
-      (a.priceFromEur ? 15 : 0) +
-      ((a.maxRealRangeKm ?? a.maxWltpRangeKm ?? 0) >= 400 ? 12 : 0) +
-      ((a.maxDcChargeKw ?? 0) >= 120 ? 8 : 0)
-    const scoreB =
-      b.dataCompleteness +
-      (b.priceFromEur ? 15 : 0) +
-      ((b.maxRealRangeKm ?? b.maxWltpRangeKm ?? 0) >= 400 ? 12 : 0) +
-      ((b.maxDcChargeKw ?? 0) >= 120 ? 8 : 0)
-
-    return scoreB - scoreA
-  })
-}
-
-function flattenVariants(models: ModelExplorerItem[]) {
-  return models.flatMap((model) =>
-    model.variants.map((variant) => ({
-      ...variant,
-      modelSlug: model.slug,
-      modelDisplayName: model.displayName,
-    }))
-  )
-}
-
 export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerProps) {
   const t = useTranslations()
   const localizedHref = useLocalizedHref()
@@ -232,22 +129,7 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
 
   const filteredModels = useMemo(() => {
     const filtered = models.filter((model) => {
-      const normalizedQuery = query.trim()
-      const textMatch =
-        normalizedQuery.length === 0 ||
-        includesText(
-          [
-            model.brand,
-            model.model,
-            model.displayName,
-            model.segment,
-            model.bodyTypes.join(' '),
-            model.variants.map((variant) => variant.displayName).join(' '),
-          ].join(' '),
-          normalizedQuery
-        )
-
-      if (!textMatch) return false
+      if (!modelIncludesQuery(model, query)) return false
       if (activeIntent && !modelMatchesIntent(model, activeIntent)) return false
       if (brand !== 'all' && model.brand !== brand) return false
       if (bodyType !== 'all' && !model.bodyTypes.includes(bodyType)) return false
@@ -264,23 +146,7 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
   }, [activeIntent, bodyType, brand, dataState, maxPrice, minDc, minRange, models, query, sortKey])
 
   const filteredVariants = useMemo(() => {
-    const variants = flattenVariants(filteredModels)
-
-    return variants.sort((a, b) => {
-      if (sortKey === 'priceAsc') {
-        return (a.priceFromEur ?? Number.MAX_SAFE_INTEGER) - (b.priceFromEur ?? Number.MAX_SAFE_INTEGER)
-      }
-      if (sortKey === 'rangeDesc') {
-        return (b.realRangeKm ?? b.wltpRangeKm ?? 0) - (a.realRangeKm ?? a.wltpRangeKm ?? 0)
-      }
-      if (sortKey === 'chargingDesc') return (b.dcChargeKw ?? 0) - (a.dcChargeKw ?? 0)
-      if (sortKey === 'efficiencyAsc') {
-        return (a.consumptionWhKm ?? Number.MAX_SAFE_INTEGER) - (b.consumptionWhKm ?? Number.MAX_SAFE_INTEGER)
-      }
-      if (sortKey === 'newest') return (b.modelYear ?? 0) - (a.modelYear ?? 0)
-      if (sortKey === 'completeDesc') return b.dataCompleteness - a.dataCompleteness
-      return a.displayName.localeCompare(b.displayName, 'pt-PT')
-    })
+    return sortVariants(flattenVariants(filteredModels), sortKey)
   }, [filteredModels, sortKey])
 
   function clearFilters() {
@@ -581,10 +447,7 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
   function VariantRow({
     variant,
   }: {
-    variant: ModelExplorerVariant & {
-      modelSlug: string
-      modelDisplayName: string
-    }
+    variant: FlattenedModelVariant
   }) {
     return (
       <Link

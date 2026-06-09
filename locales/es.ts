@@ -74,9 +74,9 @@ export const es = {
   recommendPage: {
     metadataTitle: "Recomendador EV inteligente",
     metadataDescription: "Motor de recomendación que cruza presupuesto, autonomía, carga, espacio y prioridades de uso.",
-    eyebrow: "AI Match",
+    eyebrow: "Recomendación personalizada",
     title: "Descubre el coche eléctrico que mejor se adapta a ti",
-    description: "Nuestra IA analiza todo el catálogo y encuentra los modelos que mejor se adaptan a tu presupuesto, uso y prioridades."
+    description: "Nuestro recomendador analiza el catálogo y encuentra los modelos que mejor se adaptan a tu presupuesto, uso y prioridades."
   },
   recommendQuiz: {
     title: "Perfil de uso",
@@ -336,7 +336,7 @@ export const es = {
     empty: "Envía el cuestionario para ver los mejores EVs para ti."
   },
   aboutPage: {
-    metadataTitle: "Sobre MotorZero",
+    metadataTitle: "Sobre",
     metadataDescription: "Conoce MotorZero, una plataforma centrada en Portugal para explorar, comparar y entender vehículos eléctricos.",
     title: "Sobre MotorZero",
     description: "MotorZero ayuda a conductores en Portugal a explorar, comparar y entender vehículos eléctricos con especificaciones claras, herramientas inteligentes y recomendaciones basadas en el uso real."
@@ -873,6 +873,10 @@ export const es = {
   },
   compare: {
     metadataTitle: "Comparador de eléctricos",
-    metadataDescription: "Compara hasta 3 vehículos eléctricos lado a lado."
+    metadataDescription: "Compara hasta 3 vehículos eléctricos lado a lado.",
+    modelsMetadataTitle: "Comparar modelos eléctricos",
+    modelsMetadataDescription: "Compara familias de modelos eléctricos de distintas marcas antes de elegir una versión.",
+    versionsMetadataTitle: "Comparar versiones de coches eléctricos",
+    versionsMetadataDescription: "Compara versiones específicas, precios, autonomía y carga."
   }
 }

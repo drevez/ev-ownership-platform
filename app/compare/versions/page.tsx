@@ -12,8 +12,8 @@ export async function generateMetadata() {
   const t = getTranslations(locale)
 
   return {
-    title: t.compare.metadataTitle,
-    description: t.compare.metadataDescription,
+    title: t.compare.versionsMetadataTitle,
+    description: t.compare.versionsMetadataDescription,
   }
 }
 

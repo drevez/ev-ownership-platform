@@ -8,7 +8,7 @@ export async function generateMetadata() {
   const t = getTranslations(locale)
 
   return {
-    title: `${t.models.title} | MotorZero`,
+    title: t.models.title,
     description: t.models.description,
   }
 }

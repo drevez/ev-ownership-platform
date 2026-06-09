@@ -72,11 +72,11 @@ export const en = {
     electricVehicle: "Electric vehicle"
   },
   recommendPage: {
-    metadataTitle: "AI EV Match | MotorZero",
+    metadataTitle: "Find the right electric car",
     metadataDescription: "Recommendation engine that weighs budget, range, charging, space, and ownership priorities.",
-    eyebrow: "AI Match",
+    eyebrow: "Personalised recommendation",
     title: "Discover the electric car that’s right for you",
-    description: "Our AI scans the entire catalogue and finds the models that best suit your budget, intended use and priorities."
+    description: "Our recommendation engine reviews the catalogue and finds the models that best suit your budget, intended use and priorities."
   },
   recommendQuiz: {
     title: "Usage profile",
@@ -873,6 +873,10 @@ export const en = {
   },
   compare: {
     metadataTitle: "EV Comparison",
-    metadataDescription: "Compare up to 3 electric vehicles side by side."
+    metadataDescription: "Compare up to 3 electric vehicles side by side.",
+    modelsMetadataTitle: "Compare electric car models",
+    modelsMetadataDescription: "Compare electric car model families across brands before choosing a version.",
+    versionsMetadataTitle: "Compare electric car versions",
+    versionsMetadataDescription: "Compare specific electric car versions, prices, range, and charging."
   }
 }

@@ -72,11 +72,11 @@ export const pt = {
     electricVehicle: "Veículo elétrico"
   },
   recommendPage: {
-    metadataTitle: "Qual o carro elétrico ideal para si? | MotorZero",
+    metadataTitle: "Encontra o carro elétrico ideal para ti",
     metadataDescription: "Motor de recomendação que cruza orçamento, autonomia, carregamento, espaço e prioridades de utilização.",
-    eyebrow: "AI Match",
+    eyebrow: "Recomendação personalizada",
     title: "Encontra o carro elétrico ideal para ti",
-    description: "A nossa IA analisa todo o catálogo e encontra os modelos que melhor combinam com o teu orçamento, utilização e prioridades."
+    description: "O nosso recomendador analisa o catálogo e encontra os modelos que melhor combinam com o teu orçamento, utilização e prioridades."
   },
   recommendQuiz: {
     title: "Perfil de utilização",
@@ -873,6 +873,10 @@ export const pt = {
   },
   compare: {
     metadataTitle: "Comparador de elétricos",
-    metadataDescription: "Compara até 3 veículos elétricos lado a lado."
+    metadataDescription: "Compara até 3 veículos elétricos lado a lado.",
+    modelsMetadataTitle: "Comparar modelos elétricos",
+    modelsMetadataDescription: "Compara modelos elétricos de marcas diferentes antes de escolher uma versão.",
+    versionsMetadataTitle: "Comparar versões de carros elétricos",
+    versionsMetadataDescription: "Compara versões específicas, preços, autonomia e carregamento."
   }
 }

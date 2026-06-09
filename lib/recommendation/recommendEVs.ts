@@ -584,6 +584,29 @@ export async function recommendEVs(
   language: Language = 'pt'
 ): Promise<RecommendationResult[]> {
   const candidates = await loadCandidates(language)
+  return scoreCandidates(candidates, answers, limit, language)
+}
+
+export function scoreRecommendationCandidates(
+  vehicles: VehicleData[],
+  answers: QuizAnswers,
+  limit: number = 6,
+  language: Language = 'pt'
+): RecommendationResult[] {
+  const candidates = vehicles.map((raw) => ({
+    raw,
+    vehicle: normalizeVehicleForComparison(raw, language),
+  }))
+
+  return scoreCandidates(candidates, answers, limit, language)
+}
+
+function scoreCandidates(
+  candidates: Candidate[],
+  answers: QuizAnswers,
+  limit: number,
+  language: Language
+): RecommendationResult[] {
   const translations = getTranslations(language)
   const t = translations.recommendationEngine
   const numberLocale = LANGUAGE_LOCALES[language]
