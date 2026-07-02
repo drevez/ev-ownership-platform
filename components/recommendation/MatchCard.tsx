@@ -38,6 +38,37 @@ function confidenceClass(confidence: RecommendationResult['confidence']) {
   return 'border-slate-200 bg-slate-50 text-slate-700'
 }
 
+function priceKindLabel(
+  kind: RecommendationResult['keySpecs']['priceKind'],
+  t: ReturnType<typeof useTranslations>
+) {
+  if (kind === 'new') return t.recommendCard.priceKinds.new
+  if (kind === 'used') return t.recommendCard.priceKinds.used
+  if (kind === 'importedUsed') return t.recommendCard.priceKinds.importedUsed
+  return t.recommendCard.priceEstimate
+}
+
+function priceYearLabel(
+  keySpecs: RecommendationResult['keySpecs'],
+  t: ReturnType<typeof useTranslations>
+) {
+  if (keySpecs.priceModelYear != null) {
+    return t.recommendCard.priceModelYear.replace(
+      '{year}',
+      String(keySpecs.priceModelYear)
+    )
+  }
+
+  if (keySpecs.priceYearFrom != null || keySpecs.priceYearTo != null) {
+    const years = [keySpecs.priceYearFrom, keySpecs.priceYearTo]
+      .filter((year) => year != null)
+      .join('-')
+    return t.recommendCard.priceYears.replace('{years}', years)
+  }
+
+  return null
+}
+
 function translatedRange(rangeKm: number | undefined, t: ReturnType<typeof useTranslations>) {
   if (rangeKm == null) return t.recommendCard.plainSpecs.range.unknown
   if (rangeKm >= 450) return t.recommendCard.plainSpecs.range.long
@@ -95,6 +126,7 @@ export function MatchCard({ recommendation, rank, knowledgeMode }: MatchCardProp
     vehicle,
     matchPercentage,
     confidence,
+    dataCompleteness,
     reasons,
     drawbacks,
     tags,
@@ -107,6 +139,7 @@ export function MatchCard({ recommendation, rank, knowledgeMode }: MatchCardProp
   const compareHref = `/compare/versions?ids=${encodeURIComponent(vehicle.id)}`
   const image = vehicle.image || VEHICLE_PLACEHOLDER_IMAGE
   const unavailable = t.recommendCard.unavailable
+  const priceYear = priceYearLabel(keySpecs, t)
   const primarySpecs = [
     { label: t.recommendCard.realRange, value: formatSpec(keySpecs.realRangeKm, 'km', numberLocale, unavailable) },
     { label: t.recommendCard.fastDc, value: formatSpec(keySpecs.dcChargeKw, 'kW', numberLocale, unavailable) },
@@ -178,7 +211,8 @@ export function MatchCard({ recommendation, rank, knowledgeMode }: MatchCardProp
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <span className={`rounded-full border px-3 py-1 text-xs font-semibold ${confidenceClass(confidence)}`}>
-                  {t.recommendCard.confidence[confidence]}
+                  {t.recommendCard.confidence[confidence]} ·{' '}
+                  {t.recommendCard.dataCoverage.replace('{coverage}', String(dataCompleteness))}
                 </span>
                 {tags.slice(0, 3).map((tag) => (
                   <span
@@ -204,11 +238,16 @@ export function MatchCard({ recommendation, rank, knowledgeMode }: MatchCardProp
 
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700 xl:min-w-56 xl:text-right">
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                {t.recommendCard.priceEstimate}
+                {priceKindLabel(keySpecs.priceKind, t)}
               </p>
               <p className="mt-1 text-xl font-bold text-slate-950">
                 {formatCurrency(keySpecs.priceFromEur, numberLocale, unavailable)}
               </p>
+              {priceYear && (
+                <p className="mt-1 text-xs font-medium text-slate-500">
+                  {priceYear}
+                </p>
+              )}
               <p className="mt-1">
                 ~{formatCurrency(estimatedMonthlyCost, numberLocale, unavailable)}/{t.recommendCard.monthlyEnergy}
               </p>

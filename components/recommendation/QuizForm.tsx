@@ -49,7 +49,6 @@ const priorities: OwnershipPriority[] = [
   'space',
   'efficiency',
   'comfort',
-  'performance',
 ]
 
 function togglePriority(

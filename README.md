@@ -110,6 +110,16 @@ If the file is not present in `public/cars/`, the app uses:
 
 This lets you add vehicle data first and upload real images later.
 
+Use `/internal/images` to manage the image backlog. The page shows missing,
+referenced, orphan, pending, approved, and rejected image states, and it keeps
+approved candidates out of the default view so the next items needing attention
+stay at the top.
+
+Final vehicle images should be WebP files in `public/cars/`, normally named
+from the vehicle id, for example `/cars/bmw-i4-edrive40.webp`. Prefer exterior
+side-profile or three-quarter images, centered on the car, with no watermarks,
+dealer overlays, heavy crops, interior-only shots, or detail-only shots.
+
 ## Data Validation
 
 Run:
@@ -143,6 +153,11 @@ The application includes internal tools for maintaining data and content. `/inte
   - Edits page copy, translations, and SEO metadata for Portuguese, English, and Spanish.
   - Writes to [locales/pt.ts](/Users/danielarevez/ev-ownership-platform/locales/pt.ts), [locales/en.ts](/Users/danielarevez/ev-ownership-platform/locales/en.ts), and [locales/es.ts](/Users/danielarevez/ev-ownership-platform/locales/es.ts).
   - Cookie banner and legal-page copy currently remain direct locale-file edits.
+- **Vehicle image review**: `/internal/images`
+  - Audits missing, referenced, and orphan vehicle images.
+  - Reviews image candidates selected from official press, manufacturer, dealer, or credible editorial sources.
+  - Supports approve, reject, create final WebP, replace final image, filters, and sorting.
+  - Stores review metadata in `data/internal/vehicle-image-candidates.json` and final assets in `public/cars/`.
 
 ## Technical Guides
 
@@ -191,13 +206,13 @@ npm run lint
 - `npm run lint` passes with warnings only: remaining `<img>` usage and one CompareContext hook dependency warning.
 - `npm run validate:vehicles` is the best way to see what vehicle data still needs cleanup. As of the latest review, it checks 82 vehicle folders and reports warnings only.
 - `npm run generate:registry` can regenerate `data/registry/vehicles.json` from vehicle `core.json` files.
-- Search, models, comparison, recommendation, localization, sitemap, robots, and internal tools are implemented, but data quality still depends on completing vehicle JSON and images.
+- Search, models, comparison, recommendation, localization, sitemap, robots, and internal tools are implemented, but data quality still depends on completing vehicle JSON and approving final images.
 - The latest production build generates 171 routes/pages, including localized legal pages.
 
 ## Recommended Next Improvements
 
 1. Clean the validator-reported vehicle data issues.
-2. Upload real vehicle images or keep placeholder usage intentional.
+2. Work through `/internal/images` until missing image candidates are approved or intentionally rejected.
 3. Replace remaining `<img>` usage with Next image handling where it matters for LCP.
 4. Rotate internal credentials periodically and consider account-based authentication if more administrators are added.
 5. Add richer ownership tools such as charging cost and incentives.

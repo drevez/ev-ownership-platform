@@ -222,6 +222,13 @@ export const pt = {
     belowBudget: "{amount} abaixo do orçamento",
     aboveBudget: "{amount} acima do orçamento",
     priceEstimate: "Preço estimado",
+    priceKinds: {
+      new: "Novo desde",
+      used: "Usado desde",
+      importedUsed: "Importado usado desde"
+    },
+    priceModelYear: "Modelo {year}",
+    priceYears: "Anos {years}",
     realRange: "Autonomia real",
     motorway: "Autoestrada",
     fastDc: "DC rápido",
@@ -271,7 +278,8 @@ export const pt = {
       high: "Alta confiança",
       medium: "Confiança média",
       low: "Baixa confiança"
-    }
+    },
+    dataCoverage: "dados {coverage}%"
   },
   recommendationEngine: {
     labels: {
@@ -285,6 +293,8 @@ export const pt = {
     },
     reasons: {
       priceUnavailable: "Preço indisponível: mantido como opção, mas com confiança menor.",
+      newPriceUnavailable: "Não existe preço novo compatível confirmado para esta versão.",
+      usedPriceUnavailable: "Não existe preço usado compatível confirmado para esta versão.",
       comfortablyWithinBudget: "Fica confortavelmente dentro do orçamento ({price}).",
       withinBudget: "Cabe no orçamento definido ({price}).",
       slightlyAboveBudget: "Fica ligeiramente acima do orçamento ({price}).",
@@ -409,6 +419,10 @@ export const pt = {
     compare: "Comparador",
     result: "Resultado",
     editSelection: "Alterar seleção",
+    unavailableTitle: "Não foi possível criar esta comparação",
+    loadError: "Ocorreu um problema ao carregar os dados. Tenta selecionar novamente os modelos ou versões.",
+    missingSelection: "{count} das escolhas já não está disponível ou tem dados inválidos.",
+    chooseAgain: "Escolher novamente",
     tags: {
       budget: "Compradores económicos",
       longDistance: "Longas viagens",
@@ -447,7 +461,7 @@ export const pt = {
     browseVehicles: "Explorar veículos",
     title: "Comparação de Carros Elétricos",
     compare: "Compara",
-    premiumVehicles: "veículos elétricos premium lado a lado",
+    premiumVehicles: "veículos elétricos lado a lado",
     range: "Autonomia",
     price: "Preço",
     battery: "Bateria",
@@ -498,16 +512,18 @@ export const pt = {
     },
     readyDecision: "Pronto para decidir?",
     informedChoice: "Com base na tua comparação, explora especificações detalhadas e toma uma decisão informada sobre o teu próximo carro elétrico.",
-    backToVehicles: "Voltar aos veículos",
+    backToVehicles: "Voltar a todos os modelos",
+    viewVehicle: "Ver {vehicle}",
+    backToResults: "Voltar aos resultados do comparador",
     testDrive: "Agendar test drive"
   },
   comparisonSummary: {
     title: "Resumo da comparação",
-    bestValue: "Melhor valor",
+    bestValue: "Preço mais baixo",
     bestRange: "Maior autonomia",
     fastestCharging: "Carregamento mais rápido",
     mostEfficient: "Mais eficiente",
-    recommendation: "Recomendação",
+    recommendation: "Leitura prática",
     bestFor: "Ideal para",
     keyHighlights: "Destaques principais",
     startingPrice: "Preço de referência",
@@ -698,15 +714,15 @@ export const pt = {
     labels: {
       bestRange: "Melhor autonomia",
       longestRange: "Maior autonomia WLTP",
-      bestValue: "Melhor valor",
-      affordableComparison: "Mais acessível nesta comparação",
+      bestValue: "Preço mais baixo",
+      affordableComparison: "Menor preço de referência nesta comparação",
       fastestCharging: "Carregamento mais rápido",
       chargeTime: "Tempo de carregamento 10-80%",
       mostEfficient: "Mais eficiente",
       efficiencyDescription: "Melhor consumo kWh/100km",
       fastest: "Mais rápido",
       acceleration: "Aceleração 0-100 km/h",
-      startingPrice: "Preço desde",
+      startingPrice: "Preço considerado",
       wltpRange: "Autonomia WLTP",
       batteryCapacity: "Capacidade da bateria",
       wltpConsumption: "Consumo WLTP",
@@ -727,9 +743,12 @@ export const pt = {
       euros: "€"
     },
     recommendation: {
-      default: "Compara estes EVs para encontrares o ideal para as tuas necessidades.",
-      twoVehicles: "{bestValue} oferece o melhor valor, enquanto {bestRange} tem a maior autonomia.",
-      threeVehicles: "{first} destaca-se na autonomia, {second} na eficiência e {third} oferece um excelente valor premium."
+      default: "Não existe um vencedor universal: usa as métricas abaixo para escolher o melhor compromisso para o teu uso.",
+      twoVehicles: "O preço mais baixo está em {bestValue}; a maior autonomia está em {bestRange}. Confirma carregamento, espaço e dados em falta antes de decidir.",
+      sameLeader: "{vehicle} combina o preço mais baixo com a maior autonomia nesta comparação. Confirma também carregamento, espaço e qualidade dos dados.",
+      multiMetricLeader: "{vehicle} lidera {count} das quatro métricas principais. As restantes diferenças continuam a poder ser decisivas para o teu uso.",
+      tradeOff: "Não há um vencedor claro: os destaques estão repartidos entre os veículos. Escolhe com base nas métricas mais importantes para o teu uso.",
+      tie: "Empate"
     }
   },
   footer: {

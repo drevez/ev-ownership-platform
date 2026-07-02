@@ -28,6 +28,7 @@ type FilterKey =
   | 'low_confidence_price'
   | 'missing_translation'
   | 'missing_image'
+  | 'structural_errors'
 
 interface InternalVehiclesPageProps {
   searchParams: Promise<{
@@ -78,7 +79,8 @@ function getFilter(value?: string): FilterKey {
     value === 'missing_price_year' ||
     value === 'low_confidence_price' ||
     value === 'missing_translation' ||
-    value === 'missing_image'
+    value === 'missing_image' ||
+    value === 'structural_errors'
   ) {
     return value
   }
@@ -191,6 +193,7 @@ export default async function InternalVehiclesPage({
   if (filter === 'low_confidence_price') rows = rows.filter((row) => row.hasLowConfidencePricing)
   if (filter === 'missing_translation') rows = rows.filter((row) => !row.hasCompleteLocalization)
   if (filter === 'missing_image') rows = rows.filter((row) => !row.hasImage)
+  if (filter === 'structural_errors') rows = rows.filter((row) => row.structuralErrorCount > 0)
   if (brand) rows = rows.filter((row) => row.brand === brand)
 
   rows = [...rows].sort((a, b) => {
@@ -216,6 +219,7 @@ export default async function InternalVehiclesPage({
     { label: 'Low confidence price', value: 'low_confidence_price' },
     { label: 'Missing translation', value: 'missing_translation' },
     { label: 'Missing image', value: 'missing_image' },
+    { label: 'Structural errors', value: 'structural_errors' },
   ]
 
   return (
@@ -257,6 +261,12 @@ export default async function InternalVehiclesPage({
           >
             Edit content & SEO
           </Link>
+          <Link
+            href="/internal/images"
+            className="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-emerald-500 hover:text-emerald-800"
+          >
+            Vehicle images
+          </Link>
         </div>
 
         <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -278,6 +288,16 @@ export default async function InternalVehiclesPage({
           <StatCard label="Missing price updated" value={audit.stats.missingPricingUpdatedAt} />
           <StatCard label="Low confidence price" value={audit.stats.lowConfidencePricing} />
           <StatCard label="Missing translations" value={audit.stats.missingLocalization} />
+          <StatCard
+            label="Structural errors"
+            value={audit.stats.structuralErrors}
+            hint={`Across ${audit.stats.structuralErrorVehicles} vehicles. These can produce incorrect data.`}
+          />
+          <StatCard
+            label="Structural warnings"
+            value={audit.stats.structuralWarnings}
+            hint="Migration or quality work that does not currently block loading."
+          />
         </section>
 
         <section className="mt-8 grid gap-6 lg:grid-cols-[1fr_1fr]">
@@ -469,6 +489,18 @@ export default async function InternalVehiclesPage({
                           {row.pricingTags.map((tag) => (
                             <li key={tag} className="font-medium text-amber-700">
                               pricing: {tag}
+                            </li>
+                          ))}
+                          {row.structuralIssues.map((issue) => (
+                            <li
+                              key={`${issue.code}-${issue.path}`}
+                              className={
+                                issue.severity === 'error'
+                                  ? 'font-semibold text-rose-700'
+                                  : 'font-medium text-amber-700'
+                              }
+                            >
+                              {issue.severity}: {issue.path} — {issue.message}
                             </li>
                           ))}
                           {row.issues.map((issue) => (

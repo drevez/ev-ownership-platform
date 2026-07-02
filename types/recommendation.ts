@@ -52,6 +52,10 @@ export interface RecommendationBreakdownItem {
 
 export interface RecommendationKeySpecs {
   priceFromEur?: number
+  priceKind?: 'new' | 'used' | 'importedUsed'
+  priceModelYear?: number
+  priceYearFrom?: number
+  priceYearTo?: number
   usableBatteryKwh?: number
   realRangeKm?: number
   motorwayRangeKm?: number
@@ -67,6 +71,7 @@ export interface RecommendationResult {
   score: number
   matchPercentage: number
   confidence: 'high' | 'medium' | 'low'
+  dataCompleteness: number
   reasons: string[]
   drawbacks: string[]
   tags: string[]

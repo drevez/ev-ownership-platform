@@ -296,7 +296,36 @@ Editable field ids are defined in [lib/internalContentFiles.ts](/Users/danielare
 
 ---
 
-## 7. Internal Route Summary
+## 7. Internal Image Review API
+
+### `POST /api/internal/images/review`
+Updates the review state for a vehicle image candidate or promotes an approved
+candidate into a final WebP asset.
+
+This endpoint requires the same server-side Basic Auth credentials as
+`/internal/*`. It is designed for form submissions from `/internal/images`.
+
+#### Request Body
+- **Content-Type**: `multipart/form-data`
+- **Parameters**:
+  - `vehicleId` (string, required): Vehicle id the candidate belongs to.
+  - `filename` (string, required): Expected WebP filename, usually `{vehicle-id}.webp`.
+  - `status` (string, required): `ai_selected_pending_review`, `approved`, or `rejected`.
+  - `action` (string, optional): `promote` creates the final WebP asset and marks the candidate approved.
+  - `returnTo` (string, optional): Safe internal path to redirect back to.
+
+Promotion reads either a local candidate path or a direct image URL from
+`data/internal/vehicle-image-candidates.json`, creates a WebP file in
+`public/cars/`, and stores final image metadata in the same manifest.
+
+#### Response
+- `303 See Other`: redirects back to the internal image page with `imageUpdated` or `imageError`.
+- `400 Bad Request`: invalid form payload.
+- `401 Unauthorized`: missing or invalid internal credentials.
+
+---
+
+## 8. Internal Route Summary
 
 These routes support the private working surfaces:
 
@@ -306,13 +335,14 @@ These routes support the private working surfaces:
 /internal/vehicles/{id}
 /internal/vehicles/{id}/edit
 /internal/content
+/internal/images
 ```
 
 They are protected by server-side Basic Auth in the Proxy. Internal write APIs also verify authorization inside their Route Handlers.
 
 ---
 
-## 8. Analytics Note
+## 9. Analytics Note
 
 Analytics does not use an application API route. GTM is loaded centrally from `NEXT_PUBLIC_GTM_ID`, and consent state is handled in the browser.
 

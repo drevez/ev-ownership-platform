@@ -222,6 +222,13 @@ export const en = {
     belowBudget: "{amount} below budget",
     aboveBudget: "{amount} above budget",
     priceEstimate: "Estimated price",
+    priceKinds: {
+      new: "New from",
+      used: "Used from",
+      importedUsed: "Imported used from"
+    },
+    priceModelYear: "Model year {year}",
+    priceYears: "Years {years}",
     realRange: "Real range",
     motorway: "Motorway",
     fastDc: "Fast DC",
@@ -271,7 +278,8 @@ export const en = {
       high: "High confidence",
       medium: "Medium confidence",
       low: "Low confidence"
-    }
+    },
+    dataCoverage: "{coverage}% data"
   },
   recommendationEngine: {
     labels: {
@@ -285,6 +293,8 @@ export const en = {
     },
     reasons: {
       priceUnavailable: "Price unavailable: kept as an option, but with lower confidence.",
+      newPriceUnavailable: "No compatible confirmed new price is available for this version.",
+      usedPriceUnavailable: "No compatible confirmed used price is available for this version.",
       comfortablyWithinBudget: "Comfortably within budget ({price}).",
       withinBudget: "Fits the defined budget ({price}).",
       slightlyAboveBudget: "Slightly above budget ({price}).",
@@ -409,6 +419,10 @@ export const en = {
     compare: "Compare",
     result: "Result",
     editSelection: "Edit selection",
+    unavailableTitle: "This comparison could not be created",
+    loadError: "There was a problem loading the data. Try selecting the models or versions again.",
+    missingSelection: "{count} of the selections is no longer available or has invalid data.",
+    chooseAgain: "Choose again",
     tags: {
       budget: "Budget-conscious buyers",
       longDistance: "Long-distance travel",
@@ -447,7 +461,7 @@ export const en = {
     browseVehicles: "Browse vehicles",
     title: "EV Comparison",
     compare: "Compare",
-    premiumVehicles: "premium electric vehicles side-by-side",
+    premiumVehicles: "electric vehicles side-by-side",
     range: "Range",
     price: "Price",
     battery: "Battery",
@@ -498,16 +512,18 @@ export const en = {
     },
     readyDecision: "Ready to make a decision?",
     informedChoice: "Based on your comparison, explore detailed specifications and make an informed choice about your next EV.",
-    backToVehicles: "Back to vehicles",
+    backToVehicles: "Back to all models",
+    viewVehicle: "View {vehicle}",
+    backToResults: "Back to comparison results",
     testDrive: "Schedule a test drive"
   },
   comparisonSummary: {
     title: "Comparison summary",
-    bestValue: "Best value",
+    bestValue: "Lowest price",
     bestRange: "Best range",
     fastestCharging: "Fastest charging",
     mostEfficient: "Most efficient",
-    recommendation: "Recommendation",
+    recommendation: "Practical takeaway",
     bestFor: "Best for",
     keyHighlights: "Key highlights",
     startingPrice: "Reference price",
@@ -698,15 +714,15 @@ export const en = {
     labels: {
       bestRange: "Best Range",
       longestRange: "Longest WLTP range",
-      bestValue: "Best Value",
-      affordableComparison: "Most affordable in this comparison",
+      bestValue: "Lowest price",
+      affordableComparison: "Lowest reference price in this comparison",
       fastestCharging: "Fastest Charging",
       chargeTime: "10-80% charge time",
       mostEfficient: "Most Efficient",
       efficiencyDescription: "Best kWh/100km",
       fastest: "Fastest",
       acceleration: "0-100 km/h acceleration",
-      startingPrice: "Price from",
+      startingPrice: "Price considered",
       wltpRange: "WLTP Range",
       batteryCapacity: "Battery Capacity",
       wltpConsumption: "WLTP Consumption",
@@ -727,9 +743,12 @@ export const en = {
       euros: "€"
     },
     recommendation: {
-      default: "Compare these EVs to find the perfect match for your needs.",
-      twoVehicles: "{bestValue} offers the best value, while {bestRange} has the longest range.",
-      threeVehicles: "{first} leads in range, {second} excels in efficiency, and {third} offers premium value."
+      default: "There is no universal winner: use the metrics below to choose the best compromise for your needs.",
+      twoVehicles: "The lowest price is offered by {bestValue}; the longest range is offered by {bestRange}. Check charging, space, and missing data before deciding.",
+      sameLeader: "{vehicle} combines the lowest price and longest range in this comparison. Also check charging, space, and data quality.",
+      multiMetricLeader: "{vehicle} leads {count} of the four main metrics. The remaining differences may still be decisive for your needs.",
+      tradeOff: "There is no clear winner: the strengths are shared across the vehicles. Choose based on the metrics that matter most to you.",
+      tie: "Tie"
     }
   },
   footer: {

@@ -10,6 +10,12 @@ import { calculateBadges } from '@/lib/comparison'
 import { useTranslations } from '@/hooks/useTranslations'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 import { getTranslations } from '@/lib/getTranslations'
+import { useLocale } from '@/context/LocaleContext'
+import {
+  MIN_COMPARISON_ITEMS,
+  normalizeComparisonSelection,
+  type ComparisonApiResponse,
+} from '@/lib/comparisonSelection'
 
 type CompareContentKind = 'auto' | 'models' | 'versions'
 
@@ -31,8 +37,9 @@ export function ComparePageContent({
   kind?: CompareContentKind
 }) {
   const searchParams = useSearchParams()
-  const compareIds = searchParams.getAll('ids')
-  const compareModels = searchParams.getAll('models')
+  const compareIds = normalizeComparisonSelection(searchParams.getAll('ids')).values
+  const compareModels = normalizeComparisonSelection(searchParams.getAll('models')).values
+  const isEditingSelection = searchParams.get('edit') === '1'
   const effectiveKind: Exclude<CompareContentKind, 'auto'> =
     kind === 'auto'
       ? compareIds.length >= 2 && compareModels.length < 2
@@ -41,6 +48,7 @@ export function ComparePageContent({
       : kind
 
   if (
+    isEditingSelection ||
     (effectiveKind === 'models' && compareModels.length < 2) ||
     (effectiveKind === 'versions' && compareIds.length < 2)
   ) {
@@ -73,15 +81,31 @@ function CompareResultsView({
 }) {
   const [vehicles, setVehicles] = useState<ComparisonVehicle[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const [loadError, setLoadError] = useState(false)
+  const [missing, setMissing] = useState<string[]>([])
   const compareKey = kind === 'models'
     ? `models:${compareModels.join(',')}`
     : `ids:${compareIds.join(',')}`
   const t = useTranslations()
+  const { locale } = useLocale()
   const localizedHref = useLocalizedHref()
+  const editSelectionParams = new URLSearchParams()
+  const editSelectionKey = kind === 'models' ? 'models' : 'ids'
+  const editSelectionValues = kind === 'models' ? compareModels : compareIds
+  editSelectionValues.forEach((value) =>
+    editSelectionParams.append(editSelectionKey, value)
+  )
+  editSelectionParams.set('edit', '1')
+  const editSelectionHref =
+    `${kind === 'models' ? '/compare/models' : '/compare/versions'}?${editSelectionParams.toString()}`
 
   useEffect(() => {
+    const controller = new AbortController()
+
     async function loadComparisonVehicles() {
       setIsLoading(true)
+      setLoadError(false)
+      setMissing([])
       try {
         const isModelComparison = kind === 'models'
         const selected = compareKey
@@ -92,32 +116,60 @@ function CompareResultsView({
         selected.forEach((id) => params.append(isModelComparison ? 'models' : 'ids', id))
 
         const response = await fetch(
-          `${isModelComparison ? '/api/models/compare' : '/api/vehicles'}?${params.toString()}`
+          `${isModelComparison ? '/api/models/compare' : '/api/vehicles'}?${params.toString()}`,
+          { signal: controller.signal }
         )
-        const data = await response.json()
+        if (!response.ok) throw new Error(`Comparison request failed (${response.status})`)
+        const data = await response.json() as ComparisonApiResponse<ComparisonVehicle>
 
         const loadedVehicles = (data.vehicles ?? []) as ComparisonVehicle[]
+        setMissing(data.missing ?? [])
 
         setVehicles(
           loadedVehicles.map((vehicle) => ({
             ...vehicle,
             bestFor: getBestForTags(vehicle, t),
-            badges: calculateBadges(vehicle, loadedVehicles),
+            badges: calculateBadges(vehicle, loadedVehicles, locale),
           }))
         )
       } catch (error) {
+        if (controller.signal.aborted) return
         console.error('Failed to load comparison vehicles:', error)
         setVehicles([])
+        setLoadError(true)
       } finally {
-        setIsLoading(false)
+        if (!controller.signal.aborted) setIsLoading(false)
       }
     }
 
     loadComparisonVehicles()
-  }, [compareKey, kind, t])
+    return () => controller.abort()
+  }, [compareKey, kind, locale, t])
 
   if (isLoading) {
     return <CompareLoadingFallback />
+  }
+
+  if (loadError || vehicles.length < MIN_COMPARISON_ITEMS) {
+    const selectionPath = kind === 'models' ? '/compare/models' : '/compare/versions'
+    return (
+      <main className="min-h-[70vh] bg-slate-100 px-6 py-20 text-slate-950">
+        <div className="mx-auto max-w-xl rounded-lg border border-slate-200 bg-white p-8 text-center shadow-sm">
+          <h1 className="text-2xl font-bold">{t.comparePage.unavailableTitle}</h1>
+          <p className="mt-3 text-slate-600">
+            {loadError
+              ? t.comparePage.loadError
+              : t.comparePage.missingSelection.replace('{count}', String(missing.length))}
+          </p>
+          <Link
+            href={localizedHref(selectionPath)}
+            className="mt-6 inline-flex rounded-md bg-emerald-600 px-5 py-2.5 font-semibold text-white transition hover:bg-emerald-700"
+          >
+            {t.comparePage.chooseAgain}
+          </Link>
+        </div>
+      </main>
+    )
   }
 
   return (
@@ -135,7 +187,7 @@ function CompareResultsView({
           <span className="text-slate-900">{t.comparePage.result}</span>
           <span className="ml-auto">
             <Link
-              href={localizedHref(kind === 'models' ? '/compare/models' : '/compare/versions')}
+              href={localizedHref(editSelectionHref)}
               className="font-medium text-emerald-700 hover:text-emerald-900 transition"
             >
               {t.comparePage.editSelection}
@@ -143,7 +195,10 @@ function CompareResultsView({
           </span>
         </nav>
       </div>
-      <ComparisonPage vehicles={vehicles} />
+      <ComparisonPage
+        vehicles={vehicles}
+        editSelectionHref={editSelectionHref}
+      />
     </>
   )
 }

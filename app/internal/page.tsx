@@ -26,6 +26,13 @@ const tools = [
     action: 'Edit content',
     accent: 'violet',
   },
+  {
+    title: 'Vehicle images',
+    description: 'See missing car images, orphan files, naming rules, and the prompt for new assets.',
+    href: '/internal/images',
+    action: 'Review images',
+    accent: 'amber',
+  },
 ] as const
 
 export default async function InternalPage() {
@@ -69,7 +76,7 @@ export default async function InternalPage() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {tools.map((tool) => (
               <ToolLink key={tool.href} {...tool} />
             ))}
@@ -96,6 +103,9 @@ export default async function InternalPage() {
               <QuickLink href="/internal/vehicles?filter=missing_image">
                 Vehicles using placeholder images
               </QuickLink>
+              <QuickLink href="/internal/images">
+                Missing image filenames and prompt
+              </QuickLink>
               <QuickLink href="/internal/vehicles?filter=missing_translation">
                 Vehicles missing translations
               </QuickLink>
@@ -118,6 +128,7 @@ function ToolLink({
     emerald: 'bg-emerald-500',
     blue: 'bg-blue-500',
     violet: 'bg-violet-500',
+    amber: 'bg-amber-500',
   }[accent]
 
   return (

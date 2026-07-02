@@ -15,6 +15,7 @@ const AdvancedComparisonContent = dynamic(() =>
 
 interface ComparisonPageProps {
   vehicles: ComparisonVehicle[]
+  editSelectionHref?: string
 }
 
 type ComparisonMode = 'simple' | 'advanced'
@@ -233,7 +234,8 @@ function cargoFeeling(liters?: number): CargoFeeling {
 }
 
 export function ComparisonPage({
-  vehicles
+  vehicles,
+  editSelectionHref = '/compare/models',
 }: ComparisonPageProps) {
 
   const t = useTranslations()
@@ -278,7 +280,7 @@ export function ComparisonPage({
             </p>
 
             <Link
-              href={localizedHref('/')}
+              href={localizedHref('/models')}
               className="inline-block px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-all duration-200"
             >
               {t.comparisonPage.browseVehicles}
@@ -376,21 +378,25 @@ export function ComparisonPage({
             {t.comparisonPage.informedChoice}
           </p>
 
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-
+          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
+            {vehicles.map((vehicle) => (
+              <Link
+                key={vehicle.id}
+                href={localizedHref(vehicle.detailPath ?? `/vehicles/${vehicle.id}`)}
+                className="inline-flex justify-center rounded-lg bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+              >
+                {t.comparisonPage.viewVehicle.replace(
+                  '{vehicle}',
+                  vehicle.displayName
+                )}
+              </Link>
+            ))}
             <Link
-              href={localizedHref('/')}
-              className="px-8 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors duration-200"
+              href={localizedHref(editSelectionHref)}
+              className="inline-flex justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-emerald-500 hover:text-emerald-800"
             >
-              {t.comparisonPage.backToVehicles}
+              {t.comparisonPage.backToResults}
             </Link>
-
-            <a
-              href="#"
-              className="px-8 py-3 border border-slate-300 text-slate-700 font-semibold rounded-lg hover:border-emerald-500 hover:text-emerald-800 transition-colors duration-200"
-            >
-              {t.comparisonPage.testDrive}
-            </a>
           </div>
         </div>
       </div>

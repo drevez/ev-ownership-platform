@@ -2,12 +2,17 @@
 
 import { useEffect, useState } from 'react'
 import { SafeImage as Image } from '@/components/SafeImage'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useCompare } from '@/context/CompareContext'
 import { mapRegistryToComparisonVehicle } from '@/lib/comparison'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import { useTranslations } from '@/hooks/useTranslations'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
+import {
+  modelSlugsToVersionIds,
+  versionIdsToModelSlugs,
+} from '@/lib/comparisonSelection'
 
 interface VehicleSummary {
   id: string
@@ -30,6 +35,14 @@ interface ModelSummary {
   bodyTypes: string[]
   drivetrains: string[]
   variantCount: number
+  variants: Array<{
+    id: string
+    variant: string
+    segment: string
+    bodyType: string
+    drivetrain: string
+    image: string
+  }>
 }
 
 interface VehicleSelectorProps {
@@ -62,26 +75,38 @@ export function VehicleSelector({
   const [bodyFilter, setBodyFilter] = useState('all')
 
   const [selectedIds, setSelectedIds] = useState<string[]>(() => {
-    if (state.vehicleIds.length > 0) {
-      return state.vehicleIds
+    if (initialSelectedIds.length > 0) {
+      return initialSelectedIds
     }
-    return initialSelectedIds
+    return state.vehicleIds
   })
   const [selectedModelSlugs, setSelectedModelSlugs] = useState<string[]>(initialSelectedModelSlugs)
 
   useEffect(() => {
     async function loadData() {
       try {
-        const [vehiclesResponse, modelsResponse] = await Promise.all([
-          fetch('/api/vehicles/all'),
-          fetch('/api/models/all'),
-        ])
-        const [vehiclesData, modelsData] = await Promise.all([
-          vehiclesResponse.json(),
-          modelsResponse.json(),
-        ])
-        setVehicles(vehiclesData.vehicles || [])
-        setModels(modelsData.models || [])
+        const response = await fetch('/api/models/all')
+        if (!response.ok) {
+          throw new Error(`Comparison choices request failed (${response.status})`)
+        }
+
+        const data = await response.json() as { models?: ModelSummary[] }
+        const loadedModels = data.models ?? []
+        const loadedVehicles = loadedModels.flatMap((model) =>
+          model.variants.map((variant): VehicleSummary => ({
+            id: variant.id,
+            brand: model.brand,
+            model: model.model,
+            variant: variant.variant,
+            segment: variant.segment,
+            bodyType: variant.bodyType,
+            drivetrain: variant.drivetrain,
+            heroImage: variant.image || VEHICLE_PLACEHOLDER_IMAGE,
+          }))
+        )
+
+        setVehicles(loadedVehicles)
+        setModels(loadedModels)
       } catch (error) {
         console.error('Failed to load comparison choices:', error)
       } finally {
@@ -148,31 +173,56 @@ export function VehicleSelector({
     )
   })
 
-  const handleCompare = () => {
-    if (activeSelectedIds.length < 2) {
-      return
-    }
-    const params = new URLSearchParams()
+  const comparisonParams = new URLSearchParams()
+  if (mode === 'models') {
+    selectedModelSlugs.forEach((slug) => comparisonParams.append('models', slug))
+  } else {
+    selectedIds.forEach((id) => comparisonParams.append('ids', id))
+  }
+  comparisonParams.set('mode', 'simple')
+  const comparisonHref = localizedHref(
+    `/compare/${mode}?${comparisonParams.toString()}`
+  )
+
+  const persistComparison = () => {
     if (mode === 'models') {
-      selectedModelSlugs.forEach((slug) => params.append('models', slug))
       setSelectedVehicleIds([], [])
     } else {
       setSelectedVehicleIds(
         selectedIds,
         selectedVehicles.map(mapRegistryToComparisonVehicle)
       )
-      selectedIds.forEach((id) => params.append('ids', id))
     }
-    params.set('mode', 'simple')
-    router.push(localizedHref(`/compare/${mode}?${params.toString()}`))
   }
 
   const switchMode = (nextMode: SelectionMode) => {
+    if (nextMode === mode) return
+
+    const params = new URLSearchParams()
+
+    if (nextMode === 'versions') {
+      const nextSelectedIds = modelSlugsToVersionIds(
+        selectedModelSlugs,
+        models,
+        selectedIds
+      )
+      setSelectedIds(nextSelectedIds)
+      nextSelectedIds.forEach((id) => params.append('ids', id))
+    } else {
+      const nextSelectedModelSlugs = versionIdsToModelSlugs(selectedIds, models)
+      setSelectedModelSlugs(nextSelectedModelSlugs)
+      nextSelectedModelSlugs.forEach((slug) => params.append('models', slug))
+    }
+
+    params.set('edit', '1')
     setMode(nextMode)
     setQuery('')
     setBrandFilter('all')
     setBodyFilter('all')
-    router.replace(localizedHref(`/compare/${nextMode}`), { scroll: false })
+    router.replace(
+      localizedHref(`/compare/${nextMode}?${params.toString()}`),
+      { scroll: false }
+    )
   }
 
   if (isLoading) {
@@ -445,15 +495,23 @@ export function VehicleSelector({
             </div>
 
             {/* Compare button */}
-            <button
-              type="button"
-              onClick={handleCompare}
-              disabled={choiceCount < 2}
-              className="shrink-0 rounded-lg bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-50 sm:px-8"
-            >
-              {t.vehicleSelector.compareNow}
-              {choiceCount >= 2 && ` (${choiceCount})`}
-            </button>
+            {choiceCount >= 2 ? (
+              <Link
+                href={comparisonHref}
+                onClick={persistComparison}
+                className="shrink-0 rounded-lg bg-emerald-600 px-6 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-emerald-700 sm:px-8"
+              >
+                {t.vehicleSelector.compareNow} ({choiceCount})
+              </Link>
+            ) : (
+              <button
+                type="button"
+                disabled
+                className="shrink-0 cursor-not-allowed rounded-lg bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white opacity-50 sm:px-8"
+              >
+                {t.vehicleSelector.compareNow}
+              </button>
+            )}
           </div>
         </div>
       </div>

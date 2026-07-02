@@ -11,6 +11,7 @@ import {
   internalApiUnauthorizedResponse,
   isInternalAuthorized,
 } from '@/lib/internalAuth'
+import { validateVehicleFiles } from '@/lib/vehicleDataValidation'
 
 interface UpdateVehicleBody {
   files?: VehicleFiles
@@ -35,6 +36,15 @@ export async function PUT(request: Request, { params }: VehicleRouteContext) {
 
     if (!(await vehicleFolderExists(id))) {
       return NextResponse.json({ error: 'Vehicle not found.' }, { status: 404 })
+    }
+
+    const structuralErrors = validateVehicleFiles(id, body.files)
+      .filter((issue) => issue.severity === 'error')
+    if (structuralErrors.length > 0) {
+      return NextResponse.json(
+        { error: 'Vehicle data has structural errors.', issues: structuralErrors },
+        { status: 400 }
+      )
     }
 
     await writeVehicleFiles(id, body.files)

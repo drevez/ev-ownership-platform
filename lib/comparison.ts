@@ -220,6 +220,18 @@ export function buildComparisonMetrics(
 
   if (prices.some((p) => p > 0)) {
     const minPrice = Math.min(...prices.filter((p) => p > 0))
+    const priceLabel = (
+      price: NonNullable<VehicleDataForComparison['pricing']>['primaryPrice']
+    ) => {
+      if (price?.status === 'not_sold_new') {
+        return t.modelsExplorer.price.kind.referenceNew
+      }
+      if (price?.kind === 'importedUsed') {
+        return t.modelsExplorer.price.kind.importedUsed
+      }
+      if (price?.kind === 'used') return t.modelsExplorer.price.kind.used
+      return t.modelsExplorer.price.kind.new
+    }
 
     metrics.push({
       label: t.comparison.labels.startingPrice,
@@ -229,7 +241,7 @@ export function buildComparisonMetrics(
         vehicleId: v.id,
         value: v.pricing?.basePriceEur || 0,
         displayValue: v.pricing?.basePriceEur
-          ? `€${Math.round(v.pricing.basePriceEur).toLocaleString()}`
+          ? `${priceLabel(v.pricing.primaryPrice)} ${Math.round(v.pricing.basePriceEur).toLocaleString(locale)} €`
           : t.common.notAvailable,
         isWinner: v.pricing?.basePriceEur === minPrice,
         percentageOfMax: 100,
@@ -296,89 +308,67 @@ export function generateComparisonSummary(
   locale: string = 'pt'
 ): ComparisonSummary {
   const t = getTranslations(locale)
+  const leader = (
+    getValue: (vehicle: ComparisonVehicle) => number | undefined,
+    direction: 'lowest' | 'highest'
+  ) => {
+    const values = vehicles
+      .map((vehicle) => ({ vehicle, value: getValue(vehicle) }))
+      .filter((item): item is { vehicle: ComparisonVehicle; value: number } =>
+        item.value != null && item.value > 0
+      )
 
-  let bestValue = vehicles[0]?.displayName || t.common.notAvailable
-  let bestRange = vehicles[0]?.displayName || t.common.notAvailable
-  let fastestCharging = vehicles[0]?.displayName || t.common.notAvailable
-  let mostEfficient = vehicles[0]?.displayName || t.common.notAvailable
+    if (values.length === 0) return t.common.notAvailable
+    const target = direction === 'lowest'
+      ? Math.min(...values.map((item) => item.value))
+      : Math.max(...values.map((item) => item.value))
+    const winners = values.filter((item) => item.value === target)
 
-  // Best Value
-  const validPrices = vehicles.filter(
-    (v) => (v.pricing?.basePriceEur || 0) > 0
-  )
-
-  if (validPrices.length > 0) {
-    const min = validPrices.reduce((prev, current) =>
-      (prev.pricing?.basePriceEur || 0) <
-      (current.pricing?.basePriceEur || 0)
-        ? prev
-        : current
-    )
-
-    bestValue = min.displayName
+    return winners.length > 1
+      ? t.comparison.recommendation.tie
+      : winners[0].vehicle.displayName
   }
 
-  // Best Range
-  const validRanges = vehicles.filter(
-    (v) => (v.efficiency?.wltpRangeKm || 0) > 0
+  const bestValue = leader((vehicle) => vehicle.pricing?.basePriceEur, 'lowest')
+  const bestRange = leader((vehicle) => vehicle.efficiency?.wltpRangeKm, 'highest')
+  const fastestCharging = leader(
+    (vehicle) => vehicle.charging?.chargeTime10To80Min,
+    'lowest'
   )
-
-  if (validRanges.length > 0) {
-    const max = validRanges.reduce((prev, current) =>
-      (prev.efficiency?.wltpRangeKm || 0) >
-      (current.efficiency?.wltpRangeKm || 0)
-        ? prev
-        : current
-    )
-
-    bestRange = max.displayName
-  }
-
-  // Fastest Charging
-  const validCharging = vehicles.filter(
-    (v) => (v.charging?.chargeTime10To80Min || 0) > 0
+  const mostEfficient = leader(
+    (vehicle) => vehicle.efficiency?.wltpConsumptionKwh100km,
+    'lowest'
   )
-
-  if (validCharging.length > 0) {
-    const fastest = validCharging.reduce((prev, current) =>
-      (prev.charging?.chargeTime10To80Min || 999) <
-      (current.charging?.chargeTime10To80Min || 999)
-        ? prev
-        : current
-    )
-
-    fastestCharging = fastest.displayName
-  }
-
-  // Most Efficient
-  const validConsumption = vehicles.filter(
-    (v) => (v.efficiency?.wltpConsumptionKwh100km || 0) > 0
-  )
-
-  if (validConsumption.length > 0) {
-    const mostEff = validConsumption.reduce((prev, current) =>
-      (prev.efficiency?.wltpConsumptionKwh100km || 999) <
-      (current.efficiency?.wltpConsumptionKwh100km || 999)
-        ? prev
-        : current
-    )
-
-    mostEfficient = mostEff.displayName
-  }
 
   let recommendation = t.comparison.recommendation.default
 
   if (vehicles.length === 2) {
-    recommendation = t.comparison.recommendation.twoVehicles
-      .replace('{bestValue}', bestValue)
-      .replace('{bestRange}', bestRange)
+    recommendation = bestValue === bestRange &&
+      bestValue !== t.common.notAvailable &&
+      bestValue !== t.comparison.recommendation.tie
+      ? t.comparison.recommendation.sameLeader.replace('{vehicle}', bestValue)
+      : t.comparison.recommendation.twoVehicles
+          .replace('{bestValue}', bestValue)
+          .replace('{bestRange}', bestRange)
   }
 
   if (vehicles.length === 3) {
-    recommendation = t.comparison.recommendation.threeVehicles
-      .replace('{first}', vehicles[0]?.displayName || '')
-      .replace('{second}', vehicles[1]?.displayName || '')
-      .replace('{third}', vehicles[2]?.displayName || '')
+    const counts = [bestValue, bestRange, fastestCharging, mostEfficient]
+      .filter((name) =>
+        name !== t.common.notAvailable &&
+        name !== t.comparison.recommendation.tie
+      )
+      .reduce<Record<string, number>>((result, name) => {
+        result[name] = (result[name] ?? 0) + 1
+        return result
+      }, {})
+    const dominant = Object.entries(counts).sort((a, b) => b[1] - a[1])[0]
+
+    recommendation = dominant?.[1] >= 2
+      ? t.comparison.recommendation.multiMetricLeader
+          .replace('{vehicle}', dominant[0])
+          .replace('{count}', String(dominant[1]))
+      : t.comparison.recommendation.tradeOff
   }
 
   return {
@@ -388,11 +378,6 @@ export function generateComparisonSummary(
     mostEfficient,
     recommendation,
   }
-}
-
-export interface StoredComparison {
-  vehicleIds: string[]
-  vehicles: ComparisonVehicle[]
 }
 
 export function mapRegistryToComparisonVehicle(entry: {
@@ -456,66 +441,4 @@ export function mapApiToComparisonVehicle(
     comfort: data.comfort as ComparisonVehicle['comfort'],
     performance: data.performance as ComparisonVehicle['performance'],
   }
-}
-
-/**
- * Save comparison to localStorage
- */
-export function saveComparisonToStorage(
-  vehicleIds: string[],
-  vehicles: ComparisonVehicle[] = []
-): void {
-  if (typeof window === 'undefined') return
-
-  localStorage.setItem(
-    'ev-comparison',
-    JSON.stringify({ vehicleIds, vehicles })
-  )
-}
-
-/**
- * Load comparison from localStorage
- */
-export function loadComparisonFromStorage(): StoredComparison {
-  if (typeof window === 'undefined') {
-    return { vehicleIds: [], vehicles: [] }
-  }
-
-  try {
-    const data = localStorage.getItem('ev-comparison')
-
-    if (!data) {
-      return { vehicleIds: [], vehicles: [] }
-    }
-
-    const parsed: unknown = JSON.parse(data)
-
-    if (Array.isArray(parsed)) {
-      return {
-        vehicleIds: parsed as string[],
-        vehicles: [],
-      }
-    }
-
-    const stored = parsed as StoredComparison
-
-    return {
-      vehicleIds: stored.vehicleIds ?? [],
-      vehicles: stored.vehicles ?? [],
-    }
-  } catch {
-    return {
-      vehicleIds: [],
-      vehicles: [],
-    }
-  }
-}
-
-/**
- * Clear comparison from localStorage
- */
-export function clearComparisonStorage(): void {
-  if (typeof window === 'undefined') return
-
-  localStorage.removeItem('ev-comparison')
 }

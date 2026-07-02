@@ -9,11 +9,15 @@ import React, {
 } from 'react'
 import { ComparisonVehicle, ComparisonState } from '@/types/comparison'
 import {
-  loadComparisonFromStorage,
-  saveComparisonToStorage,
-  clearComparisonStorage,
   mapApiToComparisonVehicle,
 } from '@/lib/comparison'
+import {
+  clearComparisonIds,
+  loadComparisonIds,
+  normalizeComparisonIds,
+  saveComparisonIds,
+} from '@/lib/comparisonStorage'
+import type { ComparisonApiResponse } from '@/lib/comparisonSelection'
 
 interface CompareContextType {
   state: ComparisonState
@@ -44,10 +48,9 @@ function mergeVehiclesById(
 
 export function CompareProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = useState<ComparisonState>(() => {
-    const stored = loadComparisonFromStorage()
     return {
-      vehicleIds: stored.vehicleIds,
-      vehicles: stored.vehicles,
+      vehicleIds: loadComparisonIds(),
+      vehicles: [],
       isLoading: false,
       error: null,
     }
@@ -56,13 +59,8 @@ export function CompareProvider({ children }: { children: React.ReactNode }) {
   const vehicleIdsKey = state.vehicleIds.join(',')
 
   useEffect(() => {
-    const missingIds = state.vehicleIds.filter(
-      (id) => !state.vehicles.some((v) => v.id === id)
-    )
-
-    if (missingIds.length === 0 || state.vehicleIds.length === 0) {
-      return
-    }
+    const selectedIds = vehicleIdsKey.split(',').filter(Boolean)
+    if (selectedIds.length === 0) return
 
     const controller = new AbortController()
 
@@ -71,27 +69,35 @@ export function CompareProvider({ children }: { children: React.ReactNode }) {
 
       try {
         const params = new URLSearchParams()
-        state.vehicleIds.forEach((id) => params.append('ids', id))
+        selectedIds.forEach((id) => params.append('ids', id))
 
         const response = await fetch(`/api/vehicles?${params.toString()}`, {
           signal: controller.signal,
         })
-        const data = await response.json()
+        if (!response.ok) throw new Error(`Vehicle hydration failed (${response.status})`)
+        const data = await response.json() as ComparisonApiResponse<
+          Record<string, unknown> & { id: string }
+        >
         const hydrated = (data.vehicles ?? []).map(
           (vehicle: Record<string, unknown> & { id: string }) =>
             mapApiToComparisonVehicle(vehicle)
         )
 
         setState((prev) => {
-          const vehicles = mergeVehiclesById(prev.vehicles, hydrated).filter((v) =>
-            prev.vehicleIds.includes(v.id)
+          if (prev.vehicleIds.join(',') !== vehicleIdsKey) return prev
+          const validIds = selectedIds.filter((id) => !data.missing.includes(id))
+          const vehicles = mergeVehiclesById([], hydrated).filter((vehicle) =>
+            validIds.includes(vehicle.id)
           )
-          saveComparisonToStorage(prev.vehicleIds, vehicles)
+          if (validIds.length !== selectedIds.length) saveComparisonIds(validIds)
           return {
             ...prev,
+            vehicleIds: validIds,
             vehicles,
             isLoading: false,
-            error: null,
+            error: data.missing.length > 0
+              ? 'Some saved comparison vehicles are no longer available'
+              : null,
           }
         })
       } catch (error) {
@@ -118,12 +124,13 @@ export function CompareProvider({ children }: { children: React.ReactNode }) {
       const newIds = [...prev.vehicleIds, vehicle.id]
       const newVehicles = [...prev.vehicles, vehicle]
 
-      saveComparisonToStorage(newIds, newVehicles)
+      saveComparisonIds(newIds)
 
       return {
         ...prev,
         vehicleIds: newIds,
         vehicles: newVehicles,
+        isLoading: newIds.length > 0 ? prev.isLoading : false,
         error: null,
       }
     })
@@ -134,7 +141,7 @@ export function CompareProvider({ children }: { children: React.ReactNode }) {
       const newIds = prev.vehicleIds.filter((id) => id !== vehicleId)
       const newVehicles = prev.vehicles.filter((v) => v.id !== vehicleId)
 
-      saveComparisonToStorage(newIds, newVehicles)
+      saveComparisonIds(newIds)
 
       return {
         ...prev,
@@ -148,16 +155,18 @@ export function CompareProvider({ children }: { children: React.ReactNode }) {
   const setSelectedVehicleIds = useCallback(
     (vehicleIds: string[], vehicles?: ComparisonVehicle[]) => {
       setState((prev) => {
+        const normalizedIds = normalizeComparisonIds(vehicleIds)
         const newVehicles = vehicles
-          ? vehicles.filter((v) => vehicleIds.includes(v.id))
-          : prev.vehicles.filter((v) => vehicleIds.includes(v.id))
+          ? vehicles.filter((v) => normalizedIds.includes(v.id))
+          : prev.vehicles.filter((v) => normalizedIds.includes(v.id))
 
-        saveComparisonToStorage(vehicleIds, newVehicles)
+        saveComparisonIds(normalizedIds)
 
         return {
           ...prev,
-          vehicleIds,
+          vehicleIds: normalizedIds,
           vehicles: newVehicles,
+          isLoading: normalizedIds.length > 0 ? prev.isLoading : false,
           error: null,
         }
       })
@@ -172,7 +181,7 @@ export function CompareProvider({ children }: { children: React.ReactNode }) {
       isLoading: false,
       error: null,
     })
-    clearComparisonStorage()
+    clearComparisonIds()
   }, [])
 
   const isInComparison = useCallback(

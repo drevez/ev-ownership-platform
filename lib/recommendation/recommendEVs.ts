@@ -25,12 +25,6 @@ interface ScorePart {
 type RecommendationEngineTranslations =
   ReturnType<typeof getTranslations>['recommendationEngine']
 
-const DEFAULT_PRIORITIES: QuizAnswers['priorities'] = [
-  'budget',
-  'range',
-  'charging',
-]
-
 function numberOrUndefined(value: unknown): number | undefined {
   return typeof value === 'number' && Number.isFinite(value)
     ? value
@@ -79,18 +73,35 @@ function getUsedPrice(raw: VehicleData): number | undefined {
   )
 }
 
-function getPreferredPrice(raw: VehicleData, answers: QuizAnswers): number | undefined {
-  const newPrice = getConsumerPrice(raw)
-  const usedPrice = getUsedPrice(raw)
-
-  if (answers.purchaseType === 'new') return newPrice
-  if (answers.purchaseType === 'used') return usedPrice ?? newPrice
-
-  const prices = [newPrice, usedPrice].filter(
-    (price): price is number => price != null
+function getPreferredPriceSummary(raw: VehicleData, answers: QuizAnswers) {
+  const summaries = getVehiclePriceSummaries(raw.pricing)
+    .filter((summary) =>
+      positiveNumber(summary.priceFrom) != null &&
+      summary.status !== 'not_sold_new'
+    )
+  const newSummaries = summaries.filter((summary) => summary.kind === 'new')
+  const usedSummaries = summaries.filter((summary) =>
+    summary.kind === 'used' || summary.kind === 'importedUsed'
   )
+  const eligible =
+    answers.purchaseType === 'new'
+      ? newSummaries
+      : answers.purchaseType === 'used'
+        ? usedSummaries
+        : summaries
 
-  return prices.length > 0 ? Math.min(...prices) : undefined
+  return eligible.sort(
+    (a, b) =>
+      (a.priceFrom ?? Number.MAX_SAFE_INTEGER) -
+      (b.priceFrom ?? Number.MAX_SAFE_INTEGER)
+  )[0]
+}
+
+function getPreferredPrice(raw: VehicleData, answers: QuizAnswers): number | undefined {
+  return positiveNumber(getPreferredPriceSummary(raw, answers)?.priceFrom) ??
+    (answers.purchaseType !== 'used'
+      ? getConsumerPrice(raw)
+      : getUsedPrice(raw))
 }
 
 function getRealRange(raw: VehicleData, vehicle: ComparisonVehicle) {
@@ -129,10 +140,18 @@ function scoreBudget(
   const price = getPreferredPrice(raw, answers)
 
   if (price == null) {
+    const incompatiblePurchase =
+      (answers.purchaseType === 'new' && getConsumerPrice(raw) == null) ||
+      (answers.purchaseType === 'used' && getUsedPrice(raw) == null)
+
     return {
-      score: maxScore * 0.45,
+      score: maxScore * (incompatiblePurchase ? 0.08 : 0.35),
       maxScore,
-      reason: t.reasons.priceUnavailable,
+      reason: incompatiblePurchase
+        ? answers.purchaseType === 'new'
+          ? t.reasons.newPriceUnavailable
+          : t.reasons.usedPriceUnavailable
+        : t.reasons.priceUnavailable,
     }
   }
 
@@ -438,20 +457,19 @@ function buildTags(
   return tags.slice(0, 4)
 }
 
-function buildKeySpecs(raw: VehicleData, vehicle: ComparisonVehicle): RecommendationKeySpecs {
+function buildKeySpecs(
+  raw: VehicleData,
+  vehicle: ComparisonVehicle,
+  answers: QuizAnswers
+): RecommendationKeySpecs {
+  const price = getPreferredPriceSummary(raw, answers)
+
   return {
-    priceFromEur: getPreferredPrice(raw, {
-      budget: 0,
-      purchaseType: 'either',
-      chargingAccess: 'mixed',
-      familySize: 1,
-      dailyCommuteKm: 0,
-      roadTrips: 'rarely',
-      cargoNeed: 'light',
-      bodyPreference: 'any',
-      ownershipStyle: 'balanced',
-      priorities: DEFAULT_PRIORITIES,
-    }),
+    priceFromEur: getPreferredPrice(raw, answers),
+    priceKind: price?.kind,
+    priceModelYear: price?.modelYear,
+    priceYearFrom: price?.yearFrom,
+    priceYearTo: price?.yearTo,
     usableBatteryKwh: vehicle.battery?.capacityKwh,
     realRangeKm: getRealRange(raw, vehicle),
     motorwayRangeKm: getMotorwayRange(raw),
@@ -482,13 +500,31 @@ function estimateMonthlyCost(
   return Math.round(((monthlyKm * consumption) / 1000 / 0.88) * pricePerKwh)
 }
 
-function confidenceFor(
-  parts: RecommendationBreakdownItem[]
-): RecommendationResult['confidence'] {
-  const weakSignals = parts.filter((part) => part.score / part.maxScore < 0.5).length
+function dataCompletenessFor(
+  raw: VehicleData,
+  vehicle: ComparisonVehicle,
+  answers: QuizAnswers
+) {
+  const signals = [
+    getPreferredPrice(raw, answers),
+    getRealRange(raw, vehicle),
+    getMotorwayRange(raw),
+    vehicle.charging?.dcChargeSpeedKw ?? vehicle.charging?.maxPowerKw,
+    vehicle.charging?.chargeTime10To80Min,
+    getConsumption(raw, vehicle),
+    getTrunk(raw, vehicle),
+    vehicle.seats ?? raw.seats,
+  ]
+  const available = signals.filter((value) => positiveNumber(value) != null).length
 
-  if (weakSignals <= 1) return 'high'
-  if (weakSignals <= 3) return 'medium'
+  return Math.round((available / signals.length) * 100)
+}
+
+function confidenceFor(
+  dataCompleteness: number
+): RecommendationResult['confidence'] {
+  if (dataCompleteness >= 80) return 'high'
+  if (dataCompleteness >= 55) return 'medium'
   return 'low'
 }
 
@@ -617,19 +653,21 @@ function scoreCandidates(
     const maxScore = breakdown.reduce((sum, part) => sum + part.maxScore, 0)
     const matchPercentage = Math.round((score / maxScore) * 100)
     const price = getPreferredPrice(raw, answers)
+    const dataCompleteness = dataCompletenessFor(raw, vehicle, answers)
 
     return {
       vehicle,
       score: Number(score.toFixed(2)),
       matchPercentage,
-      confidence: confidenceFor(breakdown),
+      confidence: confidenceFor(dataCompleteness),
+      dataCompleteness,
       reasons: buildReasons(breakdown),
       drawbacks: buildDrawbacks(breakdown),
       tags: buildTags(raw, vehicle, answers, t),
       estimatedMonthlyCost: estimateMonthlyCost(raw, vehicle, answers),
       priceDeltaEur: price != null ? Math.round(price - answers.budget) : undefined,
       breakdown,
-      keySpecs: buildKeySpecs(raw, vehicle),
+      keySpecs: buildKeySpecs(raw, vehicle, answers),
     }
   })
 

@@ -149,6 +149,7 @@ The app includes internal pages to reduce manual JSON editing:
 - `/internal/vehicles`: dataset health dashboard and vehicle JSON editor.
 - `/internal/vehicles/new`: create a vehicle folder in the modular structure.
 - `/internal/vehicles/{id}/edit`: edit the seven module files for an existing vehicle.
+- `/internal/images`: audit missing vehicle images, review candidates, approve or reject them, and create final WebP assets.
 
 These tools write directly to `public/data/vehicles/{vehicle-id}/` and update `data/registry/vehicles.json` from `core.json`. They do not replace source checking: after editing, run `npm run validate:vehicles`.
 
@@ -166,6 +167,8 @@ Internal routes require the server-only Basic Auth credentials configured for th
 - Keep dates simple: `YYYY-MM` for current market data, `YYYY` for historical references.
 - Prefer truthful incomplete data over invented precision.
 - Do not add new top-level keys to required module files unless the validator and loader are updated too.
+- A structural **error** means data could be interpreted incorrectly and is blocked by the Internal editor.
+- A structural **warning** identifies migration or verification work that can still be saved safely.
 
 ### battery.json
 
@@ -517,6 +520,41 @@ cargoLitersSeatsUp            -> dimensions.trunkCapacityL
 
 This keeps the vehicle JSON clean while allowing old and new UI code to consume stable values.
 
+## Validation
+
+Run:
+
+```bash
+npm run validate:vehicles
+npm test
+```
+
+The validator reports data issues without failing the command. Use it while adding vehicles to find:
+
+- invalid JSON;
+- missing files;
+- missing required core fields;
+- ID mismatches;
+- unknown keys;
+- missing images;
+- missing pricing blocks;
+- registry mismatches.
+
+The Internal dashboard and save API additionally validate:
+
+- fields placed in the wrong module;
+- folder ID versus `core.id`;
+- numeric types and plausible ranges;
+- usable battery not exceeding gross capacity;
+- price and year ranges in the correct order;
+- supported pricing enum values;
+- `YYYY` or `YYYY-MM` dates;
+- imported-market and Portuguese-cost context;
+- duplicated display priorities.
+
+Legacy pricing remains readable and is reported as a migration warning. New
+vehicles and edits with structural errors are rejected by the Internal API.
+
 ## Image Workflow
 
 Set the future image path in `core.json`:
@@ -531,28 +569,33 @@ If the image file is missing, the app uses:
 /images/vehicle-placeholder.svg
 ```
 
-Run validation to see which vehicles still need real images.
+This is intentional. Add vehicle data first, then approve images later.
 
-## Validation
+Use `/internal/images` for the full image workflow:
 
-Run:
+- Missing images are vehicles whose `core.image` or registry image points to a file that does not exist in `public/cars/`.
+- Candidates are stored in `data/internal/vehicle-image-candidates.json`.
+- Candidate statuses are `ai_selected_pending_review`, `approved`, and `rejected`.
+- The default page view should show items needing attention first, not already-approved items.
+- Approving with final WebP creation downloads or reads the candidate image, converts it to WebP, and writes it to `public/cars/{vehicle-id}.webp`.
+- Replacing an approved image is allowed from the approved filter and removes the generated final asset when the candidate is moved away from `approved`.
 
-```bash
-npm run validate:vehicles
-```
+Image requirements:
 
-The validator reports data issues without failing the command. Use it while adding vehicles to find:
+- Final format: WebP.
+- Final location: `public/cars/{vehicle-id}.webp`.
+- Generated size: 2048 x 1152 when the source is large enough, resized with cover crop.
+- Minimum useful source size: 1200 x 675.
+- Preferred composition: exterior side profile or exterior three-quarter view.
+- The whole car should be visible, centered, and easy to recognize.
+- Avoid front-only, rear-only, interior-only, dashboard/detail-only, heavy crops, watermarks, text overlays, configurator UI, and dealer branding.
+- Prefer official press, manufacturer, or credible editorial sources. Non-press sources still require manual review before use.
 
-- invalid JSON
-- missing files
-- missing required core fields
-- ID mismatches
-- unknown keys
-- missing images
-- missing pricing blocks
-- registry mismatches
-
-The current validator still expects the runtime-supported pricing structures. After the app is migrated to `pricing.offers[]`, update the validator so future agents do not receive false warnings for correctly migrated pricing files.
+Local internal edits write to project files. On Vercel or another deployed
+runtime, filesystem writes are not durable deployment data. Treat internal
+image approvals as a local maintenance workflow: approve locally, commit the
+updated `data/internal/vehicle-image-candidates.json`, and commit the generated
+`public/cars/*.webp` files.
 
 ## Optional Files
 

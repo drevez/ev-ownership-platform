@@ -5,6 +5,18 @@ import { useRouter } from 'next/navigation'
 
 import type { VehicleFiles } from '@/lib/internalVehicleFiles'
 import type { JsonObject } from '@/lib/loadVehicle'
+import { validateVehicleFiles } from '@/lib/vehicleDataValidation'
+import {
+  Checkbox,
+  EditorSection,
+  Field,
+  TextArea,
+  ValidationPanel,
+} from '@/components/internal/VehicleEditorControls'
+import {
+  PricingOffersEditor,
+  type OfferForm,
+} from '@/components/internal/PricingOffersEditor'
 
 type Mode = 'create' | 'edit'
 
@@ -13,27 +25,6 @@ interface VehicleDataEditorProps {
   vehicleId?: string
   initialFiles?: VehicleFiles
   copySourceId?: string
-}
-
-type OfferForm = {
-  condition: string
-  status: string
-  marketScope: string
-  priceFrom: string
-  priceTo: string
-  priceDate: string
-  modelYear: string
-  yearFrom: string
-  yearTo: string
-  includesVat: boolean
-  sourceType: string
-  sourceLabel: string
-  sourceUrl: string
-  confidence: string
-  displayPriority: string
-  notes: string
-  originMarkets: string
-  estimatedPortugalCostsIncluded: string
 }
 
 const emptyFiles: VehicleFiles = {
@@ -262,6 +253,21 @@ function validateEditorState(files: VehicleFiles) {
       warnings.push(`${prefix}: confidence is ${record.confidence}.`)
     }
   })
+
+  const structuralIssues = validateVehicleFiles(
+    stringValue(core, 'id') || 'new-vehicle',
+    files
+  )
+  blocking.push(
+    ...structuralIssues
+      .filter((issue) => issue.severity === 'error')
+      .map((issue) => `${issue.path}: ${issue.message}`)
+  )
+  warnings.push(
+    ...structuralIssues
+      .filter((issue) => issue.severity === 'warning')
+      .map((issue) => `${issue.path}: ${issue.message}`)
+  )
 
   return { blocking, warnings }
 }
@@ -495,14 +501,6 @@ export function VehicleDataEditor({
   const modulesChanged = useMemo(() => changedModules(builtFiles, initialFiles), [builtFiles, initialFiles])
   const canSave = validation.blocking.length === 0 && !isSaving
 
-  function updateOffer(index: number, patch: Partial<OfferForm>) {
-    setOffers((current) =>
-      current.map((offer, offerIndex) =>
-        offerIndex === index ? { ...offer, ...patch } : offer
-      )
-    )
-  }
-
   async function save() {
     const nextValidation = validateEditorState(builtFiles)
     if (nextValidation.blocking.length > 0) {
@@ -679,49 +677,14 @@ export function VehicleDataEditor({
             Migrate legacy pricing to offers[]
           </button>
         </div>
-        <div className="space-y-4 md:col-span-2">
-          {offers.map((offer, index) => (
-            <div key={index} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-              <div className="mb-4 flex items-center justify-between">
-                <h3 className="font-semibold text-slate-900">Offer {index + 1}</h3>
-                <button
-                  type="button"
-                  onClick={() => setOffers((current) => current.filter((_, itemIndex) => itemIndex !== index))}
-                  className="text-sm font-medium text-rose-600 hover:text-rose-700"
-                >
-                  Remove
-                </button>
-              </div>
-              <div className="grid gap-4 md:grid-cols-3">
-                <Select label="Condition" value={offer.condition} onChange={(condition) => updateOffer(index, { condition })} options={['new', 'used']} />
-                <Select label="Status" value={offer.status} onChange={(status) => updateOffer(index, { status })} options={['available', 'not_sold_new', 'not_enough_data', 'not_sold_in_pt', 'unknown']} />
-                <Select label="Market scope" value={offer.marketScope} onChange={(marketScope) => updateOffer(index, { marketScope })} options={['official_pt', 'used_pt', 'imported_to_pt', 'new_import', 'unknown']} />
-                <Field label="Price from" value={offer.priceFrom} onChange={(priceFrom) => updateOffer(index, { priceFrom })} type="number" />
-                <Field label="Price to" value={offer.priceTo} onChange={(priceTo) => updateOffer(index, { priceTo })} type="number" />
-                <Field label="Price date" value={offer.priceDate} onChange={(priceDate) => updateOffer(index, { priceDate })} />
-                <Field label="Model year" value={offer.modelYear} onChange={(modelYear) => updateOffer(index, { modelYear })} type="number" />
-                <Field label="Year from" value={offer.yearFrom} onChange={(yearFrom) => updateOffer(index, { yearFrom })} type="number" />
-                <Field label="Year to" value={offer.yearTo} onChange={(yearTo) => updateOffer(index, { yearTo })} type="number" />
-                <Checkbox label="Includes VAT" checked={offer.includesVat} onChange={(includesVat) => updateOffer(index, { includesVat })} />
-                <Select label="Source type" value={offer.sourceType} onChange={(sourceType) => updateOffer(index, { sourceType })} options={['official_brand', 'dealer', 'classifieds', 'market_estimate', 'manual', 'unknown']} />
-                <Select label="Confidence" value={offer.confidence} onChange={(confidence) => updateOffer(index, { confidence })} options={['high', 'medium', 'low', 'unknown']} />
-                <Field label="Source label" value={offer.sourceLabel} onChange={(sourceLabel) => updateOffer(index, { sourceLabel })} />
-                <Field label="Source URL" value={offer.sourceUrl} onChange={(sourceUrl) => updateOffer(index, { sourceUrl })} />
-                <Field label="Display priority" value={offer.displayPriority} onChange={(displayPriority) => updateOffer(index, { displayPriority })} type="number" />
-                <Field label="Origin markets" value={offer.originMarkets} onChange={(originMarkets) => updateOffer(index, { originMarkets })} placeholder="DE, FR, ES" />
-                <Select label="PT costs included" value={offer.estimatedPortugalCostsIncluded} onChange={(estimatedPortugalCostsIncluded) => updateOffer(index, { estimatedPortugalCostsIncluded })} options={['', 'true', 'false']} />
-                <Field label="Notes" value={offer.notes} onChange={(notes) => updateOffer(index, { notes })} />
-              </div>
-            </div>
-          ))}
-          <button
-            type="button"
-            onClick={() => setOffers((current) => [...current, { ...offerDefaults, displayPriority: String(current.length + 1) }])}
-            className="rounded-md border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:border-emerald-500"
-          >
-            Add offer
-          </button>
-        </div>
+        <PricingOffersEditor
+          offers={offers}
+          onChange={setOffers}
+          createOffer={(index) => ({
+            ...offerDefaults,
+            displayPriority: String(index + 1),
+          })}
+        />
       </EditorSection>
 
       <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
@@ -738,156 +701,5 @@ export function VehicleDataEditor({
         </pre>
       </section>
     </div>
-  )
-}
-
-function ValidationPanel({
-  title,
-  tone,
-  items,
-  emptyText,
-}: {
-  title: string
-  tone: 'rose' | 'amber' | 'emerald'
-  items: string[]
-  emptyText: string
-}) {
-  const toneClasses = {
-    rose: 'border-rose-200 bg-rose-50 text-rose-800',
-    amber: 'border-amber-200 bg-amber-50 text-amber-900',
-    emerald: 'border-emerald-200 bg-emerald-50 text-emerald-800',
-  }[tone]
-
-  return (
-    <div className={`rounded-md border p-3 text-sm ${toneClasses}`}>
-      <h3 className="font-semibold">{title}</h3>
-      {items.length > 0 ? (
-        <ul className="mt-2 space-y-1">
-          {items.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      ) : (
-        <p className="mt-2 opacity-80">{emptyText}</p>
-      )}
-    </div>
-  )
-}
-
-function EditorSection({
-  title,
-  children,
-}: {
-  title: string
-  children: React.ReactNode
-}) {
-  return (
-    <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
-      <h2 className="text-lg font-bold text-slate-950">{title}</h2>
-      <div className="mt-5 grid gap-4 md:grid-cols-2">{children}</div>
-    </section>
-  )
-}
-
-function Field({
-  label,
-  value,
-  onChange,
-  type = 'text',
-  placeholder,
-  disabled,
-}: {
-  label: string
-  value: string
-  onChange: (value: string) => void
-  type?: string
-  placeholder?: string
-  disabled?: boolean
-}) {
-  return (
-    <label className="block text-sm">
-      <span className="font-medium text-slate-700">{label}</span>
-      <input
-        type={type}
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        placeholder={placeholder}
-        disabled={disabled}
-        className="mt-1 h-10 w-full rounded-md border border-slate-200 bg-white px-3 text-slate-950 outline-none transition focus:border-emerald-500 disabled:bg-slate-100"
-      />
-    </label>
-  )
-}
-
-function TextArea({
-  label,
-  value,
-  onChange,
-  rows = 4,
-}: {
-  label: string
-  value: string
-  onChange: (value: string) => void
-  rows?: number
-}) {
-  return (
-    <label className="block text-sm">
-      <span className="font-medium text-slate-700">{label}</span>
-      <textarea
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        rows={rows}
-        className="mt-1 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-slate-950 outline-none transition focus:border-emerald-500"
-      />
-    </label>
-  )
-}
-
-function Checkbox({
-  label,
-  checked,
-  onChange,
-}: {
-  label: string
-  checked: boolean
-  onChange: (checked: boolean) => void
-}) {
-  return (
-    <label className="flex h-10 items-center gap-2 text-sm font-medium text-slate-700">
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={(event) => onChange(event.target.checked)}
-        className="h-4 w-4 rounded border-slate-300 text-emerald-600"
-      />
-      {label}
-    </label>
-  )
-}
-
-function Select({
-  label,
-  value,
-  onChange,
-  options,
-}: {
-  label: string
-  value: string
-  onChange: (value: string) => void
-  options: string[]
-}) {
-  return (
-    <label className="block text-sm">
-      <span className="font-medium text-slate-700">{label}</span>
-      <select
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        className="mt-1 h-10 w-full rounded-md border border-slate-200 bg-white px-3 text-slate-950 outline-none transition focus:border-emerald-500"
-      >
-        {options.map((option) => (
-          <option key={option} value={option}>{option || 'unset'}</option>
-        ))}
-      </select>
-    </label>
   )
 }

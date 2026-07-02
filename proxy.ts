@@ -16,6 +16,14 @@ const LOCALE_HEADER = 'x-motorzero-locale'
 const PATHNAME_HEADER = 'x-motorzero-pathname'
 
 function isInternalPath(pathname: string) {
+  if (
+    pathname === '/api/internal/login' ||
+    pathname === '/internal/login' ||
+    /^\/(?:pt|en|es)\/internal\/login(?:\/|$)/.test(pathname)
+  ) {
+    return false
+  }
+
   return (
     pathname === '/internal' ||
     pathname.startsWith('/internal/') ||
@@ -25,7 +33,8 @@ function isInternalPath(pathname: string) {
   )
 }
 
-function internalUnauthorizedResponse(pathname: string) {
+function internalUnauthorizedResponse(request: NextRequest) {
+  const pathname = request.nextUrl.pathname
   const headers = {
     'Cache-Control': 'no-store',
     'WWW-Authenticate': 'Basic realm="MotorZero Internal", charset="UTF-8"',
@@ -38,9 +47,13 @@ function internalUnauthorizedResponse(pathname: string) {
     )
   }
 
-  return new NextResponse('Authentication required.', {
-    status: 401,
-    headers,
+  const loginUrl = new URL('/internal/login', request.url)
+  loginUrl.searchParams.set('next', pathname)
+
+  return NextResponse.redirect(loginUrl, {
+    headers: {
+      'Cache-Control': 'no-store',
+    },
   })
 }
 
@@ -58,7 +71,7 @@ export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
   if (isInternalPath(pathname) && !isInternalAuthorized(request)) {
-    return internalUnauthorizedResponse(pathname)
+    return internalUnauthorizedResponse(request)
   }
 
   if (pathname.startsWith('/api/')) {

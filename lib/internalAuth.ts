@@ -1,5 +1,11 @@
 const INTERNAL_AUTH_USERNAME = process.env.INTERNAL_AUTH_USERNAME
 const INTERNAL_AUTH_PASSWORD = process.env.INTERNAL_AUTH_PASSWORD
+export const INTERNAL_AUTH_COOKIE = 'motorzero_internal_auth'
+
+function expectedCookieValue() {
+  if (!INTERNAL_AUTH_USERNAME || !INTERNAL_AUTH_PASSWORD) return null
+  return btoa(`${INTERNAL_AUTH_USERNAME}:${INTERNAL_AUTH_PASSWORD}`)
+}
 
 function constantTimeEqual(left: string, right: string) {
   const length = Math.max(left.length, right.length)
@@ -33,6 +39,22 @@ function readBasicCredentials(request: Request) {
 export function isInternalAuthorized(request: Request) {
   if (!INTERNAL_AUTH_USERNAME || !INTERNAL_AUTH_PASSWORD) return false
 
+  const cookieHeader = request.headers.get('cookie')
+  const cookieValue = cookieHeader
+    ?.split(';')
+    .map((cookie) => cookie.trim())
+    .find((cookie) => cookie.startsWith(`${INTERNAL_AUTH_COOKIE}=`))
+    ?.slice(INTERNAL_AUTH_COOKIE.length + 1)
+  const expectedCookie = expectedCookieValue()
+
+  if (
+    cookieValue &&
+    expectedCookie &&
+    constantTimeEqual(decodeURIComponent(cookieValue), expectedCookie)
+  ) {
+    return true
+  }
+
   const credentials = readBasicCredentials(request)
   if (!credentials) return false
 
@@ -40,6 +62,19 @@ export function isInternalAuthorized(request: Request) {
     constantTimeEqual(credentials.username, INTERNAL_AUTH_USERNAME) &&
     constantTimeEqual(credentials.password, INTERNAL_AUTH_PASSWORD)
   )
+}
+
+export function validateInternalCredentials(username: string, password: string) {
+  if (!INTERNAL_AUTH_USERNAME || !INTERNAL_AUTH_PASSWORD) return false
+
+  return (
+    constantTimeEqual(username, INTERNAL_AUTH_USERNAME) &&
+    constantTimeEqual(password, INTERNAL_AUTH_PASSWORD)
+  )
+}
+
+export function createInternalAuthCookieValue() {
+  return expectedCookieValue()
 }
 
 export function internalApiUnauthorizedResponse() {

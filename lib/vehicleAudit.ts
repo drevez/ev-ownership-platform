@@ -1,5 +1,10 @@
 import fs from 'fs/promises'
 import path from 'path'
+import {
+  validateVehicleFiles,
+  type VehicleDataIssue,
+} from '@/lib/vehicleDataValidation'
+import type { VehicleFiles } from '@/lib/internalVehicleFiles'
 
 const VEHICLES_DIR = path.join(process.cwd(), 'public', 'data', 'vehicles')
 const REGISTRY_PATH = path.join(process.cwd(), 'data', 'registry', 'vehicles.json')
@@ -36,6 +41,9 @@ export interface VehicleAuditRow {
   completeness: number
   issueCount: number
   issues: string[]
+  structuralIssues: VehicleDataIssue[]
+  structuralErrorCount: number
+  structuralWarningCount: number
   publicIssues: string[]
   verificationIssues: string[]
   missingModules: string[]
@@ -91,6 +99,10 @@ export interface VehicleAuditResult {
     missingPricingSourceUrl: number
     missingPricingYearContext: number
     lowConfidencePricing: number
+    structuralErrorVehicles: number
+    structuralWarningVehicles: number
+    structuralErrors: number
+    structuralWarnings: number
     missingLocalization: number
     notInRegistry: number
     brandCountFromCore: number
@@ -434,6 +446,21 @@ export async function auditVehicles(): Promise<VehicleAuditResult> {
     const hasImage = await localImageExists(getString(core?.image))
     const missingLocalization = getMissingLocalization(core)
     const hasCompleteLocalization = missingLocalization.length === 0
+    const structuralIssues = hasCompleteModules
+      ? validateVehicleFiles(id, {
+          core: core ?? {},
+          battery: battery ?? {},
+          charging: charging ?? {},
+          comfort: modules['comfort.json'] ?? {},
+          dimensions: dimensions ?? {},
+          efficiency: efficiency ?? {},
+          pricing: pricing ?? {},
+        } satisfies VehicleFiles)
+      : []
+    const structuralErrorCount = structuralIssues.filter(
+      (issue) => issue.severity === 'error'
+    ).length
+    const structuralWarningCount = structuralIssues.length - structuralErrorCount
 
     if (!hasRequiredCore) {
       issues.push('missing required core id/brand/model')
@@ -471,6 +498,7 @@ export async function auditVehicles(): Promise<VehicleAuditResult> {
     if (hasLowConfidencePricing) issues.push('low-confidence pricing')
     if (!hasImage) issues.push('missing local image')
     if (!hasCompleteLocalization) issues.push('missing localization')
+    if (structuralErrorCount > 0) issues.push(`${structuralErrorCount} structural data errors`)
 
     const publicIssues: string[] = []
     if (!hasRequiredCore) publicIssues.push('core id/brand/model')
@@ -525,6 +553,9 @@ export async function auditVehicles(): Promise<VehicleAuditResult> {
       }),
       issueCount: issues.length,
       issues,
+      structuralIssues,
+      structuralErrorCount,
+      structuralWarningCount,
       publicIssues,
       verificationIssues,
       missingModules: missingModules.sort(),
@@ -588,6 +619,10 @@ export async function auditVehicles(): Promise<VehicleAuditResult> {
       missingPricingSourceUrl: rows.filter((row) => !row.hasPricingSourceUrl).length,
       missingPricingYearContext: rows.filter((row) => !row.hasPricingYearContext).length,
       lowConfidencePricing: rows.filter((row) => row.hasLowConfidencePricing).length,
+      structuralErrorVehicles: rows.filter((row) => row.structuralErrorCount > 0).length,
+      structuralWarningVehicles: rows.filter((row) => row.structuralWarningCount > 0).length,
+      structuralErrors: rows.reduce((sum, row) => sum + row.structuralErrorCount, 0),
+      structuralWarnings: rows.reduce((sum, row) => sum + row.structuralWarningCount, 0),
       missingLocalization: rows.filter((row) => !row.hasCompleteLocalization).length,
       notInRegistry: rows.filter((row) => !row.hasRegistryEntry).length,
       brandCountFromCore: coreBrands.size,

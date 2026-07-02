@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from '@/hooks/useTranslations'
+import { useLocale } from '@/context/LocaleContext'
 import { ComparisonVehicle } from '@/types/comparison'
 import { generateComparisonSummary } from '@/lib/comparison'
 
@@ -15,8 +16,16 @@ export function ComparisonSummary({
 }: ComparisonSummaryProps) {
 
   const t = useTranslations()
+  const { locale } = useLocale()
 
-  const summary = generateComparisonSummary(vehicles)
+  const summary = generateComparisonSummary(vehicles, locale)
+  const priceLabel = (vehicle: ComparisonVehicle) => {
+    const price = vehicle.pricing?.primaryPrice
+    if (price?.status === 'not_sold_new') return t.modelsExplorer.price.kind.referenceNew
+    if (price?.kind === 'importedUsed') return t.modelsExplorer.price.kind.importedUsed
+    if (price?.kind === 'used') return t.modelsExplorer.price.kind.used
+    return t.modelsExplorer.price.kind.new
+  }
 
   const summaryItems = [
     {
@@ -71,20 +80,15 @@ export function ComparisonSummary({
       </div>
 
       {/* Recommendation Card */}
-      <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm md:p-6">
-
-        <div className="flex items-start gap-4">
-
-          <div>
-
-            <h3 className="text-xl font-bold text-slate-950 mb-2">
+      <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-5 md:p-6">
+        <div className="max-w-5xl">
+            <h3 className="text-sm font-bold uppercase tracking-wide text-emerald-800">
               {t.comparisonSummary.recommendation}
             </h3>
 
-            <p className="text-slate-600 leading-relaxed">
+            <p className="mt-2 text-base font-medium leading-7 text-slate-800">
               {summary.recommendation}
             </p>
-          </div>
         </div>
       </div>
 
@@ -142,14 +146,11 @@ export function ComparisonSummary({
                     <div className="flex justify-between">
 
                       <span className="text-slate-600">
-                        {t.comparisonSummary.startingPrice}
+                        {priceLabel(vehicle)}
                       </span>
 
                       <span className="font-semibold text-emerald-700">
-                        €
-                        {Math.round(
-                          vehicle.pricing.basePriceEur
-                        ).toLocaleString()}
+                        {Math.round(vehicle.pricing.basePriceEur).toLocaleString(locale)} €
                       </span>
                     </div>
                   )}

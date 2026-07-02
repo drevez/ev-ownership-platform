@@ -11,6 +11,7 @@ import {
   internalApiUnauthorizedResponse,
   isInternalAuthorized,
 } from '@/lib/internalAuth'
+import { validateVehicleFiles } from '@/lib/vehicleDataValidation'
 
 interface CreateVehicleBody {
   id?: string
@@ -33,6 +34,15 @@ export async function POST(request: Request) {
 
     if (await vehicleFolderExists(id)) {
       return NextResponse.json({ error: 'Vehicle already exists.' }, { status: 409 })
+    }
+
+    const structuralErrors = validateVehicleFiles(id, files)
+      .filter((issue) => issue.severity === 'error')
+    if (structuralErrors.length > 0) {
+      return NextResponse.json(
+        { error: 'Vehicle data has structural errors.', issues: structuralErrors },
+        { status: 400 }
+      )
     }
 
     await writeVehicleFiles(id, files)

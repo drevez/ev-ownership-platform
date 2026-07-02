@@ -114,9 +114,56 @@ describe('recommendation scoring', () => {
     )
 
     expect(result.keySpecs.priceFromEur).toBe(29000)
+    expect(result.keySpecs.priceKind).toBe('used')
     expect(result.priceDeltaEur).toBe(-1000)
     expect(result.breakdown.find((part) => part.category === 'budget')?.score)
       .toBeGreaterThan(20)
+  })
+
+  it('does not substitute a new price when the user explicitly wants used', () => {
+    const newOnly = vehicle('new-only')
+
+    const [result] = scoreRecommendationCandidates(
+      [newOnly],
+      { ...balancedAnswers, purchaseType: 'used', budget: 30000 }
+    )
+
+    expect(result.keySpecs.priceFromEur).toBeUndefined()
+    expect(result.priceDeltaEur).toBeUndefined()
+    expect(result.breakdown.find((part) => part.category === 'budget')?.score)
+      .toBeLessThan(3)
+    expect(result.drawbacks.some((reason) => reason.includes('preço usado')))
+      .toBe(true)
+  })
+
+  it('shows the selected new price even when a cheaper used offer exists', () => {
+    const mixedPricing = vehicle('mixed-pricing', {
+      pricing: {
+        offers: [
+          {
+            condition: 'new',
+            status: 'available',
+            marketScope: 'official_pt',
+            priceFrom: 52000,
+          },
+          {
+            condition: 'used',
+            status: 'available',
+            marketScope: 'used_pt',
+            priceFrom: 28000,
+          },
+        ],
+      },
+    })
+
+    const [result] = scoreRecommendationCandidates(
+      [mixedPricing],
+      { ...balancedAnswers, purchaseType: 'new', budget: 55000 }
+    )
+
+    expect(result.keySpecs.priceFromEur).toBe(52000)
+    expect(result.keySpecs.priceKind).toBe('new')
+    expect(result.priceDeltaEur).toBe(-3000)
   })
 
   it('respects body preference and result limits', () => {
@@ -150,5 +197,27 @@ describe('recommendation scoring', () => {
     expect(first.score).toBe(second.score)
     expect(first.confidence).toMatch(/high|medium|low/)
     expect(Number.isFinite(first.matchPercentage)).toBe(true)
+  })
+
+  it('bases confidence on data coverage rather than match quality', () => {
+    const expensiveButComplete = vehicle('expensive-complete', {
+      pricing: {
+        offers: [{
+          condition: 'new',
+          status: 'available',
+          marketScope: 'official_pt',
+          priceFrom: 120000,
+        }],
+      },
+    })
+
+    const [result] = scoreRecommendationCandidates(
+      [expensiveButComplete],
+      balancedAnswers
+    )
+
+    expect(result.matchPercentage).toBeLessThan(90)
+    expect(result.dataCompleteness).toBe(100)
+    expect(result.confidence).toBe('high')
   })
 })

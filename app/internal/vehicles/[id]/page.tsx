@@ -80,6 +80,17 @@ export default async function InternalVehicleDetailPage({
               value={row.verificationStatus === 'verified' ? 'Verified' : 'Needs review'}
               items={[...row.verificationIssues, ...row.pricingTags]}
             />
+            <StatusCard
+              title="Structural validation"
+              value={
+                row.structuralErrorCount > 0
+                  ? `${row.structuralErrorCount} errors`
+                  : `${row.structuralWarningCount} warnings`
+              }
+              items={row.structuralIssues.map(
+                (issue) => `${issue.severity}: ${issue.path} - ${issue.message}`
+              )}
+            />
           </section>
         )}
 
