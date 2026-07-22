@@ -98,8 +98,15 @@ function translatedEfficiency(whKm: number | undefined, t: ReturnType<typeof use
   return t.recommendCard.plainSpecs.efficiency.high
 }
 
+function clampPercentage(value: number) {
+  if (!Number.isFinite(value)) return 0
+  return Math.min(Math.max(value, 0), 100)
+}
+
 function BreakdownBar({ item }: { item: RecommendationBreakdownItem }) {
-  const percentage = Math.round((item.score / item.maxScore) * 100)
+  const percentage = item.maxScore > 0
+    ? clampPercentage(Math.round((item.score / item.maxScore) * 100))
+    : 0
 
   return (
     <div>

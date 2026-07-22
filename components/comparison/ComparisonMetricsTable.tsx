@@ -31,6 +31,10 @@ export function ComparisonMetricsTable({
     (m) => m.category === 'secondary'
   )
 
+  const valueGridClass = vehicles.length === 2
+    ? 'grid-cols-1 md:grid-cols-2'
+    : 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3'
+
   const renderMetricRow = (
     metricIndex: number,
     isPrimary: boolean
@@ -70,16 +74,12 @@ export function ComparisonMetricsTable({
 
         {/* Values */}
         <div
-          className={`gap-4 p-4 md:p-6 bg-slate-800/10 ${
-            vehicles.length === 2
-              ? 'grid-cols-2'
-              : 'grid-cols-3'
-            } grid bg-white`}
+          className={`grid ${valueGridClass} gap-4 bg-white p-4 md:p-6`}
         >
           {metric.values.map((value) => (
             <div
               key={`${metric.label}-${value.vehicleId}`}
-              className={`p-3 rounded-lg border transition-all duration-200 ${
+              className={`min-w-0 rounded-lg border p-3 transition-all duration-200 ${
                 value.isWinner
                   ? 'bg-emerald-50 border-emerald-300 shadow-sm'
                   : 'bg-slate-50 border-slate-200'
@@ -98,17 +98,17 @@ export function ComparisonMetricsTable({
                           : 'bg-slate-400'
                       }`}
                       style={{
-                        width: `${value.percentageOfMax}%`,
+                        width: `${Math.min(Math.max(value.percentageOfMax, 0), 100)}%`,
                       }}
                     />
                   </div>
                 )}
 
               {/* Value */}
-              <div className="flex items-baseline gap-2">
+              <div className="flex min-w-0 flex-wrap items-baseline gap-2">
 
                 <p
-                  className={`font-bold text-lg ${
+                  className={`min-w-0 break-words text-lg font-bold leading-snug ${
                     value.isWinner
                       ? 'text-emerald-700'
                       : 'text-slate-950'
@@ -118,7 +118,7 @@ export function ComparisonMetricsTable({
                 </p>
 
                 {value.isWinner && (
-                    <span className="text-xs text-emerald-700 font-semibold ml-auto">
+                    <span className="shrink-0 text-xs font-semibold text-emerald-700 sm:ml-auto">
                     {t.comparisonMetrics.best}
                   </span>
                 )}

@@ -128,6 +128,109 @@ describe('vehicle normalization', () => {
     })
   })
 
+  it('keeps new, used, and imported used prices as separate normalized summaries', () => {
+    const pricing: VehiclePricing = {
+      market: 'pt',
+      currency: 'EUR',
+      lastReviewedAt: '2026-06',
+      offers: [
+        {
+          condition: 'new',
+          marketScope: 'official_pt',
+          status: 'available',
+          priceFrom: 49900,
+          modelYear: 2026,
+          displayPriority: 1,
+          sourceLabel: 'Brand Portugal',
+        },
+        {
+          condition: 'used',
+          marketScope: 'used_pt',
+          status: 'available',
+          priceFrom: 35500,
+          yearFrom: 2024,
+          yearTo: 2025,
+          displayPriority: 2,
+        },
+        {
+          condition: 'used',
+          marketScope: 'imported_to_pt',
+          status: 'available',
+          priceFrom: 32900,
+          yearFrom: 2023,
+          estimatedPortugalCostsIncluded: false,
+          originMarkets: ['DE', 'NL'],
+          displayPriority: 3,
+        },
+      ],
+    }
+
+    const summaries = getVehiclePriceSummaries(pricing)
+
+    expect(summaries.map((summary) => summary.kind)).toEqual([
+      'new',
+      'used',
+      'importedUsed',
+    ])
+    expect(summaries[0]).toMatchObject({
+      kind: 'new',
+      priceFrom: 49900,
+      modelYear: 2026,
+      sourceLabel: 'Brand Portugal',
+      updatedAt: '2026-06',
+    })
+    expect(summaries[2]).toMatchObject({
+      kind: 'importedUsed',
+      marketScope: 'imported_to_pt',
+      priceFrom: 32900,
+      yearFrom: 2023,
+      estimatedPortugalCostsIncluded: false,
+      originMarkets: ['DE', 'NL'],
+    })
+  })
+
+  it('normalizes imported used as the primary price when it is the only live market price', () => {
+    const vehicle: VehicleData = {
+      id: 'import-only',
+      brand: 'Import',
+      model: 'EV',
+      variant: 'Long Range',
+      pricing: {
+        offers: [
+          {
+            condition: 'new',
+            marketScope: 'official_pt',
+            status: 'not_sold_new',
+            priceFrom: 61000,
+            modelYear: 2022,
+          },
+          {
+            condition: 'used',
+            marketScope: 'imported_to_pt',
+            status: 'available',
+            priceFrom: 31800,
+            yearFrom: 2021,
+            yearTo: 2023,
+          },
+        ],
+      },
+    }
+
+    const normalized = normalizeVehicleForComparison(vehicle)
+
+    expect(normalized.pricing?.basePriceEur).toBe(31800)
+    expect(normalized.pricing?.primaryPrice).toMatchObject({
+      kind: 'importedUsed',
+      priceFrom: 31800,
+      yearFrom: 2021,
+      yearTo: 2023,
+    })
+    expect(normalized.pricing?.priceSummaries).toEqual([
+      expect.objectContaining({ kind: 'importedUsed', priceFrom: 31800 }),
+      expect.objectContaining({ kind: 'new', status: 'not_sold_new', priceFrom: 61000 }),
+    ])
+  })
+
   it('supports legacy prices and falls back when no image exists', () => {
     const vehicle: VehicleData = {
       id: 'legacy-ev',

@@ -20,7 +20,7 @@ lib/normalizeVehicle.ts
 types/comparison.ts
 ```
 
-`app/api/vehicles/route.ts` returns normalized vehicles, so comparison UI can read stable fields even though the canonical JSON uses names such as `batteryUsableKWh`, `charge10to80Min`, and `pricing.pt.consumerPrice.min`.
+`app/api/vehicles/route.ts` returns normalized vehicles, so comparison UI can read stable fields even though the canonical JSON uses names such as `batteryUsableKWh`, `charge10to80Min`, and `pricing.offers[].priceFrom`. Legacy `pricing.pt.consumerPrice.min` is still tolerated during migration, but new or fixed data should use `pricing.offers[]`.
 
 ## Data Flow
 
@@ -34,7 +34,8 @@ types/comparison.ts
 ## Normalized Fields Used By Comparison
 
 ```txt
-pricing.basePriceEur            from pricing.offers[].priceFrom, with legacy fallback
+pricing.basePriceEur            from the best available "from" offer, with legacy fallback
+pricing.offers[]                new, used, imported used, and historical-reference price contexts
 battery.capacityKwh             from battery.batteryUsableKWh
 charging.dcChargeSpeedKw        from charging.dcMaxChargeKW
 charging.chargeTime10To80Min    from charging.charge10to80Min
@@ -42,13 +43,17 @@ dimensions.trunkCapacityL       from dimensions.cargoLitersSeatsUp
 dimensions.lengthMm             from dimensions.lengthMM
 ```
 
+Comparison should show "from" prices, not price ranges. When data exists, price copy should distinguish new, used, imported used, and historical-reference prices so users understand what is being compared.
+
 ## User Features
 
 - Add/remove vehicles from comparison.
 - Compare up to three vehicles.
 - Persist selected vehicles in localStorage.
+- Preserve selected vehicles when editing selection or switching simple/advanced mode.
 - Open a full comparison page.
 - Highlight best range, value, charging, efficiency, and performance where data exists.
+- Share comparison pages with a native share flow on touch devices and copy/WhatsApp/email options on desktop.
 - Use placeholder images when real images are missing.
 - Display unavailable values gracefully when vehicle data is incomplete.
 

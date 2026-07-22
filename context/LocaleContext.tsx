@@ -8,7 +8,7 @@ import {
   useMemo,
   useState,
 } from 'react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 import {
   DEFAULT_LANGUAGE,
   LANGUAGE_LOCALES,
@@ -39,7 +39,6 @@ export function LocaleProvider({
   children: React.ReactNode
   initialLocale?: Language
 }) {
-  const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const searchKey = searchParams.toString()
@@ -61,11 +60,15 @@ export function LocaleProvider({
       persistLocale(nextLocale)
 
       const currentHref = `${pathname}${searchKey ? `?${searchKey}` : ''}`
-      router.replace(buildLocalizedHref(currentHref, nextLocale), {
-        scroll: false,
-      })
+      const nextHref = buildLocalizedHref(currentHref, nextLocale)
+
+      // Localized public URLs rewrite to the same internal App Router page
+      // (for example /pt/perguntas-frequentes and /en/faq both render /faq).
+      // A full navigation prevents stale server-component payloads when only
+      // the visible locale segment changes.
+      window.location.assign(nextHref)
     },
-    [pathname, router, searchKey]
+    [pathname, searchKey]
   )
 
   const value = useMemo(

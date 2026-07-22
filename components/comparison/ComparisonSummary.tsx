@@ -143,26 +143,26 @@ export function ComparisonSummary({
                 <div className="space-y-2 text-sm">
 
                   {vehicle.pricing?.basePriceEur && (
-                    <div className="flex justify-between">
+                    <div className="flex min-w-0 flex-wrap justify-between gap-2">
 
-                      <span className="text-slate-600">
+                      <span className="min-w-0 text-slate-600">
                         {priceLabel(vehicle)}
                       </span>
 
-                      <span className="font-semibold text-emerald-700">
+                      <span className="shrink-0 font-semibold text-emerald-700">
                         {Math.round(vehicle.pricing.basePriceEur).toLocaleString(locale)} €
                       </span>
                     </div>
                   )}
 
                   {vehicle.efficiency?.wltpRangeKm && (
-                    <div className="flex justify-between">
+                    <div className="flex min-w-0 flex-wrap justify-between gap-2">
 
-                      <span className="text-slate-600">
+                      <span className="min-w-0 text-slate-600">
                         {t.comparisonSummary.wltpRange}
                       </span>
 
-                      <span className="font-semibold text-emerald-700">
+                      <span className="shrink-0 font-semibold text-emerald-700">
                         {Math.round(
                           vehicle.efficiency.wltpRangeKm
                         )}{' '}
@@ -172,13 +172,13 @@ export function ComparisonSummary({
                   )}
 
                   {vehicle.battery?.capacityKwh && (
-                    <div className="flex justify-between">
+                    <div className="flex min-w-0 flex-wrap justify-between gap-2">
 
-                      <span className="text-slate-600">
+                      <span className="min-w-0 text-slate-600">
                         {t.comparisonSummary.battery}
                       </span>
 
-                      <span className="font-semibold text-emerald-700">
+                      <span className="shrink-0 font-semibold text-emerald-700">
                         {vehicle.battery.capacityKwh.toFixed(1)}{' '}
                         kWh
                       </span>

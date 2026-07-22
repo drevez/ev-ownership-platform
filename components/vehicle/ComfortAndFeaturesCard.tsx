@@ -3,8 +3,14 @@
 import { useTranslations } from '@/hooks/useTranslations'
 import type { VehicleComfort } from '@/lib/loadVehicle'
 
+const RATING_MAX = 10
+
 interface ComfortAndFeaturesProps {
   comfort?: VehicleComfort
+}
+
+function normalizeRatingLevel(level: number) {
+  return Math.min(Math.max(level, 0), RATING_MAX)
 }
 
 export function ComfortAndFeaturesCard({
@@ -143,6 +149,8 @@ export function ComfortAndFeaturesCard({
                 return null
               }
 
+              const displayLevel = normalizeRatingLevel(rating.level)
+
               return (
                 <div key={rating.label}>
 
@@ -160,7 +168,7 @@ export function ComfortAndFeaturesCard({
                     </div>
 
                     <span className="text-sm font-bold text-slate-600">
-                      {rating.level}/5
+                      {displayLevel}/{RATING_MAX}
                     </span>
                   </div>
 
@@ -169,7 +177,7 @@ export function ComfortAndFeaturesCard({
                     <div
                       className="bg-blue-500 h-2 rounded-full"
                       style={{
-                        width: `${(rating.level / 5) * 100}%`,
+                        width: `${(displayLevel / RATING_MAX) * 100}%`,
                       }}
                     />
                   </div>

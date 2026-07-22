@@ -582,10 +582,14 @@ function SegmentedControl({
 function HelpText({ text }: { text: string }) {
   return (
     <span className="group relative inline-flex">
-      <span className="flex h-5 w-5 items-center justify-center rounded-full border border-slate-300 bg-white text-xs font-bold text-slate-500">
+      <button
+        type="button"
+        aria-label={text}
+        className="flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 bg-white text-xs font-bold text-slate-500 transition hover:border-emerald-500 hover:text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+      >
         ?
-      </span>
-      <span className="pointer-events-none absolute left-0 top-7 z-10 hidden w-72 rounded-md border border-slate-200 bg-white p-3 text-xs leading-5 text-slate-600 shadow-lg group-hover:block group-focus-within:block">
+      </button>
+      <span className="pointer-events-none absolute left-0 top-8 z-10 hidden w-[min(18rem,calc(100vw-3rem))] rounded-md border border-slate-200 bg-white p-3 text-xs leading-5 text-slate-600 shadow-lg group-hover:block group-focus-within:block">
         {text}
       </span>
     </span>

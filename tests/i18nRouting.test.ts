@@ -13,6 +13,7 @@ describe('localized routing', () => {
     expect(localizePathname('/models', 'pt')).toBe('/pt/modelos')
     expect(localizePathname('/compare/versions', 'es')).toBe('/es/comparador/versiones')
     expect(localizePathname('/recommend', 'en')).toBe('/en/recommender')
+    expect(localizePathname('/faq', 'pt')).toBe('/pt/perguntas-frequentes')
   })
 
   it('converts translated routes back to their internal pathname', () => {
@@ -25,6 +26,9 @@ describe('localized routing', () => {
     expect(
       delocalizePathname(stripLanguageFromPathname('/en/about'))
     ).toBe('/about')
+    expect(
+      delocalizePathname(stripLanguageFromPathname('/es/preguntas-frecuentes'))
+    ).toBe('/faq')
   })
 
   it('switches language while preserving query strings and hashes', () => {

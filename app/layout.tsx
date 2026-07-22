@@ -9,6 +9,7 @@ import { ComparisonBar } from '@/components/comparison/ComparisonBar'
 import { ComparisonBarPaddingManager } from '@/components/comparison/ComparisonBarPaddingManager'
 import { CookieConsentBanner } from '@/components/CookieConsentBanner'
 import { GoogleTagManager } from '@/components/GoogleTagManager'
+import { PageFeedback } from '@/components/PageFeedback'
 import { SiteHeader } from '@/components/SiteHeader'
 import { SiteFooter } from '@/components/SiteFooter'
 
@@ -169,6 +170,7 @@ export default async function RootLayout({
             <main className="flex-1">
               {children}
             </main>
+            <PageFeedback />
             <SiteFooter />
             <ComparisonBar />
             <CookieConsentBanner />

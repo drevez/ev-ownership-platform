@@ -659,9 +659,9 @@ export function VehicleDataEditor({
         <Checkbox label="Vehicle to load" checked={comfortForm.vehicleToLoad} onChange={(vehicleToLoad) => setComfortForm({ ...comfortForm, vehicleToLoad })} />
         <Checkbox label="Vehicle to grid" checked={comfortForm.vehicleToGrid} onChange={(vehicleToGrid) => setComfortForm({ ...comfortForm, vehicleToGrid })} />
         <Checkbox label="Panoramic roof" checked={comfortForm.panoramicRoof} onChange={(panoramicRoof) => setComfortForm({ ...comfortForm, panoramicRoof })} />
-        <Field label="Software level" value={comfortForm.softwareExperienceLevel} onChange={(softwareExperienceLevel) => setComfortForm({ ...comfortForm, softwareExperienceLevel })} type="number" />
-        <Field label="Maintenance level" value={comfortForm.maintenanceLevel} onChange={(maintenanceLevel) => setComfortForm({ ...comfortForm, maintenanceLevel })} type="number" />
-        <Field label="Insurance level" value={comfortForm.insuranceLevel} onChange={(insuranceLevel) => setComfortForm({ ...comfortForm, insuranceLevel })} type="number" />
+        <Field label="Software level" value={comfortForm.softwareExperienceLevel} onChange={(softwareExperienceLevel) => setComfortForm({ ...comfortForm, softwareExperienceLevel })} type="number" min={1} max={10} step={1} />
+        <Field label="Maintenance level" value={comfortForm.maintenanceLevel} onChange={(maintenanceLevel) => setComfortForm({ ...comfortForm, maintenanceLevel })} type="number" min={1} max={10} step={1} />
+        <Field label="Insurance level" value={comfortForm.insuranceLevel} onChange={(insuranceLevel) => setComfortForm({ ...comfortForm, insuranceLevel })} type="number" min={1} max={10} step={1} />
       </EditorSection>
 
       <EditorSection title="Pricing">

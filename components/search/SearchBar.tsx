@@ -103,7 +103,7 @@ export default function SearchBar() {
       ref={containerRef}
       className="relative"
     >
-      <div className="bg-white/5 border border-white/10 backdrop-blur-2xl rounded-3xl p-4 flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col gap-3 rounded-lg border border-white/10 bg-white/5 p-3 backdrop-blur-2xl md:flex-row md:gap-4 md:p-4">
         <input
           type="text"
           value={query}
@@ -117,27 +117,27 @@ export default function SearchBar() {
             }
           }}
           placeholder={t.home.hero.searchPlaceholder}
-          className="flex-1 bg-transparent outline-none px-4 py-4 text-lg placeholder:text-zinc-500 text-white"
+          className="min-w-0 flex-1 bg-transparent px-3 py-3 text-base text-white outline-none placeholder:text-zinc-500 sm:px-4 sm:py-4 sm:text-lg"
         />
 
         <button
           onClick={handleSubmit}
-          className="bg-emerald-500 text-black px-8 py-4 rounded-2xl font-semibold hover:bg-emerald-400 transition"
+          className="rounded-lg bg-emerald-500 px-6 py-3 font-semibold text-black transition hover:bg-emerald-400 sm:px-8 sm:py-4"
         >
           {t.home.hero.searchButton}
         </button>
       </div>
 
       {isOpen && results.length > 0 && (
-        <div className="absolute top-full mt-4 w-full rounded-3xl border border-white/10 bg-[#111111] backdrop-blur-2xl overflow-hidden shadow-2xl z-50 max-h-96 overflow-y-auto">
+        <div className="absolute top-full z-50 mt-3 max-h-96 w-full overflow-y-auto overflow-hidden rounded-lg border border-white/10 bg-[#111111] shadow-2xl backdrop-blur-2xl sm:mt-4">
           {results.map((vehicle) => (
             <Link
               key={vehicle.slug}
               href={localizedHref(`/models/${vehicle.slug}`)}
-              className="block px-6 py-5 hover:bg-white/5 transition border-b border-white/5 last:border-none"
+              className="block border-b border-white/5 px-5 py-4 transition last:border-none hover:bg-white/5 sm:px-6 sm:py-5"
               onClick={() => setIsOpen(false)}
             >
-              <p className="font-semibold text-lg text-white">
+              <p className="text-base font-semibold text-white sm:text-lg">
                 {vehicle.name}
               </p>
 
@@ -151,4 +151,3 @@ export default function SearchBar() {
     </div>
   )
 }
-

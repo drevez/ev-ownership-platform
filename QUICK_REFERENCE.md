@@ -22,8 +22,11 @@ lib/comparison.ts
 lib/internalContentFiles.ts
 lib/internalVehicleFiles.ts
 lib/cookieConsent.ts
+lib/i18nRouting.ts
+app/api/feedback/route.ts
 components/CookieConsentBanner.tsx
 components/GoogleTagManager.tsx
+components/PageFeedback.tsx
 data/registry/vehicles.json
 public/data/vehicles/
 ```
@@ -108,11 +111,37 @@ components/comparison/VehicleSelector.tsx
 ## Internal Tools
 
 ```txt
+/internal              Internal tools hub
 /internal/vehicles     Vehicle data health dashboard and JSON editor
 /internal/content      Page copy, translation, and SEO editor
+/internal/images       Vehicle image backlog, candidate review, and WebP creation
 ```
 
 Internal pages and write APIs require `INTERNAL_AUTH_USERNAME` and `INTERNAL_AUTH_PASSWORD`.
+
+## Public Route Families
+
+```txt
+/models                Model catalog
+/vehicles/{id}         Vehicle detail
+/compare/models        Model-family comparison
+/compare/versions      Exact-variant comparison
+/recommend             Recommendation quiz
+/guides                Buying guides
+/charging              Charging guide
+/faq                   Frequently asked questions
+```
+
+Public URLs are localized through `lib/i18nRouting.ts`; use localized href helpers rather than hardcoded language paths.
+
+## Feedback
+
+```env
+FEEDBACK_WEBHOOK_URL=
+FEEDBACK_WEBHOOK_SECRET=
+```
+
+`/api/feedback` accepts thumbs up/down page feedback. Without a webhook it returns `stored: false`; with a webhook it can persist events and return aggregate stats.
 
 ## Analytics
 

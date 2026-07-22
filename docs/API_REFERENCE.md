@@ -32,7 +32,29 @@ Returns the complete list of registered vehicles from the flat JSON registry. Us
 
 ---
 
-## 2. Vehicle Lookup API
+## 2. Model APIs
+
+### `GET /api/models/all`
+Returns grouped model data for the public model catalog. Use this when the UI
+needs model families rather than exact vehicle variants.
+
+#### Response
+- **Status**: `200 OK`
+- **Content-Type**: `application/json`
+
+### `GET /api/models/compare`
+Returns comparison-ready model-family data for selected model slugs.
+
+#### Query Parameters
+- `models`: Repeating query parameter string representing model slugs (e.g. `?models=xpeng-p7&models=xpeng-g6`).
+
+#### Response
+- **Status**: `200 OK`
+- **Content-Type**: `application/json`
+
+---
+
+## 3. Vehicle Lookup API
 
 ### `GET /api/vehicles`
 Loads, parses, and normalizes specific vehicle variant files by ID.
@@ -93,7 +115,7 @@ Loads, parses, and normalizes specific vehicle variant files by ID.
 
 ---
 
-## 3. Recommendations API
+## 4. Recommendations API
 
 ### `POST /api/recommendations`
 Accepts user preferences and priorities and executes the scoring recommendation engine.
@@ -176,7 +198,69 @@ Legacy GET endpoint fallback. Reads parameters from search parameters and return
 
 ---
 
-## 4. Internal Vehicle Create API
+## 5. Feedback API
+
+### `GET /api/feedback`
+Returns page-level feedback stats when a persistence webhook is configured.
+
+This route is public, but it only returns aggregate counts from the configured
+webhook. If no webhook exists, it returns `stats: null`.
+
+#### Query Parameters
+- `pagePath` (string, required): Delocalized or localized page path to look up.
+
+#### Response
+- `200 OK`: `{ "stats": { "helpfulCount": 12, "notHelpfulCount": 3, "totalCount": 15 } }`
+- `200 OK`: `{ "stats": null }` when not configured or no stats exist.
+- `502 Bad Gateway`: webhook stats request failed.
+
+### `POST /api/feedback`
+Receives lightweight page feedback from public pages such as models, comparison,
+and recommendation. The route sanitizes text, validates the vote, and forwards
+the event to `FEEDBACK_WEBHOOK_URL` if configured.
+
+No database is bundled with the app. The endpoint is intentionally adapter-like
+so it can later forward to Google Apps Script, Supabase, PostHog, or another
+private endpoint.
+
+#### Request Body
+- **Content-Type**: `application/json`
+- **Parameters**:
+  - `kind` (string): `vote` or `note`. Defaults to `vote`.
+  - `helpful` (boolean, required): `true` for thumbs up, `false` for thumbs down.
+  - `pagePath` (string, required): Page path where feedback was submitted.
+  - `pageUrl` (string): Full browser URL.
+  - `locale` (string): Current language code.
+  - `message` (string): Optional note, capped server-side.
+  - `viewport` (string): Optional viewport dimensions.
+
+```json
+{
+  "kind": "vote",
+  "helpful": true,
+  "pagePath": "/pt/comparador/modelos",
+  "pageUrl": "https://motorzero.pt/pt/comparador/modelos?models=xpeng-p7&models=xpeng-g6",
+  "locale": "pt",
+  "viewport": "390x844"
+}
+```
+
+#### Response
+- `200 OK`: `{ "stored": true, "stats": { ... } }` when webhook forwarding succeeds.
+- `200 OK`: `{ "stored": false, "stats": null }` when no webhook is configured.
+- `400 Bad Request`: invalid vote or missing page path.
+- `500 Internal Server Error`: feedback submission failed.
+
+Relevant environment variables:
+
+```env
+FEEDBACK_WEBHOOK_URL=
+FEEDBACK_WEBHOOK_SECRET=
+```
+
+---
+
+## 6. Internal Vehicle Create API
 
 ### `POST /api/internal/vehicles`
 Creates a new modular vehicle folder and upserts a registry entry generated from `core.json`.
@@ -228,7 +312,7 @@ pricing
 
 ---
 
-## 5. Internal Vehicle Update API
+## 7. Internal Vehicle Update API
 
 ### `PUT /api/internal/vehicles/[id]`
 Updates an existing modular vehicle folder and upserts the corresponding registry entry from `core.json`.
@@ -247,7 +331,7 @@ This endpoint requires the same server-side Basic Auth credentials as `/internal
 
 ---
 
-## 6. Internal Content And SEO API
+## 8. Internal Content And SEO API
 
 ### `POST /api/internal/content`
 Saves editable page copy, translations, and SEO metadata for Portuguese, English, and Spanish.
@@ -296,7 +380,7 @@ Editable field ids are defined in [lib/internalContentFiles.ts](/Users/danielare
 
 ---
 
-## 7. Internal Image Review API
+## 9. Internal Image Review API
 
 ### `POST /api/internal/images/review`
 Updates the review state for a vehicle image candidate or promotes an approved
@@ -325,15 +409,15 @@ Promotion reads either a local candidate path or a direct image URL from
 
 ---
 
-## 8. Internal Route Summary
+## 10. Internal Route Summary
 
 These routes support the private working surfaces:
 
 ```txt
+/internal
 /internal/vehicles
 /internal/vehicles/new
 /internal/vehicles/{id}
-/internal/vehicles/{id}/edit
 /internal/content
 /internal/images
 ```
@@ -342,7 +426,7 @@ They are protected by server-side Basic Auth in the Proxy. Internal write APIs a
 
 ---
 
-## 9. Analytics Note
+## 11. Analytics Note
 
 Analytics does not use an application API route. GTM is loaded centrally from `NEXT_PUBLIC_GTM_ID`, and consent state is handled in the browser.
 

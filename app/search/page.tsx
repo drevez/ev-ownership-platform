@@ -4,6 +4,7 @@ import { getRequestLanguage } from '@/lib/serverLocale'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { VehiclePriceSummary } from '@/lib/normalizeVehicle'
+import { buildLocalizedHref } from '@/lib/i18nRouting'
 
 type SearchPageProps = {
   searchParams: Promise<{
@@ -58,34 +59,34 @@ export default async function SearchResultsPage({ searchParams }: SearchPageProp
   })
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white px-6 py-24">
-      <div className="max-w-7xl mx-auto">
+    <main className="min-h-screen bg-[#0a0a0a] px-4 py-16 text-white sm:px-6 sm:py-24">
+      <div className="mx-auto max-w-7xl">
         <p className="text-emerald-400 font-semibold mb-2 uppercase tracking-wider text-sm">
-          Resultados para
+          {t.searchPage.resultsFor}
         </p>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-12">
+        <h1 className="mb-10 text-3xl font-bold sm:text-4xl md:mb-12 md:text-5xl">
           &ldquo;{q}&rdquo; <span className="text-zinc-500 font-normal">({matchedModels.length})</span>
         </h1>
 
         {matchedModels.length === 0 ? (
-          <div className="rounded-3xl border border-white/10 bg-zinc-900/50 p-12 text-center max-w-xl">
-            <h2 className="text-2xl font-bold mb-4">Sem resultados encontrados</h2>
-            <p className="text-zinc-400 mb-8">
-              Não encontrámos nenhum modelo que corresponda à sua pesquisa. Tente pesquisar por marcas como Tesla, BYD, Kia, ou Volvo.
+          <div className="max-w-xl rounded-lg border border-white/10 bg-zinc-900/50 p-6 text-center sm:p-10 md:p-12">
+            <h2 className="mb-4 text-2xl font-bold">{t.searchPage.emptyTitle}</h2>
+            <p className="mb-8 text-zinc-400">
+              {t.searchPage.emptyDescription}
             </p>
             <Link
               href={`/${locale}`}
-              className="bg-emerald-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-emerald-400 transition"
+              className="inline-flex w-full items-center justify-center rounded-full bg-emerald-500 px-6 py-3 font-semibold text-black transition hover:bg-emerald-400 sm:w-auto"
             >
-              Voltar ao Início
+              {t.searchPage.backHome}
             </Link>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {matchedModels.map((model) => {
               const price = model.priceFromEur
-                ? `${Math.round(model.priceFromEur).toLocaleString(locale === 'pt' ? 'pt-PT' : 'en')} €`
+                ? `${Math.round(model.priceFromEur).toLocaleString(locale === 'pt' ? 'pt-PT' : locale === 'es' ? 'es-ES' : 'en')} €`
                 : 'N/D'
               const priceLabel = getPriceKindLabel(model.primaryPrice, t)
               
@@ -94,10 +95,10 @@ export default async function SearchResultsPage({ searchParams }: SearchPageProp
               return (
                 <Link
                   key={model.slug}
-                  href={`/${locale}/modelos/${model.slug}`}
-                  className="group overflow-hidden rounded-[32px] bg-zinc-900 border border-white/10 hover:border-emerald-500 transition block"
+                  href={buildLocalizedHref(`/models/${model.slug}`, locale)}
+                  className="group block overflow-hidden rounded-lg border border-white/10 bg-zinc-900 transition hover:border-emerald-500"
                 >
-                  <div className="relative h-64 w-full bg-zinc-950">
+                  <div className="relative h-52 w-full bg-zinc-950 sm:h-64">
                     <Image
                       src={model.heroImage}
                       alt={model.displayName}
@@ -107,15 +108,15 @@ export default async function SearchResultsPage({ searchParams }: SearchPageProp
                     />
                   </div>
 
-                  <div className="p-8">
+                  <div className="p-5 sm:p-8">
                     <p className="text-zinc-500 text-sm mb-1">{model.brand}</p>
-                    <h3 className="text-3xl font-bold mb-6 group-hover:text-emerald-400 transition">
+                    <h3 className="mb-6 text-2xl font-bold transition group-hover:text-emerald-400 sm:text-3xl">
                       {model.model}
                     </h3>
 
-                    <div className="grid grid-cols-2 gap-6 mb-6">
+                    <div className="mb-6 grid grid-cols-2 gap-4 sm:gap-6">
                       <div>
-                        <p className="text-zinc-500 text-sm mb-2">Autonomia real</p>
+                        <p className="text-zinc-500 text-sm mb-2">{t.searchPage.realRange}</p>
                         <p className="text-xl font-semibold">{range ? `${range} km` : 'N/D'}</p>
                       </div>
 
@@ -125,8 +126,8 @@ export default async function SearchResultsPage({ searchParams }: SearchPageProp
                       </div>
                     </div>
 
-                    <span className="block w-full text-center bg-white/10 group-hover:bg-white text-white group-hover:text-black py-4 rounded-2xl font-semibold transition">
-                      Ver Versões ({model.variantCount})
+                    <span className="block w-full rounded-lg bg-white/10 py-4 text-center font-semibold text-white transition group-hover:bg-white group-hover:text-black">
+                      {t.searchPage.viewVersions.replace('{count}', String(model.variantCount))}
                     </span>
                   </div>
                 </Link>

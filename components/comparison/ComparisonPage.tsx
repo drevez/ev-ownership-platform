@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import { ComparisonVehicle } from '@/types/comparison'
@@ -292,30 +293,44 @@ export function ComparisonPage({
   }
 
   return (
-    <main className="min-h-screen bg-slate-100 pb-10 text-slate-950">
+    <main className="min-h-screen bg-slate-100 pb-8 text-slate-950 md:pb-10">
 
       <div className="border-b border-slate-800 bg-slate-950 text-white">
-        <div className="mx-auto max-w-7xl px-4 py-6 md:py-8">
-          <div className="grid gap-5 lg:grid-cols-[1fr_380px] lg:items-end">
-            <div>
+        <div className="mx-auto max-w-7xl px-4 py-5 md:py-8">
+          <div className="grid gap-4 md:gap-6 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-end">
+            <div className="min-w-0">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
                 {t.comparePage.compare}
               </p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-4xl">
+              <h1 className="mt-2 text-2xl font-bold tracking-tight text-white md:text-4xl">
                 {t.comparisonPage.title}
               </h1>
               <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300 md:text-base">
-                {t.comparisonPage.compare}{' '}
-                {vehicles.length}{' '}
-                {t.comparisonPage.premiumVehicles}
+                {t.comparisonPage.selectedCount.replace('{count}', String(vehicles.length))}
               </p>
+              <div className="mt-4 flex max-w-4xl flex-wrap gap-2">
+                {vehicles.map((vehicle) => (
+                  <span
+                    key={vehicle.id}
+                    className="max-w-full truncate rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-sm font-semibold text-slate-100"
+                  >
+                    {vehicle.displayName}
+                  </span>
+                ))}
+              </div>
             </div>
 
             <div className="rounded-lg border border-white/10 bg-white/5 p-3 shadow-sm">
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <p className="text-sm font-semibold text-slate-100">
                   {t.comparisonPage.modeLabel}
                 </p>
+                <Link
+                  href={localizedHref(editSelectionHref)}
+                  className="inline-flex w-full justify-center rounded-md border border-white/15 px-3 py-2 text-xs font-semibold text-slate-100 transition hover:border-emerald-300 hover:text-emerald-200 md:w-auto md:py-1.5"
+                >
+                  {t.comparePage.editSelection}
+                </Link>
               </div>
               <div className="mt-3 grid grid-cols-2 gap-1 rounded-lg border border-white/10 bg-slate-900 p-1">
                 {(['simple', 'advanced'] as ComparisonMode[]).map((comparisonMode) => (
@@ -335,7 +350,7 @@ export function ComparisonPage({
                   </button>
                 ))}
               </div>
-              <p className="mt-3 min-h-10 text-xs leading-5 text-slate-300">
+              <p className="mt-3 text-xs leading-5 text-slate-300">
                 {mode === 'simple'
                   ? t.comparisonPage.simpleModeDescription
                   : t.comparisonPage.advancedModeDescription}
@@ -345,7 +360,7 @@ export function ComparisonPage({
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+      <div className="mx-auto max-w-7xl space-y-5 px-4 py-5 md:space-y-8 md:py-8">
         {mode === 'simple' ? (
           <>
             <SimpleComparisonDecision
@@ -367,7 +382,6 @@ export function ComparisonPage({
           </>
         )}
 
-        {/* CTA */}
         <div className="rounded-lg border border-emerald-200 bg-white p-6 text-center shadow-sm md:p-8">
 
           <h2 className="mb-3 text-2xl font-bold text-slate-950 md:text-3xl">
@@ -379,28 +393,171 @@ export function ComparisonPage({
           </p>
 
           <div className="flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
-            {vehicles.map((vehicle) => (
-              <Link
-                key={vehicle.id}
-                href={localizedHref(vehicle.detailPath ?? `/vehicles/${vehicle.id}`)}
-                className="inline-flex justify-center rounded-lg bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-              >
-                {t.comparisonPage.viewVehicle.replace(
-                  '{vehicle}',
-                  vehicle.displayName
-                )}
-              </Link>
-            ))}
+            <ShareComparisonButton
+              label={t.comparisonPage.shareComparison}
+              copiedLabel={t.comparisonPage.linkCopied}
+              errorLabel={t.comparisonPage.shareError}
+              copyLinkLabel={t.comparisonPage.copyLink}
+              whatsappLabel={t.comparisonPage.shareWhatsapp}
+              emailLabel={t.comparisonPage.shareEmail}
+              shareText={t.comparisonPage.shareText}
+              title={t.comparisonPage.title}
+            />
             <Link
               href={localizedHref(editSelectionHref)}
               className="inline-flex justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-emerald-500 hover:text-emerald-800"
             >
-              {t.comparisonPage.backToResults}
+              {t.comparePage.editSelection}
             </Link>
           </div>
+
+          <p className="mt-5 text-sm leading-6 text-slate-500">
+            {t.comparisonPage.detailsLinksLabel}{' '}
+            {vehicles.map((vehicle, index) => (
+              <span key={vehicle.id}>
+                <Link
+                  href={localizedHref(vehicle.detailPath ?? `/vehicles/${vehicle.id}`)}
+                  className="font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 transition hover:text-emerald-700 hover:decoration-emerald-400"
+                >
+                  {vehicle.displayName}
+                </Link>
+                {index < vehicles.length - 1 && <span className="mx-1.5 text-slate-300">·</span>}
+              </span>
+            ))}
+          </p>
         </div>
       </div>
     </main>
+  )
+}
+
+function ShareComparisonButton({
+  label,
+  copiedLabel,
+  errorLabel,
+  copyLinkLabel,
+  whatsappLabel,
+  emailLabel,
+  shareText,
+  title,
+}: {
+  label: string
+  copiedLabel: string
+  errorLabel: string
+  copyLinkLabel: string
+  whatsappLabel: string
+  emailLabel: string
+  shareText: string
+  title: string
+}) {
+  const [status, setStatus] = useState<'idle' | 'copied' | 'error'>('idle')
+  const [isOpen, setIsOpen] = useState(false)
+  const [menuMode, setMenuMode] = useState<'desktop' | 'mobileFallback'>('desktop')
+  const menuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!isOpen) return
+
+    const closeOnOutsideClick = (event: MouseEvent) => {
+      if (!menuRef.current?.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', closeOnOutsideClick)
+    return () => document.removeEventListener('mousedown', closeOnOutsideClick)
+  }, [isOpen])
+
+  const copyLink = async () => {
+    const url = window.location.href
+
+    try {
+      await navigator.clipboard.writeText(url)
+      setStatus('copied')
+      setIsOpen(false)
+      window.setTimeout(() => setStatus('idle'), 2400)
+    } catch {
+      setStatus('error')
+      window.setTimeout(() => setStatus('idle'), 3000)
+    }
+  }
+
+  const shareNative = async () => {
+    try {
+      await navigator.share({ title, text: shareText, url: window.location.href })
+      setIsOpen(false)
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') return
+      setStatus('error')
+      window.setTimeout(() => setStatus('idle'), 3000)
+    }
+  }
+
+  const hasTouchLikeInput = () => window.matchMedia('(pointer: coarse)').matches
+  const usesCompactViewport = () => window.innerWidth < 768
+
+  const handlePrimaryShare = async () => {
+    if (hasTouchLikeInput() && 'share' in navigator) {
+      await shareNative()
+      return
+    }
+
+    setMenuMode(usesCompactViewport() ? 'mobileFallback' : 'desktop')
+    setIsOpen((current) => !current)
+  }
+
+  const shareWhatsapp = () => {
+    const message = `${shareText} ${window.location.href}`
+    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
+    setIsOpen(false)
+  }
+
+  const shareEmail = () => {
+    const subject = title
+    const body = `${shareText}\n\n${window.location.href}`
+    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    setIsOpen(false)
+  }
+
+  return (
+    <div ref={menuRef} className="relative">
+      <button
+        type="button"
+        onClick={handlePrimaryShare}
+        className="inline-flex w-full justify-center rounded-lg bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 sm:w-auto"
+        aria-expanded={isOpen}
+      >
+        {status === 'copied' ? copiedLabel : status === 'error' ? errorLabel : label}
+      </button>
+
+      {isOpen && (
+        <div className="absolute bottom-full left-0 right-0 z-20 mb-2 overflow-hidden rounded-lg border border-slate-200 bg-white text-left shadow-xl sm:left-auto sm:right-auto sm:min-w-56">
+          <button
+            type="button"
+            onClick={copyLink}
+            className="block w-full px-4 py-3 text-left text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-emerald-800"
+          >
+            {copyLinkLabel}
+          </button>
+          <button
+            type="button"
+            onClick={shareWhatsapp}
+            className="block w-full px-4 py-3 text-left text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-emerald-800"
+          >
+            {whatsappLabel}
+          </button>
+          {menuMode === 'desktop' && (
+            <button
+              type="button"
+              onClick={shareEmail}
+              className="block w-full px-4 py-3 text-left text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-emerald-800"
+            >
+              {emailLabel}
+            </button>
+          )}
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -416,7 +573,7 @@ function SimpleVehicleCards({
   const t = useTranslations()
   const gridClass =
     vehicles.length === 2
-      ? 'grid gap-5 lg:grid-cols-2'
+      ? 'mx-auto grid max-w-6xl gap-5 lg:grid-cols-2'
       : 'grid gap-5 lg:grid-cols-3'
 
   return (
@@ -436,7 +593,7 @@ function SimpleVehicleCards({
           >
             <Link
               href={localizedHref(vehicle.detailPath ?? `/vehicles/${vehicle.id}`)}
-              className="group relative block aspect-[16/9] overflow-hidden bg-slate-100"
+              className="group relative block h-48 overflow-hidden bg-slate-100 md:aspect-[16/9] md:h-auto"
             >
               <SafeImage
                 src={vehicle.image || VEHICLE_PLACEHOLDER_IMAGE}
@@ -445,13 +602,8 @@ function SimpleVehicleCards({
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/70 to-transparent p-4">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/70 to-transparent p-3 sm:p-4">
                 <div className="flex flex-wrap items-center gap-2">
-                  {isHighlighted && (
-                    <span className="rounded-full bg-emerald-300 px-3 py-1 text-xs font-bold text-slate-950">
-                      {t.comparisonPage.simpleStrongOption}
-                    </span>
-                  )}
                   <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-800">
                     {vehicle.bodyType || vehicle.segment || 'EV'}
                   </span>
@@ -459,10 +611,17 @@ function SimpleVehicleCards({
               </div>
             </Link>
 
-            <div className="flex flex-1 flex-col p-5">
-              <h2 className="text-xl font-bold leading-snug text-slate-950">
-                {vehicle.displayName}
-              </h2>
+            <div className="flex flex-1 flex-col p-4 md:p-5">
+              <div className="flex items-start justify-between gap-3">
+                <h2 className="min-w-0 text-lg font-bold leading-snug text-slate-950 md:text-xl">
+                  {vehicle.displayName}
+                </h2>
+                {isHighlighted && (
+                  <span className="shrink-0 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800">
+                    {t.comparisonPage.simpleStrongOption}
+                  </span>
+                )}
+              </div>
 
               <div className="mt-4 grid flex-1 gap-3">
                 <PlainComparisonPoint
@@ -555,7 +714,7 @@ function AdvancedVehicleCards({
                 <p className="text-sm text-slate-500">{vehicle.segment}</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 text-sm">
+              <div className="grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
                 {vehicle.efficiency?.wltpRangeKm && (
                   <TechStat label={t.comparisonPage.range} value={`${Math.round(vehicle.efficiency.wltpRangeKm)} km`} />
                 )}
@@ -592,9 +751,9 @@ function AdvancedVehicleCards({
 
 function TechStat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-slate-50 rounded-lg p-2 border border-slate-200">
+    <div className="min-w-0 rounded-lg border border-slate-200 bg-slate-50 p-2">
       <p className="text-xs text-slate-400">{label}</p>
-      <p className="font-semibold text-emerald-700">{value}</p>
+      <p className="break-words font-semibold leading-snug text-emerald-700">{value}</p>
     </div>
   )
 }
@@ -646,33 +805,35 @@ function SimpleComparisonDecision({
   ]
 
   return (
-    <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm md:p-6">
-      <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+    <section className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm md:p-6">
+      <div className="mb-4 flex flex-col gap-2 md:mb-5 md:flex-row md:items-end md:justify-between">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-slate-950">
+          <h2 className="text-xl font-bold tracking-tight text-slate-950 md:text-2xl">
             {t.comparisonPage.simpleDecisionTitle}
           </h2>
-          <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+          <p className="mt-1 max-w-3xl text-sm leading-5 text-slate-600 md:leading-6">
             {t.comparisonPage.simpleDecisionDescription}
           </p>
         </div>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
         {items.map((item) => (
           <div
             key={item.label}
-            className="flex min-h-56 flex-col rounded-lg border border-slate-200 bg-slate-50 p-4"
+            className="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3 transition hover:border-emerald-200 hover:bg-emerald-50/40 md:min-h-48 md:p-4"
           >
-            <p className="text-sm font-bold text-slate-950">{item.label}</p>
-            <p className="mt-1 text-sm leading-5 text-slate-600">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wide text-emerald-700">{item.label}</p>
+              <p className="mt-1 hidden text-sm leading-5 text-slate-600 md:block">
               {item.helper}
-            </p>
-            <div className="mt-auto rounded-md bg-white p-3 shadow-sm">
-              <p className="font-bold text-slate-950">
+              </p>
+            </div>
+            <div className="border-t border-slate-200 pt-3 md:mt-auto">
+              <p className="break-words text-base font-bold leading-snug text-slate-950">
                 {item.winner?.vehicle.displayName ?? 'N/D'}
               </p>
-              <p className="mt-1 text-sm font-semibold text-emerald-700">
+              <p className="mt-1 text-lg font-bold text-emerald-700 md:text-xl">
                 {item.value}
               </p>
               {item.context && (

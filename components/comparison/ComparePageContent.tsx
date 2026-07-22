@@ -185,14 +185,6 @@ function CompareResultsView({
           </Link>
           <span>/</span>
           <span className="text-slate-900">{t.comparePage.result}</span>
-          <span className="ml-auto">
-            <Link
-              href={localizedHref(editSelectionHref)}
-              className="font-medium text-emerald-700 hover:text-emerald-900 transition"
-            >
-              {t.comparePage.editSelection}
-            </Link>
-          </span>
         </nav>
       </div>
       <ComparisonPage

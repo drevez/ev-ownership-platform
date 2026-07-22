@@ -7,19 +7,19 @@ import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 const featuredComparisons = [
   {
     title: 'Tesla Model Y Long Range vs Kia EV5 Tech',
-    subtitle: 'SUVs elétricos para família',
+    subtitleKey: 'familySuvs',
     image:
       'https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1600&auto=format&fit=crop',
     ids: ['tesla-model-y-long-range', 'kia-ev5-tech']
   },
   {
     title: 'Volvo EX30 vs Smart #1',
-    subtitle: 'Elétricos compactos premium',
+    subtitleKey: 'compactPremium',
     image:
       'https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1600&auto=format&fit=crop',
     ids: ['volvo-ex30-69kwh', 'smart-1-66kwh']
   }
-]
+] as const
 
 const featuredVehicles = [
   {
@@ -67,38 +67,38 @@ export default function HomePage() {
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/70 to-[#0a0a0a]" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-32 lg:py-44">
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:py-40">
           <div className="max-w-4xl">
             <p className="text-emerald-400 font-medium mb-6 tracking-wide uppercase text-sm">
               {t.home.hero.eyebrow}
             </p>
 
-            <h1 className="text-6xl md:text-8xl font-bold leading-[0.95] tracking-tight">
+            <h1 className="text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
               {t.home.hero.title}
             </h1>
 
-            <p className="text-xl text-zinc-300 mt-8 max-w-2xl leading-relaxed">
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-zinc-300 sm:text-xl">
               {t.home.hero.subtitle}
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-10">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
                 href={localizedHref('/recommend')}
-                className="bg-white text-black px-7 py-4 rounded-full font-semibold hover:scale-105 transition"
+                className="inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-4 text-center font-semibold text-black transition hover:scale-105 sm:w-auto sm:px-7"
               >
                 {t.home.hero.primaryButton}
               </Link>
 
               <Link
                 href={localizedHref('/compare')}
-                className="border border-white/20 bg-white/5 backdrop-blur-md px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition"
+                className="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-4 text-center font-semibold backdrop-blur-md transition hover:bg-white/10 sm:w-auto sm:px-7"
               >
                 {t.home.hero.secondaryButton}
               </Link>
             </div>
 
             {/* Search */}
-              <div className="mt-14">
+              <div className="mt-10 sm:mt-14">
                 <SearchBar />
               </div>
           </div>
@@ -107,14 +107,14 @@ export default function HomePage() {
 
       {/* Featured Comparisons */}
 
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="flex items-end justify-between mb-10">
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+        <div className="mb-8 flex flex-col gap-4 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-emerald-400 text-sm uppercase tracking-wider mb-3">
               {t.home.featuredComparisons.eyebrow}
             </p>
 
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-3xl font-bold sm:text-4xl">
               {t.home.featuredComparisons.title}
             </h2>
           </div>
@@ -135,11 +135,11 @@ export default function HomePage() {
               <Link
                 key={item.title}
                 href={localizedHref(`/compare/versions?${query}`)}
-                className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-zinc-900 transition hover:border-emerald-500/40"
+                className="group relative overflow-hidden rounded-lg border border-white/10 bg-zinc-900 transition hover:border-emerald-500/40"
                 aria-label={t.home.featuredComparisons.compareAriaLabel.replace('{title}',item.title)}
               >
                 <div
-                  className="h-[420px] bg-cover bg-center group-hover:scale-105 transition duration-700"
+                  className="h-72 bg-cover bg-center transition duration-700 group-hover:scale-105 sm:h-[360px] lg:h-[420px]"
                   style={{
                     backgroundImage: `url(${item.image})`
                   }}
@@ -147,12 +147,12 @@ export default function HomePage() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
-                <div className="absolute bottom-0 left-0 p-8">
+                <div className="absolute bottom-0 left-0 p-5 sm:p-8">
                   <p className="text-emerald-400 text-sm mb-3">
-                    {item.subtitle}
+                    {t.home.featuredComparisons.items[item.subtitleKey]}
                   </p>
 
-                  <h3 className="text-4xl font-bold max-w-md leading-tight">
+                  <h3 className="max-w-md text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
                     {item.title}
                   </h3>
                 </div>
@@ -165,22 +165,22 @@ export default function HomePage() {
       {/* Lifestyle */}
 
       <section className="border-y border-white/10 bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto px-6 py-24">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
           <p className="text-emerald-400 text-sm uppercase tracking-wider mb-3">
             {t.home.lifestyle.eyebrow}
           </p>
 
-          <h2 className="text-4xl font-bold mb-12">
+          <h2 className="mb-8 text-3xl font-bold sm:mb-12 sm:text-4xl">
             {t.home.lifestyle.title}
           </h2>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6 lg:gap-4">
             {t.home.lifestyle.items.map((item) => (
               <div
                 key={item}
-                className="bg-white/5 border border-white/10 rounded-3xl px-6 py-8 text-center hover:border-emerald-500 hover:bg-white/10 transition cursor-pointer"
+                className="cursor-pointer rounded-lg border border-white/10 bg-white/5 px-4 py-6 text-center transition hover:border-emerald-500 hover:bg-white/10 sm:px-6 sm:py-8"
               >
-                <p className="font-medium text-lg">
+                <p className="text-base font-medium sm:text-lg">
                   {item}
                 </p>
               </div>
@@ -191,14 +191,14 @@ export default function HomePage() {
 
       {/* Featured EVs */}
 
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="flex items-end justify-between mb-10">
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+        <div className="mb-8 flex items-end justify-between sm:mb-10">
           <div>
             <p className="text-emerald-400 text-sm uppercase tracking-wider mb-3">
               {t.home.featuredVehicles.eyebrow}
             </p>
 
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-3xl font-bold sm:text-4xl">
               {t.home.featuredVehicles.title}
             </h2>
           </div>
@@ -209,17 +209,17 @@ export default function HomePage() {
             <Link
               key={vehicle.modelSlug}
               href={localizedHref(`/models/${vehicle.modelSlug}`)}
-              className="group overflow-hidden rounded-[32px] bg-zinc-900 border border-white/10 hover:border-emerald-500 transition block"
+              className="group block overflow-hidden rounded-lg border border-white/10 bg-zinc-900 transition hover:border-emerald-500"
             >
               <div
-                className="h-64 bg-cover bg-center"
+                className="h-52 bg-cover bg-center sm:h-64"
                 style={{
                   backgroundImage: `url(${vehicle.image})`
                 }}
               />
 
-              <div className="p-8">
-                <h3 className="text-3xl font-bold mb-6">
+              <div className="p-5 sm:p-8">
+                <h3 className="mb-6 text-2xl font-bold sm:text-3xl">
                   {vehicle.name}
                 </h3>
 
@@ -245,7 +245,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <span className="mt-8 block w-full text-center bg-white text-black py-4 rounded-2xl font-semibold group-hover:opacity-90 transition">
+                <span className="mt-8 block w-full rounded-lg bg-white py-4 text-center font-semibold text-black transition group-hover:opacity-90">
                   {t.home.featuredVehicles.viewModel}
                 </span>
               </div>
@@ -259,22 +259,22 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 blur-3xl" />
 
-        <div className="relative max-w-5xl mx-auto px-6 py-32 text-center">
+        <div className="relative mx-auto max-w-5xl px-4 py-20 text-center sm:px-6 sm:py-28">
           <p className="text-emerald-400 text-sm uppercase tracking-wider mb-4">
             {t.home.finalCta.eyebrow}
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+          <h2 className="text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             {t.home.finalCta.title}
           </h2>
 
-          <p className="text-zinc-400 text-xl mt-8 max-w-3xl mx-auto">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-zinc-400 sm:mt-8 sm:text-xl">
             {t.home.finalCta.description}
           </p>
 
           <Link
             href={localizedHref('/recommend')}
-            className="inline-flex mt-12 bg-emerald-500 text-black px-8 py-5 rounded-full text-lg font-semibold hover:scale-105 transition"
+            className="mt-10 inline-flex w-full items-center justify-center rounded-full bg-emerald-500 px-7 py-4 text-center font-semibold text-black transition hover:scale-105 sm:mt-12 sm:w-auto sm:px-8 sm:py-5 sm:text-lg"
           >
             {t.home.finalCta.button}
           </Link>

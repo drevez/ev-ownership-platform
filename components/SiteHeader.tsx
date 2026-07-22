@@ -22,23 +22,23 @@ export function SiteHeader() {
   const isOnRecommend = basePathname === '/recommend'
 
   return (
-    <header className="border-b border-white/10 backdrop-blur-xl sticky top-0 z-50 bg-black/60">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6">
 
         {/* Logo */}
-        <Link href={localizedHref('/')} className="text-2xl font-bold tracking-tight text-white">
+        <Link href={localizedHref('/')} className="text-xl font-bold tracking-tight text-white sm:text-2xl">
           MotorZero
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm">
+        <nav className="hidden items-center gap-6 text-sm xl:gap-8 lg:flex">
           {links.map(({ href, key }) => {
             const isActive = basePathname === href
             return (
               <Link
                 key={href}
                 href={localizedHref(href)}
-                className={`relative pb-1 transition ${
+                className={`relative whitespace-nowrap pb-1 transition ${
                   isActive
                     ? 'text-white font-medium'
                     : 'text-zinc-400 hover:text-white'
@@ -54,11 +54,11 @@ export function SiteHeader() {
         </nav>
 
         {/* CTA — hidden when already on /recommend */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden items-center gap-4 lg:flex">
           {!isOnRecommend && (
             <Link
               href={localizedHref('/recommend')}
-              className="bg-emerald-500 hover:bg-emerald-400 text-black px-5 py-3 rounded-full font-semibold transition"
+              className="whitespace-nowrap rounded-full bg-emerald-500 px-5 py-3 font-semibold text-black transition hover:bg-emerald-400"
             >
               {t.navigation.idealEv}
             </Link>
@@ -67,7 +67,7 @@ export function SiteHeader() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-white p-2"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white transition hover:bg-white/10 lg:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -85,7 +85,7 @@ export function SiteHeader() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-white/10 bg-black/90 px-6 py-4 flex flex-col gap-4">
+        <div className="flex flex-col gap-3 border-t border-white/10 bg-black/95 px-4 py-4 shadow-2xl lg:hidden">
           {links.map(({ href, key }) => {
             const isActive = basePathname === href
             return (
@@ -93,10 +93,10 @@ export function SiteHeader() {
                 key={href}
                 href={localizedHref(href)}
                 onClick={() => setMenuOpen(false)}
-                className={`text-sm py-2 border-b border-white/5 transition ${
+                className={`rounded-md border border-white/5 px-3 py-3 text-sm transition ${
                   isActive
-                    ? 'text-white font-medium'
-                    : 'text-zinc-400 hover:text-white'
+                    ? 'bg-white/5 text-white font-medium'
+                    : 'text-zinc-400 hover:bg-white/5 hover:text-white'
                 }`}
               >
                 {isActive && <span className="text-emerald-500 mr-2">▸</span>}
@@ -108,7 +108,7 @@ export function SiteHeader() {
             <Link
               href={localizedHref('/recommend')}
               onClick={() => setMenuOpen(false)}
-              className="mt-2 bg-emerald-500 hover:bg-emerald-400 text-black px-5 py-3 rounded-full font-semibold text-center transition"
+              className="mt-1 rounded-full bg-emerald-500 px-5 py-3 text-center font-semibold text-black transition hover:bg-emerald-400"
             >
               {t.navigation.idealEv}
             </Link>

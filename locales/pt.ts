@@ -30,7 +30,11 @@ export const pt = {
       eyebrow: "Comparações Mais Procuradas",
       title: "Comparações em Destaque",
       viewAll: "Ver todas →",
-      compareAriaLabel: "Comparar {title}"
+      compareAriaLabel: "Comparar {title}",
+      items: {
+        familySuvs: "SUVs elétricos para família",
+        compactPremium: "Elétricos compactos premium"
+      }
     },
     lifestyle: {
       eyebrow: "Explorar",
@@ -345,17 +349,169 @@ export const pt = {
   results: {
     empty: "Submete o questionário para veres os melhores EVs para ti."
   },
+  searchPage: {
+    resultsFor: "Resultados para",
+    emptyTitle: "Sem resultados encontrados",
+    emptyDescription: "Não encontrámos nenhum modelo que corresponda à tua pesquisa. Experimenta pesquisar por marcas como Tesla, BYD, Kia ou Volvo.",
+    backHome: "Voltar ao início",
+    realRange: "Autonomia real",
+    viewVersions: "Ver versões ({count})"
+  },
   aboutPage: {
     metadataTitle: "Sobre",
     metadataDescription: "Conhece a MotorZero, uma plataforma portuguesa para explorar, comparar e entender veículos elétricos.",
+    eyebrow: "Sobre a plataforma",
     title: "Sobre",
-    description: "A MotorZero ajuda condutores em Portugal a explorar, comparar e entender veículos elétricos com especificações claras, ferramentas inteligentes e recomendações orientadas ao uso real."
+    description: "A MotorZero ajuda condutores em Portugal a explorar, comparar e entender veículos elétricos com especificações claras, ferramentas inteligentes e recomendações orientadas ao uso real.",
+    heroPoints: ["Portugal primeiro", "Dados práticos", "Escolha sem ruído"],
+    originLabel: "Origem",
+    originTitle: "Começou como uma ferramenta pessoal para aprender e comparar melhor.",
+    originDescription: "Queria perceber o mercado elétrico sem depender apenas de anúncios, opiniões soltas ou números difíceis de comparar. A partir daí, fez sentido organizar essa aprendizagem e partilhá-la com outras pessoas.",
+    storyEyebrow: "A história",
+    storyTitle: "De uma necessidade pessoal para uma ferramenta pública.",
+    sections: [
+      { marker: "1", title: "Como começou", description: "Começou como uma ferramenta para eu própria aprender sobre carros elétricos e conseguir comparar muitas opções diferentes sem me perder em folhas soltas, anúncios e especificações difíceis de cruzar." },
+      { marker: "2", title: "Porque partilhar", description: "Percebi que havia mais pessoas como eu: curiosas, interessadas em escolher bem, mas sem querer passar horas a traduzir autonomia, carregamento, versões, preços e diferenças técnicas." },
+      { marker: "3", title: "O que quero construir", description: "A ideia é tornar a escolha mais clara e honesta, juntando dados, comparações, guias e recomendações que expliquem o impacto real de cada decisão." }
+    ],
+    principlesEyebrow: "Princípios",
+    principlesTitle: "O que deve tornar a escolha mais fácil",
+    principles: [
+      { title: "Explicar antes de vender", description: "Ajudar a perceber os compromissos de cada carro sem linguagem demasiado técnica." },
+      { title: "Separar dados de opinião", description: "Mostrar preços, autonomia e carregamento como referências claras, com contexto quando há incerteza." },
+      { title: "Servir iniciantes e curiosos", description: "Dar leitura simples para quem está a começar e detalhe suficiente para quem quer comparar a fundo." },
+      { title: "Assumir o que falta", description: "Marcar dados incompletos, imagens em falta e informação que precisa de validação." }
+    ],
+    noteTitle: "Ainda está a crescer",
+    noteDescription: "A base de dados, os textos e as imagens continuam em evolução. Prefiro mostrar o que já está claro, marcar o que precisa de validação e melhorar a plataforma com tempo.",
+    creatorNote: "Criado por Daniela Revez. Podes conhecer mais sobre o meu trabalho em",
+    contactCta: "Falar connosco"
   },
   contactsPage: {
     metadataTitle: "Contactos",
     metadataDescription: "Contacta a MotorZero para parcerias, correções de dados ou feedback.",
+    eyebrow: "Contactos",
     title: "Contactos",
-    description: "Fala connosco sobre parcerias, correções de dados, sugestões ou feedback sobre a plataforma."
+    description: "Envia sugestões, correções de dados, ideias, propostas comerciais ou qualquer feedback sobre a plataforma.",
+    emailLabel: "Email",
+    emailDescription: "Envia a tua mensagem diretamente. Podes escrever em português ou inglês.",
+    formTitle: "Enviar mensagem",
+    reasonsEyebrow: "Como podes ajudar",
+    reasonsTitle: "Todos os tipos de feedback são bem-vindos",
+    reasons: [
+      { marker: "UX", title: "Sugerir melhorias", description: "Textos, páginas, filtros, comparação, recomendador, navegação ou detalhes visuais." },
+      { marker: "D", title: "Corrigir dados", description: "Preços, versões, imagens, autonomia, carregamento, fontes ou informação de mercado." },
+      { marker: "€", title: "Parcerias e comercial", description: "Marcas, stands, dados, imprensa, conteúdos ou oportunidades comerciais." },
+      { marker: "?", title: "Outros assuntos", description: "Dúvidas gerais, comentários, ideias ou qualquer tema que faça sentido partilhar." }
+    ],
+    feedbackTitle: "Para feedback sobre uma página",
+    feedbackDescription: "Se for sobre uma página ou veículo, inclui o link, o que te confundiu e qualquer fonte útil. Para dados de carros, ajuda indicar marca, modelo, versão, mercado e data.",
+    directTitle: "Também podes contactar diretamente",
+    directDescription: "Podes escrever sobre melhorias, dados, parcerias, temas comerciais ou questões gerais.",
+    emailCta: "Enviar email",
+    emailFallback: "Preferes escrever diretamente? Usa",
+    form: {
+      topicLabel: "Assunto",
+      topicOptions: [
+        { value: "improvement", label: "Sugestão de melhoria" },
+        { value: "data", label: "Correção de dados" },
+        { value: "commercial", label: "Parceria ou comercial" },
+        { value: "general", label: "Questão geral" }
+      ],
+      nameLabel: "Nome opcional",
+      replyToLabel: "Email opcional para resposta",
+      pageUrlLabel: "Link da página ou veículo",
+      pageUrlPlaceholder: "https://motorzero.pt/...",
+      messageLabel: "Mensagem",
+      messagePlaceholder: "Escreve a tua mensagem com o contexto necessário.",
+      privacyNote: "O formulário abre o teu cliente de email. Não guardamos estes dados no site.",
+      submit: "Preparar email",
+      emailSubjectPrefix: "Contacto MotorZero"
+    }
+  },
+  guidesPage: {
+    metadataTitle: "Guias de compra de carros elétricos",
+    metadataDescription: "Guias práticos para escolher um carro elétrico em Portugal: novo, usado, importado, autonomia, carregamento e custos.",
+    eyebrow: "Guias de compra",
+    title: "Comprar um elétrico com menos dúvidas",
+    description: "Esta área vai reunir guias simples para decisões reais: perceber preços, escolher entre novo e usado, avaliar autonomia, comparar carregamento e evitar surpresas no custo total.",
+    sections: [
+      { title: "Novo, usado ou importado", description: "Explica quando faz sentido olhar para viaturas novas em Portugal, usados nacionais ou importados, e que dados confirmar antes de avançar." },
+      { title: "Autonomia sem confusão", description: "Ajuda a traduzir WLTP, autonomia real e autonomia em autoestrada para o teu uso diário." },
+      { title: "Custos de propriedade", description: "Organiza preço de compra, energia, manutenção, seguro e fatores que podem mudar bastante entre modelos." }
+    ],
+    wipTitle: "Página em construção",
+    wipDescription: "Estamos a transformar esta área num centro de guias. Por agora, usa o recomendador, os modelos e o comparador para tomar decisões com os dados disponíveis.",
+    ctas: {
+      recommend: "Usar recomendador",
+      models: "Ver modelos",
+      compare: "Comparar veículos",
+      faq: "Ver perguntas frequentes"
+    }
+  },
+  chargingPage: {
+    metadataTitle: "Carregamento de carros elétricos",
+    metadataDescription: "Guia prático sobre carregamento AC, DC, tempos de carregamento e escolhas de carros elétricos para quem carrega em casa, no trabalho ou na rua.",
+    eyebrow: "Carregamento",
+    title: "Carregar um elétrico: o essencial antes de escolher",
+    description: "O melhor carro para ti depende muito de onde vais carregar. Esta página resume os pontos que mais influenciam o dia a dia: AC, DC, tempo de 10-80%, acesso a carregamento e eficiência.",
+    quickTitle: "Leitura rápida",
+    quickStats: [
+      { label: "AC", value: "Carregamento normal em casa, condomínio, trabalho ou postos lentos." },
+      { label: "DC", value: "Carregamento rápido para viagens e paragens curtas em estrada." },
+      { label: "10-80%", value: "Métrica útil para comparar paragens rápidas, não o tempo de 0-100%." }
+    ],
+    sections: [
+      { title: "Se carregas em casa", description: "A autonomia diária e a eficiência podem importar mais do que a potência DC máxima." },
+      { title: "Se dependes da rua", description: "Autonomia real, carregamento rápido e previsibilidade tornam-se mais importantes." },
+      { title: "Se fazes viagens longas", description: "Olha para autonomia em autoestrada, tempo 10-80% e potência DC sustentada, não apenas para o pico anunciado." }
+    ],
+    wipTitle: "Guia em evolução",
+    wipDescription: "Vamos adicionar exemplos portugueses, custos por kWh, tempos reais e cenários para casa, apartamento, empresa e viagens.",
+    ctas: {
+      recommend: "Encontrar carro adequado",
+      compare: "Comparar carregamento",
+      faq: "Ver dúvidas comuns"
+    }
+  },
+  faqPage: {
+    metadataTitle: "Perguntas frequentes sobre carros elétricos",
+    metadataDescription: "Respostas simples sobre compra, autonomia, carregamento, preços, usados, importados e dados de carros elétricos em Portugal.",
+    eyebrow: "FAQ",
+    title: "Perguntas frequentes",
+    description: "Respostas curtas para dúvidas comuns de quem está a escolher um carro elétrico. Esta página vai crescer à medida que adicionarmos guias, dados e perguntas reais dos utilizadores.",
+    sections: [
+      {
+        title: "Compra e escolha",
+        questions: [
+          { question: "Como começo a escolher um carro elétrico?", answer: "Começa pelo orçamento, acesso a carregamento, quilómetros diários, viagens longas e espaço necessário. Depois compara autonomia real, carregamento e preço disponível para cada versão." },
+          { question: "Devo comparar modelos ou versões?", answer: "Para uma decisão inicial, compara modelos. Quando já tens candidatos fortes, compara versões específicas porque bateria, autonomia, carregamento e preço podem mudar bastante." },
+          { question: "O recomendador substitui uma decisão profissional?", answer: "Não. O recomendador ajuda a filtrar opções com base nos dados disponíveis, mas deves confirmar preços, campanhas, disponibilidade e condições finais antes de comprar." }
+        ]
+      },
+      {
+        title: "Carregamento e autonomia",
+        questions: [
+          { question: "WLTP é igual à autonomia real?", answer: "Não. WLTP é uma referência de homologação. Para uso diário, olha também para autonomia real estimada, consumo e autonomia em autoestrada." },
+          { question: "O que significa carregar 10-80%?", answer: "É uma forma prática de comparar paragens rápidas em viagem. O carregamento acima dos 80% costuma ser mais lento, por isso 10-80% é mais útil para viagens." },
+          { question: "Preciso de carregamento rápido DC muito alto?", answer: "Depende. Se carregas quase sempre em casa, talvez não. Se fazes viagens longas ou dependes da rede pública, tempo 10-80% e boa potência DC tornam-se mais importantes." }
+        ]
+      },
+      {
+        title: "Preços e dados",
+        questions: [
+          { question: "Os preços são finais?", answer: "Não. São referências para comparação e podem representar novo, usado, importado ou preço novo histórico, conforme os dados disponíveis." },
+          { question: "Porque alguns carros têm dados em falta?", answer: "A base de dados está a crescer por ficheiros JSON. Preferimos mostrar dados incompletos com transparência do que inventar valores." },
+          { question: "O que significa importado usado?", answer: "É uma estimativa ou referência de mercado para viaturas usadas importadas para Portugal. Quando possível, deve indicar se custos portugueses de importação estão incluídos." }
+        ]
+      }
+    ],
+    wipTitle: "Ainda em evolução",
+    wipDescription: "Vamos acrescentar mais perguntas, exemplos portugueses e ligações diretas aos guias específicos.",
+    ctas: {
+      guides: "Abrir guias de compra",
+      charging: "Ver guia de carregamento"
+    }
   },
   legalPages: {
     privacy: {
@@ -462,6 +618,7 @@ export const pt = {
     title: "Comparação de Carros Elétricos",
     compare: "Compara",
     premiumVehicles: "veículos elétricos lado a lado",
+    selectedCount: "{count} veículos selecionados para comparar lado a lado.",
     range: "Autonomia",
     price: "Preço",
     battery: "Bateria",
@@ -510,11 +667,19 @@ export const pt = {
       family: "Suficiente para uso familiar",
       compact: "Melhor para uso leve"
     },
-    readyDecision: "Pronto para decidir?",
-    informedChoice: "Com base na tua comparação, explora especificações detalhadas e toma uma decisão informada sobre o teu próximo carro elétrico.",
+    readyDecision: "Queres pedir uma segunda opinião?",
+    informedChoice: "Partilha esta comparação com quem te ajuda a decidir. O link mantém os veículos selecionados e o modo de comparação.",
     backToVehicles: "Voltar a todos os modelos",
     viewVehicle: "Ver {vehicle}",
-    backToResults: "Voltar aos resultados do comparador",
+    backToResults: "Alterar seleção",
+    shareComparison: "Partilhar comparação",
+    linkCopied: "Link copiado",
+    shareError: "Não foi possível partilhar",
+    copyLink: "Copiar link",
+    shareWhatsapp: "WhatsApp",
+    shareEmail: "Email",
+    shareText: "Vê esta comparação de carros elétricos no MotorZero.",
+    detailsLinksLabel: "Ver detalhes:",
     testDrive: "Agendar test drive"
   },
   comparisonSummary: {
@@ -556,7 +721,8 @@ export const pt = {
     modelResultsCount: "modelos encontrados",
     versionResultsCount: "versões encontradas",
     versionAvailable: "versão disponível",
-    versionsAvailable: "versões disponíveis"
+    versionsAvailable: "versões disponíveis",
+    noResults: "Nenhum veículo encontrado."
   },
   batteryAndCharging: {
     title: "Bateria e carregamento",
@@ -760,6 +926,7 @@ export const pt = {
     browseModels: "Explorar modelos",
     buyingGuides: "Guias de compra",
     charging: "Carregamento",
+    faq: "Perguntas frequentes",
     other: "Outros",
     about: "Sobre",
     contacts: "Contactos",
@@ -768,6 +935,24 @@ export const pt = {
     terms: "Termos",
     cookies: "Cookies",
     cookieSettings: "Definições de cookies"
+  },
+  pageFeedback: {
+    eyebrow: "Feedback",
+    title: "Esta página ajudou?",
+    description: "Feedback rápido para melhorar a experiência.",
+    helpfulLabel: "Foi útil",
+    notHelpfulLabel: "Não foi útil",
+    commentLabel: "Nota opcional",
+    placeholder: "O que faltou, confundiu ou ajudou nesta página?",
+    send: "Enviar nota",
+    sending: "A enviar...",
+    sent: "Obrigado",
+    sameOpinion: "{percentage}% teve a mesma opinião.",
+    publicCount: "{count} pessoas acharam esta página útil.",
+    emailSubject: "Feedback sobre página MotorZero",
+    emailUsefulLabel: "Foi útil",
+    emailPageLabel: "Página",
+    emailMessageLabel: "Mensagem"
   },
   cookieConsent: {
     title: "A tua privacidade",

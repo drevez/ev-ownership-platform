@@ -56,6 +56,11 @@ const LOCALIZED_ROUTE_SEGMENTS: Record<string, Record<Language, string>> = {
     en: 'charging',
     es: 'carga',
   },
+  faq: {
+    pt: 'perguntas-frequentes',
+    en: 'faq',
+    es: 'preguntas-frecuentes',
+  },
   privacy: {
     pt: 'privacidade',
     en: 'privacy',

@@ -64,6 +64,63 @@ Use GTM Preview to verify:
 
 Also verify that the container contains only one Google tag/page-view configuration. Next.js client navigation must generate exactly one intended page view.
 
+## Future Product Analytics Plan
+
+The preferred future setup is to keep two free analytics tools with distinct responsibilities:
+
+```txt
+GA4 through GTM    Acquisition, SEO, traffic sources, campaigns, Search Console context
+PostHog            Product behaviour, funnels, recommender/comparator usage, feedback events
+```
+
+Do not replace the existing GTM/GA4 setup immediately. GA4 should remain inside GTM only, with no direct `gtag.js` or `GoogleAnalytics` install in the app.
+
+If PostHog is added later, implement it as a lightweight, consent-aware client integration:
+
+- Load PostHog only after analytics consent is granted.
+- Use a dynamic import so PostHog is not part of the initial JavaScript bundle.
+- Initialize after the page is interactive, ideally during `requestIdleCallback` or a small post-load delay.
+- Use the EU host if available for the project.
+- Disable session replay at first.
+- Disable or limit autocapture at first.
+- Track only a small set of manual events that answer product and growth questions.
+- Keep GTM as the only Google tracking container.
+
+Suggested future environment variables:
+
+```env
+NEXT_PUBLIC_POSTHOG_KEY=
+NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
+```
+
+Suggested initial PostHog events:
+
+```txt
+recommendation_started
+recommendation_completed
+comparison_created
+comparison_shared
+vehicle_viewed
+model_filter_used
+page_feedback_voted
+page_feedback_note_sent
+```
+
+Consent-aware loading order:
+
+```txt
+Page load
+-> Consent Mode defaults are denied
+-> GTM loads
+-> GA4 waits for analytics consent inside GTM
+-> Visitor grants analytics consent
+-> Consent Mode updates to granted
+-> PostHog initializes lazily
+-> Manual product events can be captured
+```
+
+Avoid enabling PostHog session replay, heatmaps, surveys, or broad autocapture until there is a clear reason and the privacy copy has been reviewed.
+
 ## Local Testing
 
 1. Start the app with `npm run dev`.

@@ -75,6 +75,10 @@ export function SiteFooter() {
                     {t.footer.charging}
                   </FooterLink>
 
+                  <FooterLink href={localizedHref('/faq')}>
+                    {t.footer.faq}
+                  </FooterLink>
+
                 </ul>
               </div>
 

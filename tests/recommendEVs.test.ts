@@ -120,6 +120,80 @@ describe('recommendation scoring', () => {
       .toBeGreaterThan(20)
   })
 
+  it('uses imported used prices when regular used prices are unavailable', () => {
+    const importedOnly = vehicle('imported-used', {
+      pricing: {
+        offers: [
+          {
+            condition: 'new',
+            status: 'not_sold_new',
+            marketScope: 'official_pt',
+            priceFrom: 61000,
+            modelYear: 2021,
+          },
+          {
+            condition: 'used',
+            status: 'available',
+            marketScope: 'imported_to_pt',
+            priceFrom: 27500,
+            yearFrom: 2020,
+            yearTo: 2022,
+          },
+        ],
+      },
+    })
+
+    const [result] = scoreRecommendationCandidates(
+      [importedOnly],
+      { ...balancedAnswers, purchaseType: 'used', budget: 30000 }
+    )
+
+    expect(result.keySpecs.priceFromEur).toBe(27500)
+    expect(result.keySpecs.priceKind).toBe('importedUsed')
+    expect(result.keySpecs.priceYearFrom).toBe(2020)
+    expect(result.keySpecs.priceYearTo).toBe(2022)
+    expect(result.priceDeltaEur).toBe(-2500)
+  })
+
+  it('chooses the cheapest live price when purchase type is either', () => {
+    const mixedMarket = vehicle('mixed-market', {
+      pricing: {
+        offers: [
+          {
+            condition: 'new',
+            status: 'available',
+            marketScope: 'official_pt',
+            priceFrom: 47000,
+            modelYear: 2026,
+          },
+          {
+            condition: 'used',
+            status: 'available',
+            marketScope: 'used_pt',
+            priceFrom: 36000,
+            yearFrom: 2024,
+          },
+          {
+            condition: 'used',
+            status: 'available',
+            marketScope: 'imported_to_pt',
+            priceFrom: 33000,
+            yearFrom: 2023,
+          },
+        ],
+      },
+    })
+
+    const [result] = scoreRecommendationCandidates(
+      [mixedMarket],
+      { ...balancedAnswers, purchaseType: 'either', budget: 35000 }
+    )
+
+    expect(result.keySpecs.priceFromEur).toBe(33000)
+    expect(result.keySpecs.priceKind).toBe('importedUsed')
+    expect(result.priceDeltaEur).toBe(-2000)
+  })
+
   it('does not substitute a new price when the user explicitly wants used', () => {
     const newOnly = vehicle('new-only')
 

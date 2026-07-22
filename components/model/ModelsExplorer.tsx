@@ -251,12 +251,12 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <label className="flex items-center gap-2 text-sm text-slate-600">
+            <label className="flex flex-col gap-2 text-sm text-slate-600 sm:flex-row sm:items-center">
               <span>{t.modelsExplorer.sortLabel}</span>
               <select
                 value={sortKey}
                 onChange={(event) => setSortKey(event.target.value as SortKey)}
-                className="h-10 rounded-md border border-slate-200 bg-white px-3 text-slate-950"
+                className="h-11 w-full rounded-md border border-slate-200 bg-white px-3 text-slate-950 sm:h-10 sm:w-auto"
               >
                 {sortKeys.map((key) => (
                   <option key={key} value={key}>
@@ -268,14 +268,14 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
             <button
               type="button"
               onClick={() => setAdvancedOpen((open) => !open)}
-              className="h-10 rounded-md border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-700 transition hover:border-slate-300"
+              className="h-11 rounded-md border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-700 transition hover:border-slate-300 sm:h-10"
             >
               {advancedOpen ? t.modelsExplorer.hideFilters : t.modelsExplorer.showFilters}
             </button>
             <button
               type="button"
               onClick={clearFilters}
-              className="h-10 rounded-md px-4 text-sm font-semibold text-slate-500 transition hover:text-slate-800"
+              className="h-11 rounded-md px-4 text-sm font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 sm:h-10"
             >
               {t.modelsExplorer.clearFilters}
             </button>

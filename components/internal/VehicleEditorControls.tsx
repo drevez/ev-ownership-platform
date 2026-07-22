@@ -53,6 +53,9 @@ export function Field({
   type = 'text',
   placeholder,
   disabled,
+  min,
+  max,
+  step,
 }: {
   label: string
   value: string
@@ -60,6 +63,9 @@ export function Field({
   type?: string
   placeholder?: string
   disabled?: boolean
+  min?: number
+  max?: number
+  step?: number
 }) {
   return (
     <label className="block text-sm">
@@ -70,6 +76,9 @@ export function Field({
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
         disabled={disabled}
+        min={min}
+        max={max}
+        step={step}
         className="mt-1 h-10 w-full rounded-md border border-slate-200 bg-white px-3 text-slate-950 outline-none transition focus:border-emerald-500 disabled:bg-slate-100"
       />
     </label>

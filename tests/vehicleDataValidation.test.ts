@@ -119,6 +119,19 @@ describe('vehicle data validation', () => {
     expect(codes).toContain('reversed_price_range')
   })
 
+  it('rejects comfort levels outside the 1-10 scale', () => {
+    const files = validFiles()
+    files.comfort.softwareExperienceLevel = 11
+
+    expect(validateVehicleFiles('example-ev', files)).toContainEqual(
+      expect.objectContaining({
+        severity: 'error',
+        code: 'invalid_number',
+        path: 'comfort.softwareExperienceLevel',
+      })
+    )
+  })
+
   it('treats legacy pricing as a migration warning', () => {
     const files = validFiles()
     files.pricing = {

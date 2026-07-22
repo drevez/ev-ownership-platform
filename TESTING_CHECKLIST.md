@@ -47,8 +47,13 @@ Use this checklist when adding vehicles, changing data normalization, or prepari
 ## Comparison
 
 - [ ] `/compare` loads with no selected vehicles.
+- [ ] `/compare/models?models=...` compares model families.
+- [ ] `/compare/versions?ids=...` compares exact vehicle variants.
 - [ ] Selecting two vehicles opens a comparison result.
+- [ ] Editing selection preserves the current selected vehicles.
+- [ ] Switching simple/advanced mode preserves the selected vehicles and URL mode.
 - [ ] Price comes from normalized pricing, preferring `pricing.offers[]` where available.
+- [ ] Price labels distinguish new, used, imported used, and historical-reference contexts when those offers exist.
 - [ ] Battery comes from `battery.batteryUsableKWh`.
 - [ ] Charging speed comes from `charging.dcMaxChargeKW`.
 - [ ] Charging time comes from `charging.charge10to80Min`.
@@ -56,6 +61,7 @@ Use this checklist when adding vehicles, changing data normalization, or prepari
 - [ ] Trunk capacity uses `cargoLitersSeatsUp`.
 - [ ] Missing values display as unavailable rather than crashing.
 - [ ] Comparison bar persists selected vehicles through refresh.
+- [ ] Share action uses native share on touch devices when available, and copy/WhatsApp/email options on desktop.
 
 ## Recommendations
 
@@ -69,9 +75,10 @@ Use this checklist when adding vehicles, changing data normalization, or prepari
 
 - [ ] `/internal/vehicles` loads the data health dashboard.
 - [ ] `/internal/vehicles/new` can prepare a new vehicle in the seven-file JSON structure.
-- [ ] `/internal/vehicles/{id}/edit` can save changes and update the registry entry.
+- [ ] `/internal/vehicles/{id}` can save changes and update the registry entry.
 - [ ] `/internal/content` loads editable PT/EN/ES content and SEO fields.
 - [ ] Saving in `/internal/content` updates locale files and the app still builds.
+- [ ] `/internal/images` defaults to items needing attention, and can filter/sort approved, rejected, missing, referenced, and orphan images.
 - [ ] `/internal/*` returns `401` without valid Basic Auth credentials.
 - [ ] `/api/internal/*` returns `401` without valid Basic Auth credentials.
 - [ ] Authenticated internal API requests reach normal payload validation.
@@ -81,6 +88,7 @@ Use this checklist when adding vehicles, changing data normalization, or prepari
 - [ ] Home page works on mobile, tablet, and desktop.
 - [ ] Vehicle pages have no overlapping text on mobile.
 - [ ] Comparison page is readable with two and three vehicles.
+- [ ] Comparison scores, badges, and scale values do not overflow on mobile.
 - [ ] Sticky comparison bar does not cover important content.
 - [ ] Buttons are large enough for touch.
 - [ ] Text contrast is readable on dark and light sections.
@@ -102,6 +110,15 @@ Use this checklist when adding vehicles, changing data normalization, or prepari
 - [ ] GTM Preview shows the expected consent initialization order.
 - [ ] Initial loads and Next.js client navigation each create exactly one intended page view.
 - [ ] `/pt/privacidade`, `/pt/cookies`, and `/pt/termos` load, with EN and ES equivalents.
+
+## Feedback
+
+- [ ] Page feedback appears on models, comparison, and recommendation flows only.
+- [ ] Feedback is visually subtle and does not compete with primary CTAs.
+- [ ] Thumbs up/down can be submitted without a text note.
+- [ ] Optional text note appears after a vote.
+- [ ] `/api/feedback` returns `stored: false` when no webhook is configured.
+- [ ] If a webhook is configured, stats are returned and displayed according to the public-count threshold.
 
 ## Known Follow-Ups
 

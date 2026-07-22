@@ -12,9 +12,11 @@ This project is now structured around a growing modular EV dataset and a normali
 - Recommendation quiz scores vehicles from lifestyle inputs.
 - Placeholder vehicle images are used until real car images are uploaded.
 - Internal vehicle and content tools support dataset maintenance, translation editing, and SEO copy editing.
+- Internal image review supports missing image triage, candidate approval/rejection, WebP creation, and replacement.
 - GTM is the only analytics container and loads after denied Consent Mode v2 defaults.
 - A translated first-party cookie banner supports accept, reject, and category preferences.
-- Localized privacy, cookie, and terms pages are included in the sitemap.
+- Localized guides, charging, FAQ, privacy, cookie, and terms pages are included in the sitemap.
+- Key public flows can collect subtle thumbs up/down feedback through `/api/feedback`.
 
 ## Data Layer
 
@@ -42,7 +44,7 @@ It also normalizes missing local image files to `/images/vehicle-placeholder.svg
 batteryUsableKWh              -> battery.capacityKwh
 charge10to80Min               -> charging.chargeTime10To80Min
 pricing.offers[].priceFrom    -> pricing.basePriceEur
-pricing.pt.consumerPrice.min  -> pricing.basePriceEur
+pricing.pt.consumerPrice.min  -> pricing.basePriceEur (legacy)
 lengthMM                      -> dimensions.lengthMm
 cargoLitersSeatsUp            -> dimensions.trunkCapacityL
 ```
@@ -90,8 +92,9 @@ It checks:
 
 - `/internal/vehicles` audits vehicle data, filters issues, and links to vehicle JSON editing flows.
 - `/internal/vehicles/new` creates a new modular vehicle folder and registry entry.
-- `/internal/vehicles/{id}/edit` edits existing vehicle JSON files.
+- `/internal/vehicles/{id}` edits existing vehicle JSON files.
 - `/internal/content` edits page copy, translations, and SEO metadata in `locales/pt.ts`, `locales/en.ts`, and `locales/es.ts`.
+- `/internal/images` audits missing vehicle images and manages image candidates.
 
 These routes are protected by server-side Basic Auth in `proxy.ts`, with write APIs performing an additional authorization check.
 

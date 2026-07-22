@@ -23,17 +23,22 @@ locales/
 
 ## 2. Route Translation Mapping
 
-Instead of a generic path like `/models` or `/compare`, the URL paths are translated based on the active language. These translations are defined in [lib/i18nRouting.ts](file:///Users/danielarevez/ev-ownership-platform/lib/i18nRouting.ts):
+Instead of a generic path like `/models` or `/compare`, the URL paths are translated based on the active language. These translations are defined in [lib/i18nRouting.ts](/Users/danielarevez/ev-ownership-platform/lib/i18nRouting.ts):
 
 | English | Portuguese | Spanish | Internal Target |
 |---|---|---|---|
 | `/en/models` | `/pt/modelos` | `/es/modelos` | `models` page |
 | `/en/vehicles` | `/pt/veiculos` | `/es/vehiculos` | `vehicles` page |
-| `/en/compare` | `/pt/comparador` | `/es/comparador` | `compare` page |
+| `/en/compare` | `/pt/comparador` | `/es/comparador` | compare entry page |
+| `/en/compare/models` | `/pt/comparador/modelos` | `/es/comparador/modelos` | model comparison page |
+| `/en/compare/versions` | `/pt/comparador/versoes` | `/es/comparador/versiones` | variant comparison page |
 | `/en/recommender` | `/pt/recomendador` | `/es/recomendador` | `recommend` page |
 | `/en/about` | `/pt/sobre` | `/es/sobre` | `about` page |
 | `/en/contacts` | `/pt/contactos` | `/es/contacto` | `contacts` page |
 | `/en/search` | `/pt/pesquisa` | `/es/buscar` | `search` page |
+| `/en/guides` | `/pt/guias` | `/es/guias` | guides page |
+| `/en/charging` | `/pt/carregamento` | `/es/carga` | charging guide page |
+| `/en/faq` | `/pt/perguntas-frequentes` | `/es/preguntas-frecuentes` | FAQ page |
 | `/en/privacy` | `/pt/privacidade` | `/es/privacidad` | privacy page |
 | `/en/terms` | `/pt/termos` | `/es/terminos` | terms page |
 | `/en/cookies` | `/pt/cookies` | `/es/cookies` | cookie policy |
@@ -63,14 +68,14 @@ export default function MyComponent() {
 ```
 
 ### Server Components / Middleware
-Use `buildLocalizedHref(href, language)` from [lib/i18nRouting.ts](file:///Users/danielarevez/ev-ownership-platform/lib/i18nRouting.ts).
+Use `buildLocalizedHref(href, language)` from [lib/i18nRouting.ts](/Users/danielarevez/ev-ownership-platform/lib/i18nRouting.ts).
 
 ---
 
 ## 4. Retrieving Translations
 
 ### Client-Side
-Use `useTranslations` from [hooks/useTranslations.ts](file:///Users/danielarevez/ev-ownership-platform/hooks/useTranslations.ts) to retrieve the active dictionary:
+Use `useTranslations` from [hooks/useTranslations.ts](/Users/danielarevez/ev-ownership-platform/hooks/useTranslations.ts) to retrieve the active dictionary:
 
 ```typescript
 'use client'
@@ -104,7 +109,7 @@ export default async function Page() {
 Follow these steps to add a new supported language to the platform:
 
 1. **Add to Supported Languages**:
-   Open [config/i18n.ts](file:///Users/danielarevez/ev-ownership-platform/config/i18n.ts) and add the code (`fr`) to `SUPPORTED_LANGUAGES`, its label to `LANGUAGE_LABELS`, and its locale specifier to `LANGUAGE_LOCALES`:
+   Open [config/i18n.ts](/Users/danielarevez/ev-ownership-platform/config/i18n.ts) and add the code (`fr`) to `SUPPORTED_LANGUAGES`, its label to `LANGUAGE_LABELS`, and its locale specifier to `LANGUAGE_LOCALES`:
    ```typescript
    export const SUPPORTED_LANGUAGES = ['pt', 'en', 'es', 'fr'] as const
    
@@ -124,7 +129,7 @@ Follow these steps to add a new supported language to the platform:
    ```
 
 2. **Add Segment Translations**:
-   Open [lib/i18nRouting.ts](file:///Users/danielarevez/ev-ownership-platform/lib/i18nRouting.ts) and define localized route segments for the new language under `LOCALIZED_ROUTE_SEGMENTS`:
+   Open [lib/i18nRouting.ts](/Users/danielarevez/ev-ownership-platform/lib/i18nRouting.ts) and define localized route segments for the new language under `LOCALIZED_ROUTE_SEGMENTS`:
    ```typescript
    models: {
      pt: 'modelos',
@@ -179,7 +184,10 @@ It currently edits:
 - model and vehicle SEO descriptions
 - comparison page copy
 - about and contacts page copy
+- guides, charging, and FAQ page copy
+- page feedback copy
 - footer copy
+
 Cookie banner copy and privacy, cookie, and terms content currently live in the locale files but are not yet exposed by `/internal/content`.
 
 The editor writes back to the locale files. After saving content changes, run:
@@ -194,4 +202,4 @@ npm run build
 
 ## 7. Internal Routes
 
-Internal tooling routes such as `/internal/vehicles` and `/internal/content` should be linked directly and should not be translated for public SEO. They are development/admin surfaces, not public localized pages.
+Internal tooling routes such as `/internal`, `/internal/vehicles`, `/internal/content`, and `/internal/images` should be linked directly and should not be translated for public SEO. They are development/admin surfaces, not public localized pages.

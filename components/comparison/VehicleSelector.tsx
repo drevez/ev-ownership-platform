@@ -309,11 +309,11 @@ export function VehicleSelector({
               />
             </label>
 
-            <div className="flex gap-2">
+            <div className="grid gap-2 sm:grid-cols-2">
               <select
                 value={brandFilter}
                 onChange={(event) => setBrandFilter(event.target.value)}
-                className="h-10 rounded-lg border border-slate-200 bg-slate-50 px-3 pr-8 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                className="h-10 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 pr-8 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
               >
                 <option value="all">{t.vehicleSelector.allBrands}</option>
                 {brands.map((brand) => (
@@ -326,7 +326,7 @@ export function VehicleSelector({
               <select
                 value={bodyFilter}
                 onChange={(event) => setBodyFilter(event.target.value)}
-                className="h-10 rounded-lg border border-slate-200 bg-slate-50 px-3 pr-8 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                className="h-10 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 pr-8 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
               >
                 <option value="all">{t.vehicleSelector.allBodies}</option>
                 {bodyTypes.map((bodyType) => (
@@ -439,7 +439,7 @@ export function VehicleSelector({
         {/* Empty state */}
         {filteredChoices.length === 0 && (
           <div className="py-16 text-center">
-            <p className="text-slate-500">Nenhum veículo encontrado.</p>
+            <p className="text-slate-500">{t.vehicleSelector.noResults}</p>
           </div>
         )}
       </div>

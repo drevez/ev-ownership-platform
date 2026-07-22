@@ -30,7 +30,11 @@ export const en = {
       eyebrow: "Most Popular Comparisons",
       title: "Featured Comparisons",
       viewAll: "View all →",
-      compareAriaLabel: "Compare {title}"
+      compareAriaLabel: "Compare {title}",
+      items: {
+        familySuvs: "Electric SUVs for families",
+        compactPremium: "Premium compact EVs"
+      }
     },
     lifestyle: {
       eyebrow: "Explore",
@@ -345,17 +349,169 @@ export const en = {
   results: {
     empty: "Submit the quiz to see your top EV matches."
   },
+  searchPage: {
+    resultsFor: "Results for",
+    emptyTitle: "No results found",
+    emptyDescription: "We could not find a model matching your search. Try brands like Tesla, BYD, Kia, or Volvo.",
+    backHome: "Back to home",
+    realRange: "Real range",
+    viewVersions: "View versions ({count})"
+  },
   aboutPage: {
     metadataTitle: "About",
     metadataDescription: "Meet MotorZero, a Portugal-first platform for exploring, comparing, and understanding electric vehicles.",
+    eyebrow: "About the platform",
     title: "About",
-    description: "MotorZero helps drivers in Portugal explore, compare, and understand electric vehicles with clear specifications, smart tools, and recommendations grounded in real-world use."
+    description: "MotorZero helps drivers in Portugal explore, compare, and understand electric vehicles with clear specifications, smart tools, and recommendations grounded in real-world use.",
+    heroPoints: ["Portugal first", "Practical data", "Less noisy decisions"],
+    originLabel: "Origin",
+    originTitle: "It started as a personal tool to learn and compare better.",
+    originDescription: "I wanted to understand the electric market without relying only on listings, scattered opinions, or numbers that were hard to compare. From there, it made sense to organise that learning and share it with others.",
+    storyEyebrow: "The story",
+    storyTitle: "From a personal need to a public tool.",
+    sections: [
+      { marker: "1", title: "How it started", description: "It began as a tool to teach myself about electric cars and compare many different options without getting lost in scattered notes, listings, and specifications that were hard to line up." },
+      { marker: "2", title: "Why share it", description: "I realised there were more people like me: curious, interested in choosing well, but not eager to spend hours translating range, charging, versions, prices, and technical differences." },
+      { marker: "3", title: "What I want to build", description: "The aim is to make the choice clearer and more honest by bringing together data, comparisons, guides, and recommendations that explain the real impact of each decision." }
+    ],
+    principlesEyebrow: "Principles",
+    principlesTitle: "What should make choosing easier",
+    principles: [
+      { title: "Explain before selling", description: "Help people understand each car's trade-offs without overly technical language." },
+      { title: "Separate data from opinion", description: "Show prices, range, and charging as clear references, with context when there is uncertainty." },
+      { title: "Serve beginners and curious users", description: "Offer a simple read for people starting out and enough detail for deeper comparison." },
+      { title: "Admit what is missing", description: "Flag incomplete data, missing images, and information that still needs validation." }
+    ],
+    noteTitle: "Still growing",
+    noteDescription: "The database, text, and images are still evolving. I prefer to show what is already clear, mark what needs validation, and improve the platform over time.",
+    creatorNote: "Created by Daniela Revez. You can learn more about my work at",
+    contactCta: "Get in touch"
   },
   contactsPage: {
     metadataTitle: "Contact",
     metadataDescription: "Contact MotorZero for partnerships, data corrections, or feedback.",
+    eyebrow: "Contact",
     title: "Contact",
-    description: "Reach out about partnerships, data corrections, suggestions, or feedback about the platform."
+    description: "Send suggestions, data corrections, ideas, commercial proposals, or any feedback about the platform.",
+    emailLabel: "Email",
+    emailDescription: "Send your message directly. You can write in Portuguese or English.",
+    formTitle: "Send a message",
+    reasonsEyebrow: "How you can help",
+    reasonsTitle: "All kinds of feedback are welcome",
+    reasons: [
+      { marker: "UX", title: "Suggest improvements", description: "Text, pages, filters, comparison, recommender, navigation, or visual details." },
+      { marker: "D", title: "Correct data", description: "Prices, versions, images, range, charging, sources, or market information." },
+      { marker: "€", title: "Partnerships and commercial", description: "Brands, dealers, data, press, content, or commercial opportunities." },
+      { marker: "?", title: "Other topics", description: "General questions, comments, ideas, or anything else worth sharing." }
+    ],
+    feedbackTitle: "For feedback about a page",
+    feedbackDescription: "If it is about a page or vehicle, include the link, what confused you, and any useful source. For car data, brand, model, version, market, and date help.",
+    directTitle: "You can also reach out directly",
+    directDescription: "You can write about improvements, data, partnerships, commercial topics, or general questions.",
+    emailCta: "Send email",
+    emailFallback: "Prefer writing directly? Use",
+    form: {
+      topicLabel: "Topic",
+      topicOptions: [
+        { value: "improvement", label: "Improvement suggestion" },
+        { value: "data", label: "Data correction" },
+        { value: "commercial", label: "Partnership or commercial" },
+        { value: "general", label: "General question" }
+      ],
+      nameLabel: "Optional name",
+      replyToLabel: "Optional reply email",
+      pageUrlLabel: "Page or vehicle link",
+      pageUrlPlaceholder: "https://motorzero.pt/...",
+      messageLabel: "Message",
+      messagePlaceholder: "Write your message with the context needed.",
+      privacyNote: "The form opens your email client. We do not store this data on the site.",
+      submit: "Prepare email",
+      emailSubjectPrefix: "MotorZero contact"
+    }
+  },
+  guidesPage: {
+    metadataTitle: "Electric car buying guides",
+    metadataDescription: "Practical guides for choosing an electric car in Portugal: new, used, imported, range, charging, and ownership costs.",
+    eyebrow: "Buying guides",
+    title: "Choose an electric car with fewer doubts",
+    description: "This area will collect practical guides for real decisions: understanding prices, choosing between new and used, evaluating range, comparing charging, and avoiding total-cost surprises.",
+    sections: [
+      { title: "New, used, or imported", description: "Explains when it makes sense to consider new cars in Portugal, local used cars, or imports, and which details to confirm first." },
+      { title: "Range without confusion", description: "Helps translate WLTP, real range, and motorway range into everyday use." },
+      { title: "Ownership costs", description: "Organises purchase price, energy, maintenance, insurance, and factors that can vary significantly between models." }
+    ],
+    wipTitle: "Page in progress",
+    wipDescription: "We are turning this area into a guide hub. For now, use the recommender, models, and comparison tools to make decisions with the available data.",
+    ctas: {
+      recommend: "Use recommender",
+      models: "View models",
+      compare: "Compare vehicles",
+      faq: "Read FAQ"
+    }
+  },
+  chargingPage: {
+    metadataTitle: "Electric car charging",
+    metadataDescription: "Practical guide to AC charging, DC charging, charging times, and EV choices for home, workplace, or public charging.",
+    eyebrow: "Charging",
+    title: "Charging an EV: what matters before choosing",
+    description: "The best car for you depends heavily on where you will charge. This page summarises what affects daily ownership most: AC, DC, 10-80% time, charging access, and efficiency.",
+    quickTitle: "Quick read",
+    quickStats: [
+      { label: "AC", value: "Normal charging at home, in a building garage, at work, or at slower public points." },
+      { label: "DC", value: "Fast charging for trips and shorter motorway stops." },
+      { label: "10-80%", value: "Useful for comparing fast stops, not the full 0-100% charging time." }
+    ],
+    sections: [
+      { title: "If you charge at home", description: "Daily range and efficiency may matter more than maximum DC power." },
+      { title: "If you rely on public charging", description: "Real range, fast charging, and predictability become more important." },
+      { title: "If you take long trips", description: "Check motorway range, 10-80% time, and sustained DC power, not just the advertised peak." }
+    ],
+    wipTitle: "Guide evolving",
+    wipDescription: "We will add Portuguese examples, kWh costs, real charging times, and scenarios for home, apartments, company cars, and road trips.",
+    ctas: {
+      recommend: "Find a suitable car",
+      compare: "Compare charging",
+      faq: "Read common questions"
+    }
+  },
+  faqPage: {
+    metadataTitle: "Electric car FAQ",
+    metadataDescription: "Simple answers about buying, range, charging, prices, used cars, imports, and electric car data in Portugal.",
+    eyebrow: "FAQ",
+    title: "Frequently asked questions",
+    description: "Short answers to common questions from people choosing an electric car. This page will grow as we add guides, data, and real user questions.",
+    sections: [
+      {
+        title: "Buying and choosing",
+        questions: [
+          { question: "How should I start choosing an electric car?", answer: "Start with budget, charging access, daily distance, long trips, and space needs. Then compare real range, charging, and available price for each version." },
+          { question: "Should I compare models or versions?", answer: "For an initial decision, compare models. Once you have strong candidates, compare specific versions because battery, range, charging, and price can change a lot." },
+          { question: "Does the recommender replace professional advice?", answer: "No. The recommender helps filter options based on available data, but you should confirm prices, campaigns, availability, and final conditions before buying." }
+        ]
+      },
+      {
+        title: "Charging and range",
+        questions: [
+          { question: "Is WLTP the same as real range?", answer: "No. WLTP is a homologation reference. For daily ownership, also check estimated real range, consumption, and motorway range." },
+          { question: "What does 10-80% charging mean?", answer: "It is a practical way to compare fast stops on trips. Charging above 80% is often slower, so 10-80% is more useful for road trips." },
+          { question: "Do I need very high DC fast charging?", answer: "It depends. If you mostly charge at home, maybe not. If you take long trips or rely on public charging, 10-80% time and strong DC charging matter more." }
+        ]
+      },
+      {
+        title: "Prices and data",
+        questions: [
+          { question: "Are the prices final?", answer: "No. They are comparison references and may represent new, used, imported, or historical new-reference prices depending on available data." },
+          { question: "Why do some cars have missing data?", answer: "The database is growing through JSON files. We prefer to show incomplete data transparently rather than invent values." },
+          { question: "What does imported used mean?", answer: "It is a market estimate or reference for used cars imported into Portugal. When possible, it should say whether Portuguese import costs are included." }
+        ]
+      }
+    ],
+    wipTitle: "Still evolving",
+    wipDescription: "We will add more questions, Portugal-specific examples, and direct links to detailed guides.",
+    ctas: {
+      guides: "Open buying guides",
+      charging: "View charging guide"
+    }
   },
   legalPages: {
     privacy: {
@@ -462,6 +618,7 @@ export const en = {
     title: "EV Comparison",
     compare: "Compare",
     premiumVehicles: "electric vehicles side-by-side",
+    selectedCount: "{count} vehicles selected for a side-by-side comparison.",
     range: "Range",
     price: "Price",
     battery: "Battery",
@@ -510,11 +667,19 @@ export const en = {
       family: "Enough for family use",
       compact: "Best for lighter use"
     },
-    readyDecision: "Ready to make a decision?",
-    informedChoice: "Based on your comparison, explore detailed specifications and make an informed choice about your next EV.",
+    readyDecision: "Want a second opinion?",
+    informedChoice: "Share this comparison with someone helping you decide. The link keeps the selected vehicles and comparison mode.",
     backToVehicles: "Back to all models",
     viewVehicle: "View {vehicle}",
-    backToResults: "Back to comparison results",
+    backToResults: "Edit selection",
+    shareComparison: "Share comparison",
+    linkCopied: "Link copied",
+    shareError: "Could not share",
+    copyLink: "Copy link",
+    shareWhatsapp: "WhatsApp",
+    shareEmail: "Email",
+    shareText: "Take a look at this EV comparison on MotorZero.",
+    detailsLinksLabel: "View details:",
     testDrive: "Schedule a test drive"
   },
   comparisonSummary: {
@@ -556,7 +721,8 @@ export const en = {
     modelResultsCount: "models found",
     versionResultsCount: "versions found",
     versionAvailable: "version available",
-    versionsAvailable: "versions available"
+    versionsAvailable: "versions available",
+    noResults: "No vehicles found."
   },
   batteryAndCharging: {
     title: "Battery & Charging",
@@ -760,6 +926,7 @@ export const en = {
     browseModels: "Browse Models",
     buyingGuides: "Buying Guides",
     charging: "Charging",
+    faq: "FAQ",
     other: "Other",
     about: "About",
     contacts: "Contacts",
@@ -768,6 +935,24 @@ export const en = {
     terms: "Terms",
     cookies: "Cookies",
     cookieSettings: "Cookie settings"
+  },
+  pageFeedback: {
+    eyebrow: "Feedback",
+    title: "Did this page help?",
+    description: "Quick feedback to improve the experience.",
+    helpfulLabel: "Useful",
+    notHelpfulLabel: "Not useful",
+    commentLabel: "Optional note",
+    placeholder: "What was missing, confusing, or useful on this page?",
+    send: "Send note",
+    sending: "Sending...",
+    sent: "Thank you",
+    sameOpinion: "{percentage}% had the same opinion.",
+    publicCount: "{count} people found this page useful.",
+    emailSubject: "Feedback about a MotorZero page",
+    emailUsefulLabel: "Was useful",
+    emailPageLabel: "Page",
+    emailMessageLabel: "Message"
   },
   cookieConsent: {
     title: "Your privacy",

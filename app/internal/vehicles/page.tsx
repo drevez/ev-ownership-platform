@@ -100,6 +100,11 @@ function verificationStatusClass(status: VehicleAuditRow['verificationStatus']) 
     : 'bg-amber-100 text-amber-900 border-amber-200'
 }
 
+function clampPercentage(value: number) {
+  if (!Number.isFinite(value)) return 0
+  return Math.min(Math.max(value, 0), 100)
+}
+
 function compareRows(a: VehicleAuditRow, b: VehicleAuditRow, sort: SortKey) {
   if (sort === 'completeness') return a.completeness - b.completeness
   if (sort === 'issues') return a.issueCount - b.issueCount
@@ -407,7 +412,10 @@ export default async function InternalVehiclesPage({
                 </tr>
               </thead>
               <tbody>
-                {rows.map((row) => (
+                {rows.map((row) => {
+                  const completeness = clampPercentage(row.completeness)
+
+                  return (
                   <tr key={row.id} className="border-b border-slate-100 odd:bg-white even:bg-slate-50/60">
                     <td className="whitespace-nowrap px-4 py-4 align-top">
                       <Pill className={statusClass(row.status)}>
@@ -427,7 +435,7 @@ export default async function InternalVehiclesPage({
                         <div className="h-2 w-24 overflow-hidden rounded-full bg-slate-200">
                           <div
                             className="h-full rounded-full bg-emerald-500"
-                            style={{ width: `${row.completeness}%` }}
+                            style={{ width: `${completeness}%` }}
                           />
                         </div>
                         <span className="font-semibold">{row.completeness}%</span>
@@ -534,7 +542,7 @@ export default async function InternalVehiclesPage({
                       </div>
                     </td>
                   </tr>
-                ))}
+                )})}
               </tbody>
             </table>
           </div>
