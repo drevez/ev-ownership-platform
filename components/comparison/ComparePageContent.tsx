@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { ComparisonPage } from '@/components/comparison/ComparisonPage'
@@ -16,6 +16,7 @@ import {
   normalizeComparisonSelection,
   type ComparisonApiResponse,
 } from '@/lib/comparisonSelection'
+import { trackEvent } from '@/lib/posthogClient'
 
 type CompareContentKind = 'auto' | 'models' | 'versions'
 
@@ -86,6 +87,7 @@ function CompareResultsView({
   const compareKey = kind === 'models'
     ? `models:${compareModels.join(',')}`
     : `ids:${compareIds.join(',')}`
+  const trackedComparisonKey = useRef<string | null>(null)
   const t = useTranslations()
   const { locale } = useLocale()
   const localizedHref = useLocalizedHref()
@@ -125,13 +127,26 @@ function CompareResultsView({
         const loadedVehicles = (data.vehicles ?? []) as ComparisonVehicle[]
         setMissing(data.missing ?? [])
 
-        setVehicles(
-          loadedVehicles.map((vehicle) => ({
+        const nextVehicles = loadedVehicles.map((vehicle) => ({
             ...vehicle,
             bestFor: getBestForTags(vehicle, t),
             badges: calculateBadges(vehicle, loadedVehicles, locale),
           }))
-        )
+        setVehicles(nextVehicles)
+
+        if (
+          nextVehicles.length >= MIN_COMPARISON_ITEMS &&
+          trackedComparisonKey.current !== compareKey
+        ) {
+          trackedComparisonKey.current = compareKey
+          trackEvent('comparison_created', {
+            comparison_type: kind,
+            vehicle_count: nextVehicles.length,
+            selected_ids: nextVehicles.map((vehicle) => vehicle.id),
+            selected_names: nextVehicles.map((vehicle) => vehicle.displayName),
+            locale,
+          })
+        }
       } catch (error) {
         if (controller.signal.aborted) return
         console.error('Failed to load comparison vehicles:', error)

@@ -27,6 +27,7 @@ app/
 ├── internal/vehicles/page.tsx   Internal vehicle data health dashboard
 ├── internal/vehicles/new/page.tsx
 ├── internal/vehicles/[id]/page.tsx
+├── internal/vehicles/[id]/edit/page.tsx
 └── api/
     ├── feedback/route.ts        Public page feedback adapter
     ├── internal/content/route.ts

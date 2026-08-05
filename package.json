@@ -15,6 +15,7 @@
   "dependencies": {
     "@next/third-parties": "^16.2.7",
     "next": "^16.2.7",
+    "posthog-js": "^1.412.2",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "sharp": "^0.34.5"

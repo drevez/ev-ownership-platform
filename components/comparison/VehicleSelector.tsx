@@ -13,6 +13,7 @@ import {
   modelSlugsToVersionIds,
   versionIdsToModelSlugs,
 } from '@/lib/comparisonSelection'
+import { trackEvent } from '@/lib/posthogClient'
 
 interface VehicleSummary {
   id: string
@@ -197,6 +198,11 @@ export function VehicleSelector({
 
   const switchMode = (nextMode: SelectionMode) => {
     if (nextMode === mode) return
+    trackEvent('comparison_selection_mode_changed', {
+      from_mode: mode,
+      to_mode: nextMode,
+      selected_count: activeSelectedIds.length,
+    })
 
     const params = new URLSearchParams()
 

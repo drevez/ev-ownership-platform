@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { ViewEventTracker } from '@/components/analytics/ViewEventTracker'
 import { loadVehicle, getVehicleParams } from '@/lib/loadVehicle'
 import { loadModel, toModelSlug } from '@/lib/models'
 import { VehiclePage as VehicleDetailsPage } from '@/components/vehicle/VehiclePage'
@@ -49,11 +50,23 @@ export default async function VehiclePage({ params }: VehiclePageProps) {
   const model = await loadModel(modelSlug)
 
   return (
-    <VehicleDetailsPage
-      vehicle={vehicle}
-      modelSlug={modelSlug}
-      variantCount={model?.variants.length ?? 1}
-      locale={locale}
-    />
+    <>
+      <ViewEventTracker
+        event="vehicle_viewed"
+        properties={{
+          vehicle_id: vehicle.id,
+          brand: vehicle.brand,
+          model: vehicle.model,
+          variant: vehicle.variant,
+          model_slug: modelSlug,
+        }}
+      />
+      <VehicleDetailsPage
+        vehicle={vehicle}
+        modelSlug={modelSlug}
+        variantCount={model?.variants.length ?? 1}
+        locale={locale}
+      />
+    </>
   )
 }

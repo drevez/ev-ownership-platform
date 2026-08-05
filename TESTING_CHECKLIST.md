@@ -75,7 +75,8 @@ Use this checklist when adding vehicles, changing data normalization, or prepari
 
 - [ ] `/internal/vehicles` loads the data health dashboard.
 - [ ] `/internal/vehicles/new` can prepare a new vehicle in the seven-file JSON structure.
-- [ ] `/internal/vehicles/{id}` can save changes and update the registry entry.
+- [ ] `/internal/vehicles/{id}` loads the internal vehicle detail/workflow page.
+- [ ] `/internal/vehicles/{id}/edit` can save changes and update the registry entry.
 - [ ] `/internal/content` loads editable PT/EN/ES content and SEO fields.
 - [ ] Saving in `/internal/content` updates locale files and the app still builds.
 - [ ] `/internal/images` defaults to items needing attention, and can filter/sort approved, rejected, missing, referenced, and orphan images.

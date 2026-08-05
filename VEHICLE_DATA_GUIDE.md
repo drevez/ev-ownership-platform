@@ -148,7 +148,8 @@ The app includes internal pages to reduce manual JSON editing:
 
 - `/internal/vehicles`: dataset health dashboard and vehicle JSON editor.
 - `/internal/vehicles/new`: create a vehicle folder in the modular structure.
-- `/internal/vehicles/{id}`: edit the seven module files for an existing vehicle.
+- `/internal/vehicles/{id}`: review the internal vehicle detail/workflow page.
+- `/internal/vehicles/{id}/edit`: edit the seven module files for an existing vehicle.
 - `/internal/images`: audit missing vehicle images, review candidates, approve or reject them, and create final WebP assets.
 
 These tools write directly to `public/data/vehicles/{vehicle-id}/` and update `data/registry/vehicles.json` from `core.json`. They do not replace source checking: after editing, run `npm run validate:vehicles`.

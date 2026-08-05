@@ -9,6 +9,7 @@ import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import { useTranslations } from '@/hooks/useTranslations'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 import { SafeImage } from '@/components/SafeImage'
+import { trackEvent } from '@/lib/posthogClient'
 
 const AdvancedComparisonContent = dynamic(() =>
   import('./AdvancedComparisonContent').then((module) => module.AdvancedComparisonContent)
@@ -262,6 +263,11 @@ export function ComparisonPage({
     const params = new URLSearchParams(searchParams.toString())
     params.set('mode', nextMode)
     router.replace(`${pathname}?${params.toString()}`, { scroll: false })
+    trackEvent('comparison_mode_changed', {
+      mode: nextMode,
+      vehicle_count: vehicles.length,
+      selected_ids: vehicles.map((vehicle) => vehicle.id),
+    })
   }
 
   if (vehicles.length < 2) {
@@ -473,6 +479,10 @@ function ShareComparisonButton({
 
     try {
       await navigator.clipboard.writeText(url)
+      trackEvent('comparison_shared', {
+        method: 'copy_link',
+        page_path: window.location.pathname,
+      })
       setStatus('copied')
       setIsOpen(false)
       window.setTimeout(() => setStatus('idle'), 2400)
@@ -485,6 +495,10 @@ function ShareComparisonButton({
   const shareNative = async () => {
     try {
       await navigator.share({ title, text: shareText, url: window.location.href })
+      trackEvent('comparison_shared', {
+        method: 'native_share',
+        page_path: window.location.pathname,
+      })
       setIsOpen(false)
     } catch (error) {
       if (error instanceof DOMException && error.name === 'AbortError') return
@@ -509,6 +523,10 @@ function ShareComparisonButton({
   const shareWhatsapp = () => {
     const message = `${shareText} ${window.location.href}`
     window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
+    trackEvent('comparison_shared', {
+      method: 'whatsapp',
+      page_path: window.location.pathname,
+    })
     setIsOpen(false)
   }
 
@@ -516,6 +534,10 @@ function ShareComparisonButton({
     const subject = title
     const body = `${shareText}\n\n${window.location.href}`
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    trackEvent('comparison_shared', {
+      method: 'email',
+      page_path: window.location.pathname,
+    })
     setIsOpen(false)
   }
 

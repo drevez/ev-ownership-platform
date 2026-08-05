@@ -2,6 +2,7 @@
 
 export const CONSENT_STORAGE_KEY = 'motorzero_cookie_consent_v1'
 export const OPEN_COOKIE_SETTINGS_EVENT = 'motorzero:open-cookie-settings'
+export const COOKIE_CONSENT_UPDATED_EVENT = 'motorzero:consent-updated'
 export const CONSENT_POLICY_VERSION = 1
 export const CONSENT_MAX_AGE_DAYS = 180
 
@@ -62,6 +63,10 @@ export function applyCookieConsent(choice: CookieConsentChoice) {
     ad_user_data: choice.marketing ? 'granted' : 'denied',
     ad_personalization: choice.marketing ? 'granted' : 'denied',
   })
+
+  window.dispatchEvent(
+    new CustomEvent(COOKIE_CONSENT_UPDATED_EVENT, { detail: choice })
+  )
 }
 
 export function saveCookieConsent(

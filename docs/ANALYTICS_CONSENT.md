@@ -24,7 +24,9 @@ Set public environment variables in `.env.local` for development and in Vercel P
 app/layout.tsx                         Consent defaults and saved-choice restoration
 components/GoogleTagManager.tsx       Central GTM loader
 components/CookieConsentBanner.tsx    Consent UI
+components/PostHogConsentLoader.tsx   Optional consent-aware PostHog bootstrap
 lib/cookieConsent.ts                  Storage, updates, expiry, and GA cookie removal
+lib/posthogClient.ts                  Lazy PostHog import and manual event capture
 components/SiteFooter.tsx             Cookie settings reopen button
 ```
 
@@ -64,43 +66,48 @@ Use GTM Preview to verify:
 
 Also verify that the container contains only one Google tag/page-view configuration. Next.js client navigation must generate exactly one intended page view.
 
-## Future Product Analytics Plan
+## Optional Product Analytics With PostHog
 
-The preferred future setup is to keep two free analytics tools with distinct responsibilities:
+MotorZero can use two free analytics tools with distinct responsibilities:
 
 ```txt
 GA4 through GTM    Acquisition, SEO, traffic sources, campaigns, Search Console context
 PostHog            Product behaviour, funnels, recommender/comparator usage, feedback events
 ```
 
-Do not replace the existing GTM/GA4 setup immediately. GA4 should remain inside GTM only, with no direct `gtag.js` or `GoogleAnalytics` install in the app.
+PostHog is optional. It is disabled unless `NEXT_PUBLIC_POSTHOG_KEY` is configured. GA4 should remain inside GTM only, with no direct `gtag.js` or `GoogleAnalytics` install in the app.
 
-If PostHog is added later, implement it as a lightweight, consent-aware client integration:
+Current PostHog implementation rules:
 
 - Load PostHog only after analytics consent is granted.
 - Use a dynamic import so PostHog is not part of the initial JavaScript bundle.
 - Initialize after the page is interactive, ideally during `requestIdleCallback` or a small post-load delay.
-- Use the EU host if available for the project.
+- Use the EU host by default.
 - Disable session replay at first.
-- Disable or limit autocapture at first.
+- Disable broad autocapture.
+- Disable automatic PostHog pageviews and pageleave events.
 - Track only a small set of manual events that answer product and growth questions.
 - Keep GTM as the only Google tracking container.
 
-Suggested future environment variables:
+Environment variables:
 
 ```env
 NEXT_PUBLIC_POSTHOG_KEY=
 NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
 ```
 
-Suggested initial PostHog events:
+Current manual PostHog events:
 
 ```txt
 recommendation_started
 recommendation_completed
+recommendation_mode_changed
 comparison_created
+comparison_mode_changed
+comparison_selection_mode_changed
 comparison_shared
 vehicle_viewed
+model_viewed
 model_filter_used
 page_feedback_voted
 page_feedback_note_sent

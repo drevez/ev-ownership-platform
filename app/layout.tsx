@@ -10,6 +10,7 @@ import { ComparisonBarPaddingManager } from '@/components/comparison/ComparisonB
 import { CookieConsentBanner } from '@/components/CookieConsentBanner'
 import { GoogleTagManager } from '@/components/GoogleTagManager'
 import { PageFeedback } from '@/components/PageFeedback'
+import { PostHogConsentLoader } from '@/components/PostHogConsentLoader'
 import { SiteHeader } from '@/components/SiteHeader'
 import { SiteFooter } from '@/components/SiteFooter'
 
@@ -163,6 +164,7 @@ export default async function RootLayout({
         />
         <LocaleProvider initialLocale={locale}>
           <CompareProvider>
+            <PostHogConsentLoader />
             <SiteHeader />
 
             <ComparisonBarPaddingManager />

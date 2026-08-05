@@ -9,6 +9,7 @@ import type { ModelExplorerItem } from '@/types/model'
 import type { VehiclePriceSummary } from '@/lib/normalizeVehicle'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 import { useTranslations } from '@/hooks/useTranslations'
+import { trackEvent } from '@/lib/posthogClient'
 import {
   flattenVariants,
   intentFilters,
@@ -160,6 +161,20 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
     setDataState('all')
     setSortKey('recommended')
     router.replace(localizedHref('/models'), { scroll: false })
+    trackEvent('model_filter_used', {
+      filter_type: 'clear_all',
+      value: 'all',
+      mode,
+    })
+  }
+
+  function trackFilter(filterType: string, value: string) {
+    trackEvent('model_filter_used', {
+      filter_type: filterType,
+      value,
+      mode,
+      result_count: mode === 'models' ? filteredModels.length : filteredVariants.length,
+    })
   }
 
   return (
@@ -203,6 +218,10 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
               id="model-search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
+              onBlur={() => {
+                const value = query.trim()
+                if (value.length >= 2) trackFilter('search', value)
+              }}
               placeholder={t.modelsExplorer.searchPlaceholder}
               className="h-12 w-full rounded-md border border-slate-200 bg-slate-50 px-4 text-base outline-none transition focus:border-emerald-500 focus:bg-white"
             />
@@ -213,7 +232,13 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
               <button
                 key={intent}
                 type="button"
-                onClick={() => setActiveIntent((current) => (current === intent ? null : intent))}
+                onClick={() => {
+                  setActiveIntent((current) => {
+                    const nextIntent = current === intent ? null : intent
+                    trackFilter('intent', nextIntent ?? 'all')
+                    return nextIntent
+                  })
+                }}
                 className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                   activeIntent === intent
                     ? 'border-emerald-600 bg-emerald-600 text-white'
@@ -232,7 +257,10 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
           <div className="inline-grid grid-cols-2 rounded-lg bg-slate-200 p-1 text-sm font-semibold">
             <button
               type="button"
-              onClick={() => setMode('models')}
+              onClick={() => {
+                setMode('models')
+                trackFilter('explorer_mode', 'models')
+              }}
               className={`rounded-md px-4 py-2 transition ${
                 mode === 'models' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-600'
               }`}
@@ -241,7 +269,10 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
             </button>
             <button
               type="button"
-              onClick={() => setMode('variants')}
+              onClick={() => {
+                setMode('variants')
+                trackFilter('explorer_mode', 'variants')
+              }}
               className={`rounded-md px-4 py-2 transition ${
                 mode === 'variants' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-600'
               }`}
@@ -255,7 +286,11 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
               <span>{t.modelsExplorer.sortLabel}</span>
               <select
                 value={sortKey}
-                onChange={(event) => setSortKey(event.target.value as SortKey)}
+                onChange={(event) => {
+                  const nextSort = event.target.value as SortKey
+                  setSortKey(nextSort)
+                  trackFilter('sort', nextSort)
+                }}
                 className="h-11 w-full rounded-md border border-slate-200 bg-white px-3 text-slate-950 sm:h-10 sm:w-auto"
               >
                 {sortKeys.map((key) => (
@@ -284,38 +319,80 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
 
         {advancedOpen && (
           <div className="mt-5 grid gap-3 rounded-lg border border-slate-200 bg-white p-4 md:grid-cols-2 lg:grid-cols-6">
-            <FilterSelect label={t.modelsExplorer.filters.brand} value={brand} onChange={setBrand}>
+            <FilterSelect
+              label={t.modelsExplorer.filters.brand}
+              value={brand}
+              onChange={(value) => {
+                setBrand(value)
+                trackFilter('brand', value)
+              }}
+            >
               <option value="all">{t.modelsExplorer.filters.allBrands}</option>
               {brands.map((item) => (
                 <option key={item} value={item}>{item}</option>
               ))}
             </FilterSelect>
-            <FilterSelect label={t.modelsExplorer.filters.body} value={bodyType} onChange={setBodyType}>
+            <FilterSelect
+              label={t.modelsExplorer.filters.body}
+              value={bodyType}
+              onChange={(value) => {
+                setBodyType(value)
+                trackFilter('body_type', value)
+              }}
+            >
               <option value="all">{t.modelsExplorer.filters.allBodies}</option>
               {bodyTypes.map((item) => (
                 <option key={item} value={item}>{item}</option>
               ))}
             </FilterSelect>
-            <FilterSelect label={t.modelsExplorer.filters.maxPrice} value={maxPrice} onChange={setMaxPrice}>
+            <FilterSelect
+              label={t.modelsExplorer.filters.maxPrice}
+              value={maxPrice}
+              onChange={(value) => {
+                setMaxPrice(value)
+                trackFilter('max_price', value)
+              }}
+            >
               <option value="all">{t.modelsExplorer.filters.anyPrice}</option>
               <option value="30000">30.000 €</option>
               <option value="40000">40.000 €</option>
               <option value="50000">50.000 €</option>
               <option value="70000">70.000 €</option>
             </FilterSelect>
-            <FilterSelect label={t.modelsExplorer.filters.minRange} value={minRange} onChange={setMinRange}>
+            <FilterSelect
+              label={t.modelsExplorer.filters.minRange}
+              value={minRange}
+              onChange={(value) => {
+                setMinRange(value)
+                trackFilter('min_range', value)
+              }}
+            >
               <option value="all">{t.modelsExplorer.filters.anyRange}</option>
               <option value="300">300 km</option>
               <option value="400">400 km</option>
               <option value="500">500 km</option>
             </FilterSelect>
-            <FilterSelect label={t.modelsExplorer.filters.minDc} value={minDc} onChange={setMinDc}>
+            <FilterSelect
+              label={t.modelsExplorer.filters.minDc}
+              value={minDc}
+              onChange={(value) => {
+                setMinDc(value)
+                trackFilter('min_dc', value)
+              }}
+            >
               <option value="all">{t.modelsExplorer.filters.anyCharging}</option>
               <option value="100">100 kW</option>
               <option value="150">150 kW</option>
               <option value="200">200 kW</option>
             </FilterSelect>
-            <FilterSelect label={t.modelsExplorer.filters.data} value={dataState} onChange={setDataState}>
+            <FilterSelect
+              label={t.modelsExplorer.filters.data}
+              value={dataState}
+              onChange={(value) => {
+                setDataState(value)
+                trackFilter('data_state', value)
+              }}
+            >
               <option value="all">{t.modelsExplorer.filters.allData}</option>
               <option value="complete">{t.modelsExplorer.filters.complete}</option>
               <option value="validating">{t.modelsExplorer.filters.validating}</option>

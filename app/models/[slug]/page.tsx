@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { ViewEventTracker } from '@/components/analytics/ViewEventTracker'
 import { ModelPage } from '@/components/model/ModelPage'
 import { getAllModelSlugs, loadModel } from '@/lib/models'
 import { getTranslations } from '@/lib/getTranslations'
@@ -38,5 +39,18 @@ export default async function ModelRoutePage({ params }: ModelRouteProps) {
     notFound()
   }
 
-  return <ModelPage model={model} />
+  return (
+    <>
+      <ViewEventTracker
+        event="model_viewed"
+        properties={{
+          model_slug: model.slug,
+          model_name: model.displayName,
+          brand: model.brand,
+          variant_count: model.variants.length,
+        }}
+      />
+      <ModelPage model={model} />
+    </>
+  )
 }

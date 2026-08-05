@@ -16,6 +16,7 @@ import { RecommendationResults } from './RecommendationResults'
 import { useLocale } from '@/context/LocaleContext'
 import { useTranslations } from '@/hooks/useTranslations'
 import { LANGUAGE_LOCALES } from '@/config/i18n'
+import { trackEvent } from '@/lib/posthogClient'
 
 type KnowledgeMode = 'simple' | 'advanced'
 type IconName =
@@ -91,6 +92,20 @@ export function QuizForm() {
     event.preventDefault()
     setError(null)
     setLoading(true)
+    trackEvent('recommendation_started', {
+      locale,
+      knowledge_mode: knowledgeMode,
+      budget: answers.budget,
+      purchase_type: answers.purchaseType,
+      charging_access: answers.chargingAccess,
+      family_size: answers.familySize,
+      daily_commute_km: answers.dailyCommuteKm,
+      road_trips: answers.roadTrips,
+      cargo_need: answers.cargoNeed,
+      body_preference: answers.bodyPreference,
+      ownership_style: answers.ownershipStyle,
+      priorities: answers.priorities,
+    })
 
     try {
       const response = await fetch('/api/recommendations', {
@@ -109,7 +124,16 @@ export function QuizForm() {
         results?: RecommendationResult[]
       }
 
-      setResults(data.results ?? [])
+      const nextResults = data.results ?? []
+      setResults(nextResults)
+      trackEvent('recommendation_completed', {
+        locale,
+        knowledge_mode: knowledgeMode,
+        result_count: nextResults.length,
+        top_vehicle_id: nextResults[0]?.vehicle.id,
+        top_vehicle_name: nextResults[0]?.vehicle.displayName,
+        top_match_percentage: nextResults[0]?.matchPercentage,
+      })
     } catch {
       setError(t.recommendQuiz.error)
     } finally {
@@ -150,7 +174,14 @@ export function QuizForm() {
                     { value: 'simple', label: t.recommendQuiz.simpleMode },
                     { value: 'advanced', label: t.recommendQuiz.advancedMode },
                   ]}
-                  onChange={(value) => setKnowledgeMode(value as KnowledgeMode)}
+                  onChange={(value) => {
+                    const nextMode = value as KnowledgeMode
+                    setKnowledgeMode(nextMode)
+                    trackEvent('recommendation_mode_changed', {
+                      locale,
+                      knowledge_mode: nextMode,
+                    })
+                  }}
                 />
               </div>
             </div>

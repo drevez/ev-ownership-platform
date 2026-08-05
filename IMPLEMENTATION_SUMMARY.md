@@ -92,7 +92,8 @@ It checks:
 
 - `/internal/vehicles` audits vehicle data, filters issues, and links to vehicle JSON editing flows.
 - `/internal/vehicles/new` creates a new modular vehicle folder and registry entry.
-- `/internal/vehicles/{id}` edits existing vehicle JSON files.
+- `/internal/vehicles/{id}` shows the internal vehicle detail/workflow page.
+- `/internal/vehicles/{id}/edit` edits existing vehicle JSON files.
 - `/internal/content` edits page copy, translations, and SEO metadata in `locales/pt.ts`, `locales/en.ts`, and `locales/es.ts`.
 - `/internal/images` audits missing vehicle images and manages image candidates.
 

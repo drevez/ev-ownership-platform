@@ -418,6 +418,7 @@ These routes support the private working surfaces:
 /internal/vehicles
 /internal/vehicles/new
 /internal/vehicles/{id}
+/internal/vehicles/{id}/edit
 /internal/content
 /internal/images
 ```

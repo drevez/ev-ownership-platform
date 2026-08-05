@@ -16,6 +16,7 @@ The project is built around a modular JSON vehicle dataset. Each vehicle variant
 - Manage vehicle JSON files from an internal dashboard.
 - Edit public page copy, translations, and SEO metadata from an internal content editor.
 - Load analytics through Google Tag Manager with a first-party Consent Mode v2 banner.
+- Optionally load PostHog product analytics after analytics consent, with manual events only.
 - Collect lightweight thumbs up/down feedback on key public flows, with optional webhook persistence.
 - Provide localized guide, charging, FAQ, privacy, cookie, and terms pages.
 
@@ -27,6 +28,7 @@ The project is built around a modular JSON vehicle dataset. Each vehicle variant
 - Tailwind CSS
 - JSON-backed vehicle catalog
 - Google Tag Manager through `@next/third-parties`
+- Optional PostHog product analytics through `posthog-js`
 
 Important: this repo uses Next.js 16. Before changing Next-specific APIs, read the local docs in `node_modules/next/dist/docs/`.
 
@@ -56,7 +58,12 @@ NEXT_PUBLIC_GTM_ID=GTM-MG49P4DS
 
 GA4 `G-050C1KBYPK` is configured inside GTM and must not be installed directly in the app. Consent defaults to denied before GTM loads. Visitors can accept, reject, or manage analytics and marketing separately; choices expire after 180 days.
 
-Future product analytics should keep GA4 for acquisition and add PostHog only after analytics consent, loaded lazily and limited to manual product events at first. Do not enable session replay or broad autocapture until the privacy impact is reviewed.
+Optional product analytics keeps GA4 for acquisition and adds PostHog only after analytics consent, loaded lazily and limited to manual product events. Do not enable session replay or broad autocapture until the privacy impact is reviewed.
+
+```env
+NEXT_PUBLIC_POSTHOG_KEY=
+NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
+```
 
 See [docs/ANALYTICS_CONSENT.md](/Users/danielarevez/ev-ownership-platform/docs/ANALYTICS_CONSENT.md) for setup and testing.
 

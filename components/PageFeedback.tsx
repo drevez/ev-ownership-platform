@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLocale } from '@/context/LocaleContext'
 import { delocalizePathname, stripLanguageFromPathname } from '@/lib/i18nRouting'
+import { trackEvent } from '@/lib/posthogClient'
 import { useTranslations } from '@/hooks/useTranslations'
 
 const PUBLIC_COUNT_THRESHOLD = 1000
@@ -74,6 +75,12 @@ export function PageFeedback() {
       page_path: pathname,
       helpful: nextVote === 'yes',
     })
+    trackEvent('page_feedback_voted', {
+      page_path: basePathname,
+      localized_page_path: pathname,
+      helpful: nextVote === 'yes',
+      locale,
+    })
 
     try {
       await submitFeedback(nextVote, 'vote')
@@ -88,6 +95,13 @@ export function PageFeedback() {
 
     try {
       await submitFeedback(vote, 'note')
+      trackEvent('page_feedback_note_sent', {
+        page_path: basePathname,
+        localized_page_path: pathname,
+        helpful: vote === 'yes',
+        locale,
+        message_length: clean(message, 1200).length,
+      })
       setSubmitted(true)
     } catch (error) {
       console.error('Could not submit feedback note:', error)
