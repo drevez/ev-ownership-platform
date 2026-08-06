@@ -6,6 +6,13 @@ import { VehiclePage as VehicleDetailsPage } from '@/components/vehicle/VehicleP
 import { getTranslations } from '@/lib/getTranslations'
 import { getRequestLanguage } from '@/lib/serverLocale'
 import { getVehicleDisplayName } from '@/lib/normalizeVehicle'
+import { buildLocalizedHref } from '@/lib/i18nRouting'
+import {
+  buildPageContext,
+  pageContextToFlatProperties,
+  singleVehicleFlatProperties,
+  toAnalyticsVehicle,
+} from '@/lib/analytics'
 
 interface VehiclePageProps {
   params: Promise<{ id: string }>
@@ -48,18 +55,29 @@ export default async function VehiclePage({ params }: VehiclePageProps) {
 
   const modelSlug = toModelSlug(vehicle.brand, vehicle.model)
   const model = await loadModel(modelSlug)
+  const page = buildPageContext({
+    path: buildLocalizedHref(`/vehicles/${vehicle.id}`, locale),
+    canonicalPath: `/vehicles/${vehicle.id}`,
+    type: 'vehicle',
+    language: locale,
+  })
+  const analyticsVehicle = toAnalyticsVehicle(vehicle)
+  const vehicleProperties = {
+    event_schema_version: 2,
+    page,
+    vehicles: [analyticsVehicle],
+    model_slug: modelSlug,
+    ...pageContextToFlatProperties(page),
+    ...singleVehicleFlatProperties(analyticsVehicle),
+  }
 
   return (
     <>
       <ViewEventTracker
         event="vehicle_viewed"
-        properties={{
-          vehicle_id: vehicle.id,
-          brand: vehicle.brand,
-          model: vehicle.model,
-          variant: vehicle.variant,
-          model_slug: modelSlug,
-        }}
+        properties={vehicleProperties}
+        gaEvent="vehicle_viewed"
+        gaProperties={vehicleProperties}
       />
       <VehicleDetailsPage
         vehicle={vehicle}

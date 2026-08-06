@@ -1,6 +1,6 @@
 # Implementation Summary
 
-This project is now structured around a growing modular EV dataset and a normalized app data layer.
+MotorZero is structured around a growing modular EV dataset, a normalized app data layer, localized public routes, internal maintenance tools, and consent-aware analytics.
 
 ## Current Foundation
 
@@ -15,6 +15,8 @@ This project is now structured around a growing modular EV dataset and a normali
 - Internal image review supports missing image triage, candidate approval/rejection, WebP creation, and replacement.
 - GTM is the only analytics container and loads after denied Consent Mode v2 defaults.
 - A translated first-party cookie banner supports accept, reject, and category preferences.
+- Optional PostHog product analytics loads only after analytics consent when configured.
+- Search, no-result states, and page feedback can produce product signals for future backlog decisions.
 - Localized guides, charging, FAQ, privacy, cookie, and terms pages are included in the sitemap.
 - Key public flows can collect subtle thumbs up/down feedback through `/api/feedback`.
 
@@ -75,9 +77,9 @@ It checks:
 ## Build Status
 
 - `npm run build` passes.
-- `npm run lint` passes with warnings only: remaining `<img>` usage and one CompareContext hook dependency warning.
-- `npm run validate:vehicles` currently reports warnings only, mostly missing images and a few module-field placement issues, which is expected while the catalog is being expanded.
-- The current production build generates 171 routes/pages.
+- `npm run lint` passes.
+- `npm run validate:vehicles` reports current data cleanup tasks, which is expected while the catalog is being expanded.
+- Use the current `npm run build` output for the exact generated route/page count.
 
 ## Analytics And Consent
 
@@ -86,6 +88,8 @@ It checks:
 - Consent defaults to denied before GTM.
 - Choices persist for 180 days and are invalidated by a policy-version change.
 - Withdrawing analytics consent removes accessible `_ga` and `_ga_*` cookies.
+- Current GA4/dataLayer events are documented in `docs/ANALYTICS_CONSENT.md`.
+- The proposed tracking v2 schema is documented separately in `docs/ANALYTICS_EVENT_SCHEMA.md`.
 - GTM Preview is still required to confirm one page view per initial load and client navigation.
 
 ## Internal Tools
@@ -103,6 +107,6 @@ These routes are protected by server-side Basic Auth in `proxy.ts`, with write A
 
 1. Clean vehicle data reported by `npm run validate:vehicles`.
 2. Upload real vehicle images or intentionally accept placeholder usage.
-3. Replace remaining `<img>` usage with optimized image handling where it affects LCP.
+3. Decide and implement the approved tracking v2 schema only after reviewing the analytics docs.
 4. Consider account-based authentication if the internal tooling gains multiple administrators.
 5. Add richer ownership tools such as charging cost, incentives, and used-price insights.

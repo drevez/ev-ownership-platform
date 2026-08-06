@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { TrackedExternalLink } from '@/components/analytics/TrackedExternalLink'
 import { getTranslations } from '@/lib/getTranslations'
 import { buildLocalizedHref } from '@/lib/i18nRouting'
 import { getRequestLanguage } from '@/lib/serverLocale'
@@ -135,14 +136,15 @@ export default async function AboutPage() {
 
         <p className="mt-8 text-sm leading-6 text-slate-500">
           {t.aboutPage.creatorNote}{' '}
-          <a
+          <TrackedExternalLink
             href="https://danielarevez.com/?utm_source=motorzero&utm_medium=referral&utm_campaign=project_credit"
+            label="creator_credit"
             target="_blank"
             rel="noopener"
             className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 transition hover:text-emerald-700 hover:decoration-emerald-500"
           >
             danielarevez.com
-          </a>
+          </TrackedExternalLink>
         </p>
       </section>
     </main>

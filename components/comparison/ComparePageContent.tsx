@@ -11,6 +11,13 @@ import { useTranslations } from '@/hooks/useTranslations'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 import { getTranslations } from '@/lib/getTranslations'
 import { useLocale } from '@/context/LocaleContext'
+import { pushGaEvent } from '@/lib/gaEvents'
+import {
+  buildPageContext,
+  pageContextToFlatProperties,
+  toAnalyticsVehicles,
+  vehicleFlatProperties,
+} from '@/lib/analytics'
 import {
   MIN_COMPARISON_ITEMS,
   normalizeComparisonSelection,
@@ -139,13 +146,36 @@ function CompareResultsView({
           trackedComparisonKey.current !== compareKey
         ) {
           trackedComparisonKey.current = compareKey
+          const page = buildPageContext({
+            path: window.location.pathname,
+            canonicalPath: kind === 'models' ? '/compare/models' : '/compare/versions',
+            type: 'comparison',
+            language: locale,
+          })
+          const analyticsVehicles = toAnalyticsVehicles(nextVehicles)
+          const comparison = {
+            type: kind,
+            vehicle_count: nextVehicles.length,
+            selection_source: 'url',
+          }
+          const properties = {
+            event_schema_version: 2,
+            page,
+            comparison,
+            vehicles: analyticsVehicles,
+            comparison_type: kind,
+            selected_ids: analyticsVehicles.map((vehicle) => vehicle.id),
+            selected_names: nextVehicles.map((vehicle) => vehicle.displayName),
+            ...pageContextToFlatProperties(page),
+            ...vehicleFlatProperties(analyticsVehicles),
+          }
+
           trackEvent('comparison_created', {
+            ...properties,
             comparison_type: kind,
             vehicle_count: nextVehicles.length,
-            selected_ids: nextVehicles.map((vehicle) => vehicle.id),
-            selected_names: nextVehicles.map((vehicle) => vehicle.displayName),
-            locale,
           })
+          pushGaEvent('comparison_created', properties)
         }
       } catch (error) {
         if (controller.signal.aborted) return

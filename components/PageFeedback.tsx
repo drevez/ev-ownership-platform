@@ -4,8 +4,10 @@ import { useMemo, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLocale } from '@/context/LocaleContext'
 import { delocalizePathname, stripLanguageFromPathname } from '@/lib/i18nRouting'
+import { pushGaEvent } from '@/lib/gaEvents'
 import { trackEvent } from '@/lib/posthogClient'
 import { useTranslations } from '@/hooks/useTranslations'
+import { buildPageContext, pageContextToFlatProperties, type AnalyticsPageType } from '@/lib/analytics'
 
 const PUBLIC_COUNT_THRESHOLD = 1000
 
@@ -18,6 +20,14 @@ type FeedbackStats = {
 
 function clean(value: string, maxLength: number) {
   return value.replace(/\s+/g, ' ').trim().slice(0, maxLength)
+}
+
+function feedbackPageType(pathname: string): AnalyticsPageType {
+  if (pathname === '/recommend') return 'recommender'
+  if (pathname === '/compare' || pathname.startsWith('/compare/')) return 'comparison'
+  if (pathname === '/models') return 'models'
+  if (pathname.startsWith('/models/')) return 'model'
+  return 'content'
 }
 
 export function PageFeedback() {
@@ -68,19 +78,26 @@ export function PageFeedback() {
   const recordVote = async (nextVote: FeedbackVote) => {
     setVote(nextVote)
     setSubmitted(false)
-
-    window.dataLayer = window.dataLayer || []
-    window.dataLayer.push({
-      event: 'page_feedback_vote',
-      page_path: pathname,
-      helpful: nextVote === 'yes',
+    const page = buildPageContext({
+      path: pathname,
+      canonicalPath: basePathname,
+      type: feedbackPageType(basePathname),
+      language: locale,
     })
-    trackEvent('page_feedback_voted', {
+    const feedbackProperties = {
+      event_schema_version: 2,
+      page,
+      feedback: {
+        helpful: nextVote === 'yes',
+      },
+      ...pageContextToFlatProperties(page),
       page_path: basePathname,
       localized_page_path: pathname,
       helpful: nextVote === 'yes',
-      locale,
-    })
+    }
+
+    pushGaEvent('page_feedback_voted', feedbackProperties)
+    trackEvent('page_feedback_voted', feedbackProperties)
 
     try {
       await submitFeedback(nextVote, 'vote')
@@ -95,11 +112,23 @@ export function PageFeedback() {
 
     try {
       await submitFeedback(vote, 'note')
+      const page = buildPageContext({
+        path: pathname,
+        canonicalPath: basePathname,
+        type: feedbackPageType(basePathname),
+        language: locale,
+      })
       trackEvent('page_feedback_note_sent', {
+        event_schema_version: 2,
+        page,
+        feedback: {
+          helpful: vote === 'yes',
+          message_length: clean(message, 1200).length,
+        },
+        ...pageContextToFlatProperties(page),
         page_path: basePathname,
         localized_page_path: pathname,
         helpful: vote === 'yes',
-        locale,
         message_length: clean(message, 1200).length,
       })
       setSubmitted(true)

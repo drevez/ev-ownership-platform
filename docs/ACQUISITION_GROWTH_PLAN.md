@@ -219,22 +219,18 @@ Success metrics:
 
 ## 6. Analytics Event Quality
 
-Track acquisition and conversion behavior with GTM/GA4 after consent.
+Track acquisition and conversion behavior with GTM/GA4 after consent. Keep detailed product behaviour in PostHog and written user input in feedback storage. The source of truth for the lean tracking plan is [PRODUCT_SIGNALS_PLAN.md](/Users/danielarevez/ev-ownership-platform/docs/PRODUCT_SIGNALS_PLAN.md).
 
-Recommended events:
+Recommended high-level events:
 
-- `search_performed`
 - `model_filter_used`
-- `model_viewed`
-- `comparison_started`
-- `comparison_completed`
-- `comparison_shared`
+- `vehicle_search_no_results`
+- `vehicle_suggestion_submitted`
+- `comparison_created`
+- `content_shared`
 - `recommendation_started`
 - `recommendation_completed`
-- `recommendation_result_clicked`
-- `language_switched`
-- `contact_prepared`
-- `cookie_consent_updated`
+- `page_feedback_voted`
 
 Recommended event properties:
 
@@ -410,4 +406,3 @@ The strongest next technical step is:
 3. Build the first programmatic SEO template: "best electric cars by budget".
 
 This sequence is strong because it creates measurable acquisition, improves sharing, and starts organic growth without needing a large editorial operation.
-

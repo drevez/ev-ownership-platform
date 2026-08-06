@@ -16,7 +16,14 @@ import { RecommendationResults } from './RecommendationResults'
 import { useLocale } from '@/context/LocaleContext'
 import { useTranslations } from '@/hooks/useTranslations'
 import { LANGUAGE_LOCALES } from '@/config/i18n'
+import { pushGaEvent } from '@/lib/gaEvents'
 import { trackEvent } from '@/lib/posthogClient'
+import {
+  buildPageContext,
+  pageContextToFlatProperties,
+  toAnalyticsVehicles,
+  vehicleFlatProperties,
+} from '@/lib/analytics'
 
 type KnowledgeMode = 'simple' | 'advanced'
 type IconName =
@@ -64,6 +71,25 @@ function togglePriority(
   return [...current, priority]
 }
 
+function budgetBand(value: number) {
+  if (value < 20000) return 'under_20000'
+  if (value < 30000) return '20000_30000'
+  if (value < 45000) return '30000_45000'
+  if (value < 60000) return '45000_60000'
+  return '60000_plus'
+}
+
+function familySizeBand(value: number) {
+  if (value <= 1) return 'one'
+  if (value <= 2) return 'two'
+  if (value <= 4) return 'three_four'
+  return 'five_plus'
+}
+
+function tripFrequency(value: RoadTripFrequency) {
+  return value
+}
+
 function FieldLabel({ children }: { children: React.ReactNode }) {
   return (
     <span className="text-sm font-semibold text-slate-800">
@@ -92,19 +118,31 @@ export function QuizForm() {
     event.preventDefault()
     setError(null)
     setLoading(true)
-    trackEvent('recommendation_started', {
-      locale,
+    const page = buildPageContext({
+      path: window.location.pathname,
+      canonicalPath: '/recommend',
+      type: 'recommender',
+      language: locale,
+    })
+    const recommendationContext = {
       knowledge_mode: knowledgeMode,
-      budget: answers.budget,
+      budget_band: budgetBand(answers.budget),
       purchase_type: answers.purchaseType,
       charging_access: answers.chargingAccess,
-      family_size: answers.familySize,
-      daily_commute_km: answers.dailyCommuteKm,
-      road_trips: answers.roadTrips,
+      family_size_band: familySizeBand(answers.familySize),
+      trip_frequency: tripFrequency(answers.roadTrips),
       cargo_need: answers.cargoNeed,
       body_preference: answers.bodyPreference,
       ownership_style: answers.ownershipStyle,
-      priorities: answers.priorities,
+      priority_count: answers.priorities.length,
+    }
+    trackEvent('recommendation_started', {
+      event_schema_version: 2,
+      page,
+      recommendation: recommendationContext,
+      ...pageContextToFlatProperties(page),
+      ...recommendationContext,
+      purchase_type: answers.purchaseType,
     })
 
     try {
@@ -126,14 +164,33 @@ export function QuizForm() {
 
       const nextResults = data.results ?? []
       setResults(nextResults)
-      trackEvent('recommendation_completed', {
-        locale,
-        knowledge_mode: knowledgeMode,
+      const analyticsVehicles = toAnalyticsVehicles(
+        nextResults.map((result) => result.vehicle)
+      )
+      const completedProperties = {
+        event_schema_version: 2,
+        page,
+        recommendation: {
+          ...recommendationContext,
+          result_count: nextResults.length,
+          top_vehicle_id: nextResults[0]?.vehicle.id,
+          top_match_percentage: nextResults[0]?.matchPercentage,
+        },
+        vehicles: analyticsVehicles,
         result_count: nextResults.length,
         top_vehicle_id: nextResults[0]?.vehicle.id,
-        top_vehicle_name: nextResults[0]?.vehicle.displayName,
+        top_brand: nextResults[0]?.vehicle.brand,
         top_match_percentage: nextResults[0]?.matchPercentage,
+        knowledge_mode: knowledgeMode,
+        ...pageContextToFlatProperties(page),
+        ...vehicleFlatProperties(analyticsVehicles),
+      }
+      trackEvent('recommendation_completed', {
+        ...completedProperties,
+        top_vehicle_id: nextResults[0]?.vehicle.id,
+        top_vehicle_name: nextResults[0]?.vehicle.displayName,
       })
+      pushGaEvent('recommendation_completed', completedProperties)
     } catch {
       setError(t.recommendQuiz.error)
     } finally {
@@ -177,8 +234,19 @@ export function QuizForm() {
                   onChange={(value) => {
                     const nextMode = value as KnowledgeMode
                     setKnowledgeMode(nextMode)
+                    const page = buildPageContext({
+                      path: window.location.pathname,
+                      canonicalPath: '/recommend',
+                      type: 'recommender',
+                      language: locale,
+                    })
                     trackEvent('recommendation_mode_changed', {
-                      locale,
+                      event_schema_version: 2,
+                      page,
+                      recommendation: {
+                        knowledge_mode: nextMode,
+                      },
+                      ...pageContextToFlatProperties(page),
                       knowledge_mode: nextMode,
                     })
                   }}

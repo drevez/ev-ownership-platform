@@ -9,7 +9,15 @@ import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import { useTranslations } from '@/hooks/useTranslations'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 import { SafeImage } from '@/components/SafeImage'
+import { pushGaEvent } from '@/lib/gaEvents'
 import { trackEvent } from '@/lib/posthogClient'
+import {
+  buildPageContext,
+  pageContextToFlatProperties,
+  toAnalyticsVehicles,
+  vehicleFlatProperties,
+} from '@/lib/analytics'
+import { getLanguageFromPathname } from '@/lib/i18nRouting'
 
 const AdvancedComparisonContent = dynamic(() =>
   import('./AdvancedComparisonContent').then((module) => module.AdvancedComparisonContent)
@@ -21,6 +29,7 @@ interface ComparisonPageProps {
 }
 
 type ComparisonMode = 'simple' | 'advanced'
+type ComparisonType = 'models' | 'versions'
 type RangeFeeling = 'unknown' | 'relaxed' | 'comfortable' | 'planning'
 type ChargingFeeling = 'unknown' | 'fast' | 'ok' | 'slow'
 type CargoFeeling = 'unknown' | 'large' | 'family' | 'compact'
@@ -59,6 +68,40 @@ function comparisonGridClass(vehicleCount: number) {
   return vehicleCount === 2
     ? 'mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2'
     : 'grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3'
+}
+
+function comparisonShareGaProperties(
+  vehicles: ComparisonVehicle[],
+  comparisonType: ComparisonType,
+  method: string
+) {
+  const page = buildPageContext({
+    path: window.location.pathname,
+    canonicalPath: comparisonType === 'models' ? '/compare/models' : '/compare/versions',
+    type: 'comparison',
+    language: getLanguageFromPathname(window.location.pathname) ?? 'pt',
+  })
+  const analyticsVehicles = toAnalyticsVehicles(vehicles)
+  const comparison = {
+    type: comparisonType,
+    vehicle_count: vehicles.length,
+  }
+
+  return {
+    event_schema_version: 2,
+    page,
+    comparison,
+    vehicles: analyticsVehicles,
+    content: {
+      type: 'comparison',
+      share_method: method,
+    },
+    content_type: 'comparison',
+    comparison_type: comparisonType,
+    share_method: method,
+    ...pageContextToFlatProperties(page),
+    ...vehicleFlatProperties(analyticsVehicles),
+  }
 }
 
 function formatCurrency(value?: number) {
@@ -247,6 +290,7 @@ export function ComparisonPage({
   const searchParams = useSearchParams()
   const requestedMode = searchParams.get('mode')
   const mode: ComparisonMode = requestedMode === 'advanced' ? 'advanced' : 'simple'
+  const comparisonType: ComparisonType = searchParams.getAll('models').length >= 2 ? 'models' : 'versions'
   const vehicleGridClass = comparisonGridClass(vehicles.length)
   const cheapest = bestByLowest(vehicles, (vehicle) => vehicle.pricing?.basePriceEur)
   const bestRange = bestByHighest(vehicles, (vehicle) => vehicle.efficiency?.wltpRangeKm)
@@ -263,10 +307,27 @@ export function ComparisonPage({
     const params = new URLSearchParams(searchParams.toString())
     params.set('mode', nextMode)
     router.replace(`${pathname}?${params.toString()}`, { scroll: false })
+    const page = buildPageContext({
+      path: pathname,
+      canonicalPath: comparisonType === 'models' ? '/compare/models' : '/compare/versions',
+      type: 'comparison',
+      language: getLanguageFromPathname(pathname) ?? 'pt',
+    })
+    const analyticsVehicles = toAnalyticsVehicles(vehicles)
     trackEvent('comparison_mode_changed', {
+      event_schema_version: 2,
+      page,
+      comparison: {
+        type: comparisonType,
+        mode: nextMode,
+        vehicle_count: vehicles.length,
+      },
+      vehicles: analyticsVehicles,
       mode: nextMode,
-      vehicle_count: vehicles.length,
-      selected_ids: vehicles.map((vehicle) => vehicle.id),
+      comparison_type: comparisonType,
+      selected_ids: analyticsVehicles.map((vehicle) => vehicle.id),
+      ...pageContextToFlatProperties(page),
+      ...vehicleFlatProperties(analyticsVehicles),
     })
   }
 
@@ -408,6 +469,8 @@ export function ComparisonPage({
               emailLabel={t.comparisonPage.shareEmail}
               shareText={t.comparisonPage.shareText}
               title={t.comparisonPage.title}
+              vehicles={vehicles}
+              comparisonType={comparisonType}
             />
             <Link
               href={localizedHref(editSelectionHref)}
@@ -446,6 +509,8 @@ function ShareComparisonButton({
   emailLabel,
   shareText,
   title,
+  vehicles,
+  comparisonType,
 }: {
   label: string
   copiedLabel: string
@@ -455,6 +520,8 @@ function ShareComparisonButton({
   emailLabel: string
   shareText: string
   title: string
+  vehicles: ComparisonVehicle[]
+  comparisonType: ComparisonType
 }) {
   const [status, setStatus] = useState<'idle' | 'copied' | 'error'>('idle')
   const [isOpen, setIsOpen] = useState(false)
@@ -479,10 +546,7 @@ function ShareComparisonButton({
 
     try {
       await navigator.clipboard.writeText(url)
-      trackEvent('comparison_shared', {
-        method: 'copy_link',
-        page_path: window.location.pathname,
-      })
+      trackShare('copy_link')
       setStatus('copied')
       setIsOpen(false)
       window.setTimeout(() => setStatus('idle'), 2400)
@@ -495,10 +559,7 @@ function ShareComparisonButton({
   const shareNative = async () => {
     try {
       await navigator.share({ title, text: shareText, url: window.location.href })
-      trackEvent('comparison_shared', {
-        method: 'native_share',
-        page_path: window.location.pathname,
-      })
+      trackShare('native_share')
       setIsOpen(false)
     } catch (error) {
       if (error instanceof DOMException && error.name === 'AbortError') return
@@ -509,6 +570,17 @@ function ShareComparisonButton({
 
   const hasTouchLikeInput = () => window.matchMedia('(pointer: coarse)').matches
   const usesCompactViewport = () => window.innerWidth < 768
+  const trackShare = (method: string) => {
+    const gaProperties = comparisonShareGaProperties(vehicles, comparisonType, method)
+
+    trackEvent('content_shared', {
+      ...gaProperties,
+      share_method: method,
+      selected_ids: vehicles.map((vehicle) => vehicle.id),
+      selected_names: vehicles.map((vehicle) => vehicle.displayName),
+    })
+    pushGaEvent('content_shared', gaProperties)
+  }
 
   const handlePrimaryShare = async () => {
     if (hasTouchLikeInput() && 'share' in navigator) {
@@ -523,10 +595,7 @@ function ShareComparisonButton({
   const shareWhatsapp = () => {
     const message = `${shareText} ${window.location.href}`
     window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
-    trackEvent('comparison_shared', {
-      method: 'whatsapp',
-      page_path: window.location.pathname,
-    })
+    trackShare('whatsapp')
     setIsOpen(false)
   }
 
@@ -534,10 +603,7 @@ function ShareComparisonButton({
     const subject = title
     const body = `${shareText}\n\n${window.location.href}`
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    trackEvent('comparison_shared', {
-      method: 'email',
-      page_path: window.location.pathname,
-    })
+    trackShare('email')
     setIsOpen(false)
   }
 

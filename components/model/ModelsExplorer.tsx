@@ -2,14 +2,19 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { useMemo, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
+import { VehicleSuggestionPrompt } from '@/components/VehicleSuggestionPrompt'
+import { useLocale } from '@/context/LocaleContext'
 import type { ModelExplorerItem } from '@/types/model'
 import type { VehiclePriceSummary } from '@/lib/normalizeVehicle'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
 import { useTranslations } from '@/hooks/useTranslations'
+import { buildPageContext, pageContextToFlatProperties } from '@/lib/analytics'
+import { delocalizePathname, stripLanguageFromPathname } from '@/lib/i18nRouting'
 import { trackEvent } from '@/lib/posthogClient'
+import { isTrackableSearchQuery, normalizeSignalText } from '@/lib/productSignals'
 import {
   flattenVariants,
   intentFilters,
@@ -90,6 +95,9 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
   const t = useTranslations()
   const localizedHref = useLocalizedHref()
   const router = useRouter()
+  const pathname = usePathname()
+  const { locale } = useLocale()
+  const lastNoResultSearchRef = useRef('')
   const [mode, setMode] = useState<ExplorerMode>('models')
   const [query, setQuery] = useState('')
   const [activeIntent, setActiveIntent] = useState<IntentFilter | null>(null)
@@ -150,6 +158,43 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
     return sortVariants(flattenVariants(filteredModels), sortKey)
   }, [filteredModels, sortKey])
 
+  const currentResultCount = mode === 'models' ? filteredModels.length : filteredVariants.length
+
+  useEffect(() => {
+    if (!isTrackableSearchQuery(query) || currentResultCount > 0) return
+
+    const queryNormalized = normalizeSignalText(query)
+    const key = `${mode}:${queryNormalized}`
+    if (lastNoResultSearchRef.current === key) return
+
+    lastNoResultSearchRef.current = key
+    const canonicalPath = delocalizePathname(stripLanguageFromPathname(pathname))
+    const page = buildPageContext({
+      path: pathname,
+      canonicalPath,
+      type: 'models',
+      language: locale,
+    })
+    trackEvent('vehicle_search_no_results', {
+      event_schema_version: 2,
+      page,
+      search: {
+        query_normalized: queryNormalized,
+        query_length: queryNormalized.length,
+        result_count: 0,
+        source_component: 'models_explorer',
+        mode,
+      },
+      ...pageContextToFlatProperties(page),
+      query_normalized: queryNormalized,
+      query_length: queryNormalized.length,
+      result_count: 0,
+      page_type: 'models',
+      source_component: 'models_explorer',
+      mode,
+    })
+  }, [currentResultCount, locale, mode, pathname, query])
+
   function clearFilters() {
     setQuery('')
     setActiveIntent(null)
@@ -174,6 +219,22 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
       value,
       mode,
       result_count: mode === 'models' ? filteredModels.length : filteredVariants.length,
+    })
+  }
+
+  function trackSearch() {
+    if (!isTrackableSearchQuery(query)) return
+
+    const queryNormalized = normalizeSignalText(query)
+    trackEvent('vehicle_search_performed', {
+      query_normalized: queryNormalized,
+      query_length: queryNormalized.length,
+      result_count: currentResultCount,
+      page_type: 'models',
+      page_path: pathname,
+      locale,
+      source_component: 'models_explorer',
+      mode,
     })
   }
 
@@ -220,7 +281,10 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
               onChange={(event) => setQuery(event.target.value)}
               onBlur={() => {
                 const value = query.trim()
-                if (value.length >= 2) trackFilter('search', value)
+                if (value.length >= 2) {
+                  trackFilter('search', value)
+                  trackSearch()
+                }
               }}
               placeholder={t.modelsExplorer.searchPlaceholder}
               className="h-12 w-full rounded-md border border-slate-200 bg-slate-50 px-4 text-base outline-none transition focus:border-emerald-500 focus:bg-white"
@@ -407,6 +471,16 @@ export function ModelsExplorer({ models, initialBrand = 'all' }: ModelsExplorerP
               : t.modelsExplorer.resultVariants.replace('{count}', String(filteredVariants.length))}
           </p>
         </div>
+
+        {currentResultCount === 0 && isTrackableSearchQuery(query) && (
+          <div className="mt-6">
+            <VehicleSuggestionPrompt
+              query={query}
+              resultCount={0}
+              sourceComponent="models_explorer"
+            />
+          </div>
+        )}
 
         {mode === 'models' ? (
           <div className="mt-6 grid gap-4 lg:grid-cols-2">

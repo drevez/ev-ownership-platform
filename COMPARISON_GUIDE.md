@@ -1,5 +1,7 @@
 # EV Comparison System - Implementation Guide
 
+Status: legacy/reference. This document is useful for understanding the comparison subsystem, but it may contain older component names, examples, or implementation assumptions. Check the current code in `components/comparison`, `context/CompareContext.tsx`, `lib/comparison.ts`, and localized routing helpers before copying patterns from here.
+
 ## Overview
 
 This document explains the EV comparison subsystem. The current application distinguishes model selection from exact variant comparison and localizes public URLs.

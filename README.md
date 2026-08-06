@@ -1,6 +1,8 @@
-# EV Ownership Platform
+# MotorZero
 
-EV Ownership Platform is a growing electric vehicle database and comparison app focused on helping drivers understand EV ownership in practical terms: range, charging, pricing, storage, comfort, and fit for different lifestyles.
+MotorZero is a growing electric vehicle database, comparison, and recommendation app focused on helping drivers understand EV ownership in practical terms: range, charging, pricing, storage, comfort, and fit for different lifestyles.
+
+The codebase is still named `EV Ownership Platform` in some technical contexts, but the public product name is `MotorZero`.
 
 The project is built around a modular JSON vehicle dataset. Each vehicle variant lives in its own folder and can be added gradually, even before every image or market field is complete. The app normalizes incomplete vehicle data, uses placeholder images when real assets are missing, and includes an advisory validator to make dataset cleanup easier as the catalog grows.
 
@@ -58,6 +60,8 @@ NEXT_PUBLIC_GTM_ID=GTM-MG49P4DS
 
 GA4 `G-050C1KBYPK` is configured inside GTM and must not be installed directly in the app. Consent defaults to denied before GTM loads. Visitors can accept, reject, or manage analytics and marketing separately; choices expire after 180 days.
 
+In GTM, the `Google Tag - GA4` tag should rely on Google's built-in consent checks and use `No additional consent required`. Do not add a second GA4 tag or direct `gtag.js` script.
+
 Optional product analytics keeps GA4 for acquisition and adds PostHog only after analytics consent, loaded lazily and limited to manual product events. Do not enable session replay or broad autocapture until the privacy impact is reviewed.
 
 ```env
@@ -65,7 +69,9 @@ NEXT_PUBLIC_POSTHOG_KEY=
 NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
 ```
 
-See [docs/ANALYTICS_CONSENT.md](/Users/danielarevez/ev-ownership-platform/docs/ANALYTICS_CONSENT.md) for setup and testing.
+See [docs/ANALYTICS_CONSENT.md](/Users/danielarevez/ev-ownership-platform/docs/ANALYTICS_CONSENT.md) for consent setup and testing. See [docs/ANALYTICS_EVENT_SCHEMA.md](/Users/danielarevez/ev-ownership-platform/docs/ANALYTICS_EVENT_SCHEMA.md) for the proposed event naming, payload structure, and GA4/PostHog implementation plan. Use [docs/TRACKING_IMPLEMENTATION_SPEC.md](/Users/danielarevez/ev-ownership-platform/docs/TRACKING_IMPLEMENTATION_SPEC.md) as the implementation and audit manual before structural tracking changes.
+
+The about page creator credit links to `danielarevez.com` with UTM attribution for referral reporting on the destination site.
 
 ## Public Pages
 
@@ -205,12 +211,37 @@ FEEDBACK_WEBHOOK_SECRET=
 
 The webhook may return aggregate stats so the UI can show same-opinion percentages after a response, and public counts only after enough feedback exists.
 
+## Vehicle Suggestions
+
+No-result states in search, model exploration, and comparison selection can ask
+visitors which vehicle or model they expected to find. Suggestions are sent to
+`/api/vehicle-suggestions`. Without a configured webhook, the API validates the
+request but returns `stored: false`.
+
+```env
+VEHICLE_SUGGESTIONS_WEBHOOK_URL=
+VEHICLE_SUGGESTIONS_WEBHOOK_SECRET=
+```
+
+Use this as the future backlog source for vehicles or variants users repeatedly
+ask MotorZero to add.
+
 ## Technical Guides
 
-For deep-dives into specific subsystems, see:
-- [API Reference](/Users/danielarevez/ev-ownership-platform/docs/API_REFERENCE.md) - Documents public and internal API routes, parameters, and payloads.
-- [Localization Guide](/Users/danielarevez/ev-ownership-platform/docs/LOCALIZATION.md) - Details language dictionaries, routing segment mapping, content editing, and adding new locales.
-- [Analytics And Consent](/Users/danielarevez/ev-ownership-platform/docs/ANALYTICS_CONSENT.md) - Documents GTM, Consent Mode v2, cookie behaviour, and local testing.
+Use this map to pick the right document before changing a subsystem:
+
+| Area | Document | Status |
+| --- | --- | --- |
+| Current implementation overview | [IMPLEMENTATION_SUMMARY.md](/Users/danielarevez/ev-ownership-platform/IMPLEMENTATION_SUMMARY.md) | Current |
+| Vehicle JSON schema and migration rules | [VEHICLE_DATA_GUIDE.md](/Users/danielarevez/ev-ownership-platform/VEHICLE_DATA_GUIDE.md) | Current |
+| Public/internal API routes | [API Reference](/Users/danielarevez/ev-ownership-platform/docs/API_REFERENCE.md) | Current |
+| Localization and translated URLs | [Localization Guide](/Users/danielarevez/ev-ownership-platform/docs/LOCALIZATION.md) | Current |
+| Current consent, GTM, GA4, and PostHog setup | [Analytics And Consent](/Users/danielarevez/ev-ownership-platform/docs/ANALYTICS_CONSENT.md) | Current |
+| Proposed analytics event schema | [Analytics Event Schema](/Users/danielarevez/ev-ownership-platform/docs/ANALYTICS_EVENT_SCHEMA.md) | Proposed |
+| Tracking schema v2 review checklist | [Tracking Schema V2 Checklist](/Users/danielarevez/ev-ownership-platform/docs/TRACKING_SCHEMA_V2_CHECKLIST.md) | Review |
+| Tracking implementation process | [Tracking Implementation Spec](/Users/danielarevez/ev-ownership-platform/docs/TRACKING_IMPLEMENTATION_SPEC.md) | Manual |
+| CRO, product signals, and feedback plan | [Product Signals Plan](/Users/danielarevez/ev-ownership-platform/docs/PRODUCT_SIGNALS_PLAN.md) | Planned |
+| Older comparison notes kept in place | [README_COMPARISON.md](/Users/danielarevez/ev-ownership-platform/README_COMPARISON.md), [COMPARISON_GUIDE.md](/Users/danielarevez/ev-ownership-platform/COMPARISON_GUIDE.md), [INTEGRATION_EXAMPLES.md](/Users/danielarevez/ev-ownership-platform/INTEGRATION_EXAMPLES.md) | Legacy/reference, not archived |
 
 ## Development
 
@@ -249,11 +280,11 @@ npm run lint
 ## Current Development Notes
 
 - `npm run build` passes.
-- `npm run lint` passes with warnings only: remaining `<img>` usage and one CompareContext hook dependency warning.
-- `npm run validate:vehicles` is the best way to see what vehicle data still needs cleanup. As of the latest review, it checks 82 vehicle folders and reports warnings only.
+- `npm run lint` passes.
+- `npm run validate:vehicles` is the best way to see what vehicle data still needs cleanup. Treat its current output as the source of truth instead of relying on a fixed vehicle count in documentation.
 - `npm run generate:registry` can regenerate `data/registry/vehicles.json` from vehicle `core.json` files.
 - Search, models, comparison, recommendation, localization, sitemap, robots, and internal tools are implemented, but data quality still depends on completing vehicle JSON and approving final images.
-- The latest production build generates 171 routes/pages, including localized legal pages.
+- Use the current `npm run build` output for the exact generated route/page count.
 
 ## Recommended Next Improvements
 

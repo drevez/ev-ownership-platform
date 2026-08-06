@@ -724,6 +724,27 @@ export const es = {
     versionsAvailable: "versiones disponibles",
     noResults: "No se encontraron vehículos."
   },
+  vehicleSuggestion: {
+    title: "¿No encuentras el vehículo?",
+    description: "Dinos qué modelo esperabas ver. Ayuda a priorizar qué añadir después.",
+    action: "Sugerir vehículo",
+    brandLabel: "Marca",
+    modelLabel: "Modelo",
+    variantLabel: "Versión",
+    marketLabel: "Mercado",
+    noteLabel: "Nota opcional",
+    cancel: "Cancelar",
+    submit: "Enviar sugerencia",
+    sending: "Enviando...",
+    thanksTitle: "Gracias por la sugerencia.",
+    thanksDescription: "Queda registrada como señal para mejorar la base de datos.",
+    marketOptions: {
+      portugalNew: "Portugal nuevo",
+      portugalUsed: "Portugal usado",
+      import: "Importado",
+      notSure: "No lo sé"
+    }
+  },
   batteryAndCharging: {
     title: "Batería y carga",
     usableBattery: "Batería útil",
@@ -1073,7 +1094,11 @@ export const es = {
     notFoundTitle: "Vehículo no encontrado",
     fallbackName: "Vehículo",
     description: "Especificaciones detalladas de {vehicle}.",
-    allVersionsOf: "Todas las versiones del {model}"
+    allVersionsOf: "Todas las versiones del {model}",
+    shareVehicle: "Compartir vehículo",
+    shareCopied: "Enlace copiado",
+    shareError: "No se pudo compartir",
+    shareText: "Mira este vehículo eléctrico en MotorZero: {vehicle}"
   },
   compare: {
     metadataTitle: "Comparador de eléctricos",

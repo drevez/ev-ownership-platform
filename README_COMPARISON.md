@@ -1,5 +1,7 @@
 # Comparison System Notes
 
+Status: legacy/reference. This document is useful historical context for the comparison feature, but it may lag behind the current UI and routing details. Prefer the current implementation in `components/comparison`, `context/CompareContext.tsx`, `lib/comparison.ts`, `lib/i18nRouting.ts`, and localized route files when making changes.
+
 The comparison system lets users select up to three EV variants and compare pricing, range, battery, charging, efficiency, dimensions, badges, and summary recommendations.
 
 ## Current Integration

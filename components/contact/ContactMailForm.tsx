@@ -1,8 +1,14 @@
 'use client'
 
 import { useState, type FormEvent } from 'react'
+import { usePathname } from 'next/navigation'
 
+import { useLocale } from '@/context/LocaleContext'
 import { useTranslations } from '@/hooks/useTranslations'
+import { buildPageContext, pageContextToFlatProperties } from '@/lib/analytics'
+import { delocalizePathname, stripLanguageFromPathname } from '@/lib/i18nRouting'
+import { pushGaEvent } from '@/lib/gaEvents'
+import { trackEvent } from '@/lib/posthogClient'
 
 const CONTACT_EMAIL = 'hello@motorzero.pt'
 
@@ -12,6 +18,8 @@ function clean(value: string, maxLength: number) {
 
 export function ContactMailForm() {
   const t = useTranslations()
+  const pathname = usePathname()
+  const { locale } = useLocale()
   const [topic, setTopic] = useState(t.contactsPage.form.topicOptions[0].value)
   const [name, setName] = useState('')
   const [replyTo, setReplyTo] = useState('')
@@ -35,6 +43,29 @@ export function ContactMailForm() {
       t.contactsPage.form.messageLabel,
       clean(message, 3000),
     ].join('\n')
+    const canonicalPath = delocalizePathname(stripLanguageFromPathname(pathname))
+    const page = buildPageContext({
+      path: pathname,
+      canonicalPath,
+      type: 'contact',
+      language: locale,
+    })
+    const properties = {
+      event_schema_version: 2,
+      page,
+      contact: {
+        topic,
+        has_reply_to: Boolean(clean(replyTo, 160)),
+        has_page_url: Boolean(clean(pageUrl, 240)),
+      },
+      topic,
+      has_reply_to: Boolean(clean(replyTo, 160)),
+      has_page_url: Boolean(clean(pageUrl, 240)),
+      ...pageContextToFlatProperties(page),
+    }
+
+    trackEvent('contact_intent', properties)
+    pushGaEvent('contact_intent', properties)
 
     window.location.href =
       `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`

@@ -724,6 +724,27 @@ export const en = {
     versionsAvailable: "versions available",
     noResults: "No vehicles found."
   },
+  vehicleSuggestion: {
+    title: "Can’t find the vehicle?",
+    description: "Tell us which model you expected to see. It helps prioritize what to add next.",
+    action: "Suggest vehicle",
+    brandLabel: "Brand",
+    modelLabel: "Model",
+    variantLabel: "Version",
+    marketLabel: "Market",
+    noteLabel: "Optional note",
+    cancel: "Cancel",
+    submit: "Send suggestion",
+    sending: "Sending...",
+    thanksTitle: "Thanks for the suggestion.",
+    thanksDescription: "It is now a signal for improving the vehicle database.",
+    marketOptions: {
+      portugalNew: "Portugal new",
+      portugalUsed: "Portugal used",
+      import: "Imported",
+      notSure: "Not sure"
+    }
+  },
   batteryAndCharging: {
     title: "Battery & Charging",
     usableBattery: "Usable Battery",
@@ -1073,7 +1094,11 @@ export const en = {
     notFoundTitle: "Vehicle not found",
     fallbackName: "Vehicle",
     description: "Detailed specifications for {vehicle}.",
-    allVersionsOf: "All versions of {model}"
+    allVersionsOf: "All versions of {model}",
+    shareVehicle: "Share vehicle",
+    shareCopied: "Link copied",
+    shareError: "Could not share",
+    shareText: "Take a look at this electric vehicle on MotorZero: {vehicle}"
   },
   compare: {
     metadataTitle: "EV Comparison",

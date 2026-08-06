@@ -15,6 +15,10 @@ npm run generate:registry
 ```txt
 README.md
 VEHICLE_DATA_GUIDE.md
+docs/ANALYTICS_CONSENT.md
+docs/ANALYTICS_EVENT_SCHEMA.md
+docs/TRACKING_IMPLEMENTATION_SPEC.md
+docs/PRODUCT_SIGNALS_PLAN.md
 scripts/validate-vehicles.mjs
 lib/loadVehicle.ts
 lib/normalizeVehicle.ts
@@ -106,7 +110,7 @@ components/comparison/VehicleSelector.tsx
 
 - `npm run build` should pass.
 - `npm run validate:vehicles` reports data cleanup tasks without blocking.
-- `npm run lint` should pass with warnings only: remaining `<img>` usage and one CompareContext hook dependency warning.
+- `npm run lint` should pass.
 
 ## Internal Tools
 
@@ -155,4 +159,7 @@ Full guide:
 
 ```txt
 docs/ANALYTICS_CONSENT.md
+docs/ANALYTICS_EVENT_SCHEMA.md
+docs/TRACKING_IMPLEMENTATION_SPEC.md
+docs/PRODUCT_SIGNALS_PLAN.md
 ```

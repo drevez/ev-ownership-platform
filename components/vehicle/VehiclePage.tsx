@@ -8,6 +8,7 @@ import { DimensionsCard } from './DimensionsCard'
 import { PricingCard } from './PricingCard'
 import type { VehicleData } from '@/lib/loadVehicle'
 import { VehicleComparisonSection } from './VehicleComparisonSection'
+import { VehicleShareButton } from './VehicleShareButton'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import { LANGUAGE_LOCALES, type Language } from '@/config/i18n'
 import { buildLocalizedHref } from '@/lib/i18nRouting'
@@ -118,7 +119,24 @@ export function VehiclePage({
       />
 
       <div className="max-w-7xl mx-auto px-4 py-12 space-y-8">
-        <VehicleComparisonSection vehicle={vehicle} displayName={displayName} />
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start">
+          <VehicleComparisonSection vehicle={vehicle} displayName={displayName} />
+          <VehicleShareButton
+            vehicle={{
+              id: vehicle.id,
+              brand: vehicle.brand,
+              model: vehicle.model,
+              variant: vehicle.variant,
+              modelYear: vehicle.modelYear,
+            }}
+            displayName={displayName}
+            locale={locale}
+            label={t.vehicle.shareVehicle}
+            copiedLabel={t.vehicle.shareCopied}
+            errorLabel={t.vehicle.shareError}
+            shareText={t.vehicle.shareText}
+          />
+        </div>
         <SpecsGrid
           brand={vehicle.brand}
           model={vehicle.model}

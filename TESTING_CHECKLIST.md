@@ -9,7 +9,7 @@ Use this checklist when adding vehicles, changing data normalization, or prepari
 - [ ] Review validator warnings: missing images, missing pricing, unknown keys, registry mismatches.
 - [ ] Run `npm run generate:registry` after bulk vehicle folder/core changes.
 - [ ] Run `npm run build`.
-- [ ] Run `npm run lint` and note the known warnings: remaining `<img>` usage and CompareContext hook dependency.
+- [ ] Run `npm run lint`.
 - [ ] Start the app with `npm run dev`.
 
 ## Vehicle Data
@@ -109,8 +109,20 @@ Use this checklist when adding vehicles, changing data normalization, or prepari
 - [ ] GA cookies appear after analytics consent and are removed after withdrawal.
 - [ ] Footer Cookie settings reopens the preference panel.
 - [ ] GTM Preview shows the expected consent initialization order.
+- [ ] GTM `Google Tag - GA4` uses built-in consent checks and `No additional consent required`.
+- [ ] GTM does not contain duplicate GA4 page-view tags for the same page load.
 - [ ] Initial loads and Next.js client navigation each create exactly one intended page view.
+- [ ] PostHog is disabled when `NEXT_PUBLIC_POSTHOG_KEY` is empty.
+- [ ] PostHog loads only after analytics consent when `NEXT_PUBLIC_POSTHOG_KEY` is configured.
+- [ ] PostHog Live Events receives manual events from model, vehicle, comparison, recommendation, or feedback interactions.
 - [ ] `/pt/privacidade`, `/pt/cookies`, and `/pt/termos` load, with EN and ES equivalents.
+
+## SEO And Attribution
+
+- [ ] Localized public URLs return the intended language path.
+- [ ] Canonical and alternate links are present on localized pages.
+- [ ] The about page creator link uses the MotorZero UTM attribution URL.
+- [ ] Outbound creator link opens safely with `rel="noopener"`.
 
 ## Feedback
 
@@ -120,6 +132,16 @@ Use this checklist when adding vehicles, changing data normalization, or prepari
 - [ ] Optional text note appears after a vote.
 - [ ] `/api/feedback` returns `stored: false` when no webhook is configured.
 - [ ] If a webhook is configured, stats are returned and displayed according to the public-count threshold.
+
+## Vehicle Suggestions And Search Signals
+
+- [ ] Homepage search tracks `vehicle_search_performed` when a search is submitted after analytics consent.
+- [ ] Homepage search shows the vehicle suggestion prompt when a 2+ character search has no results.
+- [ ] Models page tracks `vehicle_search_no_results` once per no-result query/mode.
+- [ ] Comparison selector tracks `vehicle_search_no_results` once per no-result query/mode.
+- [ ] Suggestion form can submit brand, model, variant, market context, and optional note.
+- [ ] `/api/vehicle-suggestions` returns `stored: false` when no webhook is configured.
+- [ ] If `VEHICLE_SUGGESTIONS_WEBHOOK_URL` is configured, suggestions are forwarded without exposing the secret client-side.
 
 ## Known Follow-Ups
 

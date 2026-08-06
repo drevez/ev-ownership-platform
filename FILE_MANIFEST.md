@@ -30,6 +30,7 @@ app/
 ├── internal/vehicles/[id]/edit/page.tsx
 └── api/
     ├── feedback/route.ts        Public page feedback adapter
+    ├── vehicle-suggestions/route.ts
     ├── internal/content/route.ts
     ├── internal/images/review/route.ts
     ├── internal/login/route.ts
@@ -72,6 +73,8 @@ lib/internalContentFiles.ts     Internal content/SEO field map and locale writer
 lib/internalVehicleFiles.ts     Internal vehicle JSON and registry writer
 lib/vehicleAudit.ts             Dataset health audit for internal dashboard
 lib/cookieConsent.ts            Consent storage, updates, expiry, cookie cleanup
+lib/gaEvents.ts                 Consent-aware GA4 dataLayer event helper
+lib/productSignals.ts           Product analytics normalization helpers
 lib/i18nRouting.ts              Localized route segment helpers
 lib/recommendation/recommendEVs.ts
 ```
@@ -91,6 +94,8 @@ components/SiteFooter.tsx
 components/GoogleTagManager.tsx
 components/CookieConsentBanner.tsx
 components/PageFeedback.tsx
+components/VehicleSuggestionPrompt.tsx
+components/analytics/TrackedExternalLink.tsx
 components/legal/LegalPage.tsx
 ```
 
@@ -129,6 +134,10 @@ TESTING_CHECKLIST.md            Build, data, UI, and comparison checks
 docs/API_REFERENCE.md           Public and internal route API reference
 docs/LOCALIZATION.md            Localization, route translation, and content editing guide
 docs/ANALYTICS_CONSENT.md       GTM and Consent Mode v2 implementation guide
+docs/ANALYTICS_EVENT_SCHEMA.md  Proposed GA4/PostHog event schema and migration plan
+docs/PRODUCT_SIGNALS_PLAN.md    Lean CRO, feedback, search, and vehicle-demand tracking plan
+docs/TRACKING_IMPLEMENTATION_SPEC.md
+                                Tracking audit, validation, migration, and acceptance manual
 FILE_MANIFEST.md                This file
 ```
 

@@ -1,6 +1,7 @@
 'use client'
 
 import { readCookieConsent } from '@/lib/cookieConsent'
+import type { AnalyticsProperties } from '@/lib/analytics'
 
 type PostHogClient = {
   capture: (event: string, properties?: EventProperties) => void
@@ -9,7 +10,7 @@ type PostHogClient = {
   reset: () => void
 }
 
-type EventProperties = Record<string, string | number | boolean | null | undefined | string[]>
+type EventProperties = AnalyticsProperties
 
 const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY
 const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com'
@@ -56,6 +57,12 @@ export function initPostHogAfterConsent() {
       }
 
       void import('posthog-js').then((module) => {
+        if (!hasAnalyticsConsent()) {
+          posthogLoadPromise = null
+          resolve(null)
+          return
+        }
+
         const posthog = module.default
 
         posthog.init(POSTHOG_KEY, {
@@ -65,9 +72,23 @@ export function initPostHogAfterConsent() {
           capture_pageview: false,
           capture_pageleave: false,
           disable_session_recording: true,
+          disable_surveys: true,
+          disable_surveys_automatic_display: true,
+          disable_external_dependency_loading: true,
+          advanced_disable_feature_flags: true,
           persistence: 'localStorage',
           respect_dnt: true,
           loaded: (loadedPostHog) => {
+            if (!hasAnalyticsConsent()) {
+              loadedPostHog.opt_out_capturing()
+              loadedPostHog.reset()
+              posthogClient = null
+              posthogLoadPromise = null
+              isPostHogReady = false
+              pendingEvents.length = 0
+              return
+            }
+
             posthogClient = loadedPostHog as PostHogClient
             posthogClient.opt_in_capturing()
             isPostHogReady = true

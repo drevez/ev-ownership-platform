@@ -1,9 +1,15 @@
 'use client'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useTranslations } from '@/hooks/useTranslations'
 import { useLocalizedHref } from '@/hooks/useLocalizedHref'
+import { useLocale } from '@/context/LocaleContext'
+import { buildPageContext, pageContextToFlatProperties } from '@/lib/analytics'
+import { delocalizePathname, stripLanguageFromPathname } from '@/lib/i18nRouting'
+import { trackEvent } from '@/lib/posthogClient'
+import { isTrackableSearchQuery, normalizeSignalText } from '@/lib/productSignals'
+import { VehicleSuggestionPrompt } from '@/components/VehicleSuggestionPrompt'
 
 type Vehicle = {
   name: string
@@ -27,12 +33,15 @@ function toModelSlug(brand: string, model: string): string {
 export default function SearchBar() {
   const t = useTranslations()
   const localizedHref = useLocalizedHref()
+  const pathname = usePathname()
+  const { locale } = useLocale()
   const [query, setQuery] = useState('')
   const [isOpen, setIsOpen] = useState(false)
   const [vehicles, setVehicles] = useState<Vehicle[]>([])
 
   const router = useRouter()
   const containerRef = useRef<HTMLDivElement>(null)
+  const lastNoResultSearchRef = useRef('')
 
   useEffect(() => {
     async function loadSearchData() {
@@ -75,6 +84,38 @@ export default function SearchBar() {
   }, [query, vehicles])
 
   useEffect(() => {
+    if (!isOpen || results.length > 0 || !isTrackableSearchQuery(query)) return
+
+    const queryNormalized = normalizeSignalText(query)
+    if (lastNoResultSearchRef.current === queryNormalized) return
+
+    lastNoResultSearchRef.current = queryNormalized
+    const canonicalPath = delocalizePathname(stripLanguageFromPathname(pathname))
+    const page = buildPageContext({
+      path: pathname,
+      canonicalPath,
+      type: 'home',
+      language: locale,
+    })
+    trackEvent('vehicle_search_no_results', {
+      event_schema_version: 2,
+      page,
+      search: {
+        query_normalized: queryNormalized,
+        query_length: queryNormalized.length,
+        result_count: 0,
+        source_component: 'home_search',
+      },
+      ...pageContextToFlatProperties(page),
+      query_normalized: queryNormalized,
+      query_length: queryNormalized.length,
+      result_count: 0,
+      page_type: 'home',
+      source_component: 'home_search',
+    })
+  }, [isOpen, locale, pathname, query, results.length])
+
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
         containerRef.current &&
@@ -92,9 +133,48 @@ export default function SearchBar() {
   }, [])
 
   const handleSubmit = () => {
-    if (!query.trim()) return
+    const cleanQuery = query.trim()
+    if (!cleanQuery) return
 
-    router.push(localizedHref(`/search?q=${encodeURIComponent(query)}`))
+    const queryNormalized = normalizeSignalText(cleanQuery)
+    trackEvent('vehicle_search_performed', {
+      query_normalized: queryNormalized,
+      query_length: queryNormalized.length,
+      result_count: results.length,
+      page_type: 'home',
+      page_path: pathname,
+      locale,
+      source_component: 'home_search',
+    })
+
+    if (results.length === 0 && lastNoResultSearchRef.current !== queryNormalized) {
+      lastNoResultSearchRef.current = queryNormalized
+      const canonicalPath = delocalizePathname(stripLanguageFromPathname(pathname))
+      const page = buildPageContext({
+        path: pathname,
+        canonicalPath,
+        type: 'home',
+        language: locale,
+      })
+      trackEvent('vehicle_search_no_results', {
+        event_schema_version: 2,
+        page,
+        search: {
+          query_normalized: queryNormalized,
+          query_length: queryNormalized.length,
+          result_count: 0,
+          source_component: 'home_search',
+        },
+        ...pageContextToFlatProperties(page),
+        query_normalized: queryNormalized,
+        query_length: queryNormalized.length,
+        result_count: 0,
+        page_type: 'home',
+        source_component: 'home_search',
+      })
+    }
+
+    router.push(localizedHref(`/search?q=${encodeURIComponent(cleanQuery)}`))
     setIsOpen(false)
   }
 
@@ -146,6 +226,17 @@ export default function SearchBar() {
               </p>
             </Link>
           ))}
+        </div>
+      )}
+
+      {isOpen && results.length === 0 && isTrackableSearchQuery(query) && (
+        <div className="absolute top-full z-50 mt-3 w-full overflow-hidden rounded-lg border border-white/10 bg-[#111111] p-3 shadow-2xl backdrop-blur-2xl sm:mt-4">
+          <VehicleSuggestionPrompt
+            query={query}
+            resultCount={0}
+            sourceComponent="home_search"
+            tone="dark"
+          />
         </div>
       )}
     </div>

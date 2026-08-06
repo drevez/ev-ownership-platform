@@ -258,6 +258,57 @@ FEEDBACK_WEBHOOK_URL=
 FEEDBACK_WEBHOOK_SECRET=
 ```
 
+### `POST /api/vehicle-suggestions`
+Receives lightweight missing-vehicle suggestions from no-result states in search,
+model exploration, and comparison selection. The route sanitizes text, requires a
+model name, and forwards the event to `VEHICLE_SUGGESTIONS_WEBHOOK_URL` if
+configured.
+
+No database is bundled with the app. The endpoint is intentionally adapter-like
+so it can later forward to Google Apps Script, Supabase, or another private
+endpoint used by the internal backlog.
+
+#### Request Body
+- **Content-Type**: `application/json`
+- **Parameters**:
+  - `brand` (string): Suggested brand.
+  - `model` (string, required): Suggested model.
+  - `variant` (string): Suggested version/variant.
+  - `marketContext` (string): `portugal_new`, `portugal_used`, `import`, or `not_sure`.
+  - `note` (string): Optional context, capped server-side.
+  - `sourcePage` (string, required): Page path where suggestion was submitted.
+  - `sourceComponent` (string): UI source such as `home_search`, `models_explorer`, or `comparison_selector`.
+  - `locale` (string): Current language code.
+  - `queryNormalized` (string): Normalized search query that led to the suggestion.
+  - `resultCount` (number): Result count at the time of suggestion.
+
+```json
+{
+  "brand": "Renault",
+  "model": "Scenic E-Tech",
+  "variant": "Long Range",
+  "marketContext": "portugal_new",
+  "sourcePage": "/pt/modelos",
+  "sourceComponent": "models_explorer",
+  "locale": "pt",
+  "queryNormalized": "renault scenic",
+  "resultCount": 0
+}
+```
+
+#### Response
+- `200 OK`: `{ "stored": true }` when webhook forwarding succeeds.
+- `200 OK`: `{ "stored": false }` when no webhook is configured.
+- `400 Bad Request`: missing model or source page.
+- `500 Internal Server Error`: suggestion submission failed.
+
+Relevant environment variables:
+
+```env
+VEHICLE_SUGGESTIONS_WEBHOOK_URL=
+VEHICLE_SUGGESTIONS_WEBHOOK_SECRET=
+```
+
 ---
 
 ## 6. Internal Vehicle Create API

@@ -1,10 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { SafeImage as Image } from '@/components/SafeImage'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import { VehicleSuggestionPrompt } from '@/components/VehicleSuggestionPrompt'
 import { useCompare } from '@/context/CompareContext'
+import { useLocale } from '@/context/LocaleContext'
 import { mapRegistryToComparisonVehicle } from '@/lib/comparison'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import { useTranslations } from '@/hooks/useTranslations'
@@ -13,7 +15,13 @@ import {
   modelSlugsToVersionIds,
   versionIdsToModelSlugs,
 } from '@/lib/comparisonSelection'
+import {
+  buildPageContext,
+  pageContextToFlatProperties,
+} from '@/lib/analytics'
+import { delocalizePathname, stripLanguageFromPathname } from '@/lib/i18nRouting'
 import { trackEvent } from '@/lib/posthogClient'
+import { isTrackableSearchQuery, normalizeSignalText } from '@/lib/productSignals'
 
 interface VehicleSummary {
   id: string
@@ -62,6 +70,9 @@ export function VehicleSelector({
   const t = useTranslations()
   const localizedHref = useLocalizedHref()
   const router = useRouter()
+  const pathname = usePathname()
+  const { locale } = useLocale()
+  const lastNoResultSearchRef = useRef('')
 
   const { state, setSelectedVehicleIds } = useCompare()
 
@@ -174,6 +185,56 @@ export function VehicleSelector({
     )
   })
 
+  useEffect(() => {
+    if (!isTrackableSearchQuery(query) || filteredChoices.length > 0) return
+
+    const queryNormalized = normalizeSignalText(query)
+    const key = `${mode}:${queryNormalized}`
+    if (lastNoResultSearchRef.current === key) return
+
+    lastNoResultSearchRef.current = key
+    const canonicalPath = delocalizePathname(stripLanguageFromPathname(pathname))
+    const page = buildPageContext({
+      path: pathname,
+      canonicalPath,
+      type: 'comparison',
+      language: locale,
+    })
+    trackEvent('vehicle_search_no_results', {
+      event_schema_version: 2,
+      page,
+      search: {
+        query_normalized: queryNormalized,
+        query_length: queryNormalized.length,
+        result_count: 0,
+        source_component: 'comparison_selector',
+        mode,
+      },
+      ...pageContextToFlatProperties(page),
+      query_normalized: queryNormalized,
+      query_length: queryNormalized.length,
+      result_count: 0,
+      source_component: 'comparison_selector',
+      mode,
+    })
+  }, [filteredChoices.length, locale, mode, pathname, query])
+
+  function trackSearch() {
+    if (!isTrackableSearchQuery(query)) return
+
+    const queryNormalized = normalizeSignalText(query)
+    trackEvent('vehicle_search_performed', {
+      query_normalized: queryNormalized,
+      query_length: queryNormalized.length,
+      result_count: filteredChoices.length,
+      page_type: 'comparison_selector',
+      page_path: pathname,
+      locale,
+      source_component: 'comparison_selector',
+      mode,
+    })
+  }
+
   const comparisonParams = new URLSearchParams()
   if (mode === 'models') {
     selectedModelSlugs.forEach((slug) => comparisonParams.append('models', slug))
@@ -198,7 +259,28 @@ export function VehicleSelector({
 
   const switchMode = (nextMode: SelectionMode) => {
     if (nextMode === mode) return
+    const canonicalPath = delocalizePathname(stripLanguageFromPathname(pathname))
+    const page = buildPageContext({
+      path: pathname,
+      canonicalPath,
+      type: 'comparison',
+      language: locale,
+    })
     trackEvent('comparison_selection_mode_changed', {
+      event_schema_version: 2,
+      page,
+      comparison: {
+        selection_mode_from: mode,
+        selection_mode_to: nextMode,
+        selected_count: activeSelectedIds.length,
+      },
+      selection: {
+        from_mode: mode,
+        to_mode: nextMode,
+        selected_count: activeSelectedIds.length,
+        selected_ids: activeSelectedIds,
+      },
+      ...pageContextToFlatProperties(page),
       from_mode: mode,
       to_mode: nextMode,
       selected_count: activeSelectedIds.length,
@@ -310,6 +392,7 @@ export function VehicleSelector({
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
+                onBlur={trackSearch}
                 placeholder={t.vehicleSelector.searchPlaceholder}
                 className="h-10 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
               />
@@ -444,8 +527,17 @@ export function VehicleSelector({
 
         {/* Empty state */}
         {filteredChoices.length === 0 && (
-          <div className="py-16 text-center">
+          <div className="mx-auto max-w-xl py-16 text-center">
             <p className="text-slate-500">{t.vehicleSelector.noResults}</p>
+            {isTrackableSearchQuery(query) && (
+              <div className="mt-5 text-left">
+                <VehicleSuggestionPrompt
+                  query={query}
+                  resultCount={0}
+                  sourceComponent="comparison_selector"
+                />
+              </div>
+            )}
           </div>
         )}
       </div>
