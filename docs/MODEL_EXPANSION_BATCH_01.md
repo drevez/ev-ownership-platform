@@ -1,6 +1,8 @@
 # Primeiro lote de versões BEV — 22/11/2026
 
-Levantamento dos **9 modelos**, com **19 configurações identificadas** e **9 fotografias oficiais preparadas**. As 19 entradas são configurações de equipamento, cor comercial ou revisão técnica, e não 19 acabamentos distintos. Não foram criadas variantes nem ofertas no Supabase nesta etapa. Os dados abaixo são material de preparação; as divergências estão assinaladas e não foram preenchidas com estimativas.
+**Atualização:** consultar a [revisão de coerência](MODEL_EXPANSION_BATCH_01_COHESION.md) para decisões e pendências atuais. O detalhe inicial abaixo conserva a origem das divergências. Firefly fica como única configuração de entrada, com nome público Firefly.
+
+Levantamento dos **9 modelos**, com **18 configurações selecionadas** e **9 fotografias oficiais preparadas**. As 18 entradas são configurações de equipamento, cor comercial ou revisão técnica, e não 19 acabamentos distintos. Não foram criadas variantes nem ofertas no Supabase nesta etapa. Os dados abaixo são material de preparação; as divergências estão assinaladas e não foram preenchidas com estimativas.
 
 ## Resultado por modelo
 
@@ -14,7 +16,7 @@ Levantamento dos **9 modelos**, com **19 configurações identificadas** e **9 f
 | Changan Deepal S07 | BEV RWD 79.97 kWh; BEV RWD 77.94 kWh | 79.97 kWh / 77.94 kWh | 475 km / 500 km |
 | Dongfeng BOX | PLUS 42.3 kWh | 42.3 kWh | 310 km |
 | Dongfeng VIGO | One Edition 51.87 kWh | 51.87 kWh | 340 km |
-| Firefly | Select 41.2 kWh; Comfort 41.2 kWh | 41.2 kWh | 330 km / por resolver |
+| Firefly | Firefly | 41.2 kWh | 330 km |
 
 ## Decisões antes de importar
 
@@ -264,25 +266,12 @@ Factos comuns recolhidos: `{"dcMaxKW": 100, "chargeInterval": {"fromPct": 10, "t
 
 Fontes comuns: [firefly](https://fireflyportugal.pt/o-nosso-carro/), [firefly-check](https://www.razaoautomovel.com/noticias/lancamento-precos-firefly-2025/), [firefly-test](https://4gnews.pt/nio-firefly-ensaio/).
 
-### Select 41.2 kWh
+### Firefly
 
 - Tração: RWD. Bateria anunciada: 41.2 kWh (base: net_in_european_manufacturer_document_pending_current_pt_match). WLTP combinado: 330 km. Modelo/ano: não inferido da data da pesquisa.
 - Dados específicos: `{"heatedFrontSeats": true, "heatedSteeringWheel": true}`.
 - Preço de referência: **30,900.00 €**, com IVA; público `private`; tipo `model_starting_price`; estado `model_price_needs_trim_confirmation`; validade início não indicado → fim não indicado. Preço de entrada no site PT atual; associação Select corroborada pela apresentação nacional, não por tabela atual por acabamento. [Fonte](https://fireflyportugal.pt/o-nosso-carro/).
 - Pendente: 41,2 kWh líquida confirmada em ficha europeia; rever correspondência com veículo PT atual.
-
-### Comfort 41.2 kWh
-
-- Tração: RWD. Bateria anunciada: 41.2 kWh (base: net_in_european_manufacturer_document_pending_current_pt_match). WLTP combinado: por resolver. Modelo/ano: não inferido da data da pesquisa.
-- Dados específicos: `{"ventilatedFrontSeats": true, "frontSeatMassage": true, "electricFrontSeats": true}`.
-- Preço de referência: **32,490.00 €**, com IVA; público `private`; tipo `list_price`; estado `secondary_reference_only`; validade início não indicado → fim não indicado.  [Fonte](https://4gnews.pt/nio-firefly-ensaio/).
-- Pendente: Falta preço oficial atual específico da Comfort e WLTP exato (320–330 km consoante configuração).
-
-- Atenção: Página oficial PT atual anuncia 120 kW/163 cv; lançamento/ensaios 105 kW/143 cv. Confirmar atualização de software/ano antes de publicar potência.
-- Atenção: AC: site menciona 7 kW ou 11 kW opcional; confirmar por versão/unidade PT.
-- Atenção: Autonomia por acabamento: até 330 km geral; Comfort aparece com 320 km em bases comerciais. Não assumir 330 em ambas.
-- Atenção: Não usar a campanha financeira de 26.300 €: fonte antiga com data inválida de junho.
-- Atenção: Dimensões, bomba de calor e condições de preços por acabamento precisam de ficha/tabela PT atual.
 
 Foto oficial: [origem](https://fireflyportugal.pt/wp-content/uploads/1753091864687-1753091863279-7BBE23F55268DA69-scaled-1.webp); preparada internamente em `data/internal/prepared-model-media/firefly-firefly.webp` (1280×720). Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.
 

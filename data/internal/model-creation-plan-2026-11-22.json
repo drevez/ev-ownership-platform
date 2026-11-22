@@ -10,10 +10,10 @@
   "summary": {
     "modelFamilies": 130,
     "brands": 44,
-    "variantProposals": 272,
-    "modelsWithSourceSupportedProposals": 16,
-    "sourceSupportedProposals": 27,
-    "selectionHypotheses": 245
+    "variantProposals": 271,
+    "modelsWithSourceSupportedProposals": 17,
+    "sourceSupportedProposals": 28,
+    "selectionHypotheses": 243
   },
   "models": [
     {
@@ -612,34 +612,22 @@
         "FCEV"
       ],
       "sourceResearch": "model-expansion-research-2026-11-22.json",
-      "selectionStrategy": "entry_then_long_range",
-      "selectionNotes": "Proposta de seleção, não afirmação de que existam duas versões. Fechar o configurador português antes de criar IDs de versão.",
+      "selectionStrategy": "single_entry_configuration",
+      "selectionNotes": "Escolha explícita do utilizador: uma versão apenas, a de entrada; nome público Firefly, sem Select/Comfort. Designação de origem conservada apenas no dossiê de pesquisa.",
       "variantProposals": [
         {
           "proposalKey": "proposal-1",
-          "label": "BEV de entrada — bateria/tração/acabamento a confirmar",
+          "label": "Firefly",
           "role": "entry",
-          "status": "selection_hypothesis_not_a_confirmed_version",
-          "batteryAdvertisedKwh": null,
-          "drivetrain": null,
-          "sourceUrl": "https://fireflyportugal.pt/o-nosso-carro/",
+          "status": "source_supported_needs_current_pt_review",
+          "batteryAdvertisedKwh": 41.2,
+          "drivetrain": "RWD",
+          "sourceUrl": "https://www.guiadoautomovel.pt/marcas/firefly/firefly/precos",
           "onlyIfOfficiallyOfferedInPortugal": true,
           "publicationStatus": "not_publishable_until_review",
-          "priceEur": null,
-          "year": null
-        },
-        {
-          "proposalKey": "proposal-2",
-          "label": "BEV de maior autonomia — apenas se existir versão distinta em Portugal",
-          "role": "long_range",
-          "status": "selection_hypothesis_not_a_confirmed_version",
-          "batteryAdvertisedKwh": null,
-          "drivetrain": null,
-          "sourceUrl": "https://fireflyportugal.pt/o-nosso-carro/",
-          "onlyIfOfficiallyOfferedInPortugal": true,
-          "publicationStatus": "not_publishable_until_review",
-          "priceEur": null,
-          "year": null
+          "priceEur": 30900,
+          "year": null,
+          "catalogVariant": ""
         }
       ],
       "publicationGate": [
@@ -655,7 +643,7 @@
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
         "status": "researched_with_documented_gaps",
-        "versionsIdentified": 2
+        "versionsIdentified": 1
       }
     },
     {
