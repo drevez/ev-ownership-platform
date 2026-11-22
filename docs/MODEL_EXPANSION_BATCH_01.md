@@ -25,7 +25,7 @@ Levantamento dos **9 modelos**, com **18 configurações selecionadas** e **9 fo
 - E2 tem três versões comprovadas, com duas baterias; E5 tem PRO/MAX. Há incoerências no configurador, pelo que os preços documentados do concessionário e as condições ficam separados.
 - Aion tem campanhas de novembro para particulares e empresas. O menor preço financiado ou empresarial não deve aparecer como preço a pronto para particulares.
 - Dongfeng tem campanhas de concessionários atuais e uma campanha Black Friday que só começa em 26/11. A página oficial do VIGO ainda contém campanha expirada de setembro.
-- Firefly exige confirmar a potência/atualização da versão portuguesa: o site atual diz 120 kW e fontes de lançamento/ensaios dizem 105 kW. AC e autonomia da Comfort também não ficaram fechados.
+- Firefly: dados oficiais atuais reconfirmados — 120 kW; AC 7 kW monofásico ou 11 kW trifásico conforme configuração; DC 100 kW, 29 min 10–80 e V2L. Uma única versão apresentada: Firefly. As divergências históricas não bloqueiam os dados oficiais atuais.
 - Nenhuma bateria anunciada passa a bruta/útil por inferência. Valores de carga sem intervalo 10–80 ficam fora desse campo.
 
 ## Aion UT

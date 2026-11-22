@@ -229,7 +229,8 @@
       "url": "https://fireflyportugal.pt/o-nosso-carro/",
       "type": "official_brand_pt",
       "reviewedAt": "2026-11-22",
-      "accessMethod": "web_page_or_indexed_excerpt"
+      "accessMethod": "direct_official_pt_page",
+      "note": "Reconfirmado em 22/11/2026: 120 kW/163 cv; AC 7 kW monofásico ou 11 kW trifásico; DC 100 kW; 29 min 10–80; V2L. Informação também indicada pelo utilizador."
     },
     "firefly-finance": {
       "url": "https://lp.fireflyportugal.pt/",
@@ -1970,7 +1971,21 @@
         "heightMM": 1557,
         "wheelbaseMM": 2615,
         "seats": 5,
-        "doors": 5
+        "doors": 5,
+        "powerKW": 120,
+        "acChargingOptions": [
+          {
+            "powerKW": 7,
+            "phases": 1,
+            "supply": "single_phase"
+          },
+          {
+            "powerKW": 11,
+            "phases": 3,
+            "supply": "three_phase"
+          }
+        ],
+        "acConfigurationNote": "7 kW monofásico ou 11 kW trifásico, consoante carregador de bordo/configuração. A página oficial não estabelece que toda a unidade aceite 11 kW."
       },
       "commonEvidence": [
         "firefly",
@@ -1978,8 +1993,7 @@
         "firefly-test"
       ],
       "issues": [
-        "Potência: 143 cv na tabela PT de novembro e 120 kW no site oficial; OTA chinesa encontrada não confirma aplicação PT.",
-        "AC: site oficial menciona 7 ou 11 kW; confirmar configuração portuguesa selecionada.",
+        "Manter as duas opções AC com a condição de configuração; não apresentar 11 kW como garantido para todas as unidades.",
         "Não usar campanhas antigas/financiadas como preço de tabela atual."
       ],
       "versions": [
@@ -1995,7 +2009,8 @@
           "facts": {
             "heatedFrontSeats": true,
             "heatedSteeringWheel": true,
-            "batteryUsableKWh": 41.2
+            "batteryUsableKWh": 41.2,
+            "powerKW": 120
           },
           "evidence": [
             "firefly",
@@ -2028,9 +2043,7 @@
               "notes": "Preço de entrada no site PT atual; associação Select corroborada pela apresentação nacional, não por tabela atual por acabamento."
             }
           ],
-          "issues": [
-            "Potência AC e atualização 105→120 kW no mercado português ainda por confirmar; não criar segunda versão para isso sem prova."
-          ],
+          "issues": [],
           "configurationKind": "single_selected_entry_configuration",
           "trim": null,
           "sourceTrimDesignation": "Select",
@@ -2109,6 +2122,20 @@
           ],
           "confidence": "medium",
           "note": ""
+        },
+        "powerKW": {
+          "sources": [
+            "firefly"
+          ],
+          "confidence": "high",
+          "note": "120 kW/163 cv no site oficial português consultado em 22/11/2026; preferido face a tabelas/ensaios anteriores de 105 kW. Não implica que todas as unidades antigas tenham sido atualizadas."
+        },
+        "acChargingOptions": {
+          "sources": [
+            "firefly"
+          ],
+          "confidence": "high",
+          "note": "As duas opções são documentadas; não se escolhe 11 kW como equipamento garantido da configuração mais barata. Site oficial anuncia 7 kW monofásico, sem arredondar para 7,4 kW de fontes secundárias."
         }
       },
       "selectionPolicy": {
@@ -2126,16 +2153,15 @@
         "resolved": [
           "Uma única configuração: nome público Firefly, sem Select/Comfort.",
           "Tabela portuguesa de 09/11: entrada 30.900 €, RWD, 330 km, medidas e mala; fonte identifica impostos incluídos e despesas excluídas.",
-          "41,2 kWh úteis corroborados por ficha europeia e ensaio PT; DC 100 kW e 29 min 10–80 no site oficial."
+          "41,2 kWh úteis corroborados por ficha europeia e ensaio PT; DC 100 kW e 29 min 10–80 no site oficial.",
+          "Site oficial PT confirma 120 kW/163 cv, AC 7 kW monofásico ou 11 kW trifásico, DC 100 kW, 29 min 10–80 e V2L.",
+          "Opções AC registadas na mesma versão Firefly; não criam acabamentos nem garantem 11 kW em todas as unidades."
         ],
-        "remaining": [
-          "Confirmar se a unidade PT de entrada carrega a 7 ou 11 kW AC.",
-          "Potência/atualização: não misturar 105 kW antigos com 120 kW da China/site atual."
-        ],
+        "remaining": [],
         "optionalUnknown": [
           "Bomba de calor por configuração."
         ],
-        "recommendation": "Só Firefly de entrada. Não importa Comfort nem a autonomia de 320 km da linha superior, que o Guia também chama Select por lapso."
+        "recommendation": "Informação essencial pronta para preparar publicação de uma única versão Firefly; apresentar AC por configuração. Bomba de calor permanece sem confirmação, sem bloquear os restantes campos."
       }
     }
   ],

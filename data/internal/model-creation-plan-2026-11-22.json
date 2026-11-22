@@ -613,7 +613,7 @@
       ],
       "sourceResearch": "model-expansion-research-2026-11-22.json",
       "selectionStrategy": "single_entry_configuration",
-      "selectionNotes": "Escolha explícita do utilizador: uma versão apenas, a de entrada; nome público Firefly, sem Select/Comfort. Designação de origem conservada apenas no dossiê de pesquisa.",
+      "selectionNotes": "Uma única versão, nome público Firefly. Dados essenciais corroborados: 120 kW; AC 7 kW monofásico ou 11 kW trifásico conforme configuração; DC 100 kW, 29 min 10–80 e V2L. Preservar opções AC sem criar segunda versão.",
       "variantProposals": [
         {
           "proposalKey": "proposal-1",

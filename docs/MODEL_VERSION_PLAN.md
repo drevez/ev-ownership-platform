@@ -32,7 +32,7 @@ As capacidades anunciadas nas propostas não são automaticamente classificadas 
 | Dongfeng VIGO | `dongfeng-vigo` | BEV de entrada — bateria/tração/acabamento a confirmar<br>BEV de maior autonomia — apenas se existir versão distinta em Portugal | Hipótese de seleção; mapear configurador |
 | Forthing Friday EV | `forthing-friday-ev` | EV 64.4 kWh | Fonte encontrada; validar oferta atual |
 | Forthing S7 EV | `forthing-s7-ev` | EV 56.8 kWh | Fonte encontrada; validar oferta atual |
-| Firefly | `firefly-firefly` | Firefly — única configuração de entrada, sem acabamento no nome público | Fonte encontrada; validar AC/potência PT |
+| Firefly | `firefly-firefly` | Firefly — única configuração de entrada, sem acabamento no nome público | Dados essenciais confirmados; AC conforme configuração |
 | Voyah Courage | `voyah-courage` | BEV de entrada — bateria/tração/acabamento a confirmar<br>BEV de maior autonomia — apenas se existir versão distinta em Portugal | Hipótese de seleção; mapear configurador |
 | Voyah Free | `voyah-free` | BEV de entrada — bateria/tração/acabamento a confirmar<br>BEV de maior autonomia — apenas se existir versão distinta em Portugal | Hipótese de seleção; mapear configurador |
 | Voyah Dream | `voyah-dream` | Passageiros BEV — bateria de entrada e menor lotação adequada<br>Passageiros BEV — maior bateria/lotação, se existir em Portugal | Hipótese de seleção; mapear configurador |
