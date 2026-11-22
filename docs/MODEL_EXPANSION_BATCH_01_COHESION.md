@@ -1,6 +1,6 @@
 # Coerência dos dados — primeiro lote BEV — 22/11/2026
 
-Revisão de nove modelos com fontes oficiais, concessionários, Guia do Automóvel e ensaios portugueses. Esta revisão prevalece sobre as pendências históricas do levantamento inicial. Foram preparados **18 registos de configuração em nove modelos**, sem importação de variantes no Supabase. Existe ainda um candidato BOX PRO a mapear.
+Revisão de nove modelos com fontes oficiais, concessionários, Guia do Automóvel e ensaios portugueses. Esta revisão prevalece sobre as pendências históricas do levantamento inicial. Foram preparados **18 registos de configuração em nove modelos**, com uma versão Firefly publicada no Supabase e 17 configurações selecionadas ainda por publicar. Existe ainda um candidato BOX PRO a mapear.
 
 O Firefly tem **uma única configuração selecionada e um único nome público: Firefly**. Não são apresentadas versões Select/Comfort. A configuração de origem mais barata fica identificada apenas na proveniência, para evitar juntar especificações da versão superior.
 
@@ -20,7 +20,7 @@ Preço com tipo (tabela/campanha), IVA, público e data; bateria/tração/WLTP d
 | Changan Deepal S07 | Na configuração 79,97 kWh: AC 11 kW, DC 93 kW em ensaio PT; mala 510 L e frunk 125 L corroborados. | Revisão 77,94 kWh tem dois preços oficiais: 44.990 e 45.728 €. O principal codifica 45.728 como preço base; não assumir que 738 € são um extra sem prova. Mala: fabricante 510 L vs Guia 445 L; identificar método de medição antes de comparar literalmente. Verificar cotas e volumes da revisão 77,94 kWh separadamente. | Anterior pode ser preparado; revisão LFP exige fechar preço e especificações correspondentes, sem MY26 no nome público. |
 | Dongfeng BOX | PLUS: preço particular, IVA, validade e despesas agora explícitos na Caetano. FWD, AC 6,6 e DC 87,8 kW cruzados em fontes PT. | PRO/PLUS e TT: confirmar equipamento/posição na gama; evitar criar versões só por pintura. Comprimento difere 4020/4030 mm entre fontes; não fechar sem ficha da versão. | PLUS tem núcleo coerente; PRO fica como candidato, sem importação automática. |
 | Dongfeng VIGO | Nova campanha Caetano: 24.600 € + IVA, até 30/11, One Edition e despesas identificadas. FWD e medidas 4306×1868×1654 corroboradas por tabela e ensaio PT. | Potência AC da configuração PT; 6,6 kW apenas de documentação de outros mercados. | Núcleo coerente; deixar AC não confirmado vazio e manter preços de concessionários distintos separados. |
-| Firefly | 120 kW/163 cv; AC 7 kW monofásico ou 11 kW trifásico; DC 100 kW; carga 10–80% em 29 min; V2L. Fonte oficial PT reconfirmada. Uma única versão, nome Firefly. | Sem bomba de calor, por confirmação do utilizador. AC depende da configuração do carregador de bordo. | Preparável para publicação, mostrando ambas as opções AC com a condição. |
+| Firefly | 120 kW/163 cv; AC 7 kW monofásico ou 11 kW trifásico; DC 100 kW; carga 10–80% em 29 min; V2L. Fonte oficial PT reconfirmada. Uma única versão, nome Firefly. | Sem bomba de calor, por confirmação do utilizador. AC depende da configuração do carregador de bordo. | Publicado e verificado; uma versão, ambas as opções AC com a condição. |
 
 ## Correções e fontes principais
 
@@ -50,3 +50,5 @@ Preço com tipo (tabela/campanha), IVA, público e data; bateria/tração/WLTP d
 Ficheiro estruturado: [dados e proveniência](../data/internal/model-expansion-batch-01-2026-11-22.json). Os campos `cohesionReview`, `fieldReview` e `preferredWltpCombinedKm` distinguem decisão editorial, corroboração e conflito ainda aberto. Nenhuma destas pesquisas escreve na base de dados automaticamente.
 
 Confirmação do utilizador em 22/11/2026: **Firefly sem bomba de calor**. Campo preparado como `heatPumpAvailable: false`; deixa de ser informação desconhecida.
+
+Firefly publicado em 22/11/2026: [ficha](https://www.motorzero.pt/pt/veiculos/firefly). Ver [registo e validação da publicação](FIREFLY_PUBLICATION.md). Restantes pendências mantidas na tabela.

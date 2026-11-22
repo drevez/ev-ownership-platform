@@ -1,6 +1,6 @@
 # Modelos preparados e proposta de versões — 22/11/2026
 
-Foram criados no Supabase **130 registos de modelo** em **44 marcas**, com **271 propostas de seleção de versões**. Destas, **28** têm designação ou bateria mencionada numa fonte oficial (17 modelos); **243** são hipóteses de seleção a validar, não versões comerciais confirmadas. Todas ficam fora da publicação nesta fase.
+Foram criados no Supabase **130 registos de modelo** em **44 marcas**, com **271 propostas de seleção de versões**. Destas, **28** têm designação ou bateria mencionada numa fonte oficial (17 modelos); **243** são hipóteses de seleção a validar, não versões comerciais confirmadas. Uma configuração Firefly foi entretanto publicada; as restantes propostas continuam por validar/publicar.
 
 ## O que é criado no Supabase
 
@@ -32,7 +32,7 @@ As capacidades anunciadas nas propostas não são automaticamente classificadas 
 | Dongfeng VIGO | `dongfeng-vigo` | BEV de entrada — bateria/tração/acabamento a confirmar<br>BEV de maior autonomia — apenas se existir versão distinta em Portugal | Hipótese de seleção; mapear configurador |
 | Forthing Friday EV | `forthing-friday-ev` | EV 64.4 kWh | Fonte encontrada; validar oferta atual |
 | Forthing S7 EV | `forthing-s7-ev` | EV 56.8 kWh | Fonte encontrada; validar oferta atual |
-| Firefly | `firefly-firefly` | Firefly — única configuração de entrada, sem acabamento no nome público | Dados essenciais confirmados; AC conforme configuração |
+| Firefly | `firefly-firefly` | Firefly — única configuração de entrada, sem acabamento no nome público | Publicado como única versão Firefly; AC conforme configuração |
 | Voyah Courage | `voyah-courage` | BEV de entrada — bateria/tração/acabamento a confirmar<br>BEV de maior autonomia — apenas se existir versão distinta em Portugal | Hipótese de seleção; mapear configurador |
 | Voyah Free | `voyah-free` | BEV de entrada — bateria/tração/acabamento a confirmar<br>BEV de maior autonomia — apenas se existir versão distinta em Portugal | Hipótese de seleção; mapear configurador |
 | Voyah Dream | `voyah-dream` | Passageiros BEV — bateria de entrada e menor lotação adequada<br>Passageiros BEV — maior bateria/lotação, se existir em Portugal | Hipótese de seleção; mapear configurador |
@@ -172,3 +172,5 @@ Validação: 64 testes passaram, incluindo repetição idempotente, recusa trans
 Em 22/11/2026 foram identificadas 18 configurações para os nove primeiros modelos, com fontes, preços condicionais, divergências e fotos preparadas. Ver [levantamento do lote 1](MODEL_EXPANSION_BATCH_01.md). Estes registos ainda não foram importados como variantes; os totais de propostas acima descrevem o plano inicial, não o resultado desta pesquisa.
 
 Revisão atual: [coerência e pendências por modelo](MODEL_EXPANSION_BATCH_01_COHESION.md). O plano foi atualizado para uma única proposta Firefly por indicação do utilizador.
+
+Firefly publicado: [registo de publicação](FIREFLY_PUBLICATION.md). O relatório de execução do seed conserva os totais históricos da criação das famílias, anteriores à importação Firefly.

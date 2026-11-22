@@ -5,10 +5,11 @@
     "models": 9,
     "versionsIdentified": 18,
     "officialPhotoCandidates": 9,
-    "databaseWrites": 0,
-    "publishedVersions": 0,
+    "databaseWrites": 1,
+    "publishedVersions": 1,
     "versionsSelected": 18,
-    "additionalVersionCandidates": 1
+    "additionalVersionCandidates": 1,
+    "pendingSelectedVersions": 17
   },
   "publicationRules": [
     "Este ficheiro não é payload de catalog_save nem lote de importação.",
@@ -1959,7 +1960,7 @@
       "bodyType": "Hatchback",
       "market": "pt",
       "reviewedAt": "2026-11-22",
-      "publicationStatus": "research_draft_not_imported",
+      "publicationStatus": "published",
       "commonFacts": {
         "dcMaxKW": 100,
         "chargeInterval": {
@@ -2055,7 +2056,9 @@
           "trim": null,
           "sourceTrimDesignation": "Select",
           "publicDisplayName": "Firefly",
-          "catalogVariant": ""
+          "catalogVariant": "",
+          "publicationStatus": "published",
+          "publishedId": "firefly"
         }
       ],
       "photo": {
@@ -2067,12 +2070,13 @@
         "reviewedAt": "2026-11-22",
         "reviewedBy": "codex",
         "visualReview": "model_identity_confirmed_representative_configuration",
-        "publicationStatus": "prepared_internal_not_live",
+        "publicationStatus": "published",
         "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
         "preparedPath": "data/internal/prepared-model-media/firefly-firefly.webp",
         "preparedWidth": 1280,
         "preparedHeight": 720,
-        "preparedSha256": "d597cfc7796ab2067fb756d75ee1cb2f62c8dfc65f214d5030d3764a232180ef"
+        "preparedSha256": "d597cfc7796ab2067fb756d75ee1cb2f62c8dfc65f214d5030d3764a232180ef",
+        "publicPath": "/cars/firefly.webp"
       },
       "displayName": "Firefly",
       "fieldReview": {
@@ -2174,7 +2178,30 @@
         ],
         "remaining": [],
         "optionalUnknown": [],
-        "recommendation": "Informação essencial pronta para uma única versão Firefly; sem bomba de calor e AC por configuração."
+        "recommendation": "Publicado e verificado: uma única versão Firefly, com opções AC condicionais e sem bomba de calor."
+      },
+      "publication": {
+        "publishedAt": "2026-11-22",
+        "project": "MotorZero",
+        "vehicleId": "firefly",
+        "revision": 1,
+        "deploymentId": "dpl_DBYepWm5GMNRjFx9UfW3moP7bCU5",
+        "commit": "309bffed4c9bb32d7fae1aa9ee76a42672a87ca1",
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/firefly-firefly",
+        "vehicleUrl": "https://www.motorzero.pt/pt/veiculos/firefly",
+        "verification": {
+          "catalogCanonicalVersions": 87,
+          "publicModelCount": 68,
+          "publicVersionCount": 87,
+          "fireflyVariantCount": 1,
+          "pageHeadings": "Firefly",
+          "imageHashMatches": true,
+          "motorPowerKW": 120,
+          "conditionalAcRendered": true,
+          "heatPumpAvailable": false,
+          "testCount": 68,
+          "buildPassed": true
+        }
       }
     }
   ],

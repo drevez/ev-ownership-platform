@@ -20,3 +20,15 @@ Ficheiros: `data/catalog-updates/2026-11-22-firefly.json`, `public/cars/firefly.
 Ordem de publicação: validar lote → deploy de código/assets por GitHub/Vercel → importar através de `catalog_save` no projeto MotorZero → comparar catálogo remoto completo com os dados canónicos → verificar APIs, página e fotografia em produção. Antes da importação: 86 versões; após a importação esperam-se 87 versões e apenas uma versão na família Firefly.
 
 Validação antes da publicação: 68 testes passaram, lint dos ficheiros alterados passou, build de produção passou e o importador validou uma adição sem escrever na base de dados.
+
+## Publicação concluída
+
+- Commit do código/assets: `309bffed4c9bb32d7fae1aa9ee76a42672a87ca1`.
+- Vercel: `dpl_DBYepWm5GMNRjFx9UfW3moP7bCU5`, READY/production, aliases MotorZero atribuídos.
+- Supabase MotorZero: `catalog_save` em modo import, versão `firefly`, revisão 1; exatamente uma versão na família.
+- `npm run catalog:verify`: todas as **87 versões** remotas correspondem aos ficheiros canónicos, incluindo as 86 anteriores.
+- APIs públicas: **68 modelos / 87 versões**; Firefly tem uma versão, PVP 30.900 €, 330 km, 41,2 kWh úteis, DC 100 kW e 29 min. Comparação mantém os dois campos AC e `heatPumpAvailable: false`.
+- Modelo e veículo em português devolvem HTTP 200, H1 Firefly, sem nomes duplicados nem acabamento. HTML confirma 120 kW, 7 kW monofásico / 11 kW trifásico com condição e 29 min.
+- A fotografia pública devolve HTTP 200 e SHA-256 idêntico ao asset revisto.
+
+[Modelo publicado](https://www.motorzero.pt/pt/modelos/firefly-firefly) · [Ficha publicada](https://www.motorzero.pt/pt/veiculos/firefly).

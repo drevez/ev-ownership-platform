@@ -601,7 +601,7 @@
       "name": "Firefly",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_single_variant",
       "modelEvidenceUrl": "https://fireflyportugal.pt/o-nosso-carro/",
       "excludedPowertrains": [
         "HEV",
@@ -624,10 +624,11 @@
           "drivetrain": "RWD",
           "sourceUrl": "https://www.guiadoautomovel.pt/marcas/firefly/firefly/precos",
           "onlyIfOfficiallyOfferedInPortugal": true,
-          "publicationStatus": "not_publishable_until_review",
+          "publicationStatus": "published",
           "priceEur": 30900,
           "year": null,
-          "catalogVariant": ""
+          "catalogVariant": "",
+          "publishedId": "firefly"
         }
       ],
       "publicationGate": [
@@ -642,7 +643,7 @@
       "researchBatch": {
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
-        "status": "researched_with_documented_gaps",
+        "status": "published",
         "versionsIdentified": 1
       }
     },

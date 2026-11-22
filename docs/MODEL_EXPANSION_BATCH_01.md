@@ -1,6 +1,6 @@
 # Primeiro lote de versões BEV — 22/11/2026
 
-**Atualização:** consultar a [revisão de coerência](MODEL_EXPANSION_BATCH_01_COHESION.md) para decisões e pendências atuais. O detalhe inicial abaixo conserva a origem das divergências. Firefly fica como única configuração de entrada, com nome público Firefly.
+**Atualização:** consultar a [revisão de coerência](MODEL_EXPANSION_BATCH_01_COHESION.md) para decisões e pendências atuais. O detalhe inicial abaixo conserva a origem das divergências. Firefly foi publicado como única configuração de entrada, com nome público Firefly; ver [validação da publicação](FIREFLY_PUBLICATION.md).
 
 Levantamento dos **9 modelos**, com **18 configurações selecionadas** e **9 fotografias oficiais preparadas**. As 18 entradas são configurações de equipamento, cor comercial ou revisão técnica, e não 19 acabamentos distintos. Não foram criadas variantes nem ofertas no Supabase nesta etapa. Os dados abaixo são material de preparação; as divergências estão assinaladas e não foram preenchidas com estimativas.
 
