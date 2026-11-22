@@ -13,9 +13,12 @@ import { pushGaEvent } from '@/lib/gaEvents'
 import { trackEvent } from '@/lib/posthogClient'
 import {
   buildPageContext,
+  comparisonDataProperties,
+  entityAggregateProperties,
   pageContextToFlatProperties,
   toAnalyticsVehicles,
   vehicleFlatProperties,
+  vehicleQualityAggregateProperties,
 } from '@/lib/analytics'
 import { getLanguageFromPathname } from '@/lib/i18nRouting'
 
@@ -91,7 +94,6 @@ function comparisonShareGaProperties(
     event_schema_version: 2,
     page,
     comparison,
-    vehicles: analyticsVehicles,
     content: {
       type: 'comparison',
       share_method: method,
@@ -100,7 +102,9 @@ function comparisonShareGaProperties(
     comparison_type: comparisonType,
     share_method: method,
     ...pageContextToFlatProperties(page),
-    ...vehicleFlatProperties(analyticsVehicles),
+    ...entityAggregateProperties(analyticsVehicles),
+    ...comparisonDataProperties(analyticsVehicles, comparisonType),
+    ...vehicleQualityAggregateProperties(vehicles),
   }
 }
 
@@ -328,6 +332,7 @@ export function ComparisonPage({
       selected_ids: analyticsVehicles.map((vehicle) => vehicle.id),
       ...pageContextToFlatProperties(page),
       ...vehicleFlatProperties(analyticsVehicles),
+      ...vehicleQualityAggregateProperties(vehicles),
     })
   }
 

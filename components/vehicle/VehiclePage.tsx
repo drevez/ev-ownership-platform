@@ -128,6 +128,8 @@ export function VehiclePage({
               model: vehicle.model,
               variant: vehicle.variant,
               modelYear: vehicle.modelYear,
+              image: vehicle.image,
+              pricing: vehicle.pricing,
             }}
             displayName={displayName}
             locale={locale}

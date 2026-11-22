@@ -3,11 +3,14 @@
 import { useState } from 'react'
 
 import type { Language } from '@/config/i18n'
+import type { VehicleData } from '@/lib/loadVehicle'
 import {
   buildPageContext,
   pageContextToFlatProperties,
+  singleVehicleFlatProperties,
   toAnalyticsVehicle,
   vehicleFlatProperties,
+  vehicleQualityProperties,
 } from '@/lib/analytics'
 import { pushGaEvent } from '@/lib/gaEvents'
 import { trackEvent } from '@/lib/posthogClient'
@@ -19,6 +22,8 @@ type VehicleShareButtonProps = {
     model: string
     variant?: string
     modelYear?: number
+    image?: string
+    pricing?: VehicleData['pricing']
   }
   displayName: string
   locale: Language
@@ -80,6 +85,8 @@ export function VehicleShareButton({
         share_method: method,
         ...pageContextToFlatProperties(page),
         ...vehicleFlatProperties(analyticsVehicles),
+        ...singleVehicleFlatProperties(analyticsVehicles[0]),
+        ...vehicleQualityProperties(vehicle),
       }
 
       trackEvent('content_shared', properties)

@@ -4,6 +4,34 @@ MotorZero uses Google Tag Manager as its only tracking container and implements 
 
 Status: this document describes the current analytics and consent implementation. Event names listed here are the events currently emitted by the app unless a section explicitly says "recommended" or "future".
 
+## Analytics payload release — 22 November 2026
+
+This release normalizes model identifiers and adds image/price coverage properties
+to vehicle views, comparison creation/sharing, recommendation completion and
+vehicle sharing. It retains `model_slug`, `vehicles`, `vehicle_set` and scalar
+`vehicle_ids` for existing reports. New comparison fields are `entities`,
+`comparison_set` and `model_ids` (model comparisons only). The precise contracts
+are recorded in the identifier compatibility section of `ANALYTICS_EVENT_SCHEMA.md`.
+
+`data_quality_status=ready` means only that an image and a positive price are
+present. It does not verify the source, freshness, availability or all vehicle specs.
+Zero prices and placeholder images are treated as missing; normalized used/imported
+comparison prices retain their actual purchase context.
+
+No changes are made to consent storage, the banner, GTM loading, PostHog loading
+or the consent checks in `pushGaEvent`/`trackEvent`. Existing manual Consent Mode
+evidence is historical; it is not a new Tag Assistant/GA4 verification of these
+payload fields. The automated regression tests cover identifiers, legacy scalar
+types, raw-to-comparison price contexts, preferred offers and missing image/price
+aggregation. Compilation and publication checks do not prove event ingestion in
+the external GA4 or PostHog dashboards.
+
+GTM/GA4 follow-up, when using the new fields: configure the corresponding Data Layer
+Variables, event parameters and report dimensions. Existing `model_slug` and
+`vehicle_ids` mappings continue to work. This code release does not edit GTM tags,
+GA4 custom dimensions or PostHog dashboards. `budget_band` and `purchase_type`
+remain nested under `recommendation` as described below.
+
 Event naming and payload design for the next tracking iteration are covered in [ANALYTICS_EVENT_SCHEMA.md](/Users/danielarevez/ev-ownership-platform/docs/ANALYTICS_EVENT_SCHEMA.md). Structural tracking changes should follow [TRACKING_IMPLEMENTATION_SPEC.md](/Users/danielarevez/ev-ownership-platform/docs/TRACKING_IMPLEMENTATION_SPEC.md).
 
 ## Current Vs Proposed Tracking
@@ -171,6 +199,18 @@ Useful GA4 fields:
 
 `vehicle_ids` preserves the user-selected/result order. `vehicle_set` sorts the IDs so `car-a|car-b` and `car-b|car-a` report as the same comparison in GA4. Prefer `vehicle_set` for GA4 comparison reports and keep `vehicles[]`/`vehicle_ids` for PostHog product analysis.
 
+PostHog payload shape:
+
+```txt
+Semantic objects such as page, vehicles, comparison, recommendation, search,
+feedback, contact, and outbound are canonical.
+
+Flat fields such as language, page_type, canonical_path, vehicle_id, vehicle_set,
+query_normalized, and helpful are reporting helpers.
+```
+
+This means some information intentionally appears twice in PostHog. Do not remove the flat fields until existing dashboards and GTM variables no longer need them.
+
 Custom dataLayer event payloads currently sent by the app:
 
 ```txt
@@ -192,6 +232,10 @@ vehicle_viewed
   model_year
   model_slug
   vehicles
+  data_quality_status
+  has_image
+  has_price
+  price_context
 
 model_viewed
   model_slug
@@ -209,6 +253,11 @@ comparison_created
   brand_set
   vehicle_names
   vehicles
+  data_quality_status
+  ready_vehicle_count
+  incomplete_vehicle_count
+  has_missing_data
+  price_context_set
 
 content_shared
   content
@@ -222,6 +271,14 @@ content_shared
   brand_set
   share_method
   page_path
+  data_quality_status
+  has_image
+  has_price
+  price_context
+  ready_vehicle_count
+  incomplete_vehicle_count
+  has_missing_data
+  price_context_set
 
   Current content_type values implemented by the app:
     comparison
@@ -235,8 +292,18 @@ recommendation_completed
   top_vehicle_id
   top_brand
   top_match_percentage
-  budget_band
-  purchase_type
+  vehicle_set
+  brand_set
+  data_quality_status
+  ready_vehicle_count
+  incomplete_vehicle_count
+  has_missing_data
+  price_context_set
+
+  Note for GTM:
+    budget_band and purchase_type currently live inside the recommendation object.
+    Configure GTM Data Layer Variables as recommendation.budget_band and
+    recommendation.purchase_type instead of duplicating those fields in the app.
 
 contact_intent
   contact
@@ -324,7 +391,7 @@ Confirmed GA4/GTM event tag setup:
 
 | Event | Confirmed base parameters | Optional parameters also configured |
 | --- | --- | --- |
-| `recommendation_completed` | `knowledge_mode`, `result_count`, `top_vehicle_id`, `top_brand`, `language`, `market`, `page_type`, `canonical_path` | `budget_band`, `purchase_type` |
+| `recommendation_completed` | `knowledge_mode`, `result_count`, `top_vehicle_id`, `top_brand`, `language`, `market`, `page_type`, `canonical_path` | `budget_band` via `recommendation.budget_band`, `purchase_type` via `recommendation.purchase_type` |
 | `comparison_created` | `comparison_type`, `vehicle_count`, `vehicle_set`, `brand_set`, `language`, `market`, `page_type`, `canonical_path` | `vehicle_ids` |
 | `content_shared` | `content_type`, `share_method`, `vehicle_count`, `vehicle_set`, `brand_set`, `language`, `market`, `page_type`, `canonical_path` | `vehicle_ids`, `comparison_type` |
 | `vehicle_viewed` | `vehicle_id`, `brand`, `model_slug`, `language`, `market`, `page_type`, `canonical_path` | `model` |
@@ -586,3 +653,12 @@ Localized public pages:
 ```
 
 Legal copy currently lives directly in `locales/pt.ts`, `locales/en.ts`, and `locales/es.ts`. It is not yet exposed in `/internal/content`.
+
+## Release verification — 22 November 2026
+
+Before publication, the complete application passed 60 tests across 12 files,
+TypeScript checking, ESLint, and the Next.js production build. The nine analytics
+regressions include identifier normalization, model/variant comparison identifiers,
+stable scalar compatibility, price context before and after comparison normalization,
+preferred-offer selection, placeholders, zero prices and coverage aggregation.
+No external Tag Assistant/GA4/PostHog ingestion result is claimed by these checks.

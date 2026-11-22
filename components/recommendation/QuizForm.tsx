@@ -23,6 +23,7 @@ import {
   pageContextToFlatProperties,
   toAnalyticsVehicles,
   vehicleFlatProperties,
+  vehicleQualityAggregateProperties,
 } from '@/lib/analytics'
 
 type KnowledgeMode = 'simple' | 'advanced'
@@ -184,6 +185,7 @@ export function QuizForm() {
         knowledge_mode: knowledgeMode,
         ...pageContextToFlatProperties(page),
         ...vehicleFlatProperties(analyticsVehicles),
+        ...vehicleQualityAggregateProperties(nextResults.map((result) => result.vehicle)),
       }
       trackEvent('recommendation_completed', {
         ...completedProperties,

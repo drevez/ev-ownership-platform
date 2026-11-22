@@ -12,6 +12,7 @@ import {
   pageContextToFlatProperties,
   singleVehicleFlatProperties,
   toAnalyticsVehicle,
+  vehicleQualityProperties,
 } from '@/lib/analytics'
 
 interface VehiclePageProps {
@@ -61,14 +62,14 @@ export default async function VehiclePage({ params }: VehiclePageProps) {
     type: 'vehicle',
     language: locale,
   })
-  const analyticsVehicle = toAnalyticsVehicle(vehicle)
+  const analyticsVehicle = toAnalyticsVehicle({ ...vehicle, modelId: modelSlug })
   const vehicleProperties = {
     event_schema_version: 2,
     page,
     vehicles: [analyticsVehicle],
-    model_slug: modelSlug,
     ...pageContextToFlatProperties(page),
     ...singleVehicleFlatProperties(analyticsVehicle),
+    ...vehicleQualityProperties(vehicle),
   }
 
   return (

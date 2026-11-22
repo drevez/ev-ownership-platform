@@ -15,7 +15,7 @@ now `supabase`, and authenticated writes through the application have been verif
 On 22 November 2026 the owner explicitly authorized transfer of the private key
 to Vercel Production and Preview. All four catalog variables are now configured
 and their names, targets and secret classification were verified without decrypting
-the secret. The changed local application has not yet been deployed.
+the secret. The application was subsequently published through GitHub and Vercel; see the production cutover below.
 
 ## Data model
 
@@ -140,7 +140,7 @@ these business conflicts to PT409, preserving 40001 for actual database serializ
 failures. Tests now apply the complete migration chain and assert PT409 explicitly.
 Reference: https://supabase.com/kb/troubleshooting/high-cpu-and-infinite-transaction-retries-when-using-custom-error-codes-in-rpc-functions-77326b
 
-Pending Vercel action: set `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`,
+Previously pending Vercel action (completed 22 November 2026): set `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`,
 `SUPABASE_SECRET_KEY` (sensitive) and `VEHICLE_DATA_SOURCE=supabase` on
 project `ev-ownership-platform` (`prj_2Vw0NJK1ayssD7l2MsFLHuIJIqEP`),
 team `team_oJSKuF5xRms3zO2aAz3npIEK`, for Production and Preview.
@@ -157,3 +157,23 @@ listed above have been saved for both environments, with `SUPABASE_SECRET_KEY`
 stored as sensitive. Verification inspected metadata only, without decrypting keys.
 No deployment was triggered by this configuration step. The modified application
 still needs to be published before the live site uses the database-backed code.
+
+## Production cutover — 22 November 2026
+
+Migration commit `81cc674e73c0619e0c6099d4a44593896597dbdb` was pushed to
+`drevez/ev-ownership-platform`, branch `main`. Git integration automatically created
+production deployment `dpl_FHs99YJLDrs3Ms2s8Ki3KcSH1Yap`, which reached READY
+and was assigned to https://www.motorzero.pt and https://motorzero.pt.
+
+The exact migration release, excluding the then-uncommitted analytics changes,
+passed 51 tests, lint, TypeScript and an isolated production build. Live checks
+confirmed 82 variants, 65 model families, two-vehicle comparison, six recommendations,
+canonical non-legacy price metadata from Supabase, and HTTP 401 for unauthenticated
+internal writes. The public catalog was also inspected in the browser. The private
+key was absent from the release's client assets.
+
+Code publication now follows GitHub main → Vercel production. Catalog updates
+through the authenticated vehicle editor persist directly to Supabase and are read
+without the JSON publication workflow. The separate content/image file tools retain
+the limitations described above. Earlier pending/deployment statements in this file
+record the migration sequence; this section is the final cutover status.

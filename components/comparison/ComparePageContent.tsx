@@ -14,9 +14,11 @@ import { useLocale } from '@/context/LocaleContext'
 import { pushGaEvent } from '@/lib/gaEvents'
 import {
   buildPageContext,
+  comparisonDataProperties,
+  entityAggregateProperties,
   pageContextToFlatProperties,
   toAnalyticsVehicles,
-  vehicleFlatProperties,
+  vehicleQualityAggregateProperties,
 } from '@/lib/analytics'
 import {
   MIN_COMPARISON_ITEMS,
@@ -162,12 +164,13 @@ function CompareResultsView({
             event_schema_version: 2,
             page,
             comparison,
-            vehicles: analyticsVehicles,
             comparison_type: kind,
             selected_ids: analyticsVehicles.map((vehicle) => vehicle.id),
             selected_names: nextVehicles.map((vehicle) => vehicle.displayName),
             ...pageContextToFlatProperties(page),
-            ...vehicleFlatProperties(analyticsVehicles),
+            ...entityAggregateProperties(analyticsVehicles),
+            ...comparisonDataProperties(analyticsVehicles, kind),
+            ...vehicleQualityAggregateProperties(nextVehicles),
           }
 
           trackEvent('comparison_created', {

@@ -50,10 +50,11 @@ export default async function ModelRoutePage({ params }: ModelRouteProps) {
   const modelProperties = {
     event_schema_version: 2,
     page,
+    model_id: model.slug,
     model_slug: model.slug,
     model_name: model.displayName,
     brand: model.brand,
-    model: model.displayName,
+    model: model.model,
     variant_count: model.variants.length,
     ...pageContextToFlatProperties(page),
   }

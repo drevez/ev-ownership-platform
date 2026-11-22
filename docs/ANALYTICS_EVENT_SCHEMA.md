@@ -146,8 +146,10 @@ Recommended optional future fields:
 body_type
 segment
 drivetrain
-price_context        new | used | imported_used | reference_new | unknown
-data_quality         complete | partial | needs_validation
+price_context        new | used | imported_used | unknown
+data_quality_status  ready | incomplete
+has_image            true | false
+has_price            true | false
 ```
 
 Do not include full specs in analytics events. Range, charging, price, and battery values can be added later only if a reporting question requires them.
@@ -172,6 +174,26 @@ vehicle_ids            stable joined string of all vehicle IDs in user-selected/
 vehicle_set            normalized joined string of vehicle IDs, sorted for comparison reporting
 brand_set              normalized joined string of brands, sorted for brand-combination reporting
 ```
+
+### Implemented identifier compatibility — 22 November 2026
+
+- `model_id` is the canonical family identifier. Flat `model_slug` remains an
+  alias on model/vehicle views and single-vehicle sharing for existing GTM mappings.
+- Model comparison IDs omit the internal `model:` prefix; `model_ids` is an array
+  in user-selected order. Variant identifiers retain their existing vehicle IDs.
+- `entities` contains comparison entities. `vehicles` remains a compatibility alias.
+- `comparison_set` is sorted and deduplicated; `vehicle_set` remains its alias.
+- `vehicle_ids` remains a pipe-joined **string**, including for comparisons. Do not
+  change it to an array: existing GTM/GA4 variables consume a scalar. Rich entities
+  and `model_ids` provide ordered collections where appropriate.
+- `model` contains the model name without a repeated brand prefix.
+
+The quality fields are a narrow measurement of usable image and price coverage,
+not a declaration that all specifications or market prices have been verified.
+`ready` requires both a non-placeholder image and a finite positive price bound.
+Raw catalog pricing and normalized comparison pricing both preserve new, used and
+imported-used context. Raw pricing follows the preferred offer used by the pricing
+UI; normalized comparison pricing follows its supplied primary price.
 
 Use `vehicle_set` in GA4 when the reporting question is "which cars are compared together?" because it groups `A|B` and `B|A` together. Use `vehicle_ids` or `vehicles[]` in PostHog when the selected order matters.
 
