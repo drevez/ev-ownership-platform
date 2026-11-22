@@ -4,5 +4,11 @@
     "sourceUrl": "https://www.leapmotor.net/models/b05",
     "sourceImageUrl": "https://www.leapmotor.net/images/default-source/b05/260225_leapmotors-car_exterior-0150-1.jpg?sfvrsn=236bb081_37",
     "notes": "Official exterior photograph for model listings and model page. Individual versions retain their original blue/yellow product images."
+  },
+  "leapmotor-b03x": {
+    "heroImage": "/cars/leapmotor-b03x-model.webp",
+    "sourceUrl": "https://www.leapmotor.net/pt-pt/modelos/b03x",
+    "sourceImageUrl": "https://www.leapmotor.net/images/default-source/b03x/leap_motor_b03x_rgb_02_hires-16c1fa2e5fb784421afd6535279680f1d.jpg?sfvrsn=c467e6d9_36",
+    "notes": "Official outdoor photograph for the model. Versions use separate official brown/beige product images; photographs are representative of the model and not a guarantee of trim, wheels or colour."
   }
 }

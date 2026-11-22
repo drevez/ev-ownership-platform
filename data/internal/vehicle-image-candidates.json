@@ -1499,6 +1499,46 @@
       "finalImageHeight": 720,
       "finalImageBytes": 115564,
       "notes": "Reviewed exterior model/body/generation candidate in contact sheet; clean three-quarter exterior, no visible watermark. Representative model photograph; trim, wheels and paint may vary. P7 original RWD Long Range; não P7+. Source/provenance and superseded rejection, when applicable, preserved in vehicle-image-research-2026-11-22.json."
+    },
+    {
+      "vehicleId": "leapmotor-b03x-life-pro-39kwh",
+      "filename": "leapmotor-b03x-life-pro-39kwh.webp",
+      "expectedPath": "/cars/leapmotor-b03x-life-pro-39kwh.webp",
+      "sourceUrl": "https://www.leapmotor.net/pt-pt/modelos/b03x",
+      "sourceImageUrl": "https://www.leapmotor.net/images/default-source/b03x/acorn_brown-1db46614fd566410cae8e410dcd8d3621.png?sfvrsn=4f202062_39",
+      "sourceLabel": "Leapmotor Portugal — official B03X product image",
+      "sourceType": "manufacturer",
+      "selectedBy": "ai",
+      "selectedAt": "2026-11-22T01:06:35.721Z",
+      "status": "approved",
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-11-22T01:06:35.721Z",
+      "finalImagePath": "/cars/leapmotor-b03x-life-pro-39kwh.webp",
+      "finalImageCreatedAt": "2026-11-22T01:06:35.721Z",
+      "finalImageWidth": 1440,
+      "finalImageHeight": 1080,
+      "finalImageBytes": 63150,
+      "notes": "Official side-profile product image visually inspected; representative model image, trim, wheels and paint may vary. Model photograph separately recorded in data/model-media.json."
+    },
+    {
+      "vehicleId": "leapmotor-b03x-design-pro-max-53kwh",
+      "filename": "leapmotor-b03x-design-pro-max-53kwh.webp",
+      "expectedPath": "/cars/leapmotor-b03x-design-pro-max-53kwh.webp",
+      "sourceUrl": "https://www.leapmotor.net/pt-pt/modelos/b03x",
+      "sourceImageUrl": "https://www.leapmotor.net/images/default-source/b03x/rime_beige-1345e4270d64d4b34a05757e6934af8c6.png?sfvrsn=b5130982_40",
+      "sourceLabel": "Leapmotor Portugal — official B03X product image",
+      "sourceType": "manufacturer",
+      "selectedBy": "ai",
+      "selectedAt": "2026-11-22T01:06:35.721Z",
+      "status": "approved",
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-11-22T01:06:35.721Z",
+      "finalImagePath": "/cars/leapmotor-b03x-design-pro-max-53kwh.webp",
+      "finalImageCreatedAt": "2026-11-22T01:06:35.721Z",
+      "finalImageWidth": 1440,
+      "finalImageHeight": 1080,
+      "finalImageBytes": 64508,
+      "notes": "Official side-profile product image visually inspected; representative model image, trim, wheels and paint may vary. Model photograph separately recorded in data/model-media.json."
     }
   ]
 }

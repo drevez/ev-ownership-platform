@@ -1,0 +1,160 @@
+{
+  "reviewedAt": "2026-11-22",
+  "records": [
+    {
+      "id": "leapmotor-b03x-life-pro-39kwh",
+      "files": {
+        "core": {
+          "id": "leapmotor-b03x-life-pro-39kwh",
+          "brand": "Leapmotor",
+          "model": "B03X",
+          "variant": "Life Pro 39.8 kWh",
+          "modelYear": 2026,
+          "segment": "B-SUV",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/leapmotor-b03x-life-pro-39kwh.webp",
+          "localized": {
+            "pt": {
+              "displayName": "Leapmotor B03X Life Pro 39.8 kWh",
+              "searchAliases": [
+                "leapmotor b03x",
+                "b03x",
+                "leapmotor a10",
+                "life pro 39.8 kwh"
+              ]
+            },
+            "en": {
+              "displayName": "Leapmotor B03X Life Pro 39.8 kWh"
+            },
+            "es": {
+              "displayName": "Leapmotor B03X Life Pro 39.8 kWh"
+            }
+          }
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "dcMaxChargeKW": 100,
+          "acMaxChargeKW": 11
+        },
+        "efficiency": {
+          "wltpRangeKm": 292
+        },
+        "dimensions": {
+          "lengthMM": 4270,
+          "widthMM": 1810,
+          "heightMM": 1635,
+          "wheelbaseMM": 2605,
+          "cargoLitersSeatsUp": 405,
+          "cargoLitersSeatsDown": 1605,
+          "rearLegroomMM": 947
+        },
+        "comfort": {},
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 23000,
+              "priceTo": null,
+              "modelYear": 2026,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "Leapmotor Portugal — campanha particulares desde",
+              "sourceUrl": "https://www.leapmotor.net/pt-pt/modelos/b03x",
+              "confidence": "high",
+              "displayPriority": 1,
+              "notes": "Preço «desde» de 23.000 € anunciado no site oficial, aplicado à versão de entrada Life Pro. Campanha para clientes particulares, com IVA e sem despesas de legalização e transporte (DLTP). Consultado em 22/11/2026; confirmar condições e orçamento no concessionário."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "leapmotor-b03x-design-pro-max-53kwh",
+      "files": {
+        "core": {
+          "id": "leapmotor-b03x-design-pro-max-53kwh",
+          "brand": "Leapmotor",
+          "model": "B03X",
+          "variant": "Design ProMax 53.0 kWh",
+          "modelYear": 2026,
+          "segment": "B-SUV",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/leapmotor-b03x-design-pro-max-53kwh.webp",
+          "localized": {
+            "pt": {
+              "displayName": "Leapmotor B03X Design ProMax 53.0 kWh",
+              "searchAliases": [
+                "leapmotor b03x",
+                "b03x",
+                "leapmotor a10",
+                "design promax 53.0 kwh"
+              ]
+            },
+            "en": {
+              "displayName": "Leapmotor B03X Design ProMax 53.0 kWh"
+            },
+            "es": {
+              "displayName": "Leapmotor B03X Design ProMax 53.0 kWh"
+            }
+          }
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "dcMaxChargeKW": 133,
+          "acMaxChargeKW": 11
+        },
+        "efficiency": {
+          "wltpRangeKm": 382
+        },
+        "dimensions": {
+          "lengthMM": 4270,
+          "widthMM": 1810,
+          "heightMM": 1635,
+          "wheelbaseMM": 2605,
+          "cargoLitersSeatsUp": 405,
+          "cargoLitersSeatsDown": 1605,
+          "rearLegroomMM": 947
+        },
+        "comfort": {},
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 28285,
+              "priceTo": null,
+              "modelYear": 2026,
+              "priceDate": "2026-09",
+              "sourceType": "official_brand",
+              "sourceLabel": "Leapmotor Portugal — tabela publicada em setembro de 2026",
+              "sourceUrl": "https://www.media.stellantis.com/pt-pt/leapmotor/press/leapmotor-revoluciona-a-mobilidade-urbana-com-o-b03x-o-suv-compacto-100-eletrico-mais-acessivel-em-portugal",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela oficial de 28.285 € publicado em 15/09/2026, não uma campanha atual confirmada. A campanha de lançamento então anunciada era de 26.025 €, sem DLTP; a sua validade atual não foi confirmada. Confirmar preço final, impostos e despesas no concessionário."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
