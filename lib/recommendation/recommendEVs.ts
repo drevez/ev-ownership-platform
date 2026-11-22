@@ -1,4 +1,4 @@
-import { loadVehicle, loadVehicleRegistry, type VehicleData } from '@/lib/loadVehicle'
+import { loadAllVehicles, type VehicleData } from '@/lib/loadVehicle'
 import { getTranslations } from '@/lib/getTranslations'
 import { getVehiclePriceSummaries, normalizeVehicleForComparison } from '@/lib/normalizeVehicle'
 import { LANGUAGE_LOCALES, type Language } from '@/config/i18n'
@@ -545,10 +545,9 @@ function buildDrawbacks(parts: RecommendationBreakdownItem[]) {
 }
 
 async function loadCandidates(language: Language): Promise<Candidate[]> {
-  const registry = await loadVehicleRegistry()
+  const vehicles = await loadAllVehicles()
   const loaded = await Promise.all(
-    registry.map(async (entry) => {
-      const raw = await loadVehicle(entry.id)
+    vehicles.map(async (raw) => {
       if (!raw) return null
       return {
         raw,

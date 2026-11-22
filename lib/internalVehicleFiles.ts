@@ -1,3 +1,4 @@
+import { usesSupabase, readCatalogRecord, readCatalogRegistry, saveCatalogRecord } from '@/lib/catalog/repository'
 import fs from 'fs/promises'
 import path from 'path'
 
@@ -52,6 +53,8 @@ function stableJson(data: unknown) {
 }
 
 export async function vehicleFolderExists(vehicleId: string) {
+  assertSafeVehicleId(vehicleId)
+  if (usesSupabase()) return (await readCatalogRecord(vehicleId)) !== null
   try {
     await fs.access(path.join(VEHICLES_DIR, vehicleId))
     return true
@@ -63,6 +66,7 @@ export async function vehicleFolderExists(vehicleId: string) {
 export async function readVehicleFiles(vehicleId: string): Promise<VehicleFiles | null> {
   assertSafeVehicleId(vehicleId)
 
+  if (usesSupabase()) return (await readCatalogRecord(vehicleId))?.files ?? null
   if (!(await vehicleFolderExists(vehicleId))) return null
 
   const entries = await Promise.all(
@@ -77,6 +81,7 @@ export async function readVehicleFiles(vehicleId: string): Promise<VehicleFiles 
 
 export async function writeVehicleFiles(vehicleId: string, files: VehicleFiles) {
   assertSafeVehicleId(vehicleId)
+  if (usesSupabase()) throw new Error('Use saveVehicleFiles for transactional catalog writes.')
   await fs.mkdir(path.join(VEHICLES_DIR, vehicleId), { recursive: true })
 
   await Promise.all(
@@ -87,6 +92,7 @@ export async function writeVehicleFiles(vehicleId: string, files: VehicleFiles) 
 }
 
 export async function readRegistry(): Promise<EditableRegistryEntry[]> {
+  if (usesSupabase()) return readCatalogRegistry()
   try {
     const registry = await readJson<EditableRegistryEntry[]>(REGISTRY_PATH)
     return Array.isArray(registry) ? registry : []
@@ -101,6 +107,7 @@ export async function findRegistryEntry(vehicleId: string) {
 }
 
 export async function upsertRegistryEntry(entry: EditableRegistryEntry) {
+  if (usesSupabase()) throw new Error('The database registry is derived automatically.')
   const registry = await readRegistry()
   const next = [
     ...registry.filter((item) => item.id !== entry.id),
@@ -130,4 +137,19 @@ export function buildRegistryEntryFromCore(core: JsonObject): EditableRegistryEn
     drivetrain: String(core.drivetrain ?? ''),
     heroImage: image,
   }
+}
+
+export async function readVehicleSnapshot(id: string) {
+  assertSafeVehicleId(id)
+  if (usesSupabase()) return readCatalogRecord(id)
+  const files = await readVehicleFiles(id)
+  return files ? { id, files, revision: undefined } : null
+}
+export async function saveVehicleFiles(id: string, files: VehicleFiles, options: {
+  mode: 'create' | 'update'; revision?: number; actor: string
+}) {
+  if (usesSupabase()) return saveCatalogRecord(id, files, options)
+  await writeVehicleFiles(id, files)
+  await upsertRegistryEntry(buildRegistryEntryFromCore(files.core))
+  return undefined
 }

@@ -24,6 +24,7 @@ interface VehicleDataEditorProps {
   mode: Mode
   vehicleId?: string
   initialFiles?: VehicleFiles
+  initialRevision?: number
   copySourceId?: string
 }
 
@@ -277,6 +278,7 @@ export function VehicleDataEditor({
   vehicleId,
   initialFiles,
   copySourceId,
+  initialRevision,
 }: VehicleDataEditorProps) {
   const router = useRouter()
   const files = initialFiles ?? emptyFiles
@@ -288,6 +290,7 @@ export function VehicleDataEditor({
       )
     : []
 
+  const [revision, setRevision] = useState(initialRevision)
   const [message, setMessage] = useState('')
   const [isSaving, setIsSaving] = useState(false)
   const [id, setId] = useState(vehicleId ?? stringValue(core, 'id'))
@@ -517,12 +520,13 @@ export function VehicleDataEditor({
         {
           method: mode === 'create' ? 'POST' : 'PUT',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id, files: builtFiles }),
+          body: JSON.stringify({ id, files: builtFiles, revision }),
         }
       )
       const result = await response.json()
 
       if (!response.ok) throw new Error(result.error ?? 'Save failed.')
+      if (typeof result.revision === 'number') setRevision(result.revision)
 
       setMessage('Saved successfully.')
       router.refresh()

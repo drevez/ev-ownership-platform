@@ -1,10 +1,8 @@
 import { NextResponse } from 'next/server'
 
 import {
-  buildRegistryEntryFromCore,
-  upsertRegistryEntry,
+  saveVehicleFiles,
   vehicleFolderExists,
-  writeVehicleFiles,
   type VehicleFiles,
 } from '@/lib/internalVehicleFiles'
 import {
@@ -15,6 +13,7 @@ import { validateVehicleFiles } from '@/lib/vehicleDataValidation'
 
 interface CreateVehicleBody {
   id?: string
+  revision?: number
   files?: VehicleFiles
 }
 
@@ -45,14 +44,15 @@ export async function POST(request: Request) {
       )
     }
 
-    await writeVehicleFiles(id, files)
-    await upsertRegistryEntry(buildRegistryEntryFromCore(files.core))
+    const revision = await saveVehicleFiles(id, files, {
+      mode: 'create', revision: body.revision, actor: process.env.INTERNAL_AUTH_USERNAME ?? 'internal',
+    })
 
-    return NextResponse.json({ ok: true, id })
+    return NextResponse.json({ ok: true, id, revision })
   } catch (error) {
     return NextResponse.json(
       { error: error instanceof Error ? error.message : 'Failed to create vehicle.' },
-      { status: 400 }
+      { status: typeof error === 'object' && error !== null && 'code' in error && (error.code === 'PT409' || error.code === '23505') ? 409 : 400 }
     )
   }
 }

@@ -1,3 +1,4 @@
+import { readRegistry } from '@/lib/internalVehicleFiles'
 import fs from 'fs/promises'
 import path from 'path'
 import {
@@ -5,7 +6,6 @@ import {
   type VehicleImageCandidate,
 } from '@/lib/vehicleImageReview'
 
-const REGISTRY_PATH = path.join(process.cwd(), 'data', 'registry', 'vehicles.json')
 const CARS_DIR = path.join(process.cwd(), 'public', 'cars')
 const PUBLIC_CARS_PREFIX = '/cars/'
 
@@ -55,13 +55,12 @@ function imagePathForEntry(entry: RegistryEntry) {
 }
 
 export async function auditVehicleImages(): Promise<VehicleImageAuditResult> {
-  const [registryContent, carFiles, candidates] = await Promise.all([
-    fs.readFile(REGISTRY_PATH, 'utf8'),
+  const [registry, carFiles, candidates] = await Promise.all([
+    readRegistry(),
     fs.readdir(CARS_DIR).catch(() => []),
     readVehicleImageCandidates(),
   ])
 
-  const registry = JSON.parse(registryContent) as RegistryEntry[]
   const availablePaths = new Set(
     carFiles
       .filter((file) => file.toLowerCase().endsWith('.webp'))
@@ -69,7 +68,7 @@ export async function auditVehicleImages(): Promise<VehicleImageAuditResult> {
   )
 
   const rows = registry
-    .filter((entry): entry is RegistryEntry & { id: string } => Boolean(entry.id))
+    .filter((entry) => Boolean(entry.id))
     .map((entry): VehicleImageAuditRow => {
       const expectedPath = imagePathForEntry(entry)
       const candidate = candidates.find(

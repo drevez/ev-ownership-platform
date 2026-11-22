@@ -1,3 +1,5 @@
+import { usesSupabase, readCatalogRecord, readCatalogRegistry, readCatalog } from '@/lib/catalog/repository'
+import type { VehicleFiles } from '@/lib/internalVehicleFiles'
 import fs from 'fs/promises'
 import path from 'path'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
@@ -235,6 +237,11 @@ async function normalizeVehicleImage(
 export async function loadVehicle(
   vehicleId: string
 ): Promise<VehicleData | null> {
+  if (!/^[a-z0-9][a-z0-9-]*$/.test(vehicleId)) return null
+  if (usesSupabase()) {
+    const record = await readCatalogRecord(vehicleId)
+    return record ? vehicleFromFiles(record.files) : null
+  }
   try {
     const vehiclePath = path.join(
       process.cwd(),
@@ -331,6 +338,10 @@ export interface VehicleRegistryItem {
   brand: string
   model: string
   variant?: string
+  segment: string
+  bodyType: string
+  drivetrain: string
+  heroImage?: string
 }
 
 /**
@@ -339,6 +350,7 @@ export interface VehicleRegistryItem {
 export async function loadVehicleRegistry(): Promise<
   VehicleRegistryItem[]
 > {
+  if (usesSupabase()) return readCatalogRegistry()
   try {
     const registryPath = path.join(
       process.cwd(),
@@ -367,4 +379,21 @@ export async function getVehicleParams(): Promise<
   return registry.map((vehicle) => ({
     id: vehicle.id,
   }))
+}
+
+/** Convert a database document using the same image fallback as JSON loading. */
+export async function vehicleFromFiles(files: VehicleFiles): Promise<VehicleData> {
+  return {
+    ...files.core,
+    id: String(files.core.id), brand: String(files.core.brand), model: String(files.core.model),
+    battery: files.battery, charging: files.charging, comfort: files.comfort,
+    dimensions: files.dimensions, efficiency: files.efficiency, pricing: files.pricing,
+    image: await normalizeVehicleImage(typeof files.core.image === 'string' ? files.core.image : undefined),
+  } as VehicleData
+}
+export async function loadAllVehicles(): Promise<VehicleData[]> {
+  if (usesSupabase()) return Promise.all((await readCatalog()).map(record => vehicleFromFiles(record.files)))
+  const registry = await loadVehicleRegistry()
+  const vehicles = await Promise.all(registry.map(entry => loadVehicle(entry.id)))
+  return vehicles.filter((vehicle): vehicle is VehicleData => vehicle !== null)
 }

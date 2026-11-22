@@ -10,6 +10,8 @@ import { absoluteUrl } from '@/lib/siteUrl'
 import { getAllModelSlugs } from '@/lib/models'
 import { getVehicleParams } from '@/lib/loadVehicle'
 
+export const dynamic = 'force-dynamic'
+
 const STATIC_PATHS = [
   '/',
   '/models',
@@ -61,7 +63,7 @@ function sitemapEntry(
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const modelPaths = getAllModelSlugs().map(
+  const modelPaths = (await getAllModelSlugs()).map(
     ({ slug }) => `/models/${slug}`
   )
   const vehicleParams = await getVehicleParams()

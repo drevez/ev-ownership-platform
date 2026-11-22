@@ -1,3 +1,5 @@
+import { usesSupabase, readCatalog } from '@/lib/catalog/repository'
+import { readRegistry } from '@/lib/internalVehicleFiles'
 import fs from 'fs/promises'
 import path from 'path'
 import {
@@ -294,9 +296,11 @@ function calculateCompleteness(parts: {
 }
 
 export async function auditVehicles(): Promise<VehicleAuditResult> {
+  const remote = usesSupabase() ? await readCatalog() : null
+  const remoteById = new Map(remote?.map(record => [record.id, record.files]))
   const [folderEntries, registryRead] = await Promise.all([
-    fs.readdir(VEHICLES_DIR, { withFileTypes: true }),
-    readJson(REGISTRY_PATH),
+    remote ? Promise.resolve(remote.map(record => ({ name: record.id, isDirectory: () => true }))) : fs.readdir(VEHICLES_DIR, { withFileTypes: true }),
+    remote ? readRegistry().then(data => ({ data })) : readJson(REGISTRY_PATH),
   ])
 
   const folders = folderEntries
@@ -332,6 +336,12 @@ export async function auditVehicles(): Promise<VehicleAuditResult> {
 
     await Promise.all(
       REQUIRED_MODULES.map(async (moduleName) => {
+        if (remote) {
+          const record = remoteById.get(id)?.[moduleName.replace('.json', '') as keyof VehicleFiles]
+          if (record) modules[moduleName] = record
+          else { missingModules.push(moduleName); issues.push(`missing ${moduleName}`) }
+          return
+        }
         const filePath = path.join(vehiclePath, moduleName)
 
         try {

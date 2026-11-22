@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
-import vehicles from '@/data/registry/vehicles.json'
+import { loadVehicleRegistry } from '@/lib/loadVehicle'
 
 export async function GET() {
-  return NextResponse.json({ vehicles })
+  return NextResponse.json({ vehicles: await loadVehicleRegistry() })
 }

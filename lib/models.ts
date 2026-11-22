@@ -1,5 +1,4 @@
-import registry from '@/data/registry/vehicles.json'
-import { loadVehicle } from '@/lib/loadVehicle'
+import { loadAllVehicles, loadVehicleRegistry } from '@/lib/loadVehicle'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import {
   getVehicleBatteryCapacityKwh,
@@ -91,7 +90,8 @@ export interface ModelListItem {
   bodyType: string
 }
 
-export function getAllModelSummaries(): ModelListItem[] {
+export async function getAllModelSummaries(): Promise<ModelListItem[]> {
+  const registry = await loadVehicleRegistry()
   const bySlug = new Map<string, ModelListItem>()
 
   for (const entry of registry) {
@@ -119,7 +119,8 @@ export function getAllModelSummaries(): ModelListItem[] {
   )
 }
 
-export function getAllModelSlugs(): { slug: string }[] {
+export async function getAllModelSlugs(): Promise<{ slug: string }[]> {
+  const registry = await loadVehicleRegistry()
   const slugs = new Set<string>()
 
   for (const entry of registry) {
@@ -156,6 +157,8 @@ function mapVariant(vehicle: VehicleData, registryHeroImage?: string): ModelVari
 }
 
 export async function loadModel(slug: string): Promise<ModelPageData | null> {
+  const registry = await loadVehicleRegistry()
+  const allVehicles = await loadAllVehicles()
   const entries = registry.filter(
     (entry) => toModelSlug(entry.brand, entry.model) === slug
   )
@@ -164,7 +167,7 @@ export async function loadModel(slug: string): Promise<ModelPageData | null> {
 
   const loaded = await Promise.all(
     entries.map(async (entry) => {
-      const vehicle = await loadVehicle(entry.id)
+      const vehicle = allVehicles.find(vehicle => vehicle.id === entry.id)
       if (!vehicle) return null
       return mapVariant(vehicle, entry.heroImage)
     })
@@ -238,6 +241,8 @@ function mapExplorerVariant(
 }
 
 export async function getModelExplorerData(): Promise<ModelExplorerItem[]> {
+  const registry = await loadVehicleRegistry()
+  const allVehicles = await loadAllVehicles()
   const bySlug = new Map<
     string,
     {
@@ -251,7 +256,7 @@ export async function getModelExplorerData(): Promise<ModelExplorerItem[]> {
 
   await Promise.all(
     registry.map(async (entry) => {
-      const vehicle = await loadVehicle(entry.id)
+      const vehicle = allVehicles.find(vehicle => vehicle.id === entry.id)
       if (!vehicle) return
 
       const slug = toModelSlug(entry.brand, entry.model)
@@ -331,6 +336,7 @@ export async function getModelExplorerData(): Promise<ModelExplorerItem[]> {
 export async function getModelSlugForVehicleId(
   vehicleId: string
 ): Promise<string | null> {
+  const registry = await loadVehicleRegistry()
   const entry = registry.find((v) => v.id === vehicleId)
   if (!entry) return null
   return toModelSlug(entry.brand, entry.model)

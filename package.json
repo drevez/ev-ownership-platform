@@ -10,7 +10,11 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "validate:vehicles": "node scripts/validate-vehicles.mjs",
-    "generate:registry": "node scripts/generate-registry.mjs"
+    "generate:registry": "node scripts/generate-registry.mjs",
+    "catalog:prepare": "node scripts/migrate-catalog.mjs",
+    "catalog:import": "node --env-file=.env.local scripts/migrate-catalog.mjs --apply",
+    "catalog:export": "node --env-file=.env.local scripts/export-catalog.mjs",
+    "catalog:verify": "node --env-file=.env.local scripts/verify-catalog.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.7",
@@ -21,6 +25,7 @@
     "sharp": "^0.34.5"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.17",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

@@ -1,10 +1,8 @@
 import { NextResponse } from 'next/server'
 
 import {
-  buildRegistryEntryFromCore,
-  upsertRegistryEntry,
+  saveVehicleFiles,
   vehicleFolderExists,
-  writeVehicleFiles,
   type VehicleFiles,
 } from '@/lib/internalVehicleFiles'
 import {
@@ -14,6 +12,7 @@ import {
 import { validateVehicleFiles } from '@/lib/vehicleDataValidation'
 
 interface UpdateVehicleBody {
+  revision?: number
   files?: VehicleFiles
 }
 
@@ -47,14 +46,15 @@ export async function PUT(request: Request, { params }: VehicleRouteContext) {
       )
     }
 
-    await writeVehicleFiles(id, body.files)
-    await upsertRegistryEntry(buildRegistryEntryFromCore(body.files.core))
+    const revision = await saveVehicleFiles(id, body.files, {
+      mode: 'update', revision: body.revision, actor: process.env.INTERNAL_AUTH_USERNAME ?? 'internal',
+    })
 
-    return NextResponse.json({ ok: true, id })
+    return NextResponse.json({ ok: true, id, revision })
   } catch (error) {
     return NextResponse.json(
       { error: error instanceof Error ? error.message : 'Failed to update vehicle.' },
-      { status: 400 }
+      { status: typeof error === 'object' && error !== null && 'code' in error && (error.code === 'PT409' || error.code === '23505') ? 409 : 400 }
     )
   }
 }

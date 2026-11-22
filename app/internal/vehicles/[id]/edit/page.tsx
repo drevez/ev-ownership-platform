@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { VehicleDataEditor } from '@/components/internal/VehicleDataEditor'
-import { readVehicleFiles } from '@/lib/internalVehicleFiles'
+import { readVehicleSnapshot } from '@/lib/internalVehicleFiles'
 
 interface InternalVehicleEditPageProps {
   params: Promise<{ id: string }>
@@ -14,9 +14,9 @@ export default async function InternalVehicleEditPage({
   params,
 }: InternalVehicleEditPageProps) {
   const { id } = await params
-  const files = await readVehicleFiles(id)
+  const snapshot = await readVehicleSnapshot(id)
 
-  if (!files) notFound()
+  if (!snapshot) notFound()
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-950">
@@ -32,7 +32,7 @@ export default async function InternalVehicleEditPage({
           <span className="text-slate-400">/</span>
           <span className="text-slate-600">edit</span>
         </div>
-        <VehicleDataEditor mode="edit" vehicleId={id} initialFiles={files} />
+        <VehicleDataEditor mode="edit" vehicleId={id} initialFiles={snapshot.files} initialRevision={snapshot.revision} />
       </div>
     </main>
   )
