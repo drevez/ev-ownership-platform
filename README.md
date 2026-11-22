@@ -178,9 +178,11 @@ Validation is advisory for now. It reports issues but does not block builds.
 
 The application includes internal tools for maintaining data and content. `/internal/*` and `/api/internal/*` are protected with server-side Basic Auth configured through private environment variables.
 
+See [Admin access and editing](docs/ADMIN_ACCESS.md) for login configuration and the editing workflow.
+
 - **Vehicle data health and editor**: `/internal/vehicles`
   - Tracks completeness, legacy formats, missing price contexts, missing translations, and missing image files.
-  - Adds, duplicates, edits, and saves modular vehicle JSON files.
+  - Adds, duplicates, and edits vehicle data. With the Supabase source enabled, saves persist directly to Supabase without a deployment.
   - Built on top of [lib/vehicleAudit.ts](/Users/danielarevez/ev-ownership-platform/lib/vehicleAudit.ts) and [lib/internalVehicleFiles.ts](/Users/danielarevez/ev-ownership-platform/lib/internalVehicleFiles.ts).
 - **Content and SEO editor**: `/internal/content`
   - Edits page copy, translations, and SEO metadata for Portuguese, English, and Spanish.
