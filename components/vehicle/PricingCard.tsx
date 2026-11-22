@@ -223,6 +223,7 @@ function PriceOfferCard({
             label={t.pricing.date}
             value={offer.updatedAt}
           />
+          <DetailRow label={t.pricing.priceNote} value={offer.notes} />
           <DetailRow
             label={t.pricing.context}
             value={context}

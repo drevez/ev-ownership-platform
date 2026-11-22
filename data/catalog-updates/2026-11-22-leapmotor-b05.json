@@ -1,0 +1,155 @@
+{
+  "reviewedAt": "2026-11-22",
+  "records": [
+    {
+      "id": "leapmotor-b05-life-pro-56kwh",
+      "files": {
+        "core": {
+          "id": "leapmotor-b05-life-pro-56kwh",
+          "brand": "Leapmotor",
+          "model": "B05",
+          "variant": "Life Pro 56.2 kWh",
+          "modelYear": 2026,
+          "segment": "C",
+          "bodyType": "Hatchback",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/leapmotor-b05-life-pro-56kwh.webp",
+          "localized": {
+            "pt": {
+              "displayName": "Leapmotor B05 Life Pro 56.2 kWh",
+              "searchAliases": [
+                "leapmotor b05",
+                "b05",
+                "life pro 56.2 kwh"
+              ]
+            },
+            "en": {
+              "displayName": "Leapmotor B05 Life Pro 56.2 kWh"
+            },
+            "es": {
+              "displayName": "Leapmotor B05 Life Pro 56.2 kWh"
+            }
+          }
+        },
+        "battery": {},
+        "charging": {
+          "dcMaxChargeKW": 156,
+          "acMaxChargeKW": 11
+        },
+        "efficiency": {
+          "wltpRangeKm": 401
+        },
+        "dimensions": {
+          "lengthMM": 4430,
+          "widthMM": 1880,
+          "heightMM": 1520,
+          "wheelbaseMM": 2735,
+          "cargoLitersSeatsUp": 345,
+          "cargoLitersSeatsDown": 1400
+        },
+        "comfort": {},
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 25000,
+              "priceTo": null,
+              "modelYear": 2026,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "Leapmotor Portugal — campanha particulares",
+              "sourceUrl": "https://www.leapmotor.net/pt-pt/modelos/b05",
+              "confidence": "high",
+              "displayPriority": 1,
+              "notes": "Campanha para clientes particulares. Inclui IVA. Não inclui despesas de legalização e transporte (DLTP). Preço anunciado no site oficial, consultado em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "leapmotor-b05-design-pro-max-67kwh",
+      "files": {
+        "core": {
+          "id": "leapmotor-b05-design-pro-max-67kwh",
+          "brand": "Leapmotor",
+          "model": "B05",
+          "variant": "Design Pro Max 67.1 kWh",
+          "modelYear": 2026,
+          "segment": "C",
+          "bodyType": "Hatchback",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/leapmotor-b05-design-pro-max-67kwh.webp",
+          "localized": {
+            "pt": {
+              "displayName": "Leapmotor B05 Design Pro Max 67.1 kWh",
+              "searchAliases": [
+                "leapmotor b05",
+                "b05",
+                "design pro max 67.1 kwh"
+              ]
+            },
+            "en": {
+              "displayName": "Leapmotor B05 Design Pro Max 67.1 kWh"
+            },
+            "es": {
+              "displayName": "Leapmotor B05 Design Pro Max 67.1 kWh"
+            }
+          }
+        },
+        "battery": {},
+        "charging": {
+          "dcMaxChargeKW": 174,
+          "acMaxChargeKW": 11
+        },
+        "efficiency": {
+          "wltpRangeKm": 482
+        },
+        "dimensions": {
+          "lengthMM": 4430,
+          "widthMM": 1880,
+          "heightMM": 1520,
+          "wheelbaseMM": 2735,
+          "cargoLitersSeatsUp": 345,
+          "cargoLitersSeatsDown": 1400
+        },
+        "comfort": {
+          "panoramicRoof": true
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "unknown",
+              "marketScope": "official_pt",
+              "priceFrom": 30787,
+              "priceTo": null,
+              "modelYear": 2026,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "market_estimate",
+              "sourceLabel": "eletricos.online — referência a confirmar",
+              "sourceUrl": "https://eletricos.online/carros/leapmotor/b05/",
+              "confidence": "low",
+              "displayPriority": 1,
+              "notes": "Preço de referência publicado pelo eletricos.online, atualizado a 13/11/2026 e assinalado pela fonte como «a confirmar». Não é uma campanha oficial confirmada. Confirmar preço e despesas junto do concessionário."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

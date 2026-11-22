@@ -51,6 +51,7 @@ export interface VehiclePriceSummary {
   estimatedPortugalCostsIncluded?: boolean
   displayPriority?: number
   isLegacy: boolean
+  notes?: string
 }
 
 function getTargetOfferKind(offer: VehiclePricingTargetOffer): VehiclePriceKind {
@@ -96,6 +97,7 @@ function mapTargetOffer(
         : offer.estimatedPortugalCostsIncluded,
     displayPriority: offer.displayPriority,
     isLegacy: false,
+    notes: offer.notes,
   }
 }
 
@@ -139,6 +141,7 @@ function mapOffer(
     estimatedPortugalCostsIncluded: offer.estimatedPortugalCostsIncluded,
     displayPriority: undefined,
     isLegacy: false,
+    notes: offer.notes,
   }
 }
 

@@ -14,7 +14,8 @@
     "catalog:prepare": "node scripts/migrate-catalog.mjs",
     "catalog:import": "node --env-file=.env.local scripts/migrate-catalog.mjs --apply",
     "catalog:export": "node --env-file=.env.local scripts/export-catalog.mjs",
-    "catalog:verify": "node --env-file=.env.local scripts/verify-catalog.mjs"
+    "catalog:verify": "node --env-file=.env.local scripts/verify-catalog.mjs",
+    "catalog:apply-update": "node --env-file=.env.local scripts/apply-catalog-update.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.7",
