@@ -1,5 +1,6 @@
 import { loadAllVehicles, loadVehicleRegistry } from '@/lib/loadVehicle'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
+import { getModelHeroImage } from '@/lib/modelImages'
 import {
   getVehicleBatteryCapacityKwh,
   getVehicleChargeTime10To80Min,
@@ -107,7 +108,7 @@ export async function getAllModelSummaries(): Promise<ModelListItem[]> {
         model: entry.model,
         displayName: `${entry.brand} ${entry.model}`,
         variantCount: 1,
-        heroImage: entry.heroImage || VEHICLE_PLACEHOLDER_IMAGE,
+        heroImage: getModelHeroImage(slug, entry.heroImage || VEHICLE_PLACEHOLDER_IMAGE),
         segment: entry.segment,
         bodyType: entry.bodyType,
       })
@@ -194,7 +195,7 @@ export async function loadModel(slug: string): Promise<ModelPageData | null> {
     displayName: `${first.brand} ${first.model}`,
     segment: heroVariant.segment,
     bodyType: heroVariant.bodyType,
-    heroImage: heroVariant.image,
+    heroImage: getModelHeroImage(slug, heroVariant.image),
     variants,
   }
 }
@@ -299,7 +300,10 @@ export async function getModelExplorerData(): Promise<ModelExplorerItem[]> {
         brand: group.brand,
         model: group.model,
         displayName: `${group.brand} ${group.model}`,
-        heroImage: variants[0]?.image || group.registryHeroImage || VEHICLE_PLACEHOLDER_IMAGE,
+        heroImage: getModelHeroImage(
+          group.slug,
+          variants[0]?.image || group.registryHeroImage || VEHICLE_PLACEHOLDER_IMAGE
+        ),
         segment: variants[0]?.segment ?? '',
         bodyTypes: unique(variants.map((variant) => variant.bodyType)),
         drivetrains: unique(variants.map((variant) => variant.drivetrain)),

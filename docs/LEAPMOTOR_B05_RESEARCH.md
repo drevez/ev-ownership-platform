@@ -74,3 +74,16 @@ batch and uses the idempotent import mode: existing different records are refuse
 identical records are left unchanged. Writes retain database revision history.
 Verification now includes versioned additions alongside the original JSON migration.
 Expected catalog after these additions: 66 model families and 84 vehicle versions.
+
+## Separate model photograph — 22 November 2026
+
+The B05 model page, model summaries and model explorer now use a dedicated official
+outdoor exterior photograph, prepared as 1280×720 WebP at
+`public/cars/leapmotor-b05-model.webp`. The original blue Life and yellow Design
+product images remain unchanged for version pages, version cards and comparisons.
+
+`data/model-media.json` records the model-level image and its official source:
+https://www.leapmotor.net/models/b05. The direct original image URL is recorded in
+that file. `lib/modelImages.ts` resolves model-specific images with the existing
+variant image as a fallback for models without their own photo. This presentation
+configuration does not change Supabase variant records or their image paths.
