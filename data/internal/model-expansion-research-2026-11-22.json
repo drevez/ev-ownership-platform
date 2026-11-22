@@ -1,0 +1,4200 @@
+{
+  "reviewedAt": "2026-11-22",
+  "scope": "Passenger BEV Portugal; includes distinct body styles and new generations; excludes commercial-only vehicles and PHEV/EREV from immediate additions.",
+  "summary": {
+    "currentModelGroups": 67,
+    "currentVersions": 86,
+    "candidateModelsOrBodyStyles": 130,
+    "chineseCandidates": 29,
+    "newChineseBrands": [
+      "Aion",
+      "Geely",
+      "Changan",
+      "Dongfeng",
+      "Forthing",
+      "Firefly",
+      "Voyah",
+      "Zeekr"
+    ],
+    "chineseBrandCount": 12,
+    "priority1": 35,
+    "priority2": 95,
+    "previousCandidateCount": 105,
+    "addedThisPass": 25,
+    "bevReviewedCandidates": 130
+  },
+  "currentCatalog": [
+    {
+      "brand": "Alfa Romeo",
+      "model": "Junior Elettrica",
+      "slug": "alfa-romeo-junior-elettrica",
+      "variantCount": 1
+    },
+    {
+      "brand": "Alpine",
+      "model": "A290",
+      "slug": "alpine-a290",
+      "variantCount": 1
+    },
+    {
+      "brand": "Audi",
+      "model": "Q4 e-tron",
+      "slug": "audi-q4-e-tron",
+      "variantCount": 1
+    },
+    {
+      "brand": "Audi",
+      "model": "Q4 Sportback e-tron",
+      "slug": "audi-q4-sportback-e-tron",
+      "variantCount": 1
+    },
+    {
+      "brand": "BMW",
+      "model": "i4",
+      "slug": "bmw-i4",
+      "variantCount": 2
+    },
+    {
+      "brand": "BMW",
+      "model": "iX1",
+      "slug": "bmw-ix1",
+      "variantCount": 1
+    },
+    {
+      "brand": "BMW",
+      "model": "iX2",
+      "slug": "bmw-ix2",
+      "variantCount": 1
+    },
+    {
+      "brand": "BYD",
+      "model": "Atto 3",
+      "slug": "byd-atto-3",
+      "variantCount": 1
+    },
+    {
+      "brand": "BYD",
+      "model": "Atto 3 Evo",
+      "slug": "byd-atto-3-evo",
+      "variantCount": 1
+    },
+    {
+      "brand": "BYD",
+      "model": "Dolphin",
+      "slug": "byd-dolphin",
+      "variantCount": 1
+    },
+    {
+      "brand": "BYD",
+      "model": "Dolphin Surf",
+      "slug": "byd-dolphin-surf",
+      "variantCount": 1
+    },
+    {
+      "brand": "BYD",
+      "model": "Seal",
+      "slug": "byd-seal",
+      "variantCount": 2
+    },
+    {
+      "brand": "Citroen",
+      "model": "e-C3",
+      "slug": "citroen-e-c3",
+      "variantCount": 2
+    },
+    {
+      "brand": "Citroen",
+      "model": "e-C3 Aircross",
+      "slug": "citroen-e-c3-aircross",
+      "variantCount": 1
+    },
+    {
+      "brand": "Citroen",
+      "model": "e-C4",
+      "slug": "citroen-e-c4",
+      "variantCount": 1
+    },
+    {
+      "brand": "Cupra",
+      "model": "Born",
+      "slug": "cupra-born",
+      "variantCount": 1
+    },
+    {
+      "brand": "Cupra",
+      "model": "Tavascan",
+      "slug": "cupra-tavascan",
+      "variantCount": 1
+    },
+    {
+      "brand": "DS Automobiles",
+      "model": "N°8",
+      "slug": "ds-automobiles-n-8",
+      "variantCount": 1
+    },
+    {
+      "brand": "Ford",
+      "model": "Capri",
+      "slug": "ford-capri",
+      "variantCount": 1
+    },
+    {
+      "brand": "Ford",
+      "model": "Explorer",
+      "slug": "ford-explorer",
+      "variantCount": 1
+    },
+    {
+      "brand": "Honda",
+      "model": "e:Ny1",
+      "slug": "honda-e-ny1",
+      "variantCount": 1
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Ioniq 5",
+      "slug": "hyundai-ioniq-5",
+      "variantCount": 2
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Ioniq 6",
+      "slug": "hyundai-ioniq-6",
+      "variantCount": 2
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Kauai EV",
+      "slug": "hyundai-kauai-ev",
+      "variantCount": 2
+    },
+    {
+      "brand": "Jaecoo",
+      "model": "5 EV",
+      "slug": "jaecoo-5-ev",
+      "variantCount": 1
+    },
+    {
+      "brand": "Kia",
+      "model": "EV3",
+      "slug": "kia-ev3",
+      "variantCount": 2
+    },
+    {
+      "brand": "Kia",
+      "model": "EV5",
+      "slug": "kia-ev5",
+      "variantCount": 1
+    },
+    {
+      "brand": "Kia",
+      "model": "EV6",
+      "slug": "kia-ev6",
+      "variantCount": 2
+    },
+    {
+      "brand": "Leapmotor",
+      "model": "B03X",
+      "slug": "leapmotor-b03x",
+      "variantCount": 2
+    },
+    {
+      "brand": "Leapmotor",
+      "model": "B05",
+      "slug": "leapmotor-b05",
+      "variantCount": 2
+    },
+    {
+      "brand": "Leapmotor",
+      "model": "B10",
+      "slug": "leapmotor-b10",
+      "variantCount": 1
+    },
+    {
+      "brand": "Leapmotor",
+      "model": "C10",
+      "slug": "leapmotor-c10",
+      "variantCount": 2
+    },
+    {
+      "brand": "Leapmotor",
+      "model": "T03",
+      "slug": "leapmotor-t03",
+      "variantCount": 1
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQA",
+      "slug": "mercedes-benz-eqa",
+      "variantCount": 1
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQB",
+      "slug": "mercedes-benz-eqb",
+      "variantCount": 1
+    },
+    {
+      "brand": "MG",
+      "model": "MG4 Urban",
+      "slug": "mg-mg4-urban",
+      "variantCount": 1
+    },
+    {
+      "brand": "MG",
+      "model": "ZS EV",
+      "slug": "mg-zs-ev",
+      "variantCount": 2
+    },
+    {
+      "brand": "MINI",
+      "model": "Cooper",
+      "slug": "mini-cooper",
+      "variantCount": 1
+    },
+    {
+      "brand": "MINI",
+      "model": "Countryman",
+      "slug": "mini-countryman",
+      "variantCount": 1
+    },
+    {
+      "brand": "NIO",
+      "model": "EL6",
+      "slug": "nio-el6",
+      "variantCount": 1
+    },
+    {
+      "brand": "NIO",
+      "model": "ET5 Touring",
+      "slug": "nio-et5-touring",
+      "variantCount": 1
+    },
+    {
+      "brand": "Nissan",
+      "model": "Ariya",
+      "slug": "nissan-ariya",
+      "variantCount": 2
+    },
+    {
+      "brand": "Nissan",
+      "model": "Leaf",
+      "slug": "nissan-leaf",
+      "variantCount": 2
+    },
+    {
+      "brand": "Omoda",
+      "model": "5 EV",
+      "slug": "omoda-5-ev",
+      "variantCount": 1
+    },
+    {
+      "brand": "Peugeot",
+      "model": "e-208",
+      "slug": "peugeot-e-208",
+      "variantCount": 1
+    },
+    {
+      "brand": "Peugeot",
+      "model": "E-3008",
+      "slug": "peugeot-e-3008",
+      "variantCount": 1
+    },
+    {
+      "brand": "Polestar",
+      "model": "2",
+      "slug": "polestar-2",
+      "variantCount": 1
+    },
+    {
+      "brand": "Polestar",
+      "model": "4",
+      "slug": "polestar-4",
+      "variantCount": 1
+    },
+    {
+      "brand": "Porsche",
+      "model": "Macan 4 Electric",
+      "slug": "porsche-macan-4-electric",
+      "variantCount": 1
+    },
+    {
+      "brand": "Porsche",
+      "model": "Macan Electric",
+      "slug": "porsche-macan-electric",
+      "variantCount": 1
+    },
+    {
+      "brand": "Porsche",
+      "model": "Taycan",
+      "slug": "porsche-taycan",
+      "variantCount": 1
+    },
+    {
+      "brand": "Renault",
+      "model": "5 E-Tech",
+      "slug": "renault-5-e-tech",
+      "variantCount": 1
+    },
+    {
+      "brand": "Renault",
+      "model": "Megane E-Tech",
+      "slug": "renault-megane-e-tech",
+      "variantCount": 1
+    },
+    {
+      "brand": "Renault",
+      "model": "Scenic E-Tech",
+      "slug": "renault-scenic-e-tech",
+      "variantCount": 1
+    },
+    {
+      "brand": "Skoda",
+      "model": "Elroq",
+      "slug": "skoda-elroq",
+      "variantCount": 2
+    },
+    {
+      "brand": "Skoda",
+      "model": "Enyaq",
+      "slug": "skoda-enyaq",
+      "variantCount": 2
+    },
+    {
+      "brand": "smart",
+      "model": "#1",
+      "slug": "smart-1",
+      "variantCount": 1
+    },
+    {
+      "brand": "smart",
+      "model": "#3",
+      "slug": "smart-3",
+      "variantCount": 1
+    },
+    {
+      "brand": "Tesla",
+      "model": "Model 3",
+      "slug": "tesla-model-3",
+      "variantCount": 2
+    },
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "slug": "tesla-model-y",
+      "variantCount": 2
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "ID.3",
+      "slug": "volkswagen-id-3",
+      "variantCount": 1
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "ID.4",
+      "slug": "volkswagen-id-4",
+      "variantCount": 1
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "ID.7",
+      "slug": "volkswagen-id-7",
+      "variantCount": 1
+    },
+    {
+      "brand": "Volvo",
+      "model": "EX30",
+      "slug": "volvo-ex30",
+      "variantCount": 2
+    },
+    {
+      "brand": "Volvo",
+      "model": "EX40",
+      "slug": "volvo-ex40",
+      "variantCount": 1
+    },
+    {
+      "brand": "XPeng",
+      "model": "G6",
+      "slug": "xpeng-g6",
+      "variantCount": 1
+    },
+    {
+      "brand": "XPeng",
+      "model": "P7",
+      "slug": "xpeng-p7",
+      "variantCount": 1
+    }
+  ],
+  "candidates": [
+    {
+      "brand": "Aion",
+      "model": "UT",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://gac-portugal.pt/",
+      "reason": "Marca ausente; gama portuguesa confirmada. Normalizar Aion como marca e GAC como grupo.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://gac-portugal.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Aion",
+      "model": "V",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://gac-portugal.pt/",
+      "reason": "Marca ausente; gama portuguesa confirmada. Normalizar Aion como marca e GAC como grupo.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://gac-portugal.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Geely",
+      "model": "E2",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.geelyauto.eu/posts/geely-auto-official-launch-in-portugal",
+      "reason": "Entrada oficial em Portugal em 24/09/2026; confirmar nome nacional E5 e aliases EX5.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "recentLaunchDate": "2026-09-24",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://campanhas.geely-auto.pt/geely-e2/",
+        "evidenceNote": "Página portuguesa identifica o E2 como 100% elétrico.",
+        "restriction": "E2/E5 BEV; não Starray EM-i. Usar designação portuguesa E5."
+      }
+    },
+    {
+      "brand": "Geely",
+      "model": "E5",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.geelyauto.eu/posts/geely-auto-official-launch-in-portugal",
+      "reason": "Entrada oficial em Portugal em 24/09/2026; confirmar nome nacional E5 e aliases EX5.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "recentLaunchDate": "2026-09-24",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.geely-auto.pt/",
+        "evidenceNote": "Gama nacional distingue E5 100% elétrico de Starray híbrido plug-in.",
+        "restriction": "E2/E5 BEV; não Starray EM-i. Usar designação portuguesa E5."
+      }
+    },
+    {
+      "brand": "Changan",
+      "model": "Deepal S05",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://changan-auto.pt/modelos/",
+      "reason": "Marca ausente; escolher variantes BEV e não PHEV. Evitar duplicar Changan e Deepal como o mesmo carro.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://changan-auto.pt/configurador/deepal-s05/",
+        "evidenceNote": "Configurador nacional especifica BEV RWD PRO.",
+        "restriction": "Deepal S05/S07 somente BEV; excluir PHEV/REEV/EREV."
+      }
+    },
+    {
+      "brand": "Changan",
+      "model": "Deepal S07",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://changan-auto.pt/modelos/",
+      "reason": "Marca ausente; escolher variantes BEV e não PHEV. Evitar duplicar Changan e Deepal como o mesmo carro.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://changan-auto.pt/changan-portugal-celebra-primeiro-aniversario-com-perto-de-1-000-unidades-entre-matriculas-e-vendas-confirmadas-numa-gama-em-expansao/",
+        "evidenceNote": "Comunicação nacional identifica o S07 BEV; S05 PHEV é outra configuração.",
+        "restriction": "Deepal S05/S07 somente BEV; excluir PHEV/REEV/EREV."
+      }
+    },
+    {
+      "brand": "Dongfeng",
+      "model": "BOX",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://caetano.pt/dongfeng/",
+      "reason": "Citadino e SUV ausentes; rede oficial portuguesa. Confirmar campanhas atuais e IVA.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://caetano.pt/dongfeng/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Dongfeng",
+      "model": "VIGO",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://caetano.pt/dongfeng/",
+      "reason": "Citadino e SUV ausentes; rede oficial portuguesa. Confirmar campanhas atuais e IVA.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://caetano.pt/dongfeng/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Forthing",
+      "model": "Friday EV",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.forthing.pt/",
+      "reason": "Oferta portuguesa e campanhas de novembro; não misturar Friday EV com gasolina/HEV.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.forthing.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Friday EV e S7 EV; não Friday HEV/térmico nem U-Tour."
+      }
+    },
+    {
+      "brand": "Forthing",
+      "model": "S7 EV",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.forthing.pt/",
+      "reason": "Oferta portuguesa e campanhas de novembro; não misturar Friday EV com gasolina/HEV.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.forthing.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Friday EV e S7 EV; não Friday HEV/térmico nem U-Tour."
+      }
+    },
+    {
+      "brand": "Firefly",
+      "model": "Firefly",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://fireflyportugal.pt/o-nosso-carro/",
+      "reason": "Marca e citadino ausentes. Não reutilizar campanhas financeiras expiradas.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://fireflyportugal.pt/o-nosso-carro/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Voyah",
+      "model": "Courage",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://caetano.pt/voyah/",
+      "reason": "Gama elétrica portuguesa ausente; confirmar versão local e preço com bateria e IVA.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.voyah.pt/modelos/voyah-courage",
+        "evidenceNote": "SUV elétrico da gama nacional.",
+        "restriction": "Configuração BEV portuguesa; Free/Dream também podem designar outras motorizações noutros mercados."
+      }
+    },
+    {
+      "brand": "Voyah",
+      "model": "Free",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://caetano.pt/voyah/",
+      "reason": "Gama elétrica portuguesa ausente; confirmar versão local e preço com bateria e IVA.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.voyah.pt/modelos/voyah-free",
+        "evidenceNote": "Produto elétrico português; a rede oficial nacional apresenta a gama BEV.",
+        "restriction": "Configuração BEV portuguesa; Free/Dream também podem designar outras motorizações noutros mercados."
+      }
+    },
+    {
+      "brand": "Voyah",
+      "model": "Dream",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://caetano.pt/voyah/",
+      "reason": "Gama elétrica portuguesa ausente; confirmar versão local e preço com bateria e IVA.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.voyah.pt/modelos/voyah-dream",
+        "evidenceNote": "Monovolume elétrico português com dois motores e autonomia de bateria; não versão PHEV de outros mercados.",
+        "restriction": "Configuração BEV portuguesa; Free/Dream também podem designar outras motorizações noutros mercados."
+      }
+    },
+    {
+      "brand": "Zeekr",
+      "model": "X",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://configurador.zeekr.pt/",
+      "reason": "Configurador português com modelos e preços; confirmar versões, despesas e entregas.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://configurador.zeekr.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Zeekr",
+      "model": "001",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://configurador.zeekr.pt/",
+      "reason": "Configurador português com modelos e preços; confirmar versões, despesas e entregas.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://configurador.zeekr.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Zeekr",
+      "model": "7X",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://configurador.zeekr.pt/",
+      "reason": "Configurador português com modelos e preços; confirmar versões, despesas e entregas.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://configurador.zeekr.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Zeekr",
+      "model": "7GT",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://configurador.zeekr.pt/",
+      "reason": "Configurador português com modelos e preços; confirmar versões, despesas e entregas.",
+      "chineseBrand": true,
+      "newBrand": true,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://configurador.zeekr.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "BYD",
+      "model": "ATTO 2",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://byd-auto.pt/modelos",
+      "reason": "Lacuna na marca já presente. Incluir só BEV; ATTO 2 e SEAL U também têm versões DM-i distintas.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.byd-auto.pt/modelos/byd-atto-2",
+        "evidenceNote": "Página do BEV distinta de ATTO 2 DM-i.",
+        "restriction": "Somente BEV; rejeitar variantes DM-i, mesmo com o mesmo nome de família."
+      }
+    },
+    {
+      "brand": "BYD",
+      "model": "SEAL U",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://byd-auto.pt/modelos",
+      "reason": "Lacuna na marca já presente. Incluir só BEV; ATTO 2 e SEAL U também têm versões DM-i distintas.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.byd-auto.pt/modelos/byd-seal-u",
+        "evidenceNote": "Página de BEV distinta da página SEAL U DM-i.",
+        "restriction": "Somente BEV; rejeitar variantes DM-i, mesmo com o mesmo nome de família."
+      }
+    },
+    {
+      "brand": "BYD",
+      "model": "SEALION 7",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://byd-auto.pt/modelos",
+      "reason": "Lacuna na marca já presente. Incluir só BEV; ATTO 2 e SEAL U também têm versões DM-i distintas.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://api.byd-auto.pt/files/BYD-SEALION-7.pdf",
+        "evidenceNote": "Ficha técnica oficial do BEV; não confundir com Sealion híbridos.",
+        "restriction": "Somente BEV; rejeitar variantes DM-i, mesmo com o mesmo nome de família."
+      }
+    },
+    {
+      "brand": "MG",
+      "model": "MG4 EV",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mgmotor.eu/pt-PT",
+      "reason": "MG4 EV é distinto do MG4 Urban existente; faltam também SUVs atuais e roadster.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "ownershipNote": "Marca de origem britânica, atualmente do grupo chinês SAIC; incluída aqui por contexto comercial.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mgmotor.eu/pt-PT",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "MG",
+      "model": "MGS5 EV",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mgmotor.eu/pt-PT",
+      "reason": "MG4 EV é distinto do MG4 Urban existente; faltam também SUVs atuais e roadster.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "ownershipNote": "Marca de origem britânica, atualmente do grupo chinês SAIC; incluída aqui por contexto comercial.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mgmotor.eu/pt-PT",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "MG",
+      "model": "MGS6 EV",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mgmotor.eu/pt-PT",
+      "reason": "MG4 EV é distinto do MG4 Urban existente; faltam também SUVs atuais e roadster.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "ownershipNote": "Marca de origem britânica, atualmente do grupo chinês SAIC; incluída aqui por contexto comercial.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mgmotor.eu/pt-PT",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "MG",
+      "model": "Cyberster",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mgmotor.eu/pt-PT",
+      "reason": "MG4 EV é distinto do MG4 Urban existente; faltam também SUVs atuais e roadster.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "ownershipNote": "Marca de origem britânica, atualmente do grupo chinês SAIC; incluída aqui por contexto comercial.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mgmotor.eu/pt-PT",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "NIO",
+      "model": "ET5",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://nio-portugal.pt/",
+      "reason": "Berlina ausente; ET5 Touring e EL6 já existem. Confirmar preço com bateria, separando eventual subscrição.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://nio-portugal.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "XPeng",
+      "model": "G9",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.xpeng-auto.pt/",
+      "reason": "G9 ausente; P7+ não deve substituir o P7 já registado.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.xpeng-auto.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "G9/P7+ BEV e apenas L03 EV; L03 EREV fica excluído."
+      }
+    },
+    {
+      "brand": "XPeng",
+      "model": "P7+",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.xpeng-auto.pt/",
+      "reason": "G9 ausente; P7+ não deve substituir o P7 já registado.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.xpeng-auto.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "G9/P7+ BEV e apenas L03 EV; L03 EREV fica excluído."
+      }
+    },
+    {
+      "brand": "XPeng",
+      "model": "L03 EV",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_launch_offer",
+      "sourceUrl": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
+      "reason": "Existe oferta portuguesa BEV separada do EREV. Confirmar datas de entrega; campanha de lançamento até 25/12/2026.",
+      "chineseBrand": true,
+      "newBrand": false,
+      "referencePrice": {
+        "amount": 29440,
+        "currency": "EUR",
+        "includesVat": false,
+        "scope": "campanha, acrescem DLTP e pintura",
+        "validUntil": "2026-12-25"
+      },
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
+        "evidenceNote": "Oferta nacional explicitamente 100% EV, distinta da EREV.",
+        "restriction": "G9/P7+ BEV e apenas L03 EV; L03 EREV fica excluído."
+      }
+    },
+    {
+      "brand": "Dacia",
+      "model": "Spring",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.dacia.pt/gama-hibrida-eletrica/spring-citadino/configurador.html",
+      "reason": "Lacuna essencial no elétrico de entrada; escolher o ano e motor corretos.",
+      "referencePrice": {
+        "amount": 16900,
+        "currency": "EUR",
+        "includesVat": true,
+        "scope": "configurador; essential electric 70"
+      },
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.dacia.pt/gama-hibrida-eletrica/spring-citadino/configurador.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Renault",
+      "model": "Twingo E-Tech",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4",
+      "reason": "Faltam alternativas citadina e familiar; não confundir Twingo novo com geração anterior.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E-Tech elétrico; E-Tech também pode identificar híbridos noutros modelos."
+      }
+    },
+    {
+      "brand": "Renault",
+      "model": "4 E-Tech",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4",
+      "reason": "Faltam alternativas citadina e familiar; não confundir Twingo novo com geração anterior.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E-Tech elétrico; E-Tech também pode identificar híbridos noutros modelos."
+      }
+    },
+    {
+      "brand": "Hyundai",
+      "model": "INSTER",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.hyundai.pt/campanhas-automoveis/hyundai-inster-preco/",
+      "reason": "Citadino relevante ausente; há baterias e lotações diferentes. Campanha encontrada expirou em setembro.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.hyundai.pt/campanhas-automoveis/hyundai-inster-preco/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Hyundai",
+      "model": "IONIQ 3",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.hyundai.pt/ioniq-3-chega-a-portugal/",
+      "reason": "Lançamento nacional confirmado em outubro; separar Standard/Long Range e valores WLTP preliminares.",
+      "recentLaunchDate": "2026-10-16",
+      "referencePrice": {
+        "amount": 33500,
+        "currency": "EUR",
+        "scope": "Trend Standard Range, acrescem legalização e pintura"
+      },
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.hyundai.pt/ioniq-3-chega-a-portugal/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Kia",
+      "model": "EV2",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://m.kia.pt/configurador/",
+      "reason": "Configurador português confirma as três propostas. Fastback e hatchback são carroçarias distintas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://m.kia.pt/configurador/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Kia",
+      "model": "EV4",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://m.kia.pt/configurador/",
+      "reason": "Configurador português confirma as três propostas. Fastback e hatchback são carroçarias distintas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://m.kia.pt/configurador/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Kia",
+      "model": "EV4 Fastback",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://m.kia.pt/configurador/",
+      "reason": "Configurador português confirma as três propostas. Fastback e hatchback são carroçarias distintas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://m.kia.pt/configurador/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Nissan",
+      "model": "Micra",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://configurador.nissan.pt/",
+      "reason": "Nova geração 100% elétrica, ausente do catálogo.",
+      "referencePrice": {
+        "amount": 28225,
+        "currency": "EUR",
+        "scope": "desde, configurador português consultado em 22/11/2026"
+      },
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://configurador.nissan.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Fiat",
+      "model": "Grande Panda Electric",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.fiat.pt/modelos/grande-panda-electrico",
+      "reason": "Alternativa acessível com oferta portuguesa; não usar preços do Hybrid.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.fiat.pt/modelos/grande-panda-electrico",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "500e/600e/Grande Panda elétrico/E-Ulysse BEV; não 500 Hybrid nem Grande Panda/600 híbridos."
+      }
+    },
+    {
+      "brand": "Opel",
+      "model": "Corsa Electric",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.opel.pt/",
+      "reason": "Marca totalmente ausente apesar de gama elétrica estabelecida; preço da gama Corsa pode ser de gasolina.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.opel.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      }
+    },
+    {
+      "brand": "Ford",
+      "model": "Puma Gen-E",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/como-escolher-carro-eletrico",
+      "reason": "SUV compacto elétrico ausente, concorrente direto dos modelos de entrada.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/como-escolher-carro-eletrico",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente BEV E-Tourneo/Gen-E/Mach-E; excluir PHEV e diesel."
+      }
+    },
+    {
+      "brand": "Cupra",
+      "model": "Raval",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_presale",
+      "sourceUrl": "https://www.cupraofficial.pt/cupra-raval/cupra-raval",
+      "reason": "Oferta portuguesa de pré-venda; declarar esse estado e não entrega imediata.",
+      "referencePrice": {
+        "amount": 26990,
+        "currency": "EUR",
+        "scope": "38,5 kWh 115 cv; chave na mão; stock e entregas até 31/12/2026"
+      },
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.cupraofficial.pt/cupra-raval/cupra-raval",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "ID. Polo",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
+      "reason": "Novo modelo com configurador português; falta mapear baterias e versões nacionais.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Skoda",
+      "model": "Epiq",
+      "priority": 1,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.skoda.pt/models/overview",
+      "reason": "Modelo já listado no catálogo nacional; preços da página devem ser associados à motorização exata.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.skoda.pt/models/overview",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Fiat",
+      "model": "500e",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.fiat.pt/?brand=NewMOC&language=%5Bfiatprofessional%2Cpt%2Cpt%5D",
+      "reason": "Lacunas estabelecidas; distinguir 500e BEV de 500 Hybrid.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.fiat.pt/?brand=NewMOC&language=%5Bfiatprofessional%2Cpt%2Cpt%5D",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "500e/600e/Grande Panda elétrico/E-Ulysse BEV; não 500 Hybrid nem Grande Panda/600 híbridos."
+      }
+    },
+    {
+      "brand": "Fiat",
+      "model": "600e",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.fiat.pt/?brand=NewMOC&language=%5Bfiatprofessional%2Cpt%2Cpt%5D",
+      "reason": "Lacunas estabelecidas; distinguir 500e BEV de 500 Hybrid.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.fiat.pt/?brand=NewMOC&language=%5Bfiatprofessional%2Cpt%2Cpt%5D",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "500e/600e/Grande Panda elétrico/E-Ulysse BEV; não 500 Hybrid nem Grande Panda/600 híbridos."
+      }
+    },
+    {
+      "brand": "Opel",
+      "model": "Mokka Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.opel.pt/",
+      "reason": "Gama nacional elétrica ausente; separar carroçarias e excluir preços das versões térmicas/híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.opel.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      }
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.opel.pt/",
+      "reason": "Gama nacional elétrica ausente; separar carroçarias e excluir preços das versões térmicas/híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.opel.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      }
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra Sports Tourer Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.opel.pt/",
+      "reason": "Gama nacional elétrica ausente; separar carroçarias e excluir preços das versões térmicas/híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.opel.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      }
+    },
+    {
+      "brand": "Opel",
+      "model": "Frontera Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.opel.pt/",
+      "reason": "Gama nacional elétrica ausente; separar carroçarias e excluir preços das versões térmicas/híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.opel.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      }
+    },
+    {
+      "brand": "Opel",
+      "model": "Grandland Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.opel.pt/",
+      "reason": "Gama nacional elétrica ausente; separar carroçarias e excluir preços das versões térmicas/híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.opel.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      }
+    },
+    {
+      "brand": "Peugeot",
+      "model": "E-2008",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+      "reason": "Modelos confirmados na gama elétrica portuguesa; não copiar preço de entrada das versões híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      }
+    },
+    {
+      "brand": "Peugeot",
+      "model": "E-308",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+      "reason": "Modelos confirmados na gama elétrica portuguesa; não copiar preço de entrada das versões híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      }
+    },
+    {
+      "brand": "Peugeot",
+      "model": "E-308 SW",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+      "reason": "Modelos confirmados na gama elétrica portuguesa; não copiar preço de entrada das versões híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      }
+    },
+    {
+      "brand": "Peugeot",
+      "model": "E-408",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+      "reason": "Modelos confirmados na gama elétrica portuguesa; não copiar preço de entrada das versões híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      }
+    },
+    {
+      "brand": "Peugeot",
+      "model": "E-5008",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+      "reason": "Modelos confirmados na gama elétrica portuguesa; não copiar preço de entrada das versões híbridas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      }
+    },
+    {
+      "brand": "Citroen",
+      "model": "e-C4 X",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.citroen.pt/gama-electrificada.html",
+      "reason": "Faltam fastback e SUV familiar. Confirmar geração e bateria, sem duplicar e-C4.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.citroen.pt/gama-electrificada.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente ë-/e- BEV; não Hybrid/diesel nem versões de carga."
+      }
+    },
+    {
+      "brand": "Citroen",
+      "model": "e-C5 Aircross",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.citroen.pt/gama-electrificada.html",
+      "reason": "Faltam fastback e SUV familiar. Confirmar geração e bateria, sem duplicar e-C4.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.citroen.pt/gama-electrificada.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente ë-/e- BEV; não Hybrid/diesel nem versões de carga."
+      }
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang Mach-E",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/como-escolher-carro-eletrico",
+      "reason": "Lacuna de modelo elétrico já estabelecido na marca.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/como-escolher-carro-eletrico",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente BEV E-Tourneo/Gen-E/Mach-E; excluir PHEV e diesel."
+      }
+    },
+    {
+      "brand": "Toyota",
+      "model": "bZ4X",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
+      "reason": "Toyota ausente; três BEV na oferta nacional. C-HR+ é distinto do C-HR híbrido.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      }
+    },
+    {
+      "brand": "Toyota",
+      "model": "C-HR+",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
+      "reason": "Toyota ausente; três BEV na oferta nacional. C-HR+ é distinto do C-HR híbrido.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      }
+    },
+    {
+      "brand": "Toyota",
+      "model": "bZ4X Touring",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
+      "reason": "Toyota ausente; três BEV na oferta nacional. C-HR+ é distinto do C-HR híbrido.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      }
+    },
+    {
+      "brand": "Kia",
+      "model": "EV9",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://m.kia.pt/configurador/",
+      "reason": "Completar gama e cobertura de famílias grandes; PV5 Passenger fica no grupo MPV, não Cargo.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://m.kia.pt/configurador/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Kia",
+      "model": "PV5 Passenger",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://m.kia.pt/configurador/",
+      "reason": "Completar gama e cobertura de famílias grandes; PV5 Passenger fica no grupo MPV, não Cargo.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://m.kia.pt/configurador/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Hyundai",
+      "model": "IONIQ 9",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.hyundai.pt/configurador/",
+      "reason": "SUV grande elétrico já configurável; separar preços de empresas sem IVA dos particulares.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.hyundai.pt/configurador/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Mazda",
+      "model": "6e",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mazda.pt/ev/overview/",
+      "reason": "Marca ausente; ambos têm páginas portuguesas. Recolher preços do configurador, não campanha antiga.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mazda.pt/ev/overview/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Mazda",
+      "model": "CX-6e",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mazda.pt/ev/overview/",
+      "reason": "Marca ausente; ambos têm páginas portuguesas. Recolher preços do configurador, não campanha antiga.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mazda.pt/ev/overview/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "MINI",
+      "model": "Aceman",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mini.pt/pt_PT/home.html",
+      "reason": "Terceira família elétrica MINI ainda ausente.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mini.pt/pt_PT/home.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "smart",
+      "model": "#5",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://pt.smart.com/pt/models/hashtag-five/specifications/",
+      "reason": "Falta SUV maior; #1 e #3 já estão no catálogo.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://pt.smart.com/pt/models/hashtag-five/specifications/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "DS Automobiles",
+      "model": "DS 3 E-Tense",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
+      "reason": "Gama BEV portuguesa além do N°8; isolar versões 100% elétricas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "E-Tense só entra quando a configuração é 100% elétrica; o nome E-Tense sozinho não basta."
+      }
+    },
+    {
+      "brand": "DS Automobiles",
+      "model": "N°4 E-Tense",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
+      "reason": "Gama BEV portuguesa além do N°8; isolar versões 100% elétricas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "E-Tense só entra quando a configuração é 100% elétrica; o nome E-Tense sozinho não basta."
+      }
+    },
+    {
+      "brand": "DS Automobiles",
+      "model": "N°7 E-Tense",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
+      "reason": "Gama BEV portuguesa além do N°8; isolar versões 100% elétricas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "E-Tense só entra quando a configuração é 100% elétrica; o nome E-Tense sozinho não basta."
+      }
+    },
+    {
+      "brand": "Jeep",
+      "model": "Avenger Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.jeep.pt/eletrificacao",
+      "reason": "Marca ausente. Avenger 4xe e Compass e-Hybrid/PHEV não entram no catálogo BEV.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.jeep.pt/eletrificacao",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Avenger/Compass Electric; rejeitar e-Hybrid e 4xe/PHEV."
+      }
+    },
+    {
+      "brand": "Jeep",
+      "model": "Compass Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.jeep.pt/eletrificacao",
+      "reason": "Marca ausente. Avenger 4xe e Compass e-Hybrid/PHEV não entram no catálogo BEV.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.jeep.pt/eletrificacao",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Avenger/Compass Electric; rejeitar e-Hybrid e 4xe/PHEV."
+      }
+    },
+    {
+      "brand": "Audi",
+      "model": "A6 Sportback e-tron",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+      "reason": "Completar segmento premium e distinguir carroçarias; derivados S/RS são versões.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Audi",
+      "model": "A6 Avant e-tron",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+      "reason": "Completar segmento premium e distinguir carroçarias; derivados S/RS são versões.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Audi",
+      "model": "Q6 e-tron",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+      "reason": "Completar segmento premium e distinguir carroçarias; derivados S/RS são versões.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Audi",
+      "model": "Q6 Sportback e-tron",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+      "reason": "Completar segmento premium e distinguir carroçarias; derivados S/RS são versões.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Audi",
+      "model": "e-tron GT",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+      "reason": "Completar segmento premium e distinguir carroçarias; derivados S/RS são versões.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "i3 Neue Klasse",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+      "reason": "Lacunas premium. Identificar geração do i3/iX3 para não misturar os modelos antigos.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "iX3 Neue Klasse",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+      "reason": "Lacunas premium. Identificar geração do i3/iX3 para não misturar os modelos antigos.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "i5",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+      "reason": "Lacunas premium. Identificar geração do i3/iX3 para não misturar os modelos antigos.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "i5 Touring",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+      "reason": "Lacunas premium. Identificar geração do i3/iX3 para não misturar os modelos antigos.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "i7",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+      "reason": "Lacunas premium. Identificar geração do i3/iX3 para não misturar os modelos antigos.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "iX",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+      "reason": "Lacunas premium. Identificar geração do i3/iX3 para não misturar os modelos antigos.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      }
+    },
+    {
+      "brand": "Volvo",
+      "model": "EX60",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.volvocars.com/pt/build/",
+      "reason": "Modelos já listados no configurador nacional; separar pré-encomenda de entrega.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.volvocars.com/pt/build/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Volvo",
+      "model": "EX90",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.volvocars.com/pt/build/",
+      "reason": "Modelos já listados no configurador nacional; separar pré-encomenda de entrega.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.volvocars.com/pt/build/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Volvo",
+      "model": "ES90",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.volvocars.com/pt/build/",
+      "reason": "Modelos já listados no configurador nacional; separar pré-encomenda de entrega.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.volvocars.com/pt/build/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Polestar",
+      "model": "3",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.polestar.com/pt/configure/",
+      "reason": "3 e 5 ausentes; 4 SUV é nova carroçaria, não o 4 coupé já registado.",
+      "classification": "model_or_body_style",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.polestar.com/pt/configure/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Polestar",
+      "model": "5",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.polestar.com/pt/configure/",
+      "reason": "3 e 5 ausentes; 4 SUV é nova carroçaria, não o 4 coupé já registado.",
+      "classification": "model_or_body_style",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.polestar.com/pt/configure/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Polestar",
+      "model": "4 SUV",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.polestar.com/pt/configure/",
+      "reason": "3 e 5 ausentes; 4 SUV é nova carroçaria, não o 4 coupé já registado.",
+      "classification": "model_or_body_style",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.polestar.com/pt/configure/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Suzuki",
+      "model": "e Vitara",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.suzukiauto.pt/precios/evitara",
+      "reason": "Primeiro BEV da marca, com página portuguesa; rever campanha expirada.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.suzukiauto.pt/precios/evitara",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Alpine",
+      "model": "A390",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.alpinecars.pt/configurador.html",
+      "reason": "Segundo elétrico da marca em configurador nacional.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.alpinecars.pt/configurador.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Abarth",
+      "model": "500e",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.abarth.pt/",
+      "reason": "Faltam alternativas desportivas elétricas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.abarth.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Abarth",
+      "model": "600e",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.abarth.pt/",
+      "reason": "Faltam alternativas desportivas elétricas.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.abarth.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Lexus",
+      "model": "RZ",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.lexus.pt/",
+      "reason": "Marca premium sem representação no catálogo; gama RZ configurável.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.lexus.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "RZ BEV; não HEV/PHEV de outras famílias."
+      }
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "ID.7 Tourer",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
+      "reason": "Carroçarias familiares ausentes; ID. Buzz de passageiros, não Cargo.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "ID. Buzz",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
+      "reason": "Carroçarias familiares ausentes; ID. Buzz de passageiros, não Cargo.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Skoda",
+      "model": "Enyaq Coupé",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.skoda.pt/models/overview",
+      "reason": "Carroçaria diferente do Enyaq já registado.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.skoda.pt/models/overview",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "CLA Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+      "reason": "Gama nacional identificada; confirmar encomenda/entrega, bateria e geração antes de importar.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "CLA Shooting Brake Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+      "reason": "Gama nacional identificada; confirmar encomenda/entrega, bateria e geração antes de importar.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "GLB Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+      "reason": "Gama nacional identificada; confirmar encomenda/entrega, bateria e geração antes de importar.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "GLC Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+      "reason": "Gama nacional identificada; confirmar encomenda/entrega, bateria e geração antes de importar.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQS",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+      "reason": "Gama nacional identificada; confirmar encomenda/entrega, bateria e geração antes de importar.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "G 580 EQ",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_range_or_offer",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+      "reason": "Gama nacional identificada; confirmar encomenda/entrega, bateria e geração antes de importar.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "WLTP combinado e especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "KGM",
+      "model": "Torres EVX",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://kgm.pt/",
+      "reason": "Marca coreana ausente; categoria elétrica explícita no site nacional. Excluir Torres HEV e Torres térmico.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://kgm.pt/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Torres EVX; rejeitar Torres HEV e Torres térmico."
+      }
+    },
+    {
+      "brand": "Mitsubishi",
+      "model": "Eclipse Cross EV",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.mitsubishi-motors.pt/novo-eclipse-cross-ev",
+      "reason": "Nova geração 100% elétrica, distinta do antigo Eclipse Cross PHEV. Não importar dados ou preços do PHEV.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mitsubishi-motors.pt/novo-eclipse-cross-ev",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Eclipse Cross EV da nova geração; rejeitar Eclipse Cross PHEV antigo."
+      }
+    },
+    {
+      "brand": "Maserati",
+      "model": "Grecale Folgore",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
+      "reason": "Folgore identifica a configuração 100% elétrica; versões a gasolina/híbridas excluídas. Segmento premium de menor prioridade.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Folgore; rejeitar Modena/Trofeo térmicos e Grecale híbrido."
+      }
+    },
+    {
+      "brand": "Maserati",
+      "model": "GranTurismo Folgore",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
+      "reason": "Folgore identifica a configuração 100% elétrica; versões a gasolina/híbridas excluídas. Segmento premium de menor prioridade.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Folgore; rejeitar Modena/Trofeo térmicos e Grecale híbrido."
+      }
+    },
+    {
+      "brand": "Maserati",
+      "model": "GranCabrio Folgore",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
+      "reason": "Folgore identifica a configuração 100% elétrica; versões a gasolina/híbridas excluídas. Segmento premium de menor prioridade.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Folgore; rejeitar Modena/Trofeo térmicos e Grecale híbrido."
+      }
+    },
+    {
+      "brand": "Porsche",
+      "model": "Taycan Sport Turismo",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.porsche.com/portugal/models/",
+      "reason": "Carroçarias BEV ausentes; não são novas marcas nem variantes do Macan.",
+      "reviewedAt": "2026-11-22",
+      "classification": "body_style",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.porsche.com/portugal/models/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Porsche",
+      "model": "Taycan Cross Turismo",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.porsche.com/portugal/models/",
+      "reason": "Carroçarias BEV ausentes; não são novas marcas nem variantes do Macan.",
+      "reviewedAt": "2026-11-22",
+      "classification": "body_style",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.porsche.com/portugal/models/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQV",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/van/eqv/overview.html/",
+      "reason": "Monovolume de passageiros 100% elétrico; não Classe V diesel.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/van/eqv/overview.html/",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQT",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/van/eqt/overview.html",
+      "reason": "Monovolume de passageiros 100% elétrico; não Classe T térmico.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/van/eqt/overview.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQE",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+      "reason": "Configurações elétricas identificadas no catálogo nacional. GLA elétrico separado de GLA PHEV/gasóleo/gasolina. Não duplicar EQS berlina existente na lista.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQE SUV",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+      "reason": "Configurações elétricas identificadas no catálogo nacional. GLA elétrico separado de GLA PHEV/gasóleo/gasolina. Não duplicar EQS berlina existente na lista.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQS SUV",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+      "reason": "Configurações elétricas identificadas no catálogo nacional. GLA elétrico separado de GLA PHEV/gasóleo/gasolina. Não duplicar EQS berlina existente na lista.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "GLA Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+      "reason": "Configurações elétricas identificadas no catálogo nacional. GLA elétrico separado de GLA PHEV/gasóleo/gasolina. Não duplicar EQS berlina existente na lista.",
+      "reviewedAt": "2026-11-22",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      }
+    },
+    {
+      "brand": "Ford",
+      "model": "E-Tourneo Courier",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/carros-familiares-5-7-9-lugares",
+      "reason": "Versões elétricas de passageiros, não Transit Cargo, diesel ou Tourneo Custom PHEV.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/carros-familiares-5-7-9-lugares",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente BEV E-Tourneo/Gen-E/Mach-E; excluir PHEV e diesel."
+      }
+    },
+    {
+      "brand": "Ford",
+      "model": "E-Tourneo Custom",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/carros-familiares-5-7-9-lugares",
+      "reason": "Versões elétricas de passageiros, não Transit Cargo, diesel ou Tourneo Custom PHEV.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/carros-familiares-5-7-9-lugares",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente BEV E-Tourneo/Gen-E/Mach-E; excluir PHEV e diesel."
+      }
+    },
+    {
+      "brand": "Citroen",
+      "model": "e-Berlingo",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.citroen.pt/transporte-pessoas.html",
+      "reason": "Incluir versões elétricas de passageiros; excluir Berlingo Van e motorizações diesel.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.citroen.pt/transporte-pessoas.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente ë-/e- BEV; não Hybrid/diesel nem versões de carga."
+      }
+    },
+    {
+      "brand": "Citroen",
+      "model": "e-SpaceTourer",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.citroen.pt/transporte-pessoas.html",
+      "reason": "Incluir versões elétricas de passageiros; excluir Berlingo Van e motorizações diesel.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.citroen.pt/transporte-pessoas.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente ë-/e- BEV; não Hybrid/diesel nem versões de carga."
+      }
+    },
+    {
+      "brand": "Peugeot",
+      "model": "E-Rifter",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.peugeot.pt/apos-venda/peugeot-care.html",
+      "reason": "Site nacional identifica ambos como veículos 100% elétricos de passageiros.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.peugeot.pt/apos-venda/peugeot-care.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      }
+    },
+    {
+      "brand": "Peugeot",
+      "model": "E-Traveller",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.peugeot.pt/apos-venda/peugeot-care.html",
+      "reason": "Site nacional identifica ambos como veículos 100% elétricos de passageiros.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.peugeot.pt/apos-venda/peugeot-care.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      }
+    },
+    {
+      "brand": "Opel",
+      "model": "Combo Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://rede.opel.pt/stellantisandyouportugal/veiculos/carros-passageiros-novos",
+      "reason": "Página de passageiros da rede oficial; selecionar BEV, excluindo Cargo e diesel.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://rede.opel.pt/stellantisandyouportugal/veiculos/carros-passageiros-novos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      }
+    },
+    {
+      "brand": "Opel",
+      "model": "Zafira Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://rede.opel.pt/stellantisandyouportugal/veiculos/carros-passageiros-novos",
+      "reason": "Página de passageiros da rede oficial; selecionar BEV, excluindo Cargo e diesel.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://rede.opel.pt/stellantisandyouportugal/veiculos/carros-passageiros-novos",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      }
+    },
+    {
+      "brand": "Toyota",
+      "model": "Proace City Verso Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.toyota.pt/carros/proace-city-verso/features-and-specs.PF.epr.6b5fcb43-489d-41e8-89d6-f62a2570617d",
+      "reason": "Verso Exclusive Elétrico 50 kWh identificado oficialmente; não Proace City Cargo.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.toyota.pt/carros/proace-city-verso/features-and-specs.PF.epr.6b5fcb43-489d-41e8-89d6-f62a2570617d",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      }
+    },
+    {
+      "brand": "Toyota",
+      "model": "Proace Verso Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.toyota.pt/carros/proace-verso/configurador",
+      "reason": "Configurador português com motor Elétrico 50 kWh; não diesel nem Proace Cargo.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.toyota.pt/carros/proace-verso/configurador",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      }
+    },
+    {
+      "brand": "Fiat",
+      "model": "E-Ulysse",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.fiat.pt/professional/modelo/e-ulysse",
+      "reason": "Página portuguesa distingue motor elétrico e diesel; admitir apenas configuração BEV de passageiros.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.fiat.pt/professional/modelo/e-ulysse",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "500e/600e/Grande Panda elétrico/E-Ulysse BEV; não 500 Hybrid nem Grande Panda/600 híbridos."
+      }
+    },
+    {
+      "brand": "Renault",
+      "model": "Kangoo E-Tech Electric",
+      "priority": 2,
+      "action": "research_version_mapping_before_import",
+      "marketEvidence": "pt_official_BEV_product_or_configurator",
+      "sourceUrl": "https://www.renault.pt/veiculos-passageiros/kangoo/configurador.html",
+      "reason": "Configurador de passageiros com motor elétrico; não Kangoo Van diesel nem variantes de carga.",
+      "reviewedAt": "2026-11-22",
+      "classification": "passenger_MPV",
+      "requiredBeforeImport": [
+        "confirmar configuração exclusivamente BEV",
+        "versões e baterias portuguesas",
+        "preço/IVA/campanha com data",
+        "especificações por versão",
+        "fotografia e fonte",
+        "validação e importação sem duplicados"
+      ],
+      "powertrain": "BEV",
+      "bevReview": {
+        "reviewedAt": "2026-11-22",
+        "status": "BEV_configuration_identified",
+        "basis": "official_product_or_electric_variant_designation",
+        "evidenceUrl": "https://www.renault.pt/veiculos-passageiros/kangoo/configurador.html",
+        "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
+        "restriction": "Somente E-Tech elétrico; E-Tech também pode identificar híbridos noutros modelos."
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "brand": "Denza",
+      "models": [
+        "Z9GT EV"
+      ],
+      "sourceUrl": "https://www.denza.com/pt/experience/events",
+      "reason": "O site português distingue Z9GT EV de Z9GT DM e D9 DM-i. Só o Z9GT EV é candidato BEV; confirmar preço oficial/entrega/rede. O outro elétrico apresentado é um superdesportivo, não prova oferta pronta em Portugal.",
+      "bevStatus": "BEV identified; Portuguese commercial offer pending validation"
+    },
+    {
+      "brand": "XPeng",
+      "models": [
+        "G9L"
+      ],
+      "sourceUrl": "https://caetano.pt/xpeng/",
+      "reason": "Concessionário oficial anuncia chegada brevemente; confirmar lançamento e preços."
+    },
+    {
+      "brand": "Lynk & Co",
+      "models": [
+        "02"
+      ],
+      "sourceUrl": "https://www.lynkco.com/en/cars/02",
+      "reason": "Produto europeu confirmado; não foi confirmada oferta oficial portuguesa nesta pesquisa."
+    },
+    {
+      "brand": "Hongqi",
+      "models": [
+        "EH7",
+        "EHS7"
+      ],
+      "sourceUrl": "https://www.hongqi-auto.com/",
+      "reason": "Produtos internacionais confirmados; falta comprovar representação, versões e oferta portuguesa."
+    },
+    {
+      "brand": "Maxus",
+      "models": [
+        "Euniq 6",
+        "MIFA 7",
+        "MIFA 9"
+      ],
+      "sourceUrl": "https://www.piscapisca.pt/carros/maxus",
+      "reason": "Há presença no mercado de usados; isso não confirma uma oferta nova nacional atual destas três famílias. Verificar importador e separar MPV/comerciais."
+    },
+    {
+      "brand": "Aiways",
+      "models": [
+        "U5",
+        "U6"
+      ],
+      "sourceUrl": "https://encontracarros.pt/marca/aiways",
+      "reason": "Presença em usados confirmada; falta oferta nova nacional atual. Prioridade futura para usados/importação."
+    },
+    {
+      "brand": "Neta",
+      "models": [],
+      "reason": "Matrículas históricas não estabelecem gama atual e suporte comercial; confirmar importador antes de criar ofertas disponíveis."
+    },
+    {
+      "brand": "Seres",
+      "models": [
+        "3",
+        "5"
+      ],
+      "reason": "Pesquisar separadamente oferta oficial nova e anúncios usados; presença nova nacional por confirmar."
+    },
+    {
+      "brand": "Skywell",
+      "models": [
+        "ET5/BE11"
+      ],
+      "reason": "Pesquisar oferta nacional atual; anúncio usado ou apresentação noutro país não confirma disponibilidade oficial."
+    },
+    {
+      "brand": "GWM/Ora",
+      "models": [
+        "03"
+      ],
+      "reason": "Verificar distribuição e oferta portuguesa atual; não assumir por existir noutros mercados europeus."
+    },
+    {
+      "brand": "Lepas / Exlantix / Avatr / Onvo / Xiaomi",
+      "models": [],
+      "reason": "Monitorizar por marca; não foi comprovada nesta auditoria uma oferta BEV portuguesa pronta para importação."
+    },
+    {
+      "brand": "Leapmotor",
+      "models": [
+        "B03"
+      ],
+      "sourceUrl": "https://grupoleapmotor.pt/",
+      "reason": "Há referência a apresentação; dados comerciais/técnicos nacionais insuficientes nesta pesquisa. Não confundir com B03X já adicionado."
+    },
+    {
+      "brand": "Toyota",
+      "models": [
+        "Urban Cruiser"
+      ],
+      "sourceUrl": "https://www.toyota.pt/mundo-toyota/noticias/toyota-e-marca-de-confianca-ambiente-em-2025",
+      "reason": "Anúncio oficial; confirmar configuração/preço e estado nacional antes de adicionar como disponível."
+    },
+    {
+      "brand": "smart",
+      "models": [
+        "#2"
+      ],
+      "sourceUrl": "https://pt.smart.com/pt/",
+      "reason": "Site nacional já menciona; faltam confirmação de versões/preço e distinguir dados preliminares."
+    },
+    {
+      "brand": "Lancia",
+      "models": [
+        "Ypsilon Electric"
+      ],
+      "sourceUrl": "https://www.lancia.pt/ypsilon/edizione-limitata-cassina",
+      "reason": "Página nacional de produto existe, mas a informação encontrada não basta para confirmar campanha e encomenda atuais."
+    },
+    {
+      "brand": "Lexus",
+      "models": [
+        "ES Electric",
+        "UX 300e"
+      ],
+      "sourceUrl": "https://www.lexus.pt/",
+      "reason": "Validar nova geração e motorização BEV do ES; UX 300e pode ser mais relevante em stock/usados."
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "models": [
+        "Classe C Electric",
+        "VLE",
+        "AMG GT Electric"
+      ],
+      "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+      "reason": "Novidades já mencionadas no site nacional; confirmar preços, homologação e abertura efetiva de encomendas antes de criar ofertas disponíveis."
+    },
+    {
+      "brand": "Skoda",
+      "models": [
+        "Peaq"
+      ],
+      "sourceUrl": "https://www.skoda.pt/models/overview",
+      "reason": "Novidade no site nacional; confirmar dados finais e oferta comercial."
+    },
+    {
+      "brand": "Lotus",
+      "models": [
+        "Eletre BEV",
+        "Emeya"
+      ],
+      "sourceUrl": "https://www.lotuscars.com/en/press/models/emeya",
+      "bevStatus": "BEV product confirmed; official Portuguese new-car offer pending",
+      "reason": "Produtos elétricos confirmados; ofertas em usados não provam gama nova oficial portuguesa. Eletre X/PHEV e Emira térmico excluídos."
+    },
+    {
+      "brand": "Subaru",
+      "models": [
+        "Solterra",
+        "Uncharted",
+        "E-Outback"
+      ],
+      "sourceUrl": "https://www.subaru.eu/media/subaru-confirms-new-electric-range-for-europe",
+      "bevStatus": "European BEV confirmed; Portuguese offer pending",
+      "reason": "A Subaru confirma três BEV europeus; não foi possível validar preço, rede e encomenda portugueses. Não confundir E-Outback com Outback Boxer."
+    },
+    {
+      "brand": "Volkswagen",
+      "models": [
+        "ID. Cross"
+      ],
+      "sourceUrl": "https://www.volkswagen.pt/id-cross/id-cross/detalhes-e-equipamento/exterior",
+      "bevStatus": "BEV product identified; commercial details pending",
+      "reason": "Já há página nacional; confirmar configurador, versões e entregas."
+    },
+    {
+      "brand": "Rolls-Royce",
+      "models": [
+        "Spectre"
+      ],
+      "sourceUrl": "https://www.press.rolls-roycemotorcars.com/rolls-royce-motor-cars-pressclub/article/detail/T0462144EN/spectre-series-ii-makes-its-debut-on-public-roads-in-stockholm",
+      "bevStatus": "BEV product confirmed; Portuguese new-car offer pending",
+      "reason": "BEV de nicho; confirmar canal e encomenda nacional antes de oferta disponível."
+    }
+  ],
+  "exclusions": [
+    {
+      "models": [
+        "Zeekr 9X",
+        "Denza D9 DM-i",
+        "Denza Z9GT DM",
+        "Geely Starray EM-i",
+        "Nissan e-Power",
+        "BMW i3 REx",
+        "Mitsubishi Eclipse Cross PHEV",
+        "Toyota Mirai"
+      ],
+      "reason": "Não são BEV elegíveis: incluem híbridos, extensores de autonomia ou célula de combustível. O nome de família ou a possibilidade de carregar não é suficiente."
+    },
+    {
+      "models": [
+        "BYD DM-i",
+        "Geely Starray EM-i",
+        "Changan S05 PHEV",
+        "Omoda/Jaecoo SHS híbridos",
+        "Leapmotor REEV",
+        "XPeng L03 EREV"
+      ],
+      "reason": "Ofertas eletrificadas distintas de 100% elétrico. Criar categoria própria só se o âmbito do produto for alargado."
+    },
+    {
+      "models": [
+        "Farizon",
+        "Foton",
+        "Victory",
+        "DFSK comerciais",
+        "Maxus Cargo"
+      ],
+      "reason": "Gamas comerciais e/ou motorizações diversas: levantamento separado; não são lacunas automáticas do catálogo de passageiros BEV."
+    }
+  ],
+  "bevOnlyPolicy": {
+    "included": "BEV — veículo elétrico a bateria, sem motor de combustão e sem extensor de autonomia",
+    "excluded": [
+      "ICE",
+      "HEV",
+      "MHEV",
+      "PHEV",
+      "REEV",
+      "EREV",
+      "FCEV"
+    ],
+    "powertrainEvidenceDoesNotProve": "Preço, entrega imediata, homologação final, ano e oferta da configuração portuguesa concreta ainda têm de ser validados na importação.",
+    "passengerOnly": "MPVs incluídos apenas em versões de passageiros; não importar automaticamente furgões de carga."
+  },
+  "optionalScope": [
+    {
+      "brand": "KGM",
+      "model": "Musso EV",
+      "powertrain": "BEV",
+      "sourceUrl": "https://kgm.pt/musso-ev/",
+      "reason": "Pick-up elétrica confirmada em Portugal. Separar do catálogo principal de automóveis/MPV e confirmar categoria/homologação."
+    },
+    {
+      "brand": "Toyota",
+      "model": "Hilux BEV",
+      "powertrain": "BEV",
+      "sourceUrl": "https://www.toyota.pt/carros",
+      "reason": "Gama nacional apresenta Hilux elétrico; não confundir com diesel/híbrido. Lote próprio de pick-ups se fizer sentido para o produto."
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { loadAllVehicles, loadVehicleRegistry } from '@/lib/loadVehicle'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import { getModelHeroImage } from '@/lib/modelImages'
+import { modelSlug } from '@/lib/catalog/normalize.mjs'
 import {
   getVehicleBatteryCapacityKwh,
   getVehicleChargeTime10To80Min,
@@ -67,17 +68,8 @@ function dataCompleteness(missingFields: string[]) {
   return Math.max(0, Math.round(((total - missingFields.length) / total) * 100))
 }
 
-function slugify(value: string): string {
-  return value
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-}
-
 export function toModelSlug(brand: string, model: string): string {
-  return `${slugify(brand)}-${slugify(model)}`
+  return modelSlug(brand, model)
 }
 
 export interface ModelListItem {

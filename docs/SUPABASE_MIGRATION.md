@@ -177,3 +177,9 @@ through the authenticated vehicle editor persist directly to Supabase and are re
 without the JSON publication workflow. The separate content/image file tools retain
 the limitations described above. Earlier pending/deployment statements in this file
 record the migration sequence; this section is the final cutover status.
+
+## Preparação de famílias — 22 November 2026
+
+Created 130 model families using the existing `vehicle_models` table, with no schema or permission changes. There are now 197 model rows, including 130 with no variants. Existing 86 variants and 135 offers are unchanged, verified by the canonical public catalog fingerprint before and after the transaction.
+
+A family without variants is not an application-level published model or a private draft. Existing table read permissions still apply, while public model listings are derived from variants. Version selection proposals remain in the repository plan and are not automatically imported. See [MODEL_VERSION_PLAN.md](MODEL_VERSION_PLAN.md) and the replayable seed `supabase/seeds/20261122_model_families.sql`.
