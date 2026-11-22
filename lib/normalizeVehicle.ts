@@ -1,3 +1,4 @@
+import { formatVehicleName } from '@/lib/vehicleNames'
 import type { ComparisonVehicle } from '@/types/comparison'
 import type {
   VehicleBattery,
@@ -254,11 +255,19 @@ export function getVehicleDisplayName(
   vehicle: Pick<VehicleData, 'brand' | 'model' | 'variant'> & LocalizedVehicle,
   locale: string = 'pt'
 ): string {
-  return (
-    vehicle.localized?.[locale]?.displayName ||
-    [vehicle.brand, vehicle.model, vehicle.variant].filter(Boolean).join(' ') ||
-    'Vehicle'
-  )
+  const localizedName = vehicle.localized?.[locale]?.displayName
+  if (localizedName) {
+    const repeatedPrefix = `${vehicle.brand.trim()} ${vehicle.model.trim()}`
+    if (
+      vehicle.brand.trim().toLowerCase() === vehicle.model.trim().toLowerCase() &&
+      (localizedName.toLowerCase() === repeatedPrefix.toLowerCase() ||
+        localizedName.toLowerCase().startsWith(`${repeatedPrefix.toLowerCase()} `))
+    ) {
+      return `${vehicle.brand.trim()}${localizedName.slice(repeatedPrefix.length)}`
+    }
+    return localizedName
+  }
+  return formatVehicleName(vehicle.brand, vehicle.model, vehicle.variant) || 'Vehicle'
 }
 
 export function getVehicleImage(

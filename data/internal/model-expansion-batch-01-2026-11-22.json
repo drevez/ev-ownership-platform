@@ -432,7 +432,8 @@
         "preparedWidth": 1280,
         "preparedHeight": 720,
         "preparedSha256": "e6e8b986463062ba5fee9e37a35ea068c2bee255c897dc76af3aff412fef801a"
-      }
+      },
+      "displayName": "Aion UT"
     },
     {
       "slug": "aion-v",
@@ -577,7 +578,8 @@
         "preparedWidth": 1280,
         "preparedHeight": 720,
         "preparedSha256": "3582fb87a5f6bb50c14ba9d3428d57bdc7cd92d9902e8722689f3c1353f2edc4"
-      }
+      },
+      "displayName": "Aion V"
     },
     {
       "slug": "geely-e2",
@@ -758,7 +760,8 @@
         "preparedWidth": 1280,
         "preparedHeight": 720,
         "preparedSha256": "142c51f605e40b4536e6282d7149dde2f4c58e08b29093d4a86c44437cd59057"
-      }
+      },
+      "displayName": "Geely E2"
     },
     {
       "slug": "geely-e5",
@@ -896,7 +899,8 @@
         "preparedWidth": 1280,
         "preparedHeight": 720,
         "preparedSha256": "8988c0ba3dc1199ec88079b15b2e62e5d6d74dcd4acd9b68cec996e4540d35ff"
-      }
+      },
+      "displayName": "Geely E5"
     },
     {
       "slug": "changan-deepal-s05",
@@ -1059,7 +1063,8 @@
         "preparedWidth": 1280,
         "preparedHeight": 720,
         "preparedSha256": "146116f3f593b37aadaf2161df6c794f2431923bc7ab6f39ded5d71c9bfc70e8"
-      }
+      },
+      "displayName": "Changan Deepal S05"
     },
     {
       "slug": "changan-deepal-s07",
@@ -1133,7 +1138,7 @@
         },
         {
           "key": "my26-bev",
-          "label": "BEV RWD 77.94 kWh (MY26)",
+          "label": "BEV RWD 77.94 kWh",
           "powertrain": "BEV",
           "modelYear": 2026,
           "advertisedBatteryKWh": 77.94,
@@ -1205,7 +1210,8 @@
         "preparedWidth": 1280,
         "preparedHeight": 720,
         "preparedSha256": "ee570afba60f25658926da6cf28f98eb2375003a902ca51212c04d9f49f41b76"
-      }
+      },
+      "displayName": "Changan Deepal S07"
     },
     {
       "slug": "dongfeng-box",
@@ -1300,7 +1306,8 @@
         "preparedWidth": 1280,
         "preparedHeight": 720,
         "preparedSha256": "6fd7806a914574d83ad1e0ee49f26f72d146b70792bf1dbd032d4c83410b7b02"
-      }
+      },
+      "displayName": "Dongfeng BOX"
     },
     {
       "slug": "dongfeng-vigo",
@@ -1398,7 +1405,8 @@
         "preparedWidth": 1280,
         "preparedHeight": 720,
         "preparedSha256": "eb4ddb86a00845090a4acc63e65721903ddaf7c15176c5e29def0358974ed08a"
-      }
+      },
+      "displayName": "Dongfeng VIGO"
     },
     {
       "slug": "firefly-firefly",
@@ -1523,7 +1531,8 @@
         "preparedWidth": 1280,
         "preparedHeight": 720,
         "preparedSha256": "d597cfc7796ab2067fb756d75ee1cb2f62c8dfc65f214d5030d3764a232180ef"
-      }
+      },
+      "displayName": "Firefly"
     }
   ],
   "sourceFetchFingerprints": {

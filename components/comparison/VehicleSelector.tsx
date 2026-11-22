@@ -1,5 +1,6 @@
 'use client'
 
+import { getModelDisplayName } from '@/lib/vehicleNames'
 import { useEffect, useRef, useState } from 'react'
 import { SafeImage as Image } from '@/components/SafeImage'
 import Link from 'next/link'
@@ -441,7 +442,7 @@ export function VehicleSelector({
           {filteredChoices.map((choice) => {
             const id = 'slug' in choice ? choice.slug : choice.id
             const image = 'heroImage' in choice ? choice.heroImage : VEHICLE_PLACEHOLDER_IMAGE
-            const title = 'displayName' in choice ? choice.displayName : `${choice.brand} ${choice.model}`
+            const title = 'displayName' in choice ? choice.displayName : getModelDisplayName(choice.brand, choice.model)
             const subtitle = 'variantCount' in choice
               ? `${choice.variantCount} ${versionCountLabel(choice.variantCount)}`
               : choice.variant
@@ -559,7 +560,7 @@ export function VehicleSelector({
                   </span>
                   {selectedChoices.map((choice) => {
                     const id = 'slug' in choice ? choice.slug : choice.id
-                    const title = 'displayName' in choice ? choice.displayName : `${choice.brand} ${choice.model}`
+                    const title = 'displayName' in choice ? choice.displayName : getModelDisplayName(choice.brand, choice.model)
 
                     return (
                     <span

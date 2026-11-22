@@ -1,3 +1,4 @@
+import { getModelDisplayName } from '@/lib/vehicleNames'
 import Link from 'next/link'
 import { VehicleHero } from './VehicleHero'
 import { SpecsGrid } from './SpecsGrid'
@@ -31,7 +32,7 @@ export function VehiclePage({
 }: VehiclePageProps) {
   const t = getTranslations(locale)
   const displayName = getVehicleDisplayName(vehicle, locale)
-  const modelName = `${vehicle.brand} ${vehicle.model}`
+  const modelName = getModelDisplayName(vehicle.brand, vehicle.model)
   const brandHref = buildLocalizedHref(
     `/models?brand=${encodeURIComponent(vehicle.brand)}`,
     locale

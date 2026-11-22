@@ -11,10 +11,10 @@ Levantamento dos **9 modelos**, com **19 configurações identificadas** e **9 f
 | Geely E2 | PRO 35.35 kWh; MAX 47.14 kWh; ULTRA 47.14 kWh | 35.35 kWh / 47.14 kWh | 252 km / 345 km |
 | Geely E5 | PRO 60.22 kWh; MAX 60.22 kWh | 60.22 kWh | 430 km / por resolver |
 | Changan Deepal S05 | BEV RWD PRO 68.8 kWh; BEV RWD MAX 68.8 kWh; BEV AWD MAX 68.8 kWh | 68.8 kWh | 485 km / 445 km |
-| Changan Deepal S07 | BEV 79.97 kWh; MY26 BEV 77.94 kWh | 79.97 kWh / 77.94 kWh | 475 km / 500 km |
+| Changan Deepal S07 | BEV RWD 79.97 kWh; BEV RWD 77.94 kWh | 79.97 kWh / 77.94 kWh | 475 km / 500 km |
 | Dongfeng BOX | PLUS 42.3 kWh | 42.3 kWh | 310 km |
 | Dongfeng VIGO | One Edition 51.87 kWh | 51.87 kWh | 340 km |
-| Firefly Firefly | Select 41.2 kWh; Comfort 41.2 kWh | 41.2 kWh | 330 km / por resolver |
+| Firefly | Select 41.2 kWh; Comfort 41.2 kWh | 41.2 kWh | 330 km / por resolver |
 
 ## Decisões antes de importar
 
@@ -199,7 +199,7 @@ Fontes comuns: [s07](https://changan-auto.pt/configurador/deepal-s07/), [s07-spe
 - Preço de referência: **44,990.00 €**, com IVA; público `private`; tipo `configurator_pvp`; estado `current_reference`; validade início não indicado → fim não indicado. IVA incluído; sem transporte/legalização; jante 19 de base. [Fonte](https://changan-auto.pt/configurador/deepal-s07/).
 - Pendente: Confirmar AC/DC máximos; não copiar os 200 kW do MY26.
 
-### BEV RWD 77.94 kWh (Model Year 2026; acabamento não identificado)
+### BEV RWD 77.94 kWh
 
 - Tração: RWD. Bateria anunciada: 77.94 kWh (base: unspecified). WLTP combinado: 500 km. Modelo/ano: 2026.
 - Dados específicos: `{"batteryChemistry": "LFP", "powerKW": 190, "acMaxKW": 11, "dcMaxKW": 200, "chargeInterval": {"fromPct": 10, "toPct": 80, "minutes": 24}, "heatPump": true, "vehicleToLoadKW": 6, "wheelInches": 20}`.
@@ -256,7 +256,7 @@ Fontes comuns: [vigo](https://www.dongfeng-auto.pt/modelos/dongfeng-vigo), [vigo
 
 Foto oficial: [origem](https://stwfccmsprodwesteurope01.blob.core.windows.net/dongfengpt-682326be8578fb1e857c7d06-prod/img-slide1-a-1-desktop-1.webp); preparada internamente em `data/internal/prepared-model-media/dongfeng-vigo.webp` (1280×720). Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.
 
-## Firefly Firefly
+## Firefly
 
 Estado: pesquisa concluída com pendências explícitas; **sem publicação automática**.
 

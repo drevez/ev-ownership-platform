@@ -1,4 +1,5 @@
 'use client'
+import { getModelDisplayName } from '@/lib/vehicleNames'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
@@ -56,7 +57,7 @@ export default function SearchBar() {
             const key = `${brand} ${model}`.toLowerCase()
             if (!uniqueModels.has(key)) {
               uniqueModels.set(key, {
-                name: `${brand} ${model}`,
+                name: getModelDisplayName(brand, model),
                 slug: toModelSlug(brand, model),
                 brand,
               })

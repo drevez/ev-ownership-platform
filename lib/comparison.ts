@@ -1,3 +1,4 @@
+import { formatVehicleName } from '@/lib/vehicleNames'
 import { getTranslations } from '@/lib/getTranslations'
 import { normalizeVehicleForComparison } from '@/lib/normalizeVehicle'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
@@ -396,7 +397,7 @@ export function mapRegistryToComparisonVehicle(entry: {
     model: entry.model,
     variant: entry.variant,
     displayName:
-      `${entry.brand} ${entry.model} ${entry.variant}`.trim(),
+      formatVehicleName(entry.brand, entry.model, entry.variant),
     image: entry.heroImage || VEHICLE_PLACEHOLDER_IMAGE,
     segment: entry.segment,
     bodyType: entry.bodyType,
@@ -426,7 +427,7 @@ export function mapApiToComparisonVehicle(
     variant: String(data.variant ?? ''),
     displayName:
       (typeof data.displayName === 'string' && data.displayName) ||
-      `${data.brand ?? ''} ${data.model ?? ''} ${data.variant ?? ''}`.trim(),
+      formatVehicleName(String(data.brand ?? ''), String(data.model ?? ''), String(data.variant ?? '')),
     image,
     segment: String(data.segment ?? ''),
     bodyType: String(data.bodyType ?? ''),

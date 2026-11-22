@@ -1,3 +1,4 @@
+import { getModelDisplayName } from '@/lib/vehicleNames'
 import { loadAllVehicles, loadVehicleRegistry } from '@/lib/loadVehicle'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
 import { getModelHeroImage } from '@/lib/modelImages'
@@ -98,7 +99,7 @@ export async function getAllModelSummaries(): Promise<ModelListItem[]> {
         slug,
         brand: entry.brand,
         model: entry.model,
-        displayName: `${entry.brand} ${entry.model}`,
+        displayName: getModelDisplayName(entry.brand, entry.model),
         variantCount: 1,
         heroImage: getModelHeroImage(slug, entry.heroImage || VEHICLE_PLACEHOLDER_IMAGE),
         segment: entry.segment,
@@ -184,7 +185,7 @@ export async function loadModel(slug: string): Promise<ModelPageData | null> {
     slug,
     brand: first.brand,
     model: first.model,
-    displayName: `${first.brand} ${first.model}`,
+    displayName: getModelDisplayName(first.brand, first.model),
     segment: heroVariant.segment,
     bodyType: heroVariant.bodyType,
     heroImage: getModelHeroImage(slug, heroVariant.image),
@@ -291,7 +292,7 @@ export async function getModelExplorerData(): Promise<ModelExplorerItem[]> {
         slug: group.slug,
         brand: group.brand,
         model: group.model,
-        displayName: `${group.brand} ${group.model}`,
+        displayName: getModelDisplayName(group.brand, group.model),
         heroImage: getModelHeroImage(
           group.slug,
           variants[0]?.image || group.registryHeroImage || VEHICLE_PLACEHOLDER_IMAGE
