@@ -145,6 +145,7 @@ export function VehiclePage({
           model={vehicle.model}
           variant={vehicle.variant}
           modelYear={vehicle.modelYear}
+          motorPowerKW={vehicle.motorPowerKW}
           doors={vehicle.doors}
           seats={vehicle.seats}
           dimensions={vehicle.dimensions}

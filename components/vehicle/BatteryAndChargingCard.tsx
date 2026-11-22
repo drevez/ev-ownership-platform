@@ -15,6 +15,11 @@ export function BatteryAndChargingCard({
 
   const t = useTranslations()
 
+  const acOptions = [
+    charging.acSinglePhaseKW ? `${charging.acSinglePhaseKW} kW ${t.batteryAndCharging.singlePhase}` : null,
+    charging.acThreePhaseKW ? `${charging.acThreePhaseKW} kW ${t.batteryAndCharging.threePhase}` : null,
+  ].filter(Boolean)
+
   const specs = [
     {
       label: t.batteryAndCharging.usableBattery,
@@ -46,9 +51,11 @@ export function BatteryAndChargingCard({
     },
     {
       label: t.batteryAndCharging.acCharging,
-      value: charging.acMaxChargeKW
-        ? `${charging.acMaxChargeKW} kW`
-        : t.common.notAvailable,
+      value: acOptions.length
+        ? `${acOptions.join(' / ')} — ${t.batteryAndCharging.dependingOnConfiguration}`
+        : charging.acMaxChargeKW
+          ? `${charging.acMaxChargeKW} kW`
+          : t.common.notAvailable,
       icon: '🏠',
     },
     {
@@ -58,6 +65,9 @@ export function BatteryAndChargingCard({
         : t.common.notAvailable,
       icon: '⚙️',
     },
+    ...(charging.charge10to80Min
+      ? [{ label: t.batteryAndCharging.charge10to80, value: `${charging.charge10to80Min} min`, icon: '⏱️' }]
+      : []),
   ]
 
   return (

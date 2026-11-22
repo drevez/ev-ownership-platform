@@ -1,0 +1,85 @@
+{
+  "reviewedAt": "2026-11-22",
+  "records": [
+    {
+      "id": "firefly",
+      "files": {
+        "core": {
+          "id": "firefly",
+          "brand": "Firefly",
+          "model": "Firefly",
+          "variant": "",
+          "segment": "B",
+          "bodyType": "Hatchback",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "motorPowerKW": 120,
+          "image": "/cars/firefly.webp",
+          "localized": {
+            "pt": {
+              "displayName": "Firefly",
+              "searchAliases": [
+                "firefly",
+                "nio firefly"
+              ]
+            },
+            "en": {
+              "displayName": "Firefly"
+            },
+            "es": {
+              "displayName": "Firefly"
+            }
+          }
+        },
+        "battery": {
+          "batteryUsableKWh": 41.2
+        },
+        "charging": {
+          "dcMaxChargeKW": 100,
+          "acSinglePhaseKW": 7,
+          "acThreePhaseKW": 11,
+          "charge10to80Min": 29
+        },
+        "comfort": {
+          "heatPumpAvailable": false,
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4003,
+          "widthMM": 1885,
+          "heightMM": 1557,
+          "wheelbaseMM": 2615,
+          "cargoLitersSeatsUp": 404,
+          "cargoLitersSeatsDown": 1253,
+          "frunkLiters": 92
+        },
+        "efficiency": {
+          "wltpRangeKm": 330
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 30900,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela português, revisto em 09/11/2026",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/firefly/firefly/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "PVP de tabela da configuração de entrada, com impostos; não inclui pintura, opcionais, transporte, matrícula ou averbamento. Tabela revista em 09/11/2026, consultada em 22/11/2026. Uma única versão apresentada: Firefly. Confirmar preço e disponibilidade junto do concessionário."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

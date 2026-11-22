@@ -390,6 +390,11 @@
       "reviewedAt": "2026-11-22",
       "note": "O corpo do ensaio diz RWD; a caixa técnica diz FWD, inconsistente. Não copiar tração desta caixa. Dimensões corroboradas com outras fontes.",
       "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "firefly-user-heat-pump": {
+      "type": "user_confirmation",
+      "reviewedAt": "2026-11-22",
+      "note": "O utilizador confirmou explicitamente que o Firefly não tem bomba de calor."
     }
   },
   "models": [
@@ -1985,7 +1990,8 @@
             "supply": "three_phase"
           }
         ],
-        "acConfigurationNote": "7 kW monofásico ou 11 kW trifásico, consoante carregador de bordo/configuração. A página oficial não estabelece que toda a unidade aceite 11 kW."
+        "acConfigurationNote": "7 kW monofásico ou 11 kW trifásico, consoante carregador de bordo/configuração. A página oficial não estabelece que toda a unidade aceite 11 kW.",
+        "heatPump": false
       },
       "commonEvidence": [
         "firefly",
@@ -2010,7 +2016,8 @@
             "heatedFrontSeats": true,
             "heatedSteeringWheel": true,
             "batteryUsableKWh": 41.2,
-            "powerKW": 120
+            "powerKW": 120,
+            "heatPumpAvailable": false
           },
           "evidence": [
             "firefly",
@@ -2136,6 +2143,13 @@
           ],
           "confidence": "high",
           "note": "As duas opções são documentadas; não se escolhe 11 kW como equipamento garantido da configuração mais barata. Site oficial anuncia 7 kW monofásico, sem arredondar para 7,4 kW de fontes secundárias."
+        },
+        "heatPump": {
+          "sources": [
+            "firefly-user-heat-pump"
+          ],
+          "confidence": "user_confirmed",
+          "note": "Ausente, por confirmação explícita do utilizador; não atribuído ao site oficial."
         }
       },
       "selectionPolicy": {
@@ -2155,13 +2169,12 @@
           "Tabela portuguesa de 09/11: entrada 30.900 €, RWD, 330 km, medidas e mala; fonte identifica impostos incluídos e despesas excluídas.",
           "41,2 kWh úteis corroborados por ficha europeia e ensaio PT; DC 100 kW e 29 min 10–80 no site oficial.",
           "Site oficial PT confirma 120 kW/163 cv, AC 7 kW monofásico ou 11 kW trifásico, DC 100 kW, 29 min 10–80 e V2L.",
-          "Opções AC registadas na mesma versão Firefly; não criam acabamentos nem garantem 11 kW em todas as unidades."
+          "Opções AC registadas na mesma versão Firefly; não criam acabamentos nem garantem 11 kW em todas as unidades.",
+          "Sem bomba de calor, confirmado pelo utilizador em 22/11/2026."
         ],
         "remaining": [],
-        "optionalUnknown": [
-          "Bomba de calor por configuração."
-        ],
-        "recommendation": "Informação essencial pronta para preparar publicação de uma única versão Firefly; apresentar AC por configuração. Bomba de calor permanece sem confirmação, sem bloquear os restantes campos."
+        "optionalUnknown": [],
+        "recommendation": "Informação essencial pronta para uma única versão Firefly; sem bomba de calor e AC por configuração."
       }
     }
   ],

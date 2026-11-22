@@ -10,5 +10,11 @@
     "sourceUrl": "https://www.leapmotor.net/pt-pt/modelos/b03x",
     "sourceImageUrl": "https://www.leapmotor.net/images/default-source/b03x/leap_motor_b03x_rgb_02_hires-16c1fa2e5fb784421afd6535279680f1d.jpg?sfvrsn=c467e6d9_36",
     "notes": "Official outdoor photograph for the model. Versions use separate official brown/beige product images; photographs are representative of the model and not a guarantee of trim, wheels or colour."
+  },
+  "firefly-firefly": {
+    "heroImage": "/cars/firefly.webp",
+    "sourceUrl": "https://fireflyportugal.pt/o-nosso-carro/",
+    "sourceImageUrl": "https://fireflyportugal.pt/wp-content/uploads/1753091864687-1753091863279-7BBE23F55268DA69-scaled-1.webp",
+    "notes": "Official outdoor model photograph; representative colour/equipment. One selected entry configuration displayed simply as Firefly."
   }
 }

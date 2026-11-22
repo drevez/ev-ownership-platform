@@ -14,13 +14,13 @@ export interface VehicleDataIssue {
 const MODULE_KEYS: Record<VehicleModuleName, Set<string>> = {
   core: new Set([
     'id', 'brand', 'model', 'variant', 'modelYear', 'segment', 'bodyType',
-    'drivetrain', 'doors', 'seats', 'image', 'heroImage', 'localized',
+    'drivetrain', 'doors', 'seats', 'motorPowerKW', 'image', 'heroImage', 'localized',
   ]),
   battery: new Set([
     'batteryChemistry', 'batteryGrossKWh', 'batteryUsableKWh', 'voltageArchitecture',
   ]),
   charging: new Set([
-    'dcMaxChargeKW', 'acMaxChargeKW', 'charge10to80Min', 'chargePer10MinKm',
+    'dcMaxChargeKW', 'acMaxChargeKW', 'acSinglePhaseKW', 'acThreePhaseKW', 'charge10to80Min', 'chargePer10MinKm',
     'plugAndChargeSupport', 'teslaSuperchargerAccess', 'chargingCurveId',
   ]),
   comfort: new Set([
@@ -173,6 +173,7 @@ function validateCore(core: JsonObject, folderId: string) {
     ))
   }
   validateNumber(issues, 'core', core, 'modelYear', 1990, 2100, { integer: true })
+  validateNumber(issues, 'core', core, 'motorPowerKW', 1, 2000)
   validateNumber(issues, 'core', core, 'doors', 2, 6, { integer: true })
   validateNumber(issues, 'core', core, 'seats', 1, 9, { integer: true })
   return issues
@@ -355,6 +356,8 @@ export function validateVehicleFiles(
 
   validateNumber(issues, 'charging', files.charging, 'dcMaxChargeKW', 10, 1000)
   validateNumber(issues, 'charging', files.charging, 'acMaxChargeKW', 1, 100)
+  validateNumber(issues, 'charging', files.charging, 'acSinglePhaseKW', 1, 100)
+  validateNumber(issues, 'charging', files.charging, 'acThreePhaseKW', 1, 100)
   validateNumber(issues, 'charging', files.charging, 'charge10to80Min', 5, 180)
   validateNumber(issues, 'charging', files.charging, 'chargePer10MinKm', 1, 1000)
   for (const key of ['plugAndChargeSupport', 'teslaSuperchargerAccess']) {

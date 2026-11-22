@@ -14,6 +14,7 @@ interface SpecsGridProps {
   model: string
   variant?: string
   modelYear?: number
+  motorPowerKW?: number
   doors?: number
   seats?: number
   dimensions?: VehicleDimensions
@@ -24,6 +25,7 @@ export function SpecsGrid({
   model,
   variant,
   modelYear,
+  motorPowerKW,
   doors,
   seats,
   dimensions = {}
@@ -56,6 +58,10 @@ export function SpecsGrid({
       value: modelYear || t.common.notAvailable,
       icon: '📅'
     },
+
+    ...(motorPowerKW != null
+      ? [{ label: t.specsGrid.motorPower, value: `${motorPowerKW} kW`, icon: '⚡' }]
+      : []),
 
     ...(doors
       ? [{

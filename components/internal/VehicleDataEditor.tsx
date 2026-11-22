@@ -299,6 +299,7 @@ export function VehicleDataEditor({
     model: stringValue(core, 'model'),
     variant: stringValue(core, 'variant'),
     modelYear: numberValue(core, 'modelYear'),
+    motorPowerKW: numberValue(core, 'motorPowerKW'),
     segment: stringValue(core, 'segment'),
     bodyType: stringValue(core, 'bodyType'),
     drivetrain: stringValue(core, 'drivetrain'),
@@ -328,6 +329,8 @@ export function VehicleDataEditor({
   const [chargingForm, setChargingForm] = useState({
     dcMaxChargeKW: numberValue(files.charging, 'dcMaxChargeKW'),
     acMaxChargeKW: numberValue(files.charging, 'acMaxChargeKW'),
+    acSinglePhaseKW: numberValue(files.charging, 'acSinglePhaseKW'),
+    acThreePhaseKW: numberValue(files.charging, 'acThreePhaseKW'),
     charge10to80Min: numberValue(files.charging, 'charge10to80Min'),
     chargePer10MinKm: numberValue(files.charging, 'chargePer10MinKm'),
     plugAndChargeSupport: booleanValue(files.charging, 'plugAndChargeSupport'),
@@ -397,6 +400,7 @@ export function VehicleDataEditor({
       },
     }
     putIfNumber(nextCore, 'modelYear', coreForm.modelYear)
+    putIfNumber(nextCore, 'motorPowerKW', coreForm.motorPowerKW)
     putIfNumber(nextCore, 'doors', coreForm.doors)
     putIfNumber(nextCore, 'seats', coreForm.seats)
 
@@ -412,6 +416,8 @@ export function VehicleDataEditor({
     }
     putIfNumber(charging, 'dcMaxChargeKW', chargingForm.dcMaxChargeKW)
     putIfNumber(charging, 'acMaxChargeKW', chargingForm.acMaxChargeKW)
+    putIfNumber(charging, 'acSinglePhaseKW', chargingForm.acSinglePhaseKW)
+    putIfNumber(charging, 'acThreePhaseKW', chargingForm.acThreePhaseKW)
     putIfNumber(charging, 'charge10to80Min', chargingForm.charge10to80Min)
     putIfNumber(charging, 'chargePer10MinKm', chargingForm.chargePer10MinKm)
     putIfString(charging, 'chargingCurveId', chargingForm.chargingCurveId || id)
@@ -603,6 +609,7 @@ export function VehicleDataEditor({
         <Field label="Brand" value={coreForm.brand} onChange={(brand) => setCoreForm({ ...coreForm, brand })} />
         <Field label="Model" value={coreForm.model} onChange={(model) => setCoreForm({ ...coreForm, model })} />
         <Field label="Variant" value={coreForm.variant} onChange={(variant) => setCoreForm({ ...coreForm, variant })} />
+        <Field label="Motor power kW" value={coreForm.motorPowerKW} onChange={(motorPowerKW) => setCoreForm({ ...coreForm, motorPowerKW })} type="number" />
         <Field label="Model year" value={coreForm.modelYear} onChange={(modelYear) => setCoreForm({ ...coreForm, modelYear })} type="number" />
         <Field label="Segment" value={coreForm.segment} onChange={(segment) => setCoreForm({ ...coreForm, segment })} />
         <Field label="Body type" value={coreForm.bodyType} onChange={(bodyType) => setCoreForm({ ...coreForm, bodyType })} />
@@ -630,6 +637,8 @@ export function VehicleDataEditor({
 
       <EditorSection title="Charging">
         <Field label="DC max kW" value={chargingForm.dcMaxChargeKW} onChange={(dcMaxChargeKW) => setChargingForm({ ...chargingForm, dcMaxChargeKW })} type="number" />
+        <Field label="AC single-phase kW (configuration dependent)" value={chargingForm.acSinglePhaseKW} onChange={(acSinglePhaseKW) => setChargingForm({ ...chargingForm, acSinglePhaseKW })} type="number" />
+        <Field label="AC three-phase kW (configuration dependent)" value={chargingForm.acThreePhaseKW} onChange={(acThreePhaseKW) => setChargingForm({ ...chargingForm, acThreePhaseKW })} type="number" />
         <Field label="AC max kW" value={chargingForm.acMaxChargeKW} onChange={(acMaxChargeKW) => setChargingForm({ ...chargingForm, acMaxChargeKW })} type="number" />
         <Field label="10-80 min" value={chargingForm.charge10to80Min} onChange={(charge10to80Min) => setChargingForm({ ...chargingForm, charge10to80Min })} type="number" />
         <Field label="10 min km" value={chargingForm.chargePer10MinKm} onChange={(chargePer10MinKm) => setChargingForm({ ...chargingForm, chargePer10MinKm })} type="number" />

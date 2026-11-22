@@ -746,6 +746,10 @@ export const en = {
     }
   },
   batteryAndCharging: {
+    singlePhase: "single-phase",
+    threePhase: "three-phase",
+    dependingOnConfiguration: "depending on configuration",
+    charge10to80: "DC charging 10–80%",
     title: "Battery & Charging",
     usableBattery: "Usable Battery",
     grossBattery: "Gross Battery",
@@ -855,6 +859,7 @@ export const en = {
     }
   },
   specsGrid: {
+    motorPower: "Motor power",
     title: "Specifications",
     brand: "Brand",
     model: "Model",

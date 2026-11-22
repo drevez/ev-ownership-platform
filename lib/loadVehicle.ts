@@ -22,6 +22,8 @@ export interface VehicleBattery {
 export interface VehicleCharging {
   dcMaxChargeKW?: number
   acMaxChargeKW?: number
+  acSinglePhaseKW?: number
+  acThreePhaseKW?: number
   charge10to80Min?: number
   chargePer10MinKm?: number
   plugAndChargeSupport?: boolean
@@ -163,6 +165,7 @@ export interface VehicleData {
 
   variant?: string
   modelYear?: number
+  motorPowerKW?: number
 
   segment?: string
   bodyType?: string

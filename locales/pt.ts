@@ -746,6 +746,10 @@ export const pt = {
     }
   },
   batteryAndCharging: {
+    singlePhase: "monofásico",
+    threePhase: "trifásico",
+    dependingOnConfiguration: "consoante a configuração",
+    charge10to80: "Carga DC 10–80%",
     title: "Bateria e carregamento",
     usableBattery: "Bateria útil",
     grossBattery: "Bateria bruta",
@@ -855,6 +859,7 @@ export const pt = {
     }
   },
   specsGrid: {
+    motorPower: "Potência do motor",
     title: "Especificações",
     brand: "Marca",
     model: "Modelo",
