@@ -166,3 +166,7 @@ Criação aplicada e verificada no MotorZero em 22/11/2026: **130/130 famílias 
 A primeira tentativa foi integralmente recusada por colisão entre P7 e P7+; não gravou famílias. A normalização partilhada passou a preservar `+` como `plus` (P7+ → `xpeng-p7-plus`, C-HR+ → `toyota-c-hr-plus`). Os 67 URLs atuais mantêm os identificadores, cobertos por teste. A segunda execução criou as famílias numa só transação.
 
 Validação: 64 testes passaram, incluindo repetição idempotente, recusa transacional de colisões, preservação do P7 existente e dos URLs públicos. Lint dos ficheiros alterados e build de produção passaram.
+
+## Pesquisa detalhada do primeiro lote
+
+Em 22/11/2026 foram identificadas 19 configurações para os nove primeiros modelos, com fontes, preços condicionais, divergências e fotos preparadas. Ver [levantamento do lote 1](MODEL_EXPANSION_BATCH_01.md). Estes registos ainda não foram importados como variantes; os totais de propostas acima descrevem o plano inicial, não o resultado desta pesquisa.

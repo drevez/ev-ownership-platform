@@ -71,7 +71,13 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
+        "reviewedAt": "2026-11-22",
+        "status": "researched_with_documented_gaps",
+        "versionsIdentified": 3
+      }
     },
     {
       "slug": "aion-v",
@@ -128,7 +134,13 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
+        "reviewedAt": "2026-11-22",
+        "status": "researched_with_documented_gaps",
+        "versionsIdentified": 2
+      }
     },
     {
       "slug": "geely-e2",
@@ -185,7 +197,13 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
+        "reviewedAt": "2026-11-22",
+        "status": "researched_with_documented_gaps",
+        "versionsIdentified": 3
+      }
     },
     {
       "slug": "geely-e5",
@@ -242,7 +260,13 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
+        "reviewedAt": "2026-11-22",
+        "status": "researched_with_documented_gaps",
+        "versionsIdentified": 2
+      }
     },
     {
       "slug": "changan-deepal-s05",
@@ -286,7 +310,13 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
+        "reviewedAt": "2026-11-22",
+        "status": "researched_with_documented_gaps",
+        "versionsIdentified": 3
+      }
     },
     {
       "slug": "changan-deepal-s07",
@@ -343,7 +373,13 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
+        "reviewedAt": "2026-11-22",
+        "status": "researched_with_documented_gaps",
+        "versionsIdentified": 2
+      }
     },
     {
       "slug": "dongfeng-box",
@@ -400,7 +436,13 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
+        "reviewedAt": "2026-11-22",
+        "status": "researched_with_documented_gaps",
+        "versionsIdentified": 1
+      }
     },
     {
       "slug": "dongfeng-vigo",
@@ -457,7 +499,13 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
+        "reviewedAt": "2026-11-22",
+        "status": "researched_with_documented_gaps",
+        "versionsIdentified": 1
+      }
     },
     {
       "slug": "forthing-friday-ev",
@@ -602,7 +650,13 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
+        "reviewedAt": "2026-11-22",
+        "status": "researched_with_documented_gaps",
+        "versionsIdentified": 2
+      }
     },
     {
       "slug": "voyah-courage",

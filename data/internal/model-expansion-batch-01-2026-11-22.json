@@ -1,0 +1,1657 @@
+{
+  "reviewedAt": "2026-11-22",
+  "scope": "Primeiro lote: nove famílias, apenas BEV. Pesquisa para preparar variantes; sem importação de dados incertos.",
+  "summary": {
+    "models": 9,
+    "versionsIdentified": 19,
+    "officialPhotoCandidates": 9,
+    "databaseWrites": 0,
+    "publishedVersions": 0
+  },
+  "publicationRules": [
+    "Este ficheiro não é payload de catalog_save nem lote de importação.",
+    "Preço deve conservar audiência, IVA, início/fim, condições e fonte. Não assumir validade presente só porque a página está online.",
+    "Nunca transformar carga 20–80/30–80 em 10–80.",
+    "Não classificar capacidade como bruta/útil sem fonte explícita.",
+    "Dados em disputa continuam sem valor final; hipóteses não se tornam versões publicadas.",
+    "Consumo WLTP não preenche consumo real; autonomia real/autoestrada sem evidência permanece vazia.",
+    "MY/model year, geração/revisão técnica e acabamento são conceitos separados; MY26 não é trim. As 19 entradas são configurações identificadas, não 19 acabamentos distintos."
+  ],
+  "sources": {
+    "ut": {
+      "url": "https://gac-portugal.pt/aion-ut/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "v": {
+      "url": "https://gac-portugal.pt/aion-v/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "ut-range": {
+      "url": "https://gac-portugal.pt/universo-gac/carro-eletrico-citadino/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "v-range": {
+      "url": "https://gac-portugal.pt/universo-gac/carro-eletrico-familiar/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "aion-charge": {
+      "url": "https://gac-portugal.pt/universo-gac/carregar-carro-eletrico/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "ut-cash": {
+      "url": "https://gac-portugal.pt/campanhas/aion-ut-preco-particulares/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "ut-finance": {
+      "url": "https://gac-portugal.pt/campanhas/aion-ut-financiamento/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "ut-business": {
+      "url": "https://gac-portugal.pt/campanhas/aion-ut-preco-empresas/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "v-finance": {
+      "url": "https://gac-portugal.pt/campanhas/aion-v-financiamento/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "v-business": {
+      "url": "https://gac-portugal.pt/campanhas/aion-v-preco-empresas/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "ut-reference": {
+      "url": "https://www.guiadoautomovel.pt/marcas/aion/ut/precos",
+      "type": "secondary_pt",
+      "reviewedAt": "2026-11-22",
+      "note": "Tabela de 16/11; não confundir preço de tabela com campanha.",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "v-reference": {
+      "url": "https://evmag.pt/ensaio-aion-v-conforto-a-serio-software-pior/",
+      "type": "secondary_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "e2": {
+      "url": "https://www.geely-auto.pt/modelos/geely-e2",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "e5": {
+      "url": "https://www.geely-auto.pt/modelos/geely-e5",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "geely-config-data": {
+      "url": "https://www.geely-auto.pt/assets/ModelPage-6ko6VLZ6.js",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "note": "Dados públicos do configurador servido ao navegador; foram lidos sem executar código remoto. Contêm divergências de preço, IVA e autonomia; não importar automaticamente.",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "e2-campaign": {
+      "url": "https://campanhas.geely-auto.pt/geely-e2/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "e2-dealer": {
+      "url": "https://caetano.pt/geely/carros-novos/e2/",
+      "type": "official_dealer_pt",
+      "reviewedAt": "2026-11-22",
+      "note": "Página obtida diretamente; o índice de pesquisa ainda mostrava texto anterior.",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "e5-dealer": {
+      "url": "https://caetano.pt/geely/carros-novos/e5/",
+      "type": "official_dealer_pt",
+      "reviewedAt": "2026-11-22",
+      "note": "Página obtida diretamente; campanha atual até 30/11/2026, apesar de resultados indexados antigos.",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "e5-check": {
+      "url": "https://www.razaoautomovel.com/noticias/lancamento-marca-geely-portugal-2026/",
+      "type": "secondary_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "e2-check": {
+      "url": "https://www.razaoautomovel.com/noticias/apresentacao-geely-e2-sahe-2026/",
+      "type": "secondary_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "s05": {
+      "url": "https://changan-auto.pt/configurador/deepal-s05/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "s05-spec": {
+      "url": "https://changan-auto.pt/ficha-tecnica-s05/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "s05-awd": {
+      "url": "https://changan-auto.pt/modelos/deepal-s05-awd/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "s07": {
+      "url": "https://changan-auto.pt/configurador/deepal-s07/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "s07-spec": {
+      "url": "https://changan-auto.pt/ficha-tecnica-s07/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "s07-alt": {
+      "url": "https://changan-auto.pt/configurador-my26/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "note": "Outro configurador oficial mostra 44.990 € para MY26; principal mostra 45.728 €. Resolver antes de fixar preço MY26.",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "box": {
+      "url": "https://www.dongfeng-auto.pt/modelos/dongfeng-box",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "vigo": {
+      "url": "https://www.dongfeng-auto.pt/modelos/dongfeng-vigo",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "box-nov": {
+      "url": "https://www.filintomota.pt/campanhas/novo-dongfeng-box-a-partir-de-24680-euros/",
+      "type": "official_dealer_pt",
+      "reviewedAt": "2026-11-22",
+      "note": "URL conserva 24680, mas conteúdo atual obtido diretamente mostra 23500. Não retirar preço do slug ou da cache de pesquisa.",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "df-black": {
+      "url": "https://www.amfmobilidade.pt/campanhas/black-friday-dongfeng-ate-5-500e-de-desconto-no-box-mage-e-vigo/",
+      "type": "official_dealer_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "vigo-nov": {
+      "url": "https://www.filintomota.pt/campanhas/novo-dongfeng-vigo-a-partir-de-25585-euros/",
+      "type": "official_dealer_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "direct_public_page_or_bundle"
+    },
+    "vigo-check": {
+      "url": "https://4gnews.pt/dongfeng-vigo-ensaio/",
+      "type": "secondary_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "box-eu": {
+      "url": "https://dongfengbox.nl/hubfs/Dongfeng%20BOX%20Specificaties_Prijslijst%20versie%2002%20-%20september%202024_27SEP.pdf?hsLang=nl",
+      "type": "official_other_market",
+      "reviewedAt": "2026-11-22",
+      "note": "Referência europeia; confirmar correspondência exata da versão portuguesa antes de importar dados adicionais.",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "firefly": {
+      "url": "https://fireflyportugal.pt/o-nosso-carro/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "firefly-finance": {
+      "url": "https://lp.fireflyportugal.pt/",
+      "type": "official_brand_pt",
+      "reviewedAt": "2026-11-22",
+      "note": "Campanha antiga com data inválida 31/06/2026; excluída de preços atuais.",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "firefly-check": {
+      "url": "https://www.razaoautomovel.com/noticias/lancamento-precos-firefly-2025/",
+      "type": "secondary_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "firefly-test": {
+      "url": "https://4gnews.pt/nio-firefly-ensaio/",
+      "type": "secondary_pt",
+      "reviewedAt": "2026-11-22",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    },
+    "firefly-spec": {
+      "url": "https://cdn-up-public.firefly.world/www-firefly/no_NO/docs/firefly_productbrochure_v.1.4_master_v4.pdf",
+      "type": "official_other_market",
+      "reviewedAt": "2026-11-22",
+      "note": "Ficha europeia identifica capacidade líquida 41,2 kWh e 105 kW; não resolve alteração de potência no site português atual.",
+      "accessMethod": "web_page_or_indexed_excerpt"
+    }
+  },
+  "models": [
+    {
+      "slug": "aion-ut",
+      "brand": "Aion",
+      "name": "UT",
+      "powertrain": "BEV",
+      "bodyType": "Hatchback",
+      "market": "pt",
+      "reviewedAt": "2026-11-22",
+      "publicationStatus": "research_draft_not_imported",
+      "commonFacts": {
+        "batteryChemistry": "LFP",
+        "acMaxKW": 11,
+        "dcMaxKW": 87,
+        "chargeInterval": {
+          "fromPct": 30,
+          "toPct": 80,
+          "minutes": 24
+        },
+        "lengthMM": 4270,
+        "widthMM": 1850,
+        "heightMM": 1575,
+        "cargoSeatsUpL": 440,
+        "powerKW": 150,
+        "torqueNm": 210,
+        "zeroTo100Seconds": 7.3
+      },
+      "commonEvidence": [
+        "ut",
+        "ut-range"
+      ],
+      "issues": [
+        "Não converter 24 min de 30–80% em 10–80%.",
+        "A página de produto tem 149 kW/203 cv no destaque e 150 kW na tabela; usar tabela e verificar homologação se adicionarmos potência.",
+        "Premium Green parece configuração comercial/cor da Premium; manter identificada no levantamento e evitar duplicação mecânica desnecessária."
+      ],
+      "versions": [
+        {
+          "key": "premium-green",
+          "label": "Premium Green 60 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 60,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "FWD",
+          "wltpCombinedKm": 430,
+          "facts": {},
+          "evidence": [
+            "ut",
+            "ut-range",
+            "ut-cash",
+            "ut-finance"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 26560,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "cash_campaign",
+              "source": "ut-cash",
+              "validFrom": null,
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "IVA e pintura metalizada incluídos; sem legalização/transporte; stock. Oferta particular explícita."
+            },
+            {
+              "amountEur": 26060,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "cash_campaign",
+              "source": "ut-finance",
+              "validFrom": null,
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "PVP sem financiamento expresso na campanha financeira; diverge da campanha a pronto de 26.560 €. Manter fontes separadas."
+            },
+            {
+              "amountEur": 25060,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "finance_conditional",
+              "source": "ut-finance",
+              "validFrom": null,
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "Só com financiamento; não usar como preço a pronto."
+            }
+          ],
+          "issues": [],
+          "configurationKind": "commercial_color_configuration"
+        },
+        {
+          "key": "premium",
+          "label": "Premium 60 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 60,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "FWD",
+          "wltpCombinedKm": 430,
+          "facts": {},
+          "evidence": [
+            "ut",
+            "ut-range"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 21803,
+              "includesVat": false,
+              "audience": "business_eni",
+              "kind": "cash_campaign",
+              "source": "ut-business",
+              "validFrom": null,
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "Inclui pintura; sem legalização/transporte; não é preço para particulares."
+            }
+          ],
+          "issues": [
+            "Falta preço particular atual específico da Premium."
+          ],
+          "configurationKind": "equipment_trim"
+        },
+        {
+          "key": "luxury",
+          "label": "Luxury 60 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 60,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "FWD",
+          "wltpCombinedKm": 430,
+          "facts": {
+            "panoramicRoof": true,
+            "electricTailgate": true,
+            "wirelessPhoneChargeW": 50,
+            "ventilatedDriverSeat": true
+          },
+          "evidence": [
+            "ut",
+            "ut-range"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 31003.3,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "list_price",
+              "source": "ut-reference",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "secondary_reference_only",
+              "notes": "Tabela de 16/11/2026; preço oficial a pronto ainda por confirmar."
+            }
+          ],
+          "issues": [
+            "Falta tabela/campanha oficial atual para particulares."
+          ],
+          "configurationKind": "equipment_trim"
+        }
+      ],
+      "photo": {
+        "slug": "aion-ut",
+        "url": "https://gac-portugal.pt/wp-content/uploads/2026/04/GAC-MI-AION-UT-NEUTRAL-2-scaled.webp",
+        "width": 2560,
+        "height": 1440,
+        "sourceType": "official_manufacturer",
+        "reviewedAt": "2026-11-22",
+        "reviewedBy": "codex",
+        "visualReview": "model_identity_confirmed_representative_configuration",
+        "publicationStatus": "prepared_internal_not_live",
+        "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
+        "preparedPath": "data/internal/prepared-model-media/aion-ut.webp",
+        "preparedWidth": 1280,
+        "preparedHeight": 720,
+        "preparedSha256": "e6e8b986463062ba5fee9e37a35ea068c2bee255c897dc76af3aff412fef801a"
+      }
+    },
+    {
+      "slug": "aion-v",
+      "brand": "Aion",
+      "name": "V",
+      "powertrain": "BEV",
+      "bodyType": "SUV",
+      "market": "pt",
+      "reviewedAt": "2026-11-22",
+      "publicationStatus": "research_draft_not_imported",
+      "commonFacts": {
+        "batteryChemistry": "LFP",
+        "dcMaxKW": 180,
+        "chargeInterval": {
+          "fromPct": 10,
+          "toPct": 80,
+          "minutes": 24
+        },
+        "lengthMM": 4605,
+        "widthMM": 1876,
+        "heightMM": 1686,
+        "wheelbaseMM": 2775,
+        "seats": 5,
+        "cargoSeatsUpL": 427,
+        "cargoSeatsDownL": 978,
+        "powerKW": 150
+      },
+      "commonEvidence": [
+        "v",
+        "v-range",
+        "aion-charge"
+      ],
+      "issues": [
+        "AC em conflito: ficha de produto 6,6 kW; artigo técnico oficial recente 11 kW. Não fixar sem ficha portuguesa da unidade.",
+        "Não usar 709 km urbanos como autonomia combinada.",
+        "Bateria anunciada 75,3 kWh; não classificar automaticamente como útil ou bruta."
+      ],
+      "versions": [
+        {
+          "key": "premium",
+          "label": "Premium 75.3 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 75.3,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "FWD",
+          "wltpCombinedKm": 510,
+          "facts": {},
+          "evidence": [
+            "v",
+            "v-range",
+            "aion-charge"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 34844,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "cash_campaign",
+              "source": "v-finance",
+              "validFrom": null,
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "PVP sem financiamento publicado; IVA implícito no PVP particular, confirmar no orçamento; sem pintura/transportes/documentação."
+            },
+            {
+              "amountEur": 33344,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "finance_conditional",
+              "source": "v-finance",
+              "validFrom": null,
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "Desconto associado a financiamento; não confundir com PVP a pronto."
+            },
+            {
+              "amountEur": 27663,
+              "includesVat": false,
+              "audience": "business",
+              "kind": "cash_campaign",
+              "source": "v-business",
+              "validFrom": null,
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "Pintura metalizada mono-tom incluída; sem legalização/transporte."
+            }
+          ],
+          "issues": [],
+          "configurationKind": "equipment_trim"
+        },
+        {
+          "key": "luxury",
+          "label": "Luxury 75.3 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 75.3,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "FWD",
+          "wltpCombinedKm": 510,
+          "facts": {
+            "frontSeatMassage": true,
+            "fridge": true,
+            "rearFoldingTable": true
+          },
+          "evidence": [
+            "v",
+            "v-range",
+            "aion-charge"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 42490,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "list_price",
+              "source": "v-reference",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "secondary_reference_only",
+              "notes": ""
+            }
+          ],
+          "issues": [
+            "Falta preço oficial atual da Luxury; o valor de ensaio não substitui campanha/tabela."
+          ],
+          "configurationKind": "equipment_trim"
+        }
+      ],
+      "photo": {
+        "slug": "aion-v",
+        "url": "https://gac-portugal.pt/wp-content/uploads/2026/04/133ebcc9edde627efe657413856456f3c86fc9f3.webp",
+        "width": 1920,
+        "height": 1024,
+        "sourceType": "official_manufacturer",
+        "reviewedAt": "2026-11-22",
+        "reviewedBy": "codex",
+        "visualReview": "model_identity_confirmed_representative_configuration",
+        "publicationStatus": "prepared_internal_not_live",
+        "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
+        "preparedPath": "data/internal/prepared-model-media/aion-v.webp",
+        "preparedWidth": 1280,
+        "preparedHeight": 720,
+        "preparedSha256": "3582fb87a5f6bb50c14ba9d3428d57bdc7cd92d9902e8722689f3c1353f2edc4"
+      }
+    },
+    {
+      "slug": "geely-e2",
+      "brand": "Geely",
+      "name": "E2",
+      "powertrain": "BEV",
+      "bodyType": "Hatchback",
+      "market": "pt",
+      "reviewedAt": "2026-11-22",
+      "publicationStatus": "research_draft_not_imported",
+      "commonFacts": {
+        "batteryChemistry": "LFP",
+        "acMaxKW": 6.6,
+        "seats": 5,
+        "cargoSeatsUpL": 375,
+        "cargoSeatsDownL": 1320,
+        "frunkL": 70,
+        "lengthMM": 4135,
+        "widthMM": 1805,
+        "heightMM": 1580,
+        "wheelbaseMM": 2645,
+        "vehicleToLoad": true
+      },
+      "commonEvidence": [
+        "e2",
+        "e2-dealer",
+        "e2-campaign",
+        "geely-config-data",
+        "e2-check"
+      ],
+      "issues": [
+        "Carga de 25 min: configurador e concessionário dizem 20–80%; landing diz 30–80%. Deixar 10–80 vazio.",
+        "Configuração de 35/47 kWh europeia; não substituir pelos dados EX2 de outros mercados.",
+        "Dimensões do concessionário atual diferem de notícias de lançamento (4125 mm). Priorizar ficha atual, confirmar homologação.",
+        "Há divergência de IVA/preços no configurador; preço com IVA usado abaixo vem do concessionário e tem condições expressas."
+      ],
+      "versions": [
+        {
+          "key": "pro",
+          "label": "PRO 35.35 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 35.35,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "RWD",
+          "wltpCombinedKm": 252,
+          "facts": {
+            "powerKW": 60,
+            "dcMaxKW": 60,
+            "chargeInterval": {
+              "fromPct": 20,
+              "toPct": 80,
+              "minutes": 25
+            }
+          },
+          "evidence": [
+            "e2",
+            "e2-dealer",
+            "e2-campaign",
+            "geely-config-data",
+            "e2-check"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 21894,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "cash_campaign",
+              "source": "e2-dealer",
+              "validFrom": null,
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "IVA incluído; sem legalização/transporte/pintura. PRO equivale a 17.800 € + IVA; MAX/ULTRA são PVP indicativos declarados pelo concessionário."
+            }
+          ],
+          "issues": [],
+          "configurationKind": "equipment_trim"
+        },
+        {
+          "key": "max",
+          "label": "MAX 47.14 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 47.14,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "RWD",
+          "wltpCombinedKm": 345,
+          "facts": {
+            "powerKW": 85,
+            "dcMaxKW": 80,
+            "chargeInterval": {
+              "fromPct": 20,
+              "toPct": 80,
+              "minutes": 25
+            }
+          },
+          "evidence": [
+            "e2",
+            "e2-dealer",
+            "e2-campaign",
+            "geely-config-data",
+            "e2-check"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 24900,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "indicative_pvp",
+              "source": "e2-dealer",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "current_reference",
+              "notes": "IVA incluído; sem legalização/transporte/pintura. PRO equivale a 17.800 € + IVA; MAX/ULTRA são PVP indicativos declarados pelo concessionário."
+            }
+          ],
+          "issues": [],
+          "configurationKind": "equipment_trim"
+        },
+        {
+          "key": "ultra",
+          "label": "ULTRA 47.14 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 47.14,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "RWD",
+          "wltpCombinedKm": 345,
+          "facts": {
+            "powerKW": 85,
+            "dcMaxKW": 80,
+            "chargeInterval": {
+              "fromPct": 20,
+              "toPct": 80,
+              "minutes": 25
+            },
+            "electricTailgate": true,
+            "wirelessPhoneCharge": true,
+            "camera540": true,
+            "speakers": 6
+          },
+          "evidence": [
+            "e2",
+            "e2-dealer",
+            "e2-campaign",
+            "geely-config-data",
+            "e2-check"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 27800,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "indicative_pvp",
+              "source": "e2-dealer",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "current_reference",
+              "notes": "IVA incluído; sem legalização/transporte/pintura. PRO equivale a 17.800 € + IVA; MAX/ULTRA são PVP indicativos declarados pelo concessionário."
+            }
+          ],
+          "issues": [],
+          "configurationKind": "equipment_trim"
+        }
+      ],
+      "photo": {
+        "slug": "geely-e2",
+        "url": "https://www.geely-auto.pt/assets/desktop/e2/Exterior_1_E2.webp",
+        "width": 1000,
+        "height": 1250,
+        "sourceType": "official_manufacturer",
+        "reviewedAt": "2026-11-22",
+        "reviewedBy": "codex",
+        "visualReview": "model_identity_confirmed_representative_configuration",
+        "publicationStatus": "prepared_internal_not_live",
+        "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão. Original vertical: procurar enquadramento horizontal antes da publicação.",
+        "preparedPath": "data/internal/prepared-model-media/geely-e2.webp",
+        "preparedWidth": 1280,
+        "preparedHeight": 720,
+        "preparedSha256": "142c51f605e40b4536e6282d7149dde2f4c58e08b29093d4a86c44437cd59057"
+      }
+    },
+    {
+      "slug": "geely-e5",
+      "brand": "Geely",
+      "name": "E5",
+      "powertrain": "BEV",
+      "bodyType": "SUV",
+      "market": "pt",
+      "reviewedAt": "2026-11-22",
+      "publicationStatus": "research_draft_not_imported",
+      "commonFacts": {
+        "advertisedBatteryKWh": 60.22,
+        "batteryChemistry": "LFP",
+        "powerKW": 160,
+        "dcMaxKW": 120,
+        "chargeInterval": {
+          "fromPct": 30,
+          "toPct": 80,
+          "minutes": 20
+        }
+      },
+      "commonEvidence": [
+        "e5",
+        "e5-dealer",
+        "geely-config-data",
+        "e5-check"
+      ],
+      "issues": [
+        "E5 é a designação portuguesa; EX5 é alias internacional, não criar família duplicada.",
+        "Configuração MAX: concessionário/lançamento indicam 410 km; configurador público mostra 425 km. Não fechar WLTP MAX até resolver.",
+        "Preços do configurador 35.700/38.200 e metadados 35.628 divergem do concessionário 35.658/38.118; manter preço e fonte juntos.",
+        "Não usar dados do STARRAY EM-i (PHEV) nem das versões 68,39 kWh de outros países.",
+        "Faltam AC, dimensões/bagageira e bomba de calor comprovados para versão PT."
+      ],
+      "versions": [
+        {
+          "key": "pro",
+          "label": "PRO 60.22 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 60.22,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "FWD",
+          "wltpCombinedKm": 430,
+          "facts": {
+            "wheelInches": 18
+          },
+          "evidence": [
+            "e5",
+            "e5-dealer",
+            "geely-config-data",
+            "e5-check"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 35658,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "cash_campaign",
+              "source": "e5-dealer",
+              "validFrom": null,
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "IVA incluído; 28.990 € + IVA; sem legalização/transporte/pintura; stock. 5 anos/80.000 km de manutenção."
+            }
+          ],
+          "issues": [],
+          "configurationKind": "equipment_trim"
+        },
+        {
+          "key": "max",
+          "label": "MAX 60.22 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 60.22,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "FWD",
+          "wltpCombinedKm": null,
+          "facts": {
+            "wheelInches": 19,
+            "panoramicRoof": true,
+            "electricTailgate": true,
+            "frontSeatMassage": true,
+            "speakers": 16
+          },
+          "evidence": [
+            "e5",
+            "e5-dealer",
+            "geely-config-data",
+            "e5-check"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 38118,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "indicative_pvp",
+              "source": "e5-dealer",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "current_reference",
+              "notes": "IVA incluído; 30.990 € + IVA; sem legalização/transporte/pintura; confirmar validade específica da MAX."
+            }
+          ],
+          "issues": [
+            "WLTP em disputa: 410 km no concessionário vs 425 km no configurador; preservar como claims, não valor final."
+          ],
+          "disputedClaims": {
+            "wltpCombinedKm": [
+              {
+                "value": 410,
+                "source": "e5-dealer"
+              },
+              {
+                "value": 425,
+                "source": "geely-config-data"
+              }
+            ]
+          },
+          "configurationKind": "equipment_trim"
+        }
+      ],
+      "photo": {
+        "slug": "geely-e5",
+        "url": "https://www.geely-auto.pt/assets/desktop/e5/1766025472-exterior-bold-first-impressions.webp",
+        "width": 1920,
+        "height": 1173,
+        "sourceType": "official_manufacturer",
+        "reviewedAt": "2026-11-22",
+        "reviewedBy": "codex",
+        "visualReview": "model_identity_confirmed_representative_configuration",
+        "publicationStatus": "prepared_internal_not_live",
+        "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
+        "preparedPath": "data/internal/prepared-model-media/geely-e5.webp",
+        "preparedWidth": 1280,
+        "preparedHeight": 720,
+        "preparedSha256": "8988c0ba3dc1199ec88079b15b2e62e5d6d74dcd4acd9b68cec996e4540d35ff"
+      }
+    },
+    {
+      "slug": "changan-deepal-s05",
+      "brand": "Changan",
+      "name": "Deepal S05",
+      "powertrain": "BEV",
+      "bodyType": "SUV",
+      "market": "pt",
+      "reviewedAt": "2026-11-22",
+      "publicationStatus": "research_draft_not_imported",
+      "commonFacts": {
+        "batteryChemistry": "LFP",
+        "acMaxKW": 11,
+        "dcMaxKW": 200,
+        "chargeInterval": {
+          "fromPct": 10,
+          "toPct": 80,
+          "minutes": 23
+        },
+        "lengthMM": 4580,
+        "widthMM": 1900,
+        "heightMM": 1600,
+        "wheelbaseMM": 2880,
+        "seats": 5,
+        "cargoSeatsUpL": 492,
+        "frunkL": 159,
+        "heatPump": true,
+        "vehicleToLoad": true
+      },
+      "commonEvidence": [
+        "s05",
+        "s05-spec",
+        "s05-awd"
+      ],
+      "issues": [
+        "Excluir S05 Ultra-Hybrid/PHEV: os preços inferiores de 31.990 € não são deste BEV.",
+        "Bagageiras medidas por método de gotas; não equiparar silenciosamente a VDA.",
+        "DC 200 kW é pico; página AWD também refere 167 kW no contexto do carregamento.",
+        "Teto panorâmico é opcional nas MAX, ausente na PRO; não tratar como série."
+      ],
+      "versions": [
+        {
+          "key": "rwd-pro",
+          "label": "BEV RWD PRO 68.8 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 68.8,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "RWD",
+          "wltpCombinedKm": 485,
+          "facts": {
+            "powerKW": 200,
+            "panoramicRoof": false,
+            "wheelInches": 18
+          },
+          "evidence": [
+            "s05",
+            "s05-spec",
+            "s05-awd"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 36990,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "configurator_pvp",
+              "source": "s05",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "current_reference",
+              "notes": "IVA incluído; sem transporte/legalização; base de versão, não total com opções; sujeito a revisão pelo concessionário."
+            }
+          ],
+          "issues": [],
+          "configurationKind": "equipment_trim"
+        },
+        {
+          "key": "rwd-max",
+          "label": "BEV RWD MAX 68.8 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 68.8,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "RWD",
+          "wltpCombinedKm": 485,
+          "facts": {
+            "powerKW": 200,
+            "panoramicRoof": "optional",
+            "wheelInches": 20
+          },
+          "evidence": [
+            "s05",
+            "s05-spec",
+            "s05-awd"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 39990,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "configurator_pvp",
+              "source": "s05",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "current_reference",
+              "notes": "IVA incluído; sem transporte/legalização; base de versão, não total com opções; sujeito a revisão pelo concessionário."
+            }
+          ],
+          "issues": [],
+          "configurationKind": "equipment_trim"
+        },
+        {
+          "key": "awd-max",
+          "label": "BEV AWD MAX 68.8 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 68.8,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "AWD",
+          "wltpCombinedKm": 445,
+          "facts": {
+            "powerKW": 320,
+            "panoramicRoof": "optional",
+            "wheelInches": 20
+          },
+          "evidence": [
+            "s05",
+            "s05-spec",
+            "s05-awd"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 42990,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "configurator_pvp",
+              "source": "s05",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "current_reference",
+              "notes": "IVA incluído; sem transporte/legalização; base de versão, não total com opções; sujeito a revisão pelo concessionário."
+            }
+          ],
+          "issues": [],
+          "configurationKind": "equipment_trim"
+        }
+      ],
+      "photo": {
+        "slug": "changan-deepal-s05",
+        "url": "https://changan-auto.pt/wp-content/uploads/2025/11/design-1-1.webp",
+        "width": 1500,
+        "height": 700,
+        "sourceType": "official_manufacturer",
+        "reviewedAt": "2026-11-22",
+        "reviewedBy": "codex",
+        "visualReview": "model_identity_confirmed_representative_configuration",
+        "publicationStatus": "prepared_internal_not_live",
+        "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
+        "preparedPath": "data/internal/prepared-model-media/changan-deepal-s05.webp",
+        "preparedWidth": 1280,
+        "preparedHeight": 720,
+        "preparedSha256": "146116f3f593b37aadaf2161df6c794f2431923bc7ab6f39ded5d71c9bfc70e8"
+      }
+    },
+    {
+      "slug": "changan-deepal-s07",
+      "brand": "Changan",
+      "name": "Deepal S07",
+      "powertrain": "BEV",
+      "bodyType": "SUV",
+      "market": "pt",
+      "reviewedAt": "2026-11-22",
+      "publicationStatus": "research_draft_not_imported",
+      "commonFacts": {
+        "lengthMM": 4750,
+        "widthMM": 1930,
+        "heightMM": 1625,
+        "wheelbaseMM": 2900,
+        "seats": 5,
+        "vehicleToLoad": true,
+        "panoramicRoof": true
+      },
+      "commonEvidence": [
+        "s07",
+        "s07-spec"
+      ],
+      "issues": [
+        "Separar versão original NMC da MY26 LFP; não combinar bateria/preço/carregamento.",
+        "Dimensões da ficha original; confirmar no MY26 antes de replicar.",
+        "Faltam volumes de bagageira e frunk PT da configuração exata."
+      ],
+      "versions": [
+        {
+          "key": "bev-79",
+          "label": "BEV RWD 79.97 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 79.97,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "RWD",
+          "wltpCombinedKm": 475,
+          "facts": {
+            "batteryChemistry": "NMC",
+            "powerKW": 160,
+            "chargeInterval": {
+              "fromPct": 10,
+              "toPct": 80,
+              "minutes": 48
+            }
+          },
+          "evidence": [
+            "s07",
+            "s07-spec"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 44990,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "configurator_pvp",
+              "source": "s07",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "current_reference",
+              "notes": "IVA incluído; sem transporte/legalização; jante 19 de base."
+            }
+          ],
+          "issues": [
+            "Confirmar AC/DC máximos; não copiar os 200 kW do MY26.",
+            "MY26 significa Model Year 2026, não acabamento. Não foi identificada designação comercial de acabamento separada; não inventar trim MY26 nem atribuir MY25 ao anterior."
+          ],
+          "configurationKind": "model_year_technical_revision",
+          "trim": null
+        },
+        {
+          "key": "my26-bev",
+          "label": "BEV RWD 77.94 kWh (MY26)",
+          "powertrain": "BEV",
+          "modelYear": 2026,
+          "advertisedBatteryKWh": 77.94,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "RWD",
+          "wltpCombinedKm": 500,
+          "facts": {
+            "batteryChemistry": "LFP",
+            "powerKW": 190,
+            "acMaxKW": 11,
+            "dcMaxKW": 200,
+            "chargeInterval": {
+              "fromPct": 10,
+              "toPct": 80,
+              "minutes": 24
+            },
+            "heatPump": true,
+            "vehicleToLoadKW": 6,
+            "wheelInches": 20
+          },
+          "evidence": [
+            "s07",
+            "s07-alt"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 45728,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "configurator_pvp",
+              "source": "s07",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "conflicting_reference",
+              "notes": "Configurador principal; divergência com outro configurador oficial de 44.990 €."
+            },
+            {
+              "amountEur": 44990,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "configurator_pvp",
+              "source": "s07-alt",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "conflicting_reference",
+              "notes": ""
+            }
+          ],
+          "issues": [
+            "Resolver preço MY26 entre configuradores; não publicar menor valor como confirmado.",
+            "MY26 significa Model Year 2026, não acabamento. Não foi identificada designação comercial de acabamento separada; não inventar trim MY26 nem atribuir MY25 ao anterior."
+          ],
+          "configurationKind": "model_year_technical_revision",
+          "trim": null
+        }
+      ],
+      "photo": {
+        "slug": "changan-deepal-s07",
+        "url": "https://changan-auto.pt/wp-content/uploads/2025/10/s07-4.webp",
+        "width": 1600,
+        "height": 1066,
+        "sourceType": "official_manufacturer",
+        "reviewedAt": "2026-11-22",
+        "reviewedBy": "codex",
+        "visualReview": "model_identity_confirmed_representative_configuration",
+        "publicationStatus": "prepared_internal_not_live",
+        "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
+        "preparedPath": "data/internal/prepared-model-media/changan-deepal-s07.webp",
+        "preparedWidth": 1280,
+        "preparedHeight": 720,
+        "preparedSha256": "ee570afba60f25658926da6cf28f98eb2375003a902ca51212c04d9f49f41b76"
+      }
+    },
+    {
+      "slug": "dongfeng-box",
+      "brand": "Dongfeng",
+      "name": "BOX",
+      "powertrain": "BEV",
+      "bodyType": "Hatchback",
+      "market": "pt",
+      "reviewedAt": "2026-11-22",
+      "publicationStatus": "research_draft_not_imported",
+      "commonFacts": {
+        "batteryChemistry": "LFP",
+        "cargoSeatsUpL": 326,
+        "chargeInterval": {
+          "fromPct": 30,
+          "toPct": 80,
+          "minutes": 30
+        }
+      },
+      "commonEvidence": [
+        "box",
+        "df-black"
+      ],
+      "issues": [
+        "Apenas 42,3 kWh/PLUS confirmada neste levantamento PT; não importar 31,4 kWh de outros mercados.",
+        "AC 6,6 kW/DC 87,8 kW são referências de ficha europeia; confirmar versão PT antes de preencher.",
+        "Campanha Filinto Mota atual não explicita acabamento, IVA e despesas no corpo; confirmar associação à PLUS.",
+        "AMF 24.725 € só começa em 26/11, logo ainda não está ativa em 22/11."
+      ],
+      "versions": [
+        {
+          "key": "plus",
+          "label": "PLUS 42.3 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 42.3,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": null,
+          "wltpCombinedKm": 310,
+          "facts": {},
+          "evidence": [
+            "box",
+            "df-black",
+            "box-nov"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 23500,
+              "includesVat": null,
+              "audience": "private",
+              "kind": "cash_campaign",
+              "source": "box-nov",
+              "validFrom": "2026-11-10",
+              "validUntil": "2026-11-30",
+              "status": "needs_terms_confirmation",
+              "notes": "Conteúdo atual da página; nome da URL conserva preço antigo. Confirmar IVA, despesas e acabamento antes de usar como oferta da PLUS."
+            },
+            {
+              "amountEur": 24725,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "cash_campaign",
+              "source": "df-black",
+              "validFrom": "2026-11-26",
+              "validUntil": "2026-11-29",
+              "status": "upcoming",
+              "notes": "PLUS 42 kWh; legalização/transporte/pintura incluídos. Página não explicita IVA separadamente; confirmar no orçamento."
+            }
+          ],
+          "issues": [
+            "Confirmar tração PT e ficha técnica completa; fonte de produto nacional não a explicita."
+          ],
+          "configurationKind": "equipment_trim",
+          "candidateDrivetrain": {
+            "value": "FWD",
+            "status": "needs_primary_pt_confirmation"
+          }
+        }
+      ],
+      "photo": {
+        "slug": "dongfeng-box",
+        "url": "https://stwfccmsprodwesteurope01.blob.core.windows.net/dongfengpt-682326be8578fb1e857c7d06-prod/imgpip1920x1080-1.webp",
+        "width": 1920,
+        "height": 1080,
+        "sourceType": "official_manufacturer",
+        "reviewedAt": "2026-11-22",
+        "reviewedBy": "codex",
+        "visualReview": "model_identity_confirmed_representative_configuration",
+        "publicationStatus": "prepared_internal_not_live",
+        "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
+        "preparedPath": "data/internal/prepared-model-media/dongfeng-box.webp",
+        "preparedWidth": 1280,
+        "preparedHeight": 720,
+        "preparedSha256": "6fd7806a914574d83ad1e0ee49f26f72d146b70792bf1dbd032d4c83410b7b02"
+      }
+    },
+    {
+      "slug": "dongfeng-vigo",
+      "brand": "Dongfeng",
+      "name": "VIGO",
+      "powertrain": "BEV",
+      "bodyType": "SUV",
+      "market": "pt",
+      "reviewedAt": "2026-11-22",
+      "publicationStatus": "research_draft_not_imported",
+      "commonFacts": {
+        "batteryChemistry": "LFP",
+        "dcMaxKW": 167,
+        "chargeInterval": {
+          "fromPct": 30,
+          "toPct": 80,
+          "minutes": 18
+        },
+        "cargoSeatsUpL": 500,
+        "cargoSeatsDownL": 1040,
+        "hiddenCargoL": 72,
+        "wheelbaseMM": 2715,
+        "heatPump": true,
+        "vehicleToLoadKW": 3.3,
+        "powerKW": 120,
+        "torqueNm": 230
+      },
+      "commonEvidence": [
+        "vigo",
+        "vigo-check"
+      ],
+      "issues": [
+        "Preço oficial de 26.990 € + IVA tem condição até 30/09/2026: expirado, não é campanha atual.",
+        "AC/dimensões exteriores/tração: confrontar ficha portuguesa; fontes de outros mercados têm motor e até tração diferentes.",
+        "500 L e 72 L ocultos são apresentados separadamente; não somar automaticamente."
+      ],
+      "versions": [
+        {
+          "key": "one-edition",
+          "label": "One Edition 51.87 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 51.87,
+          "batteryCapacityBasis": "unspecified",
+          "drivetrain": "FWD",
+          "wltpCombinedKm": 340,
+          "facts": {},
+          "evidence": [
+            "vigo",
+            "vigo-nov",
+            "vigo-check"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 25585,
+              "includesVat": false,
+              "audience": "unspecified",
+              "kind": "cash_campaign",
+              "source": "vigo-nov",
+              "validFrom": "2026-11-10",
+              "validUntil": "2026-11-30",
+              "status": "current_reference",
+              "notes": "Concessionário anuncia +IVA e menciona dedutibilidade para empresas; com taxa continental de 23% equivale a 31.469,55 €. Confirmar elegibilidade particular, versão e despesas."
+            },
+            {
+              "amountEur": 26990,
+              "includesVat": false,
+              "audience": "unspecified",
+              "kind": "cash_campaign",
+              "source": "vigo",
+              "validFrom": null,
+              "validUntil": "2026-09-30",
+              "status": "expired",
+              "notes": "Incluía legalização/transporte Portugal Continental; excluía pintura. Não usar como preço atual."
+            }
+          ],
+          "issues": [
+            "Tração FWD corroborada por ensaio PT; ficha primária nacional ainda por obter."
+          ],
+          "configurationKind": "equipment_trim"
+        }
+      ],
+      "photo": {
+        "slug": "dongfeng-vigo",
+        "url": "https://stwfccmsprodwesteurope01.blob.core.windows.net/dongfengpt-682326be8578fb1e857c7d06-prod/img-slide1-a-1-desktop-1.webp",
+        "width": 1920,
+        "height": 1000,
+        "sourceType": "official_manufacturer",
+        "reviewedAt": "2026-11-22",
+        "reviewedBy": "codex",
+        "visualReview": "model_identity_confirmed_representative_configuration",
+        "publicationStatus": "prepared_internal_not_live",
+        "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
+        "preparedPath": "data/internal/prepared-model-media/dongfeng-vigo.webp",
+        "preparedWidth": 1280,
+        "preparedHeight": 720,
+        "preparedSha256": "eb4ddb86a00845090a4acc63e65721903ddaf7c15176c5e29def0358974ed08a"
+      }
+    },
+    {
+      "slug": "firefly-firefly",
+      "brand": "Firefly",
+      "name": "Firefly",
+      "powertrain": "BEV",
+      "bodyType": "Hatchback",
+      "market": "pt",
+      "reviewedAt": "2026-11-22",
+      "publicationStatus": "research_draft_not_imported",
+      "commonFacts": {
+        "dcMaxKW": 100,
+        "chargeInterval": {
+          "fromPct": 10,
+          "toPct": 80,
+          "minutes": 29
+        },
+        "cargoSeatsUpL": 404,
+        "cargoSeatsDownL": 1253,
+        "frunkL": 92,
+        "vehicleToLoad": true
+      },
+      "commonEvidence": [
+        "firefly",
+        "firefly-check",
+        "firefly-test"
+      ],
+      "issues": [
+        "Página oficial PT atual anuncia 120 kW/163 cv; lançamento/ensaios 105 kW/143 cv. Confirmar atualização de software/ano antes de publicar potência.",
+        "AC: site menciona 7 kW ou 11 kW opcional; confirmar por versão/unidade PT.",
+        "Autonomia por acabamento: até 330 km geral; Comfort aparece com 320 km em bases comerciais. Não assumir 330 em ambas.",
+        "Não usar a campanha financeira de 26.300 €: fonte antiga com data inválida de junho.",
+        "Dimensões, bomba de calor e condições de preços por acabamento precisam de ficha/tabela PT atual."
+      ],
+      "versions": [
+        {
+          "key": "select",
+          "label": "Select 41.2 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 41.2,
+          "batteryCapacityBasis": "net_in_european_manufacturer_document_pending_current_pt_match",
+          "drivetrain": "RWD",
+          "wltpCombinedKm": 330,
+          "facts": {
+            "heatedFrontSeats": true,
+            "heatedSteeringWheel": true
+          },
+          "evidence": [
+            "firefly",
+            "firefly-check",
+            "firefly-test"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 30900,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "model_starting_price",
+              "source": "firefly",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "model_price_needs_trim_confirmation",
+              "notes": "Preço de entrada no site PT atual; associação Select corroborada pela apresentação nacional, não por tabela atual por acabamento."
+            }
+          ],
+          "issues": [
+            "41,2 kWh líquida confirmada em ficha europeia; rever correspondência com veículo PT atual."
+          ],
+          "configurationKind": "equipment_trim"
+        },
+        {
+          "key": "comfort",
+          "label": "Comfort 41.2 kWh",
+          "powertrain": "BEV",
+          "modelYear": null,
+          "advertisedBatteryKWh": 41.2,
+          "batteryCapacityBasis": "net_in_european_manufacturer_document_pending_current_pt_match",
+          "drivetrain": "RWD",
+          "wltpCombinedKm": null,
+          "facts": {
+            "ventilatedFrontSeats": true,
+            "frontSeatMassage": true,
+            "electricFrontSeats": true
+          },
+          "evidence": [
+            "firefly",
+            "firefly-check",
+            "firefly-test"
+          ],
+          "priceReferences": [
+            {
+              "amountEur": 32490,
+              "includesVat": true,
+              "audience": "private",
+              "kind": "list_price",
+              "source": "firefly-test",
+              "validFrom": null,
+              "validUntil": null,
+              "status": "secondary_reference_only",
+              "notes": ""
+            }
+          ],
+          "issues": [
+            "Falta preço oficial atual específico da Comfort e WLTP exato (320–330 km consoante configuração)."
+          ],
+          "configurationKind": "equipment_trim"
+        }
+      ],
+      "photo": {
+        "slug": "firefly-firefly",
+        "url": "https://fireflyportugal.pt/wp-content/uploads/1753091864687-1753091863279-7BBE23F55268DA69-scaled-1.webp",
+        "width": 2560,
+        "height": 1600,
+        "sourceType": "official_manufacturer",
+        "reviewedAt": "2026-11-22",
+        "reviewedBy": "codex",
+        "visualReview": "model_identity_confirmed_representative_configuration",
+        "publicationStatus": "prepared_internal_not_live",
+        "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
+        "preparedPath": "data/internal/prepared-model-media/firefly-firefly.webp",
+        "preparedWidth": 1280,
+        "preparedHeight": 720,
+        "preparedSha256": "d597cfc7796ab2067fb756d75ee1cb2f62c8dfc65f214d5030d3764a232180ef"
+      }
+    }
+  ],
+  "sourceFetchFingerprints": {
+    "aion-ut.html": {
+      "sha256": "1cd628d841f20c7b4f7c3a4dd957de279082bcc3a7f5d6295e60ed580d0ad5ae",
+      "bytes": 106460,
+      "reviewedAt": "2026-11-22",
+      "url": "https://gac-portugal.pt/aion-ut/"
+    },
+    "geely-e2.html": {
+      "sha256": "a3b2d01fbcb6f18c7a2ff4727d5757166c1bac1dc1eb58c6931d1bcd3e98f469",
+      "bytes": 225942,
+      "reviewedAt": "2026-11-22",
+      "url": "https://campanhas.geely-auto.pt/geely-e2/"
+    },
+    "vigo-price.html": {
+      "sha256": "d81ef24721adf7ecc38ddb01e8d16311153187010f3dd5894f1cc76832d82e2f",
+      "bytes": 146607,
+      "reviewedAt": "2026-11-22",
+      "url": "https://www.filintomota.pt/campanhas/novo-dongfeng-vigo-a-partir-de-25585-euros/"
+    },
+    "s05-model.html": {
+      "sha256": "6b8ad69b79a7eee0d20d8bbffcd74581fc67aa2c8d9ff22ec6273ed8055abbc1",
+      "bytes": 207969,
+      "reviewedAt": "2026-11-22",
+      "url": "https://changan-auto.pt/modelos/deepal-s05/"
+    },
+    "firefly.html": {
+      "sha256": "3f3ba17b02de9b86a4787ec9a0a119a3dc4c286713f8415ee36182f027156514",
+      "bytes": 85559,
+      "reviewedAt": "2026-11-22",
+      "url": "https://fireflyportugal.pt/o-nosso-carro/"
+    },
+    "s07-spec.html": {
+      "sha256": "85db9716ece6b194417142beacae4878eec8a961e86ec566760470f5f690b668",
+      "bytes": 147571,
+      "reviewedAt": "2026-11-22",
+      "url": "https://changan-auto.pt/ficha-tecnica-s07/"
+    },
+    "geely-js.html": {
+      "sha256": "f9b2a70f11a14a3af4993df6f53675358600a2dd5df4ed613f4d32d6333f6e10",
+      "bytes": 212740,
+      "reviewedAt": "2026-11-22",
+      "url": "https://www.geely-auto.pt/assets/index-BJTOZ1bg.js"
+    },
+    "e5-dealer.html": {
+      "sha256": "001ff2bf5c0e60f335ed7e22f5561f06a5e1b7a3bf05e8c620aa14c34b8b0cfc",
+      "bytes": 272045,
+      "reviewedAt": "2026-11-22",
+      "url": "https://caetano.pt/geely/carros-novos/e5/"
+    },
+    "box-model.html": {
+      "sha256": "b200ee016081668b89054418578de28d91323a75858aaa9e447d81960744090e",
+      "bytes": 194628,
+      "reviewedAt": "2026-11-22",
+      "url": "https://www.dongfeng-auto.pt/modelos/dongfeng-box"
+    },
+    "deepal-s05.html": {
+      "sha256": "5adbc50cc4900202ec6906a973ab93129bd696e5240b3d73fbee46ddb27bce9e",
+      "bytes": 168282,
+      "reviewedAt": "2026-11-22",
+      "url": "https://changan-auto.pt/configurador/deepal-s05/"
+    },
+    "changan-spec-s05.html": {
+      "sha256": "e695f6a1e68c1ec947d69de4fe0be120dd2fb297fc1e0b7248a9828e64615e78",
+      "bytes": 148378,
+      "reviewedAt": "2026-11-22",
+      "url": "https://changan-auto.pt/ficha-tecnica-s05/"
+    },
+    "dongfeng-box.html": {
+      "sha256": "a49b1b64358b0e4d47b10e55d0280219117bb57e7d7113022a7e18d9a29f1b30",
+      "bytes": 140684,
+      "reviewedAt": "2026-11-22",
+      "url": "https://www.dongfeng-auto.pt/"
+    },
+    "geely-e5.html": {
+      "sha256": "8011f4dec1ce033021226abf831799b458fd6e5ad2508a3e6d6b6635a72b98af",
+      "bytes": 19934,
+      "reviewedAt": "2026-11-22",
+      "url": "https://www.geely-auto.pt/"
+    },
+    "aion-campaigns.html": {
+      "sha256": "8216534155eb16d721e79e52fed6a1e94071f6e87aa0e0360ddbeb501cc500cd",
+      "bytes": 47491,
+      "reviewedAt": "2026-11-22",
+      "url": "https://gac-portugal.pt/campanhas/"
+    },
+    "aion-v.html": {
+      "sha256": "96cbf7d702f862581da4d279290581e097130a5567a55e4d8c1bc1f26442f1d2",
+      "bytes": 109519,
+      "reviewedAt": "2026-11-22",
+      "url": "https://gac-portugal.pt/aion-v/"
+    },
+    "deepal-s07.html": {
+      "sha256": "b831204657dd597343a7c05ba4b15969d42c74700eed8f8466588d2ee7334bc1",
+      "bytes": 151681,
+      "reviewedAt": "2026-11-22",
+      "url": "https://changan-auto.pt/configurador/deepal-s07/"
+    },
+    "e2-dealer.html": {
+      "sha256": "e5cbcf60ee7a0826ba81e269901d6d597cac2eab78d905b8e2a35baa6a965688",
+      "bytes": 282631,
+      "reviewedAt": "2026-11-22",
+      "url": "https://caetano.pt/geely/carros-novos/e2/"
+    },
+    "dongfeng-nov.html": {
+      "sha256": "12fb81bed1ca16287a36da214211074271e04a2d1a3090363a8e6f06afffb97b",
+      "bytes": 173201,
+      "reviewedAt": "2026-11-22",
+      "url": "https://www.amfmobilidade.pt/campanhas/black-friday-dongfeng-ate-5-500e-de-desconto-no-box-mage-e-vigo/"
+    },
+    "box-price.html": {
+      "sha256": "cb6682d1415a9d4318836d8bb8790a9c773b7598f8c0c335bd1cdde899f7400c",
+      "bytes": 146022,
+      "reviewedAt": "2026-11-22",
+      "url": "https://www.filintomota.pt/campanhas/novo-dongfeng-box-a-partir-de-24680-euros/"
+    },
+    "dongfeng-vigo.html": {
+      "sha256": "6b7c8121f9d26f38e303ed29238a43bf163af74d66e5486c6b81d6286235762c",
+      "bytes": 225279,
+      "reviewedAt": "2026-11-22",
+      "url": "https://www.dongfeng-auto.pt/modelos/dongfeng-vigo"
+    },
+    "geely-model.js": {
+      "sha256": "ce347553a9d5c60d4f24cf394c3c1ad32c7a395dda337c58390bdaa5f21210b3",
+      "bytes": 58312,
+      "url": "https://www.geely-auto.pt/assets/ModelPage-6ko6VLZ6.js",
+      "reviewedAt": "2026-11-22"
+    }
+  }
+}
