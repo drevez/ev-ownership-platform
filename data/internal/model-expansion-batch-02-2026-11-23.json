@@ -1,0 +1,218 @@
+{
+  "reviewedAt": "2026-11-23",
+  "status": "prepared",
+  "models": 5,
+  "technicalVersions": 8,
+  "sources": {
+    "friday": "https://www.forthing.pt/friday-ev/",
+    "friday64": "https://www.forthing.pt/wp-content/uploads/2026/10/Ficha-Tecnica-Friday-EV_64.4-kWh.pdf",
+    "friday86": "https://www.forthing.pt/wp-content/uploads/2026/10/Ficha-Tecnica-Friday-EV.pdf",
+    "friday-price": "https://www.guiadoautomovel.pt/marcas/forthing/friday/precos",
+    "s7": "https://www.forthing.pt/s7-ev/",
+    "s7-spec": "https://www.forthing.pt/wp-content/uploads/2026/10/Ficha-Tecnica-S7-EV.pdf",
+    "atto": "https://www.byd-auto.pt/modelos/byd-atto-2",
+    "atto-launch": "https://www.byd-auto.pt/destaques/byd-novos-byd-atto-2-dmi-e-atto-2-comfort",
+    "atto-price": "https://www.guiadoautomovel.pt/marcas/byd/atto-2/precos",
+    "sealu": "https://www.byd-auto.pt/modelos/byd-seal-u",
+    "sealu-spec": "https://api.byd-auto.pt/files/BYD%20SEAL%20U.pdf",
+    "sealu-price": "https://www.guiadoautomovel.pt/marcas/byd/seal-u/precos",
+    "sealion": "https://www.byd-auto.pt/modelos/byd-sealion-7",
+    "sealion-spec": "https://api.byd-auto.pt/files/byd-sealion-7.pdf",
+    "sealion-price": "https://www.guiadoautomovel.pt/marcas/byd/sealion-7/precos"
+  },
+  "records": [
+    {
+      "id": "forthing-friday-ev-64kwh",
+      "modelSlug": "forthing-friday-ev",
+      "powertrain": "BEV",
+      "advertisedBatteryKWh": 64.4,
+      "batteryCapacityBasis": "unspecified",
+      "sourceKeys": [
+        "friday",
+        "friday64"
+      ],
+      "notes": [
+        "Ficha PDF revista visualmente, ambas as páginas.",
+        "AC/DC máximos não explicitados na ficha desta bateria; ficam ausentes. Carga 30–80 em 30 min não é 10–80.",
+        "Tensão nominal 312 V não preenche automaticamente arquitetura."
+      ]
+    },
+    {
+      "id": "forthing-friday-ev-86kwh",
+      "modelSlug": "forthing-friday-ev",
+      "powertrain": "BEV",
+      "advertisedBatteryKWh": 85.9,
+      "batteryCapacityBasis": "unspecified",
+      "sourceKeys": [
+        "friday",
+        "friday86",
+        "friday-price"
+      ],
+      "notes": [
+        "Não atribuir o preço de entrada de 35.788 € desta família à bateria maior.",
+        "Ficha cita carregador DC de 80 kW num ensaio 30–80 em 45 min; pico DC do veículo não explicitado, campo deixado vazio.",
+        "11 kW AC trifásicos; tensão nominal 352 V não é arquitetura."
+      ]
+    },
+    {
+      "id": "forthing-s7-ev-57kwh",
+      "modelSlug": "forthing-s7-ev",
+      "powertrain": "BEV",
+      "advertisedBatteryKWh": 56.8,
+      "batteryCapacityBasis": "unspecified",
+      "sourceKeys": [
+        "s7",
+        "s7-spec"
+      ],
+      "notes": [
+        "PDF revisto visualmente, ambas as páginas. 398 L de mala + 50 L frunk separados; 1303 L com bancos rebatidos inclui compartimento de 114 L, não somar novamente.",
+        "25 min corresponde a 30–80%, não preencher 10–80."
+      ]
+    },
+    {
+      "id": "byd-atto-2-65kwh",
+      "modelSlug": "byd-atto-2",
+      "powertrain": "BEV",
+      "advertisedBatteryKWh": 64.8,
+      "batteryCapacityBasis": "unspecified",
+      "sourceKeys": [
+        "atto",
+        "atto-launch",
+        "atto-price"
+      ],
+      "notes": [
+        "Só Comfort 64,8 kWh consta da tabela PT atual. Active/Boost 45,1 kWh ficam candidatos históricos, não novas versões publicadas sem confirmação comercial.",
+        "Comunicado oficial confirma 25 min 10–80; 19 min da página de produto é 30–80.",
+        "JSON-LD da página mistura Active/Dolphin e dados antigos; ignorado em favor do conteúdo visível e comunicado correspondente."
+      ]
+    },
+    {
+      "id": "byd-seal-u-72kwh",
+      "modelSlug": "byd-seal-u",
+      "powertrain": "BEV",
+      "advertisedBatteryKWh": 71.8,
+      "batteryCapacityBasis": "unspecified",
+      "sourceKeys": [
+        "sealu"
+      ],
+      "notes": [
+        "Comfort e Design diferem na bateria, autonomia e DC; são versões técnicas distintas.",
+        "AC PT por confirmar nesta publicação; não copiar da ficha DM-i."
+      ]
+    },
+    {
+      "id": "byd-seal-u-87kwh",
+      "modelSlug": "byd-seal-u",
+      "powertrain": "BEV",
+      "advertisedBatteryKWh": 87,
+      "batteryCapacityBasis": "unspecified",
+      "sourceKeys": [
+        "sealu",
+        "sealu-price"
+      ],
+      "notes": [
+        "28 min corresponde a 30–80%, não 10–80.",
+        "Campanha de 36.980 € + IVA encontrada com validade até 31/10/2026: não importada como atual.",
+        "AC PT por confirmar; página inclui comparação com DM-i que não foi importada."
+      ]
+    },
+    {
+      "id": "byd-sealion-7-rwd-83kwh",
+      "modelSlug": "byd-sealion-7",
+      "powertrain": "BEV",
+      "advertisedBatteryKWh": 82.5,
+      "batteryCapacityBasis": "unspecified",
+      "sourceKeys": [
+        "sealion",
+        "sealion-spec",
+        "sealion-price"
+      ],
+      "notes": [
+        "Página PT atual e tabela atual contêm Comfort/Excellence. Design AWD 82,5 kWh de brochura antiga não importado sem oferta atual correspondente.",
+        "Potência e tração correspondentes à bateria; a diferença é técnica. Nenhum consumo WLTP convertido em real."
+      ]
+    },
+    {
+      "id": "byd-sealion-7-awd-91kwh",
+      "modelSlug": "byd-sealion-7",
+      "powertrain": "BEV",
+      "advertisedBatteryKWh": 91.3,
+      "batteryCapacityBasis": "unspecified",
+      "sourceKeys": [
+        "sealion",
+        "sealion-spec",
+        "sealion-price"
+      ],
+      "notes": [
+        "Página PT atual e tabela atual contêm Comfort/Excellence. Design AWD 82,5 kWh de brochura antiga não importado sem oferta atual correspondente.",
+        "Potência e tração correspondentes à bateria; a diferença é técnica. Nenhum consumo WLTP convertido em real."
+      ]
+    }
+  ],
+  "media": {
+    "forthing-friday-ev": {
+      "sourceUrl": "https://www.forthing.pt/friday-ev/",
+      "sourceImageUrl": "https://www.forthing.pt/wp-content/uploads/2025/06/FRIDAY_EV_EXT_1.avif",
+      "sourceWidth": 1104,
+      "sourceHeight": 622,
+      "sha256": "51f4cf2d07d689a3ca3fc41434b30d2152b9ddeeab24742ff31634f6fa58011b"
+    },
+    "forthing-s7-ev": {
+      "sourceUrl": "https://www.forthing.pt/s7-ev/",
+      "sourceImageUrl": "https://www.forthing.pt/wp-content/uploads/2025/03/s7_carat-2.jpg",
+      "sourceWidth": 848,
+      "sourceHeight": 562,
+      "sha256": "81fce057718fb191d5192ef06a3caa47ff223ec042a90ef538014a13a0f4ea62"
+    },
+    "byd-seal-u": {
+      "sourceUrl": "https://www.byd-auto.pt/modelos/byd-seal-u",
+      "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/bydauto-684f3dea1f6bc3303faac781-prod/bannerpip.webp",
+      "sourceWidth": 2560,
+      "sourceHeight": 1351,
+      "sha256": "61ba63b57353213e16f4377950bb48c631f9a7c065264ae9274da4fe3d9a42db"
+    },
+    "byd-sealion-7": {
+      "sourceUrl": "https://www.byd-auto.pt/modelos/byd-sealion-7",
+      "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/bydauto-684f3dea1f6bc3303faac781-prod/bydsealion7imagem04d-1733159464038.webp",
+      "sourceWidth": 2560,
+      "sourceHeight": 1249,
+      "sha256": "8e2bbb24938cb65c83af663b3dc3f1855329c7e43fdfc2800e5f62d07fdecdc4"
+    },
+    "byd-atto-2": {
+      "sourceUrl": "https://www.byd-auto.pt/modelos/byd-atto-2",
+      "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/bydauto-684f3dea1f6bc3303faac781-prod/byd-atto2-imagem-01-d.webp",
+      "sourceWidth": 2560,
+      "sourceHeight": 1355,
+      "sha256": "30614f1b5c899a8335488e0fca888851c1ce440551583cea33d9ad02fdcd11d9"
+    }
+  },
+  "decisions": [
+    "BEV only: Friday HEV/GPL/gasolina and every BYD DM-i excluded.",
+    "No separate versions for equipment alone.",
+    "Reported battery capacities remain unspecified gross/usable; kept in technical labels.",
+    "Unknown real efficiency, equipment and architecture remain absent.",
+    "Official visible pages override stale/mixed JSON-LD; BYD campaign pages expired in October excluded."
+  ],
+  "sourceFingerprints": {
+    "friday.html": {
+      "bytes": 269257,
+      "sha256": "489336f9843f38d39048ecf358a4027eacc53eb91e46b78b98775b84e532c67e"
+    },
+    "atto.html": {
+      "bytes": 463188,
+      "sha256": "0ced622f713809009107b34e8d0cbec82935b021e8ace8d6097457094560d742"
+    },
+    "sealion.html": {
+      "bytes": 425736,
+      "sha256": "1a60143dd13e5cd29d10a451a811e38e6026c10621c175d28bd6680d987478b2"
+    },
+    "s7.html": {
+      "bytes": 256937,
+      "sha256": "fb96f37a9509f92d46017d693ba9f46e592acd0df133a21e61e96d2dfb822a70"
+    },
+    "sealu.html": {
+      "bytes": 456588,
+      "sha256": "f4e92e0a08a29e5f903e6da88c73ac1580a8ee083b36ce86f116d1159b01236d"
+    }
+  }
+}

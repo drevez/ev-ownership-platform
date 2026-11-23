@@ -64,5 +64,35 @@
     "sourceUrl": "https://www.dongfeng-auto.pt/modelos/dongfeng-vigo",
     "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/dongfengpt-682326be8578fb1e857c7d06-prod/img-slide1-a-1-desktop-1.webp",
     "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão."
+  },
+  "forthing-friday-ev": {
+    "heroImage": "/cars/forthing-friday-ev.webp",
+    "sourceUrl": "https://www.forthing.pt/friday-ev/",
+    "sourceImageUrl": "https://www.forthing.pt/wp-content/uploads/2025/06/FRIDAY_EV_EXT_1.avif",
+    "notes": "Official BEV model photograph; representative colour and equipment, not a guarantee of trim."
+  },
+  "forthing-s7-ev": {
+    "heroImage": "/cars/forthing-s7-ev.webp",
+    "sourceUrl": "https://www.forthing.pt/s7-ev/",
+    "sourceImageUrl": "https://www.forthing.pt/wp-content/uploads/2025/03/s7_carat-2.jpg",
+    "notes": "Official BEV model photograph; representative colour and equipment, not a guarantee of trim."
+  },
+  "byd-seal-u": {
+    "heroImage": "/cars/byd-seal-u.webp",
+    "sourceUrl": "https://www.byd-auto.pt/modelos/byd-seal-u",
+    "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/bydauto-684f3dea1f6bc3303faac781-prod/bannerpip.webp",
+    "notes": "Official BEV model photograph; representative colour and equipment, not a guarantee of trim."
+  },
+  "byd-sealion-7": {
+    "heroImage": "/cars/byd-sealion-7.webp",
+    "sourceUrl": "https://www.byd-auto.pt/modelos/byd-sealion-7",
+    "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/bydauto-684f3dea1f6bc3303faac781-prod/bydsealion7imagem04d-1733159464038.webp",
+    "notes": "Official BEV model photograph; representative colour and equipment, not a guarantee of trim."
+  },
+  "byd-atto-2": {
+    "heroImage": "/cars/byd-atto-2.webp",
+    "sourceUrl": "https://www.byd-auto.pt/modelos/byd-atto-2",
+    "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/bydauto-684f3dea1f6bc3303faac781-prod/byd-atto2-imagem-01-d.webp",
+    "notes": "Official BEV model photograph; representative colour and equipment, not a guarantee of trim."
   }
 }

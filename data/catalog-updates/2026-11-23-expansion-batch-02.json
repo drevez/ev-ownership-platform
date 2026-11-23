@@ -1,0 +1,498 @@
+{
+  "reviewedAt": "2026-11-23",
+  "records": [
+    {
+      "id": "forthing-friday-ev-64kwh",
+      "files": {
+        "core": {
+          "id": "forthing-friday-ev-64kwh",
+          "brand": "Forthing",
+          "model": "Friday EV",
+          "variant": "64.4 kWh",
+          "segment": "C",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "doors": 5,
+          "seats": 5,
+          "motorPowerKW": 150,
+          "image": "/cars/forthing-friday-ev.webp"
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {},
+        "comfort": {
+          "panoramicRoof": true,
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4565,
+          "widthMM": 1860,
+          "heightMM": 1680,
+          "wheelbaseMM": 2715,
+          "cargoLitersSeatsUp": 480,
+          "cargoLitersSeatsDown": 1480
+        },
+        "efficiency": {
+          "wltpRangeKm": 400
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 35788,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "Forthing — campanha particular 64,4 kWh até 30/11/2026",
+              "sourceUrl": "https://www.forthing.pt/friday-ev/",
+              "confidence": "high",
+              "displayPriority": 1,
+              "notes": "PVP particular com IVA indicado expressamente pela marca; não converter 28.750 € + IVA, que é exclusivo empresas/ENI. Sem legalização/transporte; stock. Válido até 30/11/2026. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "forthing-friday-ev-86kwh",
+      "files": {
+        "core": {
+          "id": "forthing-friday-ev-86kwh",
+          "brand": "Forthing",
+          "model": "Friday EV",
+          "variant": "85.9 kWh",
+          "segment": "C",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "doors": 5,
+          "seats": 5,
+          "motorPowerKW": 150,
+          "image": "/cars/forthing-friday-ev.webp"
+        },
+        "battery": {
+          "batteryChemistry": "Lithium-ion"
+        },
+        "charging": {
+          "acMaxChargeKW": 11
+        },
+        "comfort": {
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4565,
+          "widthMM": 1860,
+          "heightMM": 1680,
+          "wheelbaseMM": 2715,
+          "cargoLitersSeatsUp": 480,
+          "cargoLitersSeatsDown": 1480
+        },
+        "efficiency": {
+          "wltpRangeKm": 510
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 45907.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela EV 85.9kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/forthing/friday/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela da configuração EV 85.9kWh, com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "forthing-s7-ev-57kwh",
+      "files": {
+        "core": {
+          "id": "forthing-s7-ev-57kwh",
+          "brand": "Forthing",
+          "model": "S7 EV",
+          "variant": "56.8 kWh",
+          "segment": "D",
+          "bodyType": "Fastback",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "motorPowerKW": 154,
+          "image": "/cars/forthing-s7-ev.webp"
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 6.6,
+          "dcMaxChargeKW": 120
+        },
+        "comfort": {
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4936,
+          "widthMM": 1910,
+          "heightMM": 1495,
+          "wheelbaseMM": 2920,
+          "cargoLitersSeatsUp": 398,
+          "cargoLitersSeatsDown": 1303,
+          "frunkLiters": 50
+        },
+        "efficiency": {
+          "wltpRangeKm": 420
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 36708,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "Forthing — campanha particular S7 EV até 30/11/2026",
+              "sourceUrl": "https://www.forthing.pt/s7-ev/",
+              "confidence": "high",
+              "displayPriority": 1,
+              "notes": "PVP particular com IVA publicado expressamente. Não converter preço empresas/ENI de 28.850 € + IVA. Sem legalização/transporte; stock; válido até 30/11/2026. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "byd-atto-2-65kwh",
+      "files": {
+        "core": {
+          "id": "byd-atto-2-65kwh",
+          "brand": "BYD",
+          "model": "ATTO 2",
+          "variant": "64.8 kWh",
+          "segment": "B",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "doors": 5,
+          "seats": 5,
+          "motorPowerKW": 150,
+          "image": "/cars/byd-atto-2.webp"
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 155,
+          "charge10to80Min": 25
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true,
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4310,
+          "widthMM": 1830,
+          "heightMM": 1675,
+          "cargoLitersSeatsUp": 450
+        },
+        "efficiency": {
+          "wltpRangeKm": 430
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 37997.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela 64,8 kWh Comfort",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/byd/atto-2/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela da configuração 64,8 kWh Comfort, com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "byd-seal-u-72kwh",
+      "files": {
+        "core": {
+          "id": "byd-seal-u-72kwh",
+          "brand": "BYD",
+          "model": "SEAL U",
+          "variant": "71.8 kWh",
+          "segment": "D",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "doors": 5,
+          "seats": 5,
+          "motorPowerKW": 160,
+          "image": "/cars/byd-seal-u.webp"
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "dcMaxChargeKW": 115
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true,
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4785,
+          "widthMM": 1890,
+          "heightMM": 1668,
+          "cargoLitersSeatsUp": 552,
+          "cargoLitersSeatsDown": 1440
+        },
+        "efficiency": {
+          "wltpRangeKm": 420
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "not_enough_data",
+              "marketScope": "official_pt",
+              "priceFrom": null,
+              "priceTo": null,
+              "includesVat": null,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "BYD Portugal — configuração Comfort",
+              "sourceUrl": "https://www.byd-auto.pt/modelos/byd-seal-u",
+              "confidence": "unknown",
+              "displayPriority": 1,
+              "notes": "Configuração elétrica Comfort identificada na página PT. Preço particular atual por confirmar; não usar preços DM-i nem transferir preço Design. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "byd-seal-u-87kwh",
+      "files": {
+        "core": {
+          "id": "byd-seal-u-87kwh",
+          "brand": "BYD",
+          "model": "SEAL U",
+          "variant": "87 kWh",
+          "segment": "D",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "doors": 5,
+          "seats": 5,
+          "motorPowerKW": 160,
+          "image": "/cars/byd-seal-u.webp"
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "dcMaxChargeKW": 140
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true,
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4785,
+          "widthMM": 1890,
+          "heightMM": 1668,
+          "cargoLitersSeatsUp": 552,
+          "cargoLitersSeatsDown": 1440
+        },
+        "efficiency": {
+          "wltpRangeKm": 500
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 48997.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Design BEV",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/byd/seal-u/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela da configuração Design BEV, com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "byd-sealion-7-rwd-83kwh",
+      "files": {
+        "core": {
+          "id": "byd-sealion-7-rwd-83kwh",
+          "brand": "BYD",
+          "model": "SEALION 7",
+          "variant": "RWD 82.5 kWh",
+          "segment": "D",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "motorPowerKW": 230,
+          "image": "/cars/byd-sealion-7.webp"
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 150,
+          "charge10to80Min": 32
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4830,
+          "widthMM": 1925,
+          "heightMM": 1620,
+          "wheelbaseMM": 2930,
+          "cargoLitersSeatsUp": 520,
+          "cargoLitersSeatsDown": 1789,
+          "frunkLiters": 58
+        },
+        "efficiency": {
+          "wltpRangeKm": 482
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 47997.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Comfort RWD",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/byd/sealion-7/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela da configuração Comfort RWD, com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "byd-sealion-7-awd-91kwh",
+      "files": {
+        "core": {
+          "id": "byd-sealion-7-awd-91kwh",
+          "brand": "BYD",
+          "model": "SEALION 7",
+          "variant": "AWD 91.3 kWh",
+          "segment": "D",
+          "bodyType": "SUV",
+          "drivetrain": "AWD",
+          "doors": 5,
+          "seats": 5,
+          "motorPowerKW": 390,
+          "image": "/cars/byd-sealion-7.webp"
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 230,
+          "charge10to80Min": 24
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4830,
+          "widthMM": 1925,
+          "heightMM": 1620,
+          "wheelbaseMM": 2930,
+          "cargoLitersSeatsUp": 520,
+          "cargoLitersSeatsDown": 1789,
+          "frunkLiters": 58
+        },
+        "efficiency": {
+          "wltpRangeKm": 502
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 57999.5,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Excellence AWD",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/byd/sealion-7/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela da configuração Excellence AWD, com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
