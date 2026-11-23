@@ -1,0 +1,990 @@
+{
+  "reviewedAt": "2026-11-23",
+  "records": [
+    {
+      "id": "aion-ut-premium",
+      "files": {
+        "core": {
+          "id": "aion-ut-premium",
+          "brand": "Aion",
+          "model": "UT",
+          "variant": "Premium 60 kWh",
+          "bodyType": "Hatchback",
+          "drivetrain": "FWD",
+          "image": "/cars/aion-ut.webp",
+          "motorPowerKW": 150
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 87
+        },
+        "comfort": {},
+        "dimensions": {
+          "lengthMM": 4270,
+          "widthMM": 1850,
+          "heightMM": 1575,
+          "cargoLitersSeatsUp": 440
+        },
+        "efficiency": {
+          "wltpRangeKm": 430
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 29003.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "PVP de tabela — Guia do Automóvel",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/aion/ut/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "PVP de tabela com impostos, reconfirmado em 23/11/2026. Sem pintura, opções, transporte, matrícula ou averbamento. A configuração comercial Premium Green não foi tratada como versão mecânica adicional."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aion-ut-luxury",
+      "files": {
+        "core": {
+          "id": "aion-ut-luxury",
+          "brand": "Aion",
+          "model": "UT",
+          "variant": "Luxury 60 kWh",
+          "bodyType": "Hatchback",
+          "drivetrain": "FWD",
+          "image": "/cars/aion-ut.webp",
+          "motorPowerKW": 150
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 87
+        },
+        "comfort": {
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4270,
+          "widthMM": 1850,
+          "heightMM": 1575,
+          "cargoLitersSeatsUp": 440
+        },
+        "efficiency": {
+          "wltpRangeKm": 430
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 31003.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Luxury",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/aion/ut/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "PVP de tabela com impostos, reconfirmado em 23/11/2026. Sem pintura, opções, transporte, matrícula ou averbamento; não corresponde a campanha oficial Luxury."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aion-v-premium",
+      "files": {
+        "core": {
+          "id": "aion-v-premium",
+          "brand": "Aion",
+          "model": "V",
+          "variant": "Premium 75.3 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "image": "/cars/aion-v.webp",
+          "motorPowerKW": 150,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "dcMaxChargeKW": 180,
+          "charge10to80Min": 24
+        },
+        "comfort": {},
+        "dimensions": {
+          "lengthMM": 4605,
+          "widthMM": 1876,
+          "heightMM": 1686,
+          "wheelbaseMM": 2775,
+          "cargoLitersSeatsUp": 427,
+          "cargoLitersSeatsDown": 978
+        },
+        "efficiency": {
+          "wltpRangeKm": 510
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 34844,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "Campanha — fabricante Portugal",
+              "sourceUrl": "https://gac-portugal.pt/campanhas/aion-v-financiamento/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "PVP sem financiamento publicado; IVA implícito no PVP particular, confirmar no orçamento; sem pintura/transportes/documentação. Válida até 2026-11-30. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aion-v-luxury",
+      "files": {
+        "core": {
+          "id": "aion-v-luxury",
+          "brand": "Aion",
+          "model": "V",
+          "variant": "Luxury 75.3 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "image": "/cars/aion-v.webp",
+          "motorPowerKW": 150,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "dcMaxChargeKW": 180,
+          "charge10to80Min": 24
+        },
+        "comfort": {},
+        "dimensions": {
+          "lengthMM": 4605,
+          "widthMM": 1876,
+          "heightMM": 1686,
+          "wheelbaseMM": 2775,
+          "cargoLitersSeatsUp": 427,
+          "cargoLitersSeatsDown": 978
+        },
+        "efficiency": {
+          "wltpRangeKm": 510
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "not_enough_data",
+              "marketScope": "official_pt",
+              "priceFrom": null,
+              "priceTo": null,
+              "sourceType": "unknown",
+              "confidence": "unknown",
+              "displayPriority": 1,
+              "notes": "Preço atual da configuração por confirmar. As referências e conflitos estão preservados no levantamento de 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "geely-e2-pro",
+      "files": {
+        "core": {
+          "id": "geely-e2-pro",
+          "brand": "Geely",
+          "model": "E2",
+          "variant": "PRO 35.35 kWh",
+          "bodyType": "Hatchback",
+          "drivetrain": "RWD",
+          "image": "/cars/geely-e2.webp",
+          "motorPowerKW": 60,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 6.6,
+          "dcMaxChargeKW": 60
+        },
+        "comfort": {
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4135,
+          "widthMM": 1805,
+          "heightMM": 1580,
+          "wheelbaseMM": 2645,
+          "cargoLitersSeatsUp": 375,
+          "cargoLitersSeatsDown": 1320,
+          "frunkLiters": 70
+        },
+        "efficiency": {
+          "wltpRangeKm": 252
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 21894,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "dealer",
+              "sourceLabel": "Campanha — concessionário",
+              "sourceUrl": "https://caetano.pt/geely/carros-novos/e2/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "IVA incluído; sem legalização/transporte/pintura. PRO equivale a 17.800 € + IVA; MAX/ULTRA são PVP indicativos declarados pelo concessionário. Válida até 2026-11-30. Referência consultada em 22/11/2026."
+            },
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 21907.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "PVP de tabela — Guia do Automóvel",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/geely/e2/precos",
+              "confidence": "medium",
+              "displayPriority": 2,
+              "notes": "PVP de tabela de 16/11/2026; comparar com campanha concessionário sem assumir que a diferença é erro. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "geely-e2-max",
+      "files": {
+        "core": {
+          "id": "geely-e2-max",
+          "brand": "Geely",
+          "model": "E2",
+          "variant": "MAX 47.14 kWh",
+          "bodyType": "Hatchback",
+          "drivetrain": "RWD",
+          "image": "/cars/geely-e2.webp",
+          "motorPowerKW": 85,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 6.6,
+          "dcMaxChargeKW": 80
+        },
+        "comfort": {
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4135,
+          "widthMM": 1805,
+          "heightMM": 1580,
+          "wheelbaseMM": 2645,
+          "cargoLitersSeatsUp": 375,
+          "cargoLitersSeatsDown": 1320,
+          "frunkLiters": 70
+        },
+        "efficiency": {
+          "wltpRangeKm": 345
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 24900,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "dealer",
+              "sourceLabel": "PVP indicativo — concessionário",
+              "sourceUrl": "https://caetano.pt/geely/carros-novos/e2/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "IVA incluído; sem legalização/transporte/pintura. PRO equivale a 17.800 € + IVA; MAX/ULTRA são PVP indicativos declarados pelo concessionário. Referência consultada em 22/11/2026."
+            },
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 24907.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "PVP de tabela — Guia do Automóvel",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/geely/e2/precos",
+              "confidence": "medium",
+              "displayPriority": 2,
+              "notes": "PVP de tabela de 16/11/2026; comparar com campanha concessionário sem assumir que a diferença é erro. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "geely-e2-ultra",
+      "files": {
+        "core": {
+          "id": "geely-e2-ultra",
+          "brand": "Geely",
+          "model": "E2",
+          "variant": "ULTRA 47.14 kWh",
+          "bodyType": "Hatchback",
+          "drivetrain": "RWD",
+          "image": "/cars/geely-e2.webp",
+          "motorPowerKW": 85,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 6.6,
+          "dcMaxChargeKW": 80
+        },
+        "comfort": {
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4135,
+          "widthMM": 1805,
+          "heightMM": 1580,
+          "wheelbaseMM": 2645,
+          "cargoLitersSeatsUp": 375,
+          "cargoLitersSeatsDown": 1320,
+          "frunkLiters": 70
+        },
+        "efficiency": {
+          "wltpRangeKm": 345
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 27800,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "dealer",
+              "sourceLabel": "PVP indicativo — concessionário",
+              "sourceUrl": "https://caetano.pt/geely/carros-novos/e2/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "IVA incluído; sem legalização/transporte/pintura. PRO equivale a 17.800 € + IVA; MAX/ULTRA são PVP indicativos declarados pelo concessionário. Referência consultada em 22/11/2026."
+            },
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 27807.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "PVP de tabela — Guia do Automóvel",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/geely/e2/precos",
+              "confidence": "medium",
+              "displayPriority": 2,
+              "notes": "PVP de tabela de 16/11/2026; comparar com campanha concessionário sem assumir que a diferença é erro. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "geely-e5-pro",
+      "files": {
+        "core": {
+          "id": "geely-e5-pro",
+          "brand": "Geely",
+          "model": "E5",
+          "variant": "PRO 60.22 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "image": "/cars/geely-e5.webp",
+          "motorPowerKW": 160
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "dcMaxChargeKW": 120
+        },
+        "comfort": {},
+        "dimensions": {
+          "lengthMM": 4615,
+          "widthMM": 1901,
+          "heightMM": 1670,
+          "wheelbaseMM": 2750,
+          "cargoLitersSeatsUp": 461,
+          "cargoLitersSeatsDown": 1877
+        },
+        "efficiency": {
+          "wltpRangeKm": 430
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 35658,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "dealer",
+              "sourceLabel": "Campanha — concessionário",
+              "sourceUrl": "https://caetano.pt/geely/carros-novos/e5/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "IVA incluído; 28.990 € + IVA; sem legalização/transporte/pintura; stock. 5 anos/80.000 km de manutenção. Válida até 2026-11-30. Referência consultada em 22/11/2026."
+            },
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 38407.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "PVP de tabela — Guia do Automóvel",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/geely/e5/precos",
+              "confidence": "medium",
+              "displayPriority": 2,
+              "notes": "PVP de tabela; não substituir campanha Caetano de 35.658/38.118 € por este valor sem indicação do tipo de preço. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "geely-e5-max",
+      "files": {
+        "core": {
+          "id": "geely-e5-max",
+          "brand": "Geely",
+          "model": "E5",
+          "variant": "MAX 60.22 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "image": "/cars/geely-e5.webp",
+          "motorPowerKW": 160
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "dcMaxChargeKW": 120
+        },
+        "comfort": {
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4615,
+          "widthMM": 1901,
+          "heightMM": 1670,
+          "wheelbaseMM": 2750,
+          "cargoLitersSeatsUp": 461,
+          "cargoLitersSeatsDown": 1877
+        },
+        "efficiency": {
+          "wltpRangeKm": 410
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 38118,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "dealer",
+              "sourceLabel": "PVP indicativo — concessionário",
+              "sourceUrl": "https://caetano.pt/geely/carros-novos/e5/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "IVA incluído; 30.990 € + IVA; sem legalização/transporte/pintura; confirmar validade específica da MAX. Referência consultada em 22/11/2026."
+            },
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 41107.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "PVP de tabela — Guia do Automóvel",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/geely/e5/precos",
+              "confidence": "medium",
+              "displayPriority": 2,
+              "notes": "PVP de tabela; não substituir campanha Caetano de 35.658/38.118 € por este valor sem indicação do tipo de preço. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "changan-deepal-s05-rwd-pro",
+      "files": {
+        "core": {
+          "id": "changan-deepal-s05-rwd-pro",
+          "brand": "Changan",
+          "model": "Deepal S05",
+          "variant": "RWD PRO 68.8 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "image": "/cars/changan-deepal-s05.webp",
+          "motorPowerKW": 200,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 200,
+          "charge10to80Min": 23
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true,
+          "panoramicRoof": false
+        },
+        "dimensions": {
+          "lengthMM": 4580,
+          "widthMM": 1900,
+          "heightMM": 1600,
+          "wheelbaseMM": 2880
+        },
+        "efficiency": {
+          "wltpRangeKm": 485
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 36990,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "PVP de tabela — fabricante Portugal",
+              "sourceUrl": "https://changan-auto.pt/configurador/deepal-s05/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "IVA incluído; sem transporte/legalização; base de versão, não total com opções; sujeito a revisão pelo concessionário. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "changan-deepal-s05-rwd-max",
+      "files": {
+        "core": {
+          "id": "changan-deepal-s05-rwd-max",
+          "brand": "Changan",
+          "model": "Deepal S05",
+          "variant": "RWD MAX 68.8 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "image": "/cars/changan-deepal-s05.webp",
+          "motorPowerKW": 200,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 200,
+          "charge10to80Min": 23
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4580,
+          "widthMM": 1900,
+          "heightMM": 1600,
+          "wheelbaseMM": 2880
+        },
+        "efficiency": {
+          "wltpRangeKm": 485
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 39990,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "PVP de tabela — fabricante Portugal",
+              "sourceUrl": "https://changan-auto.pt/configurador/deepal-s05/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "IVA incluído; sem transporte/legalização; base de versão, não total com opções; sujeito a revisão pelo concessionário. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "changan-deepal-s05-awd-max",
+      "files": {
+        "core": {
+          "id": "changan-deepal-s05-awd-max",
+          "brand": "Changan",
+          "model": "Deepal S05",
+          "variant": "AWD MAX 68.8 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "AWD",
+          "image": "/cars/changan-deepal-s05.webp",
+          "motorPowerKW": 320,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 200,
+          "charge10to80Min": 23
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4580,
+          "widthMM": 1900,
+          "heightMM": 1600,
+          "wheelbaseMM": 2880
+        },
+        "efficiency": {
+          "wltpRangeKm": 445
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 42990,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "PVP de tabela — fabricante Portugal",
+              "sourceUrl": "https://changan-auto.pt/configurador/deepal-s05/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "IVA incluído; sem transporte/legalização; base de versão, não total com opções; sujeito a revisão pelo concessionário. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "changan-deepal-s07-bev-79",
+      "files": {
+        "core": {
+          "id": "changan-deepal-s07-bev-79",
+          "brand": "Changan",
+          "model": "Deepal S07",
+          "variant": "RWD 79.97 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "image": "/cars/changan-deepal-s07.webp",
+          "motorPowerKW": 160,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "NMC"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 93,
+          "charge10to80Min": 48
+        },
+        "comfort": {
+          "vehicleToLoad": true,
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4750,
+          "widthMM": 1930,
+          "heightMM": 1625,
+          "wheelbaseMM": 2900,
+          "frunkLiters": 125
+        },
+        "efficiency": {
+          "wltpRangeKm": 475
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 44990,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "PVP de tabela — fabricante Portugal",
+              "sourceUrl": "https://changan-auto.pt/configurador/deepal-s07/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "IVA incluído; sem transporte/legalização; jante 19 de base. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "changan-deepal-s07-rwd-77-94kwh",
+      "files": {
+        "core": {
+          "id": "changan-deepal-s07-rwd-77-94kwh",
+          "brand": "Changan",
+          "model": "Deepal S07",
+          "variant": "RWD 77.94 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "image": "/cars/changan-deepal-s07.webp",
+          "motorPowerKW": 190,
+          "seats": 5,
+          "modelYear": 2026
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 200,
+          "charge10to80Min": 24
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true,
+          "panoramicRoof": true
+        },
+        "dimensions": {},
+        "efficiency": {
+          "wltpRangeKm": 500
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "not_enough_data",
+              "marketScope": "official_pt",
+              "priceFrom": null,
+              "priceTo": null,
+              "sourceType": "unknown",
+              "confidence": "unknown",
+              "displayPriority": 1,
+              "notes": "Preço atual da configuração por confirmar. As referências e conflitos estão preservados no levantamento de 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dongfeng-box-plus",
+      "files": {
+        "core": {
+          "id": "dongfeng-box-plus",
+          "brand": "Dongfeng",
+          "model": "BOX",
+          "variant": "PLUS 42.3 kWh",
+          "bodyType": "Hatchback",
+          "drivetrain": "FWD",
+          "image": "/cars/dongfeng-box.webp"
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 6.6,
+          "dcMaxChargeKW": 87.8
+        },
+        "comfort": {},
+        "dimensions": {
+          "cargoLitersSeatsUp": 326
+        },
+        "efficiency": {
+          "wltpRangeKm": 310
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 23500,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "dealer",
+              "sourceLabel": "Campanha — concessionário",
+              "sourceUrl": "https://caetano.pt/dongfeng/carros-novos/box/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "PLUS 42 kWh, particulares, IVA incluído, stock. Exclui legalização/transporte de 1045,50 € e pintura metalizada de 450 €. Válida até 2026-11-30. Referência consultada em 22/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dongfeng-vigo-one-edition",
+      "files": {
+        "core": {
+          "id": "dongfeng-vigo-one-edition",
+          "brand": "Dongfeng",
+          "model": "VIGO",
+          "variant": "One Edition 51.87 kWh",
+          "bodyType": "SUV",
+          "drivetrain": "FWD",
+          "image": "/cars/dongfeng-vigo.webp",
+          "motorPowerKW": 120
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "dcMaxChargeKW": 167
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4306,
+          "widthMM": 1868,
+          "heightMM": 1654,
+          "wheelbaseMM": 2715,
+          "cargoLitersSeatsUp": 500,
+          "cargoLitersSeatsDown": 1040
+        },
+        "efficiency": {
+          "wltpRangeKm": 340
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 30258,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "dealer",
+              "sourceLabel": "Caetano — campanha One Edition; IVA continental calculado",
+              "sourceUrl": "https://caetano.pt/dongfeng/carros-novos/vigo/",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "One Edition; mais IVA. Equivalente a 30.258 € com IVA continental de 23% (cálculo); sem legalização/transporte/pintura; stock. Fonte não restringe explicitamente a empresas. Campanha até 30/11/2026. 24.600 € + IVA × 1,23 = 30.258 €. Confirmar elegibilidade e orçamento final."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

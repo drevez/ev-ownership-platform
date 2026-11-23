@@ -16,5 +16,53 @@
     "sourceUrl": "https://fireflyportugal.pt/o-nosso-carro/",
     "sourceImageUrl": "https://fireflyportugal.pt/wp-content/uploads/1753091864687-1753091863279-7BBE23F55268DA69-scaled-1.webp",
     "notes": "Official outdoor model photograph; representative colour/equipment. One selected entry configuration displayed simply as Firefly."
+  },
+  "aion-ut": {
+    "heroImage": "/cars/aion-ut.webp",
+    "sourceUrl": "https://gac-portugal.pt/aion-ut/",
+    "sourceImageUrl": "https://gac-portugal.pt/wp-content/uploads/2026/04/GAC-MI-AION-UT-NEUTRAL-2-scaled.webp",
+    "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão."
+  },
+  "aion-v": {
+    "heroImage": "/cars/aion-v.webp",
+    "sourceUrl": "https://gac-portugal.pt/aion-v/",
+    "sourceImageUrl": "https://gac-portugal.pt/wp-content/uploads/2026/04/133ebcc9edde627efe657413856456f3c86fc9f3.webp",
+    "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão."
+  },
+  "geely-e2": {
+    "heroImage": "/cars/geely-e2.webp",
+    "sourceUrl": "https://www.geely-auto.pt/modelos/geely-e2",
+    "sourceImageUrl": "https://www.geely-auto.pt/assets/desktop/e2/Exterior_1_E2.webp",
+    "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão. Original vertical: procurar enquadramento horizontal antes da publicação."
+  },
+  "geely-e5": {
+    "heroImage": "/cars/geely-e5.webp",
+    "sourceUrl": "https://www.geely-auto.pt/modelos/geely-e5",
+    "sourceImageUrl": "https://www.geely-auto.pt/assets/desktop/e5/1766025472-exterior-bold-first-impressions.webp",
+    "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão."
+  },
+  "changan-deepal-s05": {
+    "heroImage": "/cars/changan-deepal-s05.webp",
+    "sourceUrl": "https://changan-auto.pt/configurador/deepal-s05/",
+    "sourceImageUrl": "https://changan-auto.pt/wp-content/uploads/2025/11/design-1-1.webp",
+    "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão."
+  },
+  "changan-deepal-s07": {
+    "heroImage": "/cars/changan-deepal-s07.webp",
+    "sourceUrl": "https://changan-auto.pt/configurador/deepal-s07/",
+    "sourceImageUrl": "https://changan-auto.pt/wp-content/uploads/2025/10/s07-4.webp",
+    "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão."
+  },
+  "dongfeng-box": {
+    "heroImage": "/cars/dongfeng-box.webp",
+    "sourceUrl": "https://www.dongfeng-auto.pt/modelos/dongfeng-box",
+    "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/dongfengpt-682326be8578fb1e857c7d06-prod/imgpip1920x1080-1.webp",
+    "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão."
+  },
+  "dongfeng-vigo": {
+    "heroImage": "/cars/dongfeng-vigo.webp",
+    "sourceUrl": "https://www.dongfeng-auto.pt/modelos/dongfeng-vigo",
+    "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/dongfengpt-682326be8578fb1e857c7d06-prod/img-slide1-a-1-desktop-1.webp",
+    "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão."
   }
 }
