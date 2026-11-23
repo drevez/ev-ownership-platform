@@ -9,7 +9,7 @@ O desenho aprovado mantém a palavra MotorZero, o Z elétrico e o último o cort
 | motorzero-white.svg | branco | Aplicações monocromáticas futuras sobre fundos escuros |
 | motorzero-black.svg | preto #18181B | Aplicações monocromáticas futuras sobre fundos claros |
 
-O componente `BrandLogo` centraliza os ficheiros, proporções e texto alternativo. O cabeçalho usa 170 px em mobile e 220 px a partir de sm; o rodapé usa 280/320 px. O logo tem dimensões intrínsecas para evitar saltos de layout e mantém o link para a página inicial no idioma atual.
+O componente `BrandLogo` centraliza os ficheiros, proporções e texto alternativo. O cabeçalho usa 140 px em mobile e 180 px a partir de sm; o rodapé usa 220/260 px. As dimensões foram reduzidas após revisão visual para equilibrar o logo com a navegação. O logo tem dimensões intrínsecas para evitar saltos de layout e mantém o link para a página inicial no idioma atual.
 
 Nomes em copyright, metadados e textos corridos continuam como texto. O favicon existente não foi alterado nesta publicação. Os ficheiros em `output/favicon` não fazem parte desta alteração.
 

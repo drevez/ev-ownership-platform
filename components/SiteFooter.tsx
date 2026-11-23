@@ -29,7 +29,7 @@ export function SiteFooter() {
           <div className="lg:col-span-5">
 
             <Link href={localizedHref('/')} className="inline-block max-w-full rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400">
-              <BrandLogo className="w-[280px] sm:w-[320px]" />
+              <BrandLogo className="w-[220px] sm:w-[260px]" />
             </Link>
 
             <p className="mt-8 max-w-sm text-lg leading-relaxed text-zinc-400">

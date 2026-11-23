@@ -28,7 +28,7 @@ export function SiteHeader() {
 
         {/* Logo */}
         <Link href={localizedHref('/')} className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400">
-          <BrandLogo className="w-[170px] sm:w-[220px]" preload />
+          <BrandLogo className="w-[140px] sm:w-[180px]" preload />
         </Link>
 
         {/* Desktop nav */}
