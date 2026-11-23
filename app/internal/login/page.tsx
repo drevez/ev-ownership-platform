@@ -1,4 +1,5 @@
 import { InternalLoginForm } from '@/components/internal/InternalLoginForm'
+import { BrandLogo } from '@/components/BrandLogo'
 
 export const dynamic = 'force-dynamic'
 
@@ -28,9 +29,10 @@ export default async function InternalLoginPage({
   return (
     <main className="min-h-screen bg-slate-950 px-6 py-16 text-slate-950">
       <div className="mx-auto max-w-md rounded-lg border border-slate-200 bg-white p-8 shadow-xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-          MotorZero Internal
-        </p>
+        <div className="space-y-2">
+          <BrandLogo variant="light" className="w-[190px]" />
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-700">Internal</p>
+        </div>
         <h1 className="mt-3 text-3xl font-bold">Sign in</h1>
         <p className="mt-3 text-sm leading-6 text-slate-600">
           The internal workspace is protected. Sign in once and the browser will

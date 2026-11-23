@@ -1,3 +1,5 @@
+import { BrandLogo } from '@/components/BrandLogo'
+
 interface LegalSection {
   title: string
   paragraphs: string[]
@@ -14,7 +16,7 @@ export function LegalPage({ content }: { content: LegalPageContent }) {
   return (
     <main className="bg-white text-zinc-950">
       <div className="mx-auto max-w-3xl px-5 py-14 sm:px-6 sm:py-20">
-        <p className="text-sm font-semibold text-emerald-700">MotorZero</p>
+        <BrandLogo variant="light" className="w-[180px]" />
         <h1 className="mt-3 text-4xl font-bold sm:text-5xl">
           {content.title}
         </h1>

@@ -8,6 +8,7 @@ import {
   saveCookieConsent,
 } from '@/lib/cookieConsent'
 import { useTranslations } from '@/hooks/useTranslations'
+import { BrandLogo } from '@/components/BrandLogo'
 
 export function CookieConsentBanner() {
   const t = useTranslations()
@@ -68,9 +69,7 @@ export function CookieConsentBanner() {
                 <PrivacyIcon />
               </span>
               <div>
-                <p className="text-xs font-semibold uppercase text-emerald-300">
-                  MotorZero
-                </p>
+                <BrandLogo className="mb-1 w-[120px]" />
                 <h2 className="text-lg font-semibold leading-tight">
                   {t.cookieConsent.title}
                 </h2>

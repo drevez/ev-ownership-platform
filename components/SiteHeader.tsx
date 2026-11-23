@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { BrandLogo } from '@/components/BrandLogo'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { useTranslations } from '@/hooks/useTranslations'
@@ -26,8 +27,8 @@ export function SiteHeader() {
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6">
 
         {/* Logo */}
-        <Link href={localizedHref('/')} className="text-xl font-bold tracking-tight text-white sm:text-2xl">
-          MotorZero
+        <Link href={localizedHref('/')} className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400">
+          <BrandLogo className="w-[170px] sm:w-[220px]" preload />
         </Link>
 
         {/* Desktop nav */}

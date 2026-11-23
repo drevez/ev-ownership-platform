@@ -84,6 +84,7 @@ export default async function RootLayout({
       '@type': 'Organization',
       name: 'MotorZero',
       url: siteUrl,
+      logo: `${siteUrl}/brand/motorzero-light.svg`,
     },
     {
       '@context': 'https://schema.org',

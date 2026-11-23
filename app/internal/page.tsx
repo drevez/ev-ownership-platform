@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BrandLogo } from '@/components/BrandLogo'
 
 import { auditVehicles } from '@/lib/vehicleAudit'
 
@@ -44,9 +45,10 @@ export default async function InternalPage() {
         <header className="border-b border-slate-200 pb-8">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-                MotorZero Internal
-              </p>
+              <div className="space-y-2">
+                <BrandLogo variant="light" className="w-[190px]" />
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-700">Internal</p>
+              </div>
               <h1 className="mt-2 text-4xl font-bold">Workspace</h1>
               <p className="mt-3 max-w-2xl text-slate-600">
                 Maintain the vehicle catalog, public content, translations, and

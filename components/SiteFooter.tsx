@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { BrandLogo } from '@/components/BrandLogo'
 
 import { useLocale } from '../context/LocaleContext'
 import { useTranslations } from '../hooks/useTranslations'
@@ -27,9 +28,9 @@ export function SiteFooter() {
           {/* Left */}
           <div className="lg:col-span-5">
 
-            <h2 className="text-5xl font-bold tracking-tight text-white">
-              MotorZero
-            </h2>
+            <Link href={localizedHref('/')} className="inline-block max-w-full rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400">
+              <BrandLogo className="w-[280px] sm:w-[320px]" />
+            </Link>
 
             <p className="mt-8 max-w-sm text-lg leading-relaxed text-zinc-400">
               {t.footer.description}
