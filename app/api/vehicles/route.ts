@@ -26,7 +26,7 @@ export async function GET(request: Request) {
 
     return NextResponse.json(
       buildComparisonApiResponse(
-        selection.values,
+        [...new Set(selection.values.map((id, index) => vehicles[index]?.id ?? id))],
         vehicles.filter((vehicle): vehicle is NonNullable<typeof vehicle> => vehicle != null),
         selection.rejected
       )

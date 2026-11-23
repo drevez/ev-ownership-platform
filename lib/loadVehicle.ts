@@ -3,6 +3,7 @@ import type { VehicleFiles } from '@/lib/internalVehicleFiles'
 import fs from 'fs/promises'
 import path from 'path'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
+import { getTechnicalGroup, groupTechnicalVariants } from '@/lib/technicalVariants'
 
 /**
  * Shared JSON object type
@@ -193,6 +194,13 @@ export interface VehicleData {
   dimensions?: VehicleDimensions
   pricing?: VehiclePricing
   comfort?: VehicleComfort
+  equipmentTrims?: {
+    id: string
+    label: string
+    wltpRangeKm?: number
+    pricing?: VehiclePricing
+    comfort?: VehicleComfort
+  }[]
 }
 
 interface ModuleResult {
@@ -238,6 +246,24 @@ async function normalizeVehicleImage(
  * Load full vehicle data from JSON modules
  */
 export async function loadVehicle(
+  vehicleId: string
+): Promise<VehicleData | null> {
+  const group = getTechnicalGroup(vehicleId)
+  if (group) {
+    const members = await Promise.all(group.members.map(id => loadRawVehicle(id)))
+    const existing = members.filter((vehicle): vehicle is VehicleData => vehicle !== null)
+    if (!existing.some(vehicle => vehicle.id === vehicleId)) return null
+    const projected = groupTechnicalVariants(existing)
+    // Fall back to the actual record when grouping is invalid or incomplete.
+    return projected.find(vehicle => vehicle.id === vehicleId)
+      ?? projected.find(vehicle => vehicle.id === group.id)
+      ?? null
+  }
+  const vehicle = await loadRawVehicle(vehicleId)
+  return vehicle ? groupTechnicalVariants([vehicle])[0] : null
+}
+
+async function loadRawVehicle(
   vehicleId: string
 ): Promise<VehicleData | null> {
   if (!/^[a-z0-9][a-z0-9-]*$/.test(vehicleId)) return null
@@ -350,7 +376,7 @@ export interface VehicleRegistryItem {
 /**
  * Load vehicle registry
  */
-export async function loadVehicleRegistry(): Promise<
+async function loadRawVehicleRegistry(): Promise<
   VehicleRegistryItem[]
 > {
   if (usesSupabase()) return readCatalogRegistry()
@@ -369,6 +395,15 @@ export async function loadVehicleRegistry(): Promise<
     console.error('Failed to load vehicle registry', error)
     return []
   }
+}
+
+export async function loadVehicleRegistry(): Promise<VehicleRegistryItem[]> {
+  return (await loadAllVehicles()).map(vehicle => ({
+    id: vehicle.id, brand: vehicle.brand, model: vehicle.model,
+    variant: vehicle.variant, segment: vehicle.segment ?? '',
+    bodyType: vehicle.bodyType ?? '', drivetrain: vehicle.drivetrain ?? '',
+    heroImage: vehicle.heroImage || vehicle.image,
+  }))
 }
 
 /**
@@ -395,8 +430,8 @@ export async function vehicleFromFiles(files: VehicleFiles): Promise<VehicleData
   } as VehicleData
 }
 export async function loadAllVehicles(): Promise<VehicleData[]> {
-  if (usesSupabase()) return Promise.all((await readCatalog()).map(record => vehicleFromFiles(record.files)))
-  const registry = await loadVehicleRegistry()
-  const vehicles = await Promise.all(registry.map(entry => loadVehicle(entry.id)))
-  return vehicles.filter((vehicle): vehicle is VehicleData => vehicle !== null)
+  if (usesSupabase()) return groupTechnicalVariants(await Promise.all((await readCatalog()).map(record => vehicleFromFiles(record.files))))
+  const registry = await loadRawVehicleRegistry()
+  const vehicles = await Promise.all(registry.map(entry => loadRawVehicle(entry.id)))
+  return groupTechnicalVariants(vehicles.filter((vehicle): vehicle is VehicleData => vehicle !== null))
 }

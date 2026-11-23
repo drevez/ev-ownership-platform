@@ -1,5 +1,7 @@
 # Publicação do primeiro lote — 23/11/2026
 
+**Correção de apresentação:** os 16 registos de origem deste lote correspondem a 11 versões técnicas públicas. Acabamentos com a mesma bateria/motor/tração são agrupados. Ver [versões técnicas e acabamentos](TECHNICAL_VERSIONS.md). A contagem de 103 abaixo descreve os registos importados; após esta correção são 98 versões públicas, mantendo os 103 registos de origem.
+
 Integração dos carros reais do levantamento no catálogo Supabase MotorZero. Payload: `data/catalog-updates/2026-11-23-expansion-batch-01.json`. Proveniência e decisões: `data/internal/batch-01-publication-audit-2026-11-23.json`. O levantamento original de 22/11 mantém os dados e conflitos históricos.
 
 | Modelo | Versões integradas |

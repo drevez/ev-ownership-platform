@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import { ViewEventTracker } from '@/components/analytics/ViewEventTracker'
 import { loadVehicle, getVehicleParams } from '@/lib/loadVehicle'
 import { loadModel, toModelSlug } from '@/lib/models'
@@ -52,6 +52,10 @@ export default async function VehiclePage({ params }: VehiclePageProps) {
 
   if (!vehicle) {
     notFound()
+  }
+
+  if (vehicle.id !== resolvedParams.id) {
+    permanentRedirect(buildLocalizedHref(`/vehicles/${vehicle.id}`, locale))
   }
 
   const modelSlug = toModelSlug(vehicle.brand, vehicle.model)

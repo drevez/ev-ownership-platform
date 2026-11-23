@@ -7,6 +7,7 @@ import { ComfortAndFeaturesCard } from './ComfortAndFeaturesCard'
 import { EfficiencyCard } from './EfficiencyCard'
 import { DimensionsCard } from './DimensionsCard'
 import { PricingCard } from './PricingCard'
+import { EquipmentTrimsCard } from './EquipmentTrimsCard'
 import type { VehicleData } from '@/lib/loadVehicle'
 import { VehicleComparisonSection } from './VehicleComparisonSection'
 import { VehicleShareButton } from './VehicleShareButton'
@@ -140,6 +141,8 @@ export function VehiclePage({
             shareText={t.vehicle.shareText}
           />
         </div>
+        <EquipmentTrimsCard vehicle={vehicle} locale={locale} />
+
         <SpecsGrid
           brand={vehicle.brand}
           model={vehicle.model}
