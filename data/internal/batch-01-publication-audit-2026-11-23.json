@@ -380,7 +380,7 @@
     }
   },
   "decisions": [
-    "Premium Green remains research-only until equipment mapping; Premium published using its own list price. No duplicate created.",
+    "Premium Green stays a commercial candidate without a separate mechanical version or transferring its campaign until equipment mapping is confirmed. Premium uses its own list price.",
     "S07 LFP and Aion V Luxury published without confirmed price.",
     "Unspecified advertised battery capacities retained in variant names and audit; never relabelled gross/usable.",
     "S05 droplet cargo volume omitted pending measurement-method support; S07 disputed cargo volume omitted.",
@@ -715,5 +715,20 @@
       ],
       "decision": "Publish supported fields only; uncertain capacity basis, optional equipment and real efficiency remain absent."
     }
-  ]
+  ],
+  "recheckedAt": "2026-11-23",
+  "recheckedSources": [
+    "e2-dealer",
+    "e5-dealer",
+    "s05",
+    "s07",
+    "box-dealer-current",
+    "vigo-dealer-current",
+    "gda-aion-ut",
+    "ut-cash",
+    "v"
+  ],
+  "recheckLimitations": {
+    "v-finance": "Page unavailable during recheck; keep documented 22/11 reference and its 30/11 validity, without claiming fresh price confirmation."
+  }
 }

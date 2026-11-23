@@ -22,7 +22,7 @@
       "name": "UT",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_variants",
       "modelEvidenceUrl": "https://gac-portugal.pt/",
       "excludedPowertrains": [
         "HEV",
@@ -45,9 +45,10 @@
           "status": "source_supported_needs_current_pt_review",
           "sourceUrl": "https://gac-portugal.pt/aion-ut/",
           "onlyIfOfficiallyOfferedInPortugal": true,
-          "publicationStatus": "not_publishable_until_review",
+          "publicationStatus": "published",
           "priceEur": null,
-          "year": null
+          "year": null,
+          "publishedId": "aion-ut-premium"
         },
         {
           "proposalKey": "proposal-2",
@@ -58,9 +59,10 @@
           "status": "source_supported_needs_current_pt_review",
           "sourceUrl": "https://gac-portugal.pt/aion-ut/",
           "onlyIfOfficiallyOfferedInPortugal": true,
-          "publicationStatus": "not_publishable_until_review",
+          "publicationStatus": "published",
           "priceEur": null,
-          "year": null
+          "year": null,
+          "publishedId": "aion-ut-luxury"
         }
       ],
       "publicationGate": [
@@ -75,9 +77,15 @@
       "researchBatch": {
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
-        "status": "researched_with_documented_gaps",
-        "versionsIdentified": 3
-      }
+        "status": "published",
+        "versionsIdentified": 3,
+        "publishedVersions": 2
+      },
+      "publishedVariantIds": [
+        "aion-ut-premium",
+        "aion-ut-luxury"
+      ],
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
     },
     {
       "slug": "aion-v",
@@ -85,7 +93,7 @@
       "name": "V",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_variants",
       "modelEvidenceUrl": "https://gac-portugal.pt/",
       "excludedPowertrains": [
         "HEV",
@@ -138,9 +146,15 @@
       "researchBatch": {
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
-        "status": "researched_with_documented_gaps",
-        "versionsIdentified": 2
-      }
+        "status": "published",
+        "versionsIdentified": 2,
+        "publishedVersions": 2
+      },
+      "publishedVariantIds": [
+        "aion-v-premium",
+        "aion-v-luxury"
+      ],
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
     },
     {
       "slug": "geely-e2",
@@ -148,7 +162,7 @@
       "name": "E2",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_variants",
       "modelEvidenceUrl": "https://campanhas.geely-auto.pt/geely-e2/",
       "excludedPowertrains": [
         "HEV",
@@ -201,9 +215,16 @@
       "researchBatch": {
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
-        "status": "researched_with_documented_gaps",
-        "versionsIdentified": 3
-      }
+        "status": "published",
+        "versionsIdentified": 3,
+        "publishedVersions": 3
+      },
+      "publishedVariantIds": [
+        "geely-e2-pro",
+        "geely-e2-max",
+        "geely-e2-ultra"
+      ],
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
     },
     {
       "slug": "geely-e5",
@@ -211,7 +232,7 @@
       "name": "E5",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_variants",
       "modelEvidenceUrl": "https://www.geely-auto.pt/",
       "excludedPowertrains": [
         "HEV",
@@ -264,9 +285,15 @@
       "researchBatch": {
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
-        "status": "researched_with_documented_gaps",
-        "versionsIdentified": 2
-      }
+        "status": "published",
+        "versionsIdentified": 2,
+        "publishedVersions": 2
+      },
+      "publishedVariantIds": [
+        "geely-e5-pro",
+        "geely-e5-max"
+      ],
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
     },
     {
       "slug": "changan-deepal-s05",
@@ -274,7 +301,7 @@
       "name": "Deepal S05",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_variants",
       "modelEvidenceUrl": "https://changan-auto.pt/configurador/deepal-s05/",
       "excludedPowertrains": [
         "HEV",
@@ -314,9 +341,16 @@
       "researchBatch": {
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
-        "status": "researched_with_documented_gaps",
-        "versionsIdentified": 3
-      }
+        "status": "published",
+        "versionsIdentified": 3,
+        "publishedVersions": 3
+      },
+      "publishedVariantIds": [
+        "changan-deepal-s05-rwd-pro",
+        "changan-deepal-s05-rwd-max",
+        "changan-deepal-s05-awd-max"
+      ],
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
     },
     {
       "slug": "changan-deepal-s07",
@@ -324,7 +358,7 @@
       "name": "Deepal S07",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_variants",
       "modelEvidenceUrl": "https://changan-auto.pt/changan-portugal-celebra-primeiro-aniversario-com-perto-de-1-000-unidades-entre-matriculas-e-vendas-confirmadas-numa-gama-em-expansao/",
       "excludedPowertrains": [
         "HEV",
@@ -377,9 +411,15 @@
       "researchBatch": {
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
-        "status": "researched_with_documented_gaps",
-        "versionsIdentified": 2
-      }
+        "status": "published",
+        "versionsIdentified": 2,
+        "publishedVersions": 2
+      },
+      "publishedVariantIds": [
+        "changan-deepal-s07-bev-79",
+        "changan-deepal-s07-rwd-77-94kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
     },
     {
       "slug": "dongfeng-box",
@@ -387,7 +427,7 @@
       "name": "BOX",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_variants",
       "modelEvidenceUrl": "https://caetano.pt/dongfeng/",
       "excludedPowertrains": [
         "HEV",
@@ -440,9 +480,14 @@
       "researchBatch": {
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
-        "status": "researched_with_documented_gaps",
-        "versionsIdentified": 1
-      }
+        "status": "published",
+        "versionsIdentified": 1,
+        "publishedVersions": 1
+      },
+      "publishedVariantIds": [
+        "dongfeng-box-plus"
+      ],
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
     },
     {
       "slug": "dongfeng-vigo",
@@ -450,7 +495,7 @@
       "name": "VIGO",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_variants",
       "modelEvidenceUrl": "https://caetano.pt/dongfeng/",
       "excludedPowertrains": [
         "HEV",
@@ -503,9 +548,14 @@
       "researchBatch": {
         "path": "data/internal/model-expansion-batch-01-2026-11-22.json",
         "reviewedAt": "2026-11-22",
-        "status": "researched_with_documented_gaps",
-        "versionsIdentified": 1
-      }
+        "status": "published",
+        "versionsIdentified": 1,
+        "publishedVersions": 1
+      },
+      "publishedVariantIds": [
+        "dongfeng-vigo-one-edition"
+      ],
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
     },
     {
       "slug": "forthing-friday-ev",
@@ -7638,5 +7688,14 @@
     "publicCatalogFingerprintBefore": "43d7f3aefe7eba185206cc9abbd42161",
     "publicCatalogFingerprintAfter": "43d7f3aefe7eba185206cc9abbd42161",
     "existingCatalogUnchanged": true
+  },
+  "latestPublication": {
+    "date": "2026-11-23",
+    "modelsPublishedFromPlan": 9,
+    "variantsPublishedFromPlan": 17,
+    "totalPublicModels": 76,
+    "totalPublicVariants": 103,
+    "remainingFamiliesWithoutVariants": 121,
+    "documentation": "docs/BATCH_01_PUBLICATION.md"
   }
 }

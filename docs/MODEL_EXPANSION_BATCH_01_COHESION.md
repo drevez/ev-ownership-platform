@@ -1,6 +1,6 @@
 # Coerência dos dados — primeiro lote BEV — 22/11/2026
 
-Revisão de nove modelos com fontes oficiais, concessionários, Guia do Automóvel e ensaios portugueses. Esta revisão prevalece sobre as pendências históricas do levantamento inicial. Foram preparados **18 registos de configuração em nove modelos**, com uma versão Firefly publicada no Supabase e 17 configurações selecionadas ainda por publicar. Existe ainda um candidato BOX PRO a mapear.
+Revisão de nove modelos com fontes oficiais, concessionários, Guia do Automóvel e ensaios portugueses. Esta revisão prevalece sobre as pendências históricas do levantamento inicial. Foram preparados **18 registos de configuração em nove modelos**, com uma versão Firefly publicada na revisão original. Atualização de 23/11: mais 16 versões publicadas em oito modelos; Premium Green permanece candidato comercial. Ver [publicação e pendências atuais](BATCH_01_PUBLICATION.md). Existe ainda um candidato BOX PRO a mapear.
 
 O Firefly tem **uma única configuração selecionada e um único nome público: Firefly**. Não são apresentadas versões Select/Comfort. A configuração de origem mais barata fica identificada apenas na proveniência, para evitar juntar especificações da versão superior.
 

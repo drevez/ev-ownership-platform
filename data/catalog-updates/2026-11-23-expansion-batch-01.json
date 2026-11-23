@@ -215,7 +215,8 @@
               "sourceType": "unknown",
               "confidence": "unknown",
               "displayPriority": 1,
-              "notes": "Preço atual da configuração por confirmar. As referências e conflitos estão preservados no levantamento de 22/11/2026."
+              "notes": "Preço atual da configuração por confirmar. As referências e conflitos estão preservados no levantamento de 22/11/2026.",
+              "priceDate": "2026-11"
             }
           ]
         }
@@ -872,7 +873,8 @@
               "sourceType": "unknown",
               "confidence": "unknown",
               "displayPriority": 1,
-              "notes": "Preço atual da configuração por confirmar. As referências e conflitos estão preservados no levantamento de 22/11/2026."
+              "notes": "Preço atual da configuração por confirmar. As referências e conflitos estão preservados no levantamento de 22/11/2026.",
+              "priceDate": "2026-11"
             }
           ]
         }

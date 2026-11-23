@@ -5,11 +5,11 @@
     "models": 9,
     "versionsIdentified": 18,
     "officialPhotoCandidates": 9,
-    "databaseWrites": 1,
-    "publishedVersions": 1,
+    "databaseWrites": 17,
+    "publishedVersions": 17,
     "versionsSelected": 18,
     "additionalVersionCandidates": 1,
-    "pendingSelectedVersions": 17
+    "pendingSelectedVersions": 1
   },
   "publicationRules": [
     "Este ficheiro não é payload de catalog_save nem lote de importação.",
@@ -407,7 +407,7 @@
       "bodyType": "Hatchback",
       "market": "pt",
       "reviewedAt": "2026-11-22",
-      "publicationStatus": "research_draft_not_imported",
+      "publicationStatus": "published",
       "commonFacts": {
         "batteryChemistry": "LFP",
         "acMaxKW": 11,
@@ -487,7 +487,8 @@
             }
           ],
           "issues": [],
-          "configurationKind": "commercial_color_configuration"
+          "configurationKind": "commercial_color_configuration",
+          "publicationStatus": "commercial_candidate_not_published"
         },
         {
           "key": "premium",
@@ -530,7 +531,9 @@
           "issues": [
             "Preço particular de tabela encontrado em fonte secundária; campanha específica Premium não confirmada."
           ],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "aion-ut-premium"
         },
         {
           "key": "luxury",
@@ -567,7 +570,9 @@
           "issues": [
             "Preço de tabela secundário disponível; campanha Luxury e condições específicas atuais não confirmadas."
           ],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "aion-ut-luxury"
         }
       ],
       "photo": {
@@ -579,12 +584,13 @@
         "reviewedAt": "2026-11-22",
         "reviewedBy": "codex",
         "visualReview": "model_identity_confirmed_representative_configuration",
-        "publicationStatus": "prepared_internal_not_live",
+        "publicationStatus": "published",
         "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
         "preparedPath": "data/internal/prepared-model-media/aion-ut.webp",
         "preparedWidth": 1280,
         "preparedHeight": 720,
-        "preparedSha256": "e6e8b986463062ba5fee9e37a35ea068c2bee255c897dc76af3aff412fef801a"
+        "preparedSha256": "e6e8b986463062ba5fee9e37a35ea068c2bee255c897dc76af3aff412fef801a",
+        "publicPath": "/cars/aion-ut.webp"
       },
       "displayName": "Aion UT",
       "cohesionReview": {
@@ -600,6 +606,14 @@
           "Capacidade bruta/útil e tempo de carga 10–80 não comprovados."
         ],
         "recommendation": "Preparável com preços de tabela rotulados; resolver apenas apresentação Premium/Green."
+      },
+      "publication": {
+        "publishedAt": "2026-11-23",
+        "project": "MotorZero",
+        "versionCount": 2,
+        "deploymentId": "dpl_92a9XZFAvdMYeBsAmqGTCj6FPkuL",
+        "commit": "ef29ae6840c648ac9a3e5f41051c0ab4e8f48f7c",
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/aion-ut"
       }
     },
     {
@@ -610,7 +624,7 @@
       "bodyType": "SUV",
       "market": "pt",
       "reviewedAt": "2026-11-22",
-      "publicationStatus": "research_draft_not_imported",
+      "publicationStatus": "published",
       "commonFacts": {
         "batteryChemistry": "LFP",
         "dcMaxKW": 180,
@@ -691,7 +705,9 @@
             }
           ],
           "issues": [],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "aion-v-premium"
         },
         {
           "key": "luxury",
@@ -728,7 +744,9 @@
           "issues": [
             "Falta preço oficial atual da Luxury; o valor de ensaio não substitui campanha/tabela."
           ],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "aion-v-luxury"
         }
       ],
       "photo": {
@@ -740,12 +758,13 @@
         "reviewedAt": "2026-11-22",
         "reviewedBy": "codex",
         "visualReview": "model_identity_confirmed_representative_configuration",
-        "publicationStatus": "prepared_internal_not_live",
+        "publicationStatus": "published",
         "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
         "preparedPath": "data/internal/prepared-model-media/aion-v.webp",
         "preparedWidth": 1280,
         "preparedHeight": 720,
-        "preparedSha256": "3582fb87a5f6bb50c14ba9d3428d57bdc7cd92d9902e8722689f3c1353f2edc4"
+        "preparedSha256": "3582fb87a5f6bb50c14ba9d3428d57bdc7cd92d9902e8722689f3c1353f2edc4",
+        "publicPath": "/cars/aion-v.webp"
       },
       "displayName": "Aion V",
       "fieldReview": {
@@ -771,6 +790,14 @@
           "Distinção entre capacidade bruta e útil."
         ],
         "recommendation": "Premium pode avançar com condições de preço; Luxury exige fonte de preço bem rotulada."
+      },
+      "publication": {
+        "publishedAt": "2026-11-23",
+        "project": "MotorZero",
+        "versionCount": 2,
+        "deploymentId": "dpl_92a9XZFAvdMYeBsAmqGTCj6FPkuL",
+        "commit": "ef29ae6840c648ac9a3e5f41051c0ab4e8f48f7c",
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/aion-v"
       }
     },
     {
@@ -781,7 +808,7 @@
       "bodyType": "Hatchback",
       "market": "pt",
       "reviewedAt": "2026-11-22",
-      "publicationStatus": "research_draft_not_imported",
+      "publicationStatus": "published",
       "commonFacts": {
         "batteryChemistry": "LFP",
         "acMaxKW": 6.6,
@@ -870,7 +897,9 @@
               "minutes": 25,
               "source": "e2-confimotion"
             }
-          ]
+          ],
+          "publicationStatus": "published",
+          "publishedId": "geely-e2-pro"
         },
         {
           "key": "max",
@@ -931,7 +960,9 @@
               "minutes": 25,
               "source": "e2-confimotion"
             }
-          ]
+          ],
+          "publicationStatus": "published",
+          "publishedId": "geely-e2-max"
         },
         {
           "key": "ultra",
@@ -996,7 +1027,9 @@
               "minutes": 25,
               "source": "e2-confimotion"
             }
-          ]
+          ],
+          "publicationStatus": "published",
+          "publishedId": "geely-e2-ultra"
         }
       ],
       "photo": {
@@ -1008,12 +1041,13 @@
         "reviewedAt": "2026-11-22",
         "reviewedBy": "codex",
         "visualReview": "model_identity_confirmed_representative_configuration",
-        "publicationStatus": "prepared_internal_not_live",
+        "publicationStatus": "published",
         "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão. Original vertical: procurar enquadramento horizontal antes da publicação.",
         "preparedPath": "data/internal/prepared-model-media/geely-e2.webp",
         "preparedWidth": 1280,
         "preparedHeight": 720,
-        "preparedSha256": "142c51f605e40b4536e6282d7149dde2f4c58e08b29093d4a86c44437cd59057"
+        "preparedSha256": "142c51f605e40b4536e6282d7149dde2f4c58e08b29093d4a86c44437cd59057",
+        "publicPath": "/cars/geely-e2.webp"
       },
       "displayName": "Geely E2",
       "cohesionReview": {
@@ -1028,6 +1062,14 @@
           "Tempo 10–80 comprovado e equipamentos como bomba de calor por acabamento."
         ],
         "recommendation": "Núcleo coerente; campo de tempo de carga pode permanecer vazio, sem impedir publicação do resto."
+      },
+      "publication": {
+        "publishedAt": "2026-11-23",
+        "project": "MotorZero",
+        "versionCount": 3,
+        "deploymentId": "dpl_92a9XZFAvdMYeBsAmqGTCj6FPkuL",
+        "commit": "ef29ae6840c648ac9a3e5f41051c0ab4e8f48f7c",
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/geely-e2"
       }
     },
     {
@@ -1038,7 +1080,7 @@
       "bodyType": "SUV",
       "market": "pt",
       "reviewedAt": "2026-11-22",
-      "publicationStatus": "research_draft_not_imported",
+      "publicationStatus": "published",
       "commonFacts": {
         "advertisedBatteryKWh": 60.22,
         "batteryChemistry": "LFP",
@@ -1114,7 +1156,9 @@
             }
           ],
           "issues": [],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "geely-e5-pro"
         },
         {
           "key": "max",
@@ -1187,7 +1231,9 @@
             ],
             "confidence": "medium",
             "decision": "Valor português preferido por triangulação; 425 km do configurador continua registado como divergência."
-          }
+          },
+          "publicationStatus": "published",
+          "publishedId": "geely-e5-max"
         }
       ],
       "photo": {
@@ -1199,12 +1245,13 @@
         "reviewedAt": "2026-11-22",
         "reviewedBy": "codex",
         "visualReview": "model_identity_confirmed_representative_configuration",
-        "publicationStatus": "prepared_internal_not_live",
+        "publicationStatus": "published",
         "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
         "preparedPath": "data/internal/prepared-model-media/geely-e5.webp",
         "preparedWidth": 1280,
         "preparedHeight": 720,
-        "preparedSha256": "8988c0ba3dc1199ec88079b15b2e62e5d6d74dcd4acd9b68cec996e4540d35ff"
+        "preparedSha256": "8988c0ba3dc1199ec88079b15b2e62e5d6d74dcd4acd9b68cec996e4540d35ff",
+        "publicPath": "/cars/geely-e5.webp"
       },
       "displayName": "Geely E5",
       "fieldReview": {
@@ -1271,6 +1318,14 @@
           "Capacidade útil/bruta."
         ],
         "recommendation": "PRO preparável; MAX com 410 km como valor preferido e fonte identificada, preservando o conflito para revisão."
+      },
+      "publication": {
+        "publishedAt": "2026-11-23",
+        "project": "MotorZero",
+        "versionCount": 2,
+        "deploymentId": "dpl_92a9XZFAvdMYeBsAmqGTCj6FPkuL",
+        "commit": "ef29ae6840c648ac9a3e5f41051c0ab4e8f48f7c",
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/geely-e5"
       }
     },
     {
@@ -1281,7 +1336,7 @@
       "bodyType": "SUV",
       "market": "pt",
       "reviewedAt": "2026-11-22",
-      "publicationStatus": "research_draft_not_imported",
+      "publicationStatus": "published",
       "commonFacts": {
         "batteryChemistry": "LFP",
         "acMaxKW": 11,
@@ -1346,7 +1401,9 @@
             }
           ],
           "issues": [],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "changan-deepal-s05-rwd-pro"
         },
         {
           "key": "rwd-max",
@@ -1381,7 +1438,9 @@
             }
           ],
           "issues": [],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "changan-deepal-s05-rwd-max"
         },
         {
           "key": "awd-max",
@@ -1416,7 +1475,9 @@
             }
           ],
           "issues": [],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "changan-deepal-s05-awd-max"
         }
       ],
       "photo": {
@@ -1428,12 +1489,13 @@
         "reviewedAt": "2026-11-22",
         "reviewedBy": "codex",
         "visualReview": "model_identity_confirmed_representative_configuration",
-        "publicationStatus": "prepared_internal_not_live",
+        "publicationStatus": "published",
         "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
         "preparedPath": "data/internal/prepared-model-media/changan-deepal-s05.webp",
         "preparedWidth": 1280,
         "preparedHeight": 720,
-        "preparedSha256": "146116f3f593b37aadaf2161df6c794f2431923bc7ab6f39ded5d71c9bfc70e8"
+        "preparedSha256": "146116f3f593b37aadaf2161df6c794f2431923bc7ab6f39ded5d71c9bfc70e8",
+        "publicPath": "/cars/changan-deepal-s05.webp"
       },
       "displayName": "Changan Deepal S05",
       "cohesionReview": {
@@ -1448,6 +1510,14 @@
           "Capacidade bruta/útil se o fabricante só indica 68,8 kWh."
         ],
         "recommendation": "Mais pronto do lote; manter teto MAX como opcional e medidas oficiais."
+      },
+      "publication": {
+        "publishedAt": "2026-11-23",
+        "project": "MotorZero",
+        "versionCount": 3,
+        "deploymentId": "dpl_92a9XZFAvdMYeBsAmqGTCj6FPkuL",
+        "commit": "ef29ae6840c648ac9a3e5f41051c0ab4e8f48f7c",
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/changan-deepal-s05"
       }
     },
     {
@@ -1458,7 +1528,7 @@
       "bodyType": "SUV",
       "market": "pt",
       "reviewedAt": "2026-11-22",
-      "publicationStatus": "research_draft_not_imported",
+      "publicationStatus": "published",
       "commonFacts": {
         "lengthMM": 4750,
         "widthMM": 1930,
@@ -1554,7 +1624,9 @@
               ],
               "confidence": "medium"
             }
-          }
+          },
+          "publicationStatus": "published",
+          "publishedId": "changan-deepal-s07-bev-79"
         },
         {
           "key": "my26-bev",
@@ -1612,7 +1684,9 @@
             "MY26 significa Model Year 2026, não acabamento. Não foi identificada designação comercial de acabamento separada; não inventar trim MY26 nem atribuir MY25 ao anterior."
           ],
           "configurationKind": "model_year_technical_revision",
-          "trim": null
+          "trim": null,
+          "publicationStatus": "published",
+          "publishedId": "changan-deepal-s07-rwd-77-94kwh"
         }
       ],
       "photo": {
@@ -1624,12 +1698,13 @@
         "reviewedAt": "2026-11-22",
         "reviewedBy": "codex",
         "visualReview": "model_identity_confirmed_representative_configuration",
-        "publicationStatus": "prepared_internal_not_live",
+        "publicationStatus": "published",
         "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
         "preparedPath": "data/internal/prepared-model-media/changan-deepal-s07.webp",
         "preparedWidth": 1280,
         "preparedHeight": 720,
-        "preparedSha256": "ee570afba60f25658926da6cf28f98eb2375003a902ca51212c04d9f49f41b76"
+        "preparedSha256": "ee570afba60f25658926da6cf28f98eb2375003a902ca51212c04d9f49f41b76",
+        "publicPath": "/cars/changan-deepal-s07.webp"
       },
       "displayName": "Changan Deepal S07",
       "cohesionReview": {
@@ -1645,6 +1720,14 @@
           "Capacidade útil/bruta."
         ],
         "recommendation": "Anterior pode ser preparado; revisão LFP exige fechar preço e especificações correspondentes, sem MY26 no nome público."
+      },
+      "publication": {
+        "publishedAt": "2026-11-23",
+        "project": "MotorZero",
+        "versionCount": 2,
+        "deploymentId": "dpl_92a9XZFAvdMYeBsAmqGTCj6FPkuL",
+        "commit": "ef29ae6840c648ac9a3e5f41051c0ab4e8f48f7c",
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/changan-deepal-s07"
       }
     },
     {
@@ -1655,7 +1738,7 @@
       "bodyType": "Hatchback",
       "market": "pt",
       "reviewedAt": "2026-11-22",
-      "publicationStatus": "research_draft_not_imported",
+      "publicationStatus": "published",
       "commonFacts": {
         "batteryChemistry": "LFP",
         "cargoSeatsUpL": 326,
@@ -1735,7 +1818,9 @@
           "issues": [
             "PRO também aparece no Guia; confirmar diferença de equipamento e correspondência à gama atual antes de a adicionar."
           ],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "dongfeng-box-plus"
         }
       ],
       "photo": {
@@ -1747,12 +1832,13 @@
         "reviewedAt": "2026-11-22",
         "reviewedBy": "codex",
         "visualReview": "model_identity_confirmed_representative_configuration",
-        "publicationStatus": "prepared_internal_not_live",
+        "publicationStatus": "published",
         "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
         "preparedPath": "data/internal/prepared-model-media/dongfeng-box.webp",
         "preparedWidth": 1280,
         "preparedHeight": 720,
-        "preparedSha256": "6fd7806a914574d83ad1e0ee49f26f72d146b70792bf1dbd032d4c83410b7b02"
+        "preparedSha256": "6fd7806a914574d83ad1e0ee49f26f72d146b70792bf1dbd032d4c83410b7b02",
+        "publicPath": "/cars/dongfeng-box.webp"
       },
       "displayName": "Dongfeng BOX",
       "fieldReview": {
@@ -1796,6 +1882,14 @@
           "Capacidade bruta/útil e tempo 10–80."
         ],
         "recommendation": "PLUS tem núcleo coerente; PRO fica como candidato, sem importação automática."
+      },
+      "publication": {
+        "publishedAt": "2026-11-23",
+        "project": "MotorZero",
+        "versionCount": 1,
+        "deploymentId": "dpl_92a9XZFAvdMYeBsAmqGTCj6FPkuL",
+        "commit": "ef29ae6840c648ac9a3e5f41051c0ab4e8f48f7c",
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/dongfeng-box"
       }
     },
     {
@@ -1806,7 +1900,7 @@
       "bodyType": "SUV",
       "market": "pt",
       "reviewedAt": "2026-11-22",
-      "publicationStatus": "research_draft_not_imported",
+      "publicationStatus": "published",
       "commonFacts": {
         "batteryChemistry": "LFP",
         "dcMaxKW": 167,
@@ -1892,7 +1986,9 @@
           "issues": [
             "AC ainda não fechado em ficha PT; 6,6 kW de outros mercados permanece candidato."
           ],
-          "configurationKind": "equipment_trim"
+          "configurationKind": "equipment_trim",
+          "publicationStatus": "published",
+          "publishedId": "dongfeng-vigo-one-edition"
         }
       ],
       "photo": {
@@ -1904,12 +2000,13 @@
         "reviewedAt": "2026-11-22",
         "reviewedBy": "codex",
         "visualReview": "model_identity_confirmed_representative_configuration",
-        "publicationStatus": "prepared_internal_not_live",
+        "publicationStatus": "published",
         "notes": "Fotografia oficial representativa; cor, jantes e equipamento não garantem a configuração de cada versão.",
         "preparedPath": "data/internal/prepared-model-media/dongfeng-vigo.webp",
         "preparedWidth": 1280,
         "preparedHeight": 720,
-        "preparedSha256": "eb4ddb86a00845090a4acc63e65721903ddaf7c15176c5e29def0358974ed08a"
+        "preparedSha256": "eb4ddb86a00845090a4acc63e65721903ddaf7c15176c5e29def0358974ed08a",
+        "publicPath": "/cars/dongfeng-vigo.webp"
       },
       "displayName": "Dongfeng VIGO",
       "fieldReview": {
@@ -1950,6 +2047,14 @@
           "Capacidade bruta/útil e tempo 10–80; não somar automaticamente 500 L e compartimento de 72 L."
         ],
         "recommendation": "Núcleo coerente; deixar AC não confirmado vazio e manter preços de concessionários distintos separados."
+      },
+      "publication": {
+        "publishedAt": "2026-11-23",
+        "project": "MotorZero",
+        "versionCount": 1,
+        "deploymentId": "dpl_92a9XZFAvdMYeBsAmqGTCj6FPkuL",
+        "commit": "ef29ae6840c648ac9a3e5f41051c0ab4e8f48f7c",
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/dongfeng-vigo"
       }
     },
     {
@@ -2340,5 +2445,6 @@
     "Pendência de campo opcional não impede publicar os restantes campos confirmados.",
     "Não preencher estimativas reais ou capacidades úteis/brutas por dedução.",
     "Uma única versão Firefly, nome público Firefly; conservar designação de origem apenas para rastreabilidade."
-  ]
+  ],
+  "publicationUpdate": "23/11/2026: 16 novas versões em oito modelos publicadas; Premium Green permanece candidato comercial. Ver docs/BATCH_01_PUBLICATION.md."
 }

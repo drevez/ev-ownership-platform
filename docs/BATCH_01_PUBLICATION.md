@@ -42,4 +42,14 @@ Sequência: validar payload → testes/build → publicar fotografias via GitHub
 
 Antes: **87 versões / 68 modelos públicos**. Esperado depois: **103 versões / 76 modelos públicos**. Snapshot privado temporário dos 87 registos anteriores permite confirmar que nenhum foi alterado. O importador recusa sobrescrever registos existentes diferentes.
 
-Estado: preparado para publicação; resultados finais acrescentados após verificação.
+## Resultado verificado
+
+- Assets/código: commit `ef29ae6840c648ac9a3e5f41051c0ab4e8f48f7c`; Vercel `dpl_92a9XZFAvdMYeBsAmqGTCj6FPkuL`, READY/production, domínio MotorZero atribuído.
+- Supabase: 16 versões novas importadas numa única instrução SQL através do RPC existente em modo `import`. Duas ofertas sem preço receberam depois a data mensal de revisão exigida pela normalização canónica, com controlo de revisão; nenhum preço foi acrescentado.
+- Comparação dos 16 registos novos com o payload canónico: passou. Comparação integral dos 87 registos anteriores com o snapshot imediatamente anterior à importação, incluindo revisões: passou, todos intactos.
+- APIs públicas: **76 modelos / 103 versões**. As oito páginas de modelo e 16 páginas de versão respondem HTTP 200 e contêm H1.
+- Oito fotografias em produção: HTTP 200 e SHA-256 idêntico aos assets revistos.
+- 68 testes passaram; build de produção e verificação de whitespace passaram. O primeiro build sem rede falhou apenas ao obter Google Fonts; repetição com rede passou.
+- Limitação do verificador histórico `npm run catalog:verify`: encontra divergência no Firefly face ao payload original porque houve edições no painel antes deste lote. Essas edições foram preservadas integralmente; não foram substituídas pelo ficheiro antigo. A verificação deste lote compara os novos registos com os payloads e os anteriores com o snapshot vivo, evitando apagar alterações editoriais.
+
+O lote está publicado. Continuam pendentes Premium Green/BOX PRO como candidatos e os campos explicitamente indicados acima. O restante levantamento de famílias ainda exige preparação de versões; criar uma família no Supabase não equivale a ter uma ficha pública completa.
