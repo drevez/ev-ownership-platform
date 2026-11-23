@@ -1,0 +1,1030 @@
+{
+  "reviewedAt": "2026-11-23",
+  "records": [
+    {
+      "id": "mg-mg4-ev-rwd-64kwh",
+      "files": {
+        "core": {
+          "id": "mg-mg4-ev-rwd-64kwh",
+          "brand": "MG",
+          "model": "MG4 EV",
+          "variant": "RWD 64 kWh",
+          "segment": "C",
+          "bodyType": "Hatchback",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/mg-mg4-ev.webp",
+          "motorPowerKW": 140
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 154,
+          "charge10to80Min": 25
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4287,
+          "widthMM": 1836,
+          "heightMM": 1516,
+          "wheelbaseMM": 2705,
+          "cargoLitersSeatsUp": 388,
+          "cargoLitersSeatsDown": 1165
+        },
+        "efficiency": {
+          "wltpRangeKm": 452
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 39569.1,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela RWD 64 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/mg/mg4/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mg-mg4-ev-rwd-77kwh",
+      "files": {
+        "core": {
+          "id": "mg-mg4-ev-rwd-77kwh",
+          "brand": "MG",
+          "model": "MG4 EV",
+          "variant": "RWD 77 kWh",
+          "segment": "C",
+          "bodyType": "Hatchback",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/mg-mg4-ev.webp",
+          "motorPowerKW": 180
+        },
+        "battery": {
+          "batteryChemistry": "NMC"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 144,
+          "charge10to80Min": 40
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4287,
+          "widthMM": 1836,
+          "heightMM": 1516,
+          "wheelbaseMM": 2705,
+          "cargoLitersSeatsUp": 388,
+          "cargoLitersSeatsDown": 1165
+        },
+        "efficiency": {
+          "wltpRangeKm": 545
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 43419.1,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela RWD 77 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/mg/mg4/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mg-mg4-ev-awd-64kwh",
+      "files": {
+        "core": {
+          "id": "mg-mg4-ev-awd-64kwh",
+          "brand": "MG",
+          "model": "MG4 EV",
+          "variant": "AWD 64 kWh",
+          "segment": "C",
+          "bodyType": "Hatchback",
+          "drivetrain": "AWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/mg-mg4-ev.webp",
+          "motorPowerKW": 320
+        },
+        "battery": {
+          "batteryChemistry": "NMC"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 140,
+          "charge10to80Min": 30
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4287,
+          "widthMM": 1836,
+          "heightMM": 1516,
+          "wheelbaseMM": 2705,
+          "cargoLitersSeatsUp": 388,
+          "cargoLitersSeatsDown": 1165
+        },
+        "efficiency": {
+          "wltpRangeKm": 405
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 44419.1,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela AWD 64 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/mg/mg4/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mg-mgs5-ev-49kwh",
+      "files": {
+        "core": {
+          "id": "mg-mgs5-ev-49kwh",
+          "brand": "MG",
+          "model": "MGS5 EV",
+          "variant": "49 kWh",
+          "segment": "C",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/mg-mgs5-ev.webp",
+          "motorPowerKW": 125
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "charging": {
+          "acMaxChargeKW": 7,
+          "dcMaxChargeKW": 120,
+          "charge10to80Min": 24
+        },
+        "comfort": {
+          "vehicleToLoad": true,
+          "heatPumpAvailable": false
+        },
+        "dimensions": {
+          "lengthMM": 4476,
+          "widthMM": 1849,
+          "heightMM": 1621,
+          "wheelbaseMM": 2730,
+          "cargoLitersSeatsUp": 453,
+          "cargoLitersSeatsDown": 1441
+        },
+        "efficiency": {
+          "wltpRangeKm": 340
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 33319.1,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Comfort 49 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/mg/s5/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mg-mgs5-ev-64kwh",
+      "files": {
+        "core": {
+          "id": "mg-mgs5-ev-64kwh",
+          "brand": "MG",
+          "model": "MGS5 EV",
+          "variant": "64 kWh",
+          "segment": "C",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/mg-mgs5-ev.webp",
+          "motorPowerKW": 170
+        },
+        "battery": {
+          "batteryChemistry": "NMC"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 139,
+          "charge10to80Min": 28
+        },
+        "comfort": {
+          "vehicleToLoad": true,
+          "heatPumpAvailable": false
+        },
+        "dimensions": {
+          "lengthMM": 4476,
+          "widthMM": 1849,
+          "heightMM": 1621,
+          "wheelbaseMM": 2730,
+          "cargoLitersSeatsUp": 453,
+          "cargoLitersSeatsDown": 1441
+        },
+        "efficiency": {
+          "wltpRangeKm": 480
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 36819.1,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Comfort 64 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/mg/s5/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mg-mgs6-ev-rwd-77kwh",
+      "files": {
+        "core": {
+          "id": "mg-mgs6-ev-rwd-77kwh",
+          "brand": "MG",
+          "model": "MGS6 EV",
+          "variant": "RWD 77 kWh",
+          "segment": "D",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/mg-mgs6-ev.webp",
+          "motorPowerKW": 180
+        },
+        "battery": {
+          "batteryChemistry": "NMC"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 144,
+          "charge10to80Min": 38
+        },
+        "comfort": {
+          "vehicleToLoad": true,
+          "heatPumpAvailable": true,
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4708,
+          "widthMM": 1912,
+          "heightMM": 1672,
+          "wheelbaseMM": 2835,
+          "cargoLitersSeatsUp": 674,
+          "cargoLitersSeatsDown": 1910
+        },
+        "efficiency": {
+          "wltpRangeKm": 530
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 45969.1,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Premium RWD",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/mg/s6/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mg-mgs6-ev-awd-77kwh",
+      "files": {
+        "core": {
+          "id": "mg-mgs6-ev-awd-77kwh",
+          "brand": "MG",
+          "model": "MGS6 EV",
+          "variant": "AWD 77 kWh",
+          "segment": "D",
+          "bodyType": "SUV",
+          "drivetrain": "AWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/mg-mgs6-ev.webp",
+          "motorPowerKW": 266
+        },
+        "battery": {
+          "batteryChemistry": "NMC"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 144,
+          "charge10to80Min": 38
+        },
+        "comfort": {
+          "vehicleToLoad": true,
+          "heatPumpAvailable": true,
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4708,
+          "widthMM": 1912,
+          "heightMM": 1672,
+          "wheelbaseMM": 2835,
+          "cargoLitersSeatsUp": 674,
+          "cargoLitersSeatsDown": 1910
+        },
+        "efficiency": {
+          "wltpRangeKm": 485
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 48969.1,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Xpower AWD",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/mg/s6/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mg-cyberster-rwd-77kwh",
+      "files": {
+        "core": {
+          "id": "mg-cyberster-rwd-77kwh",
+          "brand": "MG",
+          "model": "Cyberster",
+          "variant": "RWD 77 kWh",
+          "segment": "S",
+          "bodyType": "Convertible",
+          "drivetrain": "RWD",
+          "doors": 2,
+          "seats": 2,
+          "image": "/cars/mg-cyberster.webp",
+          "motorPowerKW": 250
+        },
+        "battery": {},
+        "charging": {
+          "acMaxChargeKW": 11,
+          "charge10to80Min": 38
+        },
+        "comfort": {
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4535,
+          "widthMM": 1913,
+          "heightMM": 1329,
+          "wheelbaseMM": 2690,
+          "cargoLitersSeatsUp": 200
+        },
+        "efficiency": {
+          "wltpRangeKm": 507
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 64719.1,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela 77 kWh 2WD",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/mg/cyberster/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "xpeng-g9-rwd-79kwh",
+      "files": {
+        "core": {
+          "id": "xpeng-g9-rwd-79kwh",
+          "brand": "XPeng",
+          "model": "G9",
+          "variant": "RWD 79 kWh",
+          "segment": "E",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/xpeng-g9.webp",
+          "motorPowerKW": 258
+        },
+        "battery": {
+          "voltageArchitecture": 800
+        },
+        "charging": {
+          "dcMaxChargeKW": 445,
+          "charge10to80Min": 12
+        },
+        "comfort": {
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4891,
+          "widthMM": 1937,
+          "heightMM": 1680,
+          "wheelbaseMM": 2998,
+          "cargoLitersSeatsUp": 660,
+          "cargoLitersSeatsDown": 1576
+        },
+        "efficiency": {
+          "wltpRangeKm": 502
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 62897.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela RWD 79 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/xpeng/g9/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "xpeng-g9-rwd-93-1kwh",
+      "files": {
+        "core": {
+          "id": "xpeng-g9-rwd-93-1kwh",
+          "brand": "XPeng",
+          "model": "G9",
+          "variant": "RWD 93.1 kWh",
+          "segment": "E",
+          "bodyType": "SUV",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/xpeng-g9.webp",
+          "motorPowerKW": 258
+        },
+        "battery": {
+          "voltageArchitecture": 800
+        },
+        "charging": {
+          "dcMaxChargeKW": 525,
+          "charge10to80Min": 12
+        },
+        "comfort": {
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4891,
+          "widthMM": 1937,
+          "heightMM": 1680,
+          "wheelbaseMM": 2998,
+          "cargoLitersSeatsUp": 660,
+          "cargoLitersSeatsDown": 1576
+        },
+        "efficiency": {
+          "wltpRangeKm": 585
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 67097.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela RWD 93.1 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/xpeng/g9/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "xpeng-g9-awd-93-1kwh",
+      "files": {
+        "core": {
+          "id": "xpeng-g9-awd-93-1kwh",
+          "brand": "XPeng",
+          "model": "G9",
+          "variant": "AWD 93.1 kWh",
+          "segment": "E",
+          "bodyType": "SUV",
+          "drivetrain": "AWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/xpeng-g9.webp",
+          "motorPowerKW": 423
+        },
+        "battery": {
+          "voltageArchitecture": 800
+        },
+        "charging": {
+          "dcMaxChargeKW": 525,
+          "charge10to80Min": 12
+        },
+        "comfort": {
+          "vehicleToLoad": true
+        },
+        "dimensions": {
+          "lengthMM": 4891,
+          "widthMM": 1937,
+          "heightMM": 1670,
+          "wheelbaseMM": 2998,
+          "cargoLitersSeatsUp": 660,
+          "cargoLitersSeatsDown": 1576
+        },
+        "efficiency": {
+          "wltpRangeKm": 540
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 77599.5,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela AWD 93.1 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/xpeng/g9/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "xpeng-p7-plus-rwd-61-7kwh",
+      "files": {
+        "core": {
+          "id": "xpeng-p7-plus-rwd-61-7kwh",
+          "brand": "XPeng",
+          "model": "P7+",
+          "variant": "RWD 61.7 kWh",
+          "segment": "E",
+          "bodyType": "Fastback",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/xpeng-p7-plus.webp",
+          "motorPowerKW": 180
+        },
+        "battery": {
+          "batteryGrossKWh": 61.7
+        },
+        "charging": {
+          "dcMaxChargeKW": 350,
+          "charge10to80Min": 12
+        },
+        "comfort": {},
+        "dimensions": {
+          "lengthMM": 5071,
+          "widthMM": 1937,
+          "heightMM": 1512,
+          "wheelbaseMM": 3000,
+          "cargoLitersSeatsUp": 573,
+          "cargoLitersSeatsDown": 1931
+        },
+        "efficiency": {
+          "wltpRangeKm": 455
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 46997.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela RWD 61.7 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/xpeng/p7/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "xpeng-p7-plus-rwd-74-9kwh",
+      "files": {
+        "core": {
+          "id": "xpeng-p7-plus-rwd-74-9kwh",
+          "brand": "XPeng",
+          "model": "P7+",
+          "variant": "RWD 74.9 kWh",
+          "segment": "E",
+          "bodyType": "Fastback",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/xpeng-p7-plus.webp",
+          "motorPowerKW": 230
+        },
+        "battery": {},
+        "charging": {
+          "dcMaxChargeKW": 446,
+          "charge10to80Min": 12
+        },
+        "comfort": {},
+        "dimensions": {
+          "lengthMM": 5071,
+          "widthMM": 1937,
+          "heightMM": 1512,
+          "wheelbaseMM": 3000,
+          "cargoLitersSeatsUp": 573,
+          "cargoLitersSeatsDown": 1931
+        },
+        "efficiency": {
+          "wltpRangeKm": 530
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 50997.3,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela RWD 74.9 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/xpeng/p7/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "xpeng-p7-plus-awd-74-9kwh",
+      "files": {
+        "core": {
+          "id": "xpeng-p7-plus-awd-74-9kwh",
+          "brand": "XPeng",
+          "model": "P7+",
+          "variant": "AWD 74.9 kWh",
+          "segment": "E",
+          "bodyType": "Fastback",
+          "drivetrain": "AWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/xpeng-p7-plus.webp",
+          "motorPowerKW": 370
+        },
+        "battery": {},
+        "charging": {
+          "dcMaxChargeKW": 446,
+          "charge10to80Min": 12
+        },
+        "comfort": {},
+        "dimensions": {
+          "lengthMM": 5071,
+          "widthMM": 1937,
+          "heightMM": 1512,
+          "wheelbaseMM": 3000,
+          "cargoLitersSeatsUp": 573,
+          "cargoLitersSeatsDown": 1931
+        },
+        "efficiency": {
+          "wltpRangeKm": 500
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 56999.5,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela AWD 74.9 kWh",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/xpeng/p7/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "xpeng-l03-ev-rwd-standard-range",
+      "files": {
+        "core": {
+          "id": "xpeng-l03-ev-rwd-standard-range",
+          "brand": "XPeng",
+          "model": "L03 EV",
+          "variant": "RWD Standard Range 58 kWh",
+          "segment": "C",
+          "bodyType": "SUV Coupe",
+          "drivetrain": "RWD",
+          "doors": 5,
+          "seats": 5,
+          "image": "/cars/xpeng-l03-ev.webp"
+        },
+        "battery": {},
+        "charging": {
+          "charge10to80Min": 20
+        },
+        "comfort": {},
+        "dimensions": {
+          "lengthMM": 4650,
+          "widthMM": 1920,
+          "heightMM": 1600,
+          "wheelbaseMM": 2850,
+          "cargoLitersSeatsUp": 367
+        },
+        "efficiency": {
+          "wltpRangeKm": 445
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 36211.2,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "official_brand",
+              "sourceLabel": "XPeng Portugal — campanha lançamento BEV até 25/12/2026",
+              "sourceUrl": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
+              "confidence": "high",
+              "displayPriority": 1,
+              "notes": "29.440 € + IVA: 36.211,20 € com IVA de 23% em Portugal Continental. Campanha particular BEV RWD Standard Range até 25/12/2026, limitada ao stock. Acrescem legalização/transporte/pintura. Não corresponde à versão EREV PowerX. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "nio-et5-awd-75kwh",
+      "files": {
+        "core": {
+          "id": "nio-et5-awd-75kwh",
+          "brand": "NIO",
+          "model": "ET5",
+          "variant": "AWD 75 kWh",
+          "segment": "D",
+          "bodyType": "Sedan",
+          "drivetrain": "AWD",
+          "doors": 4,
+          "seats": 5,
+          "image": "/cars/nio-et5.webp",
+          "motorPowerKW": 360
+        },
+        "battery": {},
+        "charging": {
+          "acMaxChargeKW": 11
+        },
+        "comfort": {
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4790,
+          "widthMM": 1960,
+          "heightMM": 1499,
+          "wheelbaseMM": 2888,
+          "cargoLitersSeatsUp": 386
+        },
+        "efficiency": {
+          "wltpRangeKm": 456
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 59900,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Standard Range",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/nio/et5/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "nio-et5-awd-100kwh",
+      "files": {
+        "core": {
+          "id": "nio-et5-awd-100kwh",
+          "brand": "NIO",
+          "model": "ET5",
+          "variant": "AWD 100 kWh",
+          "segment": "D",
+          "bodyType": "Sedan",
+          "drivetrain": "AWD",
+          "doors": 4,
+          "seats": 5,
+          "image": "/cars/nio-et5.webp",
+          "motorPowerKW": 360
+        },
+        "battery": {},
+        "charging": {
+          "acMaxChargeKW": 11
+        },
+        "comfort": {
+          "panoramicRoof": true
+        },
+        "dimensions": {
+          "lengthMM": 4790,
+          "widthMM": 1960,
+          "heightMM": 1499,
+          "wheelbaseMM": 2888,
+          "cargoLitersSeatsUp": 386
+        },
+        "efficiency": {
+          "wltpRangeKm": 590
+        },
+        "pricing": {
+          "market": "pt",
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11",
+          "offers": [
+            {
+              "condition": "new",
+              "status": "available",
+              "marketScope": "official_pt",
+              "priceFrom": 69900,
+              "priceTo": null,
+              "includesVat": true,
+              "priceDate": "2026-11",
+              "sourceType": "manual",
+              "sourceLabel": "Guia do Automóvel — PVP de tabela Long Range",
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/nio/et5/precos",
+              "confidence": "medium",
+              "displayPriority": 1,
+              "notes": "Preço de tabela com impostos. Exclui pintura/opções/transporte/matrícula/averbamento. Não corresponde a campanha a pronto da marca. Consultado em 23/11/2026."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

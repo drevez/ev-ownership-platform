@@ -1,0 +1,306 @@
+{
+  "reviewedAt": "2026-11-23",
+  "status": "prepared_for_publication",
+  "batch": "batch-03",
+  "modelCount": 8,
+  "technicalVersionCount": 17,
+  "bevOnly": true,
+  "models": [
+    "mg-mg4-ev",
+    "mg-mgs5-ev",
+    "mg-mgs6-ev",
+    "mg-cyberster",
+    "xpeng-g9",
+    "xpeng-p7-plus",
+    "xpeng-l03-ev",
+    "nio-et5"
+  ],
+  "records": [
+    {
+      "id": "mg-mg4-ev-rwd-64kwh",
+      "modelSlug": "mg-mg4-ev",
+      "officialProductSource": "https://www.mgmotor.pt/model/mg4",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/mg/mg4/precos",
+      "technicalEvidenceNotes": "Current PT MCE specification table takes precedence over GDA power error (64 kWh RWD is 140 kW, not 231 cv). Source advertises capacity, not gross/usable. Heat pump optional on 64 RWD, standard on other two. Expired 30/09/2026 official promotional prices not used. MG4 Urban is a separate existing model.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "mg-mg4-ev-rwd-77kwh",
+      "modelSlug": "mg-mg4-ev",
+      "officialProductSource": "https://www.mgmotor.pt/model/mg4",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/mg/mg4/precos",
+      "technicalEvidenceNotes": "Current PT MCE specification table takes precedence over GDA power error (64 kWh RWD is 140 kW, not 231 cv). Source advertises capacity, not gross/usable. Heat pump optional on 64 RWD, standard on other two. Expired 30/09/2026 official promotional prices not used. MG4 Urban is a separate existing model.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "mg-mg4-ev-awd-64kwh",
+      "modelSlug": "mg-mg4-ev",
+      "officialProductSource": "https://www.mgmotor.pt/model/mg4",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/mg/mg4/precos",
+      "technicalEvidenceNotes": "Current PT MCE specification table takes precedence over GDA power error (64 kWh RWD is 140 kW, not 231 cv). Source advertises capacity, not gross/usable. Heat pump optional on 64 RWD, standard on other two. Expired 30/09/2026 official promotional prices not used. MG4 Urban is a separate existing model.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "mg-mgs5-ev-49kwh",
+      "modelSlug": "mg-mgs5-ev",
+      "officialProductSource": "https://www.mgmotor.pt/model/mgs5",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/mg/s5/precos",
+      "technicalEvidenceNotes": "PT embedded specification table and brochure link. Base Comfort used; Luxury/Premium 64 kWh is equipment only (465 vs 480 km, heat pump, height 1633); not a separate public version. Main hardware/equipment is Comfort: no heat pump. Expired official campaign excluded.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "mg-mgs5-ev-64kwh",
+      "modelSlug": "mg-mgs5-ev",
+      "officialProductSource": "https://www.mgmotor.pt/model/mgs5",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/mg/s5/precos",
+      "technicalEvidenceNotes": "PT embedded specification table and brochure link. Base Comfort used; Luxury/Premium 64 kWh is equipment only (465 vs 480 km, heat pump, height 1633); not a separate public version. Main hardware/equipment is Comfort: no heat pump. Expired official campaign excluded.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "mg-mgs6-ev-rwd-77kwh",
+      "modelSlug": "mg-mgs6-ev",
+      "officialProductSource": "https://www.mgmotor.pt/model/mgs6",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/mg/s6/precos",
+      "technicalEvidenceNotes": "PT table distinguishes Premium/Performance by 180/266 kW and RWD/AWD. Advertised 77 kWh not gross/usable. Equipment names differ in GDA but powertrain matches. Frunk 124/102 depending drivetrain not added pending PT volume-method confirmation.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "mg-mgs6-ev-awd-77kwh",
+      "modelSlug": "mg-mgs6-ev",
+      "officialProductSource": "https://www.mgmotor.pt/model/mgs6",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/mg/s6/precos",
+      "technicalEvidenceNotes": "PT table distinguishes Premium/Performance by 180/266 kW and RWD/AWD. Advertised 77 kWh not gross/usable. Equipment names differ in GDA but powertrain matches. Frunk 124/102 depending drivetrain not added pending PT volume-method confirmation.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "mg-cyberster-rwd-77kwh",
+      "modelSlug": "mg-cyberster",
+      "officialProductSource": "https://www.mgmotor.pt/model/cyberster",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/mg/cyberster/precos",
+      "technicalEvidenceNotes": "Single Motor PT full spec 250 kW, 507 km. Cargo 249/200 are roof up/down, not seats: only 200 L conservative roof-down value retained, expanded-seats volume omitted. 150 kW refers to test charger; peak DC not inferred. Dual Motor (375 kW, 443 km) in brochure but current new PT price not confirmed; deferred.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "xpeng-g9-rwd-79kwh",
+      "modelSlug": "xpeng-g9",
+      "officialProductSource": "https://www.xpeng-auto.pt/modelos/g9",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/xpeng/g9/precos",
+      "technicalEvidenceNotes": "Current PT product table (Nuxt content for all three versions), FAQ range502/585/540, 800 V,445/525/525 kW. GDA erroneous AWD585 overridden by official540. GDA generic capacity78/98 overridden by explicit current PT79/93.1; gross/usable deliberately unspecified. Wheels, towbar, Premium Pack, Black Edition not separate versions. AC and battery chemistry omitted pending same-market spec.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "xpeng-g9-rwd-93-1kwh",
+      "modelSlug": "xpeng-g9",
+      "officialProductSource": "https://www.xpeng-auto.pt/modelos/g9",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/xpeng/g9/precos",
+      "technicalEvidenceNotes": "Current PT product table (Nuxt content for all three versions), FAQ range502/585/540, 800 V,445/525/525 kW. GDA erroneous AWD585 overridden by official540. GDA generic capacity78/98 overridden by explicit current PT79/93.1; gross/usable deliberately unspecified. Wheels, towbar, Premium Pack, Black Edition not separate versions. AC and battery chemistry omitted pending same-market spec.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "xpeng-g9-awd-93-1kwh",
+      "modelSlug": "xpeng-g9",
+      "officialProductSource": "https://www.xpeng-auto.pt/modelos/g9",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/xpeng/g9/precos",
+      "technicalEvidenceNotes": "Current PT product table (Nuxt content for all three versions), FAQ range502/585/540, 800 V,445/525/525 kW. GDA erroneous AWD585 overridden by official540. GDA generic capacity78/98 overridden by explicit current PT79/93.1; gross/usable deliberately unspecified. Wheels, towbar, Premium Pack, Black Edition not separate versions. AC and battery chemistry omitted pending same-market spec.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "xpeng-p7-plus-rwd-61-7kwh",
+      "modelSlug": "xpeng-p7-plus",
+      "officialProductSource": "https://www.xpeng-auto.pt/modelos/p7mais",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/xpeng/p7/precos",
+      "technicalEvidenceNotes": "Current PT product table states SR battery gross61.7. LR/Performance74.9 advertised without gross/usable label; not inferred. PT specification data maps DC350/446/446. Combined WLTP455/530/500 distinct from urban550/660. Power180/230/370 corroborated by manufacturer European spec d455f53a6d3c46f5970250d44ac65c2d.pdf. Older P7 retained as separate existing model.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "xpeng-p7-plus-rwd-74-9kwh",
+      "modelSlug": "xpeng-p7-plus",
+      "officialProductSource": "https://www.xpeng-auto.pt/modelos/p7mais",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/xpeng/p7/precos",
+      "technicalEvidenceNotes": "Current PT product table states SR battery gross61.7. LR/Performance74.9 advertised without gross/usable label; not inferred. PT specification data maps DC350/446/446. Combined WLTP455/530/500 distinct from urban550/660. Power180/230/370 corroborated by manufacturer European spec d455f53a6d3c46f5970250d44ac65c2d.pdf. Older P7 retained as separate existing model.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "xpeng-p7-plus-awd-74-9kwh",
+      "modelSlug": "xpeng-p7-plus",
+      "officialProductSource": "https://www.xpeng-auto.pt/modelos/p7mais",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/xpeng/p7/precos",
+      "technicalEvidenceNotes": "Current PT product table states SR battery gross61.7. LR/Performance74.9 advertised without gross/usable label; not inferred. PT specification data maps DC350/446/446. Combined WLTP455/530/500 distinct from urban550/660. Power180/230/370 corroborated by manufacturer European spec d455f53a6d3c46f5970250d44ac65c2d.pdf. Older P7 retained as separate existing model.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "xpeng-l03-ev-rwd-standard-range",
+      "modelSlug": "xpeng-l03-ev",
+      "officialProductSource": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
+      "priceSource": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
+      "technicalEvidenceNotes": "Official PT explicitly identifies L03 EV RWD Standard Range (zero CO2),367 L cargo and10–80%20min. GDA EV row supplies445 combined WLTP,58 advertised,dimensions; official EU technical sheet corroboratesdimensions/battery58.2 and445 but Portuguese motor power conflicting(163/180kW vs225cvGDA), so power/AC/DC peak/gross/usable omitted. No660 urban substitution. Only entry version published; LR/AWD require PT homologation clarification. PowerX EREV/REEV excluded.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "nio-et5-awd-75kwh",
+      "modelSlug": "nio-et5",
+      "officialProductSource": "https://nio-portugal.pt/modelo-et5/",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/nio/et5/precos",
+      "technicalEvidenceNotes": "PT ET5 sedan, distinct existing ET5 Touring. 360 kW confirmed manufacturer manual (150 front+210 rear); PT page has typo360KM/480cv. Current PT GDA sedan rows75/100,456/590,59900/69900; exclude Touring rows. AC11 from official EU ET5 brochure. DC125/140/170/180 depends battery revision, no PT pack proof: omit peak/time. Battery chemistry and gross/usable omitted due different packs. Do not transfer CLTC150kWh note from PT page to WLTP. No BaaS price or battery swapping availability claimed.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    },
+    {
+      "id": "nio-et5-awd-100kwh",
+      "modelSlug": "nio-et5",
+      "officialProductSource": "https://nio-portugal.pt/modelo-et5/",
+      "priceSource": "https://www.guiadoautomovel.pt/marcas/nio/et5/precos",
+      "technicalEvidenceNotes": "PT ET5 sedan, distinct existing ET5 Touring. 360 kW confirmed manufacturer manual (150 front+210 rear); PT page has typo360KM/480cv. Current PT GDA sedan rows75/100,456/590,59900/69900; exclude Touring rows. AC11 from official EU ET5 brochure. DC125/140/170/180 depends battery revision, no PT pack proof: omit peak/time. Battery chemistry and gross/usable omitted due different packs. Do not transfer CLTC150kWh note from PT page to WLTP. No BaaS price or battery swapping availability claimed.",
+      "remaining": [
+        "Real range/consumption not verified; omitted.",
+        "Advertised battery capacity not assigned to gross/usable unless source explicitly identifies it.",
+        "Unconfirmed equipment and model year omitted."
+      ]
+    }
+  ],
+  "mediaSources": {
+    "mg-mg4-ev": "https://mgmotor.imgix.net/images/hero-image/mg4-mce-update-hero-desktop.jpg?auto=compress,format&crop=focalpoint&fit=crop&fm=auto&fp-x=0.5&fp-y=0.5&h=740&q=75&ratio=1.3333333333333&w=1360",
+    "mg-mgs5-ev": "https://mgmotor.imgix.net/images/hero-image/mgs5-hero-update-desktop.jpg?auto=compress,format&crop=focalpoint&fit=crop&fm=auto&fp-x=0.5&fp-y=0.5&h=740&q=75&ratio=1.3333333333333&w=1360",
+    "mg-mgs6-ev": "https://mgmotor.imgix.net/images/hero-image/mgs6-hero-desktop-22.jpg?auto=compress,format&crop=focalpoint&fit=crop&fm=auto&fp-x=0.5&fp-y=0.5&h=740&q=75&ratio=1.3333333333333&w=1360",
+    "mg-cyberster": "https://mgmotor.imgix.net/images/model/cyberster-additional-sections/cyberster-performance-slider.jpg?auto=compress,format&w=1600",
+    "xpeng-g9": "https://stwfccmsprodwesteurope01.blob.core.windows.net/xpengpt-6808f532a23b257b35998845-prod/multimedia-section1desktop1920x1024-1_1763031357717.webp",
+    "xpeng-p7-plus": "https://stwfccmsprodwesteurope01.blob.core.windows.net/xpengpt-6808f532a23b257b35998845-prod/multimedia-section1desktop1920x1024_1774357141337.webp",
+    "xpeng-l03-ev": "https://stwfccmsprodwesteurope01.blob.core.windows.net/xpengpt-6808f532a23b257b35998845-prod/27921bloco-conteaodo-3.webp",
+    "nio-et5": "https://nio-portugal.pt/wp-content/uploads/et5-carousel-1-desktop-1.webp"
+  },
+  "policy": [
+    "Only BEV; no PowerX/EREV/REEV/PHEV.",
+    "Only hardware differences create public versions.",
+    "Published cheapest confirmed equipment configuration per powertrain; other trims retained as research notes.",
+    "Unknown fields remain omitted, not false/zero.",
+    "No obsolete promotions reused."
+  ],
+  "sourceCaveats": [
+    "MG product pages are JavaScript templates: full PT specification tables are in JSON Vue attributes. Read PT content, not automatic foreign-market search redirects.",
+    "MG CDN PDFs returned403; linked PT documents not falsely claimed downloaded. PT embedded tables used.",
+    "GDA direct fetch returned challenge; indexed table consulted through web source.",
+    "L03 power and DC remain pending due inconsistent PT/European sources.",
+    "NIO DC pack revision not established for Portugal."
+  ],
+  "before": {
+    "publicModels": 81,
+    "publicVersions": 106,
+    "sourceRecords": 111
+  },
+  "expectedAfter": {
+    "publicModels": 89,
+    "publicVersions": 123,
+    "sourceRecords": 128
+  },
+  "remainingPerModel": {
+    "mg-mgs5-ev": "Luxury 64 kWh equipment/range details recorded; no separate version.",
+    "mg-cyberster": "Dual Motor price/current availability pending.",
+    "xpeng-l03-ev": "LR/AWD and motor/DC/usable-gross pending PT homologation.",
+    "nio-et5": "DC and pack revision pending; no BaaS or swapping claim."
+  },
+  "media": [
+    {
+      "slug": "mg-mg4-ev",
+      "path": "/cars/mg-mg4-ev.webp",
+      "sha256": "d8a00251c729fb6650992f9878fdf6a4ea53e46a1ccd283766e4f0f4b4610c4d"
+    },
+    {
+      "slug": "mg-mgs5-ev",
+      "path": "/cars/mg-mgs5-ev.webp",
+      "sha256": "5f404aa55ca4b08361ba4c12e032c5516a1b94bf5badc9c606e1bce26e635343"
+    },
+    {
+      "slug": "mg-mgs6-ev",
+      "path": "/cars/mg-mgs6-ev.webp",
+      "sha256": "56bae76cc57e50bae0ad228ade98bea0c3e6a626a2f794f8fc43defc265743e4"
+    },
+    {
+      "slug": "mg-cyberster",
+      "path": "/cars/mg-cyberster.webp",
+      "sha256": "df924cd385c15e35828cc7758a6b59a8f52722219037a380a6fefa4dd8471516"
+    },
+    {
+      "slug": "xpeng-g9",
+      "path": "/cars/xpeng-g9.webp",
+      "sha256": "585d6620297eef72e83193449a2778ae8c3e81b512d4faed531bc53d6fbc13ed"
+    },
+    {
+      "slug": "xpeng-p7-plus",
+      "path": "/cars/xpeng-p7-plus.webp",
+      "sha256": "e79632a929e39bb5ab378ae9c5007613dcc82cc6e96a6a19574ad8fcde0798b6"
+    },
+    {
+      "slug": "xpeng-l03-ev",
+      "path": "/cars/xpeng-l03-ev.webp",
+      "sha256": "723fca5cf07acca55cf3b2285db7aad17bd91769048bf52012802da95ed5dc35"
+    },
+    {
+      "slug": "nio-et5",
+      "path": "/cars/nio-et5.webp",
+      "sha256": "3f78088a4930a04a5b7d9972737e27525a58f812072bdf51bb68e447a87ba9a1"
+    }
+  ]
+}

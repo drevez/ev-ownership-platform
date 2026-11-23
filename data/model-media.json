@@ -94,5 +94,53 @@
     "sourceUrl": "https://www.byd-auto.pt/modelos/byd-atto-2",
     "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/bydauto-684f3dea1f6bc3303faac781-prod/byd-atto2-imagem-01-d.webp",
     "notes": "Official BEV model photograph; representative colour and equipment, not a guarantee of trim."
+  },
+  "mg-mg4-ev": {
+    "heroImage": "/cars/mg-mg4-ev.webp",
+    "sourceUrl": "https://www.mgmotor.pt/model/mg4",
+    "sourceImageUrl": "https://mgmotor.imgix.net/images/hero-image/mg4-mce-update-hero-desktop.jpg?auto=compress,format&crop=focalpoint&fit=crop&fm=auto&fp-x=0.5&fp-y=0.5&h=740&q=75&ratio=1.3333333333333&w=1360",
+    "notes": "Fotografia oficial de produto, representativa de cor/jantes/equipamento; não garante o acabamento da configuração. Enquadramento 1280×720 revisto visualmente."
+  },
+  "mg-mgs5-ev": {
+    "heroImage": "/cars/mg-mgs5-ev.webp",
+    "sourceUrl": "https://www.mgmotor.pt/model/mgs5",
+    "sourceImageUrl": "https://mgmotor.imgix.net/images/hero-image/mgs5-hero-update-desktop.jpg?auto=compress,format&crop=focalpoint&fit=crop&fm=auto&fp-x=0.5&fp-y=0.5&h=740&q=75&ratio=1.3333333333333&w=1360",
+    "notes": "Fotografia oficial de produto, representativa de cor/jantes/equipamento; não garante o acabamento da configuração. Enquadramento 1280×720 revisto visualmente."
+  },
+  "mg-mgs6-ev": {
+    "heroImage": "/cars/mg-mgs6-ev.webp",
+    "sourceUrl": "https://www.mgmotor.pt/model/mgs6",
+    "sourceImageUrl": "https://mgmotor.imgix.net/images/hero-image/mgs6-hero-desktop-22.jpg?auto=compress,format&crop=focalpoint&fit=crop&fm=auto&fp-x=0.5&fp-y=0.5&h=740&q=75&ratio=1.3333333333333&w=1360",
+    "notes": "Fotografia oficial de produto, representativa de cor/jantes/equipamento; não garante o acabamento da configuração. Enquadramento 1280×720 revisto visualmente."
+  },
+  "mg-cyberster": {
+    "heroImage": "/cars/mg-cyberster.webp",
+    "sourceUrl": "https://www.mgmotor.pt/model/cyberster",
+    "sourceImageUrl": "https://mgmotor.imgix.net/images/model/cyberster-additional-sections/cyberster-performance-slider.jpg?auto=compress,format&w=1600",
+    "notes": "Fotografia oficial de produto, representativa de cor/jantes/equipamento; não garante o acabamento da configuração. Enquadramento 1280×720 revisto visualmente."
+  },
+  "xpeng-g9": {
+    "heroImage": "/cars/xpeng-g9.webp",
+    "sourceUrl": "https://www.xpeng-auto.pt/modelos/g9",
+    "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/xpengpt-6808f532a23b257b35998845-prod/multimedia-section1desktop1920x1024-1_1763031357717.webp",
+    "notes": "Fotografia oficial de produto, representativa de cor/jantes/equipamento; não garante o acabamento da configuração. Enquadramento 1280×720 revisto visualmente."
+  },
+  "xpeng-p7-plus": {
+    "heroImage": "/cars/xpeng-p7-plus.webp",
+    "sourceUrl": "https://www.xpeng-auto.pt/modelos/p7mais",
+    "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/xpengpt-6808f532a23b257b35998845-prod/multimedia-section1desktop1920x1024_1774357141337.webp",
+    "notes": "Fotografia oficial de produto, representativa de cor/jantes/equipamento; não garante o acabamento da configuração. Enquadramento 1280×720 revisto visualmente."
+  },
+  "xpeng-l03-ev": {
+    "heroImage": "/cars/xpeng-l03-ev.webp",
+    "sourceUrl": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
+    "sourceImageUrl": "https://stwfccmsprodwesteurope01.blob.core.windows.net/xpengpt-6808f532a23b257b35998845-prod/27921bloco-conteaodo-3.webp",
+    "notes": "Fotografia oficial de produto, representativa de cor/jantes/equipamento; não garante o acabamento da configuração. Enquadramento 1280×720 revisto visualmente."
+  },
+  "nio-et5": {
+    "heroImage": "/cars/nio-et5.webp",
+    "sourceUrl": "https://nio-portugal.pt/modelo-et5/",
+    "sourceImageUrl": "https://nio-portugal.pt/wp-content/uploads/et5-carousel-1-desktop-1.webp",
+    "notes": "Fotografia oficial de produto, representativa de cor/jantes/equipamento; não garante o acabamento da configuração. Enquadramento 1280×720 revisto visualmente."
   }
 }
