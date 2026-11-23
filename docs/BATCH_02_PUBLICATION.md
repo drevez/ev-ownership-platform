@@ -43,3 +43,13 @@ Fotografias oficiais de produto: cinco WebP 1280×720, identidade revista visual
 Estado inicial: 76 modelos / 98 versões técnicas públicas, 103 registos de origem. Esperado após importação: **81 modelos / 106 versões públicas, 111 registos de origem**. No levantamento dos novos: **14 de 130 modelos colocados, 20 versões técnicas; 116 modelos pendentes**.
 
 Validação: importador validou oito adições; snapshot dos 103 registos anteriores guardado para comparação; publicação e resultados finais registados após verificação.
+
+### Resultado verificado
+
+- Fotografias e payload publicados no commit `933c1895c0792c007be035092cb945485bfb838b`; Vercel `dpl_Hjpj9SBmHgLLExb8YNqWf4u2WS7T`, READY em produção, domínios MotorZero atribuídos.
+- `apply-catalog-update` aplicou oito adições em modo import. Os oito documentos remotos correspondem ao payload canónico validado.
+- Os 103 registos anteriores, incluindo revisões e edições do painel, correspondem integralmente ao snapshot anterior à importação.
+- APIs públicas confirmam **81 modelos / 106 versões técnicas**. Supabase contém **111 registos de origem**, incluindo acabamentos agrupados do batch anterior.
+- Cinco páginas de modelo e oito fichas respondem HTTP 200. As cinco imagens em produção correspondem byte a byte aos assets revistos.
+- 71 testes passaram; build de produção e verificação de whitespace passaram. Não houve alterações de esquema ou permissões.
+- [Fila de batches](MODEL_EXPANSION_BATCHES.md) e [estado do levantamento](MODEL_EXPANSION_STATUS.md) atualizados: 14 novos modelos com dados básicos, 116 pendentes. Batch 3 reúne oito famílias MG/XPeng/NIO para a próxima verificação.

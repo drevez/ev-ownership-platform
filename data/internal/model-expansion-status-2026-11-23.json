@@ -3,10 +3,10 @@
   "scope": "Only the 130 new BEV candidates from the expansion research; excludes the pre-existing catalog and earlier Leapmotor additions.",
   "source": "https://www.motorzero.pt/api/models/all",
   "newCandidateModels": 130,
-  "publishedWithBasicData": 9,
-  "publicTechnicalVersionsForNewModels": 12,
-  "familiesPendingBasicData": 121,
-  "pendingPriority1": 26,
+  "publishedWithBasicData": 14,
+  "publicTechnicalVersionsForNewModels": 20,
+  "familiesPendingBasicData": 116,
+  "pendingPriority1": 21,
   "pendingPriority2": 95,
   "statusDocument": "docs/MODEL_EXPANSION_STATUS.md",
   "models": [
@@ -221,26 +221,52 @@
       "brand": "Forthing",
       "model": "Friday EV",
       "priority": 1,
-      "status": "family_created_pending_basic_data",
-      "publicTechnicalVersions": 0,
-      "publicVersionIds": [],
-      "modelUrl": null,
+      "status": "published_basic_data",
+      "publicTechnicalVersions": 2,
+      "publicVersionIds": [
+        "forthing-friday-ev-64kwh",
+        "forthing-friday-ev-86kwh"
+      ],
+      "modelUrl": "https://www.motorzero.pt/pt/modelos/forthing-friday-ev",
       "sourceUrl": "https://www.forthing.pt/",
       "checkedAt": "2026-11-23",
-      "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+      "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+      "publishedBasics": {
+        "photo": true,
+        "wltp": true,
+        "dcCharging": false,
+        "atLeastOnePrice": true
+      },
+      "remainingPublicMissingFields": [
+        "charging",
+        "battery"
+      ],
+      "versionsWithoutPrice": []
     },
     {
       "slug": "forthing-s7-ev",
       "brand": "Forthing",
       "model": "S7 EV",
       "priority": 1,
-      "status": "family_created_pending_basic_data",
-      "publicTechnicalVersions": 0,
-      "publicVersionIds": [],
-      "modelUrl": null,
+      "status": "published_basic_data",
+      "publicTechnicalVersions": 1,
+      "publicVersionIds": [
+        "forthing-s7-ev-57kwh"
+      ],
+      "modelUrl": "https://www.motorzero.pt/pt/modelos/forthing-s7-ev",
       "sourceUrl": "https://www.forthing.pt/",
       "checkedAt": "2026-11-23",
-      "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+      "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+      "publishedBasics": {
+        "photo": true,
+        "wltp": true,
+        "dcCharging": true,
+        "atLeastOnePrice": true
+      },
+      "remainingPublicMissingFields": [
+        "battery"
+      ],
+      "versionsWithoutPrice": []
     },
     {
       "slug": "firefly-firefly",
@@ -361,39 +387,80 @@
       "brand": "BYD",
       "model": "ATTO 2",
       "priority": 1,
-      "status": "family_created_pending_basic_data",
-      "publicTechnicalVersions": 0,
-      "publicVersionIds": [],
-      "modelUrl": null,
+      "status": "published_basic_data",
+      "publicTechnicalVersions": 1,
+      "publicVersionIds": [
+        "byd-atto-2-65kwh"
+      ],
+      "modelUrl": "https://www.motorzero.pt/pt/modelos/byd-atto-2",
       "sourceUrl": "https://byd-auto.pt/modelos",
       "checkedAt": "2026-11-23",
-      "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+      "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+      "publishedBasics": {
+        "photo": true,
+        "wltp": true,
+        "dcCharging": true,
+        "atLeastOnePrice": true
+      },
+      "remainingPublicMissingFields": [
+        "battery"
+      ],
+      "versionsWithoutPrice": []
     },
     {
       "slug": "byd-seal-u",
       "brand": "BYD",
       "model": "SEAL U",
       "priority": 1,
-      "status": "family_created_pending_basic_data",
-      "publicTechnicalVersions": 0,
-      "publicVersionIds": [],
-      "modelUrl": null,
+      "status": "published_basic_data",
+      "publicTechnicalVersions": 2,
+      "publicVersionIds": [
+        "byd-seal-u-87kwh",
+        "byd-seal-u-72kwh"
+      ],
+      "modelUrl": "https://www.motorzero.pt/pt/modelos/byd-seal-u",
       "sourceUrl": "https://byd-auto.pt/modelos",
       "checkedAt": "2026-11-23",
-      "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+      "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+      "publishedBasics": {
+        "photo": true,
+        "wltp": true,
+        "dcCharging": true,
+        "atLeastOnePrice": true
+      },
+      "remainingPublicMissingFields": [
+        "battery",
+        "price"
+      ],
+      "versionsWithoutPrice": [
+        "byd-seal-u-72kwh"
+      ]
     },
     {
       "slug": "byd-sealion-7",
       "brand": "BYD",
       "model": "SEALION 7",
       "priority": 1,
-      "status": "family_created_pending_basic_data",
-      "publicTechnicalVersions": 0,
-      "publicVersionIds": [],
-      "modelUrl": null,
+      "status": "published_basic_data",
+      "publicTechnicalVersions": 2,
+      "publicVersionIds": [
+        "byd-sealion-7-rwd-83kwh",
+        "byd-sealion-7-awd-91kwh"
+      ],
+      "modelUrl": "https://www.motorzero.pt/pt/modelos/byd-sealion-7",
       "sourceUrl": "https://byd-auto.pt/modelos",
       "checkedAt": "2026-11-23",
-      "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+      "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+      "publishedBasics": {
+        "photo": true,
+        "wltp": true,
+        "dcCharging": true,
+        "atLeastOnePrice": true
+      },
+      "remainingPublicMissingFields": [
+        "battery"
+      ],
+      "versionsWithoutPrice": []
     },
     {
       "slug": "mg-mg4-ev",

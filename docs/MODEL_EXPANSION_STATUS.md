@@ -2,8 +2,8 @@
 
 Apenas os **130 modelos novos** do levantamento BEV. Verificado contra o catálogo público em 23/11/2026. Os carros anteriores e as adições Leapmotor anteriores a este levantamento ficam fora desta lista.
 
-- **9 modelos colocados com dados básicos**, com **12 versões técnicas públicas**.
-- **121 famílias criadas, ainda sem dados básicos publicados** (26 P1 / 95 P2).
+- **14 modelos colocados com dados básicos**, com **20 versões técnicas públicas**.
+- **116 famílias criadas, ainda sem dados básicos publicados** (21 P1 / 95 P2).
 - `[x]` significa publicação inicial com dados básicos; não significa ficha completa ou todos os valores confirmados. Acabamentos equivalentes não contam como versões técnicas distintas.
 
 ## Já colocados com dados básicos
@@ -12,11 +12,16 @@ Apenas os **130 modelos novos** do levantamento BEV. Verificado contra o catálo
 | --- | --- | ---: | --- |
 | [x] | [Aion UT](https://www.motorzero.pt/pt/modelos/aion-ut) | 1 | Capacidade útil/bruta por confirmar; acabamentos agrupados. |
 | [x] | [Aion V](https://www.motorzero.pt/pt/modelos/aion-v) | 1 | Capacidade útil/bruta e AC; preço Luxury por confirmar. |
+| [x] | [BYD ATTO 2](https://www.motorzero.pt/pt/modelos/byd-atto-2) | 1 | Capacidade útil/bruta; só Comfort 64,8 kWh confirmada na oferta atual. |
+| [x] | [BYD SEAL U](https://www.motorzero.pt/pt/modelos/byd-seal-u) | 2 | Preço Comfort e AC pendentes; excluir DM-i. |
+| [x] | [BYD SEALION 7](https://www.motorzero.pt/pt/modelos/byd-sealion-7) | 2 | Capacidade útil/bruta por confirmar; RWD/AWD com baterias distintas. |
 | [x] | [Changan Deepal S05](https://www.motorzero.pt/pt/modelos/changan-deepal-s05) | 2 | Capacidade útil/bruta e método dos volumes; RWD/AWD separados. |
 | [x] | [Changan Deepal S07](https://www.motorzero.pt/pt/modelos/changan-deepal-s07) | 2 | Preço da revisão LFP e volumes/medidas correspondentes; revisões técnicas separadas. |
 | [x] | [Dongfeng BOX](https://www.motorzero.pt/pt/modelos/dongfeng-box) | 1 | Capacidade útil/bruta e medidas em conflito; PRO ainda candidato. |
 | [x] | [Dongfeng VIGO](https://www.motorzero.pt/pt/modelos/dongfeng-vigo) | 1 | Capacidade útil/bruta e AC; validade da campanha até 30/11. |
 | [x] | [Firefly](https://www.motorzero.pt/pt/modelos/firefly-firefly) | 1 | Publicado como Firefly; autonomia e consumo reais continuam por confirmar. |
+| [x] | [Forthing Friday EV](https://www.motorzero.pt/pt/modelos/forthing-friday-ev) | 2 | Distinguir capacidade útil/bruta e picos DC; AC da bateria menor pendente. |
+| [x] | [Forthing S7 EV](https://www.motorzero.pt/pt/modelos/forthing-s7-ev) | 1 | Capacidade útil/bruta e tempo 10–80 por confirmar; campanha até 30/11. |
 | [x] | [Geely E2](https://www.motorzero.pt/pt/modelos/geely-e2) | 2 | Capacidade útil/bruta e intervalo de carga; MAX/ULTRA agrupados. |
 | [x] | [Geely E5](https://www.motorzero.pt/pt/modelos/geely-e5) | 1 | Capacidade útil/bruta e AC; WLTP 430/410 km por acabamento preservado. |
 
@@ -24,17 +29,12 @@ Apenas os **130 modelos novos** do levantamento BEV. Verificado contra o catálo
 
 As famílias já existem no Supabase. Falta preparar as versões técnicas reais, os dados e as ofertas correspondentes; a existência da família não equivale a uma ficha pública. As fontes abaixo são as referências do levantamento original, sem nova verificação comercial nesta atualização.
 
-### P1 — 26 modelos
+### P1 — 21 modelos
 
-- [ ] **BYD ATTO 2** — [referência do levantamento](https://byd-auto.pt/modelos)
-- [ ] **BYD SEAL U** — [referência do levantamento](https://byd-auto.pt/modelos)
-- [ ] **BYD SEALION 7** — [referência do levantamento](https://byd-auto.pt/modelos)
 - [ ] **Cupra Raval** — [referência do levantamento](https://www.cupraofficial.pt/cupra-raval/cupra-raval)
 - [ ] **Dacia Spring** — [referência do levantamento](https://www.dacia.pt/gama-hibrida-eletrica/spring-citadino/configurador.html)
 - [ ] **Fiat Grande Panda Electric** — [referência do levantamento](https://www.fiat.pt/modelos/grande-panda-electrico)
 - [ ] **Ford Puma Gen-E** — [referência do levantamento](https://www.ford.pt/experiencia-ford/ford-blog/como-escolher-carro-eletrico)
-- [ ] **Forthing Friday EV** — [referência do levantamento](https://www.forthing.pt/)
-- [ ] **Forthing S7 EV** — [referência do levantamento](https://www.forthing.pt/)
 - [ ] **Hyundai INSTER** — [referência do levantamento](https://www.hyundai.pt/campanhas-automoveis/hyundai-inster-preco/)
 - [ ] **Hyundai IONIQ 3** — [referência do levantamento](https://www.hyundai.pt/ioniq-3-chega-a-portugal/)
 - [ ] **Kia EV2** — [referência do levantamento](https://m.kia.pt/configurador/)
@@ -153,8 +153,11 @@ As famílias já existem no Supabase. Falta preparar as versões técnicas reais
 
 ## Registos relacionados
 
+- [Fila de batches e próximo lote](MODEL_EXPANSION_BATCHES.md).
+
 - [Levantamento original e enquadramento](MODEL_EXPANSION_RESEARCH.md).
 - [Publicação do primeiro lote](BATCH_01_PUBLICATION.md).
+- [Publicação do segundo lote](BATCH_02_PUBLICATION.md).
 - [Critério de versões técnicas e acabamentos](TECHNICAL_VERSIONS.md).
 - [Estado estruturado dos 130 modelos](../data/internal/model-expansion-status-2026-11-23.json).
 

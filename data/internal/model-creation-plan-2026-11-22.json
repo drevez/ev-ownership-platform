@@ -646,7 +646,7 @@
       "name": "Friday EV",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.forthing.pt/",
       "excludedPowertrains": [
         "HEV",
@@ -684,12 +684,26 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "forthing-friday-ev-64kwh",
+          "forthing-friday-ev-86kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/forthing-friday-ev",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "forthing-friday-ev-64kwh",
+        "forthing-friday-ev-86kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_02_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-02-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 2
       }
     },
     {
@@ -698,7 +712,7 @@
       "name": "S7 EV",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.forthing.pt/",
       "excludedPowertrains": [
         "HEV",
@@ -736,12 +750,24 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "forthing-s7-ev-57kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/forthing-s7-ev",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "forthing-s7-ev-57kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_02_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-02-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 1
       }
     },
     {
@@ -1319,7 +1345,7 @@
       "name": "ATTO 2",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.byd-auto.pt/modelos/byd-atto-2",
       "excludedPowertrains": [
         "HEV",
@@ -1370,12 +1396,24 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "byd-atto-2-65kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/byd-atto-2",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "byd-atto-2-65kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_02_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-02-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 1
       }
     },
     {
@@ -1384,7 +1422,7 @@
       "name": "SEAL U",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.byd-auto.pt/modelos/byd-seal-u",
       "excludedPowertrains": [
         "HEV",
@@ -1435,12 +1473,26 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "byd-seal-u-87kwh",
+          "byd-seal-u-72kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/byd-seal-u",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "byd-seal-u-72kwh",
+        "byd-seal-u-87kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_02_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-02-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 2
       }
     },
     {
@@ -1449,7 +1501,7 @@
       "name": "SEALION 7",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://api.byd-auto.pt/files/BYD-SEALION-7.pdf",
       "excludedPowertrains": [
         "HEV",
@@ -1500,12 +1552,26 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "byd-sealion-7-rwd-83kwh",
+          "byd-sealion-7-awd-91kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/byd-sealion-7",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "byd-sealion-7-rwd-83kwh",
+        "byd-sealion-7-awd-91kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_02_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-02-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 2
       }
     },
     {
@@ -8752,24 +8818,25 @@
   },
   "latestPublication": {
     "date": "2026-11-23",
-    "modelsPublishedFromPlan": 9,
-    "variantsPublishedFromPlan": 17,
-    "totalPublicModels": 76,
-    "totalPublicVariants": 98,
-    "remainingFamiliesWithoutVariants": 121,
-    "documentation": "docs/BATCH_01_PUBLICATION.md",
-    "publicTechnicalVersionsFromPlan": 12,
-    "presentationCorrection": "Equipment trims grouped into technical versions; source records and historical execution counts retained."
+    "modelsPublishedFromPlan": 14,
+    "variantsPublishedFromPlan": 25,
+    "totalPublicModels": 81,
+    "totalPublicVariants": 106,
+    "remainingFamiliesWithoutVariants": 116,
+    "documentation": "docs/BATCH_02_PUBLICATION.md",
+    "publicTechnicalVersionsFromPlan": 20,
+    "presentationCorrection": "Equipment trims grouped into technical versions; source records and historical execution counts retained.",
+    "sourceConfigurationRecordsFromPlan": 25
   },
   "implementationProgress": {
     "checkedAt": "2026-11-23",
     "scope": "Only the 130 new BEV candidates from the expansion research; excludes the pre-existing catalog and earlier Leapmotor additions.",
     "source": "https://www.motorzero.pt/api/models/all",
     "newCandidateModels": 130,
-    "publishedWithBasicData": 9,
-    "publicTechnicalVersionsForNewModels": 12,
-    "familiesPendingBasicData": 121,
-    "pendingPriority1": 26,
+    "publishedWithBasicData": 14,
+    "publicTechnicalVersionsForNewModels": 20,
+    "familiesPendingBasicData": 116,
+    "pendingPriority1": 21,
     "pendingPriority2": 95,
     "statusDocument": "docs/MODEL_EXPANSION_STATUS.md"
   }

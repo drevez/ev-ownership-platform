@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-11-23",
-  "status": "prepared",
+  "status": "published_basic_data",
   "models": 5,
   "technicalVersions": 8,
   "sources": {
@@ -214,5 +214,20 @@
       "bytes": 456588,
       "sha256": "f4e92e0a08a29e5f903e6da88c73ac1580a8ee083b36ce86f116d1159b01236d"
     }
+  },
+  "publication": {
+    "date": "2026-11-23",
+    "commit": "933c1895c0792c007be035092cb945485bfb838b",
+    "deploymentId": "dpl_Hjpj9SBmHgLLExb8YNqWf4u2WS7T",
+    "publicModels": 81,
+    "publicTechnicalVersions": 106,
+    "sourceRecords": 111,
+    "newModels": 5,
+    "newTechnicalVersions": 8,
+    "priorRecordsUnchanged": 103,
+    "newPagesHttp200": 13,
+    "productionImagesVerified": 5,
+    "testsPassed": 71,
+    "productionBuildPassed": true
   }
 }
