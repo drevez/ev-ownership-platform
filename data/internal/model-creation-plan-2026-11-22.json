@@ -85,7 +85,17 @@
         "aion-ut-premium",
         "aion-ut-luxury"
       ],
-      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md",
+      "basicDataPublication": {
+        "status": "published_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "aion-ut-premium"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/aion-ut",
+        "complete": false
+      }
     },
     {
       "slug": "aion-v",
@@ -154,7 +164,17 @@
         "aion-v-premium",
         "aion-v-luxury"
       ],
-      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md",
+      "basicDataPublication": {
+        "status": "published_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "aion-v-premium"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/aion-v",
+        "complete": false
+      }
     },
     {
       "slug": "geely-e2",
@@ -224,7 +244,18 @@
         "geely-e2-max",
         "geely-e2-ultra"
       ],
-      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md",
+      "basicDataPublication": {
+        "status": "published_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "geely-e2-pro",
+          "geely-e2-max"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/geely-e2",
+        "complete": false
+      }
     },
     {
       "slug": "geely-e5",
@@ -293,7 +324,17 @@
         "geely-e5-pro",
         "geely-e5-max"
       ],
-      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md",
+      "basicDataPublication": {
+        "status": "published_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "geely-e5-pro"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/geely-e5",
+        "complete": false
+      }
     },
     {
       "slug": "changan-deepal-s05",
@@ -350,7 +391,18 @@
         "changan-deepal-s05-rwd-max",
         "changan-deepal-s05-awd-max"
       ],
-      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md",
+      "basicDataPublication": {
+        "status": "published_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "changan-deepal-s05-rwd-pro",
+          "changan-deepal-s05-awd-max"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/changan-deepal-s05",
+        "complete": false
+      }
     },
     {
       "slug": "changan-deepal-s07",
@@ -419,7 +471,18 @@
         "changan-deepal-s07-bev-79",
         "changan-deepal-s07-rwd-77-94kwh"
       ],
-      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md",
+      "basicDataPublication": {
+        "status": "published_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "changan-deepal-s07-bev-79",
+          "changan-deepal-s07-rwd-77-94kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/changan-deepal-s07",
+        "complete": false
+      }
     },
     {
       "slug": "dongfeng-box",
@@ -487,7 +550,17 @@
       "publishedVariantIds": [
         "dongfeng-box-plus"
       ],
-      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md",
+      "basicDataPublication": {
+        "status": "published_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "dongfeng-box-plus"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/dongfeng-box",
+        "complete": false
+      }
     },
     {
       "slug": "dongfeng-vigo",
@@ -555,7 +628,17 @@
       "publishedVariantIds": [
         "dongfeng-vigo-one-edition"
       ],
-      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md"
+      "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md",
+      "basicDataPublication": {
+        "status": "published_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "dongfeng-vigo-one-edition"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/dongfeng-vigo",
+        "complete": false
+      }
     },
     {
       "slug": "forthing-friday-ev",
@@ -599,7 +682,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "forthing-s7-ev",
@@ -643,7 +734,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "firefly-firefly",
@@ -695,6 +794,16 @@
         "reviewedAt": "2026-11-22",
         "status": "published",
         "versionsIdentified": 1
+      },
+      "basicDataPublication": {
+        "status": "published_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "firefly"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/firefly-firefly",
+        "complete": false
       }
     },
     {
@@ -752,7 +861,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "voyah-free",
@@ -809,7 +926,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "voyah-dream",
@@ -866,7 +991,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "zeekr-x",
@@ -936,7 +1069,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "zeekr-001",
@@ -1006,7 +1147,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "zeekr-7x",
@@ -1076,7 +1225,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "zeekr-7gt",
@@ -1146,7 +1303,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "byd-atto-2",
@@ -1203,7 +1368,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "byd-seal-u",
@@ -1260,7 +1433,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "byd-sealion-7",
@@ -1317,7 +1498,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mg-mg4-ev",
@@ -1374,7 +1563,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mg-mgs5-ev",
@@ -1431,7 +1628,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mg-mgs6-ev",
@@ -1488,7 +1693,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mg-cyberster",
@@ -1532,7 +1745,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "nio-et5",
@@ -1589,7 +1810,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "xpeng-g9",
@@ -1646,7 +1875,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "xpeng-p7-plus",
@@ -1703,7 +1940,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "xpeng-l03-ev",
@@ -1760,7 +2005,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "dacia-spring",
@@ -1817,7 +2070,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "renault-twingo-e-tech",
@@ -1861,7 +2122,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "renault-4-e-tech",
@@ -1918,7 +2187,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "hyundai-inster",
@@ -1975,7 +2252,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "hyundai-ioniq-3",
@@ -2045,7 +2330,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "kia-ev2",
@@ -2089,7 +2382,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "kia-ev4",
@@ -2146,7 +2447,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "kia-ev4-fastback",
@@ -2203,7 +2512,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "nissan-micra",
@@ -2260,7 +2577,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "fiat-grande-panda-electric",
@@ -2304,7 +2629,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "opel-corsa-electric",
@@ -2361,7 +2694,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "ford-puma-gen-e",
@@ -2418,7 +2759,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "cupra-raval",
@@ -2475,7 +2824,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "volkswagen-id-polo",
@@ -2532,7 +2889,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "skoda-epiq",
@@ -2589,7 +2954,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "fiat-500e",
@@ -2633,7 +3006,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "fiat-600e",
@@ -2677,7 +3058,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "opel-mokka-electric",
@@ -2734,7 +3123,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "opel-astra-electric",
@@ -2791,7 +3188,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "opel-astra-sports-tourer-electric",
@@ -2848,7 +3253,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "opel-frontera-electric",
@@ -2905,7 +3318,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "opel-grandland-electric",
@@ -2962,7 +3383,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "peugeot-e-2008",
@@ -3019,7 +3448,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "peugeot-e-308",
@@ -3076,7 +3513,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "peugeot-e-308-sw",
@@ -3133,7 +3578,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "peugeot-e-408",
@@ -3190,7 +3643,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "peugeot-e-5008",
@@ -3247,7 +3708,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "citroen-e-c4-x",
@@ -3304,7 +3773,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "citroen-e-c5-aircross",
@@ -3361,7 +3838,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "ford-mustang-mach-e",
@@ -3418,7 +3903,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "toyota-bz4x",
@@ -3475,7 +3968,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "toyota-c-hr-plus",
@@ -3532,7 +4033,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "toyota-bz4x-touring",
@@ -3589,7 +4098,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "kia-ev9",
@@ -3646,7 +4163,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "kia-pv5-passenger",
@@ -3703,7 +4228,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "hyundai-ioniq-9",
@@ -3760,7 +4293,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mazda-6e",
@@ -3817,7 +4358,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mazda-cx-6e",
@@ -3874,7 +4423,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mini-aceman",
@@ -3931,7 +4488,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "smart-5",
@@ -3988,7 +4553,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "ds-automobiles-ds-3-e-tense",
@@ -4032,7 +4605,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "ds-automobiles-n-4-e-tense",
@@ -4089,7 +4670,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "ds-automobiles-n-7-e-tense",
@@ -4146,7 +4735,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "jeep-avenger-electric",
@@ -4203,7 +4800,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "jeep-compass-electric",
@@ -4260,7 +4865,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "audi-a6-sportback-e-tron",
@@ -4317,7 +4930,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "audi-a6-avant-e-tron",
@@ -4374,7 +4995,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "audi-q6-e-tron",
@@ -4431,7 +5060,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "audi-q6-sportback-e-tron",
@@ -4488,7 +5125,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "audi-e-tron-gt",
@@ -4545,7 +5190,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "bmw-i3-neue-klasse",
@@ -4615,7 +5268,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "bmw-ix3-neue-klasse",
@@ -4685,7 +5346,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "bmw-i5",
@@ -4755,7 +5424,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "bmw-i5-touring",
@@ -4825,7 +5502,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "bmw-i7",
@@ -4895,7 +5580,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "bmw-ix",
@@ -4965,7 +5658,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "volvo-ex60",
@@ -5035,7 +5736,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "volvo-ex90",
@@ -5105,7 +5814,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "volvo-es90",
@@ -5175,7 +5892,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "polestar-3",
@@ -5245,7 +5970,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "polestar-5",
@@ -5315,7 +6048,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "polestar-4-suv",
@@ -5385,7 +6126,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "suzuki-e-vitara",
@@ -5442,7 +6191,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "alpine-a390",
@@ -5499,7 +6256,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "abarth-500e",
@@ -5543,7 +6308,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "abarth-600e",
@@ -5587,7 +6360,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "lexus-rz",
@@ -5644,7 +6425,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "volkswagen-id-7-tourer",
@@ -5701,7 +6490,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "volkswagen-id-buzz",
@@ -5758,7 +6555,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "skoda-enyaq-coupe",
@@ -5815,7 +6620,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-cla-electric",
@@ -5885,7 +6698,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-cla-shooting-brake-electric",
@@ -5955,7 +6776,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-glb-electric",
@@ -6025,7 +6854,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-glc-electric",
@@ -6095,7 +6932,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-eqs",
@@ -6165,7 +7010,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-g-580-eq",
@@ -6235,7 +7088,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "kgm-torres-evx",
@@ -6292,7 +7153,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mitsubishi-eclipse-cross-ev",
@@ -6349,7 +7218,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "maserati-grecale-folgore",
@@ -6393,7 +7270,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "maserati-granturismo-folgore",
@@ -6437,7 +7322,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "maserati-grancabrio-folgore",
@@ -6481,7 +7374,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "porsche-taycan-sport-turismo",
@@ -6551,7 +7452,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "porsche-taycan-cross-turismo",
@@ -6621,7 +7530,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-eqv",
@@ -6678,7 +7595,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-eqt",
@@ -6735,7 +7660,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-eqe",
@@ -6805,7 +7738,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-eqe-suv",
@@ -6875,7 +7816,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-eqs-suv",
@@ -6945,7 +7894,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "mercedes-benz-gla-electric",
@@ -7015,7 +7972,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "ford-e-tourneo-courier",
@@ -7072,7 +8037,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "ford-e-tourneo-custom",
@@ -7129,7 +8102,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "citroen-e-berlingo",
@@ -7186,7 +8167,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "citroen-e-spacetourer",
@@ -7243,7 +8232,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "peugeot-e-rifter",
@@ -7300,7 +8297,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "peugeot-e-traveller",
@@ -7357,7 +8362,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "opel-combo-electric",
@@ -7414,7 +8427,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "opel-zafira-electric",
@@ -7471,7 +8492,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "toyota-proace-city-verso-electric",
@@ -7515,7 +8544,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "toyota-proace-verso-electric",
@@ -7559,7 +8596,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "fiat-e-ulysse",
@@ -7616,7 +8661,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     },
     {
       "slug": "renault-kangoo-e-tech-electric",
@@ -7673,7 +8726,15 @@
         "preço/estado comercial e fonte com data",
         "especificações e fotografia revistas",
         "validação dos módulos e importação dedicada"
-      ]
+      ],
+      "basicDataPublication": {
+        "status": "family_created_pending_basic_data",
+        "checkedAt": "2026-11-23",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "complete": false
+      }
     }
   ],
   "execution": {
@@ -7694,8 +8755,22 @@
     "modelsPublishedFromPlan": 9,
     "variantsPublishedFromPlan": 17,
     "totalPublicModels": 76,
-    "totalPublicVariants": 103,
+    "totalPublicVariants": 98,
     "remainingFamiliesWithoutVariants": 121,
-    "documentation": "docs/BATCH_01_PUBLICATION.md"
+    "documentation": "docs/BATCH_01_PUBLICATION.md",
+    "publicTechnicalVersionsFromPlan": 12,
+    "presentationCorrection": "Equipment trims grouped into technical versions; source records and historical execution counts retained."
+  },
+  "implementationProgress": {
+    "checkedAt": "2026-11-23",
+    "scope": "Only the 130 new BEV candidates from the expansion research; excludes the pre-existing catalog and earlier Leapmotor additions.",
+    "source": "https://www.motorzero.pt/api/models/all",
+    "newCandidateModels": 130,
+    "publishedWithBasicData": 9,
+    "publicTechnicalVersionsForNewModels": 12,
+    "familiesPendingBasicData": 121,
+    "pendingPriority1": 26,
+    "pendingPriority2": 95,
+    "statusDocument": "docs/MODEL_EXPANSION_STATUS.md"
   }
 }

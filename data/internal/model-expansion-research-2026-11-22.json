@@ -454,6 +454,31 @@
         "evidenceUrl": "https://gac-portugal.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "aion-ut",
+        "brand": "Aion",
+        "model": "UT",
+        "priority": 1,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "aion-ut-premium"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/aion-ut",
+        "sourceUrl": "https://gac-portugal.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -482,6 +507,31 @@
         "evidenceUrl": "https://gac-portugal.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "aion-v",
+        "brand": "Aion",
+        "model": "V",
+        "priority": 1,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "aion-v-premium"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/aion-v",
+        "sourceUrl": "https://gac-portugal.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -511,6 +561,32 @@
         "evidenceUrl": "https://campanhas.geely-auto.pt/geely-e2/",
         "evidenceNote": "Página portuguesa identifica o E2 como 100% elétrico.",
         "restriction": "E2/E5 BEV; não Starray EM-i. Usar designação portuguesa E5."
+      },
+      "implementationStatus": {
+        "slug": "geely-e2",
+        "brand": "Geely",
+        "model": "E2",
+        "priority": 1,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "geely-e2-pro",
+          "geely-e2-max"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/geely-e2",
+        "sourceUrl": "https://www.geelyauto.eu/posts/geely-auto-official-launch-in-portugal",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -540,6 +616,31 @@
         "evidenceUrl": "https://www.geely-auto.pt/",
         "evidenceNote": "Gama nacional distingue E5 100% elétrico de Starray híbrido plug-in.",
         "restriction": "E2/E5 BEV; não Starray EM-i. Usar designação portuguesa E5."
+      },
+      "implementationStatus": {
+        "slug": "geely-e5",
+        "brand": "Geely",
+        "model": "E5",
+        "priority": 1,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "geely-e5-pro"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/geely-e5",
+        "sourceUrl": "https://www.geelyauto.eu/posts/geely-auto-official-launch-in-portugal",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -568,6 +669,32 @@
         "evidenceUrl": "https://changan-auto.pt/configurador/deepal-s05/",
         "evidenceNote": "Configurador nacional especifica BEV RWD PRO.",
         "restriction": "Deepal S05/S07 somente BEV; excluir PHEV/REEV/EREV."
+      },
+      "implementationStatus": {
+        "slug": "changan-deepal-s05",
+        "brand": "Changan",
+        "model": "Deepal S05",
+        "priority": 1,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "changan-deepal-s05-rwd-pro",
+          "changan-deepal-s05-awd-max"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/changan-deepal-s05",
+        "sourceUrl": "https://changan-auto.pt/modelos/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -596,6 +723,35 @@
         "evidenceUrl": "https://changan-auto.pt/changan-portugal-celebra-primeiro-aniversario-com-perto-de-1-000-unidades-entre-matriculas-e-vendas-confirmadas-numa-gama-em-expansao/",
         "evidenceNote": "Comunicação nacional identifica o S07 BEV; S05 PHEV é outra configuração.",
         "restriction": "Deepal S05/S07 somente BEV; excluir PHEV/REEV/EREV."
+      },
+      "implementationStatus": {
+        "slug": "changan-deepal-s07",
+        "brand": "Changan",
+        "model": "Deepal S07",
+        "priority": 1,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "changan-deepal-s07-bev-79",
+          "changan-deepal-s07-rwd-77-94kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/changan-deepal-s07",
+        "sourceUrl": "https://changan-auto.pt/modelos/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery",
+          "price"
+        ],
+        "versionsWithoutPrice": [
+          "changan-deepal-s07-rwd-77-94kwh"
+        ]
       }
     },
     {
@@ -624,6 +780,31 @@
         "evidenceUrl": "https://caetano.pt/dongfeng/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "dongfeng-box",
+        "brand": "Dongfeng",
+        "model": "BOX",
+        "priority": 1,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "dongfeng-box-plus"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/dongfeng-box",
+        "sourceUrl": "https://caetano.pt/dongfeng/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -652,6 +833,31 @@
         "evidenceUrl": "https://caetano.pt/dongfeng/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "dongfeng-vigo",
+        "brand": "Dongfeng",
+        "model": "VIGO",
+        "priority": 1,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "dongfeng-vigo-one-edition"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/dongfeng-vigo",
+        "sourceUrl": "https://caetano.pt/dongfeng/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -680,6 +886,19 @@
         "evidenceUrl": "https://www.forthing.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Friday EV e S7 EV; não Friday HEV/térmico nem U-Tour."
+      },
+      "implementationStatus": {
+        "slug": "forthing-friday-ev",
+        "brand": "Forthing",
+        "model": "Friday EV",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.forthing.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -708,6 +927,19 @@
         "evidenceUrl": "https://www.forthing.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Friday EV e S7 EV; não Friday HEV/térmico nem U-Tour."
+      },
+      "implementationStatus": {
+        "slug": "forthing-s7-ev",
+        "brand": "Forthing",
+        "model": "S7 EV",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.forthing.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -736,6 +968,29 @@
         "evidenceUrl": "https://fireflyportugal.pt/o-nosso-carro/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "firefly-firefly",
+        "brand": "Firefly",
+        "model": "Firefly",
+        "priority": 1,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "firefly"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/firefly-firefly",
+        "sourceUrl": "https://fireflyportugal.pt/o-nosso-carro/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -764,6 +1019,19 @@
         "evidenceUrl": "https://www.voyah.pt/modelos/voyah-courage",
         "evidenceNote": "SUV elétrico da gama nacional.",
         "restriction": "Configuração BEV portuguesa; Free/Dream também podem designar outras motorizações noutros mercados."
+      },
+      "implementationStatus": {
+        "slug": "voyah-courage",
+        "brand": "Voyah",
+        "model": "Courage",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://caetano.pt/voyah/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -792,6 +1060,19 @@
         "evidenceUrl": "https://www.voyah.pt/modelos/voyah-free",
         "evidenceNote": "Produto elétrico português; a rede oficial nacional apresenta a gama BEV.",
         "restriction": "Configuração BEV portuguesa; Free/Dream também podem designar outras motorizações noutros mercados."
+      },
+      "implementationStatus": {
+        "slug": "voyah-free",
+        "brand": "Voyah",
+        "model": "Free",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://caetano.pt/voyah/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -820,6 +1101,19 @@
         "evidenceUrl": "https://www.voyah.pt/modelos/voyah-dream",
         "evidenceNote": "Monovolume elétrico português com dois motores e autonomia de bateria; não versão PHEV de outros mercados.",
         "restriction": "Configuração BEV portuguesa; Free/Dream também podem designar outras motorizações noutros mercados."
+      },
+      "implementationStatus": {
+        "slug": "voyah-dream",
+        "brand": "Voyah",
+        "model": "Dream",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://caetano.pt/voyah/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -848,6 +1142,19 @@
         "evidenceUrl": "https://configurador.zeekr.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "zeekr-x",
+        "brand": "Zeekr",
+        "model": "X",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://configurador.zeekr.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -876,6 +1183,19 @@
         "evidenceUrl": "https://configurador.zeekr.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "zeekr-001",
+        "brand": "Zeekr",
+        "model": "001",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://configurador.zeekr.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -904,6 +1224,19 @@
         "evidenceUrl": "https://configurador.zeekr.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "zeekr-7x",
+        "brand": "Zeekr",
+        "model": "7X",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://configurador.zeekr.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -932,6 +1265,19 @@
         "evidenceUrl": "https://configurador.zeekr.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "zeekr-7gt",
+        "brand": "Zeekr",
+        "model": "7GT",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://configurador.zeekr.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -960,6 +1306,19 @@
         "evidenceUrl": "https://www.byd-auto.pt/modelos/byd-atto-2",
         "evidenceNote": "Página do BEV distinta de ATTO 2 DM-i.",
         "restriction": "Somente BEV; rejeitar variantes DM-i, mesmo com o mesmo nome de família."
+      },
+      "implementationStatus": {
+        "slug": "byd-atto-2",
+        "brand": "BYD",
+        "model": "ATTO 2",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://byd-auto.pt/modelos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -988,6 +1347,19 @@
         "evidenceUrl": "https://www.byd-auto.pt/modelos/byd-seal-u",
         "evidenceNote": "Página de BEV distinta da página SEAL U DM-i.",
         "restriction": "Somente BEV; rejeitar variantes DM-i, mesmo com o mesmo nome de família."
+      },
+      "implementationStatus": {
+        "slug": "byd-seal-u",
+        "brand": "BYD",
+        "model": "SEAL U",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://byd-auto.pt/modelos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1016,6 +1388,19 @@
         "evidenceUrl": "https://api.byd-auto.pt/files/BYD-SEALION-7.pdf",
         "evidenceNote": "Ficha técnica oficial do BEV; não confundir com Sealion híbridos.",
         "restriction": "Somente BEV; rejeitar variantes DM-i, mesmo com o mesmo nome de família."
+      },
+      "implementationStatus": {
+        "slug": "byd-sealion-7",
+        "brand": "BYD",
+        "model": "SEALION 7",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://byd-auto.pt/modelos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1045,6 +1430,19 @@
         "evidenceUrl": "https://www.mgmotor.eu/pt-PT",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "mg-mg4-ev",
+        "brand": "MG",
+        "model": "MG4 EV",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mgmotor.eu/pt-PT",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1074,6 +1472,19 @@
         "evidenceUrl": "https://www.mgmotor.eu/pt-PT",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "mg-mgs5-ev",
+        "brand": "MG",
+        "model": "MGS5 EV",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mgmotor.eu/pt-PT",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1103,6 +1514,19 @@
         "evidenceUrl": "https://www.mgmotor.eu/pt-PT",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "mg-mgs6-ev",
+        "brand": "MG",
+        "model": "MGS6 EV",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mgmotor.eu/pt-PT",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1132,6 +1556,19 @@
         "evidenceUrl": "https://www.mgmotor.eu/pt-PT",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "mg-cyberster",
+        "brand": "MG",
+        "model": "Cyberster",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mgmotor.eu/pt-PT",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1160,6 +1597,19 @@
         "evidenceUrl": "https://nio-portugal.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "nio-et5",
+        "brand": "NIO",
+        "model": "ET5",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://nio-portugal.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1188,6 +1638,19 @@
         "evidenceUrl": "https://www.xpeng-auto.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "G9/P7+ BEV e apenas L03 EV; L03 EREV fica excluído."
+      },
+      "implementationStatus": {
+        "slug": "xpeng-g9",
+        "brand": "XPeng",
+        "model": "G9",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.xpeng-auto.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1216,6 +1679,19 @@
         "evidenceUrl": "https://www.xpeng-auto.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "G9/P7+ BEV e apenas L03 EV; L03 EREV fica excluído."
+      },
+      "implementationStatus": {
+        "slug": "xpeng-p7-plus",
+        "brand": "XPeng",
+        "model": "P7+",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.xpeng-auto.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1251,6 +1727,19 @@
         "evidenceUrl": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
         "evidenceNote": "Oferta nacional explicitamente 100% EV, distinta da EREV.",
         "restriction": "G9/P7+ BEV e apenas L03 EV; L03 EREV fica excluído."
+      },
+      "implementationStatus": {
+        "slug": "xpeng-l03-ev",
+        "brand": "XPeng",
+        "model": "L03 EV",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1283,6 +1772,19 @@
         "evidenceUrl": "https://www.dacia.pt/gama-hibrida-eletrica/spring-citadino/configurador.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "dacia-spring",
+        "brand": "Dacia",
+        "model": "Spring",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.dacia.pt/gama-hibrida-eletrica/spring-citadino/configurador.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1309,6 +1811,19 @@
         "evidenceUrl": "https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E-Tech elétrico; E-Tech também pode identificar híbridos noutros modelos."
+      },
+      "implementationStatus": {
+        "slug": "renault-twingo-e-tech",
+        "brand": "Renault",
+        "model": "Twingo E-Tech",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1335,6 +1850,19 @@
         "evidenceUrl": "https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E-Tech elétrico; E-Tech também pode identificar híbridos noutros modelos."
+      },
+      "implementationStatus": {
+        "slug": "renault-4-e-tech",
+        "brand": "Renault",
+        "model": "4 E-Tech",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1361,6 +1889,19 @@
         "evidenceUrl": "https://www.hyundai.pt/campanhas-automoveis/hyundai-inster-preco/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "hyundai-inster",
+        "brand": "Hyundai",
+        "model": "INSTER",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.hyundai.pt/campanhas-automoveis/hyundai-inster-preco/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1393,6 +1934,19 @@
         "evidenceUrl": "https://www.hyundai.pt/ioniq-3-chega-a-portugal/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "hyundai-ioniq-3",
+        "brand": "Hyundai",
+        "model": "IONIQ 3",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.hyundai.pt/ioniq-3-chega-a-portugal/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1419,6 +1973,19 @@
         "evidenceUrl": "https://m.kia.pt/configurador/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "kia-ev2",
+        "brand": "Kia",
+        "model": "EV2",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://m.kia.pt/configurador/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1445,6 +2012,19 @@
         "evidenceUrl": "https://m.kia.pt/configurador/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "kia-ev4",
+        "brand": "Kia",
+        "model": "EV4",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://m.kia.pt/configurador/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1471,6 +2051,19 @@
         "evidenceUrl": "https://m.kia.pt/configurador/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "kia-ev4-fastback",
+        "brand": "Kia",
+        "model": "EV4 Fastback",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://m.kia.pt/configurador/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1502,6 +2095,19 @@
         "evidenceUrl": "https://configurador.nissan.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "nissan-micra",
+        "brand": "Nissan",
+        "model": "Micra",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://configurador.nissan.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1528,6 +2134,19 @@
         "evidenceUrl": "https://www.fiat.pt/modelos/grande-panda-electrico",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "500e/600e/Grande Panda elétrico/E-Ulysse BEV; não 500 Hybrid nem Grande Panda/600 híbridos."
+      },
+      "implementationStatus": {
+        "slug": "fiat-grande-panda-electric",
+        "brand": "Fiat",
+        "model": "Grande Panda Electric",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.fiat.pt/modelos/grande-panda-electrico",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1554,6 +2173,19 @@
         "evidenceUrl": "https://www.opel.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      },
+      "implementationStatus": {
+        "slug": "opel-corsa-electric",
+        "brand": "Opel",
+        "model": "Corsa Electric",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.opel.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1580,6 +2212,19 @@
         "evidenceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/como-escolher-carro-eletrico",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente BEV E-Tourneo/Gen-E/Mach-E; excluir PHEV e diesel."
+      },
+      "implementationStatus": {
+        "slug": "ford-puma-gen-e",
+        "brand": "Ford",
+        "model": "Puma Gen-E",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/como-escolher-carro-eletrico",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1611,6 +2256,19 @@
         "evidenceUrl": "https://www.cupraofficial.pt/cupra-raval/cupra-raval",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "cupra-raval",
+        "brand": "Cupra",
+        "model": "Raval",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.cupraofficial.pt/cupra-raval/cupra-raval",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1637,6 +2295,19 @@
         "evidenceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "volkswagen-id-polo",
+        "brand": "Volkswagen",
+        "model": "ID. Polo",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1663,6 +2334,19 @@
         "evidenceUrl": "https://www.skoda.pt/models/overview",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "skoda-epiq",
+        "brand": "Skoda",
+        "model": "Epiq",
+        "priority": 1,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.skoda.pt/models/overview",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1689,6 +2373,19 @@
         "evidenceUrl": "https://www.fiat.pt/?brand=NewMOC&language=%5Bfiatprofessional%2Cpt%2Cpt%5D",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "500e/600e/Grande Panda elétrico/E-Ulysse BEV; não 500 Hybrid nem Grande Panda/600 híbridos."
+      },
+      "implementationStatus": {
+        "slug": "fiat-500e",
+        "brand": "Fiat",
+        "model": "500e",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.fiat.pt/?brand=NewMOC&language=%5Bfiatprofessional%2Cpt%2Cpt%5D",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1715,6 +2412,19 @@
         "evidenceUrl": "https://www.fiat.pt/?brand=NewMOC&language=%5Bfiatprofessional%2Cpt%2Cpt%5D",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "500e/600e/Grande Panda elétrico/E-Ulysse BEV; não 500 Hybrid nem Grande Panda/600 híbridos."
+      },
+      "implementationStatus": {
+        "slug": "fiat-600e",
+        "brand": "Fiat",
+        "model": "600e",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.fiat.pt/?brand=NewMOC&language=%5Bfiatprofessional%2Cpt%2Cpt%5D",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1741,6 +2451,19 @@
         "evidenceUrl": "https://www.opel.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      },
+      "implementationStatus": {
+        "slug": "opel-mokka-electric",
+        "brand": "Opel",
+        "model": "Mokka Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.opel.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1767,6 +2490,19 @@
         "evidenceUrl": "https://www.opel.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      },
+      "implementationStatus": {
+        "slug": "opel-astra-electric",
+        "brand": "Opel",
+        "model": "Astra Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.opel.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1793,6 +2529,19 @@
         "evidenceUrl": "https://www.opel.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      },
+      "implementationStatus": {
+        "slug": "opel-astra-sports-tourer-electric",
+        "brand": "Opel",
+        "model": "Astra Sports Tourer Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.opel.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1819,6 +2568,19 @@
         "evidenceUrl": "https://www.opel.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      },
+      "implementationStatus": {
+        "slug": "opel-frontera-electric",
+        "brand": "Opel",
+        "model": "Frontera Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.opel.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1845,6 +2607,19 @@
         "evidenceUrl": "https://www.opel.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      },
+      "implementationStatus": {
+        "slug": "opel-grandland-electric",
+        "brand": "Opel",
+        "model": "Grandland Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.opel.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1871,6 +2646,19 @@
         "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      },
+      "implementationStatus": {
+        "slug": "peugeot-e-2008",
+        "brand": "Peugeot",
+        "model": "E-2008",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1897,6 +2685,19 @@
         "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      },
+      "implementationStatus": {
+        "slug": "peugeot-e-308",
+        "brand": "Peugeot",
+        "model": "E-308",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1923,6 +2724,19 @@
         "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      },
+      "implementationStatus": {
+        "slug": "peugeot-e-308-sw",
+        "brand": "Peugeot",
+        "model": "E-308 SW",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1949,6 +2763,19 @@
         "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      },
+      "implementationStatus": {
+        "slug": "peugeot-e-408",
+        "brand": "Peugeot",
+        "model": "E-408",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -1975,6 +2802,19 @@
         "evidenceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      },
+      "implementationStatus": {
+        "slug": "peugeot-e-5008",
+        "brand": "Peugeot",
+        "model": "E-5008",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.peugeot.pt/conselhos-sugestoes/eletrificacao/carregamento/tempo-de-carregamento-rapido-em-autoestrada-para-carros-eletricos.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2001,6 +2841,19 @@
         "evidenceUrl": "https://www.citroen.pt/gama-electrificada.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente ë-/e- BEV; não Hybrid/diesel nem versões de carga."
+      },
+      "implementationStatus": {
+        "slug": "citroen-e-c4-x",
+        "brand": "Citroen",
+        "model": "e-C4 X",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.citroen.pt/gama-electrificada.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2027,6 +2880,19 @@
         "evidenceUrl": "https://www.citroen.pt/gama-electrificada.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente ë-/e- BEV; não Hybrid/diesel nem versões de carga."
+      },
+      "implementationStatus": {
+        "slug": "citroen-e-c5-aircross",
+        "brand": "Citroen",
+        "model": "e-C5 Aircross",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.citroen.pt/gama-electrificada.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2053,6 +2919,19 @@
         "evidenceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/como-escolher-carro-eletrico",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente BEV E-Tourneo/Gen-E/Mach-E; excluir PHEV e diesel."
+      },
+      "implementationStatus": {
+        "slug": "ford-mustang-mach-e",
+        "brand": "Ford",
+        "model": "Mustang Mach-E",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/como-escolher-carro-eletrico",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2079,6 +2958,19 @@
         "evidenceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      },
+      "implementationStatus": {
+        "slug": "toyota-bz4x",
+        "brand": "Toyota",
+        "model": "bZ4X",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2105,6 +2997,19 @@
         "evidenceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      },
+      "implementationStatus": {
+        "slug": "toyota-c-hr-plus",
+        "brand": "Toyota",
+        "model": "C-HR+",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2131,6 +3036,19 @@
         "evidenceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      },
+      "implementationStatus": {
+        "slug": "toyota-bz4x-touring",
+        "brand": "Toyota",
+        "model": "bZ4X Touring",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.toyota.pt/eletrificacao/mobilidade-ev",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2157,6 +3075,19 @@
         "evidenceUrl": "https://m.kia.pt/configurador/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "kia-ev9",
+        "brand": "Kia",
+        "model": "EV9",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://m.kia.pt/configurador/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2183,6 +3114,19 @@
         "evidenceUrl": "https://m.kia.pt/configurador/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "kia-pv5-passenger",
+        "brand": "Kia",
+        "model": "PV5 Passenger",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://m.kia.pt/configurador/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2209,6 +3153,19 @@
         "evidenceUrl": "https://www.hyundai.pt/configurador/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "hyundai-ioniq-9",
+        "brand": "Hyundai",
+        "model": "IONIQ 9",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.hyundai.pt/configurador/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2235,6 +3192,19 @@
         "evidenceUrl": "https://www.mazda.pt/ev/overview/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "mazda-6e",
+        "brand": "Mazda",
+        "model": "6e",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mazda.pt/ev/overview/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2261,6 +3231,19 @@
         "evidenceUrl": "https://www.mazda.pt/ev/overview/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "mazda-cx-6e",
+        "brand": "Mazda",
+        "model": "CX-6e",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mazda.pt/ev/overview/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2287,6 +3270,19 @@
         "evidenceUrl": "https://www.mini.pt/pt_PT/home.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "mini-aceman",
+        "brand": "MINI",
+        "model": "Aceman",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mini.pt/pt_PT/home.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2313,6 +3309,19 @@
         "evidenceUrl": "https://pt.smart.com/pt/models/hashtag-five/specifications/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "smart-5",
+        "brand": "smart",
+        "model": "#5",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://pt.smart.com/pt/models/hashtag-five/specifications/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2339,6 +3348,19 @@
         "evidenceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "E-Tense só entra quando a configuração é 100% elétrica; o nome E-Tense sozinho não basta."
+      },
+      "implementationStatus": {
+        "slug": "ds-automobiles-ds-3-e-tense",
+        "brand": "DS Automobiles",
+        "model": "DS 3 E-Tense",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2365,6 +3387,19 @@
         "evidenceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "E-Tense só entra quando a configuração é 100% elétrica; o nome E-Tense sozinho não basta."
+      },
+      "implementationStatus": {
+        "slug": "ds-automobiles-n-4-e-tense",
+        "brand": "DS Automobiles",
+        "model": "N°4 E-Tense",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2391,6 +3426,19 @@
         "evidenceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "E-Tense só entra quando a configuração é 100% elétrica; o nome E-Tense sozinho não basta."
+      },
+      "implementationStatus": {
+        "slug": "ds-automobiles-n-7-e-tense",
+        "brand": "DS Automobiles",
+        "model": "N°7 E-Tense",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.dsautomobiles.pt/eletrico-hibrido.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2417,6 +3465,19 @@
         "evidenceUrl": "https://www.jeep.pt/eletrificacao",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Avenger/Compass Electric; rejeitar e-Hybrid e 4xe/PHEV."
+      },
+      "implementationStatus": {
+        "slug": "jeep-avenger-electric",
+        "brand": "Jeep",
+        "model": "Avenger Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.jeep.pt/eletrificacao",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2443,6 +3504,19 @@
         "evidenceUrl": "https://www.jeep.pt/eletrificacao",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Avenger/Compass Electric; rejeitar e-Hybrid e 4xe/PHEV."
+      },
+      "implementationStatus": {
+        "slug": "jeep-compass-electric",
+        "brand": "Jeep",
+        "model": "Compass Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.jeep.pt/eletrificacao",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2469,6 +3543,19 @@
         "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "audi-a6-sportback-e-tron",
+        "brand": "Audi",
+        "model": "A6 Sportback e-tron",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2495,6 +3582,19 @@
         "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "audi-a6-avant-e-tron",
+        "brand": "Audi",
+        "model": "A6 Avant e-tron",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2521,6 +3621,19 @@
         "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "audi-q6-e-tron",
+        "brand": "Audi",
+        "model": "Q6 e-tron",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2547,6 +3660,19 @@
         "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "audi-q6-sportback-e-tron",
+        "brand": "Audi",
+        "model": "Q6 Sportback e-tron",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2573,6 +3699,19 @@
         "evidenceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "audi-e-tron-gt",
+        "brand": "Audi",
+        "model": "e-tron GT",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.audi.pt/modelos/todos-os-modelos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2599,6 +3738,19 @@
         "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      },
+      "implementationStatus": {
+        "slug": "bmw-i3-neue-klasse",
+        "brand": "BMW",
+        "model": "i3 Neue Klasse",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2625,6 +3777,19 @@
         "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      },
+      "implementationStatus": {
+        "slug": "bmw-ix3-neue-klasse",
+        "brand": "BMW",
+        "model": "iX3 Neue Klasse",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2651,6 +3816,19 @@
         "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      },
+      "implementationStatus": {
+        "slug": "bmw-i5",
+        "brand": "BMW",
+        "model": "i5",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2677,6 +3855,19 @@
         "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      },
+      "implementationStatus": {
+        "slug": "bmw-i5-touring",
+        "brand": "BMW",
+        "model": "i5 Touring",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2703,6 +3894,19 @@
         "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      },
+      "implementationStatus": {
+        "slug": "bmw-i7",
+        "brand": "BMW",
+        "model": "i7",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2729,6 +3933,19 @@
         "evidenceUrl": "https://www.bmw.pt/pt/all-models.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Configurações i BEV especificadas. i3 Neue Klasse é berlina nova, não i3 antigo nem i3 REx."
+      },
+      "implementationStatus": {
+        "slug": "bmw-ix",
+        "brand": "BMW",
+        "model": "iX",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.bmw.pt/pt/all-models.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2755,6 +3972,19 @@
         "evidenceUrl": "https://www.volvocars.com/pt/build/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "volvo-ex60",
+        "brand": "Volvo",
+        "model": "EX60",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.volvocars.com/pt/build/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2781,6 +4011,19 @@
         "evidenceUrl": "https://www.volvocars.com/pt/build/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "volvo-ex90",
+        "brand": "Volvo",
+        "model": "EX90",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.volvocars.com/pt/build/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2807,6 +4050,19 @@
         "evidenceUrl": "https://www.volvocars.com/pt/build/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "volvo-es90",
+        "brand": "Volvo",
+        "model": "ES90",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.volvocars.com/pt/build/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2834,6 +4090,19 @@
         "evidenceUrl": "https://www.polestar.com/pt/configure/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "polestar-3",
+        "brand": "Polestar",
+        "model": "3",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.polestar.com/pt/configure/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2861,6 +4130,19 @@
         "evidenceUrl": "https://www.polestar.com/pt/configure/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "polestar-5",
+        "brand": "Polestar",
+        "model": "5",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.polestar.com/pt/configure/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2888,6 +4170,19 @@
         "evidenceUrl": "https://www.polestar.com/pt/configure/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "polestar-4-suv",
+        "brand": "Polestar",
+        "model": "4 SUV",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.polestar.com/pt/configure/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2914,6 +4209,19 @@
         "evidenceUrl": "https://www.suzukiauto.pt/precios/evitara",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "suzuki-e-vitara",
+        "brand": "Suzuki",
+        "model": "e Vitara",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.suzukiauto.pt/precios/evitara",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2940,6 +4248,19 @@
         "evidenceUrl": "https://www.alpinecars.pt/configurador.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "alpine-a390",
+        "brand": "Alpine",
+        "model": "A390",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.alpinecars.pt/configurador.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2966,6 +4287,19 @@
         "evidenceUrl": "https://www.abarth.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "abarth-500e",
+        "brand": "Abarth",
+        "model": "500e",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.abarth.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -2992,6 +4326,19 @@
         "evidenceUrl": "https://www.abarth.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "abarth-600e",
+        "brand": "Abarth",
+        "model": "600e",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.abarth.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3018,6 +4365,19 @@
         "evidenceUrl": "https://www.lexus.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "RZ BEV; não HEV/PHEV de outras famílias."
+      },
+      "implementationStatus": {
+        "slug": "lexus-rz",
+        "brand": "Lexus",
+        "model": "RZ",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.lexus.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3044,6 +4404,19 @@
         "evidenceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "volkswagen-id-7-tourer",
+        "brand": "Volkswagen",
+        "model": "ID.7 Tourer",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3070,6 +4443,19 @@
         "evidenceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "volkswagen-id-buzz",
+        "brand": "Volkswagen",
+        "model": "ID. Buzz",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.volkswagen.pt/eletricos/eletricos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3096,6 +4482,19 @@
         "evidenceUrl": "https://www.skoda.pt/models/overview",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "skoda-enyaq-coupe",
+        "brand": "Skoda",
+        "model": "Enyaq Coupé",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.skoda.pt/models/overview",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3122,6 +4521,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-cla-electric",
+        "brand": "Mercedes-Benz",
+        "model": "CLA Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3148,6 +4560,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-cla-shooting-brake-electric",
+        "brand": "Mercedes-Benz",
+        "model": "CLA Shooting Brake Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3174,6 +4599,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-glb-electric",
+        "brand": "Mercedes-Benz",
+        "model": "GLB Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3200,6 +4638,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-glc-electric",
+        "brand": "Mercedes-Benz",
+        "model": "GLC Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3226,6 +4677,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-eqs",
+        "brand": "Mercedes-Benz",
+        "model": "EQS",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3252,6 +4716,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-g-580-eq",
+        "brand": "Mercedes-Benz",
+        "model": "G 580 EQ",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/electric.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3279,6 +4756,19 @@
         "evidenceUrl": "https://kgm.pt/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Torres EVX; rejeitar Torres HEV e Torres térmico."
+      },
+      "implementationStatus": {
+        "slug": "kgm-torres-evx",
+        "brand": "KGM",
+        "model": "Torres EVX",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://kgm.pt/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3306,6 +4796,19 @@
         "evidenceUrl": "https://www.mitsubishi-motors.pt/novo-eclipse-cross-ev",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Eclipse Cross EV da nova geração; rejeitar Eclipse Cross PHEV antigo."
+      },
+      "implementationStatus": {
+        "slug": "mitsubishi-eclipse-cross-ev",
+        "brand": "Mitsubishi",
+        "model": "Eclipse Cross EV",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mitsubishi-motors.pt/novo-eclipse-cross-ev",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3333,6 +4836,19 @@
         "evidenceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Folgore; rejeitar Modena/Trofeo térmicos e Grecale híbrido."
+      },
+      "implementationStatus": {
+        "slug": "maserati-grecale-folgore",
+        "brand": "Maserati",
+        "model": "Grecale Folgore",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3360,6 +4876,19 @@
         "evidenceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Folgore; rejeitar Modena/Trofeo térmicos e Grecale híbrido."
+      },
+      "implementationStatus": {
+        "slug": "maserati-granturismo-folgore",
+        "brand": "Maserati",
+        "model": "GranTurismo Folgore",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3387,6 +4916,19 @@
         "evidenceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Folgore; rejeitar Modena/Trofeo térmicos e Grecale híbrido."
+      },
+      "implementationStatus": {
+        "slug": "maserati-grancabrio-folgore",
+        "brand": "Maserati",
+        "model": "GranCabrio Folgore",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.maserati.com/pt/pt/shopping-tools/configurator",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3415,6 +4957,19 @@
         "evidenceUrl": "https://www.porsche.com/portugal/models/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "porsche-taycan-sport-turismo",
+        "brand": "Porsche",
+        "model": "Taycan Sport Turismo",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.porsche.com/portugal/models/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3443,6 +4998,19 @@
         "evidenceUrl": "https://www.porsche.com/portugal/models/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Apenas a configuração BEV identificada; sem motor térmico nem extensor de autonomia."
+      },
+      "implementationStatus": {
+        "slug": "porsche-taycan-cross-turismo",
+        "brand": "Porsche",
+        "model": "Taycan Cross Turismo",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.porsche.com/portugal/models/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3471,6 +5039,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/van/eqv/overview.html/",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-eqv",
+        "brand": "Mercedes-Benz",
+        "model": "EQV",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/van/eqv/overview.html/",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3499,6 +5080,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/models/van/eqt/overview.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-eqt",
+        "brand": "Mercedes-Benz",
+        "model": "EQT",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/models/van/eqt/overview.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3526,6 +5120,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-eqe",
+        "brand": "Mercedes-Benz",
+        "model": "EQE",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3553,6 +5160,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-eqe-suv",
+        "brand": "Mercedes-Benz",
+        "model": "EQE SUV",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3580,6 +5200,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-eqs-suv",
+        "brand": "Mercedes-Benz",
+        "model": "EQS SUV",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3607,6 +5240,19 @@
         "evidenceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Selecionar explicitamente Elétrico; não confundir GLA/GLB/GLC/CLA com variantes de combustão ou PHEV."
+      },
+      "implementationStatus": {
+        "slug": "mercedes-benz-gla-electric",
+        "brand": "Mercedes-Benz",
+        "model": "GLA Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.mercedes-benz.pt/passengercars/configurator.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3635,6 +5281,19 @@
         "evidenceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/carros-familiares-5-7-9-lugares",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente BEV E-Tourneo/Gen-E/Mach-E; excluir PHEV e diesel."
+      },
+      "implementationStatus": {
+        "slug": "ford-e-tourneo-courier",
+        "brand": "Ford",
+        "model": "E-Tourneo Courier",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/carros-familiares-5-7-9-lugares",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3663,6 +5322,19 @@
         "evidenceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/carros-familiares-5-7-9-lugares",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente BEV E-Tourneo/Gen-E/Mach-E; excluir PHEV e diesel."
+      },
+      "implementationStatus": {
+        "slug": "ford-e-tourneo-custom",
+        "brand": "Ford",
+        "model": "E-Tourneo Custom",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.ford.pt/experiencia-ford/ford-blog/carros-familiares-5-7-9-lugares",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3691,6 +5363,19 @@
         "evidenceUrl": "https://www.citroen.pt/transporte-pessoas.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente ë-/e- BEV; não Hybrid/diesel nem versões de carga."
+      },
+      "implementationStatus": {
+        "slug": "citroen-e-berlingo",
+        "brand": "Citroen",
+        "model": "e-Berlingo",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.citroen.pt/transporte-pessoas.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3719,6 +5404,19 @@
         "evidenceUrl": "https://www.citroen.pt/transporte-pessoas.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente ë-/e- BEV; não Hybrid/diesel nem versões de carga."
+      },
+      "implementationStatus": {
+        "slug": "citroen-e-spacetourer",
+        "brand": "Citroen",
+        "model": "e-SpaceTourer",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.citroen.pt/transporte-pessoas.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3747,6 +5445,19 @@
         "evidenceUrl": "https://www.peugeot.pt/apos-venda/peugeot-care.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      },
+      "implementationStatus": {
+        "slug": "peugeot-e-rifter",
+        "brand": "Peugeot",
+        "model": "E-Rifter",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.peugeot.pt/apos-venda/peugeot-care.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3775,6 +5486,19 @@
         "evidenceUrl": "https://www.peugeot.pt/apos-venda/peugeot-care.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E- BEV; não Hybrid/Plug-in Hybrid nem versões diesel de passageiros."
+      },
+      "implementationStatus": {
+        "slug": "peugeot-e-traveller",
+        "brand": "Peugeot",
+        "model": "E-Traveller",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.peugeot.pt/apos-venda/peugeot-care.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3803,6 +5527,19 @@
         "evidenceUrl": "https://rede.opel.pt/stellantisandyouportugal/veiculos/carros-passageiros-novos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      },
+      "implementationStatus": {
+        "slug": "opel-combo-electric",
+        "brand": "Opel",
+        "model": "Combo Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://rede.opel.pt/stellantisandyouportugal/veiculos/carros-passageiros-novos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3831,6 +5568,19 @@
         "evidenceUrl": "https://rede.opel.pt/stellantisandyouportugal/veiculos/carros-passageiros-novos",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente Electric de passageiros; não Hybrid/PHEV/gasolina/diesel."
+      },
+      "implementationStatus": {
+        "slug": "opel-zafira-electric",
+        "brand": "Opel",
+        "model": "Zafira Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://rede.opel.pt/stellantisandyouportugal/veiculos/carros-passageiros-novos",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3859,6 +5609,19 @@
         "evidenceUrl": "https://www.toyota.pt/carros/proace-city-verso/features-and-specs.PF.epr.6b5fcb43-489d-41e8-89d6-f62a2570617d",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      },
+      "implementationStatus": {
+        "slug": "toyota-proace-city-verso-electric",
+        "brand": "Toyota",
+        "model": "Proace City Verso Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.toyota.pt/carros/proace-city-verso/features-and-specs.PF.epr.6b5fcb43-489d-41e8-89d6-f62a2570617d",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3887,6 +5650,19 @@
         "evidenceUrl": "https://www.toyota.pt/carros/proace-verso/configurador",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente BEV; rejeitar HEV/PHEV, Mirai FCEV e versões diesel de Proace."
+      },
+      "implementationStatus": {
+        "slug": "toyota-proace-verso-electric",
+        "brand": "Toyota",
+        "model": "Proace Verso Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.toyota.pt/carros/proace-verso/configurador",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3915,6 +5691,19 @@
         "evidenceUrl": "https://www.fiat.pt/professional/modelo/e-ulysse",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "500e/600e/Grande Panda elétrico/E-Ulysse BEV; não 500 Hybrid nem Grande Panda/600 híbridos."
+      },
+      "implementationStatus": {
+        "slug": "fiat-e-ulysse",
+        "brand": "Fiat",
+        "model": "E-Ulysse",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.fiat.pt/professional/modelo/e-ulysse",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     },
     {
@@ -3943,6 +5732,19 @@
         "evidenceUrl": "https://www.renault.pt/veiculos-passageiros/kangoo/configurador.html",
         "evidenceNote": "Designação do modelo ou variante elétrica na fonte oficial indicada; não se estende às restantes motorizações da família.",
         "restriction": "Somente E-Tech elétrico; E-Tech também pode identificar híbridos noutros modelos."
+      },
+      "implementationStatus": {
+        "slug": "renault-kangoo-e-tech-electric",
+        "brand": "Renault",
+        "model": "Kangoo E-Tech Electric",
+        "priority": 2,
+        "status": "family_created_pending_basic_data",
+        "publicTechnicalVersions": 0,
+        "publicVersionIds": [],
+        "modelUrl": null,
+        "sourceUrl": "https://www.renault.pt/veiculos-passageiros/kangoo/configurador.html",
+        "checkedAt": "2026-11-23",
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
       }
     }
   ],
@@ -4196,5 +5998,17 @@
       "sourceUrl": "https://www.toyota.pt/carros",
       "reason": "Gama nacional apresenta Hilux elétrico; não confundir com diesel/híbrido. Lote próprio de pick-ups se fizer sentido para o produto."
     }
-  ]
+  ],
+  "implementationProgress": {
+    "checkedAt": "2026-11-23",
+    "scope": "Only the 130 new BEV candidates from the expansion research; excludes the pre-existing catalog and earlier Leapmotor additions.",
+    "source": "https://www.motorzero.pt/api/models/all",
+    "newCandidateModels": 130,
+    "publishedWithBasicData": 9,
+    "publicTechnicalVersionsForNewModels": 12,
+    "familiesPendingBasicData": 121,
+    "pendingPriority1": 26,
+    "pendingPriority2": 95,
+    "statusDocument": "docs/MODEL_EXPANSION_STATUS.md"
+  }
 }
