@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-11-23",
-  "status": "prepared_for_publication",
+  "status": "published_basic_data",
   "batch": "batch-03",
   "modelCount": 8,
   "technicalVersionCount": 17,
@@ -302,5 +302,20 @@
       "path": "/cars/nio-et5.webp",
       "sha256": "3f78088a4930a04a5b7d9972737e27525a58f812072bdf51bb68e447a87ba9a1"
     }
-  ]
+  ],
+  "publication": {
+    "commit": "352cb831c92be1c0f068cf74a3d41162382125a2",
+    "deploymentId": "dpl_8CQDkrehSd8V5Xv4gBSTEqiAzpgw",
+    "state": "READY",
+    "publicModels": 89,
+    "publicTechnicalVersions": 123,
+    "sourceRecords": 128,
+    "newModels": 8,
+    "newTechnicalVersions": 17,
+    "previousRecordsUnchanged": 111,
+    "pagesVerified": 25,
+    "imagesVerified": 8,
+    "testsPassed": 71,
+    "productionBuildPassed": true
+  }
 }

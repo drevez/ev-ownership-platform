@@ -1580,7 +1580,7 @@
       "name": "MG4 EV",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.mgmotor.eu/pt-PT",
       "excludedPowertrains": [
         "HEV",
@@ -1631,12 +1631,28 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 3,
+        "publicVersionIds": [
+          "mg-mg4-ev-rwd-64kwh",
+          "mg-mg4-ev-rwd-77kwh",
+          "mg-mg4-ev-awd-64kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/mg-mg4-ev",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "mg-mg4-ev-rwd-64kwh",
+        "mg-mg4-ev-rwd-77kwh",
+        "mg-mg4-ev-awd-64kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_03_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-03-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 3
       }
     },
     {
@@ -1645,7 +1661,7 @@
       "name": "MGS5 EV",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.mgmotor.eu/pt-PT",
       "excludedPowertrains": [
         "HEV",
@@ -1696,12 +1712,26 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "mg-mgs5-ev-49kwh",
+          "mg-mgs5-ev-64kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/mg-mgs5-ev",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "mg-mgs5-ev-49kwh",
+        "mg-mgs5-ev-64kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_03_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-03-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 2
       }
     },
     {
@@ -1710,7 +1740,7 @@
       "name": "MGS6 EV",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.mgmotor.eu/pt-PT",
       "excludedPowertrains": [
         "HEV",
@@ -1761,12 +1791,26 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "mg-mgs6-ev-rwd-77kwh",
+          "mg-mgs6-ev-awd-77kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/mg-mgs6-ev",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "mg-mgs6-ev-rwd-77kwh",
+        "mg-mgs6-ev-awd-77kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_03_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-03-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 2
       }
     },
     {
@@ -1775,7 +1819,7 @@
       "name": "Cyberster",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.mgmotor.eu/pt-PT",
       "excludedPowertrains": [
         "HEV",
@@ -1813,12 +1857,24 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "mg-cyberster-rwd-77kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/mg-cyberster",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "mg-cyberster-rwd-77kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_03_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-03-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 1
       }
     },
     {
@@ -1827,7 +1883,7 @@
       "name": "ET5",
       "powertrain": "BEV",
       "priority": 2,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://nio-portugal.pt/",
       "excludedPowertrains": [
         "HEV",
@@ -1878,12 +1934,26 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "nio-et5-awd-75kwh",
+          "nio-et5-awd-100kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/nio-et5",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "nio-et5-awd-75kwh",
+        "nio-et5-awd-100kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_03_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-03-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 2
       }
     },
     {
@@ -1892,7 +1962,7 @@
       "name": "G9",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.xpeng-auto.pt/",
       "excludedPowertrains": [
         "HEV",
@@ -1943,12 +2013,28 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 3,
+        "publicVersionIds": [
+          "xpeng-g9-rwd-79kwh",
+          "xpeng-g9-rwd-93-1kwh",
+          "xpeng-g9-awd-93-1kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/xpeng-g9",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "xpeng-g9-rwd-79kwh",
+        "xpeng-g9-rwd-93-1kwh",
+        "xpeng-g9-awd-93-1kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_03_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-03-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 3
       }
     },
     {
@@ -1957,7 +2043,7 @@
       "name": "P7+",
       "powertrain": "BEV",
       "priority": 1,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.xpeng-auto.pt/",
       "excludedPowertrains": [
         "HEV",
@@ -2008,12 +2094,28 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 3,
+        "publicVersionIds": [
+          "xpeng-p7-plus-rwd-61-7kwh",
+          "xpeng-p7-plus-rwd-74-9kwh",
+          "xpeng-p7-plus-awd-74-9kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/xpeng-p7-plus",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "xpeng-p7-plus-rwd-61-7kwh",
+        "xpeng-p7-plus-rwd-74-9kwh",
+        "xpeng-p7-plus-awd-74-9kwh"
+      ],
+      "publicationDocumentation": "docs/BATCH_03_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-03-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 3
       }
     },
     {
@@ -2022,7 +2124,7 @@
       "name": "L03 EV",
       "powertrain": "BEV",
       "priority": 2,
-      "recordStatus": "created_without_variants",
+      "recordStatus": "published_basic_data",
       "modelEvidenceUrl": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
       "excludedPowertrains": [
         "HEV",
@@ -2073,12 +2175,24 @@
         "validação dos módulos e importação dedicada"
       ],
       "basicDataPublication": {
-        "status": "family_created_pending_basic_data",
+        "status": "published_basic_data",
         "checkedAt": "2026-11-23",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "xpeng-l03-ev-rwd-standard-range"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/xpeng-l03-ev",
         "complete": false
+      },
+      "publishedVariantIds": [
+        "xpeng-l03-ev-rwd-standard-range"
+      ],
+      "publicationDocumentation": "docs/BATCH_03_PUBLICATION.md",
+      "researchBatch": {
+        "path": "data/internal/model-expansion-batch-03-2026-11-23.json",
+        "reviewedAt": "2026-11-23",
+        "status": "published_basic_data",
+        "publishedVersions": 1
       }
     },
     {
@@ -8818,26 +8932,26 @@
   },
   "latestPublication": {
     "date": "2026-11-23",
-    "modelsPublishedFromPlan": 14,
-    "variantsPublishedFromPlan": 25,
-    "totalPublicModels": 81,
-    "totalPublicVariants": 106,
-    "remainingFamiliesWithoutVariants": 116,
-    "documentation": "docs/BATCH_02_PUBLICATION.md",
-    "publicTechnicalVersionsFromPlan": 20,
+    "modelsPublishedFromPlan": 22,
+    "variantsPublishedFromPlan": 42,
+    "totalPublicModels": 89,
+    "totalPublicVariants": 123,
+    "remainingFamiliesWithoutVariants": 108,
+    "documentation": "docs/BATCH_03_PUBLICATION.md",
+    "publicTechnicalVersionsFromPlan": 37,
     "presentationCorrection": "Equipment trims grouped into technical versions; source records and historical execution counts retained.",
-    "sourceConfigurationRecordsFromPlan": 25
+    "sourceConfigurationRecordsFromPlan": 42
   },
   "implementationProgress": {
     "checkedAt": "2026-11-23",
     "scope": "Only the 130 new BEV candidates from the expansion research; excludes the pre-existing catalog and earlier Leapmotor additions.",
     "source": "https://www.motorzero.pt/api/models/all",
     "newCandidateModels": 130,
-    "publishedWithBasicData": 14,
-    "publicTechnicalVersionsForNewModels": 20,
-    "familiesPendingBasicData": 116,
-    "pendingPriority1": 21,
-    "pendingPriority2": 95,
+    "publishedWithBasicData": 22,
+    "publicTechnicalVersionsForNewModels": 37,
+    "familiesPendingBasicData": 108,
+    "pendingPriority1": 15,
+    "pendingPriority2": 93,
     "statusDocument": "docs/MODEL_EXPANSION_STATUS.md"
   }
 }

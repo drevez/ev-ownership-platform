@@ -1,6 +1,6 @@
 # Modelos a adicionar ao MotorZero — 22/11/2026
 
-**Estado atualizado em 23/11/2026 — apenas os modelos novos:** [lista de acompanhamento](MODEL_EXPANSION_STATUS.md). Dos 130 candidatos, **14 já estão colocados com dados básicos**, em **20 versões técnicas públicas**; **116** continuam por colocar. Os acabamentos equivalentes estão agrupados. Abaixo conserva-se o levantamento original e a fotografia do catálogo antes das importações.
+**Estado atualizado em 23/11/2026 — apenas os modelos novos:** [lista de acompanhamento](MODEL_EXPANSION_STATUS.md). Dos 130 candidatos, **22 já estão colocados com dados básicos**, em **37 versões técnicas públicas**; **108** continuam por colocar. Os acabamentos equivalentes estão agrupados. Abaixo conserva-se o levantamento original e a fotografia do catálogo antes das importações.
 
 O catálogo público consultado tem **67 grupos de modelo e 86 versões**. O levantamento identifica **130 candidatos ausentes** (incluindo carroçarias e novas gerações), dos quais **29 em marcas chinesas/SAIC**, além de uma lista de acompanhamento. Não é um censo exaustivo do mercado nem uma lista pronta para importação: confirma presença em gamas/ofertas oficiais, mas falta recolher versões, preços e especificações de cada configuração. Nenhum registo foi adicionado ao Supabase nesta fase.
 
@@ -171,4 +171,4 @@ O ficheiro [model-expansion-research-2026-11-22.json](../data/internal/model-exp
 
 Em 22/11/2026, por instrução do utilizador, foram criadas as 130 famílias de modelo no Supabase, inicialmente sem variantes ou ofertas novas. Naquela fase, o catálogo público mantinha as 86 versões existentes. A proposta de versões e a verificação da criação encontram-se em [MODEL_VERSION_PLAN.md](MODEL_VERSION_PLAN.md). As afirmações anteriores sobre ausência de escritas referem-se à fase de pesquisa.
 
-Após as publicações e o agrupamento de acabamentos, o estado dos novos modelos é acompanhado em [MODEL_EXPANSION_STATUS.md](MODEL_EXPANSION_STATUS.md), verificado em 23/11/2026: 14 modelos com dados básicos e 116 famílias ainda sem ficha pública. Esta atualização de acompanhamento não altera dados dos carros.
+Após as publicações e o agrupamento de acabamentos, o estado dos novos modelos é acompanhado em [MODEL_EXPANSION_STATUS.md](MODEL_EXPANSION_STATUS.md), verificado em 23/11/2026: 22 modelos com dados básicos e 108 famílias ainda sem ficha pública. Esta atualização de acompanhamento não altera dados dos carros.

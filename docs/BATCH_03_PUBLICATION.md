@@ -42,3 +42,13 @@ Dossiê: [registo estruturado](../data/internal/model-expansion-batch-03-2026-11
 Antes: 81 modelos / 106 versões públicas, 111 registos de origem. Esperado: **89 modelos / 123 versões públicas, 128 registos de origem**. Snapshot anterior guardado para provar que as edições anteriores não são alteradas. Importar apenas depois de publicar as fotografias e verificar o deployment.
 
 No levantamento dos 130 novos: esperado **22 modelos colocados / 37 versões técnicas; 108 modelos pendentes**. Ver [fila de batches](MODEL_EXPANSION_BATCHES.md).
+
+### Resultado verificado
+
+- Commit de assets/payload `352cb831c92be1c0f068cf74a3d41162382125a2`; deployment Vercel `dpl_8CQDkrehSd8V5Xv4gBSTEqiAzpgw` READY, com os domínios MotorZero atribuídos.
+- 17 adições importadas em modo idempotente. Documentos remotos correspondem ao payload canónico.
+- Os 111 registos anteriores, incluindo revisões e edições do painel, permanecem integralmente iguais ao snapshot anterior.
+- APIs públicas: **89 modelos / 123 versões técnicas**. Supabase: **128 registos de origem**.
+- Oito páginas de modelo e 17 fichas respondem HTTP 200 e apresentam título; oito imagens em produção correspondem byte a byte aos assets revistos.
+- 71 testes passaram, build de produção e whitespace passaram. Sem alteração de esquema ou permissões.
+- Levantamento atualizado: **22 de 130 modelos colocados, 37 versões técnicas; 108 modelos pendentes**. Batch 4 (Zeekr/Voyah) passa a próximo, sujeito a nova validação BEV e comercial.

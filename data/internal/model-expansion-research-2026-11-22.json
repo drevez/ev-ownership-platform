@@ -1503,13 +1503,27 @@
         "brand": "MG",
         "model": "MG4 EV",
         "priority": 1,
-        "status": "family_created_pending_basic_data",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 3,
+        "publicVersionIds": [
+          "mg-mg4-ev-rwd-64kwh",
+          "mg-mg4-ev-rwd-77kwh",
+          "mg-mg4-ev-awd-64kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/mg-mg4-ev",
         "sourceUrl": "https://www.mgmotor.eu/pt-PT",
         "checkedAt": "2026-11-23",
-        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -1545,13 +1559,26 @@
         "brand": "MG",
         "model": "MGS5 EV",
         "priority": 1,
-        "status": "family_created_pending_basic_data",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "mg-mgs5-ev-49kwh",
+          "mg-mgs5-ev-64kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/mg-mgs5-ev",
         "sourceUrl": "https://www.mgmotor.eu/pt-PT",
         "checkedAt": "2026-11-23",
-        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -1587,13 +1614,26 @@
         "brand": "MG",
         "model": "MGS6 EV",
         "priority": 1,
-        "status": "family_created_pending_basic_data",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "mg-mgs6-ev-rwd-77kwh",
+          "mg-mgs6-ev-awd-77kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/mg-mgs6-ev",
         "sourceUrl": "https://www.mgmotor.eu/pt-PT",
         "checkedAt": "2026-11-23",
-        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -1629,13 +1669,26 @@
         "brand": "MG",
         "model": "Cyberster",
         "priority": 1,
-        "status": "family_created_pending_basic_data",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "mg-cyberster-rwd-77kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/mg-cyberster",
         "sourceUrl": "https://www.mgmotor.eu/pt-PT",
         "checkedAt": "2026-11-23",
-        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": false,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "charging",
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -1670,13 +1723,27 @@
         "brand": "NIO",
         "model": "ET5",
         "priority": 2,
-        "status": "family_created_pending_basic_data",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 2,
+        "publicVersionIds": [
+          "nio-et5-awd-75kwh",
+          "nio-et5-awd-100kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/nio-et5",
         "sourceUrl": "https://nio-portugal.pt/",
         "checkedAt": "2026-11-23",
-        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": false,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "charging",
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -1711,13 +1778,27 @@
         "brand": "XPeng",
         "model": "G9",
         "priority": 1,
-        "status": "family_created_pending_basic_data",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 3,
+        "publicVersionIds": [
+          "xpeng-g9-rwd-79kwh",
+          "xpeng-g9-rwd-93-1kwh",
+          "xpeng-g9-awd-93-1kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/xpeng-g9",
         "sourceUrl": "https://www.xpeng-auto.pt/",
         "checkedAt": "2026-11-23",
-        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -1752,13 +1833,27 @@
         "brand": "XPeng",
         "model": "P7+",
         "priority": 1,
-        "status": "family_created_pending_basic_data",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 3,
+        "publicVersionIds": [
+          "xpeng-p7-plus-rwd-61-7kwh",
+          "xpeng-p7-plus-rwd-74-9kwh",
+          "xpeng-p7-plus-awd-74-9kwh"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/xpeng-p7-plus",
         "sourceUrl": "https://www.xpeng-auto.pt/",
         "checkedAt": "2026-11-23",
-        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": true,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -1800,13 +1895,26 @@
         "brand": "XPeng",
         "model": "L03 EV",
         "priority": 2,
-        "status": "family_created_pending_basic_data",
-        "publicTechnicalVersions": 0,
-        "publicVersionIds": [],
-        "modelUrl": null,
+        "status": "published_basic_data",
+        "publicTechnicalVersions": 1,
+        "publicVersionIds": [
+          "xpeng-l03-ev-rwd-standard-range"
+        ],
+        "modelUrl": "https://www.motorzero.pt/pt/modelos/xpeng-l03-ev",
         "sourceUrl": "https://www.xpeng-auto.pt/campanhas/particulares/l03-ev",
         "checkedAt": "2026-11-23",
-        "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+        "completionClaim": "Initial basic publication only; full technical/source completeness not certified.",
+        "publishedBasics": {
+          "photo": true,
+          "wltp": true,
+          "dcCharging": false,
+          "atLeastOnePrice": true
+        },
+        "remainingPublicMissingFields": [
+          "charging",
+          "battery"
+        ],
+        "versionsWithoutPrice": []
       }
     },
     {
@@ -6071,11 +6179,11 @@
     "scope": "Only the 130 new BEV candidates from the expansion research; excludes the pre-existing catalog and earlier Leapmotor additions.",
     "source": "https://www.motorzero.pt/api/models/all",
     "newCandidateModels": 130,
-    "publishedWithBasicData": 14,
-    "publicTechnicalVersionsForNewModels": 20,
-    "familiesPendingBasicData": 116,
-    "pendingPriority1": 21,
-    "pendingPriority2": 95,
+    "publishedWithBasicData": 22,
+    "publicTechnicalVersionsForNewModels": 37,
+    "familiesPendingBasicData": 108,
+    "pendingPriority1": 15,
+    "pendingPriority2": 93,
     "statusDocument": "docs/MODEL_EXPANSION_STATUS.md"
   }
 }

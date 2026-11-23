@@ -2,8 +2,8 @@
 
 Apenas os **130 modelos novos** do levantamento BEV. Verificado contra o catálogo público em 23/11/2026. Os carros anteriores e as adições Leapmotor anteriores a este levantamento ficam fora desta lista.
 
-- **14 modelos colocados com dados básicos**, com **20 versões técnicas públicas**.
-- **116 famílias criadas, ainda sem dados básicos publicados** (21 P1 / 95 P2).
+- **22 modelos colocados com dados básicos**, com **37 versões técnicas públicas**.
+- **108 famílias criadas, ainda sem dados básicos publicados** (15 P1 / 93 P2).
 - `[x]` significa publicação inicial com dados básicos; não significa ficha completa ou todos os valores confirmados. Acabamentos equivalentes não contam como versões técnicas distintas.
 
 ## Já colocados com dados básicos
@@ -12,24 +12,32 @@ Apenas os **130 modelos novos** do levantamento BEV. Verificado contra o catálo
 | --- | --- | ---: | --- |
 | [x] | [Aion UT](https://www.motorzero.pt/pt/modelos/aion-ut) | 1 | Capacidade útil/bruta por confirmar; acabamentos agrupados. |
 | [x] | [Aion V](https://www.motorzero.pt/pt/modelos/aion-v) | 1 | Capacidade útil/bruta e AC; preço Luxury por confirmar. |
-| [x] | [BYD ATTO 2](https://www.motorzero.pt/pt/modelos/byd-atto-2) | 1 | Capacidade útil/bruta; só Comfort 64,8 kWh confirmada na oferta atual. |
-| [x] | [BYD SEAL U](https://www.motorzero.pt/pt/modelos/byd-seal-u) | 2 | Preço Comfort e AC pendentes; excluir DM-i. |
-| [x] | [BYD SEALION 7](https://www.motorzero.pt/pt/modelos/byd-sealion-7) | 2 | Capacidade útil/bruta por confirmar; RWD/AWD com baterias distintas. |
+| [x] | [BYD ATTO 2](https://www.motorzero.pt/pt/modelos/byd-atto-2) | 1 | Capacidade útil/bruta; antigas versões 45,1 por validar. |
+| [x] | [BYD SEAL U](https://www.motorzero.pt/pt/modelos/byd-seal-u) | 2 | Preço 71,8 e AC; apenas BEV. |
+| [x] | [BYD SEALION 7](https://www.motorzero.pt/pt/modelos/byd-sealion-7) | 2 | Capacidade útil/bruta; Design AWD 82,5 fora da oferta PT confirmada. |
 | [x] | [Changan Deepal S05](https://www.motorzero.pt/pt/modelos/changan-deepal-s05) | 2 | Capacidade útil/bruta e método dos volumes; RWD/AWD separados. |
 | [x] | [Changan Deepal S07](https://www.motorzero.pt/pt/modelos/changan-deepal-s07) | 2 | Preço da revisão LFP e volumes/medidas correspondentes; revisões técnicas separadas. |
 | [x] | [Dongfeng BOX](https://www.motorzero.pt/pt/modelos/dongfeng-box) | 1 | Capacidade útil/bruta e medidas em conflito; PRO ainda candidato. |
 | [x] | [Dongfeng VIGO](https://www.motorzero.pt/pt/modelos/dongfeng-vigo) | 1 | Capacidade útil/bruta e AC; validade da campanha até 30/11. |
 | [x] | [Firefly](https://www.motorzero.pt/pt/modelos/firefly-firefly) | 1 | Publicado como Firefly; autonomia e consumo reais continuam por confirmar. |
-| [x] | [Forthing Friday EV](https://www.motorzero.pt/pt/modelos/forthing-friday-ev) | 2 | Distinguir capacidade útil/bruta e picos DC; AC da bateria menor pendente. |
-| [x] | [Forthing S7 EV](https://www.motorzero.pt/pt/modelos/forthing-s7-ev) | 1 | Capacidade útil/bruta e tempo 10–80 por confirmar; campanha até 30/11. |
+| [x] | [Forthing Friday EV](https://www.motorzero.pt/pt/modelos/forthing-friday-ev) | 2 | AC/DC da revisão 64,4 e pico DC 85,9; capacidade útil/bruta. |
+| [x] | [Forthing S7 EV](https://www.motorzero.pt/pt/modelos/forthing-s7-ev) | 1 | Capacidade útil/bruta e método dos volumes; campanha até 30/11. |
 | [x] | [Geely E2](https://www.motorzero.pt/pt/modelos/geely-e2) | 2 | Capacidade útil/bruta e intervalo de carga; MAX/ULTRA agrupados. |
 | [x] | [Geely E5](https://www.motorzero.pt/pt/modelos/geely-e5) | 1 | Capacidade útil/bruta e AC; WLTP 430/410 km por acabamento preservado. |
+| [x] | [MG Cyberster](https://www.motorzero.pt/pt/modelos/mg-cyberster) | 1 | Pico DC e oferta/preço Dual Motor; apenas RWD inicialmente. |
+| [x] | [MG MG4 EV](https://www.motorzero.pt/pt/modelos/mg-mg4-ev) | 3 | Capacidade útil/bruta; 140 kW no RWD 64 segundo marca. |
+| [x] | [MG MGS5 EV](https://www.motorzero.pt/pt/modelos/mg-mgs5-ev) | 2 | Comfort 64 a 480 km; Luxury como acabamento, 465 km/bomba de calor. |
+| [x] | [MG MGS6 EV](https://www.motorzero.pt/pt/modelos/mg-mgs6-ev) | 2 | Capacidade útil/bruta e método de volume do frunk. |
+| [x] | [XPeng G9](https://www.motorzero.pt/pt/modelos/xpeng-g9) | 3 | AC, química e bruto/útil; AWD 540 km segundo marca. |
+| [x] | [XPeng P7+](https://www.motorzero.pt/pt/modelos/xpeng-p7-plus) | 3 | AC e bruto/útil das versões 74,9; distinto do P7. |
+| [x] | [NIO ET5](https://www.motorzero.pt/pt/modelos/nio-et5) | 2 | Pico DC/revisão de bateria e bruto/útil; sedan, sem BaaS. |
+| [x] | [XPeng L03 EV](https://www.motorzero.pt/pt/modelos/xpeng-l03-ev) | 1 | Potência, AC/DC e bruto/útil em conflito; LR/AWD por validar. |
 
 ## Ainda por colocar com dados básicos
 
 As famílias já existem no Supabase. Falta preparar as versões técnicas reais, os dados e as ofertas correspondentes; a existência da família não equivale a uma ficha pública. As fontes abaixo são as referências do levantamento original, sem nova verificação comercial nesta atualização.
 
-### P1 — 21 modelos
+### P1 — 15 modelos
 
 - [ ] **Cupra Raval** — [referência do levantamento](https://www.cupraofficial.pt/cupra-raval/cupra-raval)
 - [ ] **Dacia Spring** — [referência do levantamento](https://www.dacia.pt/gama-hibrida-eletrica/spring-citadino/configurador.html)
@@ -40,20 +48,14 @@ As famílias já existem no Supabase. Falta preparar as versões técnicas reais
 - [ ] **Kia EV2** — [referência do levantamento](https://m.kia.pt/configurador/)
 - [ ] **Kia EV4** — [referência do levantamento](https://m.kia.pt/configurador/)
 - [ ] **Kia EV4 Fastback** — [referência do levantamento](https://m.kia.pt/configurador/)
-- [ ] **MG Cyberster** — [referência do levantamento](https://www.mgmotor.eu/pt-PT)
-- [ ] **MG MG4 EV** — [referência do levantamento](https://www.mgmotor.eu/pt-PT)
-- [ ] **MG MGS5 EV** — [referência do levantamento](https://www.mgmotor.eu/pt-PT)
-- [ ] **MG MGS6 EV** — [referência do levantamento](https://www.mgmotor.eu/pt-PT)
 - [ ] **Nissan Micra** — [referência do levantamento](https://configurador.nissan.pt/)
 - [ ] **Opel Corsa Electric** — [referência do levantamento](https://www.opel.pt/)
 - [ ] **Renault 4 E-Tech** — [referência do levantamento](https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4)
 - [ ] **Renault Twingo E-Tech** — [referência do levantamento](https://www.renault.pt/veiculos-eletricos.html?gradeCode=ENS_MDL2P1SERIELIM4)
 - [ ] **Skoda Epiq** — [referência do levantamento](https://www.skoda.pt/models/overview)
 - [ ] **Volkswagen ID. Polo** — [referência do levantamento](https://www.volkswagen.pt/eletricos/eletricos)
-- [ ] **XPeng G9** — [referência do levantamento](https://www.xpeng-auto.pt/)
-- [ ] **XPeng P7+** — [referência do levantamento](https://www.xpeng-auto.pt/)
 
-### P2 — 95 modelos
+### P2 — 93 modelos
 
 - [ ] **Abarth 500e** — [referência do levantamento](https://www.abarth.pt/)
 - [ ] **Abarth 600e** — [referência do levantamento](https://www.abarth.pt/)
@@ -108,7 +110,6 @@ As famílias já existem no Supabase. Falta preparar as versões técnicas reais
 - [ ] **Mercedes-Benz GLC Electric** — [referência do levantamento](https://www.mercedes-benz.pt/passengercars/models/electric.html)
 - [ ] **MINI Aceman** — [referência do levantamento](https://www.mini.pt/pt_PT/home.html)
 - [ ] **Mitsubishi Eclipse Cross EV** — [referência do levantamento](https://www.mitsubishi-motors.pt/novo-eclipse-cross-ev)
-- [ ] **NIO ET5** — [referência do levantamento](https://nio-portugal.pt/)
 - [ ] **Opel Astra Electric** — [referência do levantamento](https://www.opel.pt/)
 - [ ] **Opel Astra Sports Tourer Electric** — [referência do levantamento](https://www.opel.pt/)
 - [ ] **Opel Combo Electric** — [referência do levantamento](https://rede.opel.pt/stellantisandyouportugal/veiculos/carros-passageiros-novos)
@@ -145,7 +146,6 @@ As famílias já existem no Supabase. Falta preparar as versões técnicas reais
 - [ ] **Voyah Courage** — [referência do levantamento](https://caetano.pt/voyah/)
 - [ ] **Voyah Dream** — [referência do levantamento](https://caetano.pt/voyah/)
 - [ ] **Voyah Free** — [referência do levantamento](https://caetano.pt/voyah/)
-- [ ] **XPeng L03 EV** — [referência do levantamento](https://www.xpeng-auto.pt/campanhas/particulares/l03-ev)
 - [ ] **Zeekr 001** — [referência do levantamento](https://configurador.zeekr.pt/)
 - [ ] **Zeekr 7GT** — [referência do levantamento](https://configurador.zeekr.pt/)
 - [ ] **Zeekr 7X** — [referência do levantamento](https://configurador.zeekr.pt/)
@@ -153,12 +153,12 @@ As famílias já existem no Supabase. Falta preparar as versões técnicas reais
 
 ## Registos relacionados
 
-- [Fila de batches e próximo lote](MODEL_EXPANSION_BATCHES.md).
-
 - [Levantamento original e enquadramento](MODEL_EXPANSION_RESEARCH.md).
+- [Fila de execução por batches](MODEL_EXPANSION_BATCHES.md).
 - [Publicação do primeiro lote](BATCH_01_PUBLICATION.md).
 - [Publicação do segundo lote](BATCH_02_PUBLICATION.md).
+- [Publicação do terceiro lote](BATCH_03_PUBLICATION.md).
 - [Critério de versões técnicas e acabamentos](TECHNICAL_VERSIONS.md).
 - [Estado estruturado dos 130 modelos](../data/internal/model-expansion-status-2026-11-23.json).
 
-Esta atualização altera apenas a lista e o acompanhamento. Não cria ou modifica carros, preços ou especificações no Supabase.
+Esta lista reflete as importações verificadas dos batches 1–3. Publicação inicial não certifica ficha completa; as pendências continuam registadas nos dossiês.

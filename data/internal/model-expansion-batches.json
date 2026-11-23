@@ -2,8 +2,8 @@
   "updatedAt": "2026-11-23",
   "scope": "Only the 130 new BEV candidates",
   "rule": "Only significant technical differences create public versions; pending batches require new source validation and may be split.",
-  "publishedModels": 14,
-  "pendingModels": 116,
+  "publishedModels": 22,
+  "pendingModels": 108,
   "batches": [
     {
       "id": "batch-01",
@@ -35,7 +35,7 @@
     },
     {
       "id": "batch-03",
-      "status": "next_pending_research",
+      "status": "published_basic_data",
       "models": [
         "mg-mg4-ev",
         "mg-mgs5-ev",
@@ -45,11 +45,12 @@
         "xpeng-p7-plus",
         "xpeng-l03-ev",
         "nio-et5"
-      ]
+      ],
+      "publicTechnicalVersions": 17
     },
     {
       "id": "batch-04",
-      "status": "pending_research",
+      "status": "next_pending_research",
       "models": [
         "zeekr-x",
         "zeekr-001",
