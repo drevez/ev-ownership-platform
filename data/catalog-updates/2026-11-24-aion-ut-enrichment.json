@@ -1,0 +1,132 @@
+{
+  "reviewedAt": "2026-11-24",
+  "operation": "update",
+  "expectedRevision": 4,
+  "records": [
+    {
+      "id": "aion-ut-60kwh",
+      "files": {
+        "core": {
+          "id": "aion-ut-60kwh",
+          "brand": "Aion",
+          "image": "/cars/aion-ut.webp",
+          "model": "UT",
+          "variant": "60 kWh",
+          "bodyType": "Hatchback",
+          "drivetrain": "FWD",
+          "motorPowerKW": 150,
+          "doors": 5,
+          "seats": 5
+        },
+        "battery": {
+          "batteryChemistry": "LFP",
+          "batteryGrossKWh": 62,
+          "batteryUsableKWh": 60
+        },
+        "comfort": {
+          "heatPumpAvailable": true,
+          "vehicleToLoad": true,
+          "panoramicRoof": false
+        },
+        "pricing": {
+          "market": "pt",
+          "offers": [
+            {
+              "notes": "PVP de tabela com impostos, reconfirmado em 23/11/2026. Sem pintura, opções, transporte, matrícula ou averbamento. A configuração comercial Premium Green não foi tratada como versão mecânica adicional.",
+              "status": "available",
+              "priceTo": null,
+              "condition": "new",
+              "priceDate": "2026-11",
+              "priceFrom": 29003.3,
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/aion/ut/precos",
+              "confidence": "medium",
+              "sourceType": "manual",
+              "includesVat": true,
+              "marketScope": "official_pt",
+              "sourceLabel": "PVP de tabela — Guia do Automóvel",
+              "displayPriority": 1
+            }
+          ],
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 87,
+          "acThreePhaseKW": 11,
+          "charge10to80Min": 32
+        },
+        "dimensions": {
+          "widthMM": 1850,
+          "heightMM": 1575,
+          "lengthMM": 4270,
+          "cargoLitersSeatsUp": 440,
+          "wheelbaseMM": 2750,
+          "cargoLitersSeatsDown": 1600
+        },
+        "efficiency": {
+          "wltpRangeKm": 430,
+          "estimatedRealRangeKm": 330,
+          "realWorldConsumptionWhKm": 182
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.gacgroup.com/en-eu/configuration/AION%20UT/2024",
+      "type": "official_manufacturer_europe",
+      "fields": [
+        "battery.batteryGrossKWh",
+        "battery.batteryUsableKWh",
+        "charging.acThreePhaseKW",
+        "charging.charge10to80Min",
+        "comfort.heatPumpAvailable",
+        "comfort.vehicleToLoad",
+        "comfort.panoramicRoof",
+        "core.seats",
+        "dimensions.wheelbaseMM",
+        "dimensions.cargoLitersSeatsDown"
+      ],
+      "notes": "Premium column selected: no panoramic roof. 62 gross/60 net explicit;32min10–80 differs24min30–80. Cargo440/1600 official European volume method; do not mix Australia321/689 block method."
+    },
+    {
+      "url": "https://www.guiadoautomovel.pt/marcas/aion/ut/precos",
+      "type": "portugal_reference",
+      "fields": [
+        "core.doors"
+      ],
+      "notes": "PT Premium five-door, five-seat row corroborates identity and unchanged150kW/430km. Price retained29003.30; no switch to a different commercial colour offer."
+    },
+    {
+      "url": "https://gac-portugal.pt/aion-ut/",
+      "type": "official_portugal",
+      "fields": [
+        "charging.acMaxChargeKW",
+        "charging.dcMaxChargeKW",
+        "dimensions.lengthMM",
+        "dimensions.widthMM",
+        "dimensions.heightMM",
+        "dimensions.cargoLitersSeatsUp"
+      ],
+      "notes": "Existing PT150kW,11AC/87DC,4270x1850x1575 and440L reconfirmed. Portuguese24min refers30–80, not10–80."
+    },
+    {
+      "url": "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh",
+      "type": "original_modelled_estimate",
+      "fields": [
+        "efficiency.estimatedRealRangeKm",
+        "efficiency.realWorldConsumptionWhKm"
+      ],
+      "notes": "EV Database estimates330km/182Whkm; not measured or homologated values. Road, climate and driving dependent. No highway figures transferred: source assumes110km/h whereas MotorZero field labels120km/h."
+    }
+  ],
+  "remaining": [
+    "120km/h motorway range and consumption not established; source110km/h not substituted.",
+    "Rear legroom and charging curve not established.",
+    "No invented insurance/maintenance/software scores.",
+    "Rated435.2V not assigned directly to voltageArchitecture; exact architecture class remains unfilled.",
+    "Frunk/V2G/PlugAndCharge unknown, not inferred false from omission.",
+    "WLTP consumption164Whkm retained in research only: schema real-world field must not receive WLTP."
+  ]
+}

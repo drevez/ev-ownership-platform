@@ -475,10 +475,14 @@
           "dcCharging": true,
           "atLeastOnePrice": true
         },
-        "remainingPublicMissingFields": [
-          "battery"
-        ],
-        "versionsWithoutPrice": []
+        "remainingPublicMissingFields": [],
+        "versionsWithoutPrice": [],
+        "latestDataReview": {
+          "date": "2026-11-24",
+          "revision": 5,
+          "documentation": "docs/AION_UT_DATA_REVIEW.md",
+          "remaining": "120 km/h motorway estimates, rear legroom, charging curve and other unverified optional fields."
+        }
       }
     },
     {

@@ -10,7 +10,7 @@ Apenas os **130 modelos novos** do levantamento BEV. Verificado contra o catálo
 
 | Colocado | Marca / modelo | Versões técnicas públicas | Pendências principais |
 | --- | --- | ---: | --- |
-| [x] | [Aion UT](https://www.motorzero.pt/pt/modelos/aion-ut) | 1 | Capacidade útil/bruta por confirmar; acabamentos agrupados. |
+| [x] | [Aion UT](https://www.motorzero.pt/pt/modelos/aion-ut) | 1 | Registo único; bateria, carga e equipamento revistos em 24/11. Falta autoestrada a 120 km/h. |
 | [x] | [Aion V](https://www.motorzero.pt/pt/modelos/aion-v) | 1 | Capacidade útil/bruta e AC; preço Luxury por confirmar. |
 | [x] | [BYD ATTO 2](https://www.motorzero.pt/pt/modelos/byd-atto-2) | 1 | Capacidade útil/bruta; antigas versões 45,1 por validar. |
 | [x] | [BYD SEAL U](https://www.motorzero.pt/pt/modelos/byd-seal-u) | 2 | Preço 71,8 e AC; apenas BEV. |
@@ -162,3 +162,5 @@ As famílias já existem no Supabase. Falta preparar as versões técnicas reais
 - [Estado estruturado dos 130 modelos](../data/internal/model-expansion-status-2026-11-23.json).
 
 Esta lista reflete as importações verificadas dos batches 1–3. Publicação inicial não certifica ficha completa; as pendências continuam registadas nos dossiês.
+
+- [Revisão dos dados Aion UT em 24/11/2026](AION_UT_DATA_REVIEW.md).
