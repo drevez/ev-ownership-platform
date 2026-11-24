@@ -18,7 +18,7 @@
       "status": "published_basic_data",
       "publicTechnicalVersions": 1,
       "publicVersionIds": [
-        "aion-ut-premium"
+        "aion-ut-60kwh"
       ],
       "modelUrl": "https://www.motorzero.pt/pt/modelos/aion-ut",
       "sourceUrl": "https://gac-portugal.pt/",
@@ -1986,6 +1986,15 @@
       "sourceUrl": "https://www.renault.pt/veiculos-passageiros/kangoo/configurador.html",
       "checkedAt": "2026-11-23",
       "completionClaim": "Initial basic publication only; full technical/source completeness not certified."
+    }
+  ],
+  "catalogCorrections": [
+    {
+      "date": "2026-11-24",
+      "model": "aion-ut",
+      "action": "Premium renamed aion-ut-60kwh; Luxury deleted; historical snapshots retained privately.",
+      "publicTechnicalVersions": 1,
+      "sourceRecordCountChange": -1
     }
   ]
 }

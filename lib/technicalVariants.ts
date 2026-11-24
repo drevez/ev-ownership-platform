@@ -2,12 +2,16 @@ import type { VehicleData } from '@/lib/loadVehicle'
 
 // Explicit editorial grouping. Never infer shared hardware from a similar name alone.
 export const TECHNICAL_GROUPS = [
-  { id: 'aion-ut-premium', variant: '60 kWh', members: ['aion-ut-premium', 'aion-ut-luxury'] },
   { id: 'aion-v-premium', variant: '75.3 kWh', members: ['aion-v-premium', 'aion-v-luxury'] },
   { id: 'geely-e2-max', variant: '47.14 kWh', members: ['geely-e2-max', 'geely-e2-ultra'] },
   { id: 'geely-e5-pro', variant: '60.22 kWh', members: ['geely-e5-pro', 'geely-e5-max'] },
   { id: 'changan-deepal-s05-rwd-pro', variant: 'RWD 68.8 kWh', members: ['changan-deepal-s05-rwd-pro', 'changan-deepal-s05-rwd-max'] },
 ] as const
+
+export const VEHICLE_ID_ALIASES: Record<string, string> = {
+  'aion-ut-premium': 'aion-ut-60kwh',
+  'aion-ut-luxury': 'aion-ut-60kwh',
+}
 
 const PUBLIC_LABELS: Record<string, string> = {
   'geely-e2-pro': '35.35 kWh',

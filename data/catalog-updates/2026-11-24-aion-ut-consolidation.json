@@ -1,0 +1,59 @@
+{
+  "reviewedAt": "2026-11-24",
+  "records": [
+    {
+      "id": "aion-ut-60kwh",
+      "files": {
+        "core": {
+          "id": "aion-ut-60kwh",
+          "brand": "Aion",
+          "image": "/cars/aion-ut.webp",
+          "model": "UT",
+          "variant": "60 kWh",
+          "bodyType": "Hatchback",
+          "drivetrain": "FWD",
+          "motorPowerKW": 150
+        },
+        "battery": {
+          "batteryChemistry": "LFP"
+        },
+        "comfort": {},
+        "pricing": {
+          "market": "pt",
+          "offers": [
+            {
+              "notes": "PVP de tabela com impostos, reconfirmado em 23/11/2026. Sem pintura, opções, transporte, matrícula ou averbamento. A configuração comercial Premium Green não foi tratada como versão mecânica adicional.",
+              "status": "available",
+              "priceTo": null,
+              "condition": "new",
+              "priceDate": "2026-11",
+              "priceFrom": 29003.3,
+              "sourceUrl": "https://www.guiadoautomovel.pt/marcas/aion/ut/precos",
+              "confidence": "medium",
+              "sourceType": "manual",
+              "includesVat": true,
+              "marketScope": "official_pt",
+              "sourceLabel": "PVP de tabela — Guia do Automóvel",
+              "displayPriority": 1
+            }
+          ],
+          "currency": "EUR",
+          "lastReviewedAt": "2026-11"
+        },
+        "charging": {
+          "acMaxChargeKW": 11,
+          "dcMaxChargeKW": 87
+        },
+        "dimensions": {
+          "widthMM": 1850,
+          "heightMM": 1575,
+          "lengthMM": 4270,
+          "cargoLitersSeatsUp": 440
+        },
+        "efficiency": {
+          "wltpRangeKm": 430
+        }
+      }
+    }
+  ]
+}

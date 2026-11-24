@@ -82,8 +82,7 @@
         "publishedVersions": 2
       },
       "publishedVariantIds": [
-        "aion-ut-premium",
-        "aion-ut-luxury"
+        "aion-ut-60kwh"
       ],
       "publicationDocumentation": "docs/BATCH_01_PUBLICATION.md",
       "basicDataPublication": {
@@ -91,7 +90,7 @@
         "checkedAt": "2026-11-23",
         "publicTechnicalVersions": 1,
         "publicVersionIds": [
-          "aion-ut-premium"
+          "aion-ut-60kwh"
         ],
         "modelUrl": "https://www.motorzero.pt/pt/modelos/aion-ut",
         "complete": false
@@ -8953,5 +8952,14 @@
     "pendingPriority1": 15,
     "pendingPriority2": 93,
     "statusDocument": "docs/MODEL_EXPANSION_STATUS.md"
-  }
+  },
+  "catalogCorrections": [
+    {
+      "date": "2026-11-24",
+      "model": "aion-ut",
+      "action": "Premium renamed aion-ut-60kwh; Luxury deleted; historical snapshots retained privately.",
+      "publicTechnicalVersions": 1,
+      "sourceRecordCountChange": -1
+    }
+  ]
 }

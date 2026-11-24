@@ -3,7 +3,7 @@ import type { VehicleFiles } from '@/lib/internalVehicleFiles'
 import fs from 'fs/promises'
 import path from 'path'
 import { VEHICLE_PLACEHOLDER_IMAGE } from '@/lib/vehicleImages'
-import { getTechnicalGroup, groupTechnicalVariants } from '@/lib/technicalVariants'
+import { getTechnicalGroup, groupTechnicalVariants, VEHICLE_ID_ALIASES } from '@/lib/technicalVariants'
 
 /**
  * Shared JSON object type
@@ -248,6 +248,12 @@ async function normalizeVehicleImage(
 export async function loadVehicle(
   vehicleId: string
 ): Promise<VehicleData | null> {
+  const canonicalId = VEHICLE_ID_ALIASES[vehicleId]
+  if (canonicalId) {
+    // Historical links resolve to the surviving record; fallback covers rollout order.
+    const canonical = await loadRawVehicle(canonicalId)
+    if (canonical) return canonical
+  }
   const group = getTechnicalGroup(vehicleId)
   if (group) {
     const members = await Promise.all(group.members.map(id => loadRawVehicle(id)))

@@ -6,7 +6,7 @@ Correção do lote publicado em 23/11: **16 registos de origem → 11 versões t
 
 | Modelo | Versões públicas | Acabamentos agrupados |
 | --- | --- | --- |
-| Aion UT | 60 kWh | Premium / Luxury |
+| Aion UT | 60 kWh (`aion-ut-60kwh`) | Registo único; Luxury removido em 24/11/2026 |
 | Aion V | 75,3 kWh | Premium / Luxury |
 | Geely E2 | 35,35 kWh; 47,14 kWh | MAX / ULTRA na bateria maior |
 | Geely E5 | 60,22 kWh | PRO / MAX |
@@ -24,3 +24,5 @@ A projeção é partilhada pelas listagens, pesquisa, comparação e recomendaç
 Não há eliminação, reimportação ou sobrescrita de dados no Supabase. Esta correção substitui a contagem pública original documentada em `BATCH_01_PUBLICATION.md`, mantendo esse documento como registo histórico da importação.
 
 Validação: testes de agrupamento, diferenças reais, preservação de dados/equipamento e divergências futuras; suite completa; lint; build; confirmação de contagens, links antigos e fichas em produção.
+
+Em 24/11/2026 o utilizador pediu a consolidação física do Aion UT: `aion-ut-premium` passou a `aion-ut-60kwh` e `aion-ut-luxury` foi removido. Dados/preço ativos são os do Premium; o histórico dos dois registos permanece privado. Os IDs antigos resolvem para o novo no site. Não reimportar o payload histórico do batch 1 como estado atual. Ver `data/catalog-updates/2026-11-24-aion-ut-consolidation.sql` e respetivo JSON canónico.

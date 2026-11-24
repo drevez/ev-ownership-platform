@@ -1,10 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import update from '@/data/catalog-updates/2026-11-23-expansion-batch-01.json'
-import { groupTechnicalVariants } from '@/lib/technicalVariants'
+import utUpdate from '@/data/catalog-updates/2026-11-24-aion-ut-consolidation.json'
+import { groupTechnicalVariants, VEHICLE_ID_ALIASES } from '@/lib/technicalVariants'
 import type { VehicleData } from '@/lib/loadVehicle'
 
 function vehicles(): VehicleData[] {
-  return update.records.map(({ files }) => ({ ...files.core, battery: files.battery, charging: files.charging, comfort: files.comfort, dimensions: files.dimensions, efficiency: files.efficiency, pricing: files.pricing }) as VehicleData)
+  return [...update.records.filter(r => !r.id.startsWith('aion-ut-')), ...utUpdate.records].map(({ files }) => ({ ...files.core, battery: files.battery, charging: files.charging, comfort: files.comfort, dimensions: files.dimensions, efficiency: files.efficiency, pricing: files.pricing }) as VehicleData)
 }
 
 describe('public technical versions', () => {
@@ -18,8 +19,11 @@ describe('public technical versions', () => {
     expect(ut).toHaveLength(1)
     expect(ut[0].variant).toBe('60 kWh')
     expect(ut[0].comfort?.panoramicRoof).toBeUndefined()
-    expect(ut[0].equipmentTrims?.map(t => t.pricing?.offers?.[0]?.priceFrom)).toEqual([29003.3, 31003.3])
-    expect(ut[0].equipmentTrims?.[1].comfort?.panoramicRoof).toBe(true)
+    expect(ut[0].id).toBe('aion-ut-60kwh')
+    expect(ut[0].equipmentTrims).toBeUndefined()
+    expect(ut[0].pricing?.offers?.[0]?.priceFrom).toBe(29003.3)
+    expect(VEHICLE_ID_ALIASES['aion-ut-premium']).toBe(ut[0].id)
+    expect(VEHICLE_ID_ALIASES['aion-ut-luxury']).toBe(ut[0].id)
   })
 
   it('preserves genuine battery, motor and drivetrain differences', () => {
@@ -32,13 +36,13 @@ describe('public technical versions', () => {
 
   it('keeps records separate when the documented hardware changes or a member is missing', () => {
     for (const change of ['power', 'charging', 'battery', 'advertisedCapacity']) {
-      const source = vehicles().filter(v => v.model === 'UT')
+      const source = vehicles().filter(v => v.model === 'V')
       if (change === 'power') source[1].motorPowerKW = 200
       if (change === 'charging') source[1].charging = { ...source[1].charging, dcMaxChargeKW: 150 }
       if (change === 'battery') source[1].battery = { ...source[1].battery, batteryUsableKWh: 70 }
       if (change === 'advertisedCapacity') source[1].variant = 'Luxury 75 kWh'
       expect(groupTechnicalVariants(source)).toHaveLength(2)
     }
-    expect(groupTechnicalVariants(vehicles().filter(v => v.id === 'aion-ut-luxury'))[0].variant).toBe('Luxury 60 kWh')
+    expect(groupTechnicalVariants(vehicles().filter(v => v.id === 'aion-v-luxury'))[0].variant).toBe('Luxury 75.3 kWh')
   })
 })
